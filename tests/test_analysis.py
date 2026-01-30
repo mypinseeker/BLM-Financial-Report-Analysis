@@ -16,6 +16,8 @@ def sample_financial_data():
         "budget": [1200.0, 1800.0, 3200.0, 1400.0, 2600.0],
         "actual": [1000.0, 2000.0, 3000.0, 1500.0, 2500.0],
         "date": pd.to_datetime(["2021-01-01", "2022-01-01", "2023-01-01", "2024-01-01", "2025-01-01"]),
+        "fiscal_year": [2021, 2022, 2023, 2024, 2025],
+        "state": ["Nevada", "Colorado", "Montana", "Nevada", "Colorado"],
     })
 
 
@@ -104,3 +106,36 @@ class TestBudgetAnalyzer:
     def test_category_breakdown_missing_column(self, analyzer):
         with pytest.raises(ValueError, match="not found"):
             analyzer.category_breakdown(amount_col="amount", category_col="nonexistent")
+
+    def test_year_over_year_basic(self, analyzer):
+        result = analyzer.year_over_year(amount_col="amount", year_col="fiscal_year")
+        assert result.name == "year_over_year"
+        assert result.summary["years_covered"] == 5
+        assert result.summary["first_year"] == 2021
+        assert result.summary["last_year"] == 2025
+        assert "yoy_change" in result.details.columns
+        assert "yoy_change_pct" in result.details.columns
+
+    def test_year_over_year_with_category(self, analyzer):
+        result = analyzer.year_over_year(
+            amount_col="amount", year_col="fiscal_year", category_col="category"
+        )
+        assert result.name == "year_over_year"
+        assert not result.details.empty
+
+    def test_year_over_year_missing_column(self, analyzer):
+        with pytest.raises(ValueError, match="not found"):
+            analyzer.year_over_year(amount_col="amount", year_col="nonexistent")
+
+    def test_state_comparison(self, analyzer):
+        result = analyzer.state_comparison(amount_col="amount", state_col="state")
+        assert result.name == "state_comparison"
+        assert result.summary["total_states"] == 3
+        assert result.summary["total_amount"] == 10000.0
+        assert "percentage" in result.details.columns
+        assert "highest_state" in result.summary
+        assert "lowest_state" in result.summary
+
+    def test_state_comparison_missing_column(self, analyzer):
+        with pytest.raises(ValueError, match="not found"):
+            analyzer.state_comparison(amount_col="amount", state_col="nonexistent")

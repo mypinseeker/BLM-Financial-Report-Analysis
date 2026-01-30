@@ -179,7 +179,7 @@ class FinancialDataPreprocessor:
 
     def _clean_string_columns(self, df: pd.DataFrame) -> pd.DataFrame:
         """Strip whitespace from string columns."""
-        for col in df.select_dtypes(include=["object"]).columns:
+        for col in df.select_dtypes(include=["object", "string"]).columns:
             df[col] = df[col].astype(str).str.strip()
             df[col] = df[col].replace({"nan": None, "None": None, "": None})
         return df

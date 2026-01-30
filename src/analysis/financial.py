@@ -305,3 +305,135 @@ class BudgetAnalyzer:
             summary=summary,
             details=breakdown,
         )
+
+    def year_over_year(
+        self,
+        amount_col: str = "amount",
+        year_col: str = "fiscal_year",
+        category_col: Optional[str] = None,
+    ) -> AnalysisResult:
+        """Compare financial metrics year-over-year.
+
+        Args:
+            amount_col: Column with monetary amounts.
+            year_col: Column with fiscal year values.
+            category_col: Optional column to group by category within each year.
+
+        Returns:
+            AnalysisResult with year-over-year comparison.
+        """
+        for col in [amount_col, year_col]:
+            if col not in self.df.columns:
+                raise ValueError(f"Column '{col}' not found in data.")
+
+        df = self.df.copy()
+
+        if category_col and category_col in df.columns:
+            yearly = (
+                df.groupby([year_col, category_col])[amount_col]
+                .sum()
+                .reset_index()
+            )
+            pivot = yearly.pivot_table(
+                index=category_col, columns=year_col,
+                values=amount_col, fill_value=0,
+            )
+            years = sorted(pivot.columns)
+            yoy_details = pd.DataFrame({category_col: pivot.index})
+            for i in range(1, len(years)):
+                prev, curr = years[i - 1], years[i]
+                col_name = f"{prev}_to_{curr}_change_pct"
+                prev_vals = pivot[prev].replace(0, np.nan)
+                yoy_details[f"{prev}"] = pivot[prev].values
+                yoy_details[f"{curr}"] = pivot[curr].values
+                yoy_details[col_name] = (
+                    (pivot[curr] - pivot[prev]) / prev_vals * 100
+                ).values
+            details = yoy_details.reset_index(drop=True)
+        else:
+            yearly = (
+                df.groupby(year_col)[amount_col]
+                .agg(["sum", "mean", "count"])
+                .reset_index()
+            )
+            yearly.columns = [year_col, "total", "average", "count"]
+            yearly = yearly.sort_values(year_col)
+            yearly["yoy_change"] = yearly["total"].diff()
+            yearly["yoy_change_pct"] = yearly["total"].pct_change() * 100
+            details = yearly
+
+        # Ensure year column is numeric for sorting/display
+        if pd.api.types.is_datetime64_any_dtype(df[year_col]):
+            df[year_col] = df[year_col].dt.year
+
+        years_list = sorted(df[year_col].unique())
+        first_year_total = float(
+            df[df[year_col] == years_list[0]][amount_col].sum()
+        )
+        last_year_total = float(
+            df[df[year_col] == years_list[-1]][amount_col].sum()
+        )
+
+        summary = {
+            "years_covered": len(years_list),
+            "first_year": int(years_list[0]),
+            "last_year": int(years_list[-1]),
+            "first_year_total": first_year_total,
+            "last_year_total": last_year_total,
+            "cumulative_change_pct": float(
+                (last_year_total - first_year_total) / first_year_total * 100
+            )
+            if first_year_total != 0
+            else 0.0,
+        }
+
+        return AnalysisResult(
+            name="year_over_year",
+            summary=summary,
+            details=details,
+        )
+
+    def state_comparison(
+        self,
+        amount_col: str = "amount",
+        state_col: str = "state",
+    ) -> AnalysisResult:
+        """Compare financial data across states/regions.
+
+        Args:
+            amount_col: Column with monetary amounts.
+            state_col: Column with state/region names.
+
+        Returns:
+            AnalysisResult with state comparison.
+        """
+        for col in [amount_col, state_col]:
+            if col not in self.df.columns:
+                raise ValueError(f"Column '{col}' not found in data.")
+
+        details = (
+            self.df.groupby(state_col)[amount_col]
+            .agg(["sum", "mean", "count", "std"])
+            .reset_index()
+        )
+        details.columns = [state_col, "total", "average", "count", "std_dev"]
+        overall_total = details["total"].sum()
+        details["percentage"] = (
+            (details["total"] / overall_total * 100) if overall_total != 0 else 0
+        )
+        details = details.sort_values("total", ascending=False)
+
+        summary = {
+            "total_states": int(len(details)),
+            "total_amount": float(overall_total),
+            "highest_state": details.iloc[0][state_col] if len(details) > 0 else None,
+            "highest_amount": float(details.iloc[0]["total"]) if len(details) > 0 else 0.0,
+            "lowest_state": details.iloc[-1][state_col] if len(details) > 0 else None,
+            "lowest_amount": float(details.iloc[-1]["total"]) if len(details) > 0 else 0.0,
+        }
+
+        return AnalysisResult(
+            name="state_comparison",
+            summary=summary,
+            details=details,
+        )
