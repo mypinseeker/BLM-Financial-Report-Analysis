@@ -206,9 +206,15 @@ class FinancialDataPreprocessor:
         return pd.to_numeric(cleaned, errors="coerce")
 
     def _parse_date_columns(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Attempt to parse date-like columns."""
+        """Attempt to parse date-like columns.
+
+        Skips columns that are already numeric (e.g., fiscal_year=2019)
+        to avoid misinterpreting integers as timestamps.
+        """
         for col in df.columns:
             if any(pattern in col for pattern in self.DATE_COLUMN_PATTERNS):
+                if pd.api.types.is_numeric_dtype(df[col]):
+                    continue
                 try:
                     df[col] = pd.to_datetime(df[col], errors="coerce")
                 except (ValueError, TypeError):

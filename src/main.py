@@ -157,8 +157,8 @@ def analyze(ctx, file, output_dir, report_format, amount_col, budget_col,
                 chart_paths[result.name] = path
             elif result.name == "state_comparison" and not result.details.empty:
                 path = chart_gen.top_n_bar_chart(
-                    result.details, category_col=state_col, value_col="total",
-                    title="Spending by State", filename="state_comparison.png",
+                    result.details, category_col=state_col, amount_col="total",
+                    filename="state_comparison.png",
                 )
                 chart_paths[result.name] = path
         except Exception as e:
