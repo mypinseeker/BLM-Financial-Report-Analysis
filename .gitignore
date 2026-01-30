@@ -28,11 +28,10 @@ Thumbs.db
 # Project specific
 data/raw/*.pdf
 data/raw/*.xlsx
-data/raw/*.csv
+!data/raw/*.csv
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
-data/output/*
 !data/output/.gitkeep
 
 # Jupyter

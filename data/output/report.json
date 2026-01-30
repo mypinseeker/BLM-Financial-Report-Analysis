@@ -1,0 +1,982 @@
+{
+  "title": "BLM Financial Analysis Report",
+  "generated_at": "2026-01-30T12:44:58.955758",
+  "results": [
+    {
+      "name": "summary_statistics",
+      "summary": {
+        "total": 6262161046.860001,
+        "groups": 15,
+        "largest_group": "Fire Management",
+        "smallest_group": "Wild Horse & Burro"
+      },
+      "details": [
+        {
+          "category": "Cadastral Survey",
+          "count": 32,
+          "sum": 564785330.96,
+          "mean": 17649541.5925,
+          "median": 16256936.53,
+          "std": 5692332.8772222595,
+          "min": 11591588.52,
+          "max": 40693269.67
+        },
+        {
+          "category": "Cultural Resources",
+          "count": 23,
+          "sum": 791179493.68,
+          "mean": 34399108.42086957,
+          "median": 35584888.87,
+          "std": 4393856.499842525,
+          "min": 25791998.8,
+          "max": 40990981.25
+        },
+        {
+          "category": "Energy & Minerals",
+          "count": 11,
+          "sum": 85333614.4,
+          "mean": 7757601.30909091,
+          "median": 7186952.65,
+          "std": 2551912.8024674533,
+          "min": 4843122.92,
+          "max": 12492654.17
+        },
+        {
+          "category": "Fire Management",
+          "count": 23,
+          "sum": 1127798251.87,
+          "mean": 49034706.603043474,
+          "median": 45866039.28,
+          "std": 17521051.886665918,
+          "min": 24457260.43,
+          "max": 98150034.01
+        },
+        {
+          "category": "Forestry",
+          "count": 22,
+          "sum": 277843742.59000003,
+          "mean": 12629261.026818184,
+          "median": 12856640.33,
+          "std": 3603644.4453367325,
+          "min": 7214004.24,
+          "max": 24264115.77
+        },
+        {
+          "category": "Hazardous Materials",
+          "count": 20,
+          "sum": 60830313.94,
+          "mean": 3041515.6969999997,
+          "median": 2884326.58,
+          "std": 805156.5863251113,
+          "min": 2144115.27,
+          "max": 5908820.29
+        },
+        {
+          "category": "Land & Realty Management",
+          "count": 19,
+          "sum": 445485367.53,
+          "mean": 23446598.29105263,
+          "median": 23083538.64,
+          "std": 4112917.1773213665,
+          "min": 15514239.08,
+          "max": 30906651.03
+        },
+        {
+          "category": "Mining Law Administration",
+          "count": 22,
+          "sum": 769103767.11,
+          "mean": 34959262.141363636,
+          "median": 33625839.135,
+          "std": 6687945.97711877,
+          "min": 26286644.54,
+          "max": 49862551.72
+        },
+        {
+          "category": "National Conservation Lands",
+          "count": 15,
+          "sum": 797873109.76,
+          "mean": 53191540.65066667,
+          "median": 46789362.89,
+          "std": 20248688.85113933,
+          "min": 38112978.88,
+          "max": 119458610.42
+        },
+        {
+          "category": "Oil & Gas Management",
+          "count": 12,
+          "sum": 304861751.04,
+          "mean": 25405145.92,
+          "median": 25728979.66,
+          "std": 5700087.476091982,
+          "min": 17207506.67,
+          "max": 33535457.55
+        },
+        {
+          "category": "Range Management",
+          "count": 24,
+          "sum": 396889873.27,
+          "mean": 16537078.052916666,
+          "median": 17088743.64,
+          "std": 2724667.8855899796,
+          "min": 11649567.98,
+          "max": 22024173.57
+        },
+        {
+          "category": "Recreation Management",
+          "count": 14,
+          "sum": 173494209.81,
+          "mean": 12392443.557857143,
+          "median": 11966671.18,
+          "std": 3662706.741017733,
+          "min": 7018940.27,
+          "max": 22881080.08
+        },
+        {
+          "category": "Soil/Water/Air Management",
+          "count": 29,
+          "sum": 242060658.97,
+          "mean": 8346919.2748275865,
+          "median": 8217125.34,
+          "std": 2067940.9644148988,
+          "min": 4963796.52,
+          "max": 16276838.63
+        },
+        {
+          "category": "Wild Horse & Burro",
+          "count": 21,
+          "sum": 59385908.33,
+          "mean": 2827900.3966666665,
+          "median": 2792062.56,
+          "std": 665787.2783874314,
+          "min": 1541881.55,
+          "max": 4132146.31
+        },
+        {
+          "category": "Wildlife Management",
+          "count": 13,
+          "sum": 165235653.6,
+          "mean": 12710434.892307691,
+          "median": 13575059.28,
+          "std": 2471379.836157699,
+          "min": 8317647.6,
+          "max": 16970350.35
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "budget_variance",
+      "summary": {
+        "total_budget": 6054915627.42,
+        "total_actual": 6262161046.860001,
+        "total_variance": 207245419.44,
+        "overall_variance_pct": 3.4227631265657754,
+        "items_over_budget": 152,
+        "items_under_budget": 148
+      },
+      "details": [
+        {
+          "category": "Cadastral Survey",
+          "total_budget": 528267500.9,
+          "total_actual": 564785330.96,
+          "total_variance": 36517830.059999995,
+          "avg_variance_pct": 6.587021218604563
+        },
+        {
+          "category": "Cultural Resources",
+          "total_budget": 839932551.69,
+          "total_actual": 791179493.68,
+          "total_variance": -48753058.010000005,
+          "avg_variance_pct": -5.543594665275238
+        },
+        {
+          "category": "Energy & Minerals",
+          "total_budget": 82177202.00999999,
+          "total_actual": 85333614.4,
+          "total_variance": 3156412.3900000015,
+          "avg_variance_pct": 2.8349541449982953
+        },
+        {
+          "category": "Fire Management",
+          "total_budget": 1066040341.0799999,
+          "total_actual": 1127798251.87,
+          "total_variance": 61757910.79000002,
+          "avg_variance_pct": 5.161096889177197
+        },
+        {
+          "category": "Forestry",
+          "total_budget": 278943402.67,
+          "total_actual": 277843742.59000003,
+          "total_variance": -1099660.080000002,
+          "avg_variance_pct": 0.194493856101517
+        },
+        {
+          "category": "Hazardous Materials",
+          "total_budget": 59634839.05,
+          "total_actual": 60830313.94,
+          "total_variance": 1195474.8900000001,
+          "avg_variance_pct": 2.1186468792606785
+        },
+        {
+          "category": "Land & Realty Management",
+          "total_budget": 440199304.2,
+          "total_actual": 445485367.53,
+          "total_variance": 5286063.329999996,
+          "avg_variance_pct": 1.456316967539855
+        },
+        {
+          "category": "Mining Law Administration",
+          "total_budget": 768485229.02,
+          "total_actual": 769103767.11,
+          "total_variance": 618538.0899999999,
+          "avg_variance_pct": 0.08645571618462072
+        },
+        {
+          "category": "National Conservation Lands",
+          "total_budget": 683233410.4,
+          "total_actual": 797873109.76,
+          "total_variance": 114639699.35999998,
+          "avg_variance_pct": 15.333642442878268
+        },
+        {
+          "category": "Oil & Gas Management",
+          "total_budget": 293623713.39,
+          "total_actual": 304861751.04,
+          "total_variance": 11238037.650000006,
+          "avg_variance_pct": 3.381585580988469
+        },
+        {
+          "category": "Range Management",
+          "total_budget": 394979293.52,
+          "total_actual": 396889873.27,
+          "total_variance": 1910579.7499999963,
+          "avg_variance_pct": 0.7973914074902316
+        },
+        {
+          "category": "Recreation Management",
+          "total_budget": 162306326.27,
+          "total_actual": 173494209.81,
+          "total_variance": 11187883.54,
+          "avg_variance_pct": 7.877145684695227
+        },
+        {
+          "category": "Soil/Water/Air Management",
+          "total_budget": 226639398.87,
+          "total_actual": 242060658.97,
+          "total_variance": 15421260.100000001,
+          "avg_variance_pct": 7.526697352235348
+        },
+        {
+          "category": "Wild Horse & Burro",
+          "total_budget": 59963093.160000004,
+          "total_actual": 59385908.33,
+          "total_variance": -577184.8300000029,
+          "avg_variance_pct": -1.5810073692087694
+        },
+        {
+          "category": "Wildlife Management",
+          "total_budget": 170490021.19,
+          "total_actual": 165235653.6,
+          "total_variance": -5254367.590000004,
+          "avg_variance_pct": -2.0278274643923186
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "trend_analysis",
+      "summary": {
+        "periods": 7,
+        "trend_direction": "increasing",
+        "slope_per_period": 10018632.032499952,
+        "total_growth_pct": -35.337820728486385
+      },
+      "details": [
+        {
+          "date": "2019-12-31 00:00:00",
+          "total": 1119311504.49,
+          "average": 21119084.99037736,
+          "count": 53,
+          "change": NaN,
+          "change_pct": NaN
+        },
+        {
+          "date": "2020-12-31 00:00:00",
+          "total": 787850707.45,
+          "average": 24620334.6078125,
+          "count": 32,
+          "change": -331460797.03999996,
+          "change_pct": -29.612917915198757
+        },
+        {
+          "date": "2021-12-31 00:00:00",
+          "total": 442460288.2,
+          "average": 16387418.081481481,
+          "count": 27,
+          "change": -345390419.25000006,
+          "change_pct": -43.83957721735242
+        },
+        {
+          "date": "2022-12-31 00:00:00",
+          "total": 998649559.75,
+          "average": 21709773.038043477,
+          "count": 46,
+          "change": 556189271.55,
+          "change_pct": 125.7037719277967
+        },
+        {
+          "date": "2023-12-31 00:00:00",
+          "total": 894931272.1,
+          "average": 20812355.16511628,
+          "count": 43,
+          "change": -103718287.64999998,
+          "change_pct": -10.385854240597137
+        },
+        {
+          "date": "2024-12-31 00:00:00",
+          "total": 1295186503.23,
+          "average": 21586441.7205,
+          "count": 60,
+          "change": 400255231.13,
+          "change_pct": 44.72468932622966
+        },
+        {
+          "date": "2025-12-31 00:00:00",
+          "total": 723771211.64,
+          "average": 18558236.195897434,
+          "count": 39,
+          "change": -571415291.59,
+          "change_pct": -44.1183791033165
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "anomaly_detection",
+      "summary": {
+        "total_records": 300,
+        "anomalies_found": 10,
+        "anomaly_rate": 3.3333333333333335,
+        "threshold": 2.0,
+        "mean": 20873870.156200003,
+        "std": 16667795.905128459
+      },
+      "details": [
+        {
+          "date": "2019-06-24 00:00:00",
+          "fiscal_year": 2019,
+          "state": "Oregon",
+          "category": "Fire Management",
+          "program": "Fire Management",
+          "budget": 50758233.88,
+          "actual": 60214188.28,
+          "amount": 60214188.28,
+          "revenue": 0.0,
+          "description": "FY2019 Fire Management - Oregon",
+          "z_score": 2.3602591697019464,
+          "is_anomaly": true
+        },
+        {
+          "date": "2020-01-08 00:00:00",
+          "fiscal_year": 2020,
+          "state": "Utah",
+          "category": "National Conservation Lands",
+          "program": "National Conservation Lands",
+          "budget": 52858566.77,
+          "actual": 119458610.42,
+          "amount": 119458610.42,
+          "revenue": 0.0,
+          "description": "FY2020 National Conservation Lands - Utah",
+          "z_score": 5.914683670530594,
+          "is_anomaly": true
+        },
+        {
+          "date": "2020-04-19 00:00:00",
+          "fiscal_year": 2020,
+          "state": "Oregon",
+          "category": "Fire Management",
+          "program": "Fire Management",
+          "budget": 54352653.44,
+          "actual": 98150034.01,
+          "amount": 98150034.01,
+          "revenue": 0.0,
+          "description": "FY2020 Fire Management - Oregon",
+          "z_score": 4.636255704932357,
+          "is_anomaly": true
+        },
+        {
+          "date": "2020-08-11 00:00:00",
+          "fiscal_year": 2020,
+          "state": "Alaska",
+          "category": "Fire Management",
+          "program": "Fire Management",
+          "budget": 53269559.22,
+          "actual": 56497327.11,
+          "amount": 56497327.11,
+          "revenue": 0.0,
+          "description": "FY2020 Fire Management - Alaska",
+          "z_score": 2.1372626084795727,
+          "is_anomaly": true
+        },
+        {
+          "date": "2022-06-05 00:00:00",
+          "fiscal_year": 2022,
+          "state": "New Mexico",
+          "category": "National Conservation Lands",
+          "program": "National Conservation Lands",
+          "budget": 48172669.61,
+          "actual": 55209931.62,
+          "amount": 55209931.62,
+          "revenue": 0.0,
+          "description": "FY2022 National Conservation Lands - New Mexico",
+          "z_score": 2.060024112320409,
+          "is_anomaly": true
+        },
+        {
+          "date": "2022-07-01 00:00:00",
+          "fiscal_year": 2022,
+          "state": "Idaho",
+          "category": "National Conservation Lands",
+          "program": "National Conservation Lands",
+          "budget": 54299841.08,
+          "actual": 58911426.88,
+          "amount": 58911426.88,
+          "revenue": 0.0,
+          "description": "FY2022 National Conservation Lands - Idaho",
+          "z_score": 2.282098781404946,
+          "is_anomaly": true
+        },
+        {
+          "date": "2022-09-12 00:00:00",
+          "fiscal_year": 2022,
+          "state": "Colorado",
+          "category": "Fire Management",
+          "program": "Fire Management",
+          "budget": 43975616.68,
+          "actual": 93180654.55,
+          "amount": 93180654.55,
+          "revenue": 0.0,
+          "description": "FY2022 Fire Management - Colorado",
+          "z_score": 4.338113137775593,
+          "is_anomaly": true
+        },
+        {
+          "date": "2023-04-14 00:00:00",
+          "fiscal_year": 2023,
+          "state": "Oregon",
+          "category": "Fire Management",
+          "program": "Fire Management",
+          "budget": 54988186.6,
+          "actual": 62968068.99,
+          "amount": 62968068.99,
+          "revenue": 0.0,
+          "description": "FY2023 Fire Management - Oregon",
+          "z_score": 2.52548081782356,
+          "is_anomaly": true
+        },
+        {
+          "date": "2024-10-20 00:00:00",
+          "fiscal_year": 2024,
+          "state": "Alaska",
+          "category": "National Conservation Lands",
+          "program": "National Conservation Lands",
+          "budget": 53148581.45,
+          "actual": 65006547.82,
+          "amount": 65006547.82,
+          "revenue": 0.0,
+          "description": "FY2024 National Conservation Lands - Alaska",
+          "z_score": 2.6477812612416836,
+          "is_anomaly": true
+        },
+        {
+          "date": "2024-11-20 00:00:00",
+          "fiscal_year": 2024,
+          "state": "Wyoming",
+          "category": "National Conservation Lands",
+          "program": "National Conservation Lands",
+          "budget": 49068947.17,
+          "actual": 62584197.48,
+          "amount": 62584197.48,
+          "revenue": 0.0,
+          "description": "FY2024 National Conservation Lands - Wyoming",
+          "z_score": 2.502450087654738,
+          "is_anomaly": true
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "category_breakdown",
+      "summary": {
+        "total_categories": 15,
+        "total_amount": 6262161046.860001,
+        "top_category": "Fire Management",
+        "top_category_pct": 18.00972928403854
+      },
+      "details": [
+        {
+          "category": "Fire Management",
+          "total": 1127798251.87,
+          "average": 49034706.603043474,
+          "count": 23,
+          "percentage": 18.00972928403854
+        },
+        {
+          "category": "National Conservation Lands",
+          "total": 797873109.76,
+          "average": 53191540.65066667,
+          "count": 15,
+          "percentage": 12.741178385376609
+        },
+        {
+          "category": "Cultural Resources",
+          "total": 791179493.68,
+          "average": 34399108.42086957,
+          "count": 23,
+          "percentage": 12.63428851094011
+        },
+        {
+          "category": "Mining Law Administration",
+          "total": 769103767.11,
+          "average": 34959262.141363636,
+          "count": 22,
+          "percentage": 12.28176281885384
+        },
+        {
+          "category": "Cadastral Survey",
+          "total": 564785330.96,
+          "average": 17649541.5925,
+          "count": 32,
+          "percentage": 9.019016386414993
+        },
+        {
+          "category": "Land & Realty Management",
+          "total": 445485367.53,
+          "average": 23446598.29105263,
+          "count": 19,
+          "percentage": 7.113923838694265
+        },
+        {
+          "category": "Range Management",
+          "total": 396889873.27,
+          "average": 16537078.052916666,
+          "count": 24,
+          "percentage": 6.337905881053797
+        },
+        {
+          "category": "Oil & Gas Management",
+          "total": 304861751.04,
+          "average": 25405145.92,
+          "count": 12,
+          "percentage": 4.8683154067534735
+        },
+        {
+          "category": "Forestry",
+          "total": 277843742.59000003,
+          "average": 12629261.026818184,
+          "count": 22,
+          "percentage": 4.436866770287193
+        },
+        {
+          "category": "Soil/Water/Air Management",
+          "total": 242060658.97,
+          "average": 8346919.2748275865,
+          "count": 29,
+          "percentage": 3.8654492779513405
+        },
+        {
+          "category": "Recreation Management",
+          "total": 173494209.81,
+          "average": 12392443.557857143,
+          "count": 14,
+          "percentage": 2.770516575855139
+        },
+        {
+          "category": "Wildlife Management",
+          "total": 165235653.6,
+          "average": 12710434.892307691,
+          "count": 13,
+          "percentage": 2.6386362848788942
+        },
+        {
+          "category": "Energy & Minerals",
+          "total": 85333614.4,
+          "average": 7757601.30909091,
+          "count": 11,
+          "percentage": 1.3626863595721217
+        },
+        {
+          "category": "Hazardous Materials",
+          "total": 60830313.94,
+          "average": 3041515.6969999997,
+          "count": 20,
+          "percentage": 0.9713949143882492
+        },
+        {
+          "category": "Wild Horse & Burro",
+          "total": 59385908.33,
+          "average": 2827900.3966666665,
+          "count": 21,
+          "percentage": 0.9483293049414233
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "year_over_year",
+      "summary": {
+        "years_covered": 7,
+        "first_year": 2019,
+        "last_year": 2025,
+        "first_year_total": 1119311504.49,
+        "last_year_total": 723771211.6400001,
+        "cumulative_change_pct": -35.33782072848638
+      },
+      "details": [
+        {
+          "category": "Cadastral Survey",
+          "2019": 121018998.7,
+          "2020": 63365278.16,
+          "2019_to_2020_change_pct": -47.64022274132401,
+          "2021": 55082035.11,
+          "2020_to_2021_change_pct": -13.072211296988959,
+          "2022": 33502511.46,
+          "2021_to_2022_change_pct": -39.17706309671607,
+          "2023": 109478939.55,
+          "2022_to_2023_change_pct": 226.77830639864513,
+          "2024": 94017508.73,
+          "2023_to_2024_change_pct": -14.122744414178968,
+          "2025": 88320059.25,
+          "2024_to_2025_change_pct": -6.059987716077407
+        },
+        {
+          "category": "Cultural Resources",
+          "2019": 103461033.69,
+          "2020": 31471992.1,
+          "2019_to_2020_change_pct": -69.5808257683763,
+          "2021": 75171599.50999999,
+          "2020_to_2021_change_pct": 138.8523715662727,
+          "2022": 108468969.03999999,
+          "2021_to_2022_change_pct": 44.29514570269386,
+          "2023": 140915366.6,
+          "2022_to_2023_change_pct": 29.913069006892446,
+          "2024": 158261398.13,
+          "2023_to_2024_change_pct": 12.309538660349341,
+          "2025": 173429134.61,
+          "2024_to_2025_change_pct": 9.583977305407632
+        },
+        {
+          "category": "Energy & Minerals",
+          "2019": 12711005.05,
+          "2020": 22092944.81,
+          "2019_to_2020_change_pct": 73.8095825081904,
+          "2021": 18446060.509999998,
+          "2020_to_2021_change_pct": -16.507008600996006,
+          "2022": 21767242.490000002,
+          "2021_to_2022_change_pct": 18.004830777821212,
+          "2023": 0.0,
+          "2022_to_2023_change_pct": -100.0,
+          "2024": 5473238.62,
+          "2023_to_2024_change_pct": NaN,
+          "2025": 4843122.92,
+          "2024_to_2025_change_pct": -11.512666334288202
+        },
+        {
+          "category": "Fire Management",
+          "2019": 200409472.56,
+          "2020": 204763172.47,
+          "2019_to_2020_change_pct": 2.1724022594274106,
+          "2021": 0.0,
+          "2020_to_2021_change_pct": -100.0,
+          "2022": 305962736.99,
+          "2021_to_2022_change_pct": NaN,
+          "2023": 62968068.99,
+          "2022_to_2023_change_pct": -79.4196935190647,
+          "2024": 305527873.04,
+          "2023_to_2024_change_pct": 385.210802777708,
+          "2025": 48166927.82,
+          "2024_to_2025_change_pct": -84.23484988759309
+        },
+        {
+          "category": "Forestry",
+          "2019": 61909668.550000004,
+          "2020": 11785385.76,
+          "2019_to_2020_change_pct": -80.96357800642757,
+          "2021": 14726439.55,
+          "2020_to_2021_change_pct": 24.955091414843945,
+          "2022": 24189730.22,
+          "2021_to_2022_change_pct": 64.26054741792628,
+          "2023": 91158432.6,
+          "2022_to_2023_change_pct": 276.8476612634169,
+          "2024": 15009230.88,
+          "2023_to_2024_change_pct": -83.53500553716191,
+          "2025": 59064855.03,
+          "2024_to_2025_change_pct": 293.523528968461
+        },
+        {
+          "category": "Hazardous Materials",
+          "2019": 8446845.620000001,
+          "2020": 8116686.029999999,
+          "2019_to_2020_change_pct": -3.908673188228598,
+          "2021": 12287651.6,
+          "2020_to_2021_change_pct": 51.38754356868971,
+          "2022": 8512711.48,
+          "2021_to_2022_change_pct": -30.72141238119088,
+          "2023": 3494149.53,
+          "2022_to_2023_change_pct": -58.95374184583548,
+          "2024": 12012404.62,
+          "2023_to_2024_change_pct": 243.7862208489973,
+          "2025": 7959865.0600000005,
+          "2024_to_2025_change_pct": -33.736289179376634
+        },
+        {
+          "category": "Land & Realty Management",
+          "2019": 70721735.81,
+          "2020": 53259996.81,
+          "2019_to_2020_change_pct": -24.690766989815486,
+          "2021": 23045660.4,
+          "2020_to_2021_change_pct": -56.72988775757308,
+          "2022": 92003614.59,
+          "2021_to_2022_change_pct": 299.2231638977029,
+          "2023": 48143577.269999996,
+          "2022_to_2023_change_pct": -47.67208061928386,
+          "2024": 111992930.35,
+          "2023_to_2024_change_pct": 132.622785219965,
+          "2025": 46317852.3,
+          "2024_to_2025_change_pct": -58.64216414799793
+        },
+        {
+          "category": "Mining Law Administration",
+          "2019": 205650347.0,
+          "2020": 99557264.32,
+          "2019_to_2020_change_pct": -51.58906086358318,
+          "2021": 0.0,
+          "2020_to_2021_change_pct": -100.0,
+          "2022": 36631897.45,
+          "2021_to_2022_change_pct": NaN,
+          "2023": 281130619.46,
+          "2022_to_2023_change_pct": 667.4476044920244,
+          "2024": 84775971.71000001,
+          "2023_to_2024_change_pct": -69.84463240865082,
+          "2025": 61357667.17,
+          "2024_to_2025_change_pct": -27.62375242375149
+        },
+        {
+          "category": "National Conservation Lands",
+          "2019": 92262584.28999999,
+          "2020": 170424390.99,
+          "2019_to_2020_change_pct": 84.7166891123726,
+          "2021": 38112978.88,
+          "2020_to_2021_change_pct": -77.63642946963128,
+          "2022": 194737696.71,
+          "2021_to_2022_change_pct": 410.94850739203093,
+          "2023": 0.0,
+          "2022_to_2023_change_pct": -100.0,
+          "2024": 255546096.0,
+          "2023_to_2024_change_pct": NaN,
+          "2025": 46789362.89,
+          "2024_to_2025_change_pct": -81.6904411288678
+        },
+        {
+          "category": "Oil & Gas Management",
+          "2019": 51684164.22,
+          "2020": 27598586.86,
+          "2019_to_2020_change_pct": -46.60146434307572,
+          "2021": 83557796.41,
+          "2020_to_2021_change_pct": 202.76114075646552,
+          "2022": 17207506.67,
+          "2021_to_2022_change_pct": -79.40646186315577,
+          "2023": 23753663.17,
+          "2022_to_2023_change_pct": 38.042446390055645,
+          "2024": 70076088.0,
+          "2023_to_2024_change_pct": 195.0117103980135,
+          "2025": 30983945.71,
+          "2024_to_2025_change_pct": -55.78528055104902
+        },
+        {
+          "category": "Range Management",
+          "2019": 106979885.45,
+          "2020": 17478887.7,
+          "2019_to_2020_change_pct": -83.66151952165882,
+          "2021": 54386456.81,
+          "2020_to_2021_change_pct": 211.15513609026735,
+          "2022": 26107988.52,
+          "2021_to_2022_change_pct": -51.99542303112575,
+          "2023": 56547439.13,
+          "2022_to_2023_change_pct": 116.59056225906446,
+          "2024": 54318407.19,
+          "2023_to_2024_change_pct": -3.941879551566538,
+          "2025": 81070808.47,
+          "2024_to_2025_change_pct": 49.25107834333756
+        },
+        {
+          "category": "Recreation Management",
+          "2019": 38461007.56,
+          "2020": 12746043.74,
+          "2019_to_2020_change_pct": -66.85982882763562,
+          "2021": 22881080.08,
+          "2020_to_2021_change_pct": 79.51515424503006,
+          "2022": 21875867.98,
+          "2021_to_2022_change_pct": -4.393202141181431,
+          "2023": 7018940.27,
+          "2022_to_2023_change_pct": -67.9146890243758,
+          "2024": 34787739.03,
+          "2023_to_2024_change_pct": 395.6266571848175,
+          "2025": 35723531.15,
+          "2024_to_2025_change_pct": 2.6900055769447837
+        },
+        {
+          "category": "Soil/Water/Air Management",
+          "2019": 38497491.73,
+          "2020": 23231221.94,
+          "2019_to_2020_change_pct": -39.65523233843162,
+          "2021": 8949912.27,
+          "2020_to_2021_change_pct": -61.47463834181768,
+          "2022": 41145829.89,
+          "2021_to_2022_change_pct": 359.73444932997097,
+          "2023": 22360431.14,
+          "2022_to_2023_change_pct": -45.655656478970585,
+          "2024": 74598306.98,
+          "2023_to_2024_change_pct": 233.61748041858195,
+          "2025": 33277465.02,
+          "2024_to_2025_change_pct": -55.39112566063762
+        },
+        {
+          "category": "Wild Horse & Burro",
+          "2019": 7097264.26,
+          "2020": 2792062.56,
+          "2019_to_2020_change_pct": -60.660016906288895,
+          "2021": 9412055.059999999,
+          "2020_to_2021_change_pct": 237.10043588708118,
+          "2022": 7343039.99,
+          "2021_to_2022_change_pct": -21.982606952577672,
+          "2023": 7485562.27,
+          "2022_to_2023_change_pct": 1.9409165712578305,
+          "2024": 18789309.95,
+          "2023_to_2024_change_pct": 151.00732947346117,
+          "2025": 6466614.24,
+          "2024_to_2025_change_pct": -65.58354587151828
+        },
+        {
+          "category": "Wildlife Management",
+          "2019": 0.0,
+          "2020": 39166793.2,
+          "2019_to_2020_change_pct": NaN,
+          "2021": 26400562.01,
+          "2020_to_2021_change_pct": -32.59452752440299,
+          "2022": 59192216.269999996,
+          "2021_to_2022_change_pct": 124.20816741544812,
+          "2023": 40476082.12,
+          "2022_to_2023_change_pct": -31.61924882931909,
+          "2024": 0.0,
+          "2023_to_2024_change_pct": -100.0,
+          "2025": 0.0,
+          "2024_to_2025_change_pct": NaN
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "state_comparison",
+      "summary": {
+        "total_states": 11,
+        "total_amount": 6262161046.86,
+        "highest_state": "Utah",
+        "highest_amount": 793261142.84,
+        "lowest_state": "New Mexico",
+        "lowest_amount": 352633076.95
+      },
+      "details": [
+        {
+          "state": "Utah",
+          "total": 793261142.84,
+          "average": 24789410.71375,
+          "count": 32,
+          "std_dev": 22799981.2216918,
+          "percentage": 12.667530216869153
+        },
+        {
+          "state": "Arizona",
+          "total": 756851486.13,
+          "average": 18020273.479285713,
+          "count": 42,
+          "std_dev": 13307158.224390624,
+          "percentage": 12.086107023860459
+        },
+        {
+          "state": "Wyoming",
+          "total": 722835628.65,
+          "average": 20078767.4625,
+          "count": 36,
+          "std_dev": 15133190.463068632,
+          "percentage": 11.542910238829572
+        },
+        {
+          "state": "Oregon",
+          "total": 687752839.33,
+          "average": 25472327.382592592,
+          "count": 27,
+          "std_dev": 20301194.105083793,
+          "percentage": 10.982675695874287
+        },
+        {
+          "state": "Colorado",
+          "total": 579134671.09,
+          "average": 19970161.072068967,
+          "count": 29,
+          "std_dev": 18406659.83061414,
+          "percentage": 9.248159968360959
+        },
+        {
+          "state": "Alaska",
+          "total": 563989986.3,
+          "average": 23499582.7625,
+          "count": 24,
+          "std_dev": 17682136.552682802,
+          "percentage": 9.006315584662236
+        },
+        {
+          "state": "California",
+          "total": 510311623.57,
+          "average": 23195982.889545456,
+          "count": 22,
+          "std_dev": 15523482.449726904,
+          "percentage": 8.149129665483175
+        },
+        {
+          "state": "Nevada",
+          "total": 475083595.09,
+          "average": 20655808.482173912,
+          "count": 23,
+          "std_dev": 13861670.776796313,
+          "percentage": 7.586575808813133
+        },
+        {
+          "state": "Montana",
+          "total": 413532474.98,
+          "average": 16541298.999200001,
+          "count": 25,
+          "std_dev": 12052875.222484462,
+          "percentage": 6.603670392465479
+        },
+        {
+          "state": "Idaho",
+          "total": 406774521.93,
+          "average": 18489750.99681818,
+          "count": 22,
+          "std_dev": 14564157.083749937,
+          "percentage": 6.495753125575822
+        },
+        {
+          "state": "New Mexico",
+          "total": 352633076.95,
+          "average": 19590726.497222222,
+          "count": 18,
+          "std_dev": 16618409.977014972,
+          "percentage": 5.631172279205735
+        }
+      ],
+      "metadata": {}
+    }
+  ]
+}
