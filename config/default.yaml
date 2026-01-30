@@ -1,0 +1,26 @@
+# BLM Financial Report Analysis - Default Configuration
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  output_dir: "data/output"
+
+analysis:
+  default_amount_col: "amount"
+  default_budget_col: "budget"
+  default_actual_col: "actual"
+  default_category_col: "category"
+  default_date_col: "date"
+  anomaly_threshold: 2.0
+  trend_frequency: "YE"  # YE=Yearly, QE=Quarterly, ME=Monthly
+
+reports:
+  default_format: "html"
+  title: "BLM Financial Analysis Report"
+  max_table_rows: 50
+
+visualization:
+  style: "seaborn-v0_8-whitegrid"
+  figsize: [12, 6]
+  dpi: 150
+  color_palette: "viridis"
