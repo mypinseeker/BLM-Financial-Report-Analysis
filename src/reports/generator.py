@@ -245,20 +245,32 @@ class ReportGenerator:
 
     @staticmethod
     def _format_summary(summary: dict) -> dict:
-        """Format summary values for display."""
+        """Format summary values for display.
+
+        Uses the key name to determine formatting (e.g., keys containing
+        'pct' or 'rate' are formatted as percentages).
+        """
         formatted = {}
         for key, value in summary.items():
-            formatted[key] = ReportGenerator._format_value(value)
+            formatted[key] = ReportGenerator._format_value(value, key)
         return formatted
 
     @staticmethod
-    def _format_value(value) -> str:
-        """Format a single value for display."""
+    def _format_value(value, key: str = "") -> str:
+        """Format a single value for display.
+
+        Args:
+            value: The value to format.
+            key: The associated key name, used to determine format
+                 (e.g., keys with 'pct' or 'rate' are percentages).
+        """
         if isinstance(value, float):
-            if abs(value) >= 1_000_000:
-                return f"${value:,.0f}" if "pct" not in str(value) else f"{value:.1f}%"
-            if "pct" in str(value) or "rate" in str(value):
+            key_lower = key.lower()
+            is_pct = "pct" in key_lower or "rate" in key_lower or "percentage" in key_lower
+            if is_pct:
                 return f"{value:.1f}%"
+            if abs(value) >= 1_000_000:
+                return f"${value:,.0f}"
             return f"{value:,.2f}"
         return str(value)
 

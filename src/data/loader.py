@@ -13,7 +13,9 @@ def _import_pdfplumber():
     try:
         import pdfplumber
         return pdfplumber
-    except BaseException:
+    except ImportError:
+        return None
+    except Exception:
         return None
 
 
@@ -21,7 +23,9 @@ def _import_tabula():
     try:
         import tabula
         return tabula
-    except BaseException:
+    except ImportError:
+        return None
+    except Exception:
         return None
 
 
