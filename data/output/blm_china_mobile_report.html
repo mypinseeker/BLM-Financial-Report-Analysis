@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLM 战略分析报告</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #f0f2f5; color: #333; line-height: 1.7;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px; }
+        header {
+            background: linear-gradient(135deg, #1a365d, #2c5282, #3182ce);
+            color: white; padding: 40px; border-radius: 12px; margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        header h1 { font-size: 32px; margin-bottom: 10px; }
+        header .subtitle { opacity: 0.9; font-size: 18px; margin-bottom: 5px; }
+        header .meta { opacity: 0.7; font-size: 14px; }
+
+        .section-group { margin-bottom: 40px; }
+        .section-group-title {
+            font-size: 22px; color: #1a365d; margin-bottom: 20px;
+            padding-bottom: 10px; border-bottom: 3px solid #3182ce;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .section-group-title .icon { font-size: 28px; }
+
+        .section {
+            background: white; border-radius: 10px; padding: 25px;
+            margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #3182ce;
+        }
+        .section h3 {
+            font-size: 18px; color: #2d3748; margin-bottom: 15px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .section h3 .badge {
+            font-size: 12px; padding: 2px 8px; border-radius: 4px;
+            background: #e2e8f0; color: #4a5568;
+        }
+
+        .findings-list { list-style: none; padding: 0; }
+        .findings-list li {
+            padding: 8px 0 8px 24px; border-bottom: 1px solid #f0f0f0;
+            position: relative;
+        }
+        .findings-list li:before {
+            content: "●"; position: absolute; left: 0; color: #3182ce;
+        }
+        .findings-list li:last-child { border-bottom: none; }
+
+        .metrics-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px; margin: 15px 0;
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #f7fafc, #edf2f7);
+            padding: 15px; border-radius: 8px; text-align: center;
+        }
+        .metric-card .label { font-size: 12px; color: #718096; text-transform: uppercase; }
+        .metric-card .value { font-size: 24px; font-weight: bold; color: #2d3748; }
+
+        .recommendations {
+            background: #fffaf0; border-left: 4px solid #ed8936;
+            padding: 15px 20px; margin-top: 15px; border-radius: 0 8px 8px 0;
+        }
+        .recommendations h4 { color: #c05621; margin-bottom: 10px; font-size: 14px; }
+        .recommendations ul { margin: 0; padding-left: 20px; }
+        .recommendations li { color: #744210; padding: 3px 0; }
+
+        .strategy-item {
+            background: #f7fafc; padding: 15px; margin: 10px 0; border-radius: 8px;
+            border-left: 4px solid #48bb78;
+        }
+        .strategy-item.p0 { border-left-color: #e53e3e; }
+        .strategy-item.p1 { border-left-color: #ed8936; }
+        .strategy-item.p2 { border-left-color: #48bb78; }
+        .strategy-item .name {
+            font-weight: bold; color: #2d3748; margin-bottom: 5px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .strategy-item .priority {
+            font-size: 11px; padding: 2px 6px; border-radius: 3px;
+            font-weight: bold;
+        }
+        .strategy-item .priority.p0 { background: #fed7d7; color: #c53030; }
+        .strategy-item .priority.p1 { background: #feebc8; color: #c05621; }
+        .strategy-item .priority.p2 { background: #c6f6d5; color: #276749; }
+        .strategy-item .desc { color: #4a5568; font-size: 14px; }
+        .strategy-item .kpis { font-size: 12px; color: #718096; margin-top: 8px; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 14px; }
+        th { background: #2d3748; color: white; padding: 12px; text-align: left; }
+        td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; }
+        tr:hover { background: #f7fafc; }
+
+        .summary-box {
+            background: #ebf8ff; border: 1px solid #90cdf4; border-radius: 8px;
+            padding: 20px; margin: 15px 0; white-space: pre-wrap; font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center; color: #a0aec0; font-size: 12px; padding: 30px;
+            border-top: 1px solid #e2e8f0; margin-top: 40px;
+        }
+
+        .positive { color: #38a169; }
+        .negative { color: #e53e3e; }
+        .warning { color: #dd6b20; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BLM 战略分析报告</h1>
+            <div class="subtitle">China Mobile 战略分析报告</div>
+            <div class="meta">
+                生成时间: 2026-02-04 15:28:51 |
+                竞争对手: China Telecom, China Unicom
+            </div>
+        </header>
+
+        <!-- Five Looks Section -->
+        <div class="section-group">
+            <div class="section-group-title">
+                <span class="icon">🔍</span>
+                五看分析 (Five Looks Analysis)
+            </div>
+
+            
+            <div class="section">
+                <h3>
+                    市场洞察 (Look at Market)
+                    <span class="badge">market</span>
+                </h3>
+
+                
+                <div class="metrics-grid">
+                    
+                    <div class="metric-card">
+                        <div class="label">total subscribers million</div>
+                        <div class="value">1841.6</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">5g penetration pct</div>
+                        <div class="value">52.1</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">market growth pct</div>
+                        <div class="value">7.3</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">avg churn pct</div>
+                        <div class="value">1.31</div>
+                    </div>
+                    
+                </div>
+                
+
+                <ul class="findings-list">
+                    
+                    <li>市场总用户规模: 1842M</li>
+                    
+                    <li>5G用户渗透率: 52.1%</li>
+                    
+                    <li>市场平均流失率: 1.31%</li>
+                    
+                    <li>分析期间市场增长: 7.3%</li>
+                    
+                    <li>增长最快细分市场: Digital Services (20.2% YoY)</li>
+                    
+                </ul>
+
+                
+                <div class="recommendations">
+                    <h4>💡 建议</h4>
+                    <ul>
+                        
+                        <li>持续关注5G用户迁移速度和价值提升</li>
+                        
+                        <li>重点发展数字化转型等新兴业务板块</li>
+                        
+                        <li>优化存量用户经营，降低流失率</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="section">
+                <h3>
+                    自身洞察 (Look at Self)
+                    <span class="badge">self</span>
+                </h3>
+
+                
+                <div class="metrics-grid">
+                    
+                    <div class="metric-card">
+                        <div class="label">market share pct</div>
+                        <div class="value">60.3</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">subscribers million</div>
+                        <div class="value">1024.7</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">revenue billion usd</div>
+                        <div class="value">37.61</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">profit margin pct</div>
+                        <div class="value">12.4</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">revenue growth pct</div>
+                        <div class="value">6.1</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">top strength</div>
+                        <div class="value">Network Coverage</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">top weakness</div>
+                        <div class="value">Price Competitiveness</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">nps score</div>
+                        <div class="value">39.0</div>
+                    </div>
+                    
+                </div>
+                
+
+                <ul class="findings-list">
+                    
+                    <li>市场份额: 60.3%</li>
+                    
+                    <li>用户规模: 1024.7M</li>
+                    
+                    <li>季度收入: $37.6B</li>
+                    
+                    <li>利润率: 12.4%</li>
+                    
+                    <li>收入增长: 6.1% YoY</li>
+                    
+                    <li>核心优势: Network Coverage, Brand Strength, Network Quality</li>
+                    
+                    <li>待改进项: Price Competitiveness, Customer Service, Ecosystem & Partners</li>
+                    
+                    <li>NPS得分: 39</li>
+                    
+                </ul>
+
+                
+                <div class="recommendations">
+                    <h4>💡 建议</h4>
+                    <ul>
+                        
+                        <li>强化核心竞争优势，建立差异化壁垒</li>
+                        
+                        <li>针对薄弱环节制定专项提升计划</li>
+                        
+                        <li>优化客户体验，提升NPS和满意度</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="section">
+                <h3>
+                    竞争洞察 (Look at Competitors)
+                    <span class="badge">competitor</span>
+                </h3>
+
+                
+                <div class="metrics-grid">
+                    
+                    <div class="metric-card">
+                        <div class="label">growth gap pct</div>
+                        <div class="value">0.2</div>
+                    </div>
+                    
+                </div>
+                
+
+                <ul class="findings-list">
+                    
+                    <li>China Telecom: 份额26.4%, 收入$18.4B, 增长5.8%</li>
+                    
+                    <li>China Unicom: 份额21.6%, 收入$14.1B, 增长6.0%</li>
+                    
+                    <li>✓ 我方增速(6.1%)高于竞争对手平均(5.9%)</li>
+                    
+                </ul>
+
+                
+                <div class="recommendations">
+                    <h4>💡 建议</h4>
+                    <ul>
+                        
+                        <li>密切跟踪竞争对手的战略动态和业务创新</li>
+                        
+                        <li>在差异化领域建立竞争优势</li>
+                        
+                        <li>关注对手的薄弱环节，寻找突破机会</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="section">
+                <h3>
+                    宏观环境洞察 (Look at Macro)
+                    <span class="badge">macro</span>
+                </h3>
+
+                
+                <div class="metrics-grid">
+                    
+                    <div class="metric-card">
+                        <div class="label">avg gdp growth pct</div>
+                        <div class="value">5.6</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">avg 5g coverage pct</div>
+                        <div class="value">61.8</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">avg digital economy pct</div>
+                        <div class="value">39.6</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">competitive intensity</div>
+                        <div class="value">Medium</div>
+                    </div>
+                    
+                </div>
+                
+
+                <ul class="findings-list">
+                    
+                    <li>平均GDP增长率: 5.6%</li>
+                    
+                    <li>平均5G网络覆盖: 61.8%</li>
+                    
+                    <li>数字经济占比: 39.6%</li>
+                    
+                    <li>电信渗透率: 97.4%</li>
+                    
+                    <li>市场竞争强度: Medium</li>
+                    
+                    <li>5G覆盖增长: +38.9pp (分析期间)</li>
+                    
+                </ul>
+
+                
+                <div class="recommendations">
+                    <h4>💡 建议</h4>
+                    <ul>
+                        
+                        <li>把握数字经济发展机遇，加速数字化转型</li>
+                        
+                        <li>积极响应政策导向，争取政策支持</li>
+                        
+                        <li>关注技术演进趋势，提前布局6G等前沿技术</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="section">
+                <h3>
+                    机会洞察 (Look at Opportunities)
+                    <span class="badge">opportunity</span>
+                </h3>
+
+                
+                <div class="metrics-grid">
+                    
+                    <div class="metric-card">
+                        <div class="label">opportunities count</div>
+                        <div class="value">10</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">gaps count</div>
+                        <div class="value">0</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="label">threats count</div>
+                        <div class="value">0</div>
+                    </div>
+                    
+                </div>
+                
+
+                <ul class="findings-list">
+                    
+                    <li>=== 机会 ===</li>
+                    
+                    <li>✓ Digital Services: 高增长潜力 (22% CAGR)</li>
+                    
+                    <li>✓ Cloud & IT: 高增长潜力 (19% CAGR)</li>
+                    
+                    <li>✓ IoT: 高增长潜力 (22% CAGR)</li>
+                    
+                    <li>✓ FinTech/Mobile Money: 高增长潜力 (16% CAGR)</li>
+                    
+                    <li>✓ vs China Telecom 在 Network Coverage: 领先 22分</li>
+                    
+                    <li>=== 差距 ===</li>
+                    
+                    <li>=== 威胁 ===</li>
+                    
+                </ul>
+
+                
+                <div class="recommendations">
+                    <h4>💡 建议</h4>
+                    <ul>
+                        
+                        <li>优先投入高增长业务领域</li>
+                        
+                        <li>针对竞争差距制定追赶计划</li>
+                        
+                        <li>建立风险预警和应对机制</li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <!-- Three Decisions Section -->
+        <div class="section-group">
+            <div class="section-group-title">
+                <span class="icon">🎯</span>
+                三定策略 (Three Decisions Strategy)
+            </div>
+
+            
+            <div class="section">
+                <h3>定策略 (Define Strategy)</h3>
+
+                <div class="summary-box">China Mobile 战略规划:
+
+1. 【增长战略】巩固领先地位，通过差异化服务和生态建设维持份额，同时开拓新兴业务增长点
+2. 【竞争战略】实施差异化竞争策略，在关键细分市场和客户群建立独特价值主张
+3. 【数字化转型战略】深化数字化运营，发展云计算、大数据、AI等新能力，实现业务模式升级
+4. 【客户经营战略】实施客户体验提升专项，优化全触点服务流程，建立以客户为中心的运营体系</div>
+
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        增长战略
+                        <span class="priority p0">P0</span>
+                        
+                    </div>
+                    <div class="desc">巩固领先地位，通过差异化服务和生态建设维持份额，同时开拓新兴业务增长点</div>
+                    
+                    <div class="kpis">KPI: 市场份额保持>40% | 新业务收入占比>15% | 用户ARPU提升5%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        竞争战略
+                        <span class="priority p0">P0</span>
+                        
+                    </div>
+                    <div class="desc">实施差异化竞争策略，在关键细分市场和客户群建立独特价值主张</div>
+                    
+                    <div class="kpis">KPI: 差异化产品收入占比>20% | 重点客群份额提升 | 产品创新数量</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        数字化转型战略
+                        <span class="priority p1">P1</span>
+                        
+                    </div>
+                    <div class="desc">深化数字化运营，发展云计算、大数据、AI等新能力，实现业务模式升级</div>
+                    
+                    <div class="kpis">KPI: 数字化服务收入增长>25% | 运营效率提升10% | 数字化触点渗透率>70%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        客户经营战略
+                        <span class="priority p1">P1</span>
+                        
+                    </div>
+                    <div class="desc">实施客户体验提升专项，优化全触点服务流程，建立以客户为中心的运营体系</div>
+                    
+                    <div class="kpis">KPI: NPS提升10分 | 客户满意度>85分 | 投诉率下降30%</div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="section">
+                <h3>定重点工作 (Define Key Tasks)</h3>
+
+                <div class="summary-box">China Mobile 重点工作清单:
+
+【网络能力提升】
+- P0: 5G网络深度覆盖
+- P0: 网络质量优化
+
+【业务创新发展】
+- P1: 新兴业务培育
+- P1: 政企市场突破
+
+【客户经营提升】
+- P1: 存量经营优化
+- P2: 流失管控
+
+【运营效率提升】
+- P2: 数字化运营
+- P2: 成本优化</div>
+
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        5G网络深度覆盖
+                        <span class="priority p0">P0</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">完成重点城市5G连续覆盖，提升室内深度覆盖</div>
+                    
+                    <div class="kpis">KPI: 5G网络深度覆盖完成率 | 5G网络深度覆盖效果指标</div>
+                    
+                </div>
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        网络质量优化
+                        <span class="priority p0">P0</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">实施网络质量专项提升，降低投诉率</div>
+                    
+                    <div class="kpis">KPI: 网络质量优化完成率 | 网络质量优化效果指标</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        新兴业务培育
+                        <span class="priority p1">P1</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">加速云计算、物联网、数字化服务等新业务发展</div>
+                    
+                    <div class="kpis">KPI: 新兴业务培育完成率 | 新兴业务培育效果指标</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        政企市场突破
+                        <span class="priority p1">P1</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">深耕行业客户，打造标杆案例，扩大政企收入</div>
+                    
+                    <div class="kpis">KPI: 政企市场突破完成率 | 政企市场突破效果指标</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        存量经营优化
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">实施精准营销，提升用户价值和粘性</div>
+                    
+                    <div class="kpis">KPI: 存量经营优化完成率 | 存量经营优化效果指标</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        流失管控
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">建立预警机制，降低用户流失率</div>
+                    
+                    <div class="kpis">KPI: 流失管控完成率 | 流失管控效果指标</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        数字化运营
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">推进智慧运营，提升自动化和智能化水平</div>
+                    
+                    <div class="kpis">KPI: 数字化运营完成率 | 数字化运营效果指标</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        成本优化
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q1-Q4</span>
+                    </div>
+                    <div class="desc">实施降本增效，优化资源配置</div>
+                    
+                    <div class="kpis">KPI: 成本优化完成率 | 成本优化效果指标</div>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="section">
+                <h3>定执行 (Define Execution)</h3>
+
+                <div class="summary-box">China Mobile 执行计划:
+
+【执行节奏】
+- Q1: 方案设计、资源准备、试点启动
+- Q2: 全面推广、能力建设
+- Q3: 优化迭代、攻坚克难
+- Q4: 效果评估、总结沉淀
+
+【管控机制】
+- 月度: 进度review会
+- 季度: 战略复盘会
+- 半年: 中期评估调整
+- 年度: 年终总结表彰
+
+【KPI体系】
+- 收入类: 收入增长率、新业务收入占比
+- 用户类: 用户份额、ARPU、流失率
+- 质量类: 网络质量、客户满意度、NPS
+- 效率类: 运营成本率、人均产出</div>
+
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        5G网络深度覆盖 - Q1里程碑
+                        <span class="priority p0">P0</span>
+                        <span class="badge">Q1</span>
+                    </div>
+                    <div class="desc">完成5G网络深度覆盖方案设计和试点启动</div>
+                    
+                    <div class="kpis">KPI: 方案完成 | 试点启动</div>
+                    
+                </div>
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        5G网络深度覆盖 - Q2里程碑
+                        <span class="priority p0">P0</span>
+                        <span class="badge">Q2</span>
+                    </div>
+                    <div class="desc">5G网络深度覆盖全面推广实施</div>
+                    
+                    <div class="kpis">KPI: 推广覆盖率>50%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        网络质量优化 - Q1里程碑
+                        <span class="priority p0">P0</span>
+                        <span class="badge">Q1</span>
+                    </div>
+                    <div class="desc">完成网络质量优化方案设计和试点启动</div>
+                    
+                    <div class="kpis">KPI: 方案完成 | 试点启动</div>
+                    
+                </div>
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        网络质量优化 - Q2里程碑
+                        <span class="priority p0">P0</span>
+                        <span class="badge">Q2</span>
+                    </div>
+                    <div class="desc">网络质量优化全面推广实施</div>
+                    
+                    <div class="kpis">KPI: 推广覆盖率>50%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        新兴业务培育 - Q1里程碑
+                        <span class="priority p1">P1</span>
+                        <span class="badge">Q1</span>
+                    </div>
+                    <div class="desc">完成新兴业务培育方案设计和试点启动</div>
+                    
+                    <div class="kpis">KPI: 方案完成 | 试点启动</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        新兴业务培育 - Q2里程碑
+                        <span class="priority p1">P1</span>
+                        <span class="badge">Q2</span>
+                    </div>
+                    <div class="desc">新兴业务培育全面推广实施</div>
+                    
+                    <div class="kpis">KPI: 推广覆盖率>50%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        政企市场突破 - Q1里程碑
+                        <span class="priority p1">P1</span>
+                        <span class="badge">Q1</span>
+                    </div>
+                    <div class="desc">完成政企市场突破方案设计和试点启动</div>
+                    
+                    <div class="kpis">KPI: 方案完成 | 试点启动</div>
+                    
+                </div>
+                
+                <div class="strategy-item p1">
+                    <div class="name">
+                        政企市场突破 - Q2里程碑
+                        <span class="priority p1">P1</span>
+                        <span class="badge">Q2</span>
+                    </div>
+                    <div class="desc">政企市场突破全面推广实施</div>
+                    
+                    <div class="kpis">KPI: 推广覆盖率>50%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        存量经营优化 - Q1里程碑
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q1</span>
+                    </div>
+                    <div class="desc">完成存量经营优化方案设计和试点启动</div>
+                    
+                    <div class="kpis">KPI: 方案完成 | 试点启动</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        存量经营优化 - Q2里程碑
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q2</span>
+                    </div>
+                    <div class="desc">存量经营优化全面推广实施</div>
+                    
+                    <div class="kpis">KPI: 推广覆盖率>50%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        流失管控 - Q1里程碑
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q1</span>
+                    </div>
+                    <div class="desc">完成流失管控方案设计和试点启动</div>
+                    
+                    <div class="kpis">KPI: 方案完成 | 试点启动</div>
+                    
+                </div>
+                
+                <div class="strategy-item p2">
+                    <div class="name">
+                        流失管控 - Q2里程碑
+                        <span class="priority p2">P2</span>
+                        <span class="badge">Q2</span>
+                    </div>
+                    <div class="desc">流失管控全面推广实施</div>
+                    
+                    <div class="kpis">KPI: 推广覆盖率>50%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        战略执行管控机制
+                        <span class="priority p0">P0</span>
+                        <span class="badge">全年</span>
+                    </div>
+                    <div class="desc">建立月度review、季度复盘机制，确保战略有效落地</div>
+                    
+                    <div class="kpis">KPI: 月度review完成率100% | 季度复盘覆盖率100%</div>
+                    
+                </div>
+                
+                <div class="strategy-item p0">
+                    <div class="name">
+                        资源保障机制
+                        <span class="priority p0">P0</span>
+                        <span class="badge">全年</span>
+                    </div>
+                    <div class="desc">匹配人力、资金、技术资源，建立跨部门协同机制</div>
+                    
+                    <div class="kpis">KPI: 关键岗位到位率 | 预算执行率</div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <footer>
+            BLM Strategic Analysis Tool | Business Leadership Model (业务领先模型)
+        </footer>
+    </div>
+</body>
+</html>

@@ -19,6 +19,7 @@ from src.data.export import DataExporter
 from src.analysis.financial import BudgetAnalyzer
 from src.visualization.charts import FinancialChartGenerator
 from src.reports.generator import ReportGenerator
+from src.blm.cli import blm_cli
 
 
 @click.group()
@@ -277,6 +278,10 @@ def generate_sample(output, records):
     output_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(output_path, index=False)
     click.echo(f"Sample data written to: {output_path} ({len(df)} records)")
+
+
+# Register BLM CLI as a subgroup
+cli.add_command(blm_cli)
 
 
 if __name__ == "__main__":
