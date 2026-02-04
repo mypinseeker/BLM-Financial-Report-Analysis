@@ -50,6 +50,27 @@ from src.blm.report_generator import BLMReportGenerator
 
 from src.blm.cli import blm_cli
 
+# Optional PPT generation (requires python-pptx)
+try:
+    from src.blm.ppt_generator import (
+        BLMPPTGenerator,
+        PPTStyle,
+        HUAWEI_STYLE,
+        VODAFONE_STYLE,
+        generate_blm_ppt,
+    )
+    PPT_AVAILABLE = True
+except ImportError:
+    PPT_AVAILABLE = False
+    BLMPPTGenerator = None
+    generate_blm_ppt = None
+
+# Optional Canva integration
+from src.blm.canva_integration import (
+    CanvaBLMExporter,
+    check_canva_credentials,
+)
+
 __all__ = [
     # Data models
     "GLOBAL_OPERATORS",
@@ -68,6 +89,13 @@ __all__ = [
     "ThreeDecisionsEngine",
     # Report generation
     "BLMReportGenerator",
+    # PPT generation
+    "BLMPPTGenerator",
+    "generate_blm_ppt",
+    "PPT_AVAILABLE",
+    # Canva integration
+    "CanvaBLMExporter",
+    "check_canva_credentials",
     # CLI
     "blm_cli",
     # Convenience functions

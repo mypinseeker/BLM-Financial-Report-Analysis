@@ -479,6 +479,197 @@ def three_decisions_cmd(target, competitors, decision):
             click.echo()
 
 
+@blm_cli.command("generate-ppt")
+@click.option(
+    "--target", "-t", required=True,
+    help="Target operator to analyze."
+)
+@click.option(
+    "--competitors", "-c", default="",
+    help="Comma-separated list of competitor operators."
+)
+@click.option(
+    "--style", "-s",
+    type=click.Choice(["huawei", "vodafone"]),
+    default="huawei",
+    help="PPT style template (huawei or vodafone)."
+)
+@click.option(
+    "--output-dir", "-o", default=None,
+    help="Output directory for generated PPT."
+)
+@click.option(
+    "--quarters", "-q", default=8, type=int,
+    help="Number of quarters of data to generate."
+)
+@click.option(
+    "--canva-export", is_flag=True,
+    help="Also export Canva-compatible JSON for manual import."
+)
+def generate_ppt(target, competitors, style, output_dir, quarters, canva_export):
+    """Generate PowerPoint presentation from BLM analysis.
+
+    Creates a professional PPT using the specified template style.
+    Supports Huawei-style (red/black theme) or Vodafone-style.
+
+    Examples:
+        blm-analyze blm generate-ppt -t "China Mobile" -c "China Telecom" -s huawei
+        blm-analyze blm generate-ppt -t "Vodafone" -s vodafone --canva-export
+    """
+    try:
+        from src.blm.ppt_generator import BLMPPTGenerator, PPTX_AVAILABLE
+    except ImportError:
+        PPTX_AVAILABLE = False
+
+    if not PPTX_AVAILABLE:
+        click.echo("Error: python-pptx is required for PPT generation.", err=True)
+        click.echo("Install it with: pip install python-pptx", err=True)
+        sys.exit(1)
+
+    competitor_list = [c.strip() for c in competitors.split(",") if c.strip()]
+    all_operators = [target] + competitor_list
+
+    click.echo(f"\n{'=' * 60}")
+    click.echo(f"  BLM PPT Generation: {target}")
+    click.echo(f"  Style: {style.title()}")
+    click.echo(f"{'=' * 60}\n")
+
+    # Generate data and run analysis
+    click.echo("Generating sample data...")
+    data = generate_sample_data(all_operators, n_quarters=quarters)
+
+    click.echo("Running Five Looks analysis...")
+    analyzer = FiveLooksAnalyzer(data, target, competitor_list)
+    five_looks = analyzer.run_full_analysis()
+
+    click.echo("Running Three Decisions strategy...")
+    engine = ThreeDecisionsEngine(five_looks, target)
+    three_decisions = engine.run_full_strategy()
+
+    # Generate PPT
+    click.echo(f"Generating {style.title()} style PPT...")
+    generator = BLMPPTGenerator(style=style, output_dir=output_dir)
+    ppt_path = generator.generate(
+        five_looks=five_looks,
+        three_decisions=three_decisions,
+        target_operator=target,
+        competitors=competitor_list,
+    )
+    click.echo(f"  PPT saved: {ppt_path}")
+
+    # Optionally export Canva JSON
+    if canva_export:
+        click.echo("Exporting Canva-compatible JSON...")
+        from src.blm.canva_integration import CanvaBLMExporter
+
+        # Create exporter without API credentials (just for JSON export)
+        class LocalExporter(CanvaBLMExporter):
+            def __init__(self):
+                self.access_token = None  # Skip token validation
+
+        exporter = LocalExporter()
+        exporter.access_token = "local_export"  # Dummy token
+        json_path = exporter.export_slides_json(
+            five_looks=five_looks,
+            three_decisions=three_decisions,
+            target_operator=target,
+            competitors=competitor_list,
+        )
+        click.echo(f"  Canva JSON: {json_path}")
+
+    click.echo("\nPPT generation complete!")
+    click.echo(f"\nOpen the PPT file to review: {ppt_path}")
+
+
+@blm_cli.command("germany-analysis")
+@click.option(
+    "--output-dir", "-o", default=None,
+    help="Output directory for reports."
+)
+@click.option(
+    "--format", "-f", "report_format",
+    type=click.Choice(["html", "text", "json", "ppt", "all"]),
+    default="all",
+    help="Output format(s)."
+)
+@click.option(
+    "--style", "-s",
+    type=click.Choice(["huawei", "vodafone"]),
+    default="huawei",
+    help="PPT style template."
+)
+def germany_analysis(output_dir, report_format, style):
+    """Run Vodafone Germany BLM analysis with real Q2 2025 data.
+
+    Analyzes Vodafone Germany against Deutsche Telekom, O2, and 1&1
+    using actual financial data from Q2 2025.
+
+    Example:
+        blm-analyze blm germany-analysis -f all -s huawei
+    """
+    click.echo(f"\n{'=' * 60}")
+    click.echo("  Vodafone Germany BLM Analysis")
+    click.echo("  Real Data: Q2 2025 / FY26")
+    click.echo(f"{'=' * 60}\n")
+
+    from src.blm.germany_telecom_analysis import GermanyTelecomBLMAnalyzer
+
+    analyzer = GermanyTelecomBLMAnalyzer(target_operator="Vodafone Germany")
+
+    click.echo("Running Five Looks analysis...")
+    five_looks = analyzer.run_five_looks()
+    for key, result in five_looks.items():
+        click.echo(f"  ✓ {result.title}")
+
+    click.echo("\nRunning Three Decisions strategy...")
+    three_decisions = analyzer.run_three_decisions(five_looks)
+    for key, result in three_decisions.items():
+        click.echo(f"  ✓ {result.title}")
+
+    # Generate reports
+    click.echo("\nGenerating reports...")
+    report_gen = BLMReportGenerator(output_dir=output_dir)
+
+    if report_format in ("html", "all"):
+        path = report_gen.generate_html_report(
+            five_looks, three_decisions, "Vodafone Germany",
+            analyzer.competitors,
+            filename="blm_vodafone_germany_q2_2025.html",
+        )
+        click.echo(f"  HTML: {path}")
+
+    if report_format in ("text", "all"):
+        path = report_gen.generate_text_report(
+            five_looks, three_decisions, "Vodafone Germany",
+            analyzer.competitors,
+            filename="blm_vodafone_germany_q2_2025.txt",
+        )
+        click.echo(f"  Text: {path}")
+
+    if report_format in ("json", "all"):
+        path = report_gen.generate_json_report(
+            five_looks, three_decisions, "Vodafone Germany",
+            analyzer.competitors,
+            filename="blm_vodafone_germany_q2_2025.json",
+        )
+        click.echo(f"  JSON: {path}")
+
+    if report_format in ("ppt", "all"):
+        try:
+            from src.blm.ppt_generator import BLMPPTGenerator
+            ppt_gen = BLMPPTGenerator(style=style, output_dir=output_dir)
+            path = ppt_gen.generate(
+                five_looks, three_decisions, "Vodafone Germany",
+                analyzer.competitors,
+                filename="blm_vodafone_germany_q2_2025.pptx",
+            )
+            click.echo(f"  PPT: {path}")
+        except ImportError:
+            click.echo("  PPT: Skipped (python-pptx not installed)", err=True)
+
+    click.echo("\nAnalysis complete!")
+
+
 def _load_data_file(filepath: str) -> dict[str, pd.DataFrame]:
     """Load data from a JSON file."""
     with open(filepath, "r", encoding="utf-8") as f:
