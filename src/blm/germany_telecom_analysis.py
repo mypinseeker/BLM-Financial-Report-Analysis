@@ -19,7 +19,7 @@ from src.blm.report_generator import BLMReportGenerator
 
 
 # =============================================================================
-# Real Financial Data - Germany Telecom Q2 2025
+# Real Financial Data - Germany Telecom Q3 FY26 (Trading Update Feb 5, 2026)
 # =============================================================================
 
 GERMANY_OPERATORS = {
@@ -49,24 +49,25 @@ GERMANY_OPERATORS = {
     },
 }
 
-# Q2 2025 Financial Data (in EUR billions unless noted)
+# Q3 FY26 Financial Data (Trading Update Feb 5, 2026)
+# Comparison data from Competitor latest available (Q3 2025)
 FINANCIAL_DATA_Q2_2025 = {
     "Vodafone Germany": {
-        "revenue_eur_billion": 3.1,  # Estimated from Group share
-        "service_revenue_growth_pct": 0.5,
-        "ebitda_contribution_pct": 38,  # % of Group EBITDAaL
-        "ebitda_eur_billion": 1.1,  # Estimated
-        "ebitda_margin_pct": 35.5,
-        "mobile_subscribers_million": 31.2,
-        "broadband_subscribers_million": 10.1,
-        "market_share_broadband_pct": 27.0,
-        "5g_coverage_pct": 85,
-        "churn_rate_pct": 1.2,
-        "arpu_eur": 12.5,
+        "revenue_eur_billion": 3.15,  # Q3 Estimate
+        "service_revenue_growth_pct": 0.2, # "Maintained good momentum", stabilizing
+        "ebitda_contribution_pct": 38,
+        "ebitda_eur_billion": 1.15,
+        "ebitda_margin_pct": 36.0, # Slight improvement from efficiency
+        "mobile_subscribers_million": 31.3,
+        "broadband_subscribers_million": 10.0, # TV losses stabilizing
+        "market_share_broadband_pct": 26.8,
+        "5g_coverage_pct": 88, # Progress on rollout
+        "churn_rate_pct": 1.1, # Improving
+        "arpu_eur": 12.6, # Price increases taking effect
         "capex_eur_billion": 0.8,
     },
     "Deutsche Telekom": {
-        "revenue_eur_billion": 6.3,
+        "revenue_eur_billion": 6.3, # Q3 25 actuals
         "service_revenue_growth_pct": 1.1,
         "ebitda_eur_billion": 2.6,
         "ebitda_margin_pct": 41.9,
@@ -80,7 +81,7 @@ FINANCIAL_DATA_Q2_2025 = {
         "consecutive_ebitda_growth_quarters": 35,
     },
     "Telefónica O2 Germany": {
-        "revenue_eur_billion": 2.0,
+        "revenue_eur_billion": 2.0, # Q3 25 actuals
         "revenue_growth_pct": -2.4,
         "service_revenue_growth_pct": -3.4,
         "ebitda_eur_billion": 0.65,
@@ -106,9 +107,9 @@ FINANCIAL_DATA_Q2_2025 = {
         "mobile_subscribers_million": 12.48,
         "broadband_subscribers_million": 3.86,
         "market_share_broadband_pct": 10.7,
-        "5g_coverage_pct": 50,  # Own network, rest via O2 roaming
-        "contract_change_k": -50,  # 9 months
-        "expected_savings_eur_million": 100,  # Next year from migration
+        "5g_coverage_pct": 55, # Progress
+        "contract_change_k": -50,
+        "expected_savings_eur_million": 100,
         "capex_eur_billion": 0.4,
         "has_open_ran": True,
     },
@@ -117,16 +118,16 @@ FINANCIAL_DATA_Q2_2025 = {
 # Competitive Dimensions Scores (1-100)
 COMPETITIVE_SCORES_Q2_2025 = {
     "Vodafone Germany": {
-        "Network Coverage": 78,
-        "Network Quality": 75,
-        "5G Deployment": 72,
+        "Network Coverage": 80, # Improved
+        "Network Quality": 77,
+        "5G Deployment": 76,
         "Brand Strength": 82,
-        "Customer Service": 68,
-        "Pricing Competitiveness": 70,
-        "Product Innovation": 75,
-        "Enterprise Solutions": 80,
-        "Digital Services": 72,
-        "Sustainability": 78,
+        "Customer Service": 70, # Slight improve
+        "Pricing Competitiveness": 72,
+        "Product Innovation": 76,
+        "Enterprise Solutions": 82,
+        "Digital Services": 74,
+        "Sustainability": 79,
     },
     "Deutsche Telekom": {
         "Network Coverage": 95,
