@@ -39,3 +39,6 @@ data/processed/*
 
 # Environment variables
 .env
+
+# Generated chart images (embedded in PPT)
+reports/*.png
