@@ -789,6 +789,69 @@ def germany_analysis_enhanced(output_dir, style):
     click.echo(f"Open to review: {ppt_path}")
 
 
+@blm_cli.command("comprehensive-analysis")
+@click.option(
+    "--output-dir", "-o", default=None,
+    help="Output directory for reports."
+)
+def comprehensive_analysis(output_dir):
+    """Generate comprehensive Germany telecom market analysis PPT.
+
+    Creates a detailed PPT with:
+    - Operating Analysis (Revenue/Profitability/Investment)
+    - Business Analysis (Mobile/Fixed/B2B/TV-FMC)
+    - Strategy & Organization Analysis
+    - Network & Tariff Comparison
+
+    Data: 8 quarters (Q4 FY24 - Q3 FY26)
+    Operators: Vodafone, DT, O2, 1&1
+
+    Examples:
+        blm-analyze blm comprehensive-analysis
+        blm-analyze blm comprehensive-analysis -o ./reports
+    """
+    click.echo(f"\n{'=' * 60}")
+    click.echo("  Germany Telecom Comprehensive Analysis")
+    click.echo("  8 Quarters: Q4 FY24 - Q3 FY26")
+    click.echo(f"{'=' * 60}\n")
+
+    try:
+        from src.blm.comprehensive_analysis_ppt import generate_comprehensive_ppt
+    except ImportError as e:
+        click.echo(f"Error: Comprehensive analysis module not available: {e}", err=True)
+        sys.exit(1)
+
+    click.echo("Generating comprehensive analysis PPT...")
+    click.echo("  - Operating Analysis (Revenue, Profitability, Investment)")
+    click.echo("  - Business Analysis (Mobile, Fixed, B2B, TV/FMC)")
+    click.echo("  - Strategy & Organization")
+    click.echo("  - Network & Tariff Comparison")
+
+    ppt_path = generate_comprehensive_ppt(output_dir)
+
+    click.echo(f"\n✓ PPT generated: {ppt_path}")
+    click.echo("\nContents:")
+    click.echo("  Section 01: Operating Analysis (经营层面分析)")
+    click.echo("    • Revenue scale & structure comparison")
+    click.echo("    • Revenue growth rate trends")
+    click.echo("    • Profitability (EBITDA/Margin/Growth)")
+    click.echo("    • Investment (OPEX/CAPEX ratios)")
+    click.echo("  Section 02: Business Analysis (业务层面分析)")
+    click.echo("    • Mobile (users/ARPU/churn)")
+    click.echo("    • Fixed broadband (fiber/cable/DSL)")
+    click.echo("    • B2B (connectivity vs digital)")
+    click.echo("    • TV & FMC convergence")
+    click.echo("  Section 03: Strategy & Organization (战略与组织)")
+    click.echo("    • Customer strategy comparison")
+    click.echo("    • Executive changes")
+    click.echo("  Section 04: Network & Tariff (网络与资费)")
+    click.echo("    • Network infrastructure")
+    click.echo("    • Tariff comparison")
+    click.echo("  Summary & Recommendations")
+
+    click.echo(f"\nOpen to review: {ppt_path}")
+
+
 def _load_data_file(filepath: str) -> dict[str, pd.DataFrame]:
     """Load data from a JSON file."""
     with open(filepath, "r", encoding="utf-8") as f:
