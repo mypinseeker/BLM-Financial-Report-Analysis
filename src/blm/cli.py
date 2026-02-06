@@ -670,6 +670,98 @@ def germany_analysis(output_dir, report_format, style):
     click.echo("\nAnalysis complete!")
 
 
+@blm_cli.command("germany-analysis-enhanced")
+@click.option(
+    "--output-dir", "-o", default=None,
+    help="Output directory for reports."
+)
+@click.option(
+    "--style", "-s",
+    type=click.Choice(["huawei", "vodafone"]),
+    default="huawei",
+    help="PPT style template."
+)
+def germany_analysis_enhanced(output_dir, style):
+    """Run Vodafone Germany BLM analysis with enhanced PPT output.
+
+    Generates a professional PPT with charts, visual comparisons,
+    and data-rich slides following Huawei 5G template style.
+
+    Features:
+    - Market share bar charts
+    - Revenue comparison charts
+    - Competitive radar charts
+    - 5G coverage gauges
+    - Gap analysis visualization
+    - Strategy priority matrix
+    - Execution timeline
+
+    Example:
+        blm-analyze blm germany-analysis-enhanced -s huawei
+    """
+    click.echo(f"\n{'=' * 60}")
+    click.echo("  Vodafone Germany BLM Analysis (Enhanced)")
+    click.echo("  Real Data: Q2 2025 / FY26")
+    click.echo(f"  PPT Style: {style.title()} with Charts")
+    click.echo(f"{'=' * 60}\n")
+
+    try:
+        from src.blm.ppt_generator_enhanced import BLMPPTGeneratorEnhanced
+    except ImportError as e:
+        click.echo(f"Error: Enhanced PPT generator not available: {e}", err=True)
+        sys.exit(1)
+
+    from src.blm.germany_telecom_analysis import (
+        GermanyTelecomBLMAnalyzer,
+        FINANCIAL_DATA_Q2_2025,
+        COMPETITIVE_SCORES_Q2_2025,
+    )
+
+    analyzer = GermanyTelecomBLMAnalyzer(target_operator="Vodafone Germany")
+
+    click.echo("Running Five Looks analysis...")
+    five_looks = analyzer.run_five_looks()
+    for key, result in five_looks.items():
+        click.echo(f"  ✓ {result.title}")
+
+    click.echo("\nRunning Three Decisions strategy...")
+    three_decisions = analyzer.run_three_decisions(five_looks)
+    for key, result in three_decisions.items():
+        click.echo(f"  ✓ {result.title}")
+
+    # Generate enhanced PPT with charts
+    click.echo("\nGenerating enhanced PPT with charts...")
+    ppt_gen = BLMPPTGeneratorEnhanced(style=style, output_dir=output_dir)
+    ppt_path = ppt_gen.generate(
+        five_looks=five_looks,
+        three_decisions=three_decisions,
+        target_operator="Vodafone Germany",
+        competitors=analyzer.competitors,
+        financial_data=FINANCIAL_DATA_Q2_2025,
+        competitive_scores=COMPETITIVE_SCORES_Q2_2025,
+        filename="blm_vodafone_germany_enhanced.pptx",
+    )
+    click.echo(f"  Enhanced PPT: {ppt_path}")
+
+    # Print slide summary
+    click.echo("\nPPT Content Summary:")
+    click.echo("  • Title slide with framework overview")
+    click.echo("  • Executive summary with key metrics")
+    click.echo("  • Market share comparison chart")
+    click.echo("  • Revenue & profitability charts")
+    click.echo("  • 5G coverage comparison")
+    click.echo("  • Competitive radar analysis")
+    click.echo("  • Gap analysis visualization")
+    click.echo("  • Five Looks insight slides (5)")
+    click.echo("  • Three Decisions strategy slides (3)")
+    click.echo("  • Execution timeline")
+    click.echo("  • KPI dashboard")
+    click.echo("  • Conclusion & next steps")
+
+    click.echo(f"\nEnhanced PPT generation complete!")
+    click.echo(f"Open to review: {ppt_path}")
+
+
 def _load_data_file(filepath: str) -> dict[str, pd.DataFrame]:
     """Load data from a JSON file."""
     with open(filepath, "r", encoding="utf-8") as f:

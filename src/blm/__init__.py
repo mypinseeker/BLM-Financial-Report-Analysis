@@ -59,11 +59,19 @@ try:
         VODAFONE_STYLE,
         generate_blm_ppt,
     )
+    from src.blm.ppt_generator_enhanced import (
+        BLMPPTGeneratorEnhanced,
+        generate_enhanced_blm_ppt,
+    )
+    from src.blm.ppt_charts import PPTChartGenerator
     PPT_AVAILABLE = True
 except ImportError:
     PPT_AVAILABLE = False
     BLMPPTGenerator = None
+    BLMPPTGeneratorEnhanced = None
+    PPTChartGenerator = None
     generate_blm_ppt = None
+    generate_enhanced_blm_ppt = None
 
 # Optional Canva integration
 from src.blm.canva_integration import (
@@ -91,7 +99,10 @@ __all__ = [
     "BLMReportGenerator",
     # PPT generation
     "BLMPPTGenerator",
+    "BLMPPTGeneratorEnhanced",
+    "PPTChartGenerator",
     "generate_blm_ppt",
+    "generate_enhanced_blm_ppt",
     "PPT_AVAILABLE",
     # Canva integration
     "CanvaBLMExporter",
