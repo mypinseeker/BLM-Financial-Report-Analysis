@@ -701,7 +701,7 @@ def germany_analysis_enhanced(output_dir, style):
     """
     click.echo(f"\n{'=' * 60}")
     click.echo("  Vodafone Germany BLM Analysis (Enhanced)")
-    click.echo("  Real Data: Q2 2025 / FY26")
+    click.echo("  Data: Q3 FY26 Trading Update (Feb 5, 2026)")
     click.echo(f"  PPT Style: {style.title()} with Charts")
     click.echo(f"{'=' * 60}\n")
 
@@ -713,8 +713,8 @@ def germany_analysis_enhanced(output_dir, style):
 
     from src.blm.germany_telecom_analysis import (
         GermanyTelecomBLMAnalyzer,
-        FINANCIAL_DATA_Q2_2025,
-        COMPETITIVE_SCORES_Q2_2025,
+        FINANCIAL_DATA_Q3_FY26,
+        COMPETITIVE_SCORES_Q3_FY26,
     )
 
     analyzer = GermanyTelecomBLMAnalyzer(target_operator="Vodafone Germany")
@@ -737,8 +737,8 @@ def germany_analysis_enhanced(output_dir, style):
         three_decisions=three_decisions,
         target_operator="Vodafone Germany",
         competitors=analyzer.competitors,
-        financial_data=FINANCIAL_DATA_Q2_2025,
-        competitive_scores=COMPETITIVE_SCORES_Q2_2025,
+        financial_data=FINANCIAL_DATA_Q3_FY26,
+        competitive_scores=COMPETITIVE_SCORES_Q3_FY26,
         filename="blm_vodafone_germany_enhanced.pptx",
     )
     click.echo(f"  Enhanced PPT: {ppt_path}")

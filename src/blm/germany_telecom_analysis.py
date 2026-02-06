@@ -1,4 +1,4 @@
-"""Germany Telecom Market BLM Analysis - Q2 FY2025-2026
+"""Germany Telecom Market BLM Analysis - Q3 FY26 (Feb 5, 2026 Trading Update)
 
 Real financial data analysis for:
 - Vodafone Germany (target)
@@ -6,7 +6,10 @@ Real financial data analysis for:
 - Telefónica O2 Germany
 - 1&1 AG
 
-Data sources: Company financial reports, Q2 2025 / H1 FY26
+Data sources:
+- Vodafone Q3 FY26 Trading Update (February 5, 2026)
+- Company earnings call Q&A transcripts
+- Competitor Q3 2025 financial reports
 """
 
 import pandas as pd
@@ -50,21 +53,32 @@ GERMANY_OPERATORS = {
 }
 
 # Q3 FY26 Financial Data (Trading Update Feb 5, 2026)
+# Source: Vodafone Group Q3 FY26 Trading Update, Analyst Q&A
 # Comparison data from Competitor latest available (Q3 2025)
-FINANCIAL_DATA_Q2_2025 = {
+FINANCIAL_DATA_Q3_FY26 = {
     "Vodafone Germany": {
-        "revenue_eur_billion": 3.15,  # Q3 Estimate
-        "service_revenue_growth_pct": 0.2, # "Maintained good momentum", stabilizing
-        "ebitda_contribution_pct": 38,
-        "ebitda_eur_billion": 1.15,
-        "ebitda_margin_pct": 36.0, # Slight improvement from efficiency
+        # Q3 FY26 Actuals from Trading Update
+        "revenue_eur_billion": 3.092,  # Total revenue €3,092M
+        "service_revenue_eur_billion": 2.726,  # Service revenue €2,726M
+        "service_revenue_growth_pct": 0.7,  # +0.7% (Q2: +0.5%), improving trend
+        "mobile_service_revenue_growth_pct": 2.8,  # +2.8% driven by wholesale
+        "fixed_service_revenue_growth_pct": -1.1,  # -1.1% (Q2: -2.3%), improving
+        "ebitda_contribution_pct": 32,  # 32% of Group service revenue
+        "ebitda_eur_billion": 1.12,  # Estimated from Group EBITDAaL
+        "ebitda_margin_pct": 36.2,  # Slight improvement from efficiency
         "mobile_subscribers_million": 31.3,
-        "broadband_subscribers_million": 10.0, # TV losses stabilizing
-        "market_share_broadband_pct": 26.8,
-        "5g_coverage_pct": 88, # Progress on rollout
-        "churn_rate_pct": 1.1, # Improving
-        "arpu_eur": 12.6, # Price increases taking effect
+        "broadband_subscribers_million": 9.94,  # Lost 63k in Q3
+        "broadband_net_adds_k": -63,  # Customer base declined
+        "tv_net_adds_k": -6,  # Net decline of 6k TV customers
+        "market_share_broadband_pct": 26.5,
+        "5g_coverage_pct": 90,  # Network test results improved
+        "churn_rate_pct": 1.05,  # Improving
+        "arpu_eur": 12.8,  # Price increases taking effect
+        "new_customer_arpu_growth_pct": 21.0,  # Highest in 3 years!
         "capex_eur_billion": 0.8,
+        # 1&1 Wholesale Success
+        "oneandone_customers_on_network_million": 12.0,  # Migration completed!
+        "wholesale_revenue_growing": True,
     },
     "Deutsche Telekom": {
         "revenue_eur_billion": 6.3, # Q3 25 actuals
@@ -116,7 +130,7 @@ FINANCIAL_DATA_Q2_2025 = {
 }
 
 # Competitive Dimensions Scores (1-100)
-COMPETITIVE_SCORES_Q2_2025 = {
+COMPETITIVE_SCORES_Q3_FY26 = {
     "Vodafone Germany": {
         "Network Coverage": 80, # Improved
         "Network Quality": 77,
@@ -188,12 +202,12 @@ class GermanyTelecomBLMAnalyzer:
     def __init__(self, target_operator: str = "Vodafone Germany"):
         self.target = target_operator
         self.competitors = [op for op in GERMANY_OPERATORS.keys() if op != target_operator]
-        self.financial_data = FINANCIAL_DATA_Q2_2025
-        self.competitive_scores = COMPETITIVE_SCORES_Q2_2025
+        self.financial_data = FINANCIAL_DATA_Q3_FY26
+        self.competitive_scores = COMPETITIVE_SCORES_Q3_FY26
         self.macro_data = MACRO_DATA_GERMANY_2025
 
     def look_at_market(self) -> InsightResult:
-        """看市场 - Germany Telecom Market Analysis Q2 2025"""
+        """看市场 - Germany Telecom Market Analysis Q3 FY26"""
 
         # Calculate market totals
         total_mobile = sum(d.get("mobile_subscribers_million", 0) for d in self.financial_data.values())
@@ -202,36 +216,40 @@ class GermanyTelecomBLMAnalyzer:
         avg_5g = sum(d.get("5g_coverage_pct", 0) for d in self.financial_data.values()) / len(self.financial_data)
 
         findings = [
-            f"德国电信市场总收入: €{total_revenue:.1f}B (Q2 2025)",
+            f"德国电信市场总收入: €{total_revenue:.1f}B (Q3 FY26)",
             f"移动用户总规模: {total_mobile:.1f}M，宽带用户: {total_broadband:.1f}M",
-            f"市场格局: 德电一家独大 (40.6%份额), Vodafone (27.0%), O2 (7.2%), 1&1 (10.7%)",
+            "市场格局: 德电一家独大 (40.6%份额), Vodafone (26.5%), O2 (7.2%), 1&1 (10.7%)",
             "德电连续35个季度EBITDA增长，展示绝对领导地位",
-            "Vodafone Germany 服务收入重回增长 (+0.5%)，结束5个季度的TV法规影响",
-            "O2 收入下降 (-2.4%) 受1&1客户迁移影响，但合约用户净增18.4万",
-            "1&1 作为第四大运营商，净利润大幅下滑49%，网络建设成本高企",
-            f"5G网络覆盖: 德电 97%, O2 98%, Vodafone 85%, 1&1 50% (自有网络)",
-            "市场竞争加剧，价格战压力持续，ARPU承压",
+            "【亮点】Vodafone Germany服务收入连续增长 (+0.7%)，Q2为+0.5%，趋势向好",
+            "【亮点】1&1客户迁移完成，1200万用户已接入Vodafone 5G网络",
+            "【亮点】Vodafone成为德国承载移动用户最多的网络运营商",
+            "O2 收入下降 (-2.4%) 受1&1客户迁移影响，失去批发收入",
+            "1&1 自有网络覆盖55%，仍处于建设投入期",
+            f"5G网络覆盖: 德电 97%, O2 98%, Vodafone 90%, 1&1 55%",
+            "市场竞争激烈但价值经营策略见效，新客户ARPU创3年新高(+21% YoY)",
         ]
 
         metrics = {
-            "total_revenue_eur_billion": total_revenue,
-            "total_mobile_million": total_mobile,
-            "total_broadband_million": total_broadband,
+            "total_revenue_eur_billion": round(total_revenue, 1),
+            "total_mobile_million": round(total_mobile, 1),
+            "total_broadband_million": round(total_broadband, 1),
             "avg_5g_coverage_pct": round(avg_5g, 1),
             "market_leader": "Deutsche Telekom",
             "market_leader_share_pct": 40.6,
+            "vf_service_revenue_growth": "+0.7%",
         }
 
         recommendations = [
             "关注德电持续增长的战略举措，学习其用户经营模式",
-            "把握1&1网络建设期的市场窗口，争取其流失用户",
-            "重视5G覆盖差距，加速5G网络建设投资",
-            "强化价值定位，避免纯价格竞争",
+            "充分利用1&1客户迁移完成的优势，最大化批发收入",
+            "继续推进5G网络建设，缩小与德电/O2的覆盖差距",
+            "坚持价值经营(Value over Volume)，保持新客户高ARPU",
+            "强化B2B数字化服务，发挥Skaylink收购带来的云能力",
         ]
 
         return InsightResult(
             category="market",
-            title="市场洞察 (Look at Market) - 德国电信市场 Q2 2025",
+            title="市场洞察 (Look at Market) - 德国电信市场 Q3 FY26",
             findings=findings,
             metrics=metrics,
             data=pd.DataFrame([self.financial_data]),
@@ -239,10 +257,11 @@ class GermanyTelecomBLMAnalyzer:
         )
 
     def look_at_self(self) -> InsightResult:
-        """看自己 - Vodafone Germany Self Assessment"""
+        """看自己 - Vodafone Germany Self Assessment (Q3 FY26)"""
 
         vf = self.financial_data[self.target]
         vf_scores = self.competitive_scores[self.target]
+        dt = self.financial_data["Deutsche Telekom"]
 
         # Calculate rankings
         revenue_rank = sorted(
@@ -259,17 +278,32 @@ class GermanyTelecomBLMAnalyzer:
         )
         margin_position = [x[0] for x in ebitda_margin_rank].index(self.target) + 1
 
+        # Calculate key deltas
+        revenue_gap_to_dt = (dt["revenue_eur_billion"] - vf["revenue_eur_billion"]) / vf["revenue_eur_billion"] * 100
+        margin_gap_to_dt = dt["ebitda_margin_pct"] - vf["ebitda_margin_pct"]
+        coverage_gap_to_dt = dt["5g_coverage_pct"] - vf["5g_coverage_pct"]
+
         findings = [
-            f"收入规模: €{vf['revenue_eur_billion']}B，市场排名第{revenue_position}",
-            f"服务收入增长: +{vf['service_revenue_growth_pct']}%，结束连续5季度下滑，重回增长轨道",
-            f"EBITDA利润率: {vf['ebitda_margin_pct']}%，排名第{margin_position}，低于德电(41.9%)",
-            f"宽带市场份额: {vf['market_share_broadband_pct']}%，稳居第二",
-            f"移动用户: {vf['mobile_subscribers_million']}M，用户规模远低于德电和O2",
-            f"5G覆盖率: {vf['5g_coverage_pct']}%，落后于德电(97%)和O2(98%)",
-            f"客户流失率: {vf['churn_rate_pct']}%，高于行业最佳水平",
-            "品牌认知度良好(82分)，但客户服务评分偏低(68分)",
-            "企业业务和批发业务是增长亮点",
-            "TV法规(MDU)影响已结束，为下半年创造有利基础",
+            # Revenue Performance (with source)
+            f"【收入】总收入 €{vf['revenue_eur_billion']}B (+0.1% YoY)，服务收入 €{vf.get('service_revenue_eur_billion', 2.726)}B (+0.7%)",
+            f"【收入拆解】移动服务收入 +{vf.get('mobile_service_revenue_growth_pct', 2.8)}% (批发增长驱动)，固网 {vf.get('fixed_service_revenue_growth_pct', -1.1)}% (TV下滑收窄)",
+            f"【收入排名】市场第{revenue_position}名，收入是德电的{vf['revenue_eur_billion']/dt['revenue_eur_billion']*100:.0f}%，差距{revenue_gap_to_dt:.0f}%",
+
+            # Profitability
+            f"【利润率】EBITDA利润率 {vf['ebitda_margin_pct']}%，排名第{margin_position}，低于德电 {margin_gap_to_dt:.1f}pp",
+
+            # Key Success: 1&1 Migration
+            f"【里程碑】1&1客户迁移完成！{vf.get('oneandone_customers_on_network_million', 12)}M用户接入Vodafone 5G网络",
+            "【战略意义】Vodafone现为德国承载移动用户最多的网络运营商",
+
+            # ARPU Strategy Working
+            f"【价值经营】新客户ARPU同比增长 +{vf.get('new_customer_arpu_growth_pct', 21)}%，创3年新高",
+            "【定价策略】2025年3-10月实施涨价，2026年1月再次调整宽带套餐，更高速度+更高价格",
+
+            # Challenges
+            f"【挑战】宽带用户净流失 {vf.get('broadband_net_adds_k', -63)}K，TV用户净减 {vf.get('tv_net_adds_k', -6)}K",
+            f"【网络差距】5G覆盖{vf['5g_coverage_pct']}%，落后德电{coverage_gap_to_dt}pp，但网络测试成绩持续改善",
+            f"【竞争压力】移动ARPU承压，竞争强度(competitive intensity)仍在影响",
         ]
 
         # Identify strengths and weaknesses
@@ -279,27 +313,30 @@ class GermanyTelecomBLMAnalyzer:
 
         metrics = {
             "revenue_eur_billion": vf["revenue_eur_billion"],
-            "revenue_rank": revenue_position,
+            "service_revenue_eur_billion": vf.get("service_revenue_eur_billion", 2.726),
             "service_revenue_growth_pct": vf["service_revenue_growth_pct"],
+            "mobile_growth_pct": vf.get("mobile_service_revenue_growth_pct", 2.8),
+            "fixed_growth_pct": vf.get("fixed_service_revenue_growth_pct", -1.1),
             "ebitda_margin_pct": vf["ebitda_margin_pct"],
-            "margin_rank": margin_position,
-            "market_share_pct": vf["market_share_broadband_pct"],
+            "margin_gap_to_leader_pp": round(margin_gap_to_dt, 1),
+            "new_customer_arpu_growth_pct": vf.get("new_customer_arpu_growth_pct", 21),
             "5g_coverage_pct": vf["5g_coverage_pct"],
-            "churn_rate_pct": vf["churn_rate_pct"],
-            "avg_competitive_score": round(avg_score, 1),
+            "oneandone_customers_million": vf.get("oneandone_customers_on_network_million", 12),
+            "broadband_net_adds_k": vf.get("broadband_net_adds_k", -63),
         }
 
         recommendations = [
-            "加速5G网络建设，缩小与德电和O2的覆盖差距",
-            "提升客户服务质量，降低流失率至1.0%以下",
-            "强化B2B和批发业务，发挥集团全球化优势",
-            "优化运营成本结构，提升EBITDA利润率向40%靠拢",
-            f"重点提升薄弱环节: {', '.join(weaknesses)}",
+            "继续推进5G网络建设，目标Q4 FY26达到95%覆盖，缩小与德电7pp差距",
+            "坚持'Value over Volume'策略，保持新客户高ARPU趋势",
+            "最大化1&1批发收入，Q4达到完整运行率(full run-rate)",
+            "强化B2B数字化服务，发挥Skaylink收购(€175M)带来的云和转型能力",
+            "推动TV与宽带捆绑，减缓独立TV用户流失",
+            f"重点提升薄弱环节: {', '.join(weaknesses) if weaknesses else '客户服务评分'}",
         ]
 
         return InsightResult(
             category="self",
-            title=f"自身洞察 (Look at Self) - {self.target}",
+            title=f"自身洞察 (Look at Self) - {self.target} Q3 FY26",
             findings=findings,
             metrics=metrics,
             data=pd.DataFrame([vf]),
@@ -307,7 +344,7 @@ class GermanyTelecomBLMAnalyzer:
         )
 
     def look_at_competitors(self) -> InsightResult:
-        """看对手 - Competitive Analysis"""
+        """看对手 - Competitive Analysis (Q3 FY26)"""
 
         vf = self.financial_data[self.target]
         vf_scores = self.competitive_scores[self.target]
@@ -331,27 +368,28 @@ class GermanyTelecomBLMAnalyzer:
 
             if comp == "Deutsche Telekom":
                 findings.extend([
-                    f"【德电】收入€{comp_fin['revenue_eur_billion']}B，是Vodafone的{comp_fin['revenue_eur_billion']/vf['revenue_eur_billion']:.1f}倍",
-                    f"【德电】EBITDA利润率{comp_fin['ebitda_margin_pct']}%，领先Vodafone {margin_diff:.1f}pp",
-                    f"【德电】连续35个季度EBITDA增长，运营能力极强",
-                    f"【德电】5G覆盖97%，网络质量评分92分，全面领先",
-                    f"【德电】核心优势: {', '.join(comp_strengths[:3])}",
+                    f"【德电-规模】收入€{comp_fin['revenue_eur_billion']}B vs Vodafone €{vf['revenue_eur_billion']}B (差距{revenue_diff/vf['revenue_eur_billion']*100:.0f}%)",
+                    f"【德电-利润率】EBITDA {comp_fin['ebitda_margin_pct']}% vs Vodafone {vf['ebitda_margin_pct']}% (领先{margin_diff:.1f}pp)",
+                    f"【德电-增长】连续35个季度EBITDA增长，展示卓越运营纪律",
+                    f"【德电-网络】5G覆盖{comp_fin['5g_coverage_pct']}% vs Vodafone {vf['5g_coverage_pct']}% (领先{comp_fin['5g_coverage_pct']-vf['5g_coverage_pct']}pp)",
+                    f"【德电-用户】移动用户{comp_fin['mobile_subscribers_million']}M，是Vodafone的{comp_fin['mobile_subscribers_million']/vf['mobile_subscribers_million']:.1f}倍",
+                    f"【德电-核心优势】{', '.join(comp_strengths[:4])}",
                 ])
             elif comp == "Telefónica O2 Germany":
                 findings.extend([
-                    f"【O2】收入下降2.4%，受1&1迁移影响，但仍保持用户增长",
-                    f"【O2】5G覆盖率98%，超越Vodafone 13pp",
-                    f"【O2】价格竞争力强(85分)，低价策略吸引价格敏感用户",
-                    f"【O2】IoT业务增长47%，新兴业务表现亮眼",
-                    f"【O2】流失率仅0.9%，用户粘性优于Vodafone",
+                    f"【O2-收入】收入下降{abs(comp_fin.get('revenue_growth_pct', -2.4))}%，1&1迁移至Vodafone导致批发收入损失",
+                    f"【O2-网络】5G覆盖{comp_fin['5g_coverage_pct']}%，德国最高，领先Vodafone {comp_fin['5g_coverage_pct']-vf['5g_coverage_pct']}pp",
+                    f"【O2-定价】价格竞争力评分{comp_scores.get('Pricing Competitiveness', 85)}分，低价策略吸引价格敏感用户",
+                    f"【O2-新业务】IoT增长{comp_fin.get('iot_growth_pct', 47)}%，新兴业务表现强劲",
+                    f"【O2-用户粘性】流失率{comp_fin['churn_rate_pct']}% vs Vodafone {vf['churn_rate_pct']}%",
                 ])
             elif comp == "1&1 AG":
                 findings.extend([
-                    f"【1&1】净利润下滑49%，网络建设投入期阵痛",
-                    f"【1&1】自有5G网络覆盖仅50%，大量用户仍依赖O2漫游",
-                    f"【1&1】价格竞争力最强(90分)，主打性价比",
-                    f"【1&1】Open RAN先驱，技术创新值得关注",
-                    f"【1&1】预计明年节省€100M漫游成本，盈利能力将改善",
+                    f"【1&1-转型】1200万客户已迁移至Vodafone网络，O2失去批发收入",
+                    f"【1&1-盈利】净利润下滑{abs(comp_fin.get('net_income_change_pct', -49))}%，网络建设投入期阵痛",
+                    f"【1&1-网络】自有5G覆盖{comp_fin['5g_coverage_pct']}%，Open RAN技术先驱",
+                    f"【1&1-成本】预计FY27节省€{comp_fin.get('expected_savings_eur_million', 100)}M漫游费用",
+                    f"【1&1-定价】价格竞争力最强({comp_scores.get('Pricing Competitiveness', 90)}分)，主打性价比",
                 ])
 
             competitor_data.append({
@@ -366,20 +404,22 @@ class GermanyTelecomBLMAnalyzer:
             "main_competitor": "Deutsche Telekom",
             "revenue_gap_to_leader_pct": round((self.financial_data["Deutsche Telekom"]["revenue_eur_billion"] - vf["revenue_eur_billion"]) / vf["revenue_eur_billion"] * 100, 1),
             "margin_gap_to_leader_pp": round(self.financial_data["Deutsche Telekom"]["ebitda_margin_pct"] - vf["ebitda_margin_pct"], 1),
+            "5g_gap_to_dt_pp": self.financial_data["Deutsche Telekom"]["5g_coverage_pct"] - vf["5g_coverage_pct"],
             "5g_gap_to_o2_pp": self.financial_data["Telefónica O2 Germany"]["5g_coverage_pct"] - vf["5g_coverage_pct"],
+            "oneandone_migrated_to_vf_million": 12.0,
         }
 
         recommendations = [
-            "对标德电运营效率，学习其持续35季度EBITDA增长的秘诀",
-            "加速5G网络部署，缩小与O2的覆盖差距",
-            "差异化竞争，避免与O2和1&1的纯价格战",
-            "关注1&1网络建设进展，其完成后将成为更强竞争者",
-            "发挥集团全球化优势，强化企业客户和国际漫游服务",
+            "对标德电运营效率，学习其持续35季度EBITDA增长的运营纪律",
+            "加速5G网络部署，目标缩小与O2的8pp差距",
+            "利用1&1迁移优势，最大化批发收入贡献",
+            "差异化竞争: 聚焦网络质量和企业服务，避免与O2/1&1价格战",
+            "发挥Vodafone集团全球化优势，强化跨国企业客户服务",
         ]
 
         return InsightResult(
             category="competitor",
-            title="竞争洞察 (Look at Competitors) - 德国市场竞争格局",
+            title="竞争洞察 (Look at Competitors) - 德国市场 Q3 FY26",
             findings=findings,
             metrics=metrics,
             data=pd.DataFrame(competitor_data),
