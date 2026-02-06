@@ -50,20 +50,44 @@ class PPTChartGenerator:
         self.dpi = dpi
 
         # Set matplotlib style with CJK font support
-        plt.rcParams['font.family'] = 'sans-serif'
-        # Priority: CJK fonts first, then fallback fonts
-        plt.rcParams['font.sans-serif'] = [
-            'Noto Sans CJK SC',  # Google Noto fonts
-            'WenQuanYi Micro Hei',  # Open source CJK font
-            'SimHei',  # Windows Chinese font
-            'Microsoft YaHei',  # Windows Chinese font
-            'PingFang SC',  # macOS Chinese font
-            'Hiragino Sans GB',  # macOS Chinese font
-            'Arial Unicode MS',  # Unicode font
-            'Arial',
-            'DejaVu Sans',
-            'Helvetica',
+        self._setup_chinese_fonts()
+
+    def _setup_chinese_fonts(self):
+        """Configure matplotlib to use Chinese fonts properly."""
+        import matplotlib.font_manager as fm
+
+        # Clear font cache to pick up newly installed fonts
+        fm._load_fontmanager(try_read_cache=False)
+
+        # Priority list of Chinese fonts
+        chinese_fonts = [
+            'WenQuanYi Zen Hei',      # Available on this system
+            'WenQuanYi Micro Hei',    # Open source CJK font
+            'Noto Sans CJK SC',       # Google Noto fonts
+            'SimHei',                 # Windows Chinese font
+            'Microsoft YaHei',        # Windows Chinese font
+            'PingFang SC',            # macOS Chinese font
+            'Hiragino Sans GB',       # macOS Chinese font
+            'Arial Unicode MS',       # Unicode font
         ]
+
+        # Find available Chinese font
+        available_fonts = [f.name for f in fm.fontManager.ttflist]
+        selected_font = None
+
+        for font in chinese_fonts:
+            if font in available_fonts:
+                selected_font = font
+                break
+
+        if selected_font:
+            plt.rcParams['font.family'] = 'sans-serif'
+            plt.rcParams['font.sans-serif'] = [selected_font, 'DejaVu Sans', 'Arial']
+        else:
+            # Fallback: try to use any available font
+            plt.rcParams['font.family'] = 'sans-serif'
+            plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Arial', 'Helvetica']
+
         plt.rcParams['axes.unicode_minus'] = False
 
     def create_market_share_bar_chart(
