@@ -739,24 +739,32 @@ def germany_analysis_enhanced(output_dir, style):
         competitors=analyzer.competitors,
         financial_data=FINANCIAL_DATA_Q3_FY26,
         competitive_scores=COMPETITIVE_SCORES_Q3_FY26,
-        filename="blm_vodafone_germany_enhanced.pptx",
+        filename="blm_vodafone_germany_q3_fy26.pptx",
+        title="Vodafone Germany BLM战略分析 - Q3 FY26",
     )
     click.echo(f"  Enhanced PPT: {ppt_path}")
 
     # Print slide summary
     click.echo("\nPPT Content Summary:")
-    click.echo("  • Title slide with framework overview")
-    click.echo("  • Executive summary with key metrics")
-    click.echo("  • Market share comparison chart")
-    click.echo("  • Revenue & profitability charts")
-    click.echo("  • 5G coverage comparison")
-    click.echo("  • Competitive radar analysis")
-    click.echo("  • Gap analysis visualization")
-    click.echo("  • Five Looks insight slides (5)")
-    click.echo("  • Three Decisions strategy slides (3)")
-    click.echo("  • Execution timeline")
-    click.echo("  • KPI dashboard")
-    click.echo("  • Conclusion & next steps")
+    click.echo("  Section 01: 五看分析 Five Looks Analysis")
+    click.echo("    • 数据来源页 (Data Sources)")
+    click.echo("    • 原始财务数据表 (Raw Data Table)")
+    click.echo("    • 市场份额对比图 (Market Share Chart)")
+    click.echo("    • 收入分析推导逻辑 (Revenue Derivation)")
+    click.echo("    • 收入对比分析 (Revenue Comparison)")
+    click.echo("    • 5G覆盖对比 (5G Coverage)")
+    click.echo("    • 运营商详细对比 (Detailed Comparison)")
+    click.echo("    • 竞争雷达分析 (Competitive Radar)")
+    click.echo("    • 差距分析及推导 (Gap Analysis)")
+    click.echo("    • Five Looks洞察 (5 slides)")
+    click.echo("  Section 02: Q3 FY26季度经营分析")
+    click.echo("    • 季度经营亮点 (Quarterly Highlights)")
+    click.echo("    • 季度变化深度分析 (Deep Dive)")
+    click.echo("  Section 03: 三定策略 Three Decisions")
+    click.echo("    • 战略定位及关键举措")
+    click.echo("    • 执行时间线")
+    click.echo("    • KPI仪表盘")
+    click.echo("  结论与下一步")
 
     click.echo(f"\nEnhanced PPT generation complete!")
     click.echo(f"Open to review: {ppt_path}")
