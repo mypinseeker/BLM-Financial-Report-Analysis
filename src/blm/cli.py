@@ -715,6 +715,11 @@ def germany_analysis_enhanced(output_dir, style):
         GermanyTelecomBLMAnalyzer,
         FINANCIAL_DATA_Q3_FY26,
         COMPETITIVE_SCORES_Q3_FY26,
+        HISTORICAL_USER_DATA,
+        HISTORICAL_FINANCIAL_DATA,
+        HISTORICAL_SEGMENT_DATA,
+        USER_FLOW_QUARTERLY,
+        QUARTERS,
     )
 
     analyzer = GermanyTelecomBLMAnalyzer(target_operator="Vodafone Germany")
@@ -730,7 +735,7 @@ def germany_analysis_enhanced(output_dir, style):
         click.echo(f"  ✓ {result.title}")
 
     # Generate enhanced PPT with charts
-    click.echo("\nGenerating enhanced PPT with charts...")
+    click.echo("\nGenerating enhanced PPT with charts and historical trends...")
     ppt_gen = BLMPPTGeneratorEnhanced(style=style, output_dir=output_dir)
     ppt_path = ppt_gen.generate(
         five_looks=five_looks,
@@ -739,6 +744,11 @@ def germany_analysis_enhanced(output_dir, style):
         competitors=analyzer.competitors,
         financial_data=FINANCIAL_DATA_Q3_FY26,
         competitive_scores=COMPETITIVE_SCORES_Q3_FY26,
+        historical_user_data=HISTORICAL_USER_DATA,
+        historical_financial_data=HISTORICAL_FINANCIAL_DATA,
+        historical_segment_data=HISTORICAL_SEGMENT_DATA,
+        user_flow_data=USER_FLOW_QUARTERLY,
+        quarters=QUARTERS,
         filename="blm_vodafone_germany_q3_fy26.pptx",
         title="Vodafone Germany BLM战略分析 - Q3 FY26",
     )
@@ -760,7 +770,16 @@ def germany_analysis_enhanced(output_dir, style):
     click.echo("  Section 02: Q3 FY26季度经营分析")
     click.echo("    • 季度经营亮点 (Quarterly Highlights)")
     click.echo("    • 季度变化深度分析 (Deep Dive)")
-    click.echo("  Section 03: 三定策略 Three Decisions")
+    click.echo("  Section 03: 历史趋势分析 (8 Quarters)")
+    click.echo("    • 用户规模趋势 (User Scale Trend)")
+    click.echo("    • 用户流动分析 (User Flow Analysis)")
+    click.echo("    • 财务指标趋势 (Financial Trend)")
+    click.echo("    • 成本与投资趋势 (Cost & Investment)")
+    click.echo("    • 移动业务趋势 (Mobile Segment)")
+    click.echo("    • 固定宽带趋势 (Fixed Broadband)")
+    click.echo("    • B2B企业业务趋势 (B2B Business)")
+    click.echo("    • 趋势洞察: 风险与机会")
+    click.echo("  Section 04: 三定策略 Three Decisions")
     click.echo("    • 战略定位及关键举措")
     click.echo("    • 执行时间线")
     click.echo("    • KPI仪表盘")

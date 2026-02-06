@@ -639,3 +639,268 @@ class PPTChartGenerator:
                    facecolor='white', edgecolor='none')
         plt.close()
         return str(output_path)
+
+    def create_multi_line_trend_chart(
+        self,
+        quarters: list[str],
+        data_series: dict[str, list[float]],
+        title: str,
+        y_label: str = "",
+        target_operator: str = None,
+        filename: str = "trend_chart.png",
+        show_legend: bool = True,
+        y_format: str = "number",  # "number", "percent", "millions"
+    ) -> str:
+        """Create multi-line trend chart for quarterly comparison.
+
+        Args:
+            quarters: List of quarter labels (e.g., ["Q1 FY25", "Q2 FY25", ...])
+            data_series: Dict of {operator_name: [values...]}
+            title: Chart title
+            y_label: Y-axis label
+            target_operator: Name of target operator (highlighted)
+            filename: Output filename
+            show_legend: Whether to show legend
+            y_format: Format for y-axis values
+
+        Returns:
+            Path to generated chart image
+        """
+        fig, ax = plt.subplots(figsize=(12, 5))
+
+        x = np.arange(len(quarters))
+
+        for i, (operator, values) in enumerate(data_series.items()):
+            # Highlight target operator
+            if operator == target_operator:
+                color = HUAWEI_RED
+                linewidth = 3
+                marker = 'o'
+                markersize = 8
+                zorder = 10
+            else:
+                color = CHART_COLORS[i % len(CHART_COLORS)]
+                linewidth = 2
+                marker = 's'
+                markersize = 5
+                zorder = 5
+
+            # Handle None/missing values
+            valid_x = []
+            valid_y = []
+            for j, v in enumerate(values):
+                if v is not None:
+                    valid_x.append(j)
+                    valid_y.append(v)
+
+            ax.plot(valid_x, valid_y, color=color, linewidth=linewidth,
+                   marker=marker, markersize=markersize, label=operator, zorder=zorder)
+
+        ax.set_xticks(x)
+        ax.set_xticklabels(quarters, fontsize=10)
+        ax.set_ylabel(y_label, fontsize=11, color=HUAWEI_DARK)
+
+        # Format y-axis
+        if y_format == "percent":
+            ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: f'{v:+.1f}%' if v != 0 else '0%'))
+        elif y_format == "millions":
+            ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda v, _: f'{v:.1f}M'))
+
+        ax.set_title(title, fontsize=14, fontweight='bold', color=HUAWEI_DARK, pad=15)
+        ax.grid(True, axis='y', alpha=0.3)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        if show_legend:
+            ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), fontsize=9)
+
+        plt.tight_layout()
+        output_path = self.output_dir / filename
+        plt.savefig(output_path, dpi=self.dpi, bbox_inches='tight',
+                   facecolor='white', edgecolor='none')
+        plt.close()
+        return str(output_path)
+
+    def create_stacked_bar_trend_chart(
+        self,
+        quarters: list[str],
+        segments: dict[str, list[float]],
+        title: str,
+        y_label: str = "",
+        filename: str = "stacked_trend.png",
+        colors: list[str] = None,
+    ) -> str:
+        """Create stacked bar chart for segment breakdown over time.
+
+        Args:
+            quarters: List of quarter labels
+            segments: Dict of {segment_name: [values...]}
+            title: Chart title
+            y_label: Y-axis label
+            filename: Output filename
+            colors: Custom colors for segments
+
+        Returns:
+            Path to generated chart image
+        """
+        fig, ax = plt.subplots(figsize=(12, 5))
+
+        x = np.arange(len(quarters))
+        width = 0.6
+
+        if colors is None:
+            colors = CHART_COLORS
+
+        bottom = np.zeros(len(quarters))
+        for i, (segment, values) in enumerate(segments.items()):
+            ax.bar(x, values, width, bottom=bottom, label=segment,
+                  color=colors[i % len(colors)], edgecolor='white', linewidth=0.5)
+            bottom += np.array(values)
+
+        ax.set_xticks(x)
+        ax.set_xticklabels(quarters, fontsize=10)
+        ax.set_ylabel(y_label, fontsize=11, color=HUAWEI_DARK)
+        ax.set_title(title, fontsize=14, fontweight='bold', color=HUAWEI_DARK, pad=15)
+
+        ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), fontsize=9)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        plt.tight_layout()
+        output_path = self.output_dir / filename
+        plt.savefig(output_path, dpi=self.dpi, bbox_inches='tight',
+                   facecolor='white', edgecolor='none')
+        plt.close()
+        return str(output_path)
+
+    def create_user_flow_sankey_simple(
+        self,
+        flow_data: dict[str, int],
+        operators: list[str],
+        title: str = "User Flow Analysis",
+        filename: str = "user_flow.png",
+    ) -> str:
+        """Create simplified user flow visualization.
+
+        Args:
+            flow_data: Dict with flow keys like "from_vodafone_to_dt": value
+            operators: List of operator names
+            title: Chart title
+            filename: Output filename
+
+        Returns:
+            Path to generated chart image
+        """
+        fig, ax = plt.subplots(figsize=(12, 6))
+
+        # Create a matrix visualization
+        n = len(operators)
+        matrix = np.zeros((n, n))
+
+        op_map = {
+            "vodafone": 0, "dt": 1, "o2": 2, "1and1": 3,
+            "Vodafone Germany": 0, "Deutsche Telekom": 1,
+            "Telefónica O2 Germany": 2, "1&1 AG": 3
+        }
+
+        for key, value in flow_data.items():
+            parts = key.replace("from_", "").split("_to_")
+            if len(parts) == 2:
+                src = op_map.get(parts[0], -1)
+                dst = op_map.get(parts[1], -1)
+                if src >= 0 and dst >= 0:
+                    matrix[src, dst] = value
+
+        # Plot as heatmap
+        cmap = plt.cm.Reds
+        im = ax.imshow(matrix, cmap=cmap, aspect='auto')
+
+        ax.set_xticks(np.arange(n))
+        ax.set_yticks(np.arange(n))
+        short_names = ["Vodafone", "DT", "O2", "1&1"]
+        ax.set_xticklabels(short_names, fontsize=10)
+        ax.set_yticklabels(short_names, fontsize=10)
+
+        ax.set_xlabel("To", fontsize=11, color=HUAWEI_DARK)
+        ax.set_ylabel("From", fontsize=11, color=HUAWEI_DARK)
+
+        # Add values in cells
+        for i in range(n):
+            for j in range(n):
+                if i != j and matrix[i, j] > 0:
+                    text_color = 'white' if matrix[i, j] > matrix.max() * 0.5 else 'black'
+                    ax.text(j, i, f'{int(matrix[i, j])}K',
+                           ha='center', va='center', color=text_color, fontsize=10)
+
+        ax.set_title(title, fontsize=14, fontweight='bold', color=HUAWEI_DARK, pad=15)
+
+        cbar = plt.colorbar(im, ax=ax, shrink=0.8)
+        cbar.set_label('Users (K)', fontsize=10)
+
+        plt.tight_layout()
+        output_path = self.output_dir / filename
+        plt.savefig(output_path, dpi=self.dpi, bbox_inches='tight',
+                   facecolor='white', edgecolor='none')
+        plt.close()
+        return str(output_path)
+
+    def create_segment_comparison_chart(
+        self,
+        quarters: list[str],
+        operators_data: dict[str, dict[str, list[float]]],
+        segment: str,
+        title: str,
+        y_label: str = "",
+        target_operator: str = None,
+        filename: str = "segment_comparison.png",
+    ) -> str:
+        """Create grouped bar chart comparing segment performance across operators.
+
+        Args:
+            quarters: List of quarter labels
+            operators_data: Dict of {operator: {metric: [values...]}}
+            segment: Segment key to compare (e.g., "mobile_service_revenue")
+            title: Chart title
+            y_label: Y-axis label
+            target_operator: Target operator to highlight
+            filename: Output filename
+
+        Returns:
+            Path to generated chart image
+        """
+        fig, ax = plt.subplots(figsize=(14, 5))
+
+        x = np.arange(len(quarters))
+        n_operators = len(operators_data)
+        width = 0.8 / n_operators
+
+        for i, (operator, data) in enumerate(operators_data.items()):
+            values = data.get(segment, [0] * len(quarters))
+            offset = (i - n_operators / 2 + 0.5) * width
+
+            if operator == target_operator:
+                color = HUAWEI_RED
+                edgecolor = 'darkred'
+            else:
+                color = CHART_COLORS[i % len(CHART_COLORS)]
+                edgecolor = 'none'
+
+            bars = ax.bar(x + offset, values, width, label=operator,
+                         color=color, edgecolor=edgecolor, linewidth=1.5)
+
+        ax.set_xticks(x)
+        ax.set_xticklabels(quarters, fontsize=10)
+        ax.set_ylabel(y_label, fontsize=11, color=HUAWEI_DARK)
+        ax.set_title(title, fontsize=14, fontweight='bold', color=HUAWEI_DARK, pad=15)
+
+        ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), fontsize=9)
+        ax.grid(True, axis='y', alpha=0.3)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        plt.tight_layout()
+        output_path = self.output_dir / filename
+        plt.savefig(output_path, dpi=self.dpi, bbox_inches='tight',
+                   facecolor='white', edgecolor='none')
+        plt.close()
+        return str(output_path)

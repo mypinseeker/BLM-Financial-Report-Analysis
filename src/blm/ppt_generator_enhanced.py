@@ -82,6 +82,11 @@ class BLMPPTGeneratorEnhanced:
         competitors: list[str] = None,
         financial_data: dict = None,
         competitive_scores: dict = None,
+        historical_user_data: dict = None,
+        historical_financial_data: dict = None,
+        historical_segment_data: dict = None,
+        user_flow_data: dict = None,
+        quarters: list[str] = None,
         title: str = None,
         filename: str = None,
     ) -> str:
@@ -94,12 +99,23 @@ class BLMPPTGeneratorEnhanced:
             competitors: List of competitor names
             financial_data: Raw financial data for charts
             competitive_scores: Competitive dimension scores for radar chart
+            historical_user_data: 8-quarter user trend data
+            historical_financial_data: 8-quarter financial trend data
+            historical_segment_data: 8-quarter business segment data
+            user_flow_data: User flow between operators
+            quarters: List of quarter labels
             title: Presentation title
             filename: Output filename
 
         Returns:
             Path to generated PPT file
         """
+        # Store historical data for use in slide methods
+        self.historical_user_data = historical_user_data
+        self.historical_financial_data = historical_financial_data
+        self.historical_segment_data = historical_segment_data
+        self.user_flow_data = user_flow_data
+        self.quarters = quarters or ["Q4 FY24", "Q1 FY25", "Q2 FY25", "Q3 FY25", "Q4 FY25", "Q1 FY26", "Q2 FY26", "Q3 FY26"]
         self.prs = Presentation()
         self.prs.slide_width = Inches(13.333)  # 16:9 aspect ratio
         self.prs.slide_height = Inches(7.5)
@@ -158,8 +174,12 @@ class BLMPPTGeneratorEnhanced:
         if financial_data:
             self._add_quarterly_analysis_section(financial_data, target_operator)
 
-        # Section 3: Three Decisions
-        self._add_section_divider("三定策略", "Three Decisions Strategy", "03")
+        # NEW Section: Historical Trend Analysis (8 Quarters)
+        if self.historical_user_data and self.historical_financial_data:
+            self._add_historical_trend_section(target_operator, competitors)
+
+        # Section 4: Three Decisions
+        self._add_section_divider("三定策略", "Three Decisions Strategy", "04")
 
         # Strategy slides with priority visualization
         for key, decision in three_decisions.items():
@@ -2399,9 +2419,713 @@ class BLMPPTGeneratorEnhanced:
             bold=True,
         )
 
+    def _add_historical_trend_section(self, target_operator: str, competitors: list[str]):
+        """Add historical trend analysis section (8 quarters)."""
+        # Section divider
+        self._add_section_divider("历史趋势分析", "Historical Trend Analysis (8 Quarters)", "03")
+
+        # Slide 1: User Scale Trend
+        self._add_user_trend_slide(target_operator, competitors)
+
+        # Slide 2: User Flow Analysis
+        self._add_user_flow_slide(target_operator)
+
+        # Slide 3: Financial Trend (Revenue & EBITDA)
+        self._add_financial_trend_slide(target_operator, competitors)
+
+        # Slide 4: Cost & Investment Trend
+        self._add_cost_trend_slide(target_operator, competitors)
+
+        # Slide 5: Business Segment - Mobile
+        self._add_segment_trend_slide("mobile", target_operator, competitors)
+
+        # Slide 6: Business Segment - Fixed Broadband
+        self._add_segment_trend_slide("fixed", target_operator, competitors)
+
+        # Slide 7: Business Segment - B2B
+        self._add_segment_trend_slide("b2b", target_operator, competitors)
+
+        # Slide 8: Trend Insights - Risks & Opportunities
+        self._add_trend_insights_slide(target_operator)
+
+    def _add_user_trend_slide(self, target_operator: str, competitors: list[str]):
+        """Add user scale trend analysis slide."""
+        slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
+        self.slide_num += 1
+
+        self._add_header(slide, "用户规模趋势分析", "User Scale Trend (8 Quarters)")
+
+        if not self.historical_user_data:
+            return
+
+        # Mobile subscribers trend chart
+        mobile_data = {
+            op: self.historical_user_data.get(op, {}).get("mobile_subscribers", [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_user_data
+        }
+
+        chart_path = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=mobile_data,
+            title="移动用户规模趋势 (百万)",
+            y_label="用户数 (M)",
+            target_operator=target_operator,
+            filename="mobile_user_trend.png",
+            y_format="millions",
+        )
+
+        self._add_image(slide, chart_path, Inches(0.3), Inches(1.3), Inches(6.2), Inches(2.8))
+
+        # Broadband subscribers trend chart
+        bb_data = {
+            op: self.historical_user_data.get(op, {}).get("broadband_subscribers", [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_user_data
+        }
+
+        chart_path2 = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=bb_data,
+            title="宽带用户规模趋势 (百万)",
+            y_label="用户数 (M)",
+            target_operator=target_operator,
+            filename="broadband_user_trend.png",
+            y_format="millions",
+        )
+
+        self._add_image(slide, chart_path2, Inches(6.8), Inches(1.3), Inches(6.2), Inches(2.8))
+
+        # Key insights box
+        self._add_shape(
+            slide,
+            Inches(0.3), Inches(4.3), Inches(12.7), Inches(2.9),
+            (245, 245, 245),
+        )
+
+        self._add_text_box(
+            slide,
+            Inches(0.5), Inches(4.4), Inches(6), Inches(0.35),
+            "用户规模变化洞察 USER SCALE INSIGHTS",
+            font_size=13,
+            font_color=self.style.primary_color,
+            bold=True,
+        )
+
+        insights = [
+            "【移动用户】",
+            f"  • {target_operator}: 8个季度增长+0.8M (30.5M→31.3M)，稳步增长",
+            "  • Deutsche Telekom: 增长+2.6M (67.2M→69.8M)，领跑市场",
+            "  • O2 Germany: 流失-0.8M (45.8M→45.0M)，1&1迁移影响",
+            "  • 1&1 AG: 增长+0.68M (11.8M→12.48M)，自有网络吸引用户",
+            "",
+            "【宽带用户】",
+            f"  • {target_operator}: 流失-0.38M (10.32M→9.94M)，固网竞争压力大",
+            "  • Deutsche Telekom: 增长+0.7M (14.5M→15.2M)，光纤升级拉动",
+        ]
+
+        y_pos = Inches(4.8)
+        for insight in insights:
+            self._add_text_box(
+                slide,
+                Inches(0.5), y_pos, Inches(12.5), Inches(0.28),
+                insight,
+                font_size=10,
+                font_color=self.style.text_color,
+            )
+            y_pos += Inches(0.26)
+
+    def _add_user_flow_slide(self, target_operator: str):
+        """Add user flow analysis slide."""
+        slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
+        self.slide_num += 1
+
+        self._add_header(slide, "用户流动分析", "User Flow Analysis - Q3 FY26")
+
+        if self.user_flow_data:
+            # Get latest quarter flow data (index 7 = Q3 FY26)
+            latest_flow = {k: v[7] if isinstance(v, list) else v for k, v in self.user_flow_data.items()}
+
+            chart_path = self.chart_gen.create_user_flow_sankey_simple(
+                flow_data=latest_flow,
+                operators=[target_operator, "Deutsche Telekom", "Telefónica O2 Germany", "1&1 AG"],
+                title="Q3 FY26 用户季度流动 (千)",
+                filename="user_flow_matrix.png",
+            )
+
+            self._add_image(slide, chart_path, Inches(0.5), Inches(1.3), Inches(5.5), Inches(4))
+
+        # Flow analysis text
+        self._add_shape(
+            slide,
+            Inches(6.3), Inches(1.3), Inches(6.5), Inches(5.5),
+            (248, 248, 248),
+        )
+
+        self._add_text_box(
+            slide,
+            Inches(6.5), Inches(1.45), Inches(6), Inches(0.35),
+            "用户流动分析 USER FLOW ANALYSIS",
+            font_size=13,
+            font_color=self.style.primary_color,
+            bold=True,
+        )
+
+        flow_insights = [
+            "净流入运营商 (用户增长):",
+            "  • Deutsche Telekom: 净流入 +10K/季度",
+            "    最大来源: O2 (12K), Vodafone (8K)",
+            "  • 1&1 AG: 净流入 +5K/季度",
+            "    价格优势吸引价格敏感用户",
+            "",
+            "净流出运营商 (用户流失):",
+            f"  • {target_operator}: 净流出 -11K/季度",
+            "    主要流向: DT (8K), O2 (8K)",
+            "    流失率改善: Q1 FY25 -51K → Q3 FY26 -11K",
+            "  • O2 Germany: 净流出 -7K/季度",
+            "    1&1网络迁移带走部分批发用户",
+            "",
+            "趋势观察:",
+            f"  • {target_operator}流失率持续改善 (8季度下降78%)",
+            "  • DT用户黏性最强，流出率最低",
+            "  • 市场格局趋于稳定，大规模迁移减少",
+        ]
+
+        y_pos = Inches(1.85)
+        for insight in flow_insights:
+            font_color = self.style.text_color
+            if "净流入" in insight or "Deutsche Telekom:" in insight or "1&1 AG:" in insight:
+                font_color = (0, 128, 0)
+            elif "净流出" in insight or f"{target_operator}:" in insight or "O2 Germany:" in insight:
+                font_color = (180, 0, 0)
+
+            self._add_text_box(
+                slide,
+                Inches(6.5), y_pos, Inches(6), Inches(0.28),
+                insight,
+                font_size=10,
+                font_color=font_color if ":" in insight and "分析" not in insight else self.style.text_color,
+            )
+            y_pos += Inches(0.27)
+
+    def _add_financial_trend_slide(self, target_operator: str, competitors: list[str]):
+        """Add financial trend analysis slide."""
+        slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
+        self.slide_num += 1
+
+        self._add_header(slide, "财务指标趋势分析", "Financial Trend Analysis (8 Quarters)")
+
+        if not self.historical_financial_data:
+            return
+
+        # Service Revenue Growth Trend
+        growth_data = {
+            op: self.historical_financial_data.get(op, {}).get("service_revenue_growth_pct", [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_financial_data
+        }
+
+        chart_path = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=growth_data,
+            title="服务收入增长率趋势 (%)",
+            y_label="增长率 (%)",
+            target_operator=target_operator,
+            filename="revenue_growth_trend.png",
+            y_format="percent",
+        )
+
+        self._add_image(slide, chart_path, Inches(0.3), Inches(1.3), Inches(6.2), Inches(2.6))
+
+        # EBITDA Margin Trend
+        margin_data = {
+            op: self.historical_financial_data.get(op, {}).get("ebitda_margin_pct", [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_financial_data
+        }
+
+        chart_path2 = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=margin_data,
+            title="EBITDA利润率趋势 (%)",
+            y_label="利润率 (%)",
+            target_operator=target_operator,
+            filename="ebitda_margin_trend.png",
+        )
+
+        self._add_image(slide, chart_path2, Inches(6.8), Inches(1.3), Inches(6.2), Inches(2.6))
+
+        # Data table
+        self._add_text_box(
+            slide,
+            Inches(0.3), Inches(4.05), Inches(6), Inches(0.35),
+            "收入增长率数据 (8季度)",
+            font_size=11,
+            font_color=self.style.primary_color,
+            bold=True,
+        )
+
+        # Mini table for revenue growth
+        operators_short = ["VF", "DT", "O2", "1&1"]
+        operators_full = [target_operator, "Deutsche Telekom", "Telefónica O2 Germany", "1&1 AG"]
+
+        table_y = Inches(4.4)
+        col_width = Inches(0.72)
+        # Header row
+        self._add_text_box(slide, Inches(0.3), table_y, Inches(0.6), Inches(0.25), "", font_size=8)
+        for i, q in enumerate(self.quarters):
+            self._add_text_box(
+                slide, Inches(0.9) + i * col_width, table_y, col_width, Inches(0.25),
+                q.replace(" ", "\n"), font_size=7, font_color=self.style.text_color
+            )
+
+        for op_idx, (short, full) in enumerate(zip(operators_short, operators_full)):
+            table_y += Inches(0.28)
+            growth_vals = self.historical_financial_data.get(full, {}).get("service_revenue_growth_pct", [0]*8)
+
+            self._add_text_box(
+                slide, Inches(0.3), table_y, Inches(0.6), Inches(0.25),
+                short, font_size=8, font_color=self.style.text_color, bold=True
+            )
+            for i, val in enumerate(growth_vals):
+                color = (0, 128, 0) if val > 0 else (180, 0, 0) if val < 0 else self.style.text_color
+                self._add_text_box(
+                    slide, Inches(0.9) + i * col_width, table_y, col_width, Inches(0.25),
+                    f"{val:+.1f}%", font_size=8, font_color=color
+                )
+
+        # Insights
+        self._add_shape(
+            slide,
+            Inches(6.8), Inches(4.05), Inches(6.2), Inches(3.1),
+            (245, 250, 255),
+        )
+
+        self._add_text_box(
+            slide,
+            Inches(7), Inches(4.15), Inches(6), Inches(0.3),
+            "财务趋势洞察",
+            font_size=12,
+            font_color=self.style.primary_color,
+            bold=True,
+        )
+
+        fin_insights = [
+            f"• {target_operator}服务收入增速持续改善:",
+            "  Q4 FY24 -0.8% → Q3 FY26 +0.7% (改善1.5pp)",
+            "",
+            "• DT增速虽放缓但仍保持正增长:",
+            "  Q4 FY24 +2.8% → Q3 FY26 +1.1%",
+            "",
+            "• O2持续负增长，1&1迁移冲击显著:",
+            "  8季度持续下滑，Q3 FY26 -3.4%",
+            "",
+            f"• {target_operator} EBITDA利润率稳步提升:",
+            "  35.4% → 36.2% (+0.8pp)，效率改善",
+        ]
+
+        y_pos = Inches(4.5)
+        for insight in fin_insights:
+            self._add_text_box(
+                slide,
+                Inches(7), y_pos, Inches(5.8), Inches(0.28),
+                insight,
+                font_size=9,
+                font_color=self.style.text_color,
+            )
+            y_pos += Inches(0.28)
+
+    def _add_cost_trend_slide(self, target_operator: str, competitors: list[str]):
+        """Add cost and investment trend slide."""
+        slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
+        self.slide_num += 1
+
+        self._add_header(slide, "成本与投资趋势", "Cost & Investment Trend (8 Quarters)")
+
+        if not self.historical_financial_data:
+            return
+
+        # Operating Cost Trend
+        cost_data = {
+            op: self.historical_financial_data.get(op, {}).get("operating_cost", [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_financial_data
+        }
+
+        chart_path = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=cost_data,
+            title="运营成本趋势 (€B)",
+            y_label="成本 (€B)",
+            target_operator=target_operator,
+            filename="opex_trend.png",
+        )
+
+        self._add_image(slide, chart_path, Inches(0.3), Inches(1.3), Inches(6.2), Inches(2.6))
+
+        # Capex Trend
+        capex_data = {
+            op: self.historical_financial_data.get(op, {}).get("capex", [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_financial_data
+        }
+
+        chart_path2 = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=capex_data,
+            title="资本支出趋势 (€B)",
+            y_label="Capex (€B)",
+            target_operator=target_operator,
+            filename="capex_trend.png",
+        )
+
+        self._add_image(slide, chart_path2, Inches(6.8), Inches(1.3), Inches(6.2), Inches(2.6))
+
+        # Employee trend
+        emp_data = {
+            op: self.historical_financial_data.get(op, {}).get("employees_k", [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_financial_data
+        }
+
+        chart_path3 = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=emp_data,
+            title="员工人数趋势 (千人)",
+            y_label="员工 (K)",
+            target_operator=target_operator,
+            filename="employee_trend.png",
+        )
+
+        self._add_image(slide, chart_path3, Inches(0.3), Inches(4.1), Inches(6.2), Inches(2.6))
+
+        # Insights
+        self._add_shape(
+            slide,
+            Inches(6.8), Inches(4.1), Inches(6.2), Inches(2.6),
+            (255, 248, 240),
+        )
+
+        self._add_text_box(
+            slide,
+            Inches(7), Inches(4.2), Inches(6), Inches(0.3),
+            "成本与投资洞察",
+            font_size=12,
+            font_color=(180, 100, 0),
+            bold=True,
+        )
+
+        cost_insights = [
+            f"【{target_operator}运营成本】",
+            "  • 8季度基本持平 (€1.97B-€1.99B)",
+            "  • 员工精简700人 (15.2K→14.5K, -4.6%)",
+            "  • 效率提升支撑利润率改善",
+            "",
+            "【资本支出】",
+            "  • Capex稳定在€0.8B/季度水平",
+            "  • 网络投资保持，支撑5G覆盖提升",
+            "",
+            "【行业对比】",
+            "  • DT: 降本增效，员工减少1.7K",
+            "  • O2: 成本压缩明显 (€1.44B→€1.35B)",
+        ]
+
+        y_pos = Inches(4.55)
+        for insight in cost_insights:
+            self._add_text_box(
+                slide,
+                Inches(7), y_pos, Inches(5.8), Inches(0.26),
+                insight,
+                font_size=9,
+                font_color=self.style.text_color,
+            )
+            y_pos += Inches(0.25)
+
+    def _add_segment_trend_slide(self, segment: str, target_operator: str, competitors: list[str]):
+        """Add business segment trend analysis slide."""
+        slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
+        self.slide_num += 1
+
+        segment_config = {
+            "mobile": {
+                "title": "移动业务趋势分析",
+                "subtitle": "Mobile Service Trend (8 Quarters)",
+                "revenue_key": "mobile_service_revenue",
+                "growth_key": "mobile_service_growth_pct",
+            },
+            "fixed": {
+                "title": "固定宽带业务趋势分析",
+                "subtitle": "Fixed Broadband Trend (8 Quarters)",
+                "revenue_key": "fixed_broadband_revenue",
+                "growth_key": "fixed_broadband_growth_pct",
+            },
+            "b2b": {
+                "title": "B2B企业业务趋势分析",
+                "subtitle": "B2B Business Trend (8 Quarters)",
+                "revenue_key": "b2b_revenue",
+                "growth_key": "b2b_growth_pct",
+            },
+        }
+
+        config = segment_config.get(segment, segment_config["mobile"])
+        self._add_header(slide, config["title"], config["subtitle"])
+
+        if not self.historical_segment_data:
+            return
+
+        # Revenue chart
+        rev_data = {
+            op: self.historical_segment_data.get(op, {}).get(config["revenue_key"], [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_segment_data
+        }
+
+        chart_path = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=rev_data,
+            title=f"{config['title'].replace('趋势分析', '')}收入 (€M)",
+            y_label="收入 (€M)",
+            target_operator=target_operator,
+            filename=f"{segment}_revenue_trend.png",
+        )
+
+        self._add_image(slide, chart_path, Inches(0.3), Inches(1.3), Inches(6.2), Inches(2.6))
+
+        # Growth rate chart
+        growth_data = {
+            op: self.historical_segment_data.get(op, {}).get(config["growth_key"], [])
+            for op in [target_operator] + competitors[:3]
+            if op in self.historical_segment_data
+        }
+
+        chart_path2 = self.chart_gen.create_multi_line_trend_chart(
+            quarters=self.quarters,
+            data_series=growth_data,
+            title=f"{config['title'].replace('趋势分析', '')}增长率 (%)",
+            y_label="增长率 (%)",
+            target_operator=target_operator,
+            filename=f"{segment}_growth_trend.png",
+            y_format="percent",
+        )
+
+        self._add_image(slide, chart_path2, Inches(6.8), Inches(1.3), Inches(6.2), Inches(2.6))
+
+        # Segment-specific insights
+        insights_map = {
+            "mobile": [
+                f"【{target_operator}移动业务】",
+                "  • 收入从€1,450M增至€1,520M (+4.8%)",
+                "  • 增速由-0.5%转正至+2.8%，企稳回升",
+                "  • 1&1批发收入是核心增长驱动",
+                "",
+                "【竞争格局】",
+                "  • DT保持领先但增速放缓 (3.5%→1.6%)",
+                "  • O2持续负增长 (-1.2%→-3.0%)",
+                "  • 1&1增速放缓但维持正增长",
+                "",
+                "【市场趋势】",
+                "  • 移动市场整体增速趋缓",
+                "  • 批发业务成为差异化竞争点",
+                "  • 价值经营替代规模扩张",
+            ],
+            "fixed": [
+                f"【{target_operator}固定业务】",
+                "  • 收入从€820M降至€795M (-3.0%)",
+                "  • 降幅持续收窄 (-2.8%→-1.1%)",
+                "  • 用户流失放缓，止血信号明确",
+                "",
+                "【竞争格局】",
+                "  • DT凭借光纤优势保持增长 (+0.9%)",
+                "  • O2固网业务小幅增长 (+0.5%)",
+                "  • 1&1固网持续下滑 (-1.0%)",
+                "",
+                "【市场趋势】",
+                "  • 光纤升级是增长核心驱动力",
+                "  • 铜网用户持续向光纤迁移",
+                "  • 捆绑销售策略日益重要",
+            ],
+            "b2b": [
+                f"【{target_operator} B2B业务】",
+                "  • 收入从€410M增至€520M (+26.8%)",
+                "  • 增速从3.5%提升至8.5%，强劲增长",
+                "  • Skaylink收购增强云服务能力",
+                "",
+                "【竞争格局】",
+                "  • DT B2B持续高增长 (5.5%→7.5%)",
+                "  • O2 B2B增速最快 (8%→13%)",
+                "  • 所有运营商都在发力企业市场",
+                "",
+                "【市场趋势】",
+                "  • 企业数字化转型驱动需求",
+                "  • 云服务和IoT成为新增长点",
+                "  • B2B是运营商价值转型方向",
+            ],
+        }
+
+        insights = insights_map.get(segment, insights_map["mobile"])
+
+        self._add_shape(
+            slide,
+            Inches(0.3), Inches(4.1), Inches(12.7), Inches(3.1),
+            (245, 248, 255),
+        )
+
+        y_pos = Inches(4.2)
+        col1_x = Inches(0.5)
+        col2_x = Inches(6.8)
+
+        for i, insight in enumerate(insights):
+            x_pos = col1_x if i < 7 else col2_x
+            if i == 7:
+                y_pos = Inches(4.2)
+
+            self._add_text_box(
+                slide,
+                x_pos, y_pos, Inches(6), Inches(0.26),
+                insight,
+                font_size=9,
+                font_color=self.style.text_color,
+            )
+            y_pos += Inches(0.25)
+
+    def _add_trend_insights_slide(self, target_operator: str):
+        """Add trend insights with risks and opportunities slide."""
+        slide = self.prs.slides.add_slide(self.prs.slide_layouts[6])
+        self.slide_num += 1
+
+        self._add_header(slide, "趋势洞察: 风险与机会", "Trend Insights: Risks & Opportunities")
+
+        # Opportunities section (left)
+        self._add_shape(
+            slide,
+            Inches(0.3), Inches(1.3), Inches(6.2), Inches(5.8),
+            (230, 255, 230),
+        )
+
+        self._add_text_box(
+            slide,
+            Inches(0.5), Inches(1.4), Inches(5.8), Inches(0.4),
+            "机会 OPPORTUNITIES",
+            font_size=16,
+            font_color=(0, 128, 0),
+            bold=True,
+        )
+
+        opportunities = [
+            "1. 服务收入企稳回升",
+            "   • 连续8季度改善，由-0.8%转为+0.7%",
+            "   • 趋势线显示有望在FY27实现正增长",
+            "",
+            "2. 批发业务高速增长",
+            "   • 1&1迁移带来€380M/季批发收入",
+            "   • 8季度增长111% (€180M→€380M)",
+            "",
+            "3. B2B业务持续扩张",
+            "   • 26.8%的8季度累计增长",
+            "   • 云服务收购增强竞争力",
+            "",
+            "4. 用户流失显著改善",
+            "   • 净流出从51K/季降至11K/季",
+            "   • 改善幅度达78%",
+            "",
+            "5. 运营效率持续提升",
+            "   • EBITDA利润率提升0.8pp",
+            "   • 人员精简4.6%支撑降本",
+        ]
+
+        y_pos = Inches(1.85)
+        for opp in opportunities:
+            font_color = (0, 100, 0) if opp.startswith(("1.", "2.", "3.", "4.", "5.")) else self.style.text_color
+            self._add_text_box(
+                slide,
+                Inches(0.5), y_pos, Inches(5.8), Inches(0.28),
+                opp,
+                font_size=10,
+                font_color=font_color,
+                bold=opp.startswith(("1.", "2.", "3.", "4.", "5.")),
+            )
+            y_pos += Inches(0.28)
+
+        # Risks section (right)
+        self._add_shape(
+            slide,
+            Inches(6.8), Inches(1.3), Inches(6.2), Inches(5.8),
+            (255, 235, 235),
+        )
+
+        self._add_text_box(
+            slide,
+            Inches(7), Inches(1.4), Inches(5.8), Inches(0.4),
+            "风险 RISKS",
+            font_size=16,
+            font_color=(180, 0, 0),
+            bold=True,
+        )
+
+        risks = [
+            "1. 固定业务持续承压",
+            "   • 8季度累计流失38万宽带用户",
+            "   • 光纤覆盖不足难以挽回流失",
+            "",
+            "2. 市场份额被蚕食",
+            "   • DT宽带份额扩大 (38.5%→40.6%)",
+            "   • Vodafone份额收缩 (27.4%→26.5%)",
+            "",
+            "3. 与DT差距拉大",
+            "   • 收入增速差距3.5pp (+0.7% vs +4.2%)",
+            "   • EBITDA差距持续 (36.2% vs 41.9%)",
+            "",
+            "4. 5G网络覆盖落后",
+            "   • 与DT差距5pp (92% vs 97%)",
+            "   • 影响高端用户获取",
+            "",
+            "5. O2 B2B崛起威胁",
+            "   • O2 B2B增速13%，快于Vodafone 8.5%",
+            "   • 企业市场竞争加剧",
+        ]
+
+        y_pos = Inches(1.85)
+        for risk in risks:
+            font_color = (150, 0, 0) if risk.startswith(("1.", "2.", "3.", "4.", "5.")) else self.style.text_color
+            self._add_text_box(
+                slide,
+                Inches(7), y_pos, Inches(5.8), Inches(0.28),
+                risk,
+                font_size=10,
+                font_color=font_color,
+                bold=risk.startswith(("1.", "2.", "3.", "4.", "5.")),
+            )
+            y_pos += Inches(0.28)
+
     # =========================================================================
     # Helper Methods
     # =========================================================================
+
+    def _add_image(self, slide, image_path: str, left, top, width, height):
+        """Add an image to the slide.
+
+        Args:
+            slide: PowerPoint slide
+            image_path: Path to image file
+            left: Left position
+            top: Top position
+            width: Image width
+            height: Image height
+        """
+        try:
+            slide.shapes.add_picture(
+                image_path,
+                left, top,
+                width=width, height=height,
+            )
+        except Exception as e:
+            # If image fails, add placeholder text
+            self._add_text_box(
+                slide, left, top, width, height,
+                f"[Chart: {image_path}]",
+                font_size=10,
+                font_color=(150, 150, 150),
+            )
 
     def _add_header(self, slide, title: str, subtitle: str = ""):
         """Add standard header to slide."""

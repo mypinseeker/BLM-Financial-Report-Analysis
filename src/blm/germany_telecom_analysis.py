@@ -181,6 +181,165 @@ COMPETITIVE_SCORES_Q3_FY26 = {
     },
 }
 
+# =============================================================================
+# Historical Quarterly Data - 8 Quarters (Q4 FY24 - Q3 FY26)
+# For trend analysis and competitive benchmarking
+# =============================================================================
+
+# Quarter labels for reference
+QUARTERS = ["Q4 FY24", "Q1 FY25", "Q2 FY25", "Q3 FY25", "Q4 FY25", "Q1 FY26", "Q2 FY26", "Q3 FY26"]
+
+# Historical User Data (in millions)
+HISTORICAL_USER_DATA = {
+    "Vodafone Germany": {
+        "mobile_subscribers": [30.5, 30.6, 30.8, 30.9, 31.0, 31.1, 31.2, 31.3],
+        "broadband_subscribers": [10.32, 10.28, 10.21, 10.14, 10.08, 10.02, 9.97, 9.94],
+        "tv_subscribers": [8.12, 8.08, 8.02, 7.95, 7.88, 7.81, 7.75, 7.74],
+        "b2b_connections_k": [2100, 2150, 2200, 2280, 2350, 2420, 2500, 2580],
+    },
+    "Deutsche Telekom": {
+        "mobile_subscribers": [67.2, 67.8, 68.3, 68.8, 69.0, 69.3, 69.6, 69.8],
+        "broadband_subscribers": [14.5, 14.6, 14.8, 14.9, 15.0, 15.05, 15.12, 15.2],
+        "tv_subscribers": [4.1, 4.15, 4.2, 4.25, 4.28, 4.32, 4.35, 4.38],
+        "b2b_connections_k": [5200, 5350, 5500, 5680, 5850, 6020, 6200, 6380],
+    },
+    "Telefónica O2 Germany": {
+        "mobile_subscribers": [45.8, 45.5, 45.3, 45.2, 45.1, 45.05, 45.02, 45.0],
+        "broadband_subscribers": [2.35, 2.36, 2.37, 2.38, 2.38, 2.39, 2.39, 2.4],
+        "tv_subscribers": [0.52, 0.53, 0.54, 0.55, 0.55, 0.56, 0.56, 0.57],
+        "b2b_connections_k": [1800, 1850, 1920, 2000, 2080, 2150, 2230, 2310],
+    },
+    "1&1 AG": {
+        "mobile_subscribers": [11.8, 11.9, 12.0, 12.1, 12.2, 12.3, 12.4, 12.48],
+        "broadband_subscribers": [3.92, 3.91, 3.90, 3.89, 3.88, 3.87, 3.86, 3.86],
+        "tv_subscribers": [0.35, 0.36, 0.37, 0.38, 0.39, 0.40, 0.41, 0.42],
+        "b2b_connections_k": [450, 465, 480, 495, 510, 528, 545, 562],
+    },
+}
+
+# Historical Financial Data (in EUR billions unless noted)
+HISTORICAL_FINANCIAL_DATA = {
+    "Vodafone Germany": {
+        "total_revenue": [3.05, 3.08, 3.06, 3.07, 3.08, 3.09, 3.09, 3.092],
+        "service_revenue": [2.68, 2.70, 2.69, 2.70, 2.71, 2.72, 2.72, 2.726],
+        "service_revenue_growth_pct": [-0.8, -0.5, -0.3, 0.0, 0.2, 0.4, 0.5, 0.7],
+        "ebitda": [1.08, 1.09, 1.09, 1.10, 1.10, 1.11, 1.11, 1.12],
+        "ebitda_margin_pct": [35.4, 35.5, 35.6, 35.8, 35.9, 36.0, 36.0, 36.2],
+        "capex": [0.82, 0.80, 0.79, 0.78, 0.80, 0.81, 0.80, 0.80],
+        "operating_cost": [1.97, 1.99, 1.97, 1.97, 1.98, 1.98, 1.98, 1.97],
+        "employees_k": [15.2, 15.1, 15.0, 14.9, 14.8, 14.7, 14.6, 14.5],
+    },
+    "Deutsche Telekom": {
+        "total_revenue": [6.10, 6.15, 6.18, 6.22, 6.25, 6.27, 6.28, 6.30],
+        "service_revenue": [5.35, 5.40, 5.44, 5.48, 5.52, 5.55, 5.58, 5.60],
+        "service_revenue_growth_pct": [2.8, 2.5, 2.2, 2.0, 1.8, 1.5, 1.3, 1.1],
+        "ebitda": [2.50, 2.52, 2.54, 2.55, 2.56, 2.58, 2.59, 2.60],
+        "ebitda_margin_pct": [41.0, 41.0, 41.1, 41.2, 41.4, 41.5, 41.7, 41.9],
+        "capex": [1.25, 1.24, 1.22, 1.21, 1.20, 1.20, 1.19, 1.20],
+        "operating_cost": [3.60, 3.63, 3.64, 3.67, 3.69, 3.69, 3.69, 3.70],
+        "employees_k": [85.5, 85.3, 85.0, 84.8, 84.5, 84.2, 84.0, 83.8],
+    },
+    "Telefónica O2 Germany": {
+        "total_revenue": [2.12, 2.10, 2.08, 2.05, 2.03, 2.02, 2.01, 2.00],
+        "service_revenue": [1.82, 1.80, 1.78, 1.75, 1.73, 1.72, 1.71, 1.70],
+        "service_revenue_growth_pct": [-1.5, -2.0, -2.5, -3.0, -3.2, -3.4, -3.4, -3.4],
+        "ebitda": [0.68, 0.67, 0.66, 0.66, 0.65, 0.65, 0.65, 0.65],
+        "ebitda_margin_pct": [32.1, 31.9, 31.7, 32.2, 32.0, 32.2, 32.3, 32.5],
+        "capex": [0.55, 0.54, 0.52, 0.51, 0.50, 0.50, 0.50, 0.50],
+        "operating_cost": [1.44, 1.43, 1.42, 1.39, 1.38, 1.37, 1.36, 1.35],
+        "employees_k": [7.5, 7.4, 7.3, 7.2, 7.1, 7.0, 6.9, 6.8],
+    },
+    "1&1 AG": {
+        "total_revenue": [1.95, 1.96, 1.98, 1.99, 2.00, 2.00, 2.00, 2.00],
+        "service_revenue": [1.72, 1.73, 1.74, 1.75, 1.76, 1.76, 1.76, 1.76],
+        "service_revenue_growth_pct": [1.5, 1.2, 0.8, 0.5, 0.3, 0.2, 0.1, 0.1],
+        "ebitda": [0.28, 0.27, 0.26, 0.26, 0.25, 0.25, 0.25, 0.25],
+        "ebitda_margin_pct": [14.4, 13.8, 13.1, 13.1, 12.5, 12.5, 12.5, 12.5],
+        "capex": [0.35, 0.38, 0.40, 0.42, 0.40, 0.40, 0.40, 0.40],
+        "operating_cost": [1.67, 1.69, 1.72, 1.73, 1.75, 1.75, 1.75, 1.75],
+        "employees_k": [3.2, 3.3, 3.4, 3.5, 3.5, 3.6, 3.6, 3.7],
+    },
+}
+
+# Historical Business Segment Data
+# Revenue by segment (in EUR millions)
+HISTORICAL_SEGMENT_DATA = {
+    "Vodafone Germany": {
+        "mobile_service_revenue": [1450, 1460, 1465, 1470, 1480, 1490, 1500, 1520],
+        "mobile_service_growth_pct": [-0.5, -0.2, 0.3, 0.8, 1.2, 1.8, 2.3, 2.8],
+        "fixed_broadband_revenue": [820, 815, 810, 808, 805, 802, 798, 795],
+        "fixed_broadband_growth_pct": [-2.8, -2.5, -2.3, -2.1, -1.8, -1.5, -1.3, -1.1],
+        "tv_revenue": [285, 283, 280, 278, 275, 273, 270, 268],
+        "tv_growth_pct": [-1.5, -1.2, -1.0, -0.8, -0.6, -0.5, -0.3, -0.2],
+        "b2b_revenue": [410, 420, 430, 445, 460, 480, 500, 520],
+        "b2b_growth_pct": [3.5, 4.2, 5.0, 5.8, 6.5, 7.2, 7.8, 8.5],
+        "wholesale_revenue": [180, 185, 190, 200, 220, 260, 320, 380],
+        "wholesale_growth_pct": [2.0, 5.0, 8.0, 15.0, 25.0, 45.0, 65.0, 85.0],
+    },
+    "Deutsche Telekom": {
+        "mobile_service_revenue": [2450, 2480, 2510, 2535, 2560, 2585, 2605, 2625],
+        "mobile_service_growth_pct": [3.5, 3.2, 2.8, 2.5, 2.2, 2.0, 1.8, 1.6],
+        "fixed_broadband_revenue": [1850, 1865, 1880, 1895, 1910, 1920, 1930, 1940],
+        "fixed_broadband_growth_pct": [2.0, 1.8, 1.6, 1.5, 1.3, 1.2, 1.0, 0.9],
+        "tv_revenue": [450, 455, 460, 468, 475, 480, 485, 490],
+        "tv_growth_pct": [1.8, 1.5, 1.2, 1.5, 1.3, 1.2, 1.0, 1.0],
+        "b2b_revenue": [980, 1020, 1060, 1100, 1140, 1180, 1220, 1260],
+        "b2b_growth_pct": [5.5, 6.0, 6.5, 7.0, 7.2, 7.5, 7.5, 7.5],
+        "wholesale_revenue": [350, 355, 360, 365, 370, 372, 374, 376],
+        "wholesale_growth_pct": [1.0, 1.2, 1.5, 1.2, 1.0, 0.8, 0.6, 0.5],
+    },
+    "Telefónica O2 Germany": {
+        "mobile_service_revenue": [1380, 1365, 1350, 1335, 1320, 1308, 1296, 1285],
+        "mobile_service_growth_pct": [-1.2, -1.8, -2.2, -2.5, -2.8, -3.0, -3.0, -3.0],
+        "fixed_broadband_revenue": [185, 186, 187, 188, 189, 190, 191, 192],
+        "fixed_broadband_growth_pct": [1.5, 1.2, 1.0, 0.8, 0.5, 0.5, 0.5, 0.5],
+        "tv_revenue": [42, 43, 44, 45, 46, 47, 48, 49],
+        "tv_growth_pct": [3.0, 2.8, 2.5, 2.2, 2.0, 2.0, 2.0, 2.0],
+        "b2b_revenue": [320, 340, 360, 385, 410, 438, 468, 500],
+        "b2b_growth_pct": [8.0, 9.0, 10.0, 11.0, 11.5, 12.0, 12.5, 13.0],
+        "wholesale_revenue": [280, 260, 240, 200, 160, 120, 90, 65],
+        "wholesale_growth_pct": [-5.0, -12.0, -18.0, -30.0, -40.0, -50.0, -55.0, -60.0],
+    },
+    "1&1 AG": {
+        "mobile_service_revenue": [980, 990, 1000, 1008, 1015, 1020, 1022, 1025],
+        "mobile_service_growth_pct": [2.0, 1.8, 1.5, 1.2, 1.0, 0.8, 0.5, 0.3],
+        "fixed_broadband_revenue": [580, 578, 575, 573, 570, 568, 565, 563],
+        "fixed_broadband_growth_pct": [-0.5, -0.6, -0.8, -1.0, -1.0, -1.0, -1.0, -1.0],
+        "tv_revenue": [35, 36, 38, 40, 42, 44, 46, 48],
+        "tv_growth_pct": [5.0, 5.5, 6.0, 6.5, 7.0, 7.0, 7.0, 7.0],
+        "b2b_revenue": [125, 130, 138, 145, 152, 160, 168, 175],
+        "b2b_growth_pct": [4.0, 5.0, 6.0, 7.0, 7.5, 8.0, 8.5, 9.0],
+        "wholesale_revenue": [0, 0, 0, 0, 0, 0, 0, 0],
+        "wholesale_growth_pct": [0, 0, 0, 0, 0, 0, 0, 0],
+    },
+}
+
+# Market-level trends (Germany telecom market totals)
+MARKET_TOTALS_QUARTERLY = {
+    "total_mobile_subscribers_m": [155.3, 155.8, 156.4, 157.0, 157.3, 157.75, 158.22, 158.58],
+    "total_broadband_subscribers_m": [31.09, 31.05, 31.08, 31.11, 31.14, 31.13, 31.14, 31.40],
+    "total_market_revenue_b": [13.22, 13.29, 13.30, 13.33, 13.36, 13.38, 13.38, 13.39],
+    "mobile_penetration_pct": [186, 187, 188, 189, 189, 190, 190, 191],
+    "broadband_penetration_pct": [74, 74, 75, 75, 75, 75, 75, 76],
+    "5g_adoption_pct": [28, 32, 36, 40, 44, 48, 52, 56],
+}
+
+# User flow analysis (estimated quarterly net movements in thousands)
+USER_FLOW_QUARTERLY = {
+    "from_vodafone_to_dt": [25, 22, 20, 18, 15, 12, 10, 8],
+    "from_vodafone_to_o2": [18, 16, 15, 14, 12, 10, 9, 8],
+    "from_vodafone_to_1and1": [8, 7, 6, 5, 5, 4, 4, 3],
+    "from_dt_to_vodafone": [12, 11, 10, 10, 9, 9, 8, 8],
+    "from_dt_to_o2": [10, 9, 9, 8, 8, 7, 7, 6],
+    "from_dt_to_1and1": [5, 5, 4, 4, 4, 3, 3, 3],
+    "from_o2_to_vodafone": [15, 14, 13, 12, 11, 10, 9, 8],
+    "from_o2_to_dt": [20, 18, 17, 16, 15, 14, 13, 12],
+    "from_o2_to_1and1": [12, 11, 10, 9, 8, 8, 7, 7],
+    "from_1and1_to_vodafone": [5, 5, 4, 4, 4, 3, 3, 3],
+    "from_1and1_to_dt": [6, 6, 5, 5, 5, 4, 4, 4],
+    "from_1and1_to_o2": [4, 4, 3, 3, 3, 3, 2, 2],
+}
+
 # Macro Environment Data
 MACRO_DATA_GERMANY_2025 = {
     "gdp_growth_pct": 0.8,
