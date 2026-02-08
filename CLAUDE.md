@@ -34,15 +34,15 @@
 
 | 优先级 | 文件 | 内容 |
 |--------|------|------|
-| ★★★ | `docs/design/01-五看方法论对齐全面更新.md` | **最重要**。五看的完整定义、数据模型、PPT Slide 清单 |
-| ★★★ | `docs/design/02-五看分析框架详细设计.md` | 每一看的详细维度、输出结构、数据采集需求 |
-| ★★☆ | `docs/design/03-看自己细分业务补充规范.md` | 看自己的细分业务深度分析模板（数据层+归因层） |
-| ★★☆ | `docs/design/04-看宏观PEST框架对齐规范.md` | 看趋势的 PEST 四维度详细定义和数据模型 |
-| ★★☆ | `docs/design/05-五看输出件规范.md` | PPT/HTML/JSON/TXT 四种输出格式的详细规范 |
-| ★★☆ | `docs/design/06-PPT内容原则补充规范.md` | 每页必须有 Key Message + 先长后短两轮输出 |
-| ★★☆ | `docs/design/07-财报时间维度对齐规范.md` | 财年/日历年对齐、PeriodConverter、未发布数据处理 |
-| ★☆☆ | `docs/design/08-数据溯源架构设计.md` | TrackedValue/SourceReference 数据溯源体系 |
-| ★☆☆ | `docs/design/09-完整开发指南-v4.md` | 数据库 Schema、订阅模型、采集器架构（早期版本，部分已被上面的文档覆盖） |
+| ★★★ | `docs/design/01-five-looks-methodology-alignment.md` | **最重要**。五看的完整定义、数据模型、PPT Slide 清单 |
+| ★★★ | `docs/design/02-five-looks-detailed-design.md` | 每一看的详细维度、输出结构、数据采集需求 |
+| ★★☆ | `docs/design/03-look-at-self-segment-analysis.md` | 看自己的细分业务深度分析模板（数据层+归因层） |
+| ★★☆ | `docs/design/04-look-at-trends-pest-framework.md` | 看趋势的 PEST 四维度详细定义和数据模型 |
+| ★★☆ | `docs/design/05-output-format-specification.md` | PPT/HTML/JSON/TXT 四种输出格式的详细规范 |
+| ★★☆ | `docs/design/06-ppt-content-principles.md` | 每页必须有 Key Message + 先长后短两轮输出 |
+| ★★☆ | `docs/design/07-fiscal-period-alignment.md` | 财年/日历年对齐、PeriodConverter、未发布数据处理 |
+| ★☆☆ | `docs/design/08-data-provenance-architecture.md` | TrackedValue/SourceReference 数据溯源体系 |
+| ★☆☆ | `docs/design/09-complete-dev-guide-v4.md` | 数据库 Schema、订阅模型、采集器架构（早期版本，部分已被上面的文档覆盖） |
 
 ---
 
