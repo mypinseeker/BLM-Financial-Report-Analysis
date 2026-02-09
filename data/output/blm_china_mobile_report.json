@@ -1,0 +1,650 @@
+{
+  "title": "BLM Strategic Analysis Report",
+  "target_operator": "China Mobile",
+  "competitors": [
+    "China Telecom",
+    "China Unicom"
+  ],
+  "generated_at": "2026-02-04T15:28:51.577397",
+  "five_looks": {
+    "market": {
+      "category": "market",
+      "title": "市场洞察 (Look at Market)",
+      "findings": [
+        "市场总用户规模: 1842M",
+        "5G用户渗透率: 52.1%",
+        "市场平均流失率: 1.31%",
+        "分析期间市场增长: 7.3%",
+        "增长最快细分市场: Digital Services (20.2% YoY)"
+      ],
+      "metrics": {
+        "total_subscribers_million": 1841.6,
+        "5g_penetration_pct": 52.1,
+        "market_growth_pct": 7.3,
+        "avg_churn_pct": 1.31
+      },
+      "recommendations": [
+        "持续关注5G用户迁移速度和价值提升",
+        "重点发展数字化转型等新兴业务板块",
+        "优化存量用户经营，降低流失率"
+      ],
+      "data": [
+        {
+          "quarter": "2024Q4",
+          "operator": "China Mobile",
+          "subscribers_million": 1024.7,
+          "market_share_pct": 60.3,
+          "4g_users_pct": 87.4,
+          "5g_users_pct": 52.6,
+          "broadband_users_million": 157.1,
+          "net_adds_million": 7.65,
+          "churn_rate_pct": 1.19
+        },
+        {
+          "quarter": "2024Q4",
+          "operator": "China Telecom",
+          "subscribers_million": 449.1,
+          "market_share_pct": 26.4,
+          "4g_users_pct": 82.2,
+          "5g_users_pct": 51.9,
+          "broadband_users_million": 79.7,
+          "net_adds_million": 1.41,
+          "churn_rate_pct": 0.99
+        },
+        {
+          "quarter": "2024Q4",
+          "operator": "China Unicom",
+          "subscribers_million": 367.8,
+          "market_share_pct": 21.6,
+          "4g_users_pct": 83.3,
+          "5g_users_pct": 51.7,
+          "broadband_users_million": 103.7,
+          "net_adds_million": 4.94,
+          "churn_rate_pct": 1.74
+        }
+      ]
+    },
+    "self": {
+      "category": "self",
+      "title": "自身洞察 (Look at Self)",
+      "findings": [
+        "市场份额: 60.3%",
+        "用户规模: 1024.7M",
+        "季度收入: $37.6B",
+        "利润率: 12.4%",
+        "收入增长: 6.1% YoY",
+        "核心优势: Network Coverage, Brand Strength, Network Quality",
+        "待改进项: Price Competitiveness, Customer Service, Ecosystem & Partners",
+        "NPS得分: 39"
+      ],
+      "metrics": {
+        "market_share_pct": 60.3,
+        "subscribers_million": 1024.7,
+        "revenue_billion_usd": 37.61,
+        "profit_margin_pct": 12.4,
+        "revenue_growth_pct": 6.1,
+        "top_strength": "Network Coverage",
+        "top_weakness": "Price Competitiveness",
+        "nps_score": 39.0
+      },
+      "recommendations": [
+        "强化核心竞争优势，建立差异化壁垒",
+        "针对薄弱环节制定专项提升计划",
+        "优化客户体验，提升NPS和满意度"
+      ],
+      "data": [
+        {
+          "market_share_pct": 60.3,
+          "subscribers_million": 1024.7,
+          "revenue_billion_usd": 37.61,
+          "profit_margin_pct": 12.4,
+          "revenue_growth_pct": 6.1,
+          "top_strength": "Network Coverage",
+          "top_weakness": "Price Competitiveness",
+          "nps_score": 39.0
+        }
+      ]
+    },
+    "competitor": {
+      "category": "competitor",
+      "title": "竞争洞察 (Look at Competitors)",
+      "findings": [
+        "China Telecom: 份额26.4%, 收入$18.4B, 增长5.8%",
+        "China Unicom: 份额21.6%, 收入$14.1B, 增长6.0%",
+        "✓ 我方增速(6.1%)高于竞争对手平均(5.9%)"
+      ],
+      "metrics": {
+        "growth_gap_pct": 0.2
+      },
+      "recommendations": [
+        "密切跟踪竞争对手的战略动态和业务创新",
+        "在差异化领域建立竞争优势",
+        "关注对手的薄弱环节，寻找突破机会"
+      ],
+      "data": [
+        {
+          "operator": "China Telecom",
+          "market_share_pct": 26.4,
+          "revenue_billion_usd": 18.44,
+          "profit_margin_pct": 8.4,
+          "revenue_growth_pct": 5.8,
+          "avg_competitive_score": 75.4
+        },
+        {
+          "operator": "China Unicom",
+          "market_share_pct": 21.6,
+          "revenue_billion_usd": 14.07,
+          "profit_margin_pct": 6.7,
+          "revenue_growth_pct": 6.0,
+          "avg_competitive_score": 75.0
+        }
+      ]
+    },
+    "macro": {
+      "category": "macro",
+      "title": "宏观环境洞察 (Look at Macro)",
+      "findings": [
+        "平均GDP增长率: 5.6%",
+        "平均5G网络覆盖: 61.8%",
+        "数字经济占比: 39.6%",
+        "电信渗透率: 97.4%",
+        "市场竞争强度: Medium",
+        "5G覆盖增长: +38.9pp (分析期间)"
+      ],
+      "metrics": {
+        "avg_gdp_growth_pct": 5.6,
+        "avg_5g_coverage_pct": 61.8,
+        "avg_digital_economy_pct": 39.6,
+        "competitive_intensity": "Medium"
+      },
+      "recommendations": [
+        "把握数字经济发展机遇，加速数字化转型",
+        "积极响应政策导向，争取政策支持",
+        "关注技术演进趋势，提前布局6G等前沿技术"
+      ],
+      "data": [
+        {
+          "quarter": "2024Q4",
+          "country": "China",
+          "gdp_growth_pct": 5.6,
+          "inflation_pct": 2.8,
+          "telecom_penetration_pct": 97.4,
+          "5g_coverage_pct": 61.8,
+          "digital_economy_pct": 39.6,
+          "regulatory_index": 66.0,
+          "competitive_intensity": "Medium"
+        }
+      ]
+    },
+    "opportunity": {
+      "category": "opportunity",
+      "title": "机会洞察 (Look at Opportunities)",
+      "findings": [
+        "=== 机会 ===",
+        "✓ Digital Services: 高增长潜力 (22% CAGR)",
+        "✓ Cloud & IT: 高增长潜力 (19% CAGR)",
+        "✓ IoT: 高增长潜力 (22% CAGR)",
+        "✓ FinTech/Mobile Money: 高增长潜力 (16% CAGR)",
+        "✓ vs China Telecom 在 Network Coverage: 领先 22分",
+        "=== 差距 ===",
+        "=== 威胁 ==="
+      ],
+      "metrics": {
+        "opportunities_count": 10,
+        "gaps_count": 0,
+        "threats_count": 0
+      },
+      "recommendations": [
+        "优先投入高增长业务领域",
+        "针对竞争差距制定追赶计划",
+        "建立风险预警和应对机制"
+      ],
+      "data": [
+        {
+          "type": "Opportunity",
+          "description": "Digital Services: 高增长潜力 (22% CAGR)"
+        },
+        {
+          "type": "Opportunity",
+          "description": "Cloud & IT: 高增长潜力 (19% CAGR)"
+        },
+        {
+          "type": "Opportunity",
+          "description": "IoT: 高增长潜力 (22% CAGR)"
+        },
+        {
+          "type": "Opportunity",
+          "description": "FinTech/Mobile Money: 高增长潜力 (16% CAGR)"
+        },
+        {
+          "type": "Opportunity",
+          "description": "vs China Telecom 在 Network Coverage: 领先 22分"
+        },
+        {
+          "type": "Opportunity",
+          "description": "vs China Telecom 在 Network Quality: 领先 13分"
+        },
+        {
+          "type": "Opportunity",
+          "description": "vs China Telecom 在 Brand Strength: 领先 20分"
+        },
+        {
+          "type": "Opportunity",
+          "description": "vs China Unicom 在 Network Coverage: 领先 18分"
+        },
+        {
+          "type": "Opportunity",
+          "description": "vs China Unicom 在 Network Quality: 领先 19分"
+        },
+        {
+          "type": "Opportunity",
+          "description": "vs China Unicom 在 Brand Strength: 领先 15分"
+        }
+      ]
+    }
+  },
+  "three_decisions": {
+    "strategy": {
+      "decision_type": "strategy",
+      "title": "定策略 (Define Strategy)",
+      "summary": "China Mobile 战略规划:\n\n1. 【增长战略】巩固领先地位，通过差异化服务和生态建设维持份额，同时开拓新兴业务增长点\n2. 【竞争战略】实施差异化竞争策略，在关键细分市场和客户群建立独特价值主张\n3. 【数字化转型战略】深化数字化运营，发展云计算、大数据、AI等新能力，实现业务模式升级\n4. 【客户经营战略】实施客户体验提升专项，优化全触点服务流程，建立以客户为中心的运营体系",
+      "items": [
+        {
+          "name": "增长战略",
+          "description": "巩固领先地位，通过差异化服务和生态建设维持份额，同时开拓新兴业务增长点",
+          "priority": "P0",
+          "category": "growth",
+          "timeline": "",
+          "owner": "",
+          "kpis": [
+            "市场份额保持>40%",
+            "新业务收入占比>15%",
+            "用户ARPU提升5%"
+          ]
+        },
+        {
+          "name": "竞争战略",
+          "description": "实施差异化竞争策略，在关键细分市场和客户群建立独特价值主张",
+          "priority": "P0",
+          "category": "competitive",
+          "timeline": "",
+          "owner": "",
+          "kpis": [
+            "差异化产品收入占比>20%",
+            "重点客群份额提升",
+            "产品创新数量"
+          ]
+        },
+        {
+          "name": "数字化转型战略",
+          "description": "深化数字化运营，发展云计算、大数据、AI等新能力，实现业务模式升级",
+          "priority": "P1",
+          "category": "transformation",
+          "timeline": "",
+          "owner": "",
+          "kpis": [
+            "数字化服务收入增长>25%",
+            "运营效率提升10%",
+            "数字化触点渗透率>70%"
+          ]
+        },
+        {
+          "name": "客户经营战略",
+          "description": "实施客户体验提升专项，优化全触点服务流程，建立以客户为中心的运营体系",
+          "priority": "P1",
+          "category": "customer",
+          "timeline": "",
+          "owner": "",
+          "kpis": [
+            "NPS提升10分",
+            "客户满意度>85分",
+            "投诉率下降30%"
+          ]
+        }
+      ],
+      "metrics": {
+        "total_strategies": 4,
+        "p0_strategies": 2,
+        "p1_strategies": 2
+      }
+    },
+    "key_tasks": {
+      "decision_type": "key_tasks",
+      "title": "定重点工作 (Define Key Tasks)",
+      "summary": "China Mobile 重点工作清单:\n\n【网络能力提升】\n- P0: 5G网络深度覆盖\n- P0: 网络质量优化\n\n【业务创新发展】\n- P1: 新兴业务培育\n- P1: 政企市场突破\n\n【客户经营提升】\n- P1: 存量经营优化\n- P2: 流失管控\n\n【运营效率提升】\n- P2: 数字化运营\n- P2: 成本优化",
+      "items": [
+        {
+          "name": "5G网络深度覆盖",
+          "description": "完成重点城市5G连续覆盖，提升室内深度覆盖",
+          "priority": "P0",
+          "category": "network",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "5G网络深度覆盖完成率",
+            "5G网络深度覆盖效果指标"
+          ]
+        },
+        {
+          "name": "网络质量优化",
+          "description": "实施网络质量专项提升，降低投诉率",
+          "priority": "P0",
+          "category": "network",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "网络质量优化完成率",
+            "网络质量优化效果指标"
+          ]
+        },
+        {
+          "name": "新兴业务培育",
+          "description": "加速云计算、物联网、数字化服务等新业务发展",
+          "priority": "P1",
+          "category": "business",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "新兴业务培育完成率",
+            "新兴业务培育效果指标"
+          ]
+        },
+        {
+          "name": "政企市场突破",
+          "description": "深耕行业客户，打造标杆案例，扩大政企收入",
+          "priority": "P1",
+          "category": "business",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "政企市场突破完成率",
+            "政企市场突破效果指标"
+          ]
+        },
+        {
+          "name": "存量经营优化",
+          "description": "实施精准营销，提升用户价值和粘性",
+          "priority": "P2",
+          "category": "customer",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "存量经营优化完成率",
+            "存量经营优化效果指标"
+          ]
+        },
+        {
+          "name": "流失管控",
+          "description": "建立预警机制，降低用户流失率",
+          "priority": "P2",
+          "category": "customer",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "流失管控完成率",
+            "流失管控效果指标"
+          ]
+        },
+        {
+          "name": "数字化运营",
+          "description": "推进智慧运营，提升自动化和智能化水平",
+          "priority": "P2",
+          "category": "efficiency",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "数字化运营完成率",
+            "数字化运营效果指标"
+          ]
+        },
+        {
+          "name": "成本优化",
+          "description": "实施降本增效，优化资源配置",
+          "priority": "P2",
+          "category": "efficiency",
+          "timeline": "Q1-Q4",
+          "owner": "",
+          "kpis": [
+            "成本优化完成率",
+            "成本优化效果指标"
+          ]
+        }
+      ],
+      "metrics": {
+        "total_tasks": 8,
+        "p0_tasks": 2,
+        "p1_tasks": 2,
+        "p2_tasks": 4
+      }
+    },
+    "execution": {
+      "decision_type": "execution",
+      "title": "定执行 (Define Execution)",
+      "summary": "China Mobile 执行计划:\n\n【执行节奏】\n- Q1: 方案设计、资源准备、试点启动\n- Q2: 全面推广、能力建设\n- Q3: 优化迭代、攻坚克难\n- Q4: 效果评估、总结沉淀\n\n【管控机制】\n- 月度: 进度review会\n- 季度: 战略复盘会\n- 半年: 中期评估调整\n- 年度: 年终总结表彰\n\n【KPI体系】\n- 收入类: 收入增长率、新业务收入占比\n- 用户类: 用户份额、ARPU、流失率\n- 质量类: 网络质量、客户满意度、NPS\n- 效率类: 运营成本率、人均产出",
+      "items": [
+        {
+          "name": "5G网络深度覆盖 - Q1里程碑",
+          "description": "完成5G网络深度覆盖方案设计和试点启动",
+          "priority": "P0",
+          "category": "milestone",
+          "timeline": "Q1",
+          "owner": "",
+          "kpis": [
+            "方案完成",
+            "试点启动"
+          ]
+        },
+        {
+          "name": "5G网络深度覆盖 - Q2里程碑",
+          "description": "5G网络深度覆盖全面推广实施",
+          "priority": "P0",
+          "category": "milestone",
+          "timeline": "Q2",
+          "owner": "",
+          "kpis": [
+            "推广覆盖率>50%"
+          ]
+        },
+        {
+          "name": "网络质量优化 - Q1里程碑",
+          "description": "完成网络质量优化方案设计和试点启动",
+          "priority": "P0",
+          "category": "milestone",
+          "timeline": "Q1",
+          "owner": "",
+          "kpis": [
+            "方案完成",
+            "试点启动"
+          ]
+        },
+        {
+          "name": "网络质量优化 - Q2里程碑",
+          "description": "网络质量优化全面推广实施",
+          "priority": "P0",
+          "category": "milestone",
+          "timeline": "Q2",
+          "owner": "",
+          "kpis": [
+            "推广覆盖率>50%"
+          ]
+        },
+        {
+          "name": "新兴业务培育 - Q1里程碑",
+          "description": "完成新兴业务培育方案设计和试点启动",
+          "priority": "P1",
+          "category": "milestone",
+          "timeline": "Q1",
+          "owner": "",
+          "kpis": [
+            "方案完成",
+            "试点启动"
+          ]
+        },
+        {
+          "name": "新兴业务培育 - Q2里程碑",
+          "description": "新兴业务培育全面推广实施",
+          "priority": "P1",
+          "category": "milestone",
+          "timeline": "Q2",
+          "owner": "",
+          "kpis": [
+            "推广覆盖率>50%"
+          ]
+        },
+        {
+          "name": "政企市场突破 - Q1里程碑",
+          "description": "完成政企市场突破方案设计和试点启动",
+          "priority": "P1",
+          "category": "milestone",
+          "timeline": "Q1",
+          "owner": "",
+          "kpis": [
+            "方案完成",
+            "试点启动"
+          ]
+        },
+        {
+          "name": "政企市场突破 - Q2里程碑",
+          "description": "政企市场突破全面推广实施",
+          "priority": "P1",
+          "category": "milestone",
+          "timeline": "Q2",
+          "owner": "",
+          "kpis": [
+            "推广覆盖率>50%"
+          ]
+        },
+        {
+          "name": "存量经营优化 - Q1里程碑",
+          "description": "完成存量经营优化方案设计和试点启动",
+          "priority": "P2",
+          "category": "milestone",
+          "timeline": "Q1",
+          "owner": "",
+          "kpis": [
+            "方案完成",
+            "试点启动"
+          ]
+        },
+        {
+          "name": "存量经营优化 - Q2里程碑",
+          "description": "存量经营优化全面推广实施",
+          "priority": "P2",
+          "category": "milestone",
+          "timeline": "Q2",
+          "owner": "",
+          "kpis": [
+            "推广覆盖率>50%"
+          ]
+        },
+        {
+          "name": "流失管控 - Q1里程碑",
+          "description": "完成流失管控方案设计和试点启动",
+          "priority": "P2",
+          "category": "milestone",
+          "timeline": "Q1",
+          "owner": "",
+          "kpis": [
+            "方案完成",
+            "试点启动"
+          ]
+        },
+        {
+          "name": "流失管控 - Q2里程碑",
+          "description": "流失管控全面推广实施",
+          "priority": "P2",
+          "category": "milestone",
+          "timeline": "Q2",
+          "owner": "",
+          "kpis": [
+            "推广覆盖率>50%"
+          ]
+        },
+        {
+          "name": "战略执行管控机制",
+          "description": "建立月度review、季度复盘机制，确保战略有效落地",
+          "priority": "P0",
+          "category": "governance",
+          "timeline": "全年",
+          "owner": "",
+          "kpis": [
+            "月度review完成率100%",
+            "季度复盘覆盖率100%"
+          ]
+        },
+        {
+          "name": "资源保障机制",
+          "description": "匹配人力、资金、技术资源，建立跨部门协同机制",
+          "priority": "P0",
+          "category": "governance",
+          "timeline": "全年",
+          "owner": "",
+          "kpis": [
+            "关键岗位到位率",
+            "预算执行率"
+          ]
+        }
+      ],
+      "metrics": {
+        "total_milestones": 12,
+        "governance_items": 2,
+        "execution_plan": [
+          {
+            "task": "5G网络深度覆盖",
+            "q1": "方案设计 & 试点",
+            "q2": "全面推广",
+            "q3": "优化迭代",
+            "q4": "效果评估",
+            "owner": "待定",
+            "kpi": "5G网络深度覆盖完成率"
+          },
+          {
+            "task": "网络质量优化",
+            "q1": "方案设计 & 试点",
+            "q2": "全面推广",
+            "q3": "优化迭代",
+            "q4": "效果评估",
+            "owner": "待定",
+            "kpi": "网络质量优化完成率"
+          },
+          {
+            "task": "新兴业务培育",
+            "q1": "方案设计 & 试点",
+            "q2": "全面推广",
+            "q3": "优化迭代",
+            "q4": "效果评估",
+            "owner": "待定",
+            "kpi": "新兴业务培育完成率"
+          },
+          {
+            "task": "政企市场突破",
+            "q1": "方案设计 & 试点",
+            "q2": "全面推广",
+            "q3": "优化迭代",
+            "q4": "效果评估",
+            "owner": "待定",
+            "kpi": "政企市场突破完成率"
+          },
+          {
+            "task": "存量经营优化",
+            "q1": "方案设计 & 试点",
+            "q2": "全面推广",
+            "q3": "优化迭代",
+            "q4": "效果评估",
+            "owner": "待定",
+            "kpi": "存量经营优化完成率"
+          },
+          {
+            "task": "流失管控",
+            "q1": "方案设计 & 试点",
+            "q2": "全面推广",
+            "q3": "优化迭代",
+            "q4": "效果评估",
+            "owner": "待定",
+            "kpi": "流失管控完成率"
+          }
+        ]
+      }
+    }
+  }
+}

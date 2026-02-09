@@ -1,0 +1,301 @@
+date,fiscal_year,state,category,program,budget,actual,amount,revenue,description
+2019-01-04,2019,Arizona,Recreation Management,Recreation Management,13025633.8,15926935.05,15926935.05,0.0,FY2019 Recreation Management - Arizona
+2019-01-11,2019,Colorado,Mining Law Administration,Mining Law Administration,36005897.61,32611524.08,32611524.08,4746373.87,FY2019 Mining Law Administration - Colorado
+2019-01-11,2019,Oregon,Cultural Resources,Cultural Resources,41074370.76,36678053.64,36678053.64,0.0,FY2019 Cultural Resources - Oregon
+2019-01-13,2019,Colorado,Forestry,Forestry,10525517.87,7214004.24,7214004.24,0.0,FY2019 Forestry - Colorado
+2019-01-25,2019,Nevada,Mining Law Administration,Mining Law Administration,40362096.51,48383794.86,48383794.86,6195432.76,FY2019 Mining Law Administration - Nevada
+2019-01-28,2019,Oregon,Oil & Gas Management,Oil & Gas Management,24449496.18,21535362.73,21535362.73,17400417.97,FY2019 Oil & Gas Management - Oregon
+2019-02-01,2019,Oregon,Hazardous Materials,Hazardous Materials,3043865.16,5908820.29,5908820.29,0.0,FY2019 Hazardous Materials - Oregon
+2019-02-02,2019,Colorado,Forestry,Forestry,12043577.98,13153280.07,13153280.07,0.0,FY2019 Forestry - Colorado
+2019-02-05,2019,Wyoming,Hazardous Materials,Hazardous Materials,2962711.6,2538025.33,2538025.33,0.0,FY2019 Hazardous Materials - Wyoming
+2019-02-08,2019,Wyoming,Oil & Gas Management,Oil & Gas Management,25302231.75,30148801.49,30148801.49,25530574.28,FY2019 Oil & Gas Management - Wyoming
+2019-02-11,2019,Wyoming,Forestry,Forestry,14622309.6,13564606.71,13564606.71,0.0,FY2019 Forestry - Wyoming
+2019-02-20,2019,Wyoming,Cadastral Survey,Cadastral Survey,16162868.48,15504212.88,15504212.88,0.0,FY2019 Cadastral Survey - Wyoming
+2019-03-02,2019,California,Fire Management,Fire Management,53096457.3,51615411.18,51615411.18,0.0,FY2019 Fire Management - California
+2019-03-09,2019,Idaho,Soil/Water/Air Management,Soil/Water/Air Management,6431540.97,6491069.36,6491069.36,0.0,FY2019 Soil/Water/Air Management - Idaho
+2019-03-17,2019,Idaho,Range Management,Range Management,15931660.42,17173518.79,17173518.79,0.0,FY2019 Range Management - Idaho
+2019-03-17,2019,Nevada,Cadastral Survey,Cadastral Survey,16687750.03,40693269.67,40693269.67,0.0,FY2019 Cadastral Survey - Nevada
+2019-03-28,2019,California,Cultural Resources,Cultural Resources,29293665.38,25791998.8,25791998.8,0.0,FY2019 Cultural Resources - California
+2019-04-15,2019,Alaska,Range Management,Range Management,17516605.85,17577971.73,17577971.73,0.0,FY2019 Range Management - Alaska
+2019-04-17,2019,Oregon,Soil/Water/Air Management,Soil/Water/Air Management,7132370.34,8708217.89,8708217.89,0.0,FY2019 Soil/Water/Air Management - Oregon
+2019-04-23,2019,Montana,Mining Law Administration,Mining Law Administration,32486273.39,30563543.16,30563543.16,6785350.59,FY2019 Mining Law Administration - Montana
+2019-04-27,2019,Nevada,Wild Horse & Burro,Wild Horse & Burro,2810434.07,2403475.69,2403475.69,0.0,FY2019 Wild Horse & Burro - Nevada
+2019-05-05,2019,Utah,Cadastral Survey,Cadastral Survey,14243725.84,15280301.12,15280301.12,0.0,FY2019 Cadastral Survey - Utah
+2019-05-13,2019,Oregon,Cadastral Survey,Cadastral Survey,15218741.78,11591588.52,11591588.52,0.0,FY2019 Cadastral Survey - Oregon
+2019-05-14,2019,Arizona,Soil/Water/Air Management,Soil/Water/Air Management,8467623.15,9297337.87,9297337.87,0.0,FY2019 Soil/Water/Air Management - Arizona
+2019-05-15,2019,California,Wild Horse & Burro,Wild Horse & Burro,2717705.66,2762797.75,2762797.75,0.0,FY2019 Wild Horse & Burro - California
+2019-06-06,2019,New Mexico,Forestry,Forestry,10649285.12,10325107.13,10325107.13,0.0,FY2019 Forestry - New Mexico
+2019-06-12,2019,Utah,Wild Horse & Burro,Wild Horse & Burro,2484414.92,1930990.82,1930990.82,0.0,FY2019 Wild Horse & Burro - Utah
+2019-06-15,2019,Oregon,Cadastral Survey,Cadastral Survey,20142109.42,21463972.35,21463972.35,0.0,FY2019 Cadastral Survey - Oregon
+2019-06-23,2019,Utah,Range Management,Range Management,18559433.05,17412044.23,17412044.23,0.0,FY2019 Range Management - Utah
+2019-06-24,2019,Oregon,Fire Management,Fire Management,50758233.88,60214188.28,60214188.28,0.0,FY2019 Fire Management - Oregon
+2019-07-04,2019,Colorado,Range Management,Range Management,19233492.22,22024173.57,22024173.57,0.0,FY2019 Range Management - Colorado
+2019-07-10,2019,Arizona,Land & Realty Management,Land & Realty Management,25416826.67,26839097.59,26839097.59,9078130.17,FY2019 Land & Realty Management - Arizona
+2019-07-21,2019,Utah,Fire Management,Fire Management,47342932.18,51695868.94,51695868.94,0.0,FY2019 Fire Management - Utah
+2019-07-22,2019,Nevada,Mining Law Administration,Mining Law Administration,36043917.52,35374531.72,35374531.72,13971276.35,FY2019 Mining Law Administration - Nevada
+2019-07-22,2019,Nevada,Fire Management,Fire Management,40276161.3,36884004.16,36884004.16,0.0,FY2019 Fire Management - Nevada
+2019-07-28,2019,Alaska,Range Management,Range Management,18054384.26,13158856.2,13158856.2,0.0,FY2019 Range Management - Alaska
+2019-08-03,2019,Alaska,Forestry,Forestry,10899989.64,9461992.76,9461992.76,0.0,FY2019 Forestry - Alaska
+2019-08-04,2019,New Mexico,Energy & Minerals,Energy & Minerals,7391143.05,7186952.65,7186952.65,0.0,FY2019 Energy & Minerals - New Mexico
+2019-08-22,2019,Utah,Range Management,Range Management,19701983.46,19633320.93,19633320.93,0.0,FY2019 Range Management - Utah
+2019-08-26,2019,Montana,Energy & Minerals,Energy & Minerals,6277558.8,5524052.4,5524052.4,0.0,FY2019 Energy & Minerals - Montana
+2019-09-21,2019,Wyoming,Cultural Resources,Cultural Resources,41266036.93,40990981.25,40990981.25,0.0,FY2019 Cultural Resources - Wyoming
+2019-10-02,2019,California,Recreation Management,Recreation Management,10530320.85,11785954.6,11785954.6,0.0,FY2019 Recreation Management - California
+2019-10-09,2019,Arizona,Mining Law Administration,Mining Law Administration,31940034.35,26286644.54,26286644.54,25508697.01,FY2019 Mining Law Administration - Arizona
+2019-10-12,2019,Arizona,Recreation Management,Recreation Management,11713713.18,10748117.91,10748117.91,0.0,FY2019 Recreation Management - Arizona
+2019-11-09,2019,California,National Conservation Lands,National Conservation Lands,38973270.93,42308625.1,42308625.1,0.0,FY2019 National Conservation Lands - California
+2019-11-10,2019,Wyoming,Cadastral Survey,Cadastral Survey,16042735.49,16485654.16,16485654.16,0.0,FY2019 Cadastral Survey - Wyoming
+2019-11-22,2019,Colorado,Land & Realty Management,Land & Realty Management,23960105.11,23083538.64,23083538.64,21411215.84,FY2019 Land & Realty Management - Colorado
+2019-11-26,2019,Utah,Land & Realty Management,Land & Realty Management,22945416.18,20799099.58,20799099.58,14369264.01,FY2019 Land & Realty Management - Utah
+2019-11-28,2019,Idaho,Soil/Water/Air Management,Soil/Water/Air Management,6741540.9,7166487.23,7166487.23,0.0,FY2019 Soil/Water/Air Management - Idaho
+2019-12-02,2019,Montana,Soil/Water/Air Management,Soil/Water/Air Management,7007755.93,6834379.38,6834379.38,0.0,FY2019 Soil/Water/Air Management - Montana
+2019-12-19,2019,Colorado,Forestry,Forestry,11244641.27,8190677.64,8190677.64,0.0,FY2019 Forestry - Colorado
+2019-12-22,2019,Montana,Mining Law Administration,Mining Law Administration,29548250.56,32430308.64,32430308.64,19833588.7,FY2019 Mining Law Administration - Montana
+2019-12-27,2019,Alaska,National Conservation Lands,National Conservation Lands,44879107.75,49953959.19,49953959.19,0.0,FY2019 National Conservation Lands - Alaska
+2020-01-02,2020,Nevada,Cadastral Survey,Cadastral Survey,16452937.87,18919240.66,18919240.66,0.0,FY2020 Cadastral Survey - Nevada
+2020-01-03,2020,Utah,Energy & Minerals,Energy & Minerals,5926260.54,5396373.82,5396373.82,0.0,FY2020 Energy & Minerals - Utah
+2020-01-08,2020,Utah,National Conservation Lands,National Conservation Lands,52858566.77,119458610.42,119458610.42,0.0,FY2020 National Conservation Lands - Utah
+2020-02-04,2020,Nevada,Forestry,Forestry,11594686.07,11785385.76,11785385.76,0.0,FY2020 Forestry - Nevada
+2020-02-09,2020,California,Land & Realty Management,Land & Realty Management,20663612.05,25226182.74,25226182.74,19182884.23,FY2020 Land & Realty Management - California
+2020-02-17,2020,Montana,Cadastral Survey,Cadastral Survey,15200718.78,12925508.67,12925508.67,0.0,FY2020 Cadastral Survey - Montana
+2020-02-26,2020,Colorado,Recreation Management,Recreation Management,11969361.82,12746043.74,12746043.74,0.0,FY2020 Recreation Management - Colorado
+2020-03-12,2020,Utah,Fire Management,Fire Management,42522845.54,50115811.35,50115811.35,0.0,FY2020 Fire Management - Utah
+2020-03-16,2020,New Mexico,Energy & Minerals,Energy & Minerals,7087361.03,9512974.43,9512974.43,0.0,FY2020 Energy & Minerals - New Mexico
+2020-03-26,2020,Wyoming,Wildlife Management,Wildlife Management,11244556.01,13575059.28,13575059.28,0.0,FY2020 Wildlife Management - Wyoming
+2020-04-06,2020,Colorado,Hazardous Materials,Hazardous Materials,3184250.54,2856661.53,2856661.53,0.0,FY2020 Hazardous Materials - Colorado
+2020-04-13,2020,Colorado,Soil/Water/Air Management,Soil/Water/Air Management,9515886.81,8877621.56,8877621.56,0.0,FY2020 Soil/Water/Air Management - Colorado
+2020-04-19,2020,Oregon,Fire Management,Fire Management,54352653.44,98150034.01,98150034.01,0.0,FY2020 Fire Management - Oregon
+2020-04-23,2020,Oregon,Cultural Resources,Cultural Resources,39288885.87,31471992.1,31471992.1,0.0,FY2020 Cultural Resources - Oregon
+2020-05-01,2020,Alaska,Land & Realty Management,Land & Realty Management,27611232.59,28033814.07,28033814.07,6431987.69,FY2020 Land & Realty Management - Alaska
+2020-05-06,2020,Arizona,Hazardous Materials,Hazardous Materials,3003212.3,3047095.28,3047095.28,0.0,FY2020 Hazardous Materials - Arizona
+2020-05-25,2020,Colorado,Mining Law Administration,Mining Law Administration,28009655.06,31353329.99,31353329.99,18351082.86,FY2020 Mining Law Administration - Colorado
+2020-06-14,2020,Wyoming,Hazardous Materials,Hazardous Materials,2636933.28,2212929.22,2212929.22,0.0,FY2020 Hazardous Materials - Wyoming
+2020-06-27,2020,New Mexico,Range Management,Range Management,16163364.85,17478887.7,17478887.7,0.0,FY2020 Range Management - New Mexico
+2020-07-13,2020,Utah,Mining Law Administration,Mining Law Administration,37639696.19,36114412.64,36114412.64,26477034.6,FY2020 Mining Law Administration - Utah
+2020-08-11,2020,Alaska,Fire Management,Fire Management,53269559.22,56497327.11,56497327.11,0.0,FY2020 Fire Management - Alaska
+2020-08-16,2020,New Mexico,National Conservation Lands,National Conservation Lands,41443450.23,50965780.57,50965780.57,0.0,FY2020 National Conservation Lands - New Mexico
+2020-09-03,2020,Oregon,Cadastral Survey,Cadastral Survey,17086604.68,15725716.83,15725716.83,0.0,FY2020 Cadastral Survey - Oregon
+2020-09-11,2020,Colorado,Oil & Gas Management,Oil & Gas Management,23939306.9,27598586.86,27598586.86,17108130.78,FY2020 Oil & Gas Management - Colorado
+2020-10-18,2020,Colorado,Wildlife Management,Wildlife Management,15970278.81,16970350.35,16970350.35,0.0,FY2020 Wildlife Management - Colorado
+2020-11-27,2020,Arizona,Cadastral Survey,Cadastral Survey,14367903.46,15794812.0,15794812.0,0.0,FY2020 Cadastral Survey - Arizona
+2020-12-02,2020,Montana,Energy & Minerals,Energy & Minerals,7952218.81,7183596.56,7183596.56,0.0,FY2020 Energy & Minerals - Montana
+2020-12-09,2020,Arizona,Wild Horse & Burro,Wild Horse & Burro,2642980.85,2792062.56,2792062.56,0.0,FY2020 Wild Horse & Burro - Arizona
+2020-12-13,2020,Idaho,Wildlife Management,Wildlife Management,12543119.31,8621383.57,8621383.57,0.0,FY2020 Wildlife Management - Idaho
+2020-12-21,2020,Idaho,Soil/Water/Air Management,Soil/Water/Air Management,8264404.06,7520918.29,7520918.29,0.0,FY2020 Soil/Water/Air Management - Idaho
+2020-12-22,2020,Wyoming,Mining Law Administration,Mining Law Administration,28443042.33,32089521.69,32089521.69,14855846.76,FY2020 Mining Law Administration - Wyoming
+2020-12-26,2020,Idaho,Soil/Water/Air Management,Soil/Water/Air Management,8017450.45,6832682.09,6832682.09,0.0,FY2020 Soil/Water/Air Management - Idaho
+2021-01-04,2021,Nevada,Wild Horse & Burro,Wild Horse & Burro,3039812.22,3206407.8,3206407.8,0.0,FY2021 Wild Horse & Burro - Nevada
+2021-01-04,2021,Oregon,Cultural Resources,Cultural Resources,40526679.69,38844619.3,38844619.3,0.0,FY2021 Cultural Resources - Oregon
+2021-01-08,2021,Wyoming,Land & Realty Management,Land & Realty Management,22838509.02,23045660.4,23045660.4,23321788.23,FY2021 Land & Realty Management - Wyoming
+2021-01-10,2021,Wyoming,Wildlife Management,Wildlife Management,10951699.9,13911520.46,13911520.46,0.0,FY2021 Wildlife Management - Wyoming
+2021-01-23,2021,Utah,Cultural Resources,Cultural Resources,40672902.62,36326980.21,36326980.21,0.0,FY2021 Cultural Resources - Utah
+2021-02-07,2021,Colorado,Hazardous Materials,Hazardous Materials,3288858.32,3513334.6,3513334.6,0.0,FY2021 Hazardous Materials - Colorado
+2021-02-09,2021,Alaska,Cadastral Survey,Cadastral Survey,18458206.09,23812359.89,23812359.89,0.0,FY2021 Cadastral Survey - Alaska
+2021-03-25,2021,Idaho,Range Management,Range Management,16704088.56,18016907.03,18016907.03,0.0,FY2021 Range Management - Idaho
+2021-04-02,2021,Wyoming,Wildlife Management,Wildlife Management,14845676.23,12489041.55,12489041.55,0.0,FY2021 Wildlife Management - Wyoming
+2021-04-19,2021,Wyoming,Recreation Management,Recreation Management,10031872.73,22881080.08,22881080.08,0.0,FY2021 Recreation Management - Wyoming
+2021-05-08,2021,New Mexico,Hazardous Materials,Hazardous Materials,3146361.92,2391137.9,2391137.9,0.0,FY2021 Hazardous Materials - New Mexico
+2021-05-16,2021,California,National Conservation Lands,National Conservation Lands,36859109.13,38112978.88,38112978.88,0.0,FY2021 National Conservation Lands - California
+2021-05-28,2021,Colorado,Range Management,Range Management,16919059.69,19421734.57,19421734.57,0.0,FY2021 Range Management - Colorado
+2021-07-09,2021,Colorado,Soil/Water/Air Management,Soil/Water/Air Management,8815138.64,8949912.27,8949912.27,0.0,FY2021 Soil/Water/Air Management - Colorado
+2021-07-18,2021,Wyoming,Oil & Gas Management,Oil & Gas Management,28149684.57,28777255.44,28777255.44,2248325.03,FY2021 Oil & Gas Management - Wyoming
+2021-08-09,2021,Utah,Wild Horse & Burro,Wild Horse & Burro,3165768.99,3703427.96,3703427.96,0.0,FY2021 Wild Horse & Burro - Utah
+2021-08-12,2021,California,Cadastral Survey,Cadastral Survey,16291218.51,16657385.83,16657385.83,0.0,FY2021 Cadastral Survey - California
+2021-09-17,2021,California,Oil & Gas Management,Oil & Gas Management,28297207.84,30921168.51,30921168.51,3904056.26,FY2021 Oil & Gas Management - California
+2021-09-26,2021,New Mexico,Energy & Minerals,Energy & Minerals,8671988.67,7211493.4,7211493.4,0.0,FY2021 Energy & Minerals - New Mexico
+2021-09-28,2021,Montana,Hazardous Materials,Hazardous Materials,3396455.78,3583027.98,3583027.98,0.0,FY2021 Hazardous Materials - Montana
+2021-10-15,2021,Alaska,Range Management,Range Management,14484667.49,16947815.21,16947815.21,0.0,FY2021 Range Management - Alaska
+2021-10-18,2021,Alaska,Hazardous Materials,Hazardous Materials,2637482.32,2800151.12,2800151.12,0.0,FY2021 Hazardous Materials - Alaska
+2021-11-07,2021,Idaho,Oil & Gas Management,Oil & Gas Management,19587246.55,23859372.46,23859372.46,8593134.18,FY2021 Oil & Gas Management - Idaho
+2021-11-15,2021,Oregon,Wild Horse & Burro,Wild Horse & Burro,2646420.36,2502219.3,2502219.3,0.0,FY2021 Wild Horse & Burro - Oregon
+2021-12-04,2021,Wyoming,Energy & Minerals,Energy & Minerals,8219796.34,11234567.11,11234567.11,0.0,FY2021 Energy & Minerals - Wyoming
+2021-12-08,2021,New Mexico,Forestry,Forestry,11967413.93,14726439.55,14726439.55,0.0,FY2021 Forestry - New Mexico
+2021-12-12,2021,Nevada,Cadastral Survey,Cadastral Survey,13698477.35,14612289.39,14612289.39,0.0,FY2021 Cadastral Survey - Nevada
+2022-01-07,2022,Wyoming,Fire Management,Fire Management,49672971.51,42248710.4,42248710.4,0.0,FY2022 Fire Management - Wyoming
+2022-01-10,2022,Nevada,Hazardous Materials,Hazardous Materials,2970263.44,3100777.03,3100777.03,0.0,FY2022 Hazardous Materials - Nevada
+2022-02-18,2022,Colorado,National Conservation Lands,National Conservation Lands,46528851.17,40241195.84,40241195.84,0.0,FY2022 National Conservation Lands - Colorado
+2022-02-24,2022,Alaska,Wild Horse & Burro,Wild Horse & Burro,2438261.7,1541881.55,1541881.55,0.0,FY2022 Wild Horse & Burro - Alaska
+2022-03-13,2022,Wyoming,Cadastral Survey,Cadastral Survey,13609025.3,16301597.9,16301597.9,0.0,FY2022 Cadastral Survey - Wyoming
+2022-03-20,2022,Colorado,Wildlife Management,Wildlife Management,15404501.98,13643826.43,13643826.43,0.0,FY2022 Wildlife Management - Colorado
+2022-04-02,2022,Idaho,Fire Management,Fire Management,38951273.93,24457260.43,24457260.43,0.0,FY2022 Fire Management - Idaho
+2022-04-07,2022,California,Soil/Water/Air Management,Soil/Water/Air Management,7612503.1,4963796.52,4963796.52,0.0,FY2022 Soil/Water/Air Management - California
+2022-04-23,2022,Wyoming,Wildlife Management,Wildlife Management,10980330.3,10307785.35,10307785.35,0.0,FY2022 Wildlife Management - Wyoming
+2022-04-27,2022,Nevada,Cadastral Survey,Cadastral Survey,17228406.68,17200913.56,17200913.56,0.0,FY2022 Cadastral Survey - Nevada
+2022-05-18,2022,Arizona,Wild Horse & Burro,Wild Horse & Burro,2414080.21,2456935.41,2456935.41,0.0,FY2022 Wild Horse & Burro - Arizona
+2022-05-23,2022,Utah,Land & Realty Management,Land & Realty Management,25893976.81,30906651.03,30906651.03,25001827.93,FY2022 Land & Realty Management - Utah
+2022-05-25,2022,California,National Conservation Lands,National Conservation Lands,40510332.2,40375142.37,40375142.37,0.0,FY2022 National Conservation Lands - California
+2022-06-05,2022,New Mexico,National Conservation Lands,National Conservation Lands,48172669.61,55209931.62,55209931.62,0.0,FY2022 National Conservation Lands - New Mexico
+2022-06-14,2022,Wyoming,Hazardous Materials,Hazardous Materials,3304737.86,2861469.72,2861469.72,0.0,FY2022 Hazardous Materials - Wyoming
+2022-06-19,2022,New Mexico,Land & Realty Management,Land & Realty Management,27103458.25,22397764.1,22397764.1,6120314.74,FY2022 Land & Realty Management - New Mexico
+2022-06-22,2022,Idaho,Wild Horse & Burro,Wild Horse & Burro,2797261.22,3344223.03,3344223.03,0.0,FY2022 Wild Horse & Burro - Idaho
+2022-07-01,2022,Idaho,National Conservation Lands,National Conservation Lands,54299841.08,58911426.88,58911426.88,0.0,FY2022 National Conservation Lands - Idaho
+2022-07-01,2022,Arizona,Wildlife Management,Wildlife Management,10722165.57,12002035.1,12002035.1,0.0,FY2022 Wildlife Management - Arizona
+2022-07-18,2022,Wyoming,Energy & Minerals,Energy & Minerals,8789092.18,12492654.17,12492654.17,0.0,FY2022 Energy & Minerals - Wyoming
+2022-08-02,2022,Arizona,Forestry,Forestry,14680313.33,13834185.77,13834185.77,0.0,FY2022 Forestry - Arizona
+2022-08-07,2022,Montana,Soil/Water/Air Management,Soil/Water/Air Management,8721876.56,10407524.31,10407524.31,0.0,FY2022 Soil/Water/Air Management - Montana
+2022-08-09,2022,Montana,Recreation Management,Recreation Management,11832934.56,9005820.02,9005820.02,0.0,FY2022 Recreation Management - Montana
+2022-08-10,2022,Nevada,Forestry,Forestry,12027065.63,10355544.45,10355544.45,0.0,FY2022 Forestry - Nevada
+2022-08-13,2022,Nevada,Cultural Resources,Cultural Resources,37010911.28,33914367.41,33914367.41,0.0,FY2022 Cultural Resources - Nevada
+2022-08-19,2022,Wyoming,Fire Management,Fire Management,40289296.57,33133141.94,33133141.94,0.0,FY2022 Fire Management - Wyoming
+2022-08-22,2022,Oregon,Oil & Gas Management,Oil & Gas Management,20966963.95,17207506.67,17207506.67,27994710.41,FY2022 Oil & Gas Management - Oregon
+2022-08-22,2022,Nevada,Land & Realty Management,Land & Realty Management,19550624.32,15514239.08,15514239.08,5508444.47,FY2022 Land & Realty Management - Nevada
+2022-09-05,2022,Utah,Soil/Water/Air Management,Soil/Water/Air Management,9259069.75,9747996.51,9747996.51,0.0,FY2022 Soil/Water/Air Management - Utah
+2022-09-09,2022,Montana,Energy & Minerals,Energy & Minerals,7498386.77,9274588.32,9274588.32,0.0,FY2022 Energy & Minerals - Montana
+2022-09-12,2022,Colorado,Fire Management,Fire Management,43975616.68,93180654.55,93180654.55,0.0,FY2022 Fire Management - Colorado
+2022-09-14,2022,Alaska,Cultural Resources,Cultural Resources,38855846.79,38877972.77,38877972.77,0.0,FY2022 Cultural Resources - Alaska
+2022-09-15,2022,Wyoming,Fire Management,Fire Management,42330417.68,43031382.25,43031382.25,0.0,FY2022 Fire Management - Wyoming
+2022-10-06,2022,Arizona,Hazardous Materials,Hazardous Materials,2550997.62,2550464.73,2550464.73,0.0,FY2022 Hazardous Materials - Arizona
+2022-10-15,2022,Wyoming,Mining Law Administration,Mining Law Administration,36340366.16,36631897.45,36631897.45,634042.68,FY2022 Mining Law Administration - Wyoming
+2022-10-21,2022,Montana,Soil/Water/Air Management,Soil/Water/Air Management,9210493.07,9547255.14,9547255.14,0.0,FY2022 Soil/Water/Air Management - Montana
+2022-10-22,2022,Wyoming,Wildlife Management,Wildlife Management,13932246.66,14920921.79,14920921.79,0.0,FY2022 Wildlife Management - Wyoming
+2022-10-24,2022,Montana,Soil/Water/Air Management,Soil/Water/Air Management,6453522.05,6479257.41,6479257.41,0.0,FY2022 Soil/Water/Air Management - Montana
+2022-11-04,2022,Arizona,Cultural Resources,Cultural Resources,39696586.8,35676628.86,35676628.86,0.0,FY2022 Cultural Resources - Arizona
+2022-11-14,2022,Arizona,Recreation Management,Recreation Management,13276443.72,12870047.96,12870047.96,0.0,FY2022 Recreation Management - Arizona
+2022-12-02,2022,Montana,Fire Management,Fire Management,43561957.36,26234916.55,26234916.55,0.0,FY2022 Fire Management - Montana
+2022-12-13,2022,Utah,Wildlife Management,Wildlife Management,14259618.32,8317647.6,8317647.6,0.0,FY2022 Wildlife Management - Utah
+2022-12-15,2022,Idaho,Range Management,Range Management,14038267.98,12823998.59,12823998.59,0.0,FY2022 Range Management - Idaho
+2022-12-17,2022,Wyoming,Fire Management,Fire Management,44266274.05,43676670.87,43676670.87,0.0,FY2022 Fire Management - Wyoming
+2022-12-17,2022,Colorado,Range Management,Range Management,14260409.77,13283989.93,13283989.93,0.0,FY2022 Range Management - Colorado
+2022-12-19,2022,Arizona,Land & Realty Management,Land & Realty Management,20141103.56,23184960.38,23184960.38,22030646.64,FY2022 Land & Realty Management - Arizona
+2023-01-02,2023,Idaho,Range Management,Range Management,13231600.0,15588745.49,15588745.49,0.0,FY2023 Range Management - Idaho
+2023-01-03,2023,Arizona,Mining Law Administration,Mining Law Administration,39642064.39,49862551.72,49862551.72,25706647.96,FY2023 Mining Law Administration - Arizona
+2023-01-09,2023,New Mexico,Wildlife Management,Wildlife Management,12545000.0,12134723.69,12134723.69,0.0,FY2023 Wildlife Management - New Mexico
+2023-02-17,2023,Arizona,Cadastral Survey,Cadastral Survey,15801009.12,19396037.31,19396037.31,0.0,FY2023 Cadastral Survey - Arizona
+2023-03-14,2023,Arizona,Land & Realty Management,Land & Realty Management,27776020.86,27931127.04,27931127.04,25277897.54,FY2023 Land & Realty Management - Arizona
+2023-04-03,2023,California,Cultural Resources,Cultural Resources,39765297.69,39178087.51,39178087.51,0.0,FY2023 Cultural Resources - California
+2023-04-04,2023,Utah,Mining Law Administration,Mining Law Administration,39954468.04,36593772.89,36593772.89,15343927.95,FY2023 Mining Law Administration - Utah
+2023-04-12,2023,Oregon,Wildlife Management,Wildlife Management,14664827.29,14532289.85,14532289.85,0.0,FY2023 Wildlife Management - Oregon
+2023-04-14,2023,Oregon,Fire Management,Fire Management,54988186.6,62968068.99,62968068.99,0.0,FY2023 Fire Management - Oregon
+2023-04-15,2023,Arizona,Range Management,Range Management,13300789.65,12607439.28,12607439.28,0.0,FY2023 Range Management - Arizona
+2023-05-04,2023,California,Cadastral Survey,Cadastral Survey,17079615.21,13549234.98,13549234.98,0.0,FY2023 Cadastral Survey - California
+2023-05-10,2023,New Mexico,Land & Realty Management,Land & Realty Management,25671578.88,20212450.23,20212450.23,13460481.39,FY2023 Land & Realty Management - New Mexico
+2023-05-11,2023,New Mexico,Forestry,Forestry,13795312.31,15066065.8,15066065.8,0.0,FY2023 Forestry - New Mexico
+2023-05-26,2023,Alaska,Wild Horse & Burro,Wild Horse & Burro,3394234.0,4132146.31,4132146.31,0.0,FY2023 Wild Horse & Burro - Alaska
+2023-06-05,2023,Utah,Mining Law Administration,Mining Law Administration,39249590.46,37122633.03,37122633.03,2232005.57,FY2023 Mining Law Administration - Utah
+2023-06-05,2023,Montana,Mining Law Administration,Mining Law Administration,35841998.19,42434916.68,42434916.68,28759607.29,FY2023 Mining Law Administration - Montana
+2023-06-06,2023,California,Wild Horse & Burro,Wild Horse & Burro,2975993.16,3353415.96,3353415.96,0.0,FY2023 Wild Horse & Burro - California
+2023-06-09,2023,Arizona,Mining Law Administration,Mining Law Administration,28976668.82,28468649.05,28468649.05,27846321.18,FY2023 Mining Law Administration - Arizona
+2023-06-17,2023,California,Cultural Resources,Cultural Resources,40801688.1,36136075.51,36136075.51,0.0,FY2023 Cultural Resources - California
+2023-06-24,2023,New Mexico,Wildlife Management,Wildlife Management,12426000.81,13809068.58,13809068.58,0.0,FY2023 Wildlife Management - New Mexico
+2023-06-24,2023,Utah,Forestry,Forestry,13554371.22,12560000.59,12560000.59,0.0,FY2023 Forestry - Utah
+2023-06-26,2023,Wyoming,Hazardous Materials,Hazardous Materials,3130469.7,3494149.53,3494149.53,0.0,FY2023 Hazardous Materials - Wyoming
+2023-07-10,2023,Arizona,Cadastral Survey,Cadastral Survey,15209007.48,13712315.81,13712315.81,0.0,FY2023 Cadastral Survey - Arizona
+2023-07-20,2023,New Mexico,Soil/Water/Air Management,Soil/Water/Air Management,7166279.78,6242683.18,6242683.18,0.0,FY2023 Soil/Water/Air Management - New Mexico
+2023-07-22,2023,Oregon,Range Management,Range Management,14532552.8,11649567.98,11649567.98,0.0,FY2023 Range Management - Oregon
+2023-07-24,2023,Utah,Forestry,Forestry,11476439.01,8819140.93,8819140.93,0.0,FY2023 Forestry - Utah
+2023-07-25,2023,Alaska,Forestry,Forestry,14405244.15,14078430.26,14078430.26,0.0,FY2023 Forestry - Alaska
+2023-07-27,2023,Oregon,Mining Law Administration,Mining Law Administration,38385321.32,30578818.08,30578818.08,10551951.98,FY2023 Mining Law Administration - Oregon
+2023-08-09,2023,Montana,Cadastral Survey,Cadastral Survey,16660589.23,16231834.36,16231834.36,0.0,FY2023 Cadastral Survey - Montana
+2023-08-13,2023,Oregon,Forestry,Forestry,12660006.74,16464673.13,16464673.13,0.0,FY2023 Forestry - Oregon
+2023-08-18,2023,Arizona,Mining Law Administration,Mining Law Administration,33887696.07,29511904.9,29511904.9,7188156.1,FY2023 Mining Law Administration - Arizona
+2023-08-20,2023,Nevada,Forestry,Forestry,10721081.07,10404456.94,10404456.94,0.0,FY2023 Forestry - Nevada
+2023-09-03,2023,Alaska,Cadastral Survey,Cadastral Survey,14346152.56,13805799.16,13805799.16,0.0,FY2023 Cadastral Survey - Alaska
+2023-09-04,2023,Utah,Cultural Resources,Cultural Resources,35930498.09,30016314.71,30016314.71,0.0,FY2023 Cultural Resources - Utah
+2023-09-05,2023,Idaho,Cadastral Survey,Cadastral Survey,20133792.09,32783717.93,32783717.93,0.0,FY2023 Cadastral Survey - Idaho
+2023-09-16,2023,Montana,Range Management,Range Management,14466229.86,16701686.38,16701686.38,0.0,FY2023 Range Management - Montana
+2023-09-17,2023,Colorado,Cultural Resources,Cultural Resources,39929575.17,35584888.87,35584888.87,0.0,FY2023 Cultural Resources - Colorado
+2023-10-20,2023,Montana,Recreation Management,Recreation Management,10594108.18,7018940.27,7018940.27,0.0,FY2023 Recreation Management - Montana
+2023-11-06,2023,Utah,Soil/Water/Air Management,Soil/Water/Air Management,7631009.13,9558128.39,9558128.39,0.0,FY2023 Soil/Water/Air Management - Utah
+2023-11-20,2023,Utah,Oil & Gas Management,Oil & Gas Management,22724349.85,23753663.17,23753663.17,749531.33,FY2023 Oil & Gas Management - Utah
+2023-12-05,2023,Oregon,Forestry,Forestry,14331188.16,13765664.95,13765664.95,0.0,FY2023 Forestry - Oregon
+2023-12-08,2023,Wyoming,Soil/Water/Air Management,Soil/Water/Air Management,8267705.64,6559619.57,6559619.57,0.0,FY2023 Soil/Water/Air Management - Wyoming
+2023-12-21,2023,Arizona,Mining Law Administration,Mining Law Administration,32553778.54,26557373.11,26557373.11,5104213.49,FY2023 Mining Law Administration - Arizona
+2024-01-02,2024,Utah,Fire Management,Fire Management,40926769.76,45866039.28,45866039.28,0.0,FY2024 Fire Management - Utah
+2024-01-12,2024,Arizona,Wild Horse & Burro,Wild Horse & Burro,2539143.18,1965045.84,1965045.84,0.0,FY2024 Wild Horse & Burro - Arizona
+2024-01-16,2024,Montana,Forestry,Forestry,14465795.15,15009230.88,15009230.88,0.0,FY2024 Forestry - Montana
+2024-02-12,2024,Nevada,Cadastral Survey,Cadastral Survey,15835370.05,15470320.97,15470320.97,0.0,FY2024 Cadastral Survey - Nevada
+2024-02-15,2024,Colorado,Wild Horse & Burro,Wild Horse & Burro,3138130.24,3245816.76,3245816.76,0.0,FY2024 Wild Horse & Burro - Colorado
+2024-02-17,2024,California,Mining Law Administration,Mining Law Administration,35609442.84,43328462.36,43328462.36,10172010.66,FY2024 Mining Law Administration - California
+2024-03-09,2024,Arizona,Wild Horse & Burro,Wild Horse & Burro,3014036.39,2381943.38,2381943.38,0.0,FY2024 Wild Horse & Burro - Arizona
+2024-03-16,2024,California,Cadastral Survey,Cadastral Survey,18354636.55,14016648.53,14016648.53,0.0,FY2024 Cadastral Survey - California
+2024-03-23,2024,Utah,Range Management,Range Management,19701764.56,17003968.49,17003968.49,0.0,FY2024 Range Management - Utah
+2024-03-25,2024,Utah,Soil/Water/Air Management,Soil/Water/Air Management,6956652.42,7168247.75,7168247.75,0.0,FY2024 Soil/Water/Air Management - Utah
+2024-03-27,2024,Arizona,Soil/Water/Air Management,Soil/Water/Air Management,6875338.68,16276838.63,16276838.63,0.0,FY2024 Soil/Water/Air Management - Arizona
+2024-04-03,2024,California,Recreation Management,Recreation Management,11840681.23,10665937.25,10665937.25,0.0,FY2024 Recreation Management - California
+2024-04-06,2024,Alaska,Recreation Management,Recreation Management,11711167.44,10987857.48,10987857.48,0.0,FY2024 Recreation Management - Alaska
+2024-04-10,2024,Idaho,Fire Management,Fire Management,49870437.68,33633006.6,33633006.6,0.0,FY2024 Fire Management - Idaho
+2024-04-14,2024,Oregon,Land & Realty Management,Land & Realty Management,19868833.94,20681405.46,20681405.46,18349028.12,FY2024 Land & Realty Management - Oregon
+2024-04-23,2024,Utah,National Conservation Lands,National Conservation Lands,44200234.99,45908400.06,45908400.06,0.0,FY2024 National Conservation Lands - Utah
+2024-04-28,2024,Nevada,Cultural Resources,Cultural Resources,30012236.69,27083506.29,27083506.29,0.0,FY2024 Cultural Resources - Nevada
+2024-05-02,2024,Oregon,Land & Realty Management,Land & Realty Management,23472758.03,24919792.22,24919792.22,9165742.09,FY2024 Land & Realty Management - Oregon
+2024-05-03,2024,Montana,Cadastral Survey,Cadastral Survey,17682254.83,16282038.7,16282038.7,0.0,FY2024 Cadastral Survey - Montana
+2024-05-05,2024,Nevada,Land & Realty Management,Land & Realty Management,21065295.79,28830250.6,28830250.6,24909522.31,FY2024 Land & Realty Management - Nevada
+2024-05-19,2024,New Mexico,Wild Horse & Burro,Wild Horse & Burro,2798630.31,3088332.38,3088332.38,0.0,FY2024 Wild Horse & Burro - New Mexico
+2024-05-24,2024,Colorado,Cadastral Survey,Cadastral Survey,14898929.33,15629743.87,15629743.87,0.0,FY2024 Cadastral Survey - Colorado
+2024-06-12,2024,Montana,Land & Realty Management,Land & Realty Management,22918962.53,20044728.28,20044728.28,4586183.39,FY2024 Land & Realty Management - Montana
+2024-06-20,2024,Alaska,Land & Realty Management,Land & Realty Management,18938140.01,17516753.79,17516753.79,22368650.74,FY2024 Land & Realty Management - Alaska
+2024-06-21,2024,Arizona,Mining Law Administration,Mining Law Administration,41029094.89,41447509.35,41447509.35,732564.74,FY2024 Mining Law Administration - Arizona
+2024-06-24,2024,Arizona,Hazardous Materials,Hazardous Materials,2517436.13,2144115.27,2144115.27,0.0,FY2024 Hazardous Materials - Arizona
+2024-06-25,2024,Arizona,Range Management,Range Management,18740457.24,17851603.81,17851603.81,0.0,FY2024 Range Management - Arizona
+2024-06-26,2024,Utah,Range Management,Range Management,19458924.09,19462834.89,19462834.89,0.0,FY2024 Range Management - Utah
+2024-07-01,2024,Montana,National Conservation Lands,National Conservation Lands,42207087.06,41669892.99,41669892.99,0.0,FY2024 National Conservation Lands - Montana
+2024-07-02,2024,Montana,Soil/Water/Air Management,Soil/Water/Air Management,8441862.82,10003061.17,10003061.17,0.0,FY2024 Soil/Water/Air Management - Montana
+2024-07-10,2024,Idaho,Oil & Gas Management,Oil & Gas Management,21858809.3,19260258.65,19260258.65,22500307.3,FY2024 Oil & Gas Management - Idaho
+2024-07-11,2024,Arizona,Fire Management,Fire Management,37475440.13,41414426.43,41414426.43,0.0,FY2024 Fire Management - Arizona
+2024-07-14,2024,Alaska,Wild Horse & Burro,Wild Horse & Burro,3346818.74,2750882.3,2750882.3,0.0,FY2024 Wild Horse & Burro - Alaska
+2024-07-23,2024,Arizona,Fire Management,Fire Management,45620337.74,47656221.07,47656221.07,0.0,FY2024 Fire Management - Arizona
+2024-08-19,2024,Montana,Soil/Water/Air Management,Soil/Water/Air Management,9378213.03,9889838.84,9889838.84,0.0,FY2024 Soil/Water/Air Management - Montana
+2024-08-19,2024,Nevada,Cultural Resources,Cultural Resources,31048868.28,29980976.67,29980976.67,0.0,FY2024 Cultural Resources - Nevada
+2024-08-26,2024,Wyoming,National Conservation Lands,National Conservation Lands,48786987.87,40377057.65,40377057.65,0.0,FY2024 National Conservation Lands - Wyoming
+2024-09-06,2024,Arizona,Cultural Resources,Cultural Resources,31127425.88,31496233.19,31496233.19,0.0,FY2024 Cultural Resources - Arizona
+2024-09-10,2024,Wyoming,Soil/Water/Air Management,Soil/Water/Air Management,6953209.48,8042992.42,8042992.42,0.0,FY2024 Soil/Water/Air Management - Wyoming
+2024-09-13,2024,Colorado,Oil & Gas Management,Oil & Gas Management,24209646.11,17280371.8,17280371.8,18629609.74,FY2024 Oil & Gas Management - Colorado
+2024-09-24,2024,Idaho,Hazardous Materials,Hazardous Materials,3055046.66,3374826.11,3374826.11,0.0,FY2024 Hazardous Materials - Idaho
+2024-09-26,2024,Arizona,Energy & Minerals,Energy & Minerals,8041544.58,5473238.62,5473238.62,0.0,FY2024 Energy & Minerals - Arizona
+2024-10-02,2024,Idaho,Cadastral Survey,Cadastral Survey,15161874.61,16447890.61,16447890.61,0.0,FY2024 Cadastral Survey - Idaho
+2024-10-13,2024,Arizona,Soil/Water/Air Management,Soil/Water/Air Management,6883501.81,6737928.24,6737928.24,0.0,FY2024 Soil/Water/Air Management - Arizona
+2024-10-20,2024,Alaska,National Conservation Lands,National Conservation Lands,53148581.45,65006547.82,65006547.82,0.0,FY2024 National Conservation Lands - Alaska
+2024-10-21,2024,Wyoming,Hazardous Materials,Hazardous Materials,2612898.25,3381280.26,3381280.26,0.0,FY2024 Hazardous Materials - Wyoming
+2024-11-07,2024,Nevada,Recreation Management,Recreation Management,11754192.27,13133944.3,13133944.3,0.0,FY2024 Recreation Management - Nevada
+2024-11-10,2024,Arizona,Cultural Resources,Cultural Resources,29464508.82,28954041.16,28954041.16,0.0,FY2024 Cultural Resources - Arizona
+2024-11-11,2024,Alaska,Oil & Gas Management,Oil & Gas Management,26495556.7,33535457.55,33535457.55,19190179.08,FY2024 Oil & Gas Management - Alaska
+2024-11-14,2024,Montana,Cultural Resources,Cultural Resources,41382251.77,40746640.82,40746640.82,0.0,FY2024 Cultural Resources - Montana
+2024-11-14,2024,Utah,Wild Horse & Burro,Wild Horse & Burro,3090042.38,3472064.15,3472064.15,0.0,FY2024 Wild Horse & Burro - Utah
+2024-11-15,2024,Idaho,Fire Management,Fire Management,48822002.91,49275435.92,49275435.92,0.0,FY2024 Fire Management - Idaho
+2024-11-17,2024,New Mexico,Fire Management,Fire Management,53134348.75,45524512.54,45524512.54,0.0,FY2024 Fire Management - New Mexico
+2024-11-18,2024,Arizona,Cadastral Survey,Cadastral Survey,17605266.1,16170866.05,16170866.05,0.0,FY2024 Cadastral Survey - Arizona
+2024-11-20,2024,Wyoming,National Conservation Lands,National Conservation Lands,49068947.17,62584197.48,62584197.48,0.0,FY2024 National Conservation Lands - Wyoming
+2024-11-24,2024,Colorado,Wild Horse & Burro,Wild Horse & Burro,2694071.13,1885225.14,1885225.14,0.0,FY2024 Wild Horse & Burro - Colorado
+2024-11-24,2024,Utah,Soil/Water/Air Management,Soil/Water/Air Management,8251746.65,8262274.59,8262274.59,0.0,FY2024 Soil/Water/Air Management - Utah
+2024-12-15,2024,Arizona,Soil/Water/Air Management,Soil/Water/Air Management,6761424.33,8217125.34,8217125.34,0.0,FY2024 Soil/Water/Air Management - Arizona
+2024-12-16,2024,Arizona,Hazardous Materials,Hazardous Materials,3110732.5,3112182.98,3112182.98,0.0,FY2024 Hazardous Materials - Arizona
+2024-12-18,2024,Nevada,Fire Management,Fire Management,42473975.33,42158231.2,42158231.2,0.0,FY2024 Fire Management - Nevada
+2025-01-21,2025,Colorado,Recreation Management,Recreation Management,11308484.8,12147387.76,12147387.76,0.0,FY2025 Recreation Management - Colorado
+2025-02-01,2025,Wyoming,Mining Law Administration,Mining Law Administration,34898971.39,26717512.98,26717512.98,29086811.65,FY2025 Mining Law Administration - Wyoming
+2025-02-28,2025,Idaho,Cadastral Survey,Cadastral Survey,17439836.65,19402136.93,19402136.93,0.0,FY2025 Cadastral Survey - Idaho
+2025-03-05,2025,Utah,Forestry,Forestry,14233340.57,9933229.34,9933229.34,0.0,FY2025 Forestry - Utah
+2025-03-12,2025,Oregon,Cadastral Survey,Cadastral Survey,15282400.21,13736862.51,13736862.51,0.0,FY2025 Cadastral Survey - Oregon
+2025-03-14,2025,Arizona,Wild Horse & Burro,Wild Horse & Burro,3245287.83,3226527.67,3226527.67,0.0,FY2025 Wild Horse & Burro - Arizona
+2025-03-24,2025,Idaho,Hazardous Materials,Hazardous Materials,3275596.31,2907183.44,2907183.44,0.0,FY2025 Hazardous Materials - Idaho
+2025-04-01,2025,Idaho,Cadastral Survey,Cadastral Survey,19971254.67,18882072.5,18882072.5,0.0,FY2025 Cadastral Survey - Idaho
+2025-04-07,2025,Utah,Cultural Resources,Cultural Resources,36499672.97,36973286.56,36973286.56,0.0,FY2025 Cultural Resources - Utah
+2025-04-18,2025,Arizona,Range Management,Range Management,13201845.01,14543287.19,14543287.19,0.0,FY2025 Range Management - Arizona
+2025-04-26,2025,Colorado,National Conservation Lands,National Conservation Lands,41296372.99,46789362.89,46789362.89,0.0,FY2025 National Conservation Lands - Colorado
+2025-05-04,2025,Wyoming,Wild Horse & Burro,Wild Horse & Burro,2569565.6,3240086.57,3240086.57,0.0,FY2025 Wild Horse & Burro - Wyoming
+2025-05-07,2025,California,Range Management,Range Management,15272366.15,14413422.26,14413422.26,0.0,FY2025 Range Management - California
+2025-05-16,2025,Wyoming,Land & Realty Management,Land & Realty Management,19821449.97,19591453.22,19591453.22,18230248.92,FY2025 Land & Realty Management - Wyoming
+2025-06-01,2025,Arizona,Recreation Management,Recreation Management,11489693.9,12745599.43,12745599.43,0.0,FY2025 Recreation Management - Arizona
+2025-06-09,2025,California,Cultural Resources,Cultural Resources,29921878.54,33693023.39,33693023.39,0.0,FY2025 Cultural Resources - California
+2025-06-12,2025,California,Soil/Water/Air Management,Soil/Water/Air Management,7380128.84,9098090.12,9098090.12,0.0,FY2025 Soil/Water/Air Management - California
+2025-06-28,2025,Oregon,Cadastral Survey,Cadastral Survey,19246463.97,18505511.34,18505511.34,0.0,FY2025 Cadastral Survey - Oregon
+2025-07-03,2025,Utah,Range Management,Range Management,14501434.41,13947606.86,13947606.86,0.0,FY2025 Range Management - Utah
+2025-07-11,2025,Arizona,Cultural Resources,Cultural Resources,36931514.6,33681993.25,33681993.25,0.0,FY2025 Cultural Resources - Arizona
+2025-07-16,2025,Alaska,Land & Realty Management,Land & Realty Management,24541399.63,26726399.08,26726399.08,21772022.99,FY2025 Land & Realty Management - Alaska
+2025-07-19,2025,Colorado,Soil/Water/Air Management,Soil/Water/Air Management,8561321.89,7129932.7,7129932.7,0.0,FY2025 Soil/Water/Air Management - Colorado
+2025-07-19,2025,Alaska,Fire Management,Fire Management,48062191.54,48166927.82,48166927.82,0.0,FY2025 Fire Management - Alaska
+2025-07-21,2025,Alaska,Mining Law Administration,Mining Law Administration,31636904.39,34640154.19,34640154.19,28869779.66,FY2025 Mining Law Administration - Alaska
+2025-07-22,2025,Colorado,Oil & Gas Management,Oil & Gas Management,27643213.69,30983945.71,30983945.71,15135960.62,FY2025 Oil & Gas Management - Colorado
+2025-07-25,2025,Oregon,Cultural Resources,Cultural Resources,35222215.27,29932059.91,29932059.91,0.0,FY2025 Cultural Resources - Oregon
+2025-08-19,2025,Alaska,Forestry,Forestry,14741098.58,13770278.04,13770278.04,0.0,FY2025 Forestry - Alaska
+2025-09-24,2025,Colorado,Soil/Water/Air Management,Soil/Water/Air Management,8160268.12,9543555.13,9543555.13,0.0,FY2025 Soil/Water/Air Management - Colorado
+2025-10-11,2025,Wyoming,Forestry,Forestry,13416021.1,11097231.88,11097231.88,0.0,FY2025 Forestry - Wyoming
+2025-10-12,2025,Nevada,Energy & Minerals,Energy & Minerals,6321851.24,4843122.92,4843122.92,0.0,FY2025 Energy & Minerals - Nevada
+2025-10-28,2025,Nevada,Recreation Management,Recreation Management,11227717.79,10830543.96,10830543.96,0.0,FY2025 Recreation Management - Nevada
+2025-11-01,2025,Alaska,Range Management,Range Management,17632964.75,20208250.9,20208250.9,0.0,FY2025 Range Management - Alaska
+2025-11-07,2025,Oregon,Forestry,Forestry,10888704.17,24264115.77,24264115.77,0.0,FY2025 Forestry - Oregon
+2025-11-14,2025,Wyoming,Hazardous Materials,Hazardous Materials,3360529.54,2694898.2,2694898.2,0.0,FY2025 Hazardous Materials - Wyoming
+2025-12-14,2025,Oregon,Range Management,Range Management,19370947.4,17958241.26,17958241.26,0.0,FY2025 Range Management - Oregon
+2025-12-18,2025,California,Hazardous Materials,Hazardous Materials,2445999.82,2357783.42,2357783.42,0.0,FY2025 Hazardous Materials - California
+2025-12-24,2025,New Mexico,Cultural Resources,Cultural Resources,34209033.7,39148771.5,39148771.5,0.0,FY2025 Cultural Resources - New Mexico
+2025-12-28,2025,Oregon,Cadastral Survey,Cadastral Survey,16667618.48,17793475.97,17793475.97,0.0,FY2025 Cadastral Survey - Oregon
+2025-12-28,2025,Montana,Soil/Water/Air Management,Soil/Water/Air Management,7319560.47,7505887.07,7505887.07,0.0,FY2025 Soil/Water/Air Management - Montana

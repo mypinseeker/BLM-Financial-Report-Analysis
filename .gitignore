@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+data/raw/*.pdf
+data/raw/*.xlsx
+!data/raw/*.csv
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+!data/output/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Generated chart images (embedded in PPT)
+reports/*.png

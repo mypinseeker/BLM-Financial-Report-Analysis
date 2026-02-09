@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLM Financial Analysis Report</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f5f5; color: #333; line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header {
+            background: linear-gradient(135deg, #1a5276, #2e86c1);
+            color: white; padding: 30px; border-radius: 8px; margin-bottom: 20px;
+        }
+        header h1 { font-size: 24px; margin-bottom: 5px; }
+        header p { opacity: 0.8; font-size: 14px; }
+        .section {
+            background: white; border-radius: 8px; padding: 25px;
+            margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            font-size: 18px; color: #1a5276; margin-bottom: 15px;
+            padding-bottom: 10px; border-bottom: 2px solid #eee;
+        }
+        .summary-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px; margin-bottom: 15px;
+        }
+        .summary-card {
+            background: #f8f9fa; padding: 15px; border-radius: 6px;
+            border-left: 4px solid #2e86c1;
+        }
+        .summary-card .label { font-size: 12px; text-transform: uppercase; color: #666; }
+        .summary-card .value { font-size: 20px; font-weight: bold; color: #1a5276; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+        th {
+            background: #1a5276; color: white; padding: 10px 12px;
+            text-align: left; font-weight: 600;
+        }
+        td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f8f9fa; }
+        .chart-container { text-align: center; margin: 15px 0; }
+        .chart-container img { max-width: 100%; border-radius: 6px; }
+        footer { text-align: center; color: #888; font-size: 12px; padding: 20px; }
+        .positive { color: #27ae60; }
+        .negative { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BLM Financial Analysis Report</h1>
+            <p>Generated: 2026-01-30 12:44:58 | Period: All Available Data</p>
+        </header>
+
+        
+        <div class="section">
+            <h2>Summary Statistics</h2>
+
+            
+            <div class="summary-grid">
+                
+                <div class="summary-card">
+                    <div class="label">total</div>
+                    <div class="value">$6,262,161,047</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">groups</div>
+                    <div class="value">15</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">largest group</div>
+                    <div class="value">Fire Management</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">smallest group</div>
+                    <div class="value">Wild Horse & Burro</div>
+                </div>
+                
+            </div>
+            
+
+            
+
+            
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>count</th>
+      <th>sum</th>
+      <th>mean</th>
+      <th>median</th>
+      <th>std</th>
+      <th>min</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cadastral Survey</td>
+      <td>32</td>
+      <td>5.647853e+08</td>
+      <td>1.764954e+07</td>
+      <td>16256936.530</td>
+      <td>5.692333e+06</td>
+      <td>11591588.52</td>
+      <td>40693269.67</td>
+    </tr>
+    <tr>
+      <td>Cultural Resources</td>
+      <td>23</td>
+      <td>7.911795e+08</td>
+      <td>3.439911e+07</td>
+      <td>35584888.870</td>
+      <td>4.393856e+06</td>
+      <td>25791998.80</td>
+      <td>40990981.25</td>
+    </tr>
+    <tr>
+      <td>Energy &amp; Minerals</td>
+      <td>11</td>
+      <td>8.533361e+07</td>
+      <td>7.757601e+06</td>
+      <td>7186952.650</td>
+      <td>2.551913e+06</td>
+      <td>4843122.92</td>
+      <td>12492654.17</td>
+    </tr>
+    <tr>
+      <td>Fire Management</td>
+      <td>23</td>
+      <td>1.127798e+09</td>
+      <td>4.903471e+07</td>
+      <td>45866039.280</td>
+      <td>1.752105e+07</td>
+      <td>24457260.43</td>
+      <td>98150034.01</td>
+    </tr>
+    <tr>
+      <td>Forestry</td>
+      <td>22</td>
+      <td>2.778437e+08</td>
+      <td>1.262926e+07</td>
+      <td>12856640.330</td>
+      <td>3.603644e+06</td>
+      <td>7214004.24</td>
+      <td>24264115.77</td>
+    </tr>
+    <tr>
+      <td>Hazardous Materials</td>
+      <td>20</td>
+      <td>6.083031e+07</td>
+      <td>3.041516e+06</td>
+      <td>2884326.580</td>
+      <td>8.051566e+05</td>
+      <td>2144115.27</td>
+      <td>5908820.29</td>
+    </tr>
+    <tr>
+      <td>Land &amp; Realty Management</td>
+      <td>19</td>
+      <td>4.454854e+08</td>
+      <td>2.344660e+07</td>
+      <td>23083538.640</td>
+      <td>4.112917e+06</td>
+      <td>15514239.08</td>
+      <td>30906651.03</td>
+    </tr>
+    <tr>
+      <td>Mining Law Administration</td>
+      <td>22</td>
+      <td>7.691038e+08</td>
+      <td>3.495926e+07</td>
+      <td>33625839.135</td>
+      <td>6.687946e+06</td>
+      <td>26286644.54</td>
+      <td>49862551.72</td>
+    </tr>
+    <tr>
+      <td>National Conservation Lands</td>
+      <td>15</td>
+      <td>7.978731e+08</td>
+      <td>5.319154e+07</td>
+      <td>46789362.890</td>
+      <td>2.024869e+07</td>
+      <td>38112978.88</td>
+      <td>119458610.42</td>
+    </tr>
+    <tr>
+      <td>Oil &amp; Gas Management</td>
+      <td>12</td>
+      <td>3.048618e+08</td>
+      <td>2.540515e+07</td>
+      <td>25728979.660</td>
+      <td>5.700087e+06</td>
+      <td>17207506.67</td>
+      <td>33535457.55</td>
+    </tr>
+    <tr>
+      <td>Range Management</td>
+      <td>24</td>
+      <td>3.968899e+08</td>
+      <td>1.653708e+07</td>
+      <td>17088743.640</td>
+      <td>2.724668e+06</td>
+      <td>11649567.98</td>
+      <td>22024173.57</td>
+    </tr>
+    <tr>
+      <td>Recreation Management</td>
+      <td>14</td>
+      <td>1.734942e+08</td>
+      <td>1.239244e+07</td>
+      <td>11966671.180</td>
+      <td>3.662707e+06</td>
+      <td>7018940.27</td>
+      <td>22881080.08</td>
+    </tr>
+    <tr>
+      <td>Soil/Water/Air Management</td>
+      <td>29</td>
+      <td>2.420607e+08</td>
+      <td>8.346919e+06</td>
+      <td>8217125.340</td>
+      <td>2.067941e+06</td>
+      <td>4963796.52</td>
+      <td>16276838.63</td>
+    </tr>
+    <tr>
+      <td>Wild Horse &amp; Burro</td>
+      <td>21</td>
+      <td>5.938591e+07</td>
+      <td>2.827900e+06</td>
+      <td>2792062.560</td>
+      <td>6.657873e+05</td>
+      <td>1541881.55</td>
+      <td>4132146.31</td>
+    </tr>
+    <tr>
+      <td>Wildlife Management</td>
+      <td>13</td>
+      <td>1.652357e+08</td>
+      <td>1.271043e+07</td>
+      <td>13575059.280</td>
+      <td>2.471380e+06</td>
+      <td>8317647.60</td>
+      <td>16970350.35</td>
+    </tr>
+  </tbody>
+</table>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Budget Variance</h2>
+
+            
+            <div class="summary-grid">
+                
+                <div class="summary-card">
+                    <div class="label">total budget</div>
+                    <div class="value">$6,054,915,627</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">total actual</div>
+                    <div class="value">$6,262,161,047</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">total variance</div>
+                    <div class="value">$207,245,419</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">overall variance pct</div>
+                    <div class="value">3.4%</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">items over budget</div>
+                    <div class="value">152</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">items under budget</div>
+                    <div class="value">148</div>
+                </div>
+                
+            </div>
+            
+
+            
+            <div class="chart-container">
+                <img src="/home/user/BLM-Financial-Report-Analysis/data/output/budget_variance.png" alt="Budget Variance">
+            </div>
+            
+
+            
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>total_budget</th>
+      <th>total_actual</th>
+      <th>total_variance</th>
+      <th>avg_variance_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cadastral Survey</td>
+      <td>5.282675e+08</td>
+      <td>5.647853e+08</td>
+      <td>36517830.06</td>
+      <td>6.587021</td>
+    </tr>
+    <tr>
+      <td>Cultural Resources</td>
+      <td>8.399326e+08</td>
+      <td>7.911795e+08</td>
+      <td>-48753058.01</td>
+      <td>-5.543595</td>
+    </tr>
+    <tr>
+      <td>Energy &amp; Minerals</td>
+      <td>8.217720e+07</td>
+      <td>8.533361e+07</td>
+      <td>3156412.39</td>
+      <td>2.834954</td>
+    </tr>
+    <tr>
+      <td>Fire Management</td>
+      <td>1.066040e+09</td>
+      <td>1.127798e+09</td>
+      <td>61757910.79</td>
+      <td>5.161097</td>
+    </tr>
+    <tr>
+      <td>Forestry</td>
+      <td>2.789434e+08</td>
+      <td>2.778437e+08</td>
+      <td>-1099660.08</td>
+      <td>0.194494</td>
+    </tr>
+    <tr>
+      <td>Hazardous Materials</td>
+      <td>5.963484e+07</td>
+      <td>6.083031e+07</td>
+      <td>1195474.89</td>
+      <td>2.118647</td>
+    </tr>
+    <tr>
+      <td>Land &amp; Realty Management</td>
+      <td>4.401993e+08</td>
+      <td>4.454854e+08</td>
+      <td>5286063.33</td>
+      <td>1.456317</td>
+    </tr>
+    <tr>
+      <td>Mining Law Administration</td>
+      <td>7.684852e+08</td>
+      <td>7.691038e+08</td>
+      <td>618538.09</td>
+      <td>0.086456</td>
+    </tr>
+    <tr>
+      <td>National Conservation Lands</td>
+      <td>6.832334e+08</td>
+      <td>7.978731e+08</td>
+      <td>114639699.36</td>
+      <td>15.333642</td>
+    </tr>
+    <tr>
+      <td>Oil &amp; Gas Management</td>
+      <td>2.936237e+08</td>
+      <td>3.048618e+08</td>
+      <td>11238037.65</td>
+      <td>3.381586</td>
+    </tr>
+    <tr>
+      <td>Range Management</td>
+      <td>3.949793e+08</td>
+      <td>3.968899e+08</td>
+      <td>1910579.75</td>
+      <td>0.797391</td>
+    </tr>
+    <tr>
+      <td>Recreation Management</td>
+      <td>1.623063e+08</td>
+      <td>1.734942e+08</td>
+      <td>11187883.54</td>
+      <td>7.877146</td>
+    </tr>
+    <tr>
+      <td>Soil/Water/Air Management</td>
+      <td>2.266394e+08</td>
+      <td>2.420607e+08</td>
+      <td>15421260.10</td>
+      <td>7.526697</td>
+    </tr>
+    <tr>
+      <td>Wild Horse &amp; Burro</td>
+      <td>5.996309e+07</td>
+      <td>5.938591e+07</td>
+      <td>-577184.83</td>
+      <td>-1.581007</td>
+    </tr>
+    <tr>
+      <td>Wildlife Management</td>
+      <td>1.704900e+08</td>
+      <td>1.652357e+08</td>
+      <td>-5254367.59</td>
+      <td>-2.027827</td>
+    </tr>
+  </tbody>
+</table>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Trend Analysis</h2>
+
+            
+            <div class="summary-grid">
+                
+                <div class="summary-card">
+                    <div class="label">periods</div>
+                    <div class="value">7</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">trend direction</div>
+                    <div class="value">increasing</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">slope per period</div>
+                    <div class="value">$10,018,632</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">total growth pct</div>
+                    <div class="value">-35.3%</div>
+                </div>
+                
+            </div>
+            
+
+            
+            <div class="chart-container">
+                <img src="/home/user/BLM-Financial-Report-Analysis/data/output/trend_analysis.png" alt="Trend Analysis">
+            </div>
+            
+
+            
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>date</th>
+      <th>total</th>
+      <th>average</th>
+      <th>count</th>
+      <th>change</th>
+      <th>change_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2019-12-31</td>
+      <td>1.119312e+09</td>
+      <td>2.111908e+07</td>
+      <td>53</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>2020-12-31</td>
+      <td>7.878507e+08</td>
+      <td>2.462033e+07</td>
+      <td>32</td>
+      <td>-3.314608e+08</td>
+      <td>-29.612918</td>
+    </tr>
+    <tr>
+      <td>2021-12-31</td>
+      <td>4.424603e+08</td>
+      <td>1.638742e+07</td>
+      <td>27</td>
+      <td>-3.453904e+08</td>
+      <td>-43.839577</td>
+    </tr>
+    <tr>
+      <td>2022-12-31</td>
+      <td>9.986496e+08</td>
+      <td>2.170977e+07</td>
+      <td>46</td>
+      <td>5.561893e+08</td>
+      <td>125.703772</td>
+    </tr>
+    <tr>
+      <td>2023-12-31</td>
+      <td>8.949313e+08</td>
+      <td>2.081236e+07</td>
+      <td>43</td>
+      <td>-1.037183e+08</td>
+      <td>-10.385854</td>
+    </tr>
+    <tr>
+      <td>2024-12-31</td>
+      <td>1.295187e+09</td>
+      <td>2.158644e+07</td>
+      <td>60</td>
+      <td>4.002552e+08</td>
+      <td>44.724689</td>
+    </tr>
+    <tr>
+      <td>2025-12-31</td>
+      <td>7.237712e+08</td>
+      <td>1.855824e+07</td>
+      <td>39</td>
+      <td>-5.714153e+08</td>
+      <td>-44.118379</td>
+    </tr>
+  </tbody>
+</table>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Anomaly Detection</h2>
+
+            
+            <div class="summary-grid">
+                
+                <div class="summary-card">
+                    <div class="label">total records</div>
+                    <div class="value">300</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">anomalies found</div>
+                    <div class="value">10</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">anomaly rate</div>
+                    <div class="value">3.3%</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">threshold</div>
+                    <div class="value">2.00</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">mean</div>
+                    <div class="value">$20,873,870</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">std</div>
+                    <div class="value">$16,667,796</div>
+                </div>
+                
+            </div>
+            
+
+            
+            <div class="chart-container">
+                <img src="/home/user/BLM-Financial-Report-Analysis/data/output/anomalies.png" alt="Anomaly Detection">
+            </div>
+            
+
+            
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>date</th>
+      <th>fiscal_year</th>
+      <th>state</th>
+      <th>category</th>
+      <th>program</th>
+      <th>budget</th>
+      <th>actual</th>
+      <th>amount</th>
+      <th>revenue</th>
+      <th>description</th>
+      <th>z_score</th>
+      <th>is_anomaly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2019-06-24</td>
+      <td>2019</td>
+      <td>Oregon</td>
+      <td>Fire Management</td>
+      <td>Fire Management</td>
+      <td>50758233.88</td>
+      <td>60214188.28</td>
+      <td>60214188.28</td>
+      <td>0.0</td>
+      <td>FY2019 Fire Management - Oregon</td>
+      <td>2.360259</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2020-01-08</td>
+      <td>2020</td>
+      <td>Utah</td>
+      <td>National Conservation Lands</td>
+      <td>National Conservation Lands</td>
+      <td>52858566.77</td>
+      <td>119458610.42</td>
+      <td>119458610.42</td>
+      <td>0.0</td>
+      <td>FY2020 National Conservation Lands - Utah</td>
+      <td>5.914684</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2020-04-19</td>
+      <td>2020</td>
+      <td>Oregon</td>
+      <td>Fire Management</td>
+      <td>Fire Management</td>
+      <td>54352653.44</td>
+      <td>98150034.01</td>
+      <td>98150034.01</td>
+      <td>0.0</td>
+      <td>FY2020 Fire Management - Oregon</td>
+      <td>4.636256</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2020-08-11</td>
+      <td>2020</td>
+      <td>Alaska</td>
+      <td>Fire Management</td>
+      <td>Fire Management</td>
+      <td>53269559.22</td>
+      <td>56497327.11</td>
+      <td>56497327.11</td>
+      <td>0.0</td>
+      <td>FY2020 Fire Management - Alaska</td>
+      <td>2.137263</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2022-06-05</td>
+      <td>2022</td>
+      <td>New Mexico</td>
+      <td>National Conservation Lands</td>
+      <td>National Conservation Lands</td>
+      <td>48172669.61</td>
+      <td>55209931.62</td>
+      <td>55209931.62</td>
+      <td>0.0</td>
+      <td>FY2022 National Conservation Lands - New Mexico</td>
+      <td>2.060024</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2022-07-01</td>
+      <td>2022</td>
+      <td>Idaho</td>
+      <td>National Conservation Lands</td>
+      <td>National Conservation Lands</td>
+      <td>54299841.08</td>
+      <td>58911426.88</td>
+      <td>58911426.88</td>
+      <td>0.0</td>
+      <td>FY2022 National Conservation Lands - Idaho</td>
+      <td>2.282099</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2022-09-12</td>
+      <td>2022</td>
+      <td>Colorado</td>
+      <td>Fire Management</td>
+      <td>Fire Management</td>
+      <td>43975616.68</td>
+      <td>93180654.55</td>
+      <td>93180654.55</td>
+      <td>0.0</td>
+      <td>FY2022 Fire Management - Colorado</td>
+      <td>4.338113</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2023-04-14</td>
+      <td>2023</td>
+      <td>Oregon</td>
+      <td>Fire Management</td>
+      <td>Fire Management</td>
+      <td>54988186.60</td>
+      <td>62968068.99</td>
+      <td>62968068.99</td>
+      <td>0.0</td>
+      <td>FY2023 Fire Management - Oregon</td>
+      <td>2.525481</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2024-10-20</td>
+      <td>2024</td>
+      <td>Alaska</td>
+      <td>National Conservation Lands</td>
+      <td>National Conservation Lands</td>
+      <td>53148581.45</td>
+      <td>65006547.82</td>
+      <td>65006547.82</td>
+      <td>0.0</td>
+      <td>FY2024 National Conservation Lands - Alaska</td>
+      <td>2.647781</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>2024-11-20</td>
+      <td>2024</td>
+      <td>Wyoming</td>
+      <td>National Conservation Lands</td>
+      <td>National Conservation Lands</td>
+      <td>49068947.17</td>
+      <td>62584197.48</td>
+      <td>62584197.48</td>
+      <td>0.0</td>
+      <td>FY2024 National Conservation Lands - Wyoming</td>
+      <td>2.502450</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Category Breakdown</h2>
+
+            
+            <div class="summary-grid">
+                
+                <div class="summary-card">
+                    <div class="label">total categories</div>
+                    <div class="value">15</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">total amount</div>
+                    <div class="value">$6,262,161,047</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">top category</div>
+                    <div class="value">Fire Management</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">top category pct</div>
+                    <div class="value">18.0%</div>
+                </div>
+                
+            </div>
+            
+
+            
+            <div class="chart-container">
+                <img src="/home/user/BLM-Financial-Report-Analysis/data/output/category_breakdown.png" alt="Category Breakdown">
+            </div>
+            
+
+            
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>total</th>
+      <th>average</th>
+      <th>count</th>
+      <th>percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fire Management</td>
+      <td>1.127798e+09</td>
+      <td>4.903471e+07</td>
+      <td>23</td>
+      <td>18.009729</td>
+    </tr>
+    <tr>
+      <td>National Conservation Lands</td>
+      <td>7.978731e+08</td>
+      <td>5.319154e+07</td>
+      <td>15</td>
+      <td>12.741178</td>
+    </tr>
+    <tr>
+      <td>Cultural Resources</td>
+      <td>7.911795e+08</td>
+      <td>3.439911e+07</td>
+      <td>23</td>
+      <td>12.634289</td>
+    </tr>
+    <tr>
+      <td>Mining Law Administration</td>
+      <td>7.691038e+08</td>
+      <td>3.495926e+07</td>
+      <td>22</td>
+      <td>12.281763</td>
+    </tr>
+    <tr>
+      <td>Cadastral Survey</td>
+      <td>5.647853e+08</td>
+      <td>1.764954e+07</td>
+      <td>32</td>
+      <td>9.019016</td>
+    </tr>
+    <tr>
+      <td>Land &amp; Realty Management</td>
+      <td>4.454854e+08</td>
+      <td>2.344660e+07</td>
+      <td>19</td>
+      <td>7.113924</td>
+    </tr>
+    <tr>
+      <td>Range Management</td>
+      <td>3.968899e+08</td>
+      <td>1.653708e+07</td>
+      <td>24</td>
+      <td>6.337906</td>
+    </tr>
+    <tr>
+      <td>Oil &amp; Gas Management</td>
+      <td>3.048618e+08</td>
+      <td>2.540515e+07</td>
+      <td>12</td>
+      <td>4.868315</td>
+    </tr>
+    <tr>
+      <td>Forestry</td>
+      <td>2.778437e+08</td>
+      <td>1.262926e+07</td>
+      <td>22</td>
+      <td>4.436867</td>
+    </tr>
+    <tr>
+      <td>Soil/Water/Air Management</td>
+      <td>2.420607e+08</td>
+      <td>8.346919e+06</td>
+      <td>29</td>
+      <td>3.865449</td>
+    </tr>
+    <tr>
+      <td>Recreation Management</td>
+      <td>1.734942e+08</td>
+      <td>1.239244e+07</td>
+      <td>14</td>
+      <td>2.770517</td>
+    </tr>
+    <tr>
+      <td>Wildlife Management</td>
+      <td>1.652357e+08</td>
+      <td>1.271043e+07</td>
+      <td>13</td>
+      <td>2.638636</td>
+    </tr>
+    <tr>
+      <td>Energy &amp; Minerals</td>
+      <td>8.533361e+07</td>
+      <td>7.757601e+06</td>
+      <td>11</td>
+      <td>1.362686</td>
+    </tr>
+    <tr>
+      <td>Hazardous Materials</td>
+      <td>6.083031e+07</td>
+      <td>3.041516e+06</td>
+      <td>20</td>
+      <td>0.971395</td>
+    </tr>
+    <tr>
+      <td>Wild Horse &amp; Burro</td>
+      <td>5.938591e+07</td>
+      <td>2.827900e+06</td>
+      <td>21</td>
+      <td>0.948329</td>
+    </tr>
+  </tbody>
+</table>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Year Over Year</h2>
+
+            
+            <div class="summary-grid">
+                
+                <div class="summary-card">
+                    <div class="label">years covered</div>
+                    <div class="value">7</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">first year</div>
+                    <div class="value">2019</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">last year</div>
+                    <div class="value">2025</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">first year total</div>
+                    <div class="value">$1,119,311,504</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">last year total</div>
+                    <div class="value">$723,771,212</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">cumulative change pct</div>
+                    <div class="value">-35.3%</div>
+                </div>
+                
+            </div>
+            
+
+            
+
+            
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>category</th>
+      <th>2019</th>
+      <th>2020</th>
+      <th>2019_to_2020_change_pct</th>
+      <th>2021</th>
+      <th>2020_to_2021_change_pct</th>
+      <th>2022</th>
+      <th>2021_to_2022_change_pct</th>
+      <th>2023</th>
+      <th>2022_to_2023_change_pct</th>
+      <th>2024</th>
+      <th>2023_to_2024_change_pct</th>
+      <th>2025</th>
+      <th>2024_to_2025_change_pct</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cadastral Survey</td>
+      <td>121018998.70</td>
+      <td>63365278.16</td>
+      <td>-47.640223</td>
+      <td>55082035.11</td>
+      <td>-13.072211</td>
+      <td>33502511.46</td>
+      <td>-39.177063</td>
+      <td>109478939.55</td>
+      <td>226.778306</td>
+      <td>94017508.73</td>
+      <td>-14.122744</td>
+      <td>88320059.25</td>
+      <td>-6.059988</td>
+    </tr>
+    <tr>
+      <td>Cultural Resources</td>
+      <td>103461033.69</td>
+      <td>31471992.10</td>
+      <td>-69.580826</td>
+      <td>75171599.51</td>
+      <td>138.852372</td>
+      <td>108468969.04</td>
+      <td>44.295146</td>
+      <td>140915366.60</td>
+      <td>29.913069</td>
+      <td>158261398.13</td>
+      <td>12.309539</td>
+      <td>173429134.61</td>
+      <td>9.583977</td>
+    </tr>
+    <tr>
+      <td>Energy &amp; Minerals</td>
+      <td>12711005.05</td>
+      <td>22092944.81</td>
+      <td>73.809583</td>
+      <td>18446060.51</td>
+      <td>-16.507009</td>
+      <td>21767242.49</td>
+      <td>18.004831</td>
+      <td>0.00</td>
+      <td>-100.000000</td>
+      <td>5473238.62</td>
+      <td>NaN</td>
+      <td>4843122.92</td>
+      <td>-11.512666</td>
+    </tr>
+    <tr>
+      <td>Fire Management</td>
+      <td>200409472.56</td>
+      <td>204763172.47</td>
+      <td>2.172402</td>
+      <td>0.00</td>
+      <td>-100.000000</td>
+      <td>305962736.99</td>
+      <td>NaN</td>
+      <td>62968068.99</td>
+      <td>-79.419694</td>
+      <td>305527873.04</td>
+      <td>385.210803</td>
+      <td>48166927.82</td>
+      <td>-84.234850</td>
+    </tr>
+    <tr>
+      <td>Forestry</td>
+      <td>61909668.55</td>
+      <td>11785385.76</td>
+      <td>-80.963578</td>
+      <td>14726439.55</td>
+      <td>24.955091</td>
+      <td>24189730.22</td>
+      <td>64.260547</td>
+      <td>91158432.60</td>
+      <td>276.847661</td>
+      <td>15009230.88</td>
+      <td>-83.535006</td>
+      <td>59064855.03</td>
+      <td>293.523529</td>
+    </tr>
+    <tr>
+      <td>Hazardous Materials</td>
+      <td>8446845.62</td>
+      <td>8116686.03</td>
+      <td>-3.908673</td>
+      <td>12287651.60</td>
+      <td>51.387544</td>
+      <td>8512711.48</td>
+      <td>-30.721412</td>
+      <td>3494149.53</td>
+      <td>-58.953742</td>
+      <td>12012404.62</td>
+      <td>243.786221</td>
+      <td>7959865.06</td>
+      <td>-33.736289</td>
+    </tr>
+    <tr>
+      <td>Land &amp; Realty Management</td>
+      <td>70721735.81</td>
+      <td>53259996.81</td>
+      <td>-24.690767</td>
+      <td>23045660.40</td>
+      <td>-56.729888</td>
+      <td>92003614.59</td>
+      <td>299.223164</td>
+      <td>48143577.27</td>
+      <td>-47.672081</td>
+      <td>111992930.35</td>
+      <td>132.622785</td>
+      <td>46317852.30</td>
+      <td>-58.642164</td>
+    </tr>
+    <tr>
+      <td>Mining Law Administration</td>
+      <td>205650347.00</td>
+      <td>99557264.32</td>
+      <td>-51.589061</td>
+      <td>0.00</td>
+      <td>-100.000000</td>
+      <td>36631897.45</td>
+      <td>NaN</td>
+      <td>281130619.46</td>
+      <td>667.447604</td>
+      <td>84775971.71</td>
+      <td>-69.844632</td>
+      <td>61357667.17</td>
+      <td>-27.623752</td>
+    </tr>
+    <tr>
+      <td>National Conservation Lands</td>
+      <td>92262584.29</td>
+      <td>170424390.99</td>
+      <td>84.716689</td>
+      <td>38112978.88</td>
+      <td>-77.636429</td>
+      <td>194737696.71</td>
+      <td>410.948507</td>
+      <td>0.00</td>
+      <td>-100.000000</td>
+      <td>255546096.00</td>
+      <td>NaN</td>
+      <td>46789362.89</td>
+      <td>-81.690441</td>
+    </tr>
+    <tr>
+      <td>Oil &amp; Gas Management</td>
+      <td>51684164.22</td>
+      <td>27598586.86</td>
+      <td>-46.601464</td>
+      <td>83557796.41</td>
+      <td>202.761141</td>
+      <td>17207506.67</td>
+      <td>-79.406462</td>
+      <td>23753663.17</td>
+      <td>38.042446</td>
+      <td>70076088.00</td>
+      <td>195.011710</td>
+      <td>30983945.71</td>
+      <td>-55.785281</td>
+    </tr>
+    <tr>
+      <td>Range Management</td>
+      <td>106979885.45</td>
+      <td>17478887.70</td>
+      <td>-83.661520</td>
+      <td>54386456.81</td>
+      <td>211.155136</td>
+      <td>26107988.52</td>
+      <td>-51.995423</td>
+      <td>56547439.13</td>
+      <td>116.590562</td>
+      <td>54318407.19</td>
+      <td>-3.941880</td>
+      <td>81070808.47</td>
+      <td>49.251078</td>
+    </tr>
+    <tr>
+      <td>Recreation Management</td>
+      <td>38461007.56</td>
+      <td>12746043.74</td>
+      <td>-66.859829</td>
+      <td>22881080.08</td>
+      <td>79.515154</td>
+      <td>21875867.98</td>
+      <td>-4.393202</td>
+      <td>7018940.27</td>
+      <td>-67.914689</td>
+      <td>34787739.03</td>
+      <td>395.626657</td>
+      <td>35723531.15</td>
+      <td>2.690006</td>
+    </tr>
+    <tr>
+      <td>Soil/Water/Air Management</td>
+      <td>38497491.73</td>
+      <td>23231221.94</td>
+      <td>-39.655232</td>
+      <td>8949912.27</td>
+      <td>-61.474638</td>
+      <td>41145829.89</td>
+      <td>359.734449</td>
+      <td>22360431.14</td>
+      <td>-45.655656</td>
+      <td>74598306.98</td>
+      <td>233.617480</td>
+      <td>33277465.02</td>
+      <td>-55.391126</td>
+    </tr>
+    <tr>
+      <td>Wild Horse &amp; Burro</td>
+      <td>7097264.26</td>
+      <td>2792062.56</td>
+      <td>-60.660017</td>
+      <td>9412055.06</td>
+      <td>237.100436</td>
+      <td>7343039.99</td>
+      <td>-21.982607</td>
+      <td>7485562.27</td>
+      <td>1.940917</td>
+      <td>18789309.95</td>
+      <td>151.007329</td>
+      <td>6466614.24</td>
+      <td>-65.583546</td>
+    </tr>
+    <tr>
+      <td>Wildlife Management</td>
+      <td>0.00</td>
+      <td>39166793.20</td>
+      <td>NaN</td>
+      <td>26400562.01</td>
+      <td>-32.594528</td>
+      <td>59192216.27</td>
+      <td>124.208167</td>
+      <td>40476082.12</td>
+      <td>-31.619249</td>
+      <td>0.00</td>
+      <td>-100.000000</td>
+      <td>0.00</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+            
+        </div>
+        
+        <div class="section">
+            <h2>State Comparison</h2>
+
+            
+            <div class="summary-grid">
+                
+                <div class="summary-card">
+                    <div class="label">total states</div>
+                    <div class="value">11</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">total amount</div>
+                    <div class="value">$6,262,161,047</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">highest state</div>
+                    <div class="value">Utah</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">highest amount</div>
+                    <div class="value">$793,261,143</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">lowest state</div>
+                    <div class="value">New Mexico</div>
+                </div>
+                
+                <div class="summary-card">
+                    <div class="label">lowest amount</div>
+                    <div class="value">$352,633,077</div>
+                </div>
+                
+            </div>
+            
+
+            
+            <div class="chart-container">
+                <img src="/home/user/BLM-Financial-Report-Analysis/data/output/state_comparison.png" alt="State Comparison">
+            </div>
+            
+
+            
+            <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>state</th>
+      <th>total</th>
+      <th>average</th>
+      <th>count</th>
+      <th>std_dev</th>
+      <th>percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Utah</td>
+      <td>793261142.84</td>
+      <td>2.478941e+07</td>
+      <td>32</td>
+      <td>2.279998e+07</td>
+      <td>12.667530</td>
+    </tr>
+    <tr>
+      <td>Arizona</td>
+      <td>756851486.13</td>
+      <td>1.802027e+07</td>
+      <td>42</td>
+      <td>1.330716e+07</td>
+      <td>12.086107</td>
+    </tr>
+    <tr>
+      <td>Wyoming</td>
+      <td>722835628.65</td>
+      <td>2.007877e+07</td>
+      <td>36</td>
+      <td>1.513319e+07</td>
+      <td>11.542910</td>
+    </tr>
+    <tr>
+      <td>Oregon</td>
+      <td>687752839.33</td>
+      <td>2.547233e+07</td>
+      <td>27</td>
+      <td>2.030119e+07</td>
+      <td>10.982676</td>
+    </tr>
+    <tr>
+      <td>Colorado</td>
+      <td>579134671.09</td>
+      <td>1.997016e+07</td>
+      <td>29</td>
+      <td>1.840666e+07</td>
+      <td>9.248160</td>
+    </tr>
+    <tr>
+      <td>Alaska</td>
+      <td>563989986.30</td>
+      <td>2.349958e+07</td>
+      <td>24</td>
+      <td>1.768214e+07</td>
+      <td>9.006316</td>
+    </tr>
+    <tr>
+      <td>California</td>
+      <td>510311623.57</td>
+      <td>2.319598e+07</td>
+      <td>22</td>
+      <td>1.552348e+07</td>
+      <td>8.149130</td>
+    </tr>
+    <tr>
+      <td>Nevada</td>
+      <td>475083595.09</td>
+      <td>2.065581e+07</td>
+      <td>23</td>
+      <td>1.386167e+07</td>
+      <td>7.586576</td>
+    </tr>
+    <tr>
+      <td>Montana</td>
+      <td>413532474.98</td>
+      <td>1.654130e+07</td>
+      <td>25</td>
+      <td>1.205288e+07</td>
+      <td>6.603670</td>
+    </tr>
+    <tr>
+      <td>Idaho</td>
+      <td>406774521.93</td>
+      <td>1.848975e+07</td>
+      <td>22</td>
+      <td>1.456416e+07</td>
+      <td>6.495753</td>
+    </tr>
+    <tr>
+      <td>New Mexico</td>
+      <td>352633076.95</td>
+      <td>1.959073e+07</td>
+      <td>18</td>
+      <td>1.661841e+07</td>
+      <td>5.631172</td>
+    </tr>
+  </tbody>
+</table>
+            
+        </div>
+        
+
+        <footer>
+            BLM Financial Report Analysis Tool v0.1.0
+        </footer>
+    </div>
+</body>
+</html>
