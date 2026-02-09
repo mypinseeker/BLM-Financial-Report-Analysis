@@ -43,10 +43,5 @@ data/processed/*
 # Generated chart images (embedded in PPT)
 reports/*.png
 
-# Generated reports and database (regenerable from source)
+# SQLite database (regenerable via seed)
 data/telecom.db
-data/output/*.pptx
-data/output/*.html
-data/output/*.json
-data/output/*.txt
-data/output/*.png
