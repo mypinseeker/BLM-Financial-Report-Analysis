@@ -145,27 +145,27 @@ class BLMPPTGenerator:
         self._add_executive_summary(result)
 
         # --- Look 1: Trends ---
-        self._add_section_divider("01 看趋势", "Look at Trends — PEST Framework")
+        self._add_section_divider("01 Look at Trends", "PEST Framework — Macro Environment")
         self._add_pest_dashboard(result.trends)
         self._add_industry_environment(result.trends)
         self._add_trend_deep_dive(result.trends)
 
         # --- Look 2: Market/Customer ---
-        self._add_section_divider("02 看市场/客户", "Look at Market/Customer — $APPEALS")
+        self._add_section_divider("02 Look at Market", "$APPEALS — Market Changes & Customer Needs")
         self._add_market_change_panorama(result.market_customer)
         self._add_customer_segments(result.market_customer)
         self._add_appeals_assessment(result.market_customer)
         self._add_market_deep_dive(result.market_customer)
 
         # --- Look 3: Competition ---
-        self._add_section_divider("03 看竞争", "Look at Competition — Porter's Five Forces")
+        self._add_section_divider("03 Look at Competition", "Porter's Five Forces — Competitive Landscape")
         self._add_five_forces(result.competition)
         self._add_competitor_deep_dives(result.competition)
         self._add_competition_summary(result.competition)
         self._add_new_entrants(result.competition)
 
         # --- Look 4: Self ---
-        self._add_section_divider("04 看自己", "Look at Self — BMC + Capability")
+        self._add_section_divider("04 Look at Self", "BMC + Capability Assessment")
         self._add_health_check(result.self_analysis)
         self._add_segment_deep_dives(result.self_analysis)
         self._add_network_analysis(result.self_analysis)
@@ -174,11 +174,11 @@ class BLMPPTGenerator:
         self._add_strengths_weaknesses_exposure(result.self_analysis)
 
         # --- SWOT ---
-        self._add_section_divider("SWOT 综合分析", "SWOT Synthesis")
+        self._add_section_divider("SWOT Synthesis", "Strengths, Weaknesses, Opportunities & Threats")
         self._add_swot_matrix(result.swot)
 
         # --- Look 5: Opportunities ---
-        self._add_section_divider("05 看机会", "Look at Opportunities — SPAN Matrix")
+        self._add_section_divider("05 Look at Opportunities", "SPAN Matrix — Opportunity Selection")
         self._add_span_bubble(result.opportunities)
         self._add_priority_table(result.opportunities)
         self._add_opportunity_deep_dive(result.opportunities)
@@ -219,7 +219,7 @@ class BLMPPTGenerator:
         return slide
 
     def _add_header(self, slide, title: str, subtitle: str = ""):
-        """Standard slide header with accent bar."""
+        """Standard slide header with accent bar and UPPERCASE subtitle."""
         # Top accent bar
         self._add_shape(slide, 0, 0, Inches(self.SLIDE_WIDTH), Inches(0.08),
                         self.style.primary_color)
@@ -229,7 +229,7 @@ class BLMPPTGenerator:
                            font_color=self.style.text_color, bold=True)
         if subtitle:
             self._add_text_box(slide, Inches(0.5), Inches(0.85), Inches(10), Inches(0.35),
-                               subtitle, font_size=12,
+                               subtitle.upper(), font_size=12,
                                font_color=self.style.primary_color, bold=True)
         # Page number
         self._add_text_box(slide, Inches(12.3), Inches(7.0), Inches(0.8), Inches(0.35),
@@ -251,7 +251,7 @@ class BLMPPTGenerator:
         tf = txBox.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
-        p.text = f"Key Message: {message}"
+        p.text = f"Key Message: {self._strip_cjk(message)}"
         p.font.size = Pt(14)
         p.font.color.rgb = RGBColor(*self.style.key_message_text)
         p.font.bold = True
@@ -277,7 +277,7 @@ class BLMPPTGenerator:
         tf = txBox.text_frame
         tf.word_wrap = True
         p = tf.paragraphs[0]
-        p.text = str(text)
+        p.text = self._strip_cjk(str(text))
         p.font.size = Pt(font_size)
         p.font.color.rgb = RGBColor(*font_color)
         p.font.bold = bold
@@ -304,7 +304,7 @@ class BLMPPTGenerator:
                 p = tf.paragraphs[0]
             else:
                 p = tf.add_paragraph()
-            p.text = f"• {item}"
+            p.text = f"• {self._strip_cjk(str(item))}"
             p.font.size = Pt(font_size)
             p.font.color.rgb = RGBColor(*font_color)
             p.font.name = self.style.body_font
@@ -345,6 +345,16 @@ class BLMPPTGenerator:
 
     def _sanitize_name(self, name: str) -> str:
         return name.lower().replace(" ", "_").replace("/", "_").replace("&", "and")
+
+    @staticmethod
+    def _strip_cjk(text: str) -> str:
+        """Remove CJK characters and clean up resulting whitespace."""
+        import re
+        cleaned = re.sub(r'[\u4e00-\u9fff\u3000-\u303f\uff00-\uffef]+', '', text)
+        cleaned = re.sub(r'\s{2,}', ' ', cleaned).strip()
+        # Remove trailing punctuation artifacts
+        cleaned = re.sub(r'[（）\(\)]\s*$', '', cleaned).strip()
+        return cleaned
 
     # =========================================================================
     # S01: Cover Slide
@@ -404,16 +414,16 @@ class BLMPPTGenerator:
 
     def _add_toc_slide(self, result):
         slide = self._new_slide("toc", "Table of Contents")
-        self._add_header(slide, "Report Contents", "目录")
+        self._add_header(slide, "Report Contents", "Table of Contents")
 
         sections = [
             ("01", "Executive Summary", "Key findings and recommendations"),
-            ("02", "看趋势 Trends", "PEST Framework — macro environment"),
-            ("03", "看市场 Market/Customer", "$APPEALS — market changes & needs"),
-            ("04", "看竞争 Competition", "Porter's Five Forces — competitive landscape"),
-            ("05", "看自己 Self", "BMC + Capability — internal assessment"),
+            ("02", "Look at Trends", "PEST Framework — macro environment"),
+            ("03", "Look at Market", "$APPEALS — market changes & customer needs"),
+            ("04", "Look at Competition", "Porter's Five Forces — competitive landscape"),
+            ("05", "Look at Self", "BMC + Capability — internal assessment"),
             ("06", "SWOT Synthesis", "Strengths, Weaknesses, Opportunities, Threats"),
-            ("07", "看机会 Opportunities", "SPAN Matrix — opportunity selection"),
+            ("07", "Look at Opportunities", "SPAN Matrix — opportunity selection"),
             ("08", "Summary & Provenance", "Conclusions and data sources"),
         ]
 
@@ -438,7 +448,7 @@ class BLMPPTGenerator:
 
     def _add_data_quality_slide(self, result):
         slide = self._new_slide("data_quality", "Data Quality")
-        self._add_header(slide, "Data Quality Overview", "数据质量概览")
+        self._add_header(slide, "Data Quality Overview", "Data Quality")
 
         prov = result.provenance
         report = prov.quality_report() if prov else {}
@@ -478,7 +488,7 @@ class BLMPPTGenerator:
 
     def _add_executive_summary(self, result):
         slide = self._new_slide("exec_summary", "Executive Summary")
-        self._add_header(slide, "Executive Summary", "执行摘要")
+        self._add_header(slide, "Executive Summary")
 
         y = Inches(1.4)
         summaries = [
@@ -535,7 +545,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("pest_dashboard", "PEST Dashboard")
-        self._add_header(slide, "PEST Analysis Dashboard", "宏观环境分析")
+        self._add_header(slide, "PEST Analysis Dashboard", "Macro Environment")
 
         chart_path = self.chart_gen.create_pest_dashboard(pest, filename="pest_dashboard.png")
         self._add_image(slide, chart_path, Inches(0.5), Inches(1.3),
@@ -549,7 +559,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("industry_env", "Industry Environment")
-        self._add_header(slide, "Industry Environment", "行业环境")
+        self._add_header(slide, "Industry Environment", "Industry Analysis")
 
         # Left column: key metrics
         items = []
@@ -598,7 +608,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("trend_deep_dive", "Trend Deep Dive", required=False)
-        self._add_header(slide, "Value Transfer Trends", "价值转移趋势")
+        self._add_header(slide, "Value Transfer Trends", "Value Migration")
 
         self._add_bullet_list(slide, Inches(0.5), Inches(1.4), Inches(12),
                               Inches(4.5), trends.value_transfer_trends[:8],
@@ -616,15 +626,14 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("market_changes", "Market Changes")
-        self._add_header(slide, "Market Change Panorama", "市场变化全景")
+        self._add_header(slide, "Market Change Panorama", "Market Overview")
 
         # Snapshot metrics
         snapshot = mci.market_snapshot or {}
         if snapshot:
             metrics = []
-            # Try matching keys with fallbacks for different naming conventions
             key_map = [
-                ('total_revenue', 'Total Revenue'),
+                ('total_revenue', 'Total Revenue (€M)'),
                 ('total_mobile_subscribers_k', 'Mobile Subs (K)'),
                 ('total_broadband_subscribers_k', 'Broadband Subs (K)'),
                 ('operator_count', 'Operators'),
@@ -634,22 +643,36 @@ class BLMPPTGenerator:
                     v = snapshot[key]
                     if isinstance(v, dict):
                         v = ", ".join(f"{sk}: {sv}" for sk, sv in v.items())
+                    elif isinstance(v, float) and v > 1000:
+                        v = f"{v:,.0f}"
                     metrics.append((label, str(v), ""))
             if metrics:
                 self._add_metric_cards(slide, metrics[:4], top=1.4)
 
-        # Changes
+        # Market share chart (right side)
+        market_shares = snapshot.get('market_shares', {})
+        if market_shares:
+            categories = [k.replace('_', ' ').title() for k in market_shares.keys()]
+            values = list(market_shares.values())
+            chart_path = self.chart_gen.create_horizontal_bar_chart(
+                categories, values, target_category='Vodafone Germany',
+                title="Market Share (%)", x_label="%",
+                filename="market_share.png", value_suffix="%")
+            self._add_image(slide, chart_path, Inches(6.5), Inches(2.8),
+                            Inches(6), Inches(3.2))
+
+        # Changes (left side, below metrics)
         changes = mci.changes or []
         if changes:
             y = Inches(3.0)
-            self._add_text_box(slide, Inches(0.5), y, Inches(5), Inches(0.3),
+            self._add_text_box(slide, Inches(0.5), y, Inches(5.5), Inches(0.3),
                                "Market Changes:", font_size=13,
                                font_color=self.style.primary_color, bold=True)
             items = []
-            for c in changes[:6]:
+            for c in changes[:4]:
                 desc = c.description if hasattr(c, 'description') else str(c)
                 items.append(desc)
-            self._add_bullet_list(slide, Inches(0.5), y + Inches(0.3), Inches(12),
+            self._add_bullet_list(slide, Inches(0.5), y + Inches(0.3), Inches(5.5),
                                   Inches(2.5), items, font_size=11)
 
         km = mci.key_message or "Market dynamics overview"
@@ -662,7 +685,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("customer_segments", "Customer Segments")
-        self._add_header(slide, "Customer Segments", "客户细分")
+        self._add_header(slide, "Customer Segments", "Segmentation")
 
         y = Inches(1.4)
         for seg in mci.customer_segments[:4]:
@@ -700,7 +723,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("appeals", "$APPEALS Assessment")
-        self._add_header(slide, "$APPEALS Assessment", "客户需求评估")
+        self._add_header(slide, "$APPEALS Assessment", "Customer Needs")
 
         chart_path = self.chart_gen.create_appeals_radar(
             mci.appeals_assessment,
@@ -719,7 +742,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("market_deep_dive", "Market Deep Dive", required=False)
-        self._add_header(slide, "Customer Value Migration", "客户价值迁移")
+        self._add_header(slide, "Customer Value Migration", "Value Migration")
 
         self._add_text_box(slide, Inches(0.5), Inches(1.4), Inches(12), Inches(3),
                            mci.customer_value_migration, font_size=13,
@@ -756,7 +779,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("five_forces", "Porter's Five Forces")
-        self._add_header(slide, "Porter's Five Forces", "波特五力分析")
+        self._add_header(slide, "Porter's Five Forces", "Competitive Forces")
 
         forces = comp.five_forces if hasattr(comp, 'five_forces') else {}
         if forces:
@@ -780,19 +803,33 @@ class BLMPPTGenerator:
         analyses = comp.competitor_analyses if hasattr(comp, 'competitor_analyses') else {}
         for operator_id, deep_dive in list(analyses.items())[:3]:
             slide = self._new_slide(f"competitor_{operator_id}", f"Competitor: {operator_id}")
-            self._add_header(slide, f"Competitor Analysis: {operator_id.replace('_', ' ').title()}",
-                             "竞争对手分析")
+            op_name = operator_id.replace('_', ' ').title()
+            self._add_header(slide, f"Competitor Analysis: {op_name}",
+                             "Competitor Deep Dive")
 
-            y = Inches(1.4)
-            # Financial health
+            # Financial health — formatted KPI cards
             fh = deep_dive.financial_health if hasattr(deep_dive, 'financial_health') else {}
             if fh:
-                metrics = [(k.replace('_', ' ').title(), str(v), "")
-                           for k, v in list(fh.items())[:4]]
-                self._add_metric_cards(slide, metrics, top=1.4)
-                y = Inches(2.8)
+                kpi_map = [
+                    ('revenue', 'Revenue', '€{:,.0f}M'),
+                    ('ebitda', 'EBITDA', '€{:,.0f}M'),
+                    ('ebitda_margin_pct', 'Margin', '{:.1f}%'),
+                    ('capex_to_revenue_pct', 'Capex/Rev', '{:.1f}%'),
+                ]
+                metrics = []
+                for key, label, fmt in kpi_map:
+                    v = fh.get(key)
+                    if v is not None and not isinstance(v, str):
+                        growth_key = f'{key.replace("_pct","")}_growth_pct'
+                        change = ''
+                        g = fh.get(growth_key) or fh.get('ebitda_growth_pct')
+                        if key == 'revenue' and fh.get('service_revenue_growth_pct') is not None:
+                            change = f"{fh['service_revenue_growth_pct']:+.1f}% YoY"
+                        metrics.append((label, fmt.format(v), change))
+                self._add_metric_cards(slide, metrics[:4], top=1.4)
 
-            # Strengths / Weaknesses
+            # Strengths / Weaknesses (left side)
+            y = Inches(2.8)
             cols = [
                 ("Strengths", getattr(deep_dive, 'strengths', []), self.style.positive_color),
                 ("Weaknesses", getattr(deep_dive, 'weaknesses', []), self.style.negative_color),
@@ -802,7 +839,7 @@ class BLMPPTGenerator:
                 self._add_text_box(slide, x, y, Inches(5.5), Inches(0.3),
                                    col_title, font_size=13, font_color=color, bold=True)
                 self._add_bullet_list(slide, x, y + Inches(0.3), Inches(5.5),
-                                      Inches(2.5), items[:5], font_size=11)
+                                      Inches(2.5), items[:4], font_size=11)
                 x += Inches(6)
 
             # Growth strategy
@@ -812,14 +849,14 @@ class BLMPPTGenerator:
                                    f"Strategy: {strategy}", font_size=11,
                                    font_color=self.style.text_color)
 
-            self._add_key_message_bar(slide, f"Competitor analysis: {operator_id}")
+            self._add_key_message_bar(slide, f"Competitor analysis: {op_name}")
 
     def _add_competition_summary(self, comp):
         if comp is None:
             return
 
         slide = self._new_slide("competition_summary", "Competition Summary")
-        self._add_header(slide, "Competitive Landscape Summary", "竞争格局总结")
+        self._add_header(slide, "Competitive Landscape Summary", "Competition")
 
         # Comparison table
         table = comp.comparison_table if hasattr(comp, 'comparison_table') else {}
@@ -859,7 +896,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("new_entrants", "New Entrants", required=False)
-        self._add_header(slide, "New Entrants Threat", "新进入者威胁")
+        self._add_header(slide, "New Entrants Threat", "Market Entry")
 
         items = []
         for factor in ne_force.key_factors[:6]:
@@ -883,54 +920,55 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("health_check", "Health Check")
-        self._add_header(slide, "Operating Health Check", "经营体检")
+        self._add_header(slide, "Operating Health Check", "Financial Health")
 
-        # Financial health metrics
+        # Financial health metrics — show formatted top-line KPIs
         fh = self_analysis.financial_health or {}
         if fh:
-            metrics = [(k.replace('_', ' ').title(), str(v), "")
-                       for k, v in list(fh.items())[:4]]
-            self._add_metric_cards(slide, metrics, top=1.4)
+            kpi_map = [
+                ('total_revenue', 'Revenue', '€{:,.0f}M'),
+                ('ebitda', 'EBITDA', '€{:,.0f}M'),
+                ('ebitda_margin_pct', 'EBITDA Margin', '{:.1f}%'),
+                ('capex_to_revenue_pct', 'Capex/Rev', '{:.1f}%'),
+            ]
+            metrics = []
+            for key, label, fmt in kpi_map:
+                v = fh.get(key)
+                if v is not None:
+                    change = ''
+                    yoy = fh.get(f'{key.replace("_pct","")}_yoy_pct') or fh.get('revenue_yoy_pct')
+                    if key == 'total_revenue' and fh.get('revenue_yoy_pct') is not None:
+                        change = f"+{fh['revenue_yoy_pct']}% YoY"
+                    elif key == 'ebitda' and fh.get('ebitda_growth_pct') is not None:
+                        change = f"+{fh['ebitda_growth_pct']}% YoY"
+                    metrics.append((label, fmt.format(v), change))
+            self._add_metric_cards(slide, metrics[:4], top=1.4)
 
-        # Health rating
-        rating = getattr(self_analysis, 'health_rating', 'stable')
-        rating_colors = {
-            'healthy': self.style.positive_color,
-            'stable': self.style.warning_color,
-            'concerning': self.style.negative_color,
-            'critical': (200, 0, 0),
-        }
-        self._add_text_box(slide, Inches(0.5), Inches(3.0), Inches(3), Inches(0.4),
-                           f"Health Rating: {rating.upper()}",
-                           font_size=14, font_color=rating_colors.get(rating, self.style.text_color),
-                           bold=True)
+        # Revenue trend chart (left)
+        rev_trend = fh.get('revenue_trend', [])
+        if rev_trend and len(rev_trend) >= 4:
+            quarters = [f'Q{i+1}' for i in range(len(rev_trend))]
+            chart_path = self.chart_gen.create_multi_line_trend(
+                quarters, {self.operator_id.replace('_', ' ').title(): rev_trend},
+                title="Revenue Trend (€M)", y_label="€M",
+                target_operator=self.operator_id.replace('_', ' ').title(),
+                filename="revenue_trend.png")
+            self._add_image(slide, chart_path, Inches(0.3), Inches(2.9),
+                            Inches(6), Inches(3.1))
 
-        # Revenue breakdown
+        # Revenue breakdown bar chart (right)
         rb = self_analysis.revenue_breakdown or {}
-        if rb:
-            items = []
-            for k, v in list(rb.items())[:6]:
-                if isinstance(v, dict):
-                    val = v.get('value', '')
-                    share = v.get('share_pct', '')
-                    items.append(f"{k.replace('_', ' ').title()}: €{val:,.0f}M ({share}%)" if val else f"{k}: {v}")
-                else:
-                    items.append(f"{k.replace('_', ' ').title()}: {v}")
-            self._add_text_box(slide, Inches(0.5), Inches(3.6), Inches(5), Inches(0.3),
-                               "Revenue Breakdown:", font_size=12,
-                               font_color=self.style.primary_color, bold=True)
-            self._add_bullet_list(slide, Inches(0.5), Inches(3.9), Inches(5),
-                                  Inches(2), items, font_size=11)
-
-        # Market positions
-        mp = self_analysis.market_positions or {}
-        if mp:
-            pos_items = [f"{k}: {v}" for k, v in list(mp.items())[:6]]
-            self._add_text_box(slide, Inches(6.5), Inches(3.6), Inches(5.5), Inches(0.3),
-                               "Market Positions:", font_size=12,
-                               font_color=self.style.primary_color, bold=True)
-            self._add_bullet_list(slide, Inches(6.5), Inches(3.9), Inches(5.5),
-                                  Inches(2), pos_items, font_size=11)
+        rb_items = {k: v for k, v in rb.items()
+                    if isinstance(v, dict) and 'value' in v}
+        if rb_items:
+            labels = [k.replace('_revenue', '').replace('_', ' ').title()
+                      for k in rb_items.keys()]
+            values = [v['value'] for v in rb_items.values()]
+            chart_path = self.chart_gen.create_bar_chart(
+                labels, values, title="Revenue Breakdown (€M)",
+                y_label="€M", filename="revenue_breakdown.png")
+            self._add_image(slide, chart_path, Inches(6.5), Inches(2.9),
+                            Inches(6.3), Inches(3.1))
 
         km = self_analysis.key_message or "Operating health check summary"
         self._add_key_message_bar(slide, km)
@@ -939,51 +977,67 @@ class BLMPPTGenerator:
         if self_analysis is None:
             return
         segments = self_analysis.segment_analyses or []
-        for seg in segments[:4]:
+        for seg_idx, seg in enumerate(segments[:4]):
             slide = self._new_slide(
                 f"segment_{seg.segment_id}" if hasattr(seg, 'segment_id') else f"segment_{self.slide_num}",
                 f"Segment: {seg.segment_name}")
             self._add_header(slide, f"Segment Analysis: {seg.segment_name}",
-                             "细分业务分析")
+                             "Segment Performance")
 
-            y = Inches(1.4)
-            # Key metrics
+            # Key metrics — formatted with proper labels
             km_data = seg.key_metrics if hasattr(seg, 'key_metrics') else {}
             if km_data:
-                metrics = [(k.replace('_', ' ').title(), str(v), "")
-                           for k, v in list(km_data.items())[:4]]
-                self._add_metric_cards(slide, metrics, top=1.4)
-                y = Inches(2.8)
+                formatted_metrics = []
+                for k, v in list(km_data.items())[:4]:
+                    label = k.replace('_', ' ').replace('mobile ', '').replace('fixed ', '').replace('broadband ', '').replace('b2b ', '').replace('tv ', '').title()
+                    if isinstance(v, float):
+                        if 'pct' in k:
+                            formatted_metrics.append((label, f"{v:.1f}%", ""))
+                        elif 'revenue' in k or v > 100:
+                            formatted_metrics.append((label, f"€{v:,.0f}M", ""))
+                        elif 'arpu' in k:
+                            formatted_metrics.append((label, f"€{v:.1f}", ""))
+                        else:
+                            formatted_metrics.append((label, f"{v:,.0f}", ""))
+                    else:
+                        formatted_metrics.append((label, str(v), ""))
+                self._add_metric_cards(slide, formatted_metrics[:4], top=1.4)
 
-            # Health status
+            # Bar chart of key numeric metrics (right side)
+            numeric_items = {k: v for k, v in km_data.items()
+                            if isinstance(v, (int, float)) and 'pct' not in k and v > 0}
+            if len(numeric_items) >= 2:
+                labels = [k.replace('_', ' ').replace('mobile ', '').replace('fixed ', '').replace('broadband ', '').replace('b2b ', '').replace('tv ', '').title()
+                         for k in numeric_items.keys()]
+                values = list(numeric_items.values())
+                chart_path = self.chart_gen.create_bar_chart(
+                    labels[:6], values[:6],
+                    title=f"{seg.segment_name} Metrics",
+                    filename=f"segment_{seg_idx}_metrics.png")
+                self._add_image(slide, chart_path, Inches(6.5), Inches(2.8),
+                                Inches(6), Inches(3.2))
+
+            # Health status + Changes (left side)
+            y = Inches(2.8)
             health = getattr(seg, 'health_status', 'stable')
             self._add_text_box(slide, Inches(0.5), y, Inches(3), Inches(0.3),
                                f"Health: {health.upper()}", font_size=12,
                                font_color=self.style.primary_color, bold=True)
 
-            # Changes
             changes = getattr(seg, 'changes', [])
-            if changes:
-                change_items = []
-                for c in changes[:5]:
-                    if hasattr(c, 'metric'):
-                        direction = getattr(c, 'direction', '')
-                        change_items.append(f"{c.metric}: {direction}")
-                    else:
-                        change_items.append(str(c))
-                self._add_bullet_list(slide, Inches(0.5), y + Inches(0.4),
-                                      Inches(5.5), Inches(2), change_items, font_size=11)
-
-            # Attributions
             attributions = getattr(seg, 'attributions', [])
-            if attributions:
-                self._add_text_box(slide, Inches(6.5), y, Inches(5.5), Inches(0.3),
-                                   "Root Causes:", font_size=12,
-                                   font_color=self.style.primary_color, bold=True)
-                attr_items = [a.description for a in attributions[:4]
-                              if hasattr(a, 'description')]
-                self._add_bullet_list(slide, Inches(6.5), y + Inches(0.4),
-                                      Inches(5.5), Inches(2), attr_items, font_size=11)
+            combined_items = []
+            for c in changes[:3]:
+                if hasattr(c, 'metric'):
+                    combined_items.append(f"{c.metric}: {getattr(c, 'direction', '')}")
+                else:
+                    combined_items.append(str(c))
+            for a in attributions[:3]:
+                if hasattr(a, 'description'):
+                    combined_items.append(a.description)
+            if combined_items:
+                self._add_bullet_list(slide, Inches(0.5), y + Inches(0.4),
+                                      Inches(5.5), Inches(2.5), combined_items, font_size=11)
 
             seg_km = getattr(seg, 'key_message', '') or f"{seg.segment_name} segment analysis"
             self._add_key_message_bar(slide, seg_km)
@@ -996,7 +1050,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("network", "Network Analysis")
-        self._add_header(slide, "Network Analysis", "网络分析")
+        self._add_header(slide, "Network Analysis", "Infrastructure")
 
         y = Inches(1.4)
         # Coverage gauges
@@ -1047,7 +1101,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("bmc", "Business Model Canvas")
-        self._add_header(slide, "Business Model Canvas", "商业模式画布")
+        self._add_header(slide, "Business Model Canvas", "BMC")
 
         chart_path = self.chart_gen.create_bmc_canvas(bmc, filename="bmc_canvas.png")
         self._add_image(slide, chart_path, Inches(0.3), Inches(1.2),
@@ -1061,7 +1115,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("org_talent", "Organization & Talent")
-        self._add_header(slide, "Organization & Talent", "组织与人才")
+        self._add_header(slide, "Organization & Talent", "People & Culture")
 
         y = Inches(1.4)
         # Org culture
@@ -1105,7 +1159,7 @@ class BLMPPTGenerator:
 
         slide = self._new_slide("sw_exposure", "Strengths/Weaknesses/Exposure")
         self._add_header(slide, "Strengths, Weaknesses & Exposure Points",
-                         "优势/劣势/风险暴露点")
+                         "Self Assessment")
 
         # Three columns
         cols = [
@@ -1143,7 +1197,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("swot", "SWOT Matrix")
-        self._add_header(slide, "SWOT Analysis", "SWOT 综合分析")
+        self._add_header(slide, "SWOT Analysis", "Strategic Synthesis")
 
         chart_path = self.chart_gen.create_swot_matrix(swot, filename="swot_matrix.png")
         self._add_image(slide, chart_path, Inches(0.5), Inches(1.2),
@@ -1178,7 +1232,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("span_bubble", "SPAN Matrix")
-        self._add_header(slide, "SPAN Matrix — Opportunity Positioning", "机会定位矩阵")
+        self._add_header(slide, "SPAN Matrix — Opportunity Positioning", "Opportunity Map")
 
         positions = opp.span_positions if hasattr(opp, 'span_positions') else []
         if positions:
@@ -1203,7 +1257,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("priority_table", "Opportunity Priorities")
-        self._add_header(slide, "Opportunity Priority Ranking", "机会优先级排序")
+        self._add_header(slide, "Opportunity Priority Ranking", "Priorities")
 
         items = [o.name if hasattr(o, 'name') else str(o) for o in opportunities[:8]]
         priorities = [getattr(o, 'priority', 'P1') for o in opportunities[:8]]
@@ -1224,7 +1278,7 @@ class BLMPPTGenerator:
             return
 
         slide = self._new_slide("opp_deep_dive", "Opportunity Details", required=False)
-        self._add_header(slide, "Opportunity Details", "机会详情")
+        self._add_header(slide, "Opportunity Details", "Deep Dive")
 
         y = Inches(1.4)
         for item in opportunities[:4]:
@@ -1268,7 +1322,7 @@ class BLMPPTGenerator:
 
     def _add_summary_slide(self, result):
         slide = self._new_slide("summary", "Summary")
-        self._add_header(slide, "Analysis Summary", "分析总结")
+        self._add_header(slide, "Analysis Summary", "Key Takeaways")
 
         sections = [
             ("01 Trends", _get_key_message(result.trends)),
@@ -1295,7 +1349,7 @@ class BLMPPTGenerator:
 
     def _add_provenance_appendix(self, result):
         slide = self._new_slide("provenance", "Provenance Appendix")
-        self._add_header(slide, "Data Provenance", "数据溯源")
+        self._add_header(slide, "Data Provenance", "Sources & Methodology")
 
         prov = result.provenance
         footnotes = prov.to_footnotes() if prov else []
