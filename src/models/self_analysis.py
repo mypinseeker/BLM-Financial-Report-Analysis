@@ -109,6 +109,8 @@ class SelfInsight:
     performance_gap: str = ""
     opportunity_gap: str = ""
     strategic_review: str = ""
+    # Management commentary from earnings calls
+    management_commentary: list[dict] = field(default_factory=list)
     # Integrated judgment
     strengths: list[str] = field(default_factory=list)
     weaknesses: list[str] = field(default_factory=list)

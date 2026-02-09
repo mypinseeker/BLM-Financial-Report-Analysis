@@ -30,6 +30,7 @@ if str(_project_root) not in sys.path:
 from src.database.db import TelecomDatabase
 from src.database.operator_directory import OPERATOR_DIRECTORY
 from src.database.period_utils import get_converter
+from src.database.seed_internet_data import seed_internet_data
 
 
 # ============================================================================
@@ -384,6 +385,10 @@ def seed_all(db_path: str = "data/telecom.db"):
     # Also seed executives
     print("Bonus: Inserting executive data...")
     seed_executives(db)
+
+    # Seed internet-sourced data (regulatory, earnings call Q&A, media)
+    print("\nStep 7/7: Seeding internet-sourced data...")
+    seed_internet_data(db)
 
     print("Seed complete!")
     return db

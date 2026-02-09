@@ -622,10 +622,19 @@ class BLMPPTGenerator:
         snapshot = mci.market_snapshot or {}
         if snapshot:
             metrics = []
-            for key in ['total_revenue', 'total_subscribers', 'avg_arpu', 'market_growth']:
+            # Try matching keys with fallbacks for different naming conventions
+            key_map = [
+                ('total_revenue', 'Total Revenue'),
+                ('total_mobile_subscribers_k', 'Mobile Subs (K)'),
+                ('total_broadband_subscribers_k', 'Broadband Subs (K)'),
+                ('operator_count', 'Operators'),
+            ]
+            for key, label in key_map:
                 if key in snapshot:
-                    label = key.replace('_', ' ').title()
-                    metrics.append((label, str(snapshot[key]), ""))
+                    v = snapshot[key]
+                    if isinstance(v, dict):
+                        v = ", ".join(f"{sk}: {sv}" for sk, sv in v.items())
+                    metrics.append((label, str(v), ""))
             if metrics:
                 self._add_metric_cards(slide, metrics[:4], top=1.4)
 
@@ -899,7 +908,14 @@ class BLMPPTGenerator:
         # Revenue breakdown
         rb = self_analysis.revenue_breakdown or {}
         if rb:
-            items = [f"{k}: {v}" for k, v in list(rb.items())[:6]]
+            items = []
+            for k, v in list(rb.items())[:6]:
+                if isinstance(v, dict):
+                    val = v.get('value', '')
+                    share = v.get('share_pct', '')
+                    items.append(f"{k.replace('_', ' ').title()}: €{val:,.0f}M ({share}%)" if val else f"{k}: {v}")
+                else:
+                    items.append(f"{k.replace('_', ' ').title()}: {v}")
             self._add_text_box(slide, Inches(0.5), Inches(3.6), Inches(5), Inches(0.3),
                                "Revenue Breakdown:", font_size=12,
                                font_color=self.style.primary_color, bold=True)
@@ -997,7 +1013,16 @@ class BLMPPTGenerator:
         # Tech mix
         tech = network.technology_mix or {}
         if tech:
-            items = [f"{k}: {v}%" for k, v in tech.items()]
+            items = []
+            for k, v in tech.items():
+                label = k.replace('_', ' ').title()
+                if isinstance(v, dict):
+                    formatted = ", ".join(f"{sk}: {sv}" for sk, sv in v.items())
+                    items.append(f"{label}: {formatted}")
+                elif isinstance(v, (int, float)) and 'pct' in k:
+                    items.append(f"{label}: {v}%")
+                else:
+                    items.append(f"{label}: {v}")
             self._add_text_box(slide, Inches(0.5), y, Inches(3), Inches(0.3),
                                "Technology Mix:", font_size=12,
                                font_color=self.style.primary_color, bold=True)

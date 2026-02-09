@@ -1308,6 +1308,23 @@ def analyze_self(
     )
 
     # ------------------------------------------------------------------
+    # 8b. Management commentary from earnings calls
+    # ------------------------------------------------------------------
+    management_commentary = []
+    try:
+        ec_highlights = db.get_earnings_highlights(target_operator, latest_cq)
+        for h in ec_highlights:
+            management_commentary.append({
+                "segment": h.get("segment", "general"),
+                "type": h.get("highlight_type", "explanation"),
+                "content": h.get("content", ""),
+                "speaker": h.get("speaker", ""),
+                "source_url": h.get("source_url", ""),
+            })
+    except Exception:
+        pass
+
+    # ------------------------------------------------------------------
     # 9. Strengths & weaknesses
     # ------------------------------------------------------------------
     strengths, weaknesses = _derive_strengths_weaknesses(
@@ -1340,7 +1357,16 @@ def analyze_self(
         share_trends["broadband_share_latest"] = market_positions["broadband_subscriber_share_pct"]
 
     # ------------------------------------------------------------------
-    # 12. Assemble SelfInsight
+    # 12. Enrich key message with management commentary
+    # ------------------------------------------------------------------
+    if management_commentary:
+        # Find guidance highlight to supplement key message
+        guidance = [c for c in management_commentary if c["type"] == "guidance"]
+        if guidance:
+            key_message += f"; Management outlook: {guidance[0]['content'][:120]}"
+
+    # ------------------------------------------------------------------
+    # 13. Assemble SelfInsight
     # ------------------------------------------------------------------
     return SelfInsight(
         financial_health=financial_health,
@@ -1353,6 +1379,7 @@ def analyze_self(
         exposure_points=exposure_points,
         strengths=strengths,
         weaknesses=weaknesses,
+        management_commentary=management_commentary,
         health_rating=health_rating,
         key_message=key_message,
     )
