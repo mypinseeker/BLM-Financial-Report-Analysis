@@ -1,30 +1,25 @@
-"""BLM (Business Leadership Model) Strategic Analysis Skill.
+"""BLM (Business Leadership Model) Strategic Analysis Engine.
 
-A universal framework for telecom operator strategic analysis supporting:
-- Five Looks (五看): Market, Self, Competitor, Macro, Opportunity insights
-- Three Decisions (三定): Strategy, Key Tasks, Execution planning
-- Multi-operator comparison across any market
+Phase 1 restructured architecture:
+- New: src/blm/engine.py (BLMAnalysisEngine)
+- New: src/blm/look_at_*.py (five looks analysis modules)
+- New: src/blm/swot_synthesis.py (SWOT bridge analysis)
+- Legacy: src/blm/_legacy/ (original implementations, preserved)
 
-Supports global operators: Vodafone, MTN, Orange, Telefonica, China Mobile,
-AT&T, Verizon, Deutsche Telekom, and many more.
+Usage (new):
+    from src.database.db import TelecomDatabase
+    from src.blm.engine import BLMAnalysisEngine
 
-Usage:
-    from src.blm import generate_blm_strategy, generate_sample_data
+    db = TelecomDatabase("data/telecom.db")
+    engine = BLMAnalysisEngine(db, target_operator="vodafone_germany", market="germany")
+    result = engine.run_five_looks()
 
-    # Generate sample data for operators
-    data = generate_sample_data(["Vodafone", "MTN", "Orange"])
-
-    # Run full BLM analysis
-    results = generate_blm_strategy(data, "Vodafone", ["MTN", "Orange"])
-
-    # Access Five Looks insights
-    market_insight = results["five_looks"]["market"]
-
-    # Access Three Decisions strategy
-    strategy = results["three_decisions"]["strategy"]
+Usage (legacy, backward-compatible):
+    from src.blm._legacy import generate_blm_strategy, generate_sample_data
 """
 
-from src.blm.telecom_data import (
+# Legacy backward compatibility — import from _legacy for old code paths
+from src.blm._legacy import (
     GLOBAL_OPERATORS,
     BUSINESS_SEGMENTS,
     COMPETITIVE_DIMENSIONS,
@@ -32,55 +27,38 @@ from src.blm.telecom_data import (
     MarketContext,
     TelecomDataGenerator,
     generate_sample_data,
-)
-
-from src.blm.five_looks import (
     InsightResult,
     FiveLooksAnalyzer,
-)
-
-from src.blm.three_decisions import (
     StrategyItem,
     StrategyResult,
     ThreeDecisionsEngine,
     generate_blm_strategy,
+    BLMReportGenerator,
+    blm_cli,
 )
 
-from src.blm.report_generator import BLMReportGenerator
-
-from src.blm.cli import blm_cli
-
-# Optional PPT generation (requires python-pptx)
 try:
-    from src.blm.ppt_generator import (
+    from src.blm._legacy import (
         BLMPPTGenerator,
         PPTStyle,
         HUAWEI_STYLE,
         VODAFONE_STYLE,
         generate_blm_ppt,
-    )
-    from src.blm.ppt_generator_enhanced import (
         BLMPPTGeneratorEnhanced,
         generate_enhanced_blm_ppt,
+        PPTChartGenerator,
+        PPT_AVAILABLE,
     )
-    from src.blm.ppt_charts import PPTChartGenerator
-    PPT_AVAILABLE = True
-except ImportError:
+except (ImportError, AttributeError):
     PPT_AVAILABLE = False
-    BLMPPTGenerator = None
-    BLMPPTGeneratorEnhanced = None
-    PPTChartGenerator = None
-    generate_blm_ppt = None
-    generate_enhanced_blm_ppt = None
 
-# Optional Canva integration
-from src.blm.canva_integration import (
+from src.blm._legacy import (
     CanvaBLMExporter,
     check_canva_credentials,
 )
 
 __all__ = [
-    # Data models
+    # Legacy exports
     "GLOBAL_OPERATORS",
     "BUSINESS_SEGMENTS",
     "COMPETITIVE_DIMENSIONS",
@@ -88,27 +66,15 @@ __all__ = [
     "MarketContext",
     "TelecomDataGenerator",
     "generate_sample_data",
-    # Five Looks
     "InsightResult",
     "FiveLooksAnalyzer",
-    # Three Decisions
     "StrategyItem",
     "StrategyResult",
     "ThreeDecisionsEngine",
-    # Report generation
+    "generate_blm_strategy",
     "BLMReportGenerator",
-    # PPT generation
-    "BLMPPTGenerator",
-    "BLMPPTGeneratorEnhanced",
-    "PPTChartGenerator",
-    "generate_blm_ppt",
-    "generate_enhanced_blm_ppt",
+    "blm_cli",
     "PPT_AVAILABLE",
-    # Canva integration
     "CanvaBLMExporter",
     "check_canva_credentials",
-    # CLI
-    "blm_cli",
-    # Convenience functions
-    "generate_blm_strategy",
 ]

@@ -19,7 +19,7 @@ from src.data.export import DataExporter
 from src.analysis.financial import BudgetAnalyzer
 from src.visualization.charts import FinancialChartGenerator
 from src.reports.generator import ReportGenerator
-from src.blm.cli import blm_cli
+from src.blm._legacy.cli import blm_cli
 
 
 @click.group()

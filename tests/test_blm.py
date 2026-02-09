@@ -16,7 +16,7 @@ import pandas as pd
 import pytest
 from click.testing import CliRunner
 
-from src.blm.telecom_data import (
+from src.blm._legacy.telecom_data import (
     GLOBAL_OPERATORS,
     BUSINESS_SEGMENTS,
     COMPETITIVE_DIMENSIONS,
@@ -25,15 +25,15 @@ from src.blm.telecom_data import (
     TelecomDataGenerator,
     generate_sample_data,
 )
-from src.blm.five_looks import InsightResult, FiveLooksAnalyzer
-from src.blm.three_decisions import (
+from src.blm._legacy.five_looks import InsightResult, FiveLooksAnalyzer
+from src.blm._legacy.three_decisions import (
     StrategyItem,
     StrategyResult,
     ThreeDecisionsEngine,
     generate_blm_strategy,
 )
-from src.blm.report_generator import BLMReportGenerator
-from src.blm.cli import blm_cli
+from src.blm._legacy.report_generator import BLMReportGenerator
+from src.blm._legacy.cli import blm_cli
 
 
 # =============================================================================
