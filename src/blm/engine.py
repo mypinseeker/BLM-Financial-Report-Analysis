@@ -40,6 +40,7 @@ class FiveLooksResult:
     self_analysis: object = None  # SelfInsight
     swot: object = None  # SWOTAnalysis
     opportunities: object = None  # OpportunityInsight
+    tariff_analysis: object = None  # dict from analyze_tariffs()
 
     provenance: ProvenanceStore = field(default_factory=ProvenanceStore)
 
@@ -71,6 +72,7 @@ class BLMAnalysisEngine:
         trends = self.look_at_trends()
         market_customer = self.look_at_market_customer()
         competition = self.look_at_competition()
+        tariff_analysis = self._analyze_tariffs()
         self_analysis = self.look_at_self()
         swot = self.synthesize_swot(trends, market_customer, competition, self_analysis)
         opportunities = self.look_at_opportunities(
@@ -86,6 +88,7 @@ class BLMAnalysisEngine:
             self_analysis=self_analysis,
             swot=swot,
             opportunities=opportunities,
+            tariff_analysis=tariff_analysis,
             provenance=self.provenance,
         )
 
@@ -198,6 +201,19 @@ class BLMAnalysisEngine:
             target_operator=self.target_operator,
             provenance=self.provenance,
         )
+
+    def _analyze_tariffs(self):
+        """Run tariff deep-analysis across all operators in the market."""
+        try:
+            from src.blm.analyze_tariffs import analyze_tariffs
+
+            return analyze_tariffs(
+                db=self.db,
+                market=self.market,
+                target_operator=self.target_operator,
+            )
+        except Exception:
+            return None
 
     def _determine_latest_period(self) -> str:
         """Find the latest calendar quarter with data for the target operator."""

@@ -157,6 +157,9 @@ class BLMPPTGenerator:
         self._add_appeals_assessment(result.market_customer)
         self._add_market_deep_dive(result.market_customer)
 
+        # --- Tariff Analysis ---
+        self._add_tariff_slides(result)
+
         # --- Look 3: Competition ---
         self._add_section_divider("03 Look at Competition", "Porter's Five Forces — Competitive Landscape")
         self._add_five_forces(result.competition)
@@ -422,6 +425,7 @@ class BLMPPTGenerator:
             ("01", "Executive Summary", "Key findings and recommendations"),
             ("02", "Look at Trends", "PEST Framework — macro environment"),
             ("03", "Look at Market", "$APPEALS — market changes & customer needs"),
+            ("T", "Tariff Analysis", "Pricing comparison — mobile, fixed & convergence"),
             ("04", "Look at Competition", "Porter's Five Forces — competitive landscape"),
             ("05", "Look at Self", "BMC + Capability — internal assessment"),
             ("06", "SWOT Synthesis", "Strengths, Weaknesses, Opportunities, Threats"),
@@ -821,6 +825,258 @@ class BLMPPTGenerator:
                                   font_size=10)
 
         km = mci.key_message or "Market deep dive analysis"
+        self._add_key_message_bar(slide, km)
+
+    # =========================================================================
+    # Tariff Analysis (4 slides)
+    # =========================================================================
+
+    def _add_tariff_slides(self, result):
+        """Add tariff analysis section with 3-4 slides."""
+        ta = getattr(result, 'tariff_analysis', None)
+        if ta is None:
+            return
+
+        self._add_section_divider(
+            "Tariff Analysis",
+            "Mobile, Fixed & Convergence Pricing Landscape"
+        )
+        self._add_tariff_mobile_postpaid(ta)
+        self._add_tariff_value_and_5g(ta)
+        self._add_tariff_price_evolution(ta)
+        self._add_tariff_fixed_and_fmc(ta)
+
+    def _add_tariff_mobile_postpaid(self, ta):
+        """Slide: Mobile Postpaid Price Comparison — grouped bar chart."""
+        comparison = ta.get("mobile_postpaid_comparison", [])
+        if not comparison:
+            return
+
+        slide = self._new_slide("tariff_mobile", "Mobile Postpaid Price Comparison")
+        self._add_header(slide, "Mobile Postpaid Price Comparison",
+                         "Cross-Operator Tier Benchmarking")
+
+        # Build grouped bar data: tiers as x-axis, operators as series
+        tiers = []
+        operator_prices: dict[str, list[float]] = {}
+        for tier_data in comparison:
+            tier_label = tier_data["tier"].upper()
+            tiers.append(tier_label)
+            for op in tier_data.get("operators", []):
+                name = op["display_name"]
+                if name not in operator_prices:
+                    operator_prices[name] = []
+            # Fill values per operator for this tier
+            tier_ops = {op["display_name"]: op.get("price", 0)
+                        for op in tier_data.get("operators", [])}
+            for name in operator_prices:
+                operator_prices[name].append(tier_ops.get(name, 0) or 0)
+
+        if tiers and operator_prices:
+            our_name = self.operator_id.replace('_', ' ').title()
+            chart_path = self.chart_gen.create_segment_comparison(
+                tiers, operator_prices,
+                target_operator=our_name,
+                title="Monthly Price by Tier (EUR)",
+                y_label="EUR/month",
+                filename="tariff_mobile_postpaid.png",
+            )
+            self._add_image(slide, chart_path, Inches(0.3), Inches(1.3),
+                            Inches(8.5), Inches(4.8))
+
+        # Right column: price gap annotations
+        insights = ta.get("strategic_insights", [])
+        tier_insights = [i for i in insights if i.startswith("Tier ")]
+        if tier_insights:
+            self._add_text_box(slide, Inches(9.0), Inches(1.4), Inches(3.8), Inches(0.3),
+                               "Price Gaps:", font_size=12,
+                               font_color=self.style.primary_color, bold=True)
+            self._add_bullet_list(slide, Inches(9.0), Inches(1.8), Inches(3.8),
+                                  Inches(4.2), tier_insights[:4], font_size=10)
+
+        km = "Mobile postpaid tier comparison across all operators"
+        self._add_key_message_bar(slide, km)
+
+    def _add_tariff_value_and_5g(self, ta):
+        """Slide: EUR/GB Value Analysis & 5G Premium Erosion — split layout."""
+        value_list = ta.get("value_per_gb", [])
+        erosion = ta.get("five_g_erosion", [])
+        if not value_list and not erosion:
+            return
+
+        slide = self._new_slide("tariff_value_5g",
+                                "Value Analysis & 5G Premium")
+        self._add_header(slide, "EUR/GB Value Analysis & 5G Premium Erosion",
+                         "Pricing Intelligence")
+
+        # Left half: horizontal bar chart EUR/GB ranking
+        if value_list:
+            labels = [f"{v['operator']} {v['plan']}" for v in value_list[:12]]
+            values = [v["eur_per_gb"] for v in value_list[:12]]
+            # Truncate long labels
+            labels = [l[:30] for l in labels]
+
+            chart_path = self.chart_gen.create_horizontal_bar_chart(
+                labels, values,
+                title="EUR/GB Ranking (lower = better value)",
+                x_label="EUR/GB",
+                filename="tariff_eur_per_gb.png",
+            )
+            self._add_image(slide, chart_path, Inches(0.2), Inches(1.3),
+                            Inches(6.3), Inches(4.8))
+
+        # Right half: 5G premium erosion trend
+        if erosion and len(erosion) >= 2:
+            # Only include snapshots where we have premium data
+            snapshots_with_data = [
+                e for e in erosion if e.get("premium_pct") is not None
+            ]
+            if snapshots_with_data:
+                x_labels = [e["snapshot"] for e in snapshots_with_data]
+                y_values = [e["premium_pct"] for e in snapshots_with_data]
+                chart_path2 = self.chart_gen.create_multi_line_trend(
+                    x_labels,
+                    {"5G Premium %": y_values},
+                    title="5G Premium Erosion Over Time",
+                    y_label="Premium %",
+                    y_format="percent",
+                    filename="tariff_5g_erosion.png",
+                )
+                self._add_image(slide, chart_path2, Inches(6.8), Inches(1.3),
+                                Inches(6), Inches(4.8))
+            elif erosion:
+                # All plans include 5G now — show text
+                self._add_text_box(
+                    slide, Inches(7.0), Inches(3.0), Inches(5.5), Inches(1),
+                    "All mobile postpaid plans now include 5G — premium fully eroded",
+                    font_size=14, font_color=self.style.positive_color,
+                    bold=True, align="center",
+                )
+
+        km_parts = []
+        if value_list:
+            best = value_list[0]
+            km_parts.append(
+                f"Best value: {best['operator']} at EUR {best['eur_per_gb']:.2f}/GB"
+            )
+        erosion_insight = [
+            i for i in ta.get("strategic_insights", []) if "5G" in i
+        ]
+        if erosion_insight:
+            km_parts.append(erosion_insight[0])
+        km = " | ".join(km_parts) if km_parts else "Value and 5G premium analysis"
+        self._add_key_message_bar(slide, km)
+
+    def _add_tariff_price_evolution(self, ta):
+        """Slide: Price Evolution table — all operators/tiers across snapshots."""
+        evolution = ta.get("price_evolution", {})
+        if not evolution:
+            return
+
+        slide = self._new_slide("tariff_evolution",
+                                "Price Evolution — Mobile Postpaid")
+        self._add_header(slide, "Price Evolution — Mobile Postpaid",
+                         "H1_2023 to H1_2026")
+
+        # Build a table as image: rows = operator+tier, cols = snapshots
+        # Collect all snapshots
+        all_snaps = set()
+        for op, timeline in evolution.items():
+            for entry in timeline:
+                all_snaps.add(entry["snapshot"])
+        snapshots_sorted = sorted(all_snaps)
+
+        # Build table data
+        row_labels = []
+        col_labels = snapshots_sorted
+        operators_sorted = sorted(evolution.keys())
+        tier_order = ["s", "m", "l", "xl"]
+
+        cell_data = {}  # operator -> list of values per snapshot
+        for op in operators_sorted:
+            op_label = op.replace('_', ' ').title()
+            timeline = evolution[op]
+            snap_map = {e["snapshot"]: e for e in timeline}
+            for tier in tier_order:
+                row_key = f"{op_label} {tier.upper()}"
+                values = []
+                for snap in snapshots_sorted:
+                    entry = snap_map.get(snap, {})
+                    price = entry.get(tier)
+                    values.append(f"EUR {price:.0f}" if price else "—")
+                row_labels.append(row_key)
+                cell_data[row_key] = values
+
+        if row_labels and col_labels:
+            chart_path = self.chart_gen.create_kpi_table_chart(
+                col_labels, cell_data,
+                target_operator=self.operator_id.replace('_', ' ').title(),
+                title="Mobile Postpaid Monthly Prices (EUR)",
+                filename="tariff_evolution_table.png",
+            )
+            self._add_image(slide, chart_path, Inches(0.3), Inches(1.2),
+                            Inches(12.5), Inches(5.0))
+
+        km = "Price evolution across 7 snapshots — H1_2023 to H1_2026"
+        self._add_key_message_bar(slide, km)
+
+    def _add_tariff_fixed_and_fmc(self, ta):
+        """Slide: Fixed & Convergence Pricing Landscape — tables."""
+        fixed = ta.get("fixed_comparison", {})
+        fmc = ta.get("fmc_comparison", [])
+        if not fixed and not fmc:
+            return
+
+        slide = self._new_slide("tariff_fixed_fmc",
+                                "Fixed & Convergence Pricing")
+        self._add_header(slide, "Fixed & Convergence Pricing Landscape",
+                         "DSL / Cable / Fiber / FMC Bundles")
+
+        y = Inches(1.3)
+
+        # Fixed broadband comparison: one section per technology
+        for plan_type, label in [
+            ("fixed_dsl", "DSL"),
+            ("fixed_cable", "Cable"),
+            ("fixed_fiber", "Fiber"),
+        ]:
+            entries = fixed.get(plan_type, [])
+            if not entries:
+                continue
+
+            self._add_text_box(slide, Inches(0.5), y, Inches(2), Inches(0.3),
+                               f"{label}:", font_size=11,
+                               font_color=self.style.primary_color, bold=True)
+
+            items = []
+            for e in entries[:4]:
+                speed = f"{e['speed_mbps']}Mbps" if e.get('speed_mbps') else ""
+                items.append(
+                    f"{e['display_name']} {e['plan_name']}: "
+                    f"EUR {e['price']:.0f}/mo {speed}"
+                )
+            self._add_bullet_list(slide, Inches(2.5), y, Inches(5), Inches(0.8),
+                                  items, font_size=9)
+            y += Inches(0.8 + min(len(items), 4) * 0.15)
+
+        # FMC bundles (right column)
+        if fmc:
+            self._add_text_box(slide, Inches(8.0), Inches(1.3), Inches(4.8), Inches(0.3),
+                               "FMC Bundles:", font_size=12,
+                               font_color=self.style.primary_color, bold=True)
+            fmc_items = []
+            for f in fmc:
+                fmc_items.append(
+                    f"{f['display_name']} {f['plan_name']}: EUR {f['price']:.0f}/mo"
+                )
+            self._add_bullet_list(slide, Inches(8.0), Inches(1.7), Inches(4.8),
+                                  Inches(4.5), fmc_items[:8], font_size=10)
+
+        # Key message
+        fmc_insight = [
+            i for i in ta.get("strategic_insights", []) if "FMC" in i
+        ]
+        km = fmc_insight[0] if fmc_insight else "Fixed and convergence pricing overview"
         self._add_key_message_bar(slide, km)
 
     # =========================================================================
