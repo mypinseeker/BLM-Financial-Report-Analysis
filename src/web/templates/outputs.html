@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Analysis Outputs - BLM{% endblock %}
+
+{% block content %}
+<h1 class="section-title">Analysis Outputs</h1>
+<p class="meta" style="margin-bottom: 16px;">{{ outputs | length }} files available for download</p>
+
+{% if outputs %}
+<table>
+    <thead>
+        <tr>
+            <th>File</th>
+            <th>Type</th>
+            <th>Market</th>
+            <th>Operator</th>
+            <th>Created</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for o in outputs %}
+        <tr>
+            <td>{{ o.file_name | default(o.storage_path | default('-')) }}</td>
+            <td>
+                {% set ftype = o.file_type | default(o.output_type | default('')) %}
+                {% if ftype == 'pptx' %}
+                    <span class="badge badge-primary">PPTX</span>
+                {% elif ftype == 'pdf' %}
+                    <span class="badge badge-negative">PDF</span>
+                {% elif ftype == 'md' %}
+                    <span class="badge badge-positive">MD</span>
+                {% elif ftype == 'html' %}
+                    <span class="badge badge-warning">HTML</span>
+                {% else %}
+                    <span class="badge badge-primary">{{ ftype | upper | default('FILE') }}</span>
+                {% endif %}
+            </td>
+            <td>{{ o.market_id | default('-') }}</td>
+            <td>{{ o.operator_id | default('-') }}</td>
+            <td>{{ o.created_at | default('-') }}</td>
+            <td>
+                {% if o.id %}
+                <a href="/api/outputs/{{ o.id }}/download"
+                   style="color: var(--primary-light); font-weight: 600;">
+                    Download
+                </a>
+                {% else %}
+                -
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p style="color: var(--light-text);">No output files found.</p>
+{% endif %}
+{% endblock %}

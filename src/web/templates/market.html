@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}{{ market_info.display_name | default(market_id | title) }} - BLM{% endblock %}
+
+{% block content %}
+<div class="breadcrumb">
+    <a href="/">Dashboard</a> &raquo; {{ market_info.display_name | default(market_id | title) }}
+</div>
+
+<h1 class="section-title">{{ market_info.display_name | default(market_id | title) }}</h1>
+<p class="meta">
+    {% if market_info.country %}{{ market_info.country }}{% endif %}
+    {% if market_info.currency %} &middot; Currency: {{ market_info.currency }}{% endif %}
+    &middot; {{ operators | length }} operators
+</p>
+
+<h2 class="section-title">Operators</h2>
+<div class="card-grid">
+{% for op in operators %}
+    <div class="card">
+        <a href="/operator/{{ op.operator_id }}">
+            <h3>{{ op.display_name }}</h3>
+            <p class="meta">
+                <span class="badge badge-primary">{{ op.operator_type | default('operator') }}</span>
+            </p>
+            {% if op.parent_company %}
+            <p class="meta" style="margin-top: 4px;">Parent: {{ op.parent_company }}</p>
+            {% endif %}
+        </a>
+    </div>
+{% else %}
+    <p>No operators found for this market.</p>
+{% endfor %}
+</div>
+
+{% if tariffs %}
+<h2 class="section-title">Latest Tariffs</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>Plan</th>
+            <th>Type</th>
+            <th>Price/mo</th>
+            <th>Data</th>
+            <th>Speed</th>
+            <th>5G</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for t in tariffs[:20] %}
+        <tr>
+            <td>{{ t.display_name | default(t.operator_id) }}</td>
+            <td>{{ t.plan_name | default('-') }}</td>
+            <td>{{ t.plan_type | default('-') }}</td>
+            <td>{{ t.monthly_price | default('-') }}</td>
+            <td>{{ t.data_allowance | default('-') }}</td>
+            <td>{{ t.speed_mbps | default('-') }}</td>
+            <td>{% if t.includes_5g %}Yes{% else %}No{% endif %}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% if macro %}
+<h2 class="section-title">Macro Environment</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Quarter</th>
+            <th>GDP Growth %</th>
+            <th>Inflation %</th>
+            <th>Telecom Market (EUR B)</th>
+            <th>5G Adoption %</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for m in macro %}
+        <tr>
+            <td>{{ m.calendar_quarter }}</td>
+            <td>{{ m.gdp_growth_pct | default('-') }}</td>
+            <td>{{ m.inflation_pct | default('-') }}</td>
+            <td>{{ m.telecom_market_size_eur_b | default('-') }}</td>
+            <td>{{ m.five_g_adoption_pct | default('-') }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

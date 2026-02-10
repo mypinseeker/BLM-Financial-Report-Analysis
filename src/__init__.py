@@ -2,22 +2,9 @@
 
 __version__ = "0.1.0"
 
-from src.config import Config
-from src.data.loader import DataLoader, FinancialDataPreprocessor
-from src.data.sample import generate_sample_data
-from src.data.export import DataExporter
-from src.analysis.financial import BudgetAnalyzer, AnalysisResult
-from src.visualization.charts import FinancialChartGenerator
-from src.reports.generator import ReportGenerator
-
-__all__ = [
-    "Config",
-    "DataLoader",
-    "FinancialDataPreprocessor",
-    "generate_sample_data",
-    "DataExporter",
-    "BudgetAnalyzer",
-    "AnalysisResult",
-    "FinancialChartGenerator",
-    "ReportGenerator",
-]
+# Heavy imports (pandas, matplotlib, Config, DataLoader, etc.) are NOT loaded
+# eagerly here — they are only needed by the analysis CLI, not the web app.
+# Import them directly where needed:
+#   from src.config import Config
+#   from src.data.loader import DataLoader
+#   etc.

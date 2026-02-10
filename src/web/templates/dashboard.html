@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}BLM Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="section-title">Telecom Market Dashboard</h1>
+<p style="color: var(--light-text); margin-bottom: 8px;">
+    {{ markets | length }} markets &middot;
+    {{ cloud_status.total | default(0) }} total data rows
+</p>
+
+<div class="card-grid">
+{% for m in markets %}
+    <div class="card">
+        <a href="/market/{{ m.market_id }}">
+            <h3>{{ m.display_name | default(m.market_id | title) }}</h3>
+            <p class="meta">
+                {% if m.country %}{{ m.country }}{% endif %}
+                {% if m.currency %} &middot; {{ m.currency }}{% endif %}
+            </p>
+            {% if m.operators_count %}
+            <p style="margin-top: 8px;">
+                <span class="badge badge-primary">{{ m.operators_count }} operators</span>
+            </p>
+            {% endif %}
+        </a>
+    </div>
+{% else %}
+    <p>No markets configured yet.</p>
+{% endfor %}
+</div>
+
+{% if cloud_status %}
+<h2 class="section-title" style="margin-top: 40px;">Cloud Data Status</h2>
+<table>
+    <thead><tr><th>Table</th><th>Rows</th></tr></thead>
+    <tbody>
+    {% for table, count in cloud_status.items() %}
+        {% if table != 'total' %}
+        <tr>
+            <td>{{ table }}</td>
+            <td>{{ count }}</td>
+        </tr>
+        {% endif %}
+    {% endfor %}
+    <tr style="font-weight: bold;">
+        <td>Total</td>
+        <td>{{ cloud_status.total | default(0) }}</td>
+    </tr>
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

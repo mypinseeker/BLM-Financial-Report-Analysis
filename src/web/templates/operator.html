@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+{% block title %}{{ operator.display_name }} - BLM{% endblock %}
+
+{% block content %}
+<div class="breadcrumb">
+    <a href="/">Dashboard</a> &raquo;
+    <a href="/market/{{ operator.market }}">{{ operator.market | title }}</a> &raquo;
+    {{ operator.display_name }}
+</div>
+
+<h1 class="section-title">{{ operator.display_name }}</h1>
+<p class="meta">
+    <span class="badge badge-primary">{{ operator.operator_type | default('operator') }}</span>
+    {% if operator.parent_company %} &middot; Parent: {{ operator.parent_company }}{% endif %}
+    &middot; Market: {{ operator.market | title }}
+</p>
+
+{% if financial %}
+<h2 class="section-title">Financial Trends</h2>
+
+<div class="metric-row">
+    {% set latest = financial[-1] %}
+    <div class="metric">
+        <div class="label">Total Revenue</div>
+        <div class="value">{{ latest.total_revenue | default('-') }}</div>
+    </div>
+    <div class="metric">
+        <div class="label">EBITDA</div>
+        <div class="value">{{ latest.ebitda | default('-') }}</div>
+    </div>
+    <div class="metric">
+        <div class="label">EBITDA Margin</div>
+        <div class="value">{{ latest.ebitda_margin_pct | default('-') }}%</div>
+    </div>
+    <div class="metric">
+        <div class="label">Service Rev Growth</div>
+        <div class="value">{{ latest.service_revenue_growth_pct | default('-') }}%</div>
+    </div>
+</div>
+
+<div class="chart-container">
+    <canvas id="revenueChart" height="300"></canvas>
+</div>
+
+<div class="chart-container">
+    <canvas id="ebitdaChart" height="300"></canvas>
+</div>
+
+<h3 style="margin-top: 24px;">Financial Data</h3>
+<div style="overflow-x: auto;">
+<table>
+    <thead>
+        <tr>
+            <th>Quarter</th>
+            <th>Total Revenue</th>
+            <th>Service Revenue</th>
+            <th>SR Growth %</th>
+            <th>EBITDA</th>
+            <th>EBITDA Margin %</th>
+            <th>CapEx</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for f in financial %}
+        <tr>
+            <td>{{ f.calendar_quarter }}</td>
+            <td>{{ f.total_revenue | default('-') }}</td>
+            <td>{{ f.service_revenue | default('-') }}</td>
+            <td>{{ f.service_revenue_growth_pct | default('-') }}</td>
+            <td>{{ f.ebitda | default('-') }}</td>
+            <td>{{ f.ebitda_margin_pct | default('-') }}</td>
+            <td>{{ f.capex | default('-') }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endif %}
+
+{% if subscribers %}
+<h2 class="section-title">Subscriber Trends</h2>
+
+<div class="metric-row">
+    {% set latest_sub = subscribers[-1] %}
+    <div class="metric">
+        <div class="label">Mobile Total (K)</div>
+        <div class="value">{{ latest_sub.mobile_total_k | default('-') }}</div>
+    </div>
+    <div class="metric">
+        <div class="label">Postpaid (K)</div>
+        <div class="value">{{ latest_sub.mobile_postpaid_k | default('-') }}</div>
+    </div>
+    <div class="metric">
+        <div class="label">Churn %</div>
+        <div class="value">{{ latest_sub.mobile_churn_pct | default('-') }}</div>
+    </div>
+    <div class="metric">
+        <div class="label">Broadband (K)</div>
+        <div class="value">{{ latest_sub.broadband_total_k | default('-') }}</div>
+    </div>
+</div>
+
+<div class="chart-container">
+    <canvas id="subscriberChart" height="300"></canvas>
+</div>
+
+<h3 style="margin-top: 24px;">Subscriber Data</h3>
+<div style="overflow-x: auto;">
+<table>
+    <thead>
+        <tr>
+            <th>Quarter</th>
+            <th>Mobile Total (K)</th>
+            <th>Postpaid (K)</th>
+            <th>ARPU</th>
+            <th>Churn %</th>
+            <th>Broadband (K)</th>
+            <th>Fiber (K)</th>
+            <th>TV (K)</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for s in subscribers %}
+        <tr>
+            <td>{{ s.calendar_quarter }}</td>
+            <td>{{ s.mobile_total_k | default('-') }}</td>
+            <td>{{ s.mobile_postpaid_k | default('-') }}</td>
+            <td>{{ s.mobile_arpu | default('-') }}</td>
+            <td>{{ s.mobile_churn_pct | default('-') }}</td>
+            <td>{{ s.broadband_total_k | default('-') }}</td>
+            <td>{{ s.broadband_fiber_k | default('-') }}</td>
+            <td>{{ s.tv_total_k | default('-') }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endif %}
+
+{% if not financial and not subscribers %}
+<p style="margin-top: 24px; color: var(--light-text);">No financial or subscriber data available for this operator.</p>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Chart.js rendering
+const COLORS = ['#1a237e', '#ff6f00', '#4caf50', '#f44336', '#9c27b0', '#00bcd4'];
+
+{% if financial %}
+(function() {
+    const data = {{ financial | tojson }};
+    const labels = data.map(d => d.calendar_quarter);
+
+    new Chart(document.getElementById('revenueChart'), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Total Revenue',
+                    data: data.map(d => d.total_revenue),
+                    borderColor: COLORS[0],
+                    backgroundColor: COLORS[0] + '22',
+                    fill: true,
+                    tension: 0.3,
+                },
+                {
+                    label: 'Service Revenue',
+                    data: data.map(d => d.service_revenue),
+                    borderColor: COLORS[1],
+                    tension: 0.3,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { title: { display: true, text: 'Revenue Trend' } },
+            scales: { y: { beginAtZero: false } }
+        }
+    });
+
+    new Chart(document.getElementById('ebitdaChart'), {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'EBITDA',
+                    data: data.map(d => d.ebitda),
+                    backgroundColor: COLORS[0] + 'aa',
+                },
+                {
+                    label: 'EBITDA Margin %',
+                    data: data.map(d => d.ebitda_margin_pct),
+                    type: 'line',
+                    borderColor: COLORS[1],
+                    yAxisID: 'pct',
+                    tension: 0.3,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { title: { display: true, text: 'EBITDA & Margin' } },
+            scales: {
+                y: { beginAtZero: false, position: 'left' },
+                pct: { beginAtZero: false, position: 'right', grid: { drawOnChartArea: false } }
+            }
+        }
+    });
+})();
+{% endif %}
+
+{% if subscribers %}
+(function() {
+    const data = {{ subscribers | tojson }};
+    const labels = data.map(d => d.calendar_quarter);
+
+    new Chart(document.getElementById('subscriberChart'), {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Mobile Total (K)',
+                    data: data.map(d => d.mobile_total_k),
+                    borderColor: COLORS[0],
+                    tension: 0.3,
+                },
+                {
+                    label: 'Postpaid (K)',
+                    data: data.map(d => d.mobile_postpaid_k),
+                    borderColor: COLORS[1],
+                    tension: 0.3,
+                },
+                {
+                    label: 'Broadband (K)',
+                    data: data.map(d => d.broadband_total_k),
+                    borderColor: COLORS[2],
+                    tension: 0.3,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: { title: { display: true, text: 'Subscriber Trends' } },
+            scales: { y: { beginAtZero: false } }
+        }
+    });
+})();
+{% endif %}
+</script>
+{% endblock %}
