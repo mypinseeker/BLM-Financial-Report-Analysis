@@ -182,6 +182,13 @@ class BLMCloudSync:
                     cleaned[k] = json.loads(v)
                 except (json.JSONDecodeError, TypeError):
                     cleaned[k] = v
+            # Fix partial dates (YYYY-MM → YYYY-MM-01) for Postgres DATE columns
+            elif k in ("start_date", "end_date", "effective_date") and isinstance(v, str):
+                import re
+                if re.match(r'^\d{4}-\d{2}$', v):
+                    cleaned[k] = v + "-01"
+                else:
+                    cleaned[k] = v
             else:
                 cleaned[k] = v
         return cleaned
