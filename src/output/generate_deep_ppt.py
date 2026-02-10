@@ -294,7 +294,7 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
         sources = [
             "CQ4_2025 Market Snapshot (4 operators, all KPIs)",
             "466 Tariff Records (H1_2023 - H1_2026, 7 snapshots)",
-            "8-Quarter Financial Trend (Q1-Q8 by segment)",
+            "8-Quarter Financial Trend (CQ1 2024 – CQ4 2025 by segment)",
             "10 Market Events (ranked by strategic impact)",
             "$APPEALS Assessment (8 dimensions x 4 operators)",
             "Porter Five Forces + SWOT + SPAN Matrix",
@@ -1217,7 +1217,7 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
         self._add_metric_cards(slide, metrics, top=1.3)
 
         # Revenue trend line
-        quarters = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8']
+        quarters = ["CQ1'24", "CQ2'24", "CQ3'24", "CQ4'24", "CQ1'25", "CQ2'25", "CQ3'25", "CQ4'25"]
         trend = {
             'Revenue': [3050, 3080, 3060, 3070, 3080, 3090, 3090, 3092],
             'EBITDA': [1080, 1090, 1090, 1100, 1100, 1110, 1110, 1120],
@@ -1282,7 +1282,7 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
             y += Inches(0.35)
 
         # Wholesale trend
-        x_labels = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8']
+        x_labels = ["CQ1'24", "CQ2'24", "CQ3'24", "CQ4'24", "CQ1'25", "CQ2'25", "CQ3'25", "CQ4'25"]
         ws_trend = {'Wholesale': [180, 185, 190, 200, 220, 260, 320, 380]}
         chart_path2 = self.chart_gen.create_multi_line_trend(
             x_labels, ws_trend,
@@ -1310,7 +1310,7 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
                          "Segment Analysis")
 
         # Cable erosion + fiber growth trend
-        x_labels = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8']
+        x_labels = ["CQ1'24", "CQ2'24", "CQ3'24", "CQ4'24", "CQ1'25", "CQ2'25", "CQ3'25", "CQ4'25"]
         series = {
             'Cable': [7500, 7420, 7340, 7250, 7170, 7090, 7030, 6980],
             'Fiber': [850, 930, 1020, 1100, 1180, 1280, 1380, 1480],
