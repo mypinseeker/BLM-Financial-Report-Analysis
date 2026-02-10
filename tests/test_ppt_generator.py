@@ -655,7 +655,9 @@ class TestBLMPPTGenerator:
             for shape in slide.shapes:
                 if shape.has_text_frame:
                     text = shape.text_frame.text
-                    if "看趋势" in text or "看市场" in text or "看竞争" in text or "看自己" in text or "看机会" in text:
+                    if ("Look at Trends" in text or "Look at Market" in text
+                            or "Look at Competition" in text or "Look at Self" in text
+                            or "Look at Opportunities" in text or "SWOT Synthesis" in text):
                         divider_texts.append(text)
         assert len(divider_texts) >= 5, f"Expected >= 5 section dividers, found {len(divider_texts)}"
 

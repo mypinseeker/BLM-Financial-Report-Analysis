@@ -162,11 +162,13 @@ class BLMPPTGenerator:
         self._add_five_forces(result.competition)
         self._add_competitor_deep_dives(result.competition)
         self._add_competition_summary(result.competition)
+        self._add_gap_analysis(result.competition)
         self._add_new_entrants(result.competition)
 
         # --- Look 4: Self ---
         self._add_section_divider("04 Look at Self", "BMC + Capability Assessment")
         self._add_health_check(result.self_analysis)
+        self._add_revenue_comparison(result.self_analysis, result.competition)
         self._add_segment_deep_dives(result.self_analysis)
         self._add_network_analysis(result.self_analysis)
         self._add_bmc_canvas(result.self_analysis)
@@ -561,23 +563,55 @@ class BLMPPTGenerator:
         slide = self._new_slide("industry_env", "Industry Environment")
         self._add_header(slide, "Industry Environment", "Industry Analysis")
 
-        # Left column: key metrics
-        items = []
+        # Top: metric cards for industry overview
+        metrics = []
         if trends.industry_market_size:
-            items.append(f"Market Size: {trends.industry_market_size}")
+            metrics.append(("Market Size", str(trends.industry_market_size), ""))
         if trends.industry_growth_rate:
-            items.append(f"Growth Rate: {trends.industry_growth_rate}")
-        if trends.industry_profit_trend:
-            items.append(f"Profit Trend: {trends.industry_profit_trend}")
+            metrics.append(("Growth Rate", str(trends.industry_growth_rate), ""))
         if trends.industry_concentration:
-            items.append(f"Concentration: {trends.industry_concentration}")
+            metrics.append(("Concentration", str(trends.industry_concentration), ""))
         if trends.industry_lifecycle_stage:
-            items.append(f"Lifecycle Stage: {trends.industry_lifecycle_stage}")
-        if items:
-            self._add_bullet_list(slide, Inches(0.5), Inches(1.4), Inches(5.5),
-                                  Inches(2.5), items, font_size=13)
+            metrics.append(("Lifecycle", str(trends.industry_lifecycle_stage), ""))
+        if metrics:
+            self._add_metric_cards(slide, metrics[:4], top=1.4)
 
-        # Right column
+        # Left column: PEST factor severity chart (if pest data available)
+        pest = trends.pest if hasattr(trends, 'pest') else None
+        has_pest_chart = False
+        if pest is not None:
+            dims = [
+                ('Political', pest.political_factors if hasattr(pest, 'political_factors') else []),
+                ('Economic', pest.economic_factors if hasattr(pest, 'economic_factors') else []),
+                ('Society', pest.society_factors if hasattr(pest, 'society_factors') else []),
+                ('Technology', pest.technology_factors if hasattr(pest, 'technology_factors') else []),
+            ]
+            # Count high-severity factors per dimension
+            categories = []
+            high_counts = []
+            total_counts = []
+            for dim_name, factors in dims:
+                if factors:
+                    categories.append(dim_name)
+                    high = sum(1 for f in factors
+                               if (getattr(f, 'severity', 'medium') == 'high'
+                                   if hasattr(f, 'severity')
+                                   else (f.get('severity', 'medium') == 'high'
+                                         if isinstance(f, dict) else False)))
+                    high_counts.append(high)
+                    total_counts.append(len(factors))
+            if categories and any(total_counts):
+                chart_path = self.chart_gen.create_segment_comparison(
+                    categories,
+                    {'High Severity': high_counts, 'Total Factors': total_counts},
+                    title="PEST Factor Distribution",
+                    y_label="Count",
+                    filename="pest_factor_dist.png")
+                self._add_image(slide, chart_path, Inches(0.3), Inches(2.9),
+                                Inches(6), Inches(3.1))
+                has_pest_chart = True
+
+        # Right column: business models + tech revolution
         right_items = []
         if trends.new_business_models:
             right_items.append("New Business Models:")
@@ -585,12 +619,14 @@ class BLMPPTGenerator:
         if trends.technology_revolution:
             right_items.append("Technology Revolution:")
             right_items.extend(f"  {t}" for t in trends.technology_revolution[:3])
+        right_x = Inches(6.5) if has_pest_chart else Inches(6.5)
+        right_y = Inches(2.9) if has_pest_chart else Inches(2.9)
         if right_items:
-            self._add_bullet_list(slide, Inches(6.5), Inches(1.4), Inches(6),
-                                  Inches(3), right_items, font_size=12)
+            self._add_bullet_list(slide, right_x, right_y, Inches(6),
+                                  Inches(2), right_items, font_size=12)
 
-        # Key success factors
-        if trends.key_success_factors:
+        # Key success factors (below chart area)
+        if trends.key_success_factors and not has_pest_chart:
             self._add_text_box(slide, Inches(0.5), Inches(4.2), Inches(5), Inches(0.3),
                                "Key Success Factors:", font_size=13,
                                font_color=self.style.primary_color, bold=True)
@@ -687,9 +723,10 @@ class BLMPPTGenerator:
         slide = self._new_slide("customer_segments", "Customer Segments")
         self._add_header(slide, "Customer Segments", "Segmentation")
 
+        # Left: segment cards (compact)
         y = Inches(1.4)
         for seg in mci.customer_segments[:4]:
-            self._add_shape(slide, Inches(0.5), y, Inches(12), Inches(1.0),
+            self._add_shape(slide, Inches(0.5), y, Inches(6.5), Inches(0.85),
                             (248, 248, 248))
             name = seg.segment_name if hasattr(seg, 'segment_name') else str(seg)
             self._add_text_box(slide, Inches(0.7), y + Inches(0.05), Inches(3),
@@ -703,15 +740,31 @@ class BLMPPTGenerator:
             if hasattr(seg, 'our_share') and seg.our_share:
                 details.append(f"Our Share: {seg.our_share}")
             detail_text = " | ".join(details)
-            self._add_text_box(slide, Inches(0.7), y + Inches(0.35), Inches(11),
+            self._add_text_box(slide, Inches(0.7), y + Inches(0.35), Inches(5.8),
                                Inches(0.25), detail_text, font_size=11,
                                font_color=self.style.text_color)
             if hasattr(seg, 'unmet_needs') and seg.unmet_needs:
-                needs_text = "Unmet Needs: " + ", ".join(seg.unmet_needs[:3])
-                self._add_text_box(slide, Inches(0.7), y + Inches(0.6), Inches(11),
-                                   Inches(0.3), needs_text, font_size=10,
+                needs_text = "Needs: " + ", ".join(seg.unmet_needs[:2])
+                self._add_text_box(slide, Inches(0.7), y + Inches(0.55), Inches(5.8),
+                                   Inches(0.25), needs_text, font_size=10,
                                    font_color=self.style.light_text_color)
-            y += Inches(1.15)
+            y += Inches(0.95)
+
+        # Right: segment comparison chart (if $APPEALS has multi-operator data)
+        appeals = mci.appeals_assessment or []
+        if appeals and len(appeals) >= 3:
+            dimensions = [a.dimension_name if hasattr(a, 'dimension_name') else str(a)
+                          for a in appeals[:8]]
+            our_scores = [a.our_score if hasattr(a, 'our_score') else 0
+                          for a in appeals[:8]]
+            if any(s > 0 for s in our_scores):
+                chart_path = self.chart_gen.create_bar_chart(
+                    dimensions, our_scores,
+                    title="$APPEALS Scores",
+                    y_label="Score (1-5)",
+                    filename="appeals_bar.png")
+                self._add_image(slide, chart_path, Inches(7.3), Inches(1.3),
+                                Inches(5.5), Inches(4.8))
 
         km = mci.key_message or "Customer segmentation analysis"
         self._add_key_message_bar(slide, km)
@@ -885,6 +938,73 @@ class BLMPPTGenerator:
         km = comp.key_message or "Competitive landscape overview"
         self._add_key_message_bar(slide, km)
 
+    def _add_gap_analysis(self, comp):
+        """Add a gap analysis chart comparing target operator vs market leader."""
+        if comp is None:
+            return
+        table = comp.comparison_table if hasattr(comp, 'comparison_table') else {}
+        if not table:
+            return
+
+        # Find the market leader (highest revenue that isn't us)
+        rev_data = table.get('revenue', table.get('total_revenue', {}))
+        if not rev_data:
+            return
+
+        our_rev = rev_data.get(self.operator_id, 0)
+        leader_id = None
+        leader_rev = 0
+        for op_id, rev in rev_data.items():
+            if op_id != self.operator_id and isinstance(rev, (int, float)):
+                if rev > leader_rev:
+                    leader_rev = rev
+                    leader_id = op_id
+        if leader_id is None:
+            return
+
+        # Collect numeric metrics for gap analysis (try both naming conventions)
+        numeric_metrics = ['revenue', 'ebitda_margin', 'subscribers', 'arpu',
+                           '5g_coverage', 'total_revenue', 'ebitda_margin_pct',
+                           'mobile_total_k']
+        dimensions = []
+        target_scores = []
+        leader_scores = []
+        for metric in numeric_metrics:
+            metric_data = table.get(metric, {})
+            our_val = metric_data.get(self.operator_id)
+            their_val = metric_data.get(leader_id)
+            if our_val is not None and their_val is not None:
+                try:
+                    our_f = float(our_val) if not isinstance(our_val, (int, float)) else our_val
+                    their_f = float(their_val) if not isinstance(their_val, (int, float)) else their_val
+                    if their_f != 0:
+                        # Normalize to 0-100 scale relative to leader
+                        dimensions.append(metric.replace('_', ' ').replace('total ', '').title())
+                        target_scores.append(our_f / their_f * 100)
+                        leader_scores.append(100)
+                except (ValueError, TypeError):
+                    continue
+
+        if len(dimensions) < 3:
+            return
+
+        slide = self._new_slide("gap_analysis", "Gap Analysis")
+        our_name = self.operator_id.replace('_', ' ').title()
+        leader_name = leader_id.replace('_', ' ').title()
+        self._add_header(slide, f"Gap Analysis: {our_name} vs {leader_name}",
+                         "Competitive Gap")
+
+        chart_path = self.chart_gen.create_gap_analysis_chart(
+            dimensions, target_scores, leader_scores,
+            target_name=our_name, leader_name=leader_name,
+            title=f"Competitive Gap (Indexed to {leader_name} = 100)",
+            filename="gap_analysis.png")
+        self._add_image(slide, chart_path, Inches(0.5), Inches(1.3),
+                        Inches(12), Inches(4.8))
+
+        km = f"Gap analysis vs market leader {leader_name}"
+        self._add_key_message_bar(slide, km)
+
     def _add_new_entrants(self, comp):
         if comp is None:
             return
@@ -971,6 +1091,55 @@ class BLMPPTGenerator:
                             Inches(6.3), Inches(3.1))
 
         km = self_analysis.key_message or "Operating health check summary"
+        self._add_key_message_bar(slide, km)
+
+    def _add_revenue_comparison(self, self_analysis, competition):
+        """Add a multi-operator revenue comparison slide with trend + bar charts."""
+        if self_analysis is None or competition is None:
+            return
+        table = competition.comparison_table if hasattr(competition, 'comparison_table') else {}
+        rev_data = table.get('revenue', table.get('total_revenue', {}))
+        if not rev_data or len(rev_data) < 2:
+            return
+
+        slide = self._new_slide("revenue_comparison", "Revenue Comparison")
+        self._add_header(slide, "Revenue Comparison", "Competitive Benchmarking")
+
+        # Left: horizontal bar chart of revenue across operators
+        categories = [k.replace('_', ' ').title() for k in rev_data.keys()]
+        values = []
+        for v in rev_data.values():
+            try:
+                values.append(float(v))
+            except (TypeError, ValueError):
+                values.append(0)
+
+        our_name = self.operator_id.replace('_', ' ').title()
+        chart_path = self.chart_gen.create_horizontal_bar_chart(
+            categories, values, target_category=our_name,
+            title="Revenue by Operator (€M)", x_label="€M",
+            filename="revenue_comparison.png")
+        self._add_image(slide, chart_path, Inches(0.3), Inches(1.3),
+                        Inches(6.3), Inches(4.8))
+
+        # Right: margin comparison (if available)
+        margin_data = table.get('ebitda_margin', table.get('ebitda_margin_pct', {}))
+        if margin_data and len(margin_data) >= 2:
+            m_cats = [k.replace('_', ' ').title() for k in margin_data.keys()]
+            m_vals = []
+            for v in margin_data.values():
+                try:
+                    m_vals.append(float(v))
+                except (TypeError, ValueError):
+                    m_vals.append(0)
+            chart_path2 = self.chart_gen.create_bar_chart(
+                m_cats, m_vals, target_category=our_name,
+                title="EBITDA Margin (%)", y_label="%",
+                filename="margin_comparison.png")
+            self._add_image(slide, chart_path2, Inches(6.8), Inches(1.3),
+                            Inches(6), Inches(4.8))
+
+        km = "Revenue and margin benchmarking across operators"
         self._add_key_message_bar(slide, km)
 
     def _add_segment_deep_dives(self, self_analysis):
@@ -1118,19 +1287,43 @@ class BLMPPTGenerator:
         self._add_header(slide, "Organization & Talent", "People & Culture")
 
         y = Inches(1.4)
-        # Org culture
+        # Top: KPI cards for workforce metrics
+        fh = self_analysis.financial_health or {}
+        org_metrics = []
+        if fh.get('employees'):
+            org_metrics.append(("Employees", f"{fh['employees']:,.0f}", ""))
+        talent = self_analysis.talent_assessment or {}
+        for k, v in list(talent.items())[:3]:
+            label = k.replace('_', ' ').title()
+            org_metrics.append((label, str(v), ""))
+        if org_metrics:
+            self._add_metric_cards(slide, org_metrics[:4], top=1.4)
+            y = Inches(2.9)
+
+        # Left: Org culture
         culture = getattr(self_analysis, 'org_culture', '')
         if culture:
             self._add_text_box(slide, Inches(0.5), y, Inches(5.5), Inches(0.3),
                                "Organization Culture:", font_size=12,
                                font_color=self.style.primary_color, bold=True)
             self._add_text_box(slide, Inches(0.5), y + Inches(0.35), Inches(5.5),
-                               Inches(1.5), culture, font_size=11,
+                               Inches(1.2), culture, font_size=11,
                                font_color=self.style.text_color)
 
-        # Talent assessment
-        talent = self_analysis.talent_assessment or {}
-        if talent:
+        # Right: Talent score bar chart (if talent has numeric values)
+        numeric_talent = {k: v for k, v in talent.items()
+                          if isinstance(v, (int, float))}
+        if len(numeric_talent) >= 2:
+            labels = [k.replace('_', ' ').title() for k in numeric_talent.keys()]
+            values = list(numeric_talent.values())
+            chart_path = self.chart_gen.create_horizontal_bar_chart(
+                labels, values,
+                title="Talent Assessment Scores",
+                filename="talent_scores.png")
+            self._add_image(slide, chart_path, Inches(6.5), y,
+                            Inches(6), Inches(3))
+        elif talent:
+            # Text fallback
             items = [f"{k}: {v}" for k, v in talent.items()]
             self._add_text_box(slide, Inches(6.5), y, Inches(5.5), Inches(0.3),
                                "Talent Assessment:", font_size=12,
@@ -1141,14 +1334,15 @@ class BLMPPTGenerator:
         # Leadership changes
         changes = self_analysis.leadership_changes or []
         if changes:
-            self._add_text_box(slide, Inches(0.5), Inches(4.0), Inches(12), Inches(0.3),
+            change_y = Inches(5.0) if org_metrics else Inches(4.0)
+            self._add_text_box(slide, Inches(0.5), change_y, Inches(12), Inches(0.3),
                                "Leadership Changes:", font_size=12,
                                font_color=self.style.primary_color, bold=True)
             items = [str(c) if not isinstance(c, dict) else
                      f"{c.get('name', '')}: {c.get('role', '')} ({c.get('date', '')})"
                      for c in changes[:4]]
-            self._add_bullet_list(slide, Inches(0.5), Inches(4.3), Inches(12),
-                                  Inches(1.5), items, font_size=11)
+            self._add_bullet_list(slide, Inches(0.5), change_y + Inches(0.3), Inches(12),
+                                  Inches(1), items, font_size=11)
 
         km = "Organization and talent assessment"
         self._add_key_message_bar(slide, km)
