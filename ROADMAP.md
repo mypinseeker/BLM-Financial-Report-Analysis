@@ -2,7 +2,7 @@
 
 ## Current Status (2026-02-10)
 
-All original milestones (M0-M4) are **COMPLETE**. M5 (Global Market Adaptation) landed.
+All milestones **COMPLETE**. Project archived as **v1.0.0**.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -11,12 +11,14 @@ M2  Five Looks Engine          ████████████████�
 M3  Output Layer               ████████████████████  DONE
 M4  Integration & Testing      ████████████████████  DONE
 M5  Global Market Adaptation   ████████████████████  DONE  (9decb30)
+M6  Deep Analysis Pipeline     ████████████████████  DONE  (v1.0.0)
 ```
 
-### Latest Output: V4 Draft PPT
-- **File**: `data/output/blm_vodafone_germany_q3fy26_v4_draft.pptx`
-- **41 slides | 21 charts | 606 tests passing (32 new)**
-- **Commit**: `006dac0` on `main`
+### Latest Output: v1.0.0 Deep Analysis
+- **PPT**: `data/output/blm_vodafone_germany_deep_analysis.pptx` — 48 slides, 34 charts
+- **PDF**: `data/output/blm_vodafone_germany_full_analysis_cq4_2025.pdf` — 85 pages, A4
+- **MD**: `data/output/blm_vodafone_germany_full_analysis_cq4_2025.md` — 2,887 lines
+- **Tag**: `v1.0.0` on `main`
 
 ---
 
@@ -28,6 +30,8 @@ M5  Global Market Adaptation   ████████████████�
 | V2 | `bacd9bc` | 39 | 16 | New engine, all English, KPI formatting |
 | V3 | `75b8351` | 41 | 21 | Gap analysis, revenue comparison, 5 new charts |
 | V4 | `006dac0` | 41 | 21 | MarketConfig global adaptation, 466 tariff records, data-driven BMC/exposures |
+| V5 | `483fe36` | 46 | — | Tariff analysis slides integrated |
+| **v1.0.0** | `e1dfe66` | **48** | **34** | **Deep analysis PPT from 8 MDs, brand colors, PDF/MD consolidation** |
 
 ---
 
@@ -49,6 +53,29 @@ M5  Global Market Adaptation   ████████████████�
 # Then:
 engine = BLMAnalysisEngine(db, target_operator='vodafone_uk', market='uk', ...)
 result = engine.run_five_looks()  # uses UK config automatically
+```
+
+---
+
+## M6: Deep Analysis Pipeline (DONE — v1.0.0)
+
+### What was delivered
+- **8 deep analysis markdown modules** — ~2,700 lines of strategic analysis covering all BLM Five Looks
+- **Deep PPT generator** — `generate_deep_ppt.py` generates 48 slides with 34 charts directly from MD content
+- **MD parsing library** — `md_parser.py` + `deep_data_extractor.py` for structured data extraction
+- **Operator brand colors** — OPERATOR_BRAND_COLORS registry in `ppt_styles.py`, used across all multi-operator charts
+- **Calendar quarter normalization** — CQ1'24–CQ4'25 absolute labels replacing sequential Q1–Q8
+- **Consolidated outputs** — full analysis MD (2,887 lines), chaptered PDF (85 pages), final PPT (48 slides)
+- **16 chart types utilized** — all including SPAN bubble, Porter's Five Forces, SWOT matrix, $APPEALS radar
+
+### Key commits
+```
+e1dfe66 Add PDF version of full analysis (85 pages, A4, chaptered)
+59e3c43 Add consolidated full analysis document (8 modules, ~2,800 lines)
+2885d1b Improve PPT visual quality: brand colors, SPAN layout, text sizing
+411f617 Replace Q1-Q8 sequential labels with calendar quarters (CQ1'24–CQ4'25)
+9495773 Add deep analysis PPT generator — 48 slides, 34 charts from 8 MD files
+1036a7d Add Executive Summary — BLM Strategic Assessment capstone
 ```
 
 ---
@@ -103,7 +130,7 @@ result = engine.run_five_looks()  # uses UK config automatically
 | `create_span_bubble_chart` | Used | SPAN Matrix |
 | `create_gap_analysis_chart` | Used | Gap Analysis (V3) |
 | `create_segment_comparison` | Used | PEST Factor Distribution (V3) |
-| `create_radar_chart` | **Unused** | Could enhance competition comparison |
+| `create_radar_chart` | Used | Competition radar (deep PPT) |
 | `create_stacked_bar` | **Unused** | Could show revenue composition over time |
 | `create_heatmap` | **Unused** | Could visualize operator-to-operator user flow |
 | `create_timeline_chart` | **Unused** | Could show opportunity action timeline |
