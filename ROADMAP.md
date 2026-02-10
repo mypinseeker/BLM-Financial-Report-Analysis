@@ -2,7 +2,7 @@
 
 ## Current Status (2026-02-10)
 
-All original milestones (M0-M4) are **COMPLETE**.
+All original milestones (M0-M4) are **COMPLETE**. M5 (Global Market Adaptation) landed.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -10,12 +10,13 @@ M1  Data Layer                 ████████████████�
 M2  Five Looks Engine          ████████████████████  DONE
 M3  Output Layer               ████████████████████  DONE
 M4  Integration & Testing      ████████████████████  DONE
+M5  Global Market Adaptation   ████████████████████  DONE  (9decb30)
 ```
 
-### Latest Output: V3 Draft PPT
-- **File**: `data/output/blm_vodafone_germany_q3fy26_v3_draft.pptx`
-- **41 slides | 21 charts | 1.6 MB | 574 tests passing**
-- **Commit**: `75b8351` on `main`
+### Latest Output: V4 Draft PPT
+- **File**: `data/output/blm_vodafone_germany_q3fy26_v4_draft.pptx`
+- **41 slides | 21 charts | 606 tests passing (32 new)**
+- **Commit**: `006dac0` on `main`
 
 ---
 
@@ -26,6 +27,29 @@ M4  Integration & Testing      ████████████████�
 | V1 | (legacy) | 22 | ~6 | Legacy generator, Chinese text |
 | V2 | `bacd9bc` | 39 | 16 | New engine, all English, KPI formatting |
 | V3 | `75b8351` | 41 | 21 | Gap analysis, revenue comparison, 5 new charts |
+| V4 | `006dac0` | 41 | 21 | MarketConfig global adaptation, 466 tariff records, data-driven BMC/exposures |
+
+---
+
+## M5: Global Market Adaptation (DONE — `9decb30`)
+
+### What was delivered
+- **MarketConfig system** — `src/models/market_config.py` dataclass + registry in `src/models/market_configs/`
+- **Germany config** — 7 customer segments, 4 operator BMC enrichments, 4 operator exposure profiles, PEST context, competitive landscape notes (all migrated from hardcoded data)
+- **Tariff data pipeline** — schema with `snapshot_period` + historical UNIQUE constraint, `upsert_tariff()` / `get_tariffs()` / `get_tariff_comparison()` in db.py
+- **466 German tariff records** — 4 operators × 7 half-year snapshots (H1_2023–H1_2026) × 7 plan types (mobile postpaid/prepaid, fixed DSL/cable/fiber, TV, FMC bundle)
+- **Engine refactored** — `look_at_market_customer.py` and `look_at_self.py` read from MarketConfig instead of hardcoded data; fallback preserved for backward compatibility
+- **32 new tests** — 15 tariff data + 17 market config, all passing
+
+### Adding a new market (zero engine code changes)
+```python
+# 1. Create src/models/market_configs/uk.py → UK_CONFIG
+# 2. Create src/database/seed_uk.py → operators + tariffs
+# 3. Register in src/models/market_configs/__init__.py
+# Then:
+engine = BLMAnalysisEngine(db, target_operator='vodafone_uk', market='uk', ...)
+result = engine.run_five_looks()  # uses UK config automatically
+```
 
 ---
 
@@ -33,11 +57,11 @@ M4  Integration & Testing      ████████████████�
 
 ### P0 — Data Gaps (Impact: Analysis Quality)
 
-| ID | Task | Impact | Files |
-|----|------|--------|-------|
-| P0-1 | **Fill tariffs table** — Add seed data, upsert/query methods; wire into $APPEALS Price scoring | $APPEALS Price dimension lacks real pricing data | `db.py`, `seed_germany.py`, `look_at_market_customer.py` |
-| P0-2 | **Populate CompetitorDeepDive fields** — 12 fields never filled (product_portfolio, growth_strategy, business_model, org_structure, etc.) | Competitor slides show limited content | `competition.py`, `look_at_competition.py` |
-| P0-3 | **Populate SelfInsight fields** — 6 fields empty (customer_perception, performance_gap, opportunity_gap, talent_assessment, leadership_changes, strategic_review) | Org & Talent slide sparse; gap analysis concepts missing | `self_analysis.py`, `look_at_self.py` |
+| ID | Task | Impact | Status |
+|----|------|--------|--------|
+| P0-1 | ~~Fill tariffs table~~ — 466 tariff records (4 ops × 7 periods × 7 types), upsert/query/comparison methods | ~~$APPEALS Price dimension lacks real pricing data~~ | **DONE** `9decb30` |
+| P0-2 | **Populate CompetitorDeepDive fields** — 12 fields never filled (product_portfolio, growth_strategy, business_model, org_structure, etc.) | Competitor slides show limited content | Open |
+| P0-3 | **Populate SelfInsight fields** — 6 fields empty (customer_perception, performance_gap, opportunity_gap, talent_assessment, leadership_changes, strategic_review) | Org & Talent slide sparse; gap analysis concepts missing | Open |
 
 ### P1 — Output Quality
 
@@ -57,7 +81,7 @@ M4  Integration & Testing      ████████████████�
 | P2-2 | **Add openpyxl to requirements.txt** | 3 test failures | `requirements.txt` |
 | P2-3 | **Differentiate SPAN bubble sizes** — addressable_market always "N/A", bubble_size always 2.0 | SPAN chart lacks visual hierarchy | `look_at_opportunities.py` |
 | P2-4 | **Add "Three Decisions" slides** — Strategy/Key Tasks/Execution (BLM Phase 2) | BLM framework incomplete | New module needed |
-| P2-5 | **Multi-market support** — Currently Germany-only; hardcoded in 4+ modules | Cannot analyze other markets | Multiple files |
+| P2-5 | ~~Multi-market support~~ — MarketConfig registry + data-driven segments/BMC/exposures; new market = config + seed only | ~~Cannot analyze other markets~~ | **DONE** `9decb30` |
 
 ---
 
@@ -103,11 +127,11 @@ result = engine.run_five_looks()
 gen = BLMPPTGenerator(style=get_style("vodafone"), operator_id="vodafone_germany",
                       output_dir="data/output", chart_dpi=150)
 path = gen.generate(result, mode="draft",
-                    filename="blm_vodafone_germany_q3fy26_v3_draft.pptx")
+                    filename="blm_vodafone_germany_q3fy26_v4_draft.pptx")
 ```
 
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 574 passed, 2 openpyxl failures (unrelated)
+python3 -m pytest tests/ --tb=short  # 606 passed, 2 openpyxl failures (unrelated)
 ```
