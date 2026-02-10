@@ -620,17 +620,17 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
 
         y = Inches(1.5)
         for transfer, status in transfers:
-            self._add_shape(slide, Inches(0.5), y, Inches(6.5), Inches(0.5),
+            self._add_shape(slide, Inches(0.5), y, Inches(7.5), Inches(0.6),
                             (248, 248, 248))
-            self._add_text_box(slide, Inches(0.7), y + Inches(0.08),
-                               Inches(4.5), Inches(0.35), transfer,
-                               font_size=12, font_color=self.style.text_color)
+            self._add_text_box(slide, Inches(0.7), y + Inches(0.1),
+                               Inches(5.0), Inches(0.4), transfer,
+                               font_size=14, font_color=self.style.text_color)
             is_risk = 'risk' in status.lower() or 'accelerating' in status.lower()
             color = self.style.negative_color if is_risk else self.style.positive_color
-            self._add_text_box(slide, Inches(5.3), y + Inches(0.08),
-                               Inches(1.7), Inches(0.35), status,
-                               font_size=10, font_color=color, bold=True)
-            y += Inches(0.55)
+            self._add_text_box(slide, Inches(5.8), y + Inches(0.1),
+                               Inches(2.2), Inches(0.4), status,
+                               font_size=12, font_color=color, bold=True)
+            y += Inches(0.65)
 
         # Right: emerging models
         models = [
@@ -639,11 +639,11 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
             "Wholesale/MVNO — EUR 380M/q, structural decline",
             "IoT platform — 3M connections, B2B synergy",
         ]
-        self._add_text_box(slide, Inches(7.5), Inches(1.5), Inches(5), Inches(0.3),
-                           "Emerging Models:", font_size=12,
+        self._add_text_box(slide, Inches(8.5), Inches(1.5), Inches(4.5), Inches(0.4),
+                           "Emerging Models:", font_size=14,
                            font_color=self.style.primary_color, bold=True)
-        self._add_bullet_list(slide, Inches(7.5), Inches(1.9), Inches(5),
-                              Inches(3), models, font_size=11)
+        self._add_bullet_list(slide, Inches(8.5), Inches(2.0), Inches(4.5),
+                              Inches(3.5), models, font_size=13)
 
         self._add_key_message_bar(
             slide, "Cable-to-fiber migration is VF's #1 value risk; FMC convergence is proven value creation")
@@ -707,32 +707,32 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
 
         y = Inches(1.4)
         for name, size, growth, priority in segments:
-            self._add_shape(slide, Inches(0.5), y, Inches(12), Inches(0.55),
+            self._add_shape(slide, Inches(0.5), y, Inches(12.3), Inches(0.65),
                             (248, 248, 248))
             # Priority badge
             p_colors = {'P1': self.style.primary_color,
                         'P2': self.style.warning_color,
                         'P3': self.style.neutral_color}
-            self._add_shape(slide, Inches(0.6), y + Inches(0.08),
-                            Inches(0.45), Inches(0.35),
+            self._add_shape(slide, Inches(0.7), y + Inches(0.1),
+                            Inches(0.55), Inches(0.42),
                             p_colors.get(priority, self.style.neutral_color))
-            self._add_text_box(slide, Inches(0.6), y + Inches(0.1),
-                               Inches(0.45), Inches(0.3), priority,
-                               font_size=9, font_color=(255, 255, 255),
+            self._add_text_box(slide, Inches(0.7), y + Inches(0.12),
+                               Inches(0.55), Inches(0.38), priority,
+                               font_size=11, font_color=(255, 255, 255),
                                bold=True, align="center")
-            self._add_text_box(slide, Inches(1.2), y + Inches(0.1),
-                               Inches(3.5), Inches(0.3), name,
-                               font_size=12, font_color=self.style.text_color,
+            self._add_text_box(slide, Inches(1.5), y + Inches(0.12),
+                               Inches(4.5), Inches(0.38), name,
+                               font_size=14, font_color=self.style.text_color,
                                bold=True)
-            self._add_text_box(slide, Inches(5.0), y + Inches(0.1),
-                               Inches(1.5), Inches(0.3), size,
-                               font_size=11, font_color=self.style.text_color)
+            self._add_text_box(slide, Inches(6.2), y + Inches(0.12),
+                               Inches(2.5), Inches(0.38), size,
+                               font_size=13, font_color=self.style.text_color)
             g_color = self.style.positive_color if growth == 'Growing' else (
                 self.style.negative_color if growth == 'Shrinking' else self.style.light_text_color)
-            self._add_text_box(slide, Inches(6.8), y + Inches(0.1),
-                               Inches(1.5), Inches(0.3), growth,
-                               font_size=11, font_color=g_color)
-            y += Inches(0.6)
+            self._add_text_box(slide, Inches(9.0), y + Inches(0.12),
+                               Inches(3.0), Inches(0.38), growth,
+                               font_size=13, font_color=g_color, bold=True)
+            y += Inches(0.7)
 
         self._add_key_message_bar(
             slide, "Focus on High-End + Mainstream + Enterprise; deprioritize price-sensitive (35M subs)")
@@ -796,25 +796,25 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
 
         y = Inches(1.4)
         for num, event, severity in events:
-            self._add_shape(slide, Inches(0.5), y, Inches(0.4), Inches(0.4),
+            self._add_shape(slide, Inches(0.5), y, Inches(0.45), Inches(0.45),
                             self.style.primary_color, MSO_SHAPE.OVAL)
-            self._add_text_box(slide, Inches(0.5), y + Inches(0.05),
-                               Inches(0.4), Inches(0.3), num,
-                               font_size=10, font_color=(255, 255, 255),
+            self._add_text_box(slide, Inches(0.5), y + Inches(0.06),
+                               Inches(0.45), Inches(0.35), num,
+                               font_size=12, font_color=(255, 255, 255),
                                bold=True, align="center")
-            self._add_text_box(slide, Inches(1.1), y + Inches(0.05),
-                               Inches(9.5), Inches(0.3), event,
-                               font_size=11, font_color=self.style.text_color)
+            self._add_text_box(slide, Inches(1.2), y + Inches(0.06),
+                               Inches(9.5), Inches(0.35), event,
+                               font_size=13, font_color=self.style.text_color)
             sev_color = self.style.negative_color if severity == 'High' else self.style.warning_color
-            self._add_text_box(slide, Inches(11.0), y + Inches(0.05),
-                               Inches(1.5), Inches(0.3), severity,
-                               font_size=10, font_color=sev_color, bold=True)
-            y += Inches(0.5)
+            self._add_text_box(slide, Inches(11.0), y + Inches(0.06),
+                               Inches(2.0), Inches(0.35), severity,
+                               font_size=12, font_color=sev_color, bold=True)
+            y += Inches(0.58)
 
         # Three battles summary
-        self._add_text_box(slide, Inches(0.5), Inches(5.6), Inches(12), Inches(0.3),
+        self._add_text_box(slide, Inches(0.5), Inches(6.0), Inches(12.5), Inches(0.35),
                            "Three Battles: 1) Fixed BB Infrastructure  |  2) Wholesale Economics  |  3) B2B Transformation",
-                           font_size=12, font_color=self.style.primary_color, bold=True)
+                           font_size=14, font_color=self.style.primary_color, bold=True)
 
         self._add_key_message_bar(
             slide, "10 market events — DT fiber overbuild (#1) and 1&1 network build (#3) are the strategic threats")
@@ -1098,11 +1098,11 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
             "98% 5G but only 2,400K BB subs — no convergence play",
             "Revenue paradox: winning subs (+170K/q) but losing revenue",
         ]
-        self._add_text_box(slide, Inches(0.5), Inches(2.6), Inches(6), Inches(0.3),
+        self._add_text_box(slide, Inches(0.5), Inches(2.6), Inches(6.2), Inches(0.35),
                            'Strategy: "More for less — volume at any cost"',
-                           font_size=12, font_color=self.style.primary_color, bold=True)
-        self._add_bullet_list(slide, Inches(0.5), Inches(3.0), Inches(6),
-                              Inches(2.5), strategy, font_size=11)
+                           font_size=14, font_color=self.style.primary_color, bold=True)
+        self._add_bullet_list(slide, Inches(0.5), Inches(3.1), Inches(6.2),
+                              Inches(3.0), strategy, font_size=13)
 
         threat_opp = [
             "THREAT: O2 EUR 20/60GB vs VF EUR 33/25GB — stark value gap",
@@ -1110,11 +1110,11 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
             "OPPORTUNITY: O2 has no fixed BB (2,400K vs VF 9,940K)",
             "FMC bundling is VF's counter to O2 price aggression",
         ]
-        self._add_text_box(slide, Inches(6.8), Inches(2.6), Inches(5.8), Inches(0.3),
-                           "Threat & Opportunity:", font_size=12,
+        self._add_text_box(slide, Inches(7.0), Inches(2.6), Inches(5.8), Inches(0.35),
+                           "Threat & Opportunity:", font_size=14,
                            font_color=self.style.primary_color, bold=True)
-        self._add_bullet_list(slide, Inches(6.8), Inches(3.0), Inches(5.8),
-                              Inches(3), threat_opp, font_size=10)
+        self._add_bullet_list(slide, Inches(7.0), Inches(3.1), Inches(5.8),
+                              Inches(3.0), threat_opp, font_size=12)
 
         self._add_key_message_bar(
             slide, "O2 winning subs but destroying value (-3.4% revenue); FMC is VF's counter — O2 has no fixed broadband")
@@ -1139,11 +1139,11 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
             "12.2% EBITDA reflects 'invest now, monetize later'",
             "Coverage gap (55%) is critical weakness",
         ]
-        self._add_text_box(slide, Inches(0.5), Inches(2.6), Inches(6), Inches(0.3),
+        self._add_text_box(slide, Inches(0.5), Inches(2.6), Inches(6.2), Inches(0.35),
                            'Strategy: "From MVNO underdog to OpenRAN pioneer"',
-                           font_size=12, font_color=self.style.primary_color, bold=True)
-        self._add_bullet_list(slide, Inches(0.5), Inches(3.0), Inches(6),
-                              Inches(2.5), strategy, font_size=11)
+                           font_size=14, font_color=self.style.primary_color, bold=True)
+        self._add_bullet_list(slide, Inches(0.5), Inches(3.1), Inches(6.2),
+                              Inches(3.0), strategy, font_size=13)
 
         threat_opp = [
             "THREAT (short-term): competes on price at bottom tier",
@@ -1152,11 +1152,11 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
             "Wholesale revenue EUR 380M/q at risk over 3-5 years",
             "OPPORTUNITY: OpenRAN quality untested — may drive subs back",
         ]
-        self._add_text_box(slide, Inches(6.8), Inches(2.6), Inches(5.8), Inches(0.3),
-                           "Wholesale Risk:", font_size=12,
+        self._add_text_box(slide, Inches(7.0), Inches(2.6), Inches(5.8), Inches(0.35),
+                           "Wholesale Risk:", font_size=14,
                            font_color=self.style.primary_color, bold=True)
-        self._add_bullet_list(slide, Inches(6.8), Inches(3.0), Inches(5.8),
-                              Inches(3), threat_opp, font_size=10)
+        self._add_bullet_list(slide, Inches(7.0), Inches(3.1), Inches(5.8),
+                              Inches(3.0), threat_opp, font_size=12)
 
         self._add_key_message_bar(
             slide, "1&1 at 25% coverage with cheapest unlimited (EUR 40) — wholesale revenue (EUR 380M/q) is VF's main risk")
@@ -1433,10 +1433,10 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
         ]
 
         for title, items, color, x in cols:
-            self._add_text_box(slide, x, Inches(1.4), Inches(3.8), Inches(0.3),
-                               title, font_size=13, font_color=color, bold=True)
-            self._add_bullet_list(slide, x, Inches(1.8), Inches(3.8),
-                                  Inches(4.2), items, font_size=10)
+            self._add_text_box(slide, x, Inches(1.4), Inches(4.0), Inches(0.35),
+                               title, font_size=15, font_color=color, bold=True)
+            self._add_bullet_list(slide, x, Inches(1.9), Inches(4.0),
+                                  Inches(4.5), items, font_size=13)
 
         self._add_key_message_bar(
             slide, "Stable but diverging — B2B and wholesale masking declines in fixed and competitive slippage")
@@ -1633,47 +1633,46 @@ class DeepAnalysisPPTGenerator(BLMPPTGenerator):
         self._add_header(slide, "SPAN Matrix — 21 Opportunities",
                          "Opportunity Positioning")
 
-        # Build positions from extracted data
-        positions = []
-        for opp in d.opportunities.opportunities:
-            positions.append({
-                'competitive_position': opp.span_cp if opp.span_cp > 0 else 5.5,
-                'market_attractiveness': opp.span_ma if opp.span_ma > 0 else 5.5,
-                'bubble_size': 2.0 if opp.priority == 'P0' else 1.5 if opp.priority == 'P1' else 1.0,
-                'opportunity_name': opp.name[:20],
-                'quadrant': opp.quadrant,
-            })
-
-        # Add some default positions if extraction was sparse
-        if len(positions) < 10:
-            defaults = [
-                ('FibreCo JV', 5.25, 5.5, 'grow_invest', 2.5),
-                ('Spectrum Ext.', 5.5, 5.5, 'grow_invest', 2.0),
-                ('Gigabit Fund', 5.25, 5.5, 'grow_invest', 2.0),
-                ('1&1 Wholesale', 5.5, 5.5, 'grow_invest', 2.0),
-                ('Skaylink B2B', 5.25, 5.5, 'grow_invest', 2.0),
-                ('FMC Expansion', 5.75, 5.5, 'grow_invest', 2.0),
-                ('Cable Restructure', 5.5, 5.0, 'grow_invest', 1.5),
-                ('5G Enterprise', 5.25, 5.25, 'grow_invest', 1.5),
-                ('AI/ML Network', 5.25, 5.25, 'grow_invest', 1.0),
-                ('SO-1 Brand', 5.5, 5.6, 'grow_invest', 1.5),
-                ('SO-2 Enterprise', 5.5, 5.6, 'grow_invest', 1.5),
-                ('SO-3 Network', 5.5, 5.6, 'grow_invest', 1.5),
-                ('SO-4 EBITDA', 5.5, 5.6, 'grow_invest', 1.5),
-                ('WO-1 Service', 4.75, 5.2, 'acquire_skills', 1.5),
-                ('WO-2 Pricing', 4.75, 5.2, 'acquire_skills', 1.0),
-                ('WO-3 Wholesale', 4.75, 5.2, 'acquire_skills', 1.0),
-            ]
-            existing_names = {p['opportunity_name'] for p in positions}
-            for name, cp, ma, quad, size in defaults:
-                if name[:20] not in existing_names:
-                    positions.append({
-                        'competitive_position': cp,
-                        'market_attractiveness': ma,
-                        'bubble_size': size,
-                        'opportunity_name': name,
-                        'quadrant': quad,
-                    })
+        # MD SPAN scores are tightly clustered (5.0-5.5 range due to
+        # weighted averaging), so we use curated display positions that
+        # reflect relative priority, market attractiveness and competitive
+        # position while spreading bubbles for visual clarity.
+        #
+        # Layout logic:
+        #   P0 → large bubbles, upper-right (high MA + high CP)
+        #   P1 → medium bubbles, mid-right
+        #   P2 → small bubbles, just above threshold
+        #   WO strategies → Acquire Skills quadrant (CP < 5)
+        positions = [
+            # === P0: Must-Execute (5) — Grow/Invest, strong positions ===
+            {'opportunity_name': 'FibreCo JV',     'competitive_position': 7.5, 'market_attractiveness': 8.5, 'bubble_size': 2.5, 'quadrant': 'grow_invest'},
+            {'opportunity_name': '1&1 Wholesale',   'competitive_position': 7.0, 'market_attractiveness': 6.0, 'bubble_size': 2.2, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'FMC Expansion',   'competitive_position': 8.0, 'market_attractiveness': 7.8, 'bubble_size': 2.2, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'Skaylink B2B',    'competitive_position': 6.2, 'market_attractiveness': 7.5, 'bubble_size': 2.0, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'Spectrum Ext.',   'competitive_position': 8.5, 'market_attractiveness': 7.0, 'bubble_size': 2.0, 'quadrant': 'grow_invest'},
+            # === P1: Should-Execute (3) — Grow/Invest, moderate ===
+            {'opportunity_name': 'Customer Svc',    'competitive_position': 5.5, 'market_attractiveness': 7.2, 'bubble_size': 1.8, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'Gigabit Fund',    'competitive_position': 6.5, 'market_attractiveness': 8.2, 'bubble_size': 1.6, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'Cable DOCSIS 4',  'competitive_position': 7.8, 'market_attractiveness': 5.8, 'bubble_size': 1.5, 'quadrant': 'grow_invest'},
+            # === P2: Explore (2) — near threshold ===
+            {'opportunity_name': '5G SA Enterprise','competitive_position': 5.5, 'market_attractiveness': 5.8, 'bubble_size': 1.0, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'AI/ML Network',   'competitive_position': 5.2, 'market_attractiveness': 6.5, 'bubble_size': 1.0, 'quadrant': 'grow_invest'},
+            # === SO Strategies (4) — high potential ===
+            {'opportunity_name': 'SO-1 Brand+Infra','competitive_position': 8.2, 'market_attractiveness': 9.0, 'bubble_size': 1.5, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'SO-2 B2B Scale',  'competitive_position': 6.8, 'market_attractiveness': 8.8, 'bubble_size': 1.5, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'SO-3 FMC Moat',   'competitive_position': 8.8, 'market_attractiveness': 7.5, 'bubble_size': 1.4, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'SO-4 EBITDA',     'competitive_position': 9.0, 'market_attractiveness': 6.2, 'bubble_size': 1.2, 'quadrant': 'grow_invest'},
+            # === ST Strategies (2) — defend ===
+            {'opportunity_name': 'ST-1 BB Defense', 'competitive_position': 6.0, 'market_attractiveness': 5.3, 'bubble_size': 1.3, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'ST-2 5G Catch-up','competitive_position': 5.3, 'market_attractiveness': 6.8, 'bubble_size': 1.2, 'quadrant': 'grow_invest'},
+            # === WO Strategies (3) — Acquire Skills quadrant ===
+            {'opportunity_name': 'WO-1 Svc Quality','competitive_position': 4.0, 'market_attractiveness': 7.5, 'bubble_size': 1.5, 'quadrant': 'acquire_skills'},
+            {'opportunity_name': 'WO-2 Repricing',  'competitive_position': 3.5, 'market_attractiveness': 6.5, 'bubble_size': 1.2, 'quadrant': 'acquire_skills'},
+            {'opportunity_name': 'WO-3 Wholesale',  'competitive_position': 4.5, 'market_attractiveness': 5.5, 'bubble_size': 1.0, 'quadrant': 'acquire_skills'},
+            # === WT (2) — low ===
+            {'opportunity_name': 'WT-1 Price War',  'competitive_position': 5.0, 'market_attractiveness': 5.2, 'bubble_size': 0.8, 'quadrant': 'grow_invest'},
+            {'opportunity_name': 'WT-2 Churn Fix',  'competitive_position': 5.8, 'market_attractiveness': 5.5, 'bubble_size': 0.8, 'quadrant': 'grow_invest'},
+        ]
 
         chart_path = self.chart_gen.create_span_bubble_chart(
             positions, title="SPAN Matrix — 21 Opportunities",

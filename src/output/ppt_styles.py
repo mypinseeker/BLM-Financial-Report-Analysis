@@ -184,6 +184,29 @@ STYLES = {
 }
 
 
+# Operator brand colors for multi-operator charts
+# Maps common name variants -> RGB tuple
+OPERATOR_BRAND_COLORS: dict[str, tuple] = {
+    # Deutsche Telekom — Magenta
+    "DT": (226, 0, 116),
+    "Deutsche Telekom": (226, 0, 116),
+    "Telekom": (226, 0, 116),
+    # Vodafone — Red
+    "Vodafone": (230, 0, 0),
+    "VF": (230, 0, 0),
+    "Vodafone Germany": (230, 0, 0),
+    # Telefonica O2 — Blue
+    "O2": (0, 101, 163),
+    "Telefonica O2": (0, 101, 163),
+    "Telefonica": (0, 101, 163),
+    # 1&1 — Dark Blue
+    "1&1": (0, 55, 107),
+    "1&1 AG": (0, 55, 107),
+    # Combined label
+    "O2/1&1": (0, 128, 128),
+}
+
+
 def get_style(operator_id: str) -> PPTStyle:
     """Get the PPT style for an operator, falling back to default."""
     return STYLES.get(operator_id, DEFAULT_STYLE)

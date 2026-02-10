@@ -21,7 +21,7 @@ import matplotlib.patches as mpatches
 import matplotlib.patheffects as path_effects
 import numpy as np
 
-from src.output.ppt_styles import PPTStyle, DEFAULT_STYLE
+from src.output.ppt_styles import PPTStyle, DEFAULT_STYLE, OPERATOR_BRAND_COLORS
 
 
 def _rgb_to_hex(rgb_tuple: tuple) -> str:
@@ -118,11 +118,26 @@ class BLMChartGenerator:
         palette = self.style.chart_palette
         return _rgb_to_hex(palette[index % len(palette)])
 
+    def _brand_color(self, name: str, fallback_idx: int) -> str:
+        """Look up operator brand color; fall back to a varied palette index."""
+        brand = OPERATOR_BRAND_COLORS.get(name)
+        if brand:
+            return _rgb_to_hex(brand)
+        # Use a varied palette that avoids near-black
+        varied = [
+            '#4682B4',  # Steel Blue
+            '#2E8B57',  # Sea Green
+            '#D2691E',  # Chocolate
+            '#6A5ACD',  # Slate Blue
+            '#20B2AA',  # Light Sea Green
+        ]
+        return varied[fallback_idx % len(varied)]
+
     def _color_for_operator(self, operator: str, target: str, idx: int) -> str:
-        """Brand color for protagonist, palette color for competitors."""
+        """Brand color for protagonist, operator brand color for known operators."""
         if operator == target:
             return self._primary_hex
-        return self._palette_hex(idx + 1)  # skip idx 0 which is primary
+        return self._brand_color(operator, idx)
 
     def _save_fig(self, fig, filename: str) -> str:
         output_path = self.output_dir / filename
@@ -155,8 +170,9 @@ class BLMChartGenerator:
         """Vertical bar chart with target highlighting."""
         fig, ax = plt.subplots(figsize=(10, 6))
         x_pos = np.arange(len(categories))
-        colors = [self._primary_hex if c == target_category else self._palette_hex(1)
-                  for c in categories]
+        colors = [self._primary_hex if c == target_category
+                  else self._brand_color(c, i)
+                  for i, c in enumerate(categories)]
 
         bars = ax.bar(x_pos, values, color=colors, width=0.6, edgecolor='white', linewidth=1)
         for bar, val in zip(bars, values):
@@ -337,8 +353,9 @@ class BLMChartGenerator:
 
         cell_text = [[data[op][i] for op in operators] for i in range(num_rows)]
 
-        col_colors = [self._primary_hex if op == target_operator else self._palette_hex(1)
-                      for op in operators]
+        col_colors = [self._primary_hex if op == target_operator
+                      else self._brand_color(op, i)
+                      for i, op in enumerate(operators)]
         table = ax.table(
             cellText=cell_text, rowLabels=metrics, colLabels=operators,
             cellLoc='center', loc='center',
@@ -374,14 +391,13 @@ class BLMChartGenerator:
         if n == 1:
             axes = [axes]
 
-        for ax, label, val in zip(axes, labels, values):
-            color = self._primary_hex if label == target_label else self._palette_hex(1)
+        for i, (ax, label, val) in enumerate(zip(axes, labels, values)):
+            color = self._primary_hex if label == target_label else self._brand_color(label, i)
             sizes = [val, 100 - val]
             ax.pie(sizes, colors=[color, self._light_gray_hex], startangle=90,
                    wedgeprops=dict(width=0.3))
             ax.text(0, 0, f'{val:.0f}%', ha='center', va='center',
-                    fontsize=24, fontweight='bold',
-                    color=self._primary_hex if label == target_label else self._dark_hex)
+                    fontsize=24, fontweight='bold', color=color)
             ax.set_title(label, fontsize=12, fontweight='bold', color=self._dark_hex)
 
         fig.suptitle(title, fontsize=16, fontweight='bold', color=self._dark_hex, y=1.02)
@@ -472,21 +488,30 @@ class BLMChartGenerator:
         filename: str = "segment_comparison.png",
     ) -> str:
         """Grouped bar chart comparing operators across periods."""
-        fig, ax = plt.subplots(figsize=(14, 5))
-        x = np.arange(len(x_labels))
         n = len(operator_values)
-        width = 0.8 / max(n, 1)
+        # Scale figure width based on data density
+        fig_w = max(14, len(x_labels) * n * 0.8 + 4)
+        fig, ax = plt.subplots(figsize=(fig_w, 6))
+        x = np.arange(len(x_labels))
+        width = 0.85 / max(n, 1)
 
         for i, (operator, values) in enumerate(operator_values.items()):
             offset = (i - n / 2 + 0.5) * width
             color = self._color_for_operator(operator, target_operator, i)
-            ax.bar(x + offset, values, width, label=operator, color=color)
+            bars = ax.bar(x + offset, values, width, label=operator, color=color,
+                          edgecolor='white', linewidth=0.5)
+            # Add value labels on bars
+            for bar, val in zip(bars, values):
+                ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + max(max(v) for v in operator_values.values()) * 0.01,
+                        f'{val:.0f}' if val == int(val) else f'{val:.1f}',
+                        ha='center', va='bottom', fontsize=8, color=self._dark_hex)
 
         ax.set_xticks(x)
-        ax.set_xticklabels(x_labels, fontsize=10)
+        ax.set_xticklabels(x_labels, fontsize=12, fontweight='bold')
         ax.set_ylabel(y_label, fontsize=11, color=self._dark_hex)
         ax.set_title(title, fontsize=14, fontweight='bold', color=self._dark_hex, pad=15)
-        ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), fontsize=9)
+        ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), fontsize=10)
+        ax.set_ylim(0, max(max(v) for v in operator_values.values()) * 1.15)
         ax.grid(True, axis='y', alpha=0.3)
         self._style_axes(ax)
         plt.tight_layout()
@@ -579,13 +604,13 @@ class BLMChartGenerator:
                    market_attractiveness, bubble_size, opportunity_name, quadrant).
         X = competitive_position (0-10), Y = market_attractiveness (0-10).
         """
-        fig, ax = plt.subplots(figsize=(10, 8))
+        fig, ax = plt.subplots(figsize=(12, 9))
 
         # Draw quadrant backgrounds
         ax.axhline(y=5, color=self._light_gray_hex, linewidth=1, linestyle='--')
         ax.axvline(x=5, color=self._light_gray_hex, linewidth=1, linestyle='--')
 
-        # Quadrant labels
+        # Quadrant labels (watermark style)
         quadrant_labels = [
             (2.5, 7.5, "Acquire/Build\nSkills", '#E8F4FD'),
             (7.5, 7.5, "Grow/\nInvest", '#E8F8E8'),
@@ -595,16 +620,19 @@ class BLMChartGenerator:
         for qx, qy, qlabel, qcolor in quadrant_labels:
             ax.fill_between([qx - 2.5, qx + 2.5], qy - 2.5, qy + 2.5,
                             alpha=0.3, color=qcolor, zorder=0)
-            ax.text(qx, qy, qlabel, ha='center', va='center', fontsize=11,
-                    color=self._gray_hex, fontstyle='italic', alpha=0.8)
+            ax.text(qx, qy, qlabel, ha='center', va='center', fontsize=12,
+                    color=self._gray_hex, fontstyle='italic', alpha=0.5)
 
         # Plot bubbles
         quadrant_colors = {
             'grow_invest': self._positive_hex,
-            'acquire_skills': self._palette_hex(1),
+            'acquire_skills': '#4682B4',  # Steel Blue
             'harvest': self._warning_hex,
             'avoid_exit': self._negative_hex,
         }
+
+        # Collect all positions for label staggering
+        label_data = []
         for pos in positions:
             if hasattr(pos, 'competitive_position'):
                 x = pos.competitive_position
@@ -622,8 +650,28 @@ class BLMChartGenerator:
             color = quadrant_colors.get(quadrant, self._primary_hex)
             ax.scatter(x, y, s=size, c=color, alpha=0.7, edgecolors='white',
                        linewidths=2, zorder=5)
-            ax.annotate(name, (x, y), textcoords="offset points", xytext=(0, 12),
-                        ha='center', fontsize=9, fontweight='bold', color=self._dark_hex)
+            label_data.append((x, y, name))
+
+        # Stagger label offsets to reduce overlap
+        label_data.sort(key=lambda p: (round(p[1], 1), p[0]))
+        used_positions: list[tuple[float, float]] = []
+        for x, y, name in label_data:
+            # Try multiple offsets to find non-overlapping position
+            best_ox, best_oy = 0, 14
+            for ox, oy in [(0, 14), (0, -18), (15, 8), (-15, 8),
+                           (18, -8), (-18, -8), (0, 22), (0, -26)]:
+                candidate = (x + ox * 0.05, y + oy * 0.05)
+                overlap = any(abs(candidate[0] - px) < 0.4 and abs(candidate[1] - py) < 0.3
+                              for px, py in used_positions)
+                if not overlap:
+                    best_ox, best_oy = ox, oy
+                    break
+            used_positions.append((x + best_ox * 0.05, y + best_oy * 0.05))
+            ax.annotate(name, (x, y), textcoords="offset points",
+                        xytext=(best_ox, best_oy), ha='center', fontsize=7,
+                        color=self._dark_hex,
+                        arrowprops=dict(arrowstyle='-', color='#AAAAAA',
+                                        lw=0.5) if abs(best_ox) > 10 or abs(best_oy) > 18 else None)
 
         ax.set_xlim(0, 10)
         ax.set_ylim(0, 10)
