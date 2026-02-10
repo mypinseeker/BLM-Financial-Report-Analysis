@@ -121,8 +121,8 @@ CREATE TABLE IF NOT EXISTS tariffs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     operator_id TEXT NOT NULL REFERENCES operators(operator_id),
     plan_name TEXT NOT NULL,
-    plan_type TEXT,  -- "mobile_postpaid" / "fixed_broadband" / etc.
-    plan_tier TEXT,  -- "entry" / "mid" / "premium" / "unlimited"
+    plan_type TEXT,        -- mobile_postpaid / mobile_prepaid / fixed_dsl / fixed_cable / fixed_fiber / tv / fmc_bundle
+    plan_tier TEXT,        -- xs / s / m / l / xl / unlimited
     monthly_price REAL,
     data_allowance TEXT,
     speed_mbps REAL,
@@ -130,10 +130,11 @@ CREATE TABLE IF NOT EXISTS tariffs (
     includes_5g BOOLEAN DEFAULT 0,
     technology TEXT,
     effective_date DATE,
+    snapshot_period TEXT,   -- H1_2023 / H2_2023 / ... / H1_2026
     source_url TEXT,
     notes TEXT,
     collected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(operator_id, plan_name, plan_type)
+    UNIQUE(operator_id, plan_name, plan_type, snapshot_period)
 );
 
 CREATE TABLE IF NOT EXISTS competitive_scores (
@@ -254,3 +255,5 @@ CREATE INDEX IF NOT EXISTS idx_intelligence_operator ON intelligence_events(oper
 CREATE INDEX IF NOT EXISTS idx_macro_country_cq ON macro_environment(country, calendar_quarter);
 CREATE INDEX IF NOT EXISTS idx_earnings_operator_cq ON earnings_call_highlights(operator_id, calendar_quarter);
 CREATE INDEX IF NOT EXISTS idx_provenance_entity ON data_provenance(entity_type, entity_id);
+CREATE INDEX IF NOT EXISTS idx_tariff_operator_period ON tariffs(operator_id, snapshot_period);
+CREATE INDEX IF NOT EXISTS idx_tariff_type_period ON tariffs(plan_type, snapshot_period);

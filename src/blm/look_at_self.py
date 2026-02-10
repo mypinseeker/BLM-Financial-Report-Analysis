@@ -11,6 +11,7 @@ from __future__ import annotations
 from typing import Optional
 
 from src.database.db import TelecomDatabase
+from src.models.market_config import MarketConfig
 from src.models.self_analysis import (
     BMCCanvas,
     ChangeAttribution,
@@ -812,11 +813,12 @@ def _analyze_network(
 # BMC Canvas
 # ============================================================================
 
-def _build_bmc_canvas(target_operator: str) -> BMCCanvas:
+def _build_bmc_canvas(target_operator: str,
+                       market_config: MarketConfig = None) -> BMCCanvas:
     """Build a Business Model Canvas for the target operator.
 
-    Currently provides Vodafone Germany-specific values.
-    Can be extended for other operators.
+    Uses MarketConfig.operator_bmc_enrichments for operator-specific data.
+    Falls back to hardcoded German data when no market_config is provided.
     """
     # Default BMC for a generic telecom operator
     bmc = BMCCanvas(
@@ -886,20 +888,28 @@ def _build_bmc_canvas(target_operator: str) -> BMCCanvas:
         ],
     )
 
-    # Operator-specific adjustments
-    if target_operator == "vodafone_germany":
-        bmc.key_resources.append("Cable network (largest in Germany)")
-        bmc.value_propositions.append("GigaCable Max ultra-fast broadband")
-    elif target_operator == "deutsche_telekom":
-        bmc.key_partners.append("T-Mobile US (synergies)")
-        bmc.key_resources.append("Largest fiber network in Germany")
-        bmc.value_propositions.append("MagentaEINS convergence platform")
-    elif target_operator == "telefonica_o2":
-        bmc.value_propositions.append("Value-for-money positioning")
-        bmc.key_partners.append("Drillisch/1&1 (national roaming)")
-    elif target_operator == "one_and_one":
-        bmc.key_activities.append("Network buildout (new entrant)")
-        bmc.value_propositions.append("Disruptive pricing in mobile")
+    # Apply operator-specific enrichments from MarketConfig
+    if market_config and target_operator in market_config.operator_bmc_enrichments:
+        enrichments = market_config.operator_bmc_enrichments[target_operator]
+        for field_name in ("key_partners", "key_activities", "key_resources",
+                           "value_propositions"):
+            extras = enrichments.get(field_name, [])
+            getattr(bmc, field_name).extend(extras)
+    else:
+        # Legacy fallback for backward compatibility (no market_config)
+        if target_operator == "vodafone_germany":
+            bmc.key_resources.append("Cable network (largest in Germany)")
+            bmc.value_propositions.append("GigaCable Max ultra-fast broadband")
+        elif target_operator == "deutsche_telekom":
+            bmc.key_partners.append("T-Mobile US (synergies)")
+            bmc.key_resources.append("Largest fiber network in Germany")
+            bmc.value_propositions.append("MagentaEINS convergence platform")
+        elif target_operator == "telefonica_o2":
+            bmc.value_propositions.append("Value-for-money positioning")
+            bmc.key_partners.append("Drillisch/1&1 (national roaming)")
+        elif target_operator == "one_and_one":
+            bmc.key_activities.append("Network buildout (new entrant)")
+            bmc.value_propositions.append("Disruptive pricing in mobile")
 
     return bmc
 
@@ -914,80 +924,61 @@ def _identify_exposure_points(
     subscriber_data: list,
     network_data: dict,
     market_positions: dict,
+    market_config: MarketConfig = None,
 ) -> list:
-    """Identify strategic exposure points for the target operator."""
+    """Identify strategic exposure points for the target operator.
+
+    Uses MarketConfig.operator_exposures when available, falls back to
+    data-driven analysis and legacy hardcoded logic.
+    """
     exposures = []
 
-    if target_operator == "vodafone_germany":
-        # 1&1 migration impact
-        exposures.append(ExposurePoint(
-            trigger_action="1&1 building own mobile network and migrating users off Vodafone wholesale",
-            side_effect="Loss of wholesale revenue as 1&1 users migrate to own network",
-            attack_vector="1&1 positions as independent operator with competitive pricing",
-            severity="high",
-            evidence=["1&1 new entrant in Germany market", "Building Open RAN network"],
-        ))
-
-        # Cable technology dependency
-        fiber_k = None
-        cable_k = None
-        if subscriber_data:
-            latest_sub = subscriber_data[-1]
-            fiber_k = _safe_get(latest_sub, "broadband_fiber_k")
-            cable_k = _safe_get(latest_sub, "broadband_cable_k")
-
-        if cable_k is not None and fiber_k is not None:
-            if cable_k > fiber_k * 5:
-                exposures.append(ExposurePoint(
-                    trigger_action="Heavy reliance on cable (DOCSIS) technology while market shifts to fiber",
-                    side_effect="Technology perception gap as competitors lead fiber deployment",
-                    attack_vector="DT markets fiber superiority; cable seen as legacy",
-                    severity="high",
-                    evidence=[
-                        f"Cable subs {cable_k:.0f}K vs Fiber subs {fiber_k:.0f}K",
-                        "DT aggressively deploying FTTH",
-                    ],
-                ))
-
-        # Low fiber penetration compared to DT
-        competitors = market_positions.get("competitors", {})
-        dt_data = competitors.get("deutsche_telekom", {})
-        dt_bb = dt_data.get("broadband_total_k")
-        if dt_bb and fiber_k is not None and fiber_k < 500:
+    # 1. Use MarketConfig exposures if available
+    if market_config and target_operator in market_config.operator_exposures:
+        for exp_data in market_config.operator_exposures[target_operator]:
             exposures.append(ExposurePoint(
-                trigger_action="Low fiber penetration compared to Deutsche Telekom",
-                side_effect="Competitive disadvantage in future-proof broadband",
-                attack_vector="Customers migrating to FTTH offerings from DT",
-                severity="medium",
-                evidence=[f"Fiber subscribers only {fiber_k:.0f}K"],
+                trigger_action=exp_data["trigger_action"],
+                side_effect=exp_data["side_effect"],
+                attack_vector=exp_data["attack_vector"],
+                severity=exp_data.get("severity", "medium"),
+                evidence=exp_data.get("evidence", []),
+            ))
+    else:
+        # Legacy fallback: hardcoded Vodafone-specific or generic analysis
+        if target_operator == "vodafone_germany":
+            exposures.append(ExposurePoint(
+                trigger_action="1&1 building own mobile network and migrating users off Vodafone wholesale",
+                side_effect="Loss of wholesale revenue as 1&1 users migrate to own network",
+                attack_vector="1&1 positions as independent operator with competitive pricing",
+                severity="high",
+                evidence=["1&1 new entrant in Germany market", "Building Open RAN network"],
             ))
 
-    else:
-        # Generic exposure analysis for other operators
-        if financial_data and len(financial_data) >= 2:
-            latest_fin = financial_data[-1]
-            prev_fin = financial_data[-2]
-            rev_change = _safe_pct_change(
-                _safe_get(latest_fin, "total_revenue"),
-                _safe_get(prev_fin, "total_revenue"),
-            )
-            if rev_change < -2:
-                exposures.append(ExposurePoint(
-                    trigger_action="Declining revenue trend",
-                    side_effect="Weakening competitive position",
-                    attack_vector="Competitors gaining share during revenue decline",
-                    severity="medium",
-                    evidence=[f"Revenue declined {rev_change:.1f}% QoQ"],
-                ))
+    # 2. Data-driven exposure detection (always runs)
+    if financial_data and len(financial_data) >= 2:
+        latest_fin = financial_data[-1]
+        prev_fin = financial_data[-2]
+        rev_change = _safe_pct_change(
+            _safe_get(latest_fin, "total_revenue"),
+            _safe_get(prev_fin, "total_revenue"),
+        )
+        if rev_change < -2:
+            exposures.append(ExposurePoint(
+                trigger_action="Declining revenue trend",
+                side_effect="Weakening competitive position",
+                attack_vector="Competitors gaining share during revenue decline",
+                severity="medium",
+                evidence=[f"Revenue declined {rev_change:.1f}% QoQ"],
+            ))
 
-    # If no specific exposures found, add a generic one based on market dynamics
+    # 3. If no exposures found, add a generic one
     if not exposures:
         exposures.append(ExposurePoint(
-            trigger_action="Intensifying market competition in Germany telecom",
+            trigger_action="Intensifying market competition",
             side_effect="Pressure on margins and market share",
             attack_vector="Price competition from challengers",
             severity="medium",
-            evidence=["4-player market with new entrant 1&1"],
+            evidence=["Competitive telecom market dynamics"],
         ))
 
     return exposures
@@ -1210,6 +1201,7 @@ def analyze_self(
     target_period: str = None,
     n_quarters: int = 8,
     provenance=None,
+    market_config: MarketConfig = None,
 ) -> SelfInsight:
     """Analyze the target operator's internal state and capabilities.
 
@@ -1293,7 +1285,7 @@ def analyze_self(
     # ------------------------------------------------------------------
     # 7. BMC Canvas
     # ------------------------------------------------------------------
-    bmc = _build_bmc_canvas(target_operator)
+    bmc = _build_bmc_canvas(target_operator, market_config)
 
     # ------------------------------------------------------------------
     # 8. Exposure points
@@ -1304,7 +1296,8 @@ def analyze_self(
     except Exception:
         pass
     exposure_points = _identify_exposure_points(
-        target_operator, financial_data, subscriber_data, net_data_raw, market_positions
+        target_operator, financial_data, subscriber_data, net_data_raw, market_positions,
+        market_config,
     )
 
     # ------------------------------------------------------------------

@@ -360,6 +360,50 @@ class TelecomDatabase:
         self.conn.execute(sql, list(fields.values()))
         self.conn.commit()
 
+    def upsert_tariff(self, operator_id: str, plan_name: str,
+                       plan_type: str, snapshot_period: str, data: dict):
+        """Insert or update a tariff record.
+
+        Args:
+            operator_id: Operator identifier
+            plan_name: Plan name (e.g., "GigaMobil M")
+            plan_type: Plan type (e.g., "mobile_postpaid")
+            snapshot_period: Half-year period (e.g., "H1_2026")
+            data: Dict with plan details (monthly_price, data_allowance, etc.)
+        """
+        fields = {
+            "operator_id": operator_id,
+            "plan_name": plan_name,
+            "plan_type": plan_type,
+            "snapshot_period": snapshot_period,
+            "plan_tier": data.get("plan_tier"),
+            "monthly_price": data.get("monthly_price"),
+            "data_allowance": data.get("data_allowance"),
+            "speed_mbps": data.get("speed_mbps"),
+            "contract_months": data.get("contract_months"),
+            "includes_5g": data.get("includes_5g", 0),
+            "technology": data.get("technology"),
+            "effective_date": data.get("effective_date"),
+            "source_url": data.get("source_url"),
+            "notes": data.get("notes"),
+        }
+
+        columns = ", ".join(fields.keys())
+        placeholders = ", ".join(["?"] * len(fields))
+        updates = ", ".join([
+            f"{k} = excluded.{k}" for k in fields.keys()
+            if k not in ("operator_id", "plan_name", "plan_type", "snapshot_period")
+        ])
+
+        sql = f"""
+            INSERT INTO tariffs ({columns})
+            VALUES ({placeholders})
+            ON CONFLICT(operator_id, plan_name, plan_type, snapshot_period)
+            DO UPDATE SET {updates}
+        """
+        self.conn.execute(sql, list(fields.values()))
+        self.conn.commit()
+
     def upsert_earnings_highlight(self, operator_id: str,
                                    calendar_quarter: str, data: dict):
         """Insert an earnings call highlight."""
@@ -651,4 +695,68 @@ class TelecomDatabase:
                 ORDER BY calendar_quarter DESC, highlight_type, segment
             """
             rows = self.conn.execute(sql, [operator_id]).fetchall()
+        return self._rows_to_dicts(rows)
+
+    def get_tariffs(self, operator_id: Optional[str] = None,
+                     market: Optional[str] = None,
+                     plan_type: Optional[str] = None,
+                     snapshot_period: Optional[str] = None) -> list:
+        """Get tariffs with optional filters.
+
+        Joins operators table when filtering by market.
+        """
+        conditions = []
+        params = []
+
+        if market:
+            conditions.append("o.market = ?")
+            params.append(market)
+        if operator_id:
+            conditions.append("t.operator_id = ?")
+            params.append(operator_id)
+        if plan_type:
+            conditions.append("t.plan_type = ?")
+            params.append(plan_type)
+        if snapshot_period:
+            conditions.append("t.snapshot_period = ?")
+            params.append(snapshot_period)
+
+        where_clause = (" WHERE " + " AND ".join(conditions)) if conditions else ""
+
+        sql = f"""
+            SELECT t.*, o.display_name, o.market
+            FROM tariffs t
+            JOIN operators o ON t.operator_id = o.operator_id
+            {where_clause}
+            ORDER BY t.operator_id, t.plan_type, t.plan_tier, t.snapshot_period
+        """
+        rows = self.conn.execute(sql, params).fetchall()
+        return self._rows_to_dicts(rows)
+
+    def get_tariff_comparison(self, market: str, plan_type: str,
+                               snapshot_period: str) -> list:
+        """Cross-operator tariff comparison for a given plan type and period.
+
+        Returns one row per tariff, grouped by operator, sorted by monthly_price.
+        """
+        sql = """
+            SELECT
+                t.operator_id,
+                o.display_name,
+                t.plan_name,
+                t.plan_type,
+                t.plan_tier,
+                t.monthly_price,
+                t.data_allowance,
+                t.speed_mbps,
+                t.includes_5g,
+                t.snapshot_period
+            FROM tariffs t
+            JOIN operators o ON t.operator_id = o.operator_id
+            WHERE o.market = ?
+              AND t.plan_type = ?
+              AND t.snapshot_period = ?
+            ORDER BY t.plan_tier, t.monthly_price ASC
+        """
+        rows = self.conn.execute(sql, [market, plan_type, snapshot_period]).fetchall()
         return self._rows_to_dicts(rows)

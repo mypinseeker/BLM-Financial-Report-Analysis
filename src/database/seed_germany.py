@@ -387,8 +387,13 @@ def seed_all(db_path: str = "data/telecom.db"):
     seed_executives(db)
 
     # Seed internet-sourced data (regulatory, earnings call Q&A, media)
-    print("\nStep 7/7: Seeding internet-sourced data...")
+    print("\nStep 7/8: Seeding internet-sourced data...")
     seed_internet_data(db)
+
+    # Seed tariff data
+    print("Step 8/8: Inserting tariff data...")
+    from src.database.seed_tariffs import seed_tariffs
+    seed_tariffs(db)
 
     print("Seed complete!")
     return db

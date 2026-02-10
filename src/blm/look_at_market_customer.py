@@ -25,6 +25,7 @@ from src.models.market import (
     APPEALSAssessment,
     MarketCustomerInsight,
 )
+from src.models.market_config import MarketConfig
 from src.database.period_utils import PeriodConverter
 
 
@@ -280,7 +281,7 @@ def _get_yoy_quarter(calendar_quarter: str) -> str:
 # ============================================================================
 
 def _build_market_snapshot(db, market: str, latest_cq: str,
-                           provenance=None) -> dict:
+                           provenance=None, market_config: MarketConfig = None) -> dict:
     """Build the market snapshot dict with totals and per-operator shares."""
     comparison = db.get_market_comparison(market, latest_cq)
 
@@ -318,14 +319,14 @@ def _build_market_snapshot(db, market: str, latest_cq: str,
         else:
             market_shares[op_id] = 0
 
-    # Compute penetration rates (Germany population approx 84M)
-    germany_population_k = 84000  # 84 million in thousands
+    # Compute penetration rates using market population
+    population_k = market_config.population_k if market_config else 84000
     penetration_rates = {
         "mobile_penetration_pct": round(
-            total_mobile_subs / germany_population_k * 100, 1
+            total_mobile_subs / population_k * 100, 1
         ) if total_mobile_subs > 0 else "N/A",
         "broadband_penetration_pct": round(
-            total_broadband_subs / germany_population_k * 100, 1
+            total_broadband_subs / population_k * 100, 1
         ) if total_broadband_subs > 0 else "N/A",
     }
 
@@ -595,7 +596,8 @@ def _map_event_category(category: str) -> str:
 # ============================================================================
 
 def _build_customer_segments(db, market: str, target_operator: str,
-                              latest_cq: str, provenance=None) -> list[CustomerSegment]:
+                              latest_cq: str, provenance=None,
+                              market_config: MarketConfig = None) -> list[CustomerSegment]:
     """Build customer segment analysis using subscriber data."""
     comparison = db.get_market_comparison(market, latest_cq)
 
@@ -630,8 +632,11 @@ def _build_customer_segments(db, market: str, target_operator: str,
             target_bb_k = bb
             target_b2b_k = b2b
 
+    # Use market config segments if available, fall back to hardcoded German segments
+    segment_defs = market_config.customer_segments if market_config else GERMAN_TELECOM_SEGMENTS
+
     segments = []
-    for seg_def in GERMAN_TELECOM_SEGMENTS:
+    for seg_def in segment_defs:
         seg = CustomerSegment(
             segment_name=seg_def["segment_name"],
             segment_type=seg_def["segment_type"],
@@ -1029,6 +1034,7 @@ def analyze_market_customer(
     target_period: str = None,
     n_quarters: int = 8,
     provenance=None,
+    market_config: MarketConfig = None,
 ) -> MarketCustomerInsight:
     """Perform Look 2: Market/Customer analysis.
 
@@ -1051,7 +1057,7 @@ def analyze_market_customer(
     latest_cq = _determine_latest_quarter(db, market, target_period)
 
     # 1. Build market snapshot
-    snapshot = _build_market_snapshot(db, market, latest_cq, provenance)
+    snapshot = _build_market_snapshot(db, market, latest_cq, provenance, market_config)
 
     # 2. Detect market changes
     changes = _detect_market_changes(
@@ -1064,7 +1070,7 @@ def analyze_market_customer(
 
     # 4. Build customer segments
     segments = _build_customer_segments(
-        db, market, target_operator, latest_cq, provenance
+        db, market, target_operator, latest_cq, provenance, market_config
     )
 
     # 5. Build $APPEALS assessment

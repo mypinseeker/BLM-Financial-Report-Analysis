@@ -22,6 +22,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional
 
+from src.models.market_configs import get_market_config
 from src.models.provenance import ProvenanceStore
 
 
@@ -63,6 +64,7 @@ class BLMAnalysisEngine:
         self.target_period = target_period
         self.n_quarters = n_quarters
         self.provenance = ProvenanceStore()
+        self.market_config = get_market_config(market)
 
     def run_five_looks(self) -> FiveLooksResult:
         """Execute the complete five looks analysis pipeline."""
@@ -119,6 +121,7 @@ class BLMAnalysisEngine:
             target_period=self.target_period,
             n_quarters=self.n_quarters,
             provenance=self.provenance,
+            market_config=self.market_config,
         )
 
     def look_at_competition(self):
@@ -153,6 +156,7 @@ class BLMAnalysisEngine:
             target_period=self.target_period,
             n_quarters=self.n_quarters,
             provenance=self.provenance,
+            market_config=self.market_config,
         )
 
     def synthesize_swot(self, trends, market_customer, competition, self_analysis):
