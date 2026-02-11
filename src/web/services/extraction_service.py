@@ -175,19 +175,31 @@ class ExtractionService:
         else:
             raise ValueError(f"Unknown table type: {table_type}")
 
+        # Build search-mode prompt enhancement (used by search fallback)
+        parent = op_info.get("parent_company", "")
+        search_hint = (
+            f"\n\nIMPORTANT: Search the web for {operator_name}"
+            f"{' (' + parent + ')' if parent else ''} quarterly financial results. "
+            f"Look for earnings releases, investor presentations, and press releases "
+            f"from the company's official website. Extract actual numbers reported "
+            f"in the earnings results. Use Google Search to find the data."
+        )
+
         # Call Gemini: use uploaded file if available, else fall back to search
         if file_uri and file_uri != "search":
-            result = await self.gemini.generate_with_file(file_uri, prompt, sys_inst)
+            try:
+                result = await self.gemini.generate_with_file(file_uri, prompt, sys_inst)
+            except Exception as e:
+                # Auto-fallback to search when file extraction fails
+                # (e.g. "The document has no pages" from Gemini)
+                logger.warning(
+                    "File extraction failed for %s/%s: %s. Falling back to search.",
+                    operator_id, table_type, e,
+                )
+                result = await self.gemini.generate_with_search(
+                    prompt + search_hint, sys_inst
+                )
         else:
-            # Enhance prompt for search mode
-            parent = op_info.get("parent_company", "")
-            search_hint = (
-                f"\n\nIMPORTANT: Search the web for {operator_name}"
-                f"{' (' + parent + ')' if parent else ''} quarterly financial results. "
-                f"Look for earnings releases, investor presentations, and press releases "
-                f"from the company's official website. Extract actual numbers reported "
-                f"in the earnings results. Use Google Search to find the data."
-            )
             result = await self.gemini.generate_with_search(
                 prompt + search_hint, sys_inst
             )

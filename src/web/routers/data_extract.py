@@ -410,9 +410,35 @@ def reject_extraction(job_id: int):
 
 @router.get("")
 def list_extraction_jobs(status: Optional[str] = Query(None)):
-    """List all extraction jobs, optionally filtered by status."""
+    """List all extraction jobs, optionally filtered by status.
+
+    Returns summary metadata only (excludes large extracted_data/approved_data
+    payloads to avoid Vercel timeout on list queries).
+    """
     svc = get_data_service()
-    return svc.list_extraction_jobs(status=status)
+    jobs = svc.list_extraction_jobs(status=status)
+
+    # Strip large JSON payloads — return row counts instead
+    for job in jobs:
+        for field in ("extracted_data", "approved_data"):
+            raw = job.get(field)
+            if raw:
+                if isinstance(raw, str):
+                    try:
+                        parsed = json.loads(raw)
+                    except json.JSONDecodeError:
+                        parsed = {}
+                else:
+                    parsed = raw
+                # Replace payload with summary: {"financial": 4, "subscriber": 3, ...}
+                job[field] = {
+                    k: len(v) if isinstance(v, list) else 1
+                    for k, v in parsed.items()
+                } if isinstance(parsed, dict) else {}
+            else:
+                job[field] = {}
+
+    return jobs
 
 
 # ------------------------------------------------------------------
