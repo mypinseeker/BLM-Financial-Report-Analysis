@@ -195,6 +195,9 @@ class ExtractionService:
         # Normalize: result might be a dict with a "data" key or a list directly
         rows = self._normalize_rows(result)
 
+        # Enrich: auto-fill missing fields derivable from other fields
+        rows = self._enrich_rows(rows, table_type, operator_id, country)
+
         # Validate
         valid_rows, errors = self.validate_rows(table_type, rows)
         if errors:
@@ -263,6 +266,48 @@ class ExtractionService:
     # ------------------------------------------------------------------
     # Internal helpers
     # ------------------------------------------------------------------
+
+    # Calendar quarter → (period_start, period_end) mapping
+    _CQ_DATES = {
+        "1": ("01-01", "03-31"),
+        "2": ("04-01", "06-30"),
+        "3": ("07-01", "09-30"),
+        "4": ("10-01", "12-31"),
+    }
+
+    @classmethod
+    def _enrich_rows(
+        cls, rows: list[dict], table_type: str, operator_id: str, country: str
+    ) -> list[dict]:
+        """Auto-fill missing fields that can be derived from other fields.
+
+        - period_start / period_end from calendar_quarter
+        - operator_id if missing
+        - country for macro rows
+        """
+        for row in rows:
+            # Inject operator_id if missing (financial, subscriber, tariff, network)
+            if table_type != "macro" and not row.get("operator_id"):
+                row["operator_id"] = operator_id
+
+            # Inject country for macro rows
+            if table_type == "macro" and not row.get("country") and country:
+                row["country"] = country
+
+            # Derive period_start / period_end from calendar_quarter
+            cq = row.get("calendar_quarter", "")
+            match = CQ_PATTERN.match(cq) if cq else None
+            if match:
+                q_num = cq[2]  # "CQ4_2025" → "4"
+                year = cq[4:]  # "CQ4_2025" → "2025"
+                dates = cls._CQ_DATES.get(q_num)
+                if dates:
+                    if not row.get("period_start"):
+                        row["period_start"] = f"{year}-{dates[0]}"
+                    if not row.get("period_end"):
+                        row["period_end"] = f"{year}-{dates[1]}"
+
+        return rows
 
     @staticmethod
     def _normalize_rows(result: Any) -> list[dict]:
