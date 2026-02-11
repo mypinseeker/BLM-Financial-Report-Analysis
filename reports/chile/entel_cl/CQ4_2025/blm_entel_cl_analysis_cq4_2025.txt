@@ -1,0 +1,179 @@
+────────────────────────────────────────────────────────────────────────────────
+                       BLM Five Looks Strategic Analysis                        
+                                Target: entel_cl                                
+                        Market: chile | Period: CQ4_2025                        
+────────────────────────────────────────────────────────────────────────────────
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 01 TRENDS (PEST Framework)                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Political]
+    ◆ Regulatory Environment
+    ▲ National Digital Strategy
+    ▲ SUBTEL mandates infrastructure sharing for 5G deployment in rural areas
+    ● Chile passes new Telecom Reform Law strengthening SUBTEL enforcement
+  [Economic]
+    ▲ GDP Growth
+    ◆ Inflation
+  [Society]
+    ▲ 5G Adoption Rate
+    ◆ Fiber Broadband Penetration
+  [Technology]
+    ▲ 5G Network Evolution
+    ◆ Fiber/FTTH Deployment
+    ▲ Entel Chile launches 5G SA network in Santiago and 15 cities
+  Industry Lifecycle: late_growth
+  Growth Rate: +7.2% YoY (CQ2_2025 -> CQ4_2025)
+
+  → Key Message: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 02 MARKET/CUSTOMER ($APPEALS)                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Market Snapshot]
+    calendar_quarter: CQ4_2025
+    total_revenue: 1391000.0
+    total_mobile_subscribers_k: 30500.0
+    total_broadband_subscribers_k: 4180.0
+    market_shares: {'entel_cl': 58.3, 'movistar_cl': 17.6, 'wom_cl': 13.3, 'claro_cl': 10.8, 'tigo_chile': 0.0}
+  [Market Changes]
+    ▲ Entel Chile revenue growth 15.9% YoY
+    ▼ Movistar Chile revenue growth 8.9% YoY
+    ▼ WOM Chile revenue growth 6.9% YoY
+    ▼ Claro Chile revenue growth 8.7% YoY
+    ▲ Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable
+  [Customer Segments]
+    Consumer Postpaid Premium (stable)
+    Consumer Mainstream (stable)
+    Consumer Price-Sensitive (shrinking)
+    Enterprise Large (growing)
+  [$APPEALS Scores]
+    Price                [..........] 0.3/5
+    Availability         [#.........] 0.5/5
+    Packaging            [..........] 0.3/5
+    Performance          [..........] 0.4/5
+    Ease of Use          [..........] 0.4/5
+    Assurances           [..........] 0.4/5
+    Lifecycle Cost       [..........] 0.3/5
+    Social/Brand         [..........] 0.4/5
+
+  → Key Message: German telecom market totals EUR 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; gaps in Price, Availability; Market presents a balanced mix of opportunities and challenges.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 03 COMPETITION (Porter's Five Forces)                                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Five Forces]
+    existing_competitors      [!!!] high
+    new_entrants              [!] low
+    substitutes               [!!!] high
+    supplier_power            [!!] medium
+    buyer_power               [!!!] high
+  Overall Intensity: MEDIUM
+  [claro_cl]
+    Weaknesses: 5G Deployment: 5.0/100, Brand Strength: 6.0/100, Customer Service: 5.0/100
+  [tigo_chile]
+  [wom_cl]
+    Weaknesses: 5G Deployment: 7.0/100, Brand Strength: 7.0/100, Customer Service: 7.0/100
+
+  → Key Message: In a 5-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 58% share. Strongest competitive force: Existing Competitors.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 04 SELF (BMC + Capability)                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+  Health Rating: HEALTHY
+  [Financial Health]
+    total_revenue: 811000.0
+    service_revenue: 732000.0
+    ebitda: 243000.0
+    ebitda_margin_pct: 30.0
+    net_income: 60000.0
+  [Business Segments]
+    Mobile               [strong]
+    Fixed Broadband      [strong]
+    B2B                  [strong]
+    TV/Convergence       [strong]
+  [Strengths]
+    + Revenue on growth trajectory
+    + Top 1 in revenue market ranking
+  [Weaknesses]
+    - 5G coverage gap at only 65.0%
+
+  → Key Message: Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: Revenue on growth trajectory; key challenge: 5G coverage gap at only 65.0%; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ SWOT SYNTHESIS                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Strengths]
+    + Revenue on growth trajectory
+    + Top 1 in revenue market ranking
+  [Weaknesses]
+    - 5G coverage gap at only 65.0%
+    - Pressure on margins and market share
+  [Opportunities]
+    ^ Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl
+    ^ National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access
+    ^ SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl
+    ^ Entel Chile revenue growth 15.9% YoY
+    ^ Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable
+  [Threats]
+    v Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl
+    v Movistar Chile revenue growth 8.9% YoY
+    v WOM Chile revenue growth 6.9% YoY
+    v Claro Chile revenue growth 8.7% YoY
+    v Tigo Chile pivots to MVNO model, exits direct network investment
+  [SO Strategies]
+    → Leverage 'Revenue on growth trajectory' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Leverage 'Top 1 in revenue market ranking' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
+  [WO Strategies]
+    → Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Address weakness 'Pressure on margins and market share' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
+  [ST Strategies]
+    → Use strength 'Revenue on growth trajectory' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Use strength 'Top 1 in revenue market ranking' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'.
+  [WT Strategies]
+    → Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Mitigate weakness 'Pressure on margins and market share' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'.
+
+  → Key Message: SWOT analysis identifies 2 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is cautious (WT-dominant).
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 05 OPPORTUNITIES (SPAN Matrix)                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [SPAN Positions]
+    Name                      Attractiveness   Position        Quadrant
+    ──────────────────────────────────────────────────────────────────────
+    SO-1                                 5.6        5.5     grow_invest
+    SO-2                                 5.6        5.5     grow_invest
+    Entel Chile revenue growth 15.9% YoY            5.5        5.0     grow_invest
+    Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s            5.0        5.0     grow_invest
+    Chilean peso strengthens 8% against USD, easing equipment co            5.0        5.0     grow_invest
+    SUBTEL mandates infrastructure sharing for 5G deployment in             5.5        5.0     grow_invest
+    Chile copper mining boom drives enterprise telecom demand            5.0        5.0     grow_invest
+    Entel Chile launches 5G SA network in Santiago and 15 cities            5.5        5.0     grow_invest
+  [Grow/Invest]
+    → SO-1
+    → SO-2
+    → Entel Chile revenue growth 15.9% YoY
+    → Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s
+  [Acquire Skills]
+    → WO-1
+    → WO-2
+  [Priority Ranking]
+    [P0] SO-1 (Market: N/A)
+    [P0] SO-2 (Market: N/A)
+    [P0] Entel Chile revenue growth 15.9% YoY (Market: N/A)
+    [P0] Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s (Market: N/A)
+    [P0] Chilean peso strengthens 8% against USD, easing equipment co (Market: N/A)
+    [P0] SUBTEL mandates infrastructure sharing for 5G deployment in  (Market: N/A)
+
+  → Key Message: SPAN matrix positions 21 opportunities: 19 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 19 grow/invest items for maximum strategic impact.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ DATA PROVENANCE                                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+  Total data points: 19
+  High confidence: 0
+  Medium confidence: 0
+  Low/Estimated: 19
+  Unique sources: 0
+────────────────────────────────────────────────────────────────────────────────

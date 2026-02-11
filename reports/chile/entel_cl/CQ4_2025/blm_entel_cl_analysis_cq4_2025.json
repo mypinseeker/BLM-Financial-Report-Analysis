@@ -1,0 +1,2927 @@
+{
+  "meta": {
+    "target_operator": "entel_cl",
+    "market": "chile",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-11T22:23:25.133809",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "SUBTEL (Subsecretaria de Telecomunicaciones) regulates. Pro-competition: MVNOs enabled, number portability since 2012, net neutrality since 2010. 5G spectrum auction completed 2021. ClaroVTR merger approved 2022 with conditions.",
+            "trend": "Regulatory stance: SUBTEL (Subsecretaria de Telecomunicaciones) regulates. Pro-competition: MVNOs enabled, number portability since 2012, net neutrality since 2010. 5G spectrum auction completed 2021. ClaroVTR merger approved 2022 with conditions.",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect entel_cl",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: SUBTEL (Subsecretaria de Telecomunicaciones) regulates. Pro-competition: MVNOs enabled, number portability since 2012, net neutrality since 2010. 5G spectrum auction completed 2021. ClaroVTR merger approved 2022 with conditions."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "5G adoption: 15%, Fiber penetration: 45%, Mobile penetration: 154%",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: 5G adoption: 15%, Fiber penetration: 45%, Mobile penetration: 154%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
+            "current_status": "SUBTEL issued new regulation mandating tower and passive infrastructure sharing for 5G deployment in rural and underserved areas. Operators must provide access at regulated rates. Measure expected to accelerate rural 5G coverage from 15% to 40% by 2027. Benefits smaller operators (WOM, Tigo) who have limited tower portfolios.",
+            "trend": "SUBTEL issued new regulation mandating tower and passive infrastructure sharing for 5G deployment in rural and underserved areas. Operators must provide access at regulated rates. Measure expected to accelerate rural 5G coverage from 15% to 40% by 2027. Benefits smaller operators (WOM, Tigo) who have limited tower portfolios.",
+            "trend_direction": "uncertain",
+            "industry_impact": "SUBTEL issued new regulation mandating tower and passive infrastructure sharing for 5G deployment in rural and underserved areas. Operators must provide access at regulated rates. Measure expected to accelerate rural 5G coverage from 15% to 40% by 2027. Benefits smaller operators (WOM, Tigo) who have limited tower portfolios.",
+            "company_impact": "Potential impact on entel_cl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.subtel.gob.cl/infrastructure-sharing-regulation-2025/"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Chile passes new Telecom Reform Law strengthening SUBTEL enforcement",
+            "current_status": "Chilean Congress approved telecom reform law giving SUBTEL stronger enforcement powers over service quality, network outage reporting, and consumer protection. New penalties up to 15,000 UTM ($1.1M USD) for service interruptions. Operators must publish quarterly quality dashboards. Law also accelerates municipal permitting for 5G antenna deployment.",
+            "trend": "Chilean Congress approved telecom reform law giving SUBTEL stronger enforcement powers over service quality, network outage reporting, and consumer protection. New penalties up to 15,000 UTM ($1.1M USD) for service interruptions. Operators must publish quarterly quality dashboards. Law also accelerates municipal permitting for 5G antenna deployment.",
+            "trend_direction": "uncertain",
+            "industry_impact": "Chilean Congress approved telecom reform law giving SUBTEL stronger enforcement powers over service quality, network outage reporting, and consumer protection. New penalties up to 15,000 UTM ($1.1M USD) for service interruptions. Operators must publish quarterly quality dashboards. Law also accelerates municipal permitting for 5G antenna deployment.",
+            "company_impact": "Potential impact on entel_cl",
+            "impact_type": "neutral",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.bcn.cl/leychile/telecom-reform-2025/"
+            ],
+            "data_source": "intelligence_events"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 2.5%",
+            "trend": "GDP growth trend: stable (latest 2.5%)",
+            "trend_direction": "stable",
+            "industry_impact": "Strong GDP growth boosts both consumer and enterprise spending",
+            "company_impact": "Supported revenue growth for entel_cl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 2.5%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 3.2%",
+            "trend": "Inflation trend: stable (latest 3.2%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "OPEX pressure for entel_cl",
+            "impact_type": "both",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 3.2%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 15.0% of mobile subscribers",
+            "trend": "5G adoption trend: improving (5.0% -> 15.0%)",
+            "trend_direction": "improving",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for entel_cl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 15.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 45.0%",
+            "trend": "Fiber penetration trend: improving (35.0% -> 45.0%)",
+            "trend_direction": "improving",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for entel_cl",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 45.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in early adoption phase (15.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for entel_cl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 15.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 45.0%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for entel_cl",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 45.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Entel Chile launches 5G SA network in Santiago and 15 cities",
+            "current_status": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
+            "trend": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
+            "trend_direction": "uncertain",
+            "industry_impact": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
+            "company_impact": "Potential impact on entel_cl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.entel.cl/5g-standalone-launch/"
+            ],
+            "data_source": "intelligence_events"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 10/11 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
+          "National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
+          "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment; Entel Chile launches 5G SA network in Santiago and 15 cities",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "EUR 1391.0B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+7.2% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Improving (industry EBITDA margin 27.4%, up from 24.5%)",
+      "industry_concentration": "CR4 = 100% (Entel Chile: 58.3%, Movistar Chile: 17.6%, WOM Chile: 13.3%, Claro Chile: 10.8%)",
+      "industry_lifecycle_stage": "late_growth",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 1391000.0,
+        "total_mobile_subscribers_k": 30500.0,
+        "total_broadband_subscribers_k": 4180.0,
+        "market_shares": {
+          "entel_cl": 58.3,
+          "movistar_cl": 17.6,
+          "wom_cl": 13.3,
+          "claro_cl": 10.8,
+          "tigo_chile": 0.0
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 156.4,
+          "broadband_penetration_pct": 21.4
+        },
+        "operator_count": 5
+      },
+      "changes": [
+        {
+          "change_type": "pricing",
+          "description": "Entel Chile revenue growth 15.9% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "high",
+          "evidence": [
+            "YoY revenue change: +15.9%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Movistar Chile revenue growth 8.9% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +8.9%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "WOM Chile revenue growth 6.9% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +6.9%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Claro Chile revenue growth 8.7% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +8.7%"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Entel reported FY2025 total revenue of CLP 2.1 trillion (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Mobile postpaid net adds +142K for the year. Fixed broadband grew 18% driven by FTTH migration. Enterprise segment grew 8.5% driven by cloud and cybersecurity services. 5G coverage reached 45% population.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.entel.cl/investors/fy2025-results/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chilean peso strengthens 8% against USD, easing equipment costs",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chilean peso appreciated 8% against USD in H2 2025, reaching CLP 820/USD. This reduces USD-denominated network equipment and handset import costs for all operators. Particularly benefits Claro and Movistar whose parent companies report in USD. Entel benefits from lower capex in CLP terms for imported 5G infrastructure.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.bcentral.cl/web/banco-central-de-chile/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "WOM Chile emerges from restructuring with new investor group",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "WOM Chile completed debt restructuring, emerging with $800M reduced debt and new investor consortium led by Latin American infrastructure funds. Company retains 7.2M mobile subscribers and 5G spectrum. New management committed to continued 5G investment and potential convergence strategy via MVNO fixed broadband partnership.",
+          "severity": "high",
+          "evidence": [
+            "https://www.reuters.com/business/wom-chile-emerges-restructuring/"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL issued new regulation mandating tower and passive infrastructure sharing for 5G deployment in rural and underserved areas. Operators must provide access at regulated rates. Measure expected to accelerate rural 5G coverage from 15% to 40% by 2027. Benefits smaller operators (WOM, Tigo) who have limited tower portfolios.",
+          "severity": "high",
+          "evidence": [
+            "https://www.subtel.gob.cl/infrastructure-sharing-regulation-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile copper mining boom drives enterprise telecom demand",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Record copper prices ($4.80/lb) and lithium mining expansion drive enterprise telecom demand in Chile. Mining companies investing in private 5G networks, IoT sensors, and autonomous vehicle connectivity. Entel and Movistar competing for enterprise contracts worth $50-100M each. BHP, Codelco, and SQM are largest enterprise telecom customers.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.mch.cl/mining-telecom-demand-2025/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Tigo Chile pivots to MVNO model, exits direct network investment",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Millicom's Tigo Chile announced strategic pivot from MNO to MVNO model, partnering with Entel for network access. Decision driven by Chile's intense competition and Tigo's sub-3% mobile market share. Move reduces capex burden and allows focus on digital services and enterprise segments. Existing spectrum returned to SUBTEL.",
+          "severity": "high",
+          "evidence": [
+            "https://www.millicom.com/investors/tigo-chile-strategic-review/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Movistar Chile accelerates FTTH deployment: 3.5M homes passed",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Telefonica's Movistar Chile reached 3.5M homes passed with FTTH, covering 55% of urban households. FTTH subscriber base grew 32% YoY to 1.4M connections. Average FTTH speed increased to 600 Mbps. Company targets 4.5M homes passed by end of 2026, directly competing with Entel's expanding fiber footprint.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.com/en/communication-room/movistar-chile-fiber/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Claro Chile invests $300M in 5G and fiber expansion",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "America Movil's Claro Chile announced $300M investment plan for 2025-2026 focused on 5G network expansion and FTTH deployment. Targets 1,500 new 5G sites and 500K additional fiber homes. Strategy shifts from pure mobile play to convergent (mobile+fiber) offering to compete with Entel and Movistar bundles.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.americamovil.com/investors/claro-chile-capex-plan-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Entel Chile launches 5G SA network in Santiago and 15 cities",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
+          "severity": "high",
+          "evidence": [
+            "https://www.entel.cl/5g-standalone-launch/"
+          ]
+        }
+      ],
+      "opportunities": [
+        {
+          "change_type": "pricing",
+          "description": "Entel Chile revenue growth 15.9% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "high",
+          "evidence": [
+            "YoY revenue change: +15.9%"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Entel reported FY2025 total revenue of CLP 2.1 trillion (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Mobile postpaid net adds +142K for the year. Fixed broadband grew 18% driven by FTTH migration. Enterprise segment grew 8.5% driven by cloud and cybersecurity services. 5G coverage reached 45% population.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.entel.cl/investors/fy2025-results/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chilean peso strengthens 8% against USD, easing equipment costs",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chilean peso appreciated 8% against USD in H2 2025, reaching CLP 820/USD. This reduces USD-denominated network equipment and handset import costs for all operators. Particularly benefits Claro and Movistar whose parent companies report in USD. Entel benefits from lower capex in CLP terms for imported 5G infrastructure.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.bcentral.cl/web/banco-central-de-chile/"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL issued new regulation mandating tower and passive infrastructure sharing for 5G deployment in rural and underserved areas. Operators must provide access at regulated rates. Measure expected to accelerate rural 5G coverage from 15% to 40% by 2027. Benefits smaller operators (WOM, Tigo) who have limited tower portfolios.",
+          "severity": "high",
+          "evidence": [
+            "https://www.subtel.gob.cl/infrastructure-sharing-regulation-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile copper mining boom drives enterprise telecom demand",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Record copper prices ($4.80/lb) and lithium mining expansion drive enterprise telecom demand in Chile. Mining companies investing in private 5G networks, IoT sensors, and autonomous vehicle connectivity. Entel and Movistar competing for enterprise contracts worth $50-100M each. BHP, Codelco, and SQM are largest enterprise telecom customers.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.mch.cl/mining-telecom-demand-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Entel Chile launches 5G SA network in Santiago and 15 cities",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
+          "severity": "high",
+          "evidence": [
+            "https://www.entel.cl/5g-standalone-launch/"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "change_type": "pricing",
+          "description": "Movistar Chile revenue growth 8.9% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +8.9%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "WOM Chile revenue growth 6.9% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +6.9%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Claro Chile revenue growth 8.7% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +8.7%"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Tigo Chile pivots to MVNO model, exits direct network investment",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Millicom's Tigo Chile announced strategic pivot from MNO to MVNO model, partnering with Entel for network access. Decision driven by Chile's intense competition and Tigo's sub-3% mobile market share. Move reduces capex burden and allows focus on digital services and enterprise segments. Existing spectrum returned to SUBTEL.",
+          "severity": "high",
+          "evidence": [
+            "https://www.millicom.com/investors/tigo-chile-strategic-review/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Movistar Chile accelerates FTTH deployment: 3.5M homes passed",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Telefonica's Movistar Chile reached 3.5M homes passed with FTTH, covering 55% of urban households. FTTH subscriber base grew 32% YoY to 1.4M connections. Average FTTH speed increased to 600 Mbps. Company targets 4.5M homes passed by end of 2026, directly competing with Entel's expanding fiber footprint.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.com/en/communication-room/movistar-chile-fiber/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Claro Chile invests $300M in 5G and fiber expansion",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "America Movil's Claro Chile announced $300M investment plan for 2025-2026 focused on 5G network expansion and FTTH deployment. Targets 1,500 new 5G sites and 500K additional fiber homes. Strategy shifts from pure mobile play to convergent (mobile+fiber) offering to compete with Entel and Movistar bundles.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.americamovil.com/investors/claro-chile-capex-plan-2025/"
+          ]
+        }
+      ],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Postpaid Premium",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "5G coverage and experiences",
+            "Premium convergent bundles (fiber+mobile+streaming)"
+          ],
+          "pain_points": [
+            "5G deployment slower than expected",
+            "Complex multi-play pricing"
+          ],
+          "purchase_decision_factors": [
+            "Network quality",
+            "5G availability",
+            "Bundle value",
+            "Brand perception"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Mainstream",
+          "segment_type": "consumer",
+          "size_estimate": "~10.2M subscribers",
+          "growth_trend": "stable",
+          "our_share": "~39% of postpaid",
+          "unmet_needs": [
+            "Better value mobile plans",
+            "Reliable home broadband"
+          ],
+          "pain_points": [
+            "Price competition driving confusion",
+            "Service quality inconsistency"
+          ],
+          "purchase_decision_factors": [
+            "Price-performance ratio",
+            "Data volume",
+            "Contract flexibility"
+          ],
+          "competitor_gaps": [
+            "O2 aggressive on price but weaker on network quality",
+            "1&1 limited by network build-out"
+          ],
+          "opportunity": "Value-for-money bundles combining mobile + broadband"
+        },
+        {
+          "segment_name": "Consumer Price-Sensitive",
+          "segment_type": "consumer",
+          "size_estimate": "~8.3M subscribers",
+          "growth_trend": "shrinking",
+          "our_share": "~31% of prepaid",
+          "unmet_needs": [
+            "Ultra-low-cost data plans",
+            "No-contract flexibility"
+          ],
+          "pain_points": [
+            "WOM disruption raising expectations",
+            "Data caps at budget tier"
+          ],
+          "purchase_decision_factors": [
+            "Monthly cost",
+            "Data allowance",
+            "No-contract options"
+          ],
+          "competitor_gaps": [
+            "1&1 and O2 sub-brands dominate this space"
+          ],
+          "opportunity": "Selective prepaid-to-postpaid migration campaigns"
+        },
+        {
+          "segment_name": "Enterprise Large",
+          "segment_type": "enterprise",
+          "size_estimate": "~5K customers (top 5%)",
+          "growth_trend": "growing",
+          "our_share": "~39% of B2B base",
+          "unmet_needs": [
+            "SD-WAN and multi-cloud solutions",
+            "Private 5G for mining and logistics"
+          ],
+          "pain_points": [
+            "Limited 5G enterprise solutions",
+            "High cost of dedicated circuits"
+          ],
+          "purchase_decision_factors": [
+            "Network reliability",
+            "SLA guarantees",
+            "Innovation capability"
+          ],
+          "competitor_gaps": [
+            "DT dominates with T-Systems for large enterprise ICT",
+            "Opportunity in cloud and security managed services"
+          ],
+          "opportunity": "Managed connectivity + cloud services for digital transformation"
+        },
+        {
+          "segment_name": "Enterprise SME",
+          "segment_type": "enterprise",
+          "size_estimate": "~104K customers",
+          "growth_trend": "stable",
+          "our_share": "~39% of B2B base",
+          "unmet_needs": [
+            "Simple all-in-one business solutions",
+            "Affordable cloud hosting"
+          ],
+          "pain_points": [
+            "Complex B2B pricing",
+            "Slow provisioning"
+          ],
+          "purchase_decision_factors": [
+            "Price",
+            "Simplicity",
+            "Reliability"
+          ],
+          "competitor_gaps": [
+            "Most operators lack simplified SME bundles"
+          ],
+          "opportunity": "Simple all-in-one business packages with digital tools"
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.3,
+          "competitor_scores": {
+            "claro_cl": 0.3,
+            "movistar_cl": 0.3,
+            "wom_cl": 0.5
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Price by 0.1 points. Leader: wom_cl (0.5/5.0)"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 0.5,
+          "competitor_scores": {
+            "claro_cl": 0.3,
+            "movistar_cl": 0.4,
+            "wom_cl": 0.2
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Market leader in Availability (score 0.5/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.3,
+          "competitor_scores": {
+            "claro_cl": 0.2,
+            "movistar_cl": 0.3,
+            "wom_cl": 0.4
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Above average in Packaging but 0.1 points behind leader (wom_cl: 0.4/5.0)"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 0.4,
+          "competitor_scores": {
+            "claro_cl": 0.3,
+            "movistar_cl": 0.3,
+            "wom_cl": 0.3
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Market leader in Performance (score 0.4/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 0.4,
+          "competitor_scores": {
+            "claro_cl": 0.3,
+            "movistar_cl": 0.3,
+            "wom_cl": 0.4
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Market leader in Ease of Use (score 0.4/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 0.4,
+          "competitor_scores": {
+            "claro_cl": 0.2,
+            "movistar_cl": 0.3,
+            "wom_cl": 0.1
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Market leader in Assurances (score 0.4/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.3,
+          "competitor_scores": {
+            "claro_cl": 0.3,
+            "movistar_cl": 0.3,
+            "wom_cl": 0.5
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Lifecycle Cost by 0.1 points. Leader: wom_cl (0.5/5.0)"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 0.4,
+          "competitor_scores": {
+            "claro_cl": 0.3,
+            "movistar_cl": 0.3,
+            "wom_cl": 0.3
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Market leader in Social/Brand (score 0.4/5.0)"
+        }
+      ],
+      "customer_value_migration": "Value migration trending upward: customers willing to pay more for premium connectivity and convergent bundles. Focus on upselling and cross-selling opportunities.",
+      "market_outlook": "mixed",
+      "key_message": "German telecom market totals EUR 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; gaps in Price, Availability; Market presents a balanced mix of opportunities and challenges."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "5 active operators in the market",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 58% of market revenue (total: 1391000M EUR)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from +2.2% to +6.8% (spread: 4.6pp)",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 25.0%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 58% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.53%/month. Highest: 1.65% indicating high willingness to switch.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 60%. Moderate contract lock-in moderately constrains buyer mobility.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "claro_cl": {
+          "operator": "Claro Chile",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 150000.0,
+            "service_revenue": 133000.0,
+            "service_revenue_growth_pct": 2.2,
+            "ebitda": 33000.0,
+            "ebitda_margin_pct": 22.0,
+            "ebitda_growth_pct": 6.0,
+            "capex": 30000.0,
+            "capex_to_revenue_pct": 20.0,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 5350.0,
+            "mobile_postpaid_k": 3030.0,
+            "mobile_net_adds_k": 15.0,
+            "mobile_churn_pct": 1.62,
+            "mobile_arpu": 6500.0,
+            "broadband_total_k": 1550.0,
+            "broadband_net_adds_k": 5.0,
+            "tv_total_k": 990.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "flat",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 50.0,
+            "four_g_coverage_pct": 96.0,
+            "fiber_homepass_k": 1200.0,
+            "cable_homepass_k": 3500.0,
+            "cable_docsis31_pct": 70.0,
+            "technology_mix": {
+              "edge_nodes": 3,
+              "core_vendor": "Ericsson",
+              "5g_sa_status": "NSA commercial only",
+              "spectrum_mhz": {
+                "700": 20,
+                "1900": 20,
+                "2600": 40,
+                "3500": 60
+              },
+              "mobile_vendor": "Ericsson + Nokia",
+              "5g_base_stations": 2800,
+              "virtualization_pct": 30
+            }
+          },
+          "product_portfolio": [],
+          "new_product_pipeline": [],
+          "growth_strategy": "",
+          "supply_chain_status": "",
+          "ecosystem_partners": [],
+          "core_control_points": [],
+          "business_model": "",
+          "org_structure": "",
+          "incentive_system": "",
+          "talent_culture": "",
+          "ma_activity": [],
+          "strengths": [],
+          "weaknesses": [
+            "5G Deployment: 5.0/100",
+            "Brand Strength: 6.0/100",
+            "Customer Service: 5.0/100",
+            "Digital Services: 6.0/100",
+            "Enterprise Solutions: 5.0/100",
+            "Network Coverage: 7.0/100",
+            "Network Quality: 6.0/100",
+            "Pricing Competitiveness: 7.0/100",
+            "Product Innovation: 5.0/100",
+            "Sustainability: 5.0/100",
+            "brand_strength: 6.0/100",
+            "customer_experience: 5.0/100",
+            "digital_capabilities: 6.0/100",
+            "financial_strength: 6.0/100",
+            "innovation: 5.0/100",
+            "market_share: 5.0/100",
+            "network_quality: 6.0/100",
+            "pricing_competitiveness: 7.0/100"
+          ],
+          "problems": [],
+          "likely_future_actions": [
+            "Claro Chile is likely to continue aggressive network expansion (capex/revenue at 20% with growing revenue).",
+            "Claro Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "Claro Chile will need significant network investment (coverage score: 7.0/100)."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Claro Chile's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Claro Chile is weak in: 5G Deployment, Brand Strength, Customer Service. Target can differentiate in these dimensions.",
+              "evidence": [
+                "5G Deployment: 5.0/100",
+                "Brand Strength: 6.0/100",
+                "Customer Service: 5.0/100"
+              ],
+              "suggested_action": "Invest in 5G Deployment, Brand Strength, Customer Service to capture customers dissatisfied with Claro Chile."
+            }
+          ]
+        },
+        "tigo_chile": {
+          "operator": "Tigo Chile",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ3_2025",
+            "revenue": 12.5,
+            "service_revenue": 10.8,
+            "service_revenue_growth_pct": -18.0,
+            "ebitda": 2.0,
+            "ebitda_margin_pct": 16.0,
+            "ebitda_growth_pct": -25.0,
+            "capex": 0.8,
+            "capex_to_revenue_pct": 6.4,
+            "revenue_trend": "declining",
+            "margin_trend": "declining",
+            "quarters_analyzed": 3
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ3_2025",
+            "mobile_total_k": 510.0,
+            "mobile_postpaid_k": 155.0,
+            "mobile_net_adds_k": -70.0,
+            "mobile_churn_pct": 5.8,
+            "mobile_arpu": 5200.0,
+            "broadband_total_k": 18.0,
+            "broadband_net_adds_k": -2.0,
+            "tv_total_k": 0.0,
+            "mobile_trend": "declining",
+            "broadband_trend": "declining",
+            "arpu_trend": "declining",
+            "quarters_analyzed": 3
+          },
+          "network_status": {
+            "status": "no_data"
+          },
+          "product_portfolio": [],
+          "new_product_pipeline": [],
+          "growth_strategy": "",
+          "supply_chain_status": "",
+          "ecosystem_partners": [],
+          "core_control_points": [],
+          "business_model": "",
+          "org_structure": "",
+          "incentive_system": "",
+          "talent_culture": "",
+          "ma_activity": [],
+          "strengths": [],
+          "weaknesses": [],
+          "problems": [],
+          "likely_future_actions": [
+            "Tigo Chile may pursue cost optimization or strategic pivot given declining revenue trend.",
+            "Tigo Chile may accelerate fiber migration or FWA push to counter broadband subscriber losses."
+          ],
+          "implications": []
+        },
+        "wom_cl": {
+          "operator": "WOM Chile",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 185000.0,
+            "service_revenue": 172000.0,
+            "service_revenue_growth_pct": 6.8,
+            "ebitda": 37000.0,
+            "ebitda_margin_pct": 20.0,
+            "ebitda_growth_pct": 12.0,
+            "capex": 28000.0,
+            "capex_to_revenue_pct": 15.1,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 6700.0,
+            "mobile_postpaid_k": 3700.0,
+            "mobile_net_adds_k": 55.0,
+            "mobile_churn_pct": 1.65,
+            "mobile_arpu": 5200.0,
+            "broadband_total_k": 120.0,
+            "broadband_net_adds_k": 5.0,
+            "tv_total_k": 0.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 35.0,
+            "four_g_coverage_pct": 92.0,
+            "fiber_homepass_k": 0.0,
+            "cable_homepass_k": 0.0,
+            "cable_docsis31_pct": 0.0,
+            "technology_mix": {
+              "edge_nodes": 2,
+              "core_vendor": "Samsung",
+              "5g_sa_status": "SA commercial since 2024 (first in Chile)",
+              "spectrum_mhz": {
+                "700": 10,
+                "1900": 20,
+                "2600": 20,
+                "3500": 80
+              },
+              "mobile_vendor": "Samsung (5G), Nokia (4G legacy)",
+              "5g_base_stations": 1800,
+              "virtualization_pct": 60
+            }
+          },
+          "product_portfolio": [],
+          "new_product_pipeline": [],
+          "growth_strategy": "",
+          "supply_chain_status": "",
+          "ecosystem_partners": [],
+          "core_control_points": [],
+          "business_model": "",
+          "org_structure": "",
+          "incentive_system": "",
+          "talent_culture": "",
+          "ma_activity": [],
+          "strengths": [],
+          "weaknesses": [
+            "5G Deployment: 7.0/100",
+            "Brand Strength: 7.0/100",
+            "Customer Service: 7.0/100",
+            "Digital Services: 8.0/100",
+            "Enterprise Solutions: 3.0/100",
+            "Network Coverage: 5.0/100",
+            "Network Quality: 5.0/100",
+            "Pricing Competitiveness: 9.0/100",
+            "Product Innovation: 8.0/100",
+            "Sustainability: 4.0/100",
+            "brand_strength: 7.0/100",
+            "customer_experience: 7.0/100",
+            "digital_capabilities: 8.0/100",
+            "financial_strength: 4.0/100",
+            "innovation: 8.0/100",
+            "market_share: 6.0/100",
+            "network_quality: 5.0/100",
+            "pricing_competitiveness: 9.0/100"
+          ],
+          "problems": [],
+          "likely_future_actions": [
+            "WOM Chile is likely to continue aggressive network expansion (capex/revenue at 15% with growing revenue).",
+            "WOM Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "WOM Chile will need significant network investment (coverage score: 5.0/100)."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "WOM Chile's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "WOM Chile is weak in: 5G Deployment, Brand Strength, Customer Service. Target can differentiate in these dimensions.",
+              "evidence": [
+                "5G Deployment: 7.0/100",
+                "Brand Strength: 7.0/100",
+                "Customer Service: 7.0/100"
+              ],
+              "suggested_action": "Invest in 5G Deployment, Brand Strength, Customer Service to capture customers dissatisfied with WOM Chile."
+            }
+          ]
+        },
+        "movistar_cl": {
+          "operator": "Movistar Chile",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 245000.0,
+            "service_revenue": 220000.0,
+            "service_revenue_growth_pct": 3.2,
+            "ebitda": 68600.0,
+            "ebitda_margin_pct": 28.0,
+            "ebitda_growth_pct": 5.5,
+            "capex": 44000.0,
+            "capex_to_revenue_pct": 18.0,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 7550.0,
+            "mobile_postpaid_k": 4650.0,
+            "mobile_net_adds_k": 25.0,
+            "mobile_churn_pct": 1.52,
+            "mobile_arpu": 7500.0,
+            "broadband_total_k": 1950.0,
+            "broadband_net_adds_k": 12.0,
+            "tv_total_k": 740.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 55.0,
+            "four_g_coverage_pct": 97.0,
+            "fiber_homepass_k": 3200.0,
+            "cable_homepass_k": 0.0,
+            "cable_docsis31_pct": 0.0,
+            "technology_mix": {
+              "edge_nodes": 4,
+              "core_vendor": "Nokia",
+              "5g_sa_status": "NSA commercial only",
+              "spectrum_mhz": {
+                "700": 20,
+                "1900": 40,
+                "2100": 30,
+                "2600": 30,
+                "3500": 60
+              },
+              "mobile_vendor": "Nokia + Huawei (legacy)",
+              "5g_base_stations": 3500,
+              "virtualization_pct": 35
+            }
+          },
+          "product_portfolio": [],
+          "new_product_pipeline": [],
+          "growth_strategy": "",
+          "supply_chain_status": "",
+          "ecosystem_partners": [],
+          "core_control_points": [],
+          "business_model": "",
+          "org_structure": "",
+          "incentive_system": "",
+          "talent_culture": "",
+          "ma_activity": [],
+          "strengths": [],
+          "weaknesses": [
+            "5G Deployment: 6.0/100",
+            "Brand Strength: 7.0/100",
+            "Customer Service: 6.0/100",
+            "Digital Services: 7.0/100",
+            "Enterprise Solutions: 7.0/100",
+            "Network Coverage: 8.0/100",
+            "Network Quality: 7.0/100",
+            "Pricing Competitiveness: 6.0/100",
+            "Product Innovation: 6.0/100",
+            "Sustainability: 7.0/100",
+            "brand_strength: 7.0/100",
+            "customer_experience: 6.0/100",
+            "digital_capabilities: 7.0/100",
+            "financial_strength: 7.0/100",
+            "innovation: 6.0/100",
+            "market_share: 7.0/100",
+            "network_quality: 7.0/100",
+            "pricing_competitiveness: 6.0/100"
+          ],
+          "problems": [],
+          "likely_future_actions": [
+            "Movistar Chile is likely to continue aggressive network expansion (capex/revenue at 18% with growing revenue).",
+            "Movistar Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "Movistar Chile will need significant network investment (coverage score: 8.0/100)."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Movistar Chile's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Movistar Chile is weak in: 5G Deployment, Brand Strength, Customer Service. Target can differentiate in these dimensions.",
+              "evidence": [
+                "5G Deployment: 6.0/100",
+                "Brand Strength: 7.0/100",
+                "Customer Service: 6.0/100"
+              ],
+              "suggested_action": "Invest in 5G Deployment, Brand Strength, Customer Service to capture customers dissatisfied with Movistar Chile."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "claro_cl": 150000.0,
+          "wom_cl": 185000.0,
+          "entel_cl": 811000.0,
+          "movistar_cl": 245000.0
+        },
+        "revenue_growth": {
+          "claro_cl": 2.2,
+          "wom_cl": 6.8,
+          "entel_cl": 5.5,
+          "movistar_cl": 3.2
+        },
+        "ebitda_margin": {
+          "claro_cl": 22.0,
+          "wom_cl": 20.0,
+          "entel_cl": 30.0,
+          "movistar_cl": 28.0
+        },
+        "subscribers": {
+          "claro_cl": 5350.0,
+          "wom_cl": 6700.0,
+          "entel_cl": 10900.0,
+          "movistar_cl": 7550.0
+        },
+        "arpu": {
+          "claro_cl": 6500.0,
+          "wom_cl": 5200.0,
+          "entel_cl": 9500.0,
+          "movistar_cl": 7500.0
+        },
+        "churn": {
+          "claro_cl": 1.62,
+          "wom_cl": 1.65,
+          "entel_cl": 1.32,
+          "movistar_cl": 1.52
+        },
+        "5g_coverage": {
+          "claro_cl": 50.0,
+          "wom_cl": 35.0,
+          "entel_cl": 65.0,
+          "movistar_cl": 55.0
+        }
+      },
+      "competitive_landscape": "The market comprises 5 active operators: Claro Chile, Tigo Chile, WOM Chile, Entel Chile, Movistar Chile. Overall competition intensity is assessed as medium. Revenue ranking: Entel Chile (811000M), Movistar Chile (245000M), WOM Chile (185000M), Claro Chile (150000M). Five Forces: Existing Competitors: high; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: high.",
+      "key_message": "In a 5-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 58% share. Strongest competitive force: Existing Competitors."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 811000.0,
+        "service_revenue": 732000.0,
+        "ebitda": 243000.0,
+        "ebitda_margin_pct": 30.0,
+        "net_income": 60000.0,
+        "capex": 125000.0,
+        "capex_to_revenue_pct": 15.4,
+        "opex": 568000.0,
+        "employees": 5400,
+        "revenue_qoq_pct": 4.65,
+        "revenue_yoy_pct": 15.86,
+        "ebitda_qoq_pct": 6.58,
+        "ebitda_growth_pct": 6.5,
+        "service_revenue_growth_pct": 5.5,
+        "revenue_trend": [
+          649000.0,
+          660000.0,
+          675000.0,
+          700000.0,
+          720000.0,
+          745000.0,
+          775000.0,
+          811000.0
+        ],
+        "ebitda_trend": [
+          182000.0,
+          186000.0,
+          192000.0,
+          200000.0,
+          208000.0,
+          216000.0,
+          228000.0,
+          243000.0
+        ],
+        "margin_trend": [
+          28.0,
+          28.2,
+          28.4,
+          28.6,
+          28.9,
+          29.0,
+          29.4,
+          30.0
+        ],
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 538000.0,
+          "share_pct": 66.3
+        },
+        "fixed_service_revenue": {
+          "value": 128000.0,
+          "share_pct": 15.8
+        },
+        "b2b_revenue": {
+          "value": 66000.0,
+          "share_pct": 8.1
+        },
+        "tv_revenue": {
+          "value": 7000.0,
+          "share_pct": 0.9
+        },
+        "wholesale_revenue": {
+          "value": 19000.0,
+          "share_pct": 2.3
+        },
+        "other_revenue": {
+          "value": 53000.0,
+          "share_pct": 6.5
+        },
+        "total_revenue": 811000.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 5,
+        "revenue_rank": 1,
+        "total_revenue": 811000.0,
+        "revenue_market_share_pct": 58.3,
+        "subscriber_rank": 1,
+        "mobile_subscriber_share_pct": 35.7,
+        "broadband_subscriber_share_pct": 13.4,
+        "competitors": {
+          "movistar_cl": {
+            "display_name": "Movistar Chile",
+            "total_revenue": 245000.0,
+            "mobile_total_k": 7550.0,
+            "broadband_total_k": 1950.0
+          },
+          "wom_cl": {
+            "display_name": "WOM Chile",
+            "total_revenue": 185000.0,
+            "mobile_total_k": 6700.0,
+            "broadband_total_k": 120.0
+          },
+          "claro_cl": {
+            "display_name": "Claro Chile",
+            "total_revenue": 150000.0,
+            "mobile_total_k": 5350.0,
+            "broadband_total_k": 1550.0
+          },
+          "tigo_chile": {
+            "display_name": "Tigo Chile",
+            "total_revenue": null,
+            "mobile_total_k": null,
+            "broadband_total_k": null
+          }
+        }
+      },
+      "share_trends": {
+        "revenue_share_latest": 58.3,
+        "mobile_share_latest": 35.7,
+        "broadband_share_latest": 13.4
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 538000.0,
+            "mobile_service_growth_pct": 6.2,
+            "mobile_total_k": 10900.0,
+            "mobile_postpaid_k": 7200.0,
+            "mobile_prepaid_k": 3700.0,
+            "mobile_net_adds_k": 45.0,
+            "mobile_churn_pct": 1.32,
+            "mobile_arpu": 9500.0,
+            "iot_connections_k": 1200.0
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 538000.0,
+              "previous_value": 512000.0,
+              "yoy_value": 458000.0,
+              "change_qoq": 5.08,
+              "change_yoy": 17.47,
+              "direction": "improving",
+              "significance": "significant"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 10900.0,
+              "previous_value": 10800.0,
+              "yoy_value": 10500.0,
+              "change_qoq": 0.93,
+              "change_yoy": 3.81,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 9500.0,
+              "previous_value": 9200.0,
+              "yoy_value": 8800.0,
+              "change_qoq": 3.26,
+              "change_yoy": 7.95,
+              "direction": "improving",
+              "significance": "moderate"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              420000.0,
+              428000.0,
+              440000.0,
+              458000.0,
+              472000.0,
+              490000.0,
+              512000.0,
+              538000.0
+            ],
+            "subscribers": [
+              10200.0,
+              10300.0,
+              10400.0,
+              10500.0,
+              10600.0,
+              10700.0,
+              10800.0,
+              10900.0
+            ],
+            "arpu": [
+              8500.0,
+              8600.0,
+              8700.0,
+              8800.0,
+              8900.0,
+              9000.0,
+              9200.0,
+              9500.0
+            ],
+            "churn": [
+              1.5,
+              1.48,
+              1.45,
+              1.42,
+              1.4,
+              1.38,
+              1.35,
+              1.32
+            ]
+          },
+          "competitor_comparison": {
+            "Movistar Chile": {
+              "mobile_service_revenue": 129000.0,
+              "mobile_total_k": 7550.0,
+              "mobile_arpu": 7500.0,
+              "mobile_churn_pct": 1.52
+            },
+            "WOM Chile": {
+              "mobile_service_revenue": 162000.0,
+              "mobile_total_k": 6700.0,
+              "mobile_arpu": 5200.0,
+              "mobile_churn_pct": 1.65
+            },
+            "Claro Chile": {
+              "mobile_service_revenue": 68000.0,
+              "mobile_total_k": 5350.0,
+              "mobile_arpu": 6500.0,
+              "mobile_churn_pct": 1.62
+            },
+            "Tigo Chile": {
+              "mobile_service_revenue": null,
+              "mobile_total_k": null,
+              "mobile_arpu": null,
+              "mobile_churn_pct": null
+            }
+          },
+          "attributions": [],
+          "health_status": "strong",
+          "key_message": "Mobile service revenue at EUR 538000.0M; up 6.2% YoY; ARPU EUR 9500.0",
+          "action_required": ""
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 128000.0,
+            "fixed_service_growth_pct": 3.2,
+            "broadband_total_k": 560.0,
+            "broadband_net_adds_k": 10.0,
+            "broadband_cable_k": 0.0,
+            "broadband_fiber_k": 440.0,
+            "broadband_dsl_k": 120.0,
+            "broadband_arpu": 26000.0
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 128000.0,
+              "previous_value": 124000.0,
+              "yoy_value": 116000.0,
+              "change_qoq": 3.23,
+              "change_yoy": 10.34,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 560.0,
+              "previous_value": 540.0,
+              "yoy_value": 480.0,
+              "change_qoq": 3.7,
+              "change_yoy": 16.67,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 26000.0,
+              "previous_value": 25500.0,
+              "yoy_value": 24800.0,
+              "change_qoq": 1.96,
+              "change_yoy": 4.84,
+              "direction": "improving",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              110000.0,
+              112000.0,
+              114000.0,
+              116000.0,
+              118000.0,
+              121000.0,
+              124000.0,
+              128000.0
+            ],
+            "subscribers": [
+              420.0,
+              440.0,
+              460.0,
+              480.0,
+              500.0,
+              520.0,
+              540.0,
+              560.0
+            ],
+            "arpu": [
+              24000.0,
+              24200.0,
+              24500.0,
+              24800.0,
+              25000.0,
+              25200.0,
+              25500.0,
+              26000.0
+            ],
+            "fiber": [
+              300.0,
+              320.0,
+              340.0,
+              360.0,
+              380.0,
+              400.0,
+              420.0,
+              440.0
+            ],
+            "cable": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "competitor_comparison": {
+            "Movistar Chile": {
+              "fixed_service_revenue": 76000.0,
+              "broadband_total_k": 1950.0,
+              "broadband_fiber_k": 1100.0
+            },
+            "WOM Chile": {
+              "fixed_service_revenue": 5000.0,
+              "broadband_total_k": 120.0,
+              "broadband_fiber_k": 0.0
+            },
+            "Claro Chile": {
+              "fixed_service_revenue": 56000.0,
+              "broadband_total_k": 1550.0,
+              "broadband_fiber_k": 460.0
+            },
+            "Tigo Chile": {
+              "fixed_service_revenue": null,
+              "broadband_total_k": null,
+              "broadband_fiber_k": null
+            }
+          },
+          "attributions": [],
+          "health_status": "strong",
+          "key_message": "Fixed service revenue EUR 128000.0M; growth +3.2% YoY; Fiber subs 440K",
+          "action_required": ""
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 66000.0,
+            "b2b_growth_pct": 5.0,
+            "b2b_customers_k": 42.0,
+            "b2b_share_of_revenue_pct": 8.1
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 66000.0,
+              "previous_value": 64000.0,
+              "yoy_value": 58000.0,
+              "change_qoq": 3.12,
+              "change_yoy": 13.79,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "customers",
+              "current_value": 42.0,
+              "previous_value": 41.0,
+              "yoy_value": 38.0,
+              "change_qoq": 2.44,
+              "change_yoy": 10.53,
+              "direction": "improving",
+              "significance": "moderate"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              55000.0,
+              55000.0,
+              56000.0,
+              58000.0,
+              60000.0,
+              61000.0,
+              64000.0,
+              66000.0
+            ],
+            "customers": [
+              35.0,
+              36.0,
+              37.0,
+              38.0,
+              39.0,
+              40.0,
+              41.0,
+              42.0
+            ]
+          },
+          "competitor_comparison": {
+            "Movistar Chile": {
+              "b2b_revenue": 15000.0,
+              "b2b_growth_pct": 4.0,
+              "b2b_customers_k": 34.0
+            },
+            "WOM Chile": {
+              "b2b_revenue": 5000.0,
+              "b2b_growth_pct": 2.0,
+              "b2b_customers_k": 12.0
+            },
+            "Claro Chile": {
+              "b2b_revenue": 9000.0,
+              "b2b_growth_pct": 3.0,
+              "b2b_customers_k": 21.0
+            },
+            "Tigo Chile": {
+              "b2b_revenue": null,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": null
+            }
+          },
+          "attributions": [],
+          "health_status": "strong",
+          "key_message": "B2B revenue EUR 66000.0M; growth +5.0% YoY; 8.1% of total revenue",
+          "action_required": ""
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": 7000.0,
+            "tv_total_k": 120.0,
+            "tv_net_adds_k": 5.0,
+            "fmc_total_k": 220.0,
+            "fmc_penetration_pct": 39.3
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 7000.0,
+              "previous_value": 6500.0,
+              "yoy_value": 5800.0,
+              "change_qoq": 7.69,
+              "change_yoy": 20.69,
+              "direction": "improving",
+              "significance": "significant"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 120.0,
+              "previous_value": 110.0,
+              "yoy_value": 100.0,
+              "change_qoq": 9.09,
+              "change_yoy": 20.0,
+              "direction": "improving",
+              "significance": "significant"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": 220.0,
+              "previous_value": 210.0,
+              "yoy_value": 180.0,
+              "change_qoq": 4.76,
+              "change_yoy": 22.22,
+              "direction": "improving",
+              "significance": "moderate"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              5000.0,
+              5200.0,
+              5500.0,
+              5800.0,
+              6000.0,
+              6300.0,
+              6500.0,
+              7000.0
+            ],
+            "tv_subscribers": [
+              80.0,
+              90.0,
+              90.0,
+              100.0,
+              100.0,
+              110.0,
+              110.0,
+              120.0
+            ],
+            "fmc_subscribers": [
+              150.0,
+              160.0,
+              170.0,
+              180.0,
+              190.0,
+              200.0,
+              210.0,
+              220.0
+            ],
+            "fmc_penetration": [
+              35.7,
+              36.4,
+              37.0,
+              37.5,
+              38.0,
+              38.5,
+              38.9,
+              39.3
+            ]
+          },
+          "competitor_comparison": {
+            "Movistar Chile": {
+              "tv_total_k": 740.0,
+              "fmc_total_k": 730.0,
+              "fmc_penetration_pct": 37.4
+            },
+            "WOM Chile": {
+              "tv_total_k": 0.0,
+              "fmc_total_k": 0.0,
+              "fmc_penetration_pct": 0.0
+            },
+            "Claro Chile": {
+              "tv_total_k": 990.0,
+              "fmc_total_k": 580.0,
+              "fmc_penetration_pct": 37.4
+            },
+            "Tigo Chile": {
+              "tv_total_k": null,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [],
+          "health_status": "strong",
+          "key_message": "TV subscribers 120K; FMC 220K; FMC penetration 39.3%",
+          "action_required": ""
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": 19000.0,
+            "wholesale_share_of_revenue_pct": 2.3
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 19000.0,
+              "previous_value": 18000.0,
+              "yoy_value": 16500.0,
+              "change_qoq": 5.56,
+              "change_yoy": 15.15,
+              "direction": "improving",
+              "significance": "significant"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              15000.0,
+              15500.0,
+              16000.0,
+              16500.0,
+              17000.0,
+              17500.0,
+              18000.0,
+              19000.0
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [],
+          "health_status": "strong",
+          "key_message": "Wholesale revenue EUR 19000.0M; 2.3% of total",
+          "action_required": ""
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "edge_nodes": 5,
+          "core_vendor": "Ericsson",
+          "5g_sa_status": "SA trial in Santiago, NSA commercial",
+          "spectrum_mhz": {
+            "700": 20,
+            "1900": 30,
+            "2100": 20,
+            "2600": 40,
+            "3500": 80
+          },
+          "mobile_vendor": "Ericsson (5G NSA + SA trial)",
+          "5g_base_stations": 4200,
+          "virtualization_pct": 40
+        },
+        "controlled_vs_resale": {},
+        "coverage": {
+          "5g": 65.0,
+          "4g": 98.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 1800.0,
+          "cable_homepass_k": 0.0
+        },
+        "evolution_strategy": {},
+        "investment_direction": "increasing",
+        "vs_competitors": "",
+        "consumer_impact": "",
+        "b2b_impact": "",
+        "cost_impact": ""
+      },
+      "customer_perception": {},
+      "leadership_changes": [],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "",
+      "talent_assessment": {},
+      "performance_gap": "",
+      "opportunity_gap": "",
+      "strategic_review": "",
+      "management_commentary": [
+        {
+          "segment": "chile",
+          "type": "competitive",
+          "content": "WOM's Chapter 11 restructuring created opportunity: estimated 45K WOM-to-Entel port-ins in H2 2025. However, WOM emergence with $800M less debt makes them a more competitive threat going forward. Entel focuses on network quality differentiation vs WOM's price play.",
+          "speaker": "Management",
+          "source_url": "https://www.entel.cl/investors/fy2025-results/"
+        },
+        {
+          "segment": "chile",
+          "type": "explanation",
+          "content": "EBITDA margin expanded 70bps to 32.8%. Opex-to-revenue improved to 67.2%. Operational efficiency program delivered CLP 45B savings. Energy costs down 8% via renewable energy contracts. Capex/revenue at 17.5%, in line with 5G investment phase guidance of 17-19%.",
+          "speaker": "Management",
+          "source_url": "https://www.entel.cl/investors/fy2025-results/"
+        },
+        {
+          "segment": "chile_broadband",
+          "type": "explanation",
+          "content": "FTTH subscriber base reached 820K (+28% YoY). Copper-to-fiber migration 65% complete, full sunset targeted end-2027. Fiber ARPU 15% higher than legacy copper. Homes passed reached 2.8M. FMC penetration at 32% of broadband base (vs 24% a year ago).",
+          "speaker": "Management",
+          "source_url": "https://www.entel.cl/investors/fy2025-results/"
+        },
+        {
+          "segment": "chile_enterprise",
+          "type": "explanation",
+          "content": "Enterprise revenue grew 8.5% YoY driven by cloud (+22%), cybersecurity (+35%), and private 5G contracts with BHP and Codelco. B2B now 28% of total revenue. Won 3 new private 5G network contracts worth CLP 15B combined. Mining sector is the primary growth engine.",
+          "speaker": "Management",
+          "source_url": "https://www.entel.cl/investors/fy2025-results/"
+        },
+        {
+          "segment": "chile_mobile",
+          "type": "explanation",
+          "content": "Postpaid subscriber base grew 5.8% YoY to 5.1M. Blended mobile ARPU stable at CLP 8,200 despite WOM competition. Premium tier (>CLP 25K) grew 12%, now 22% of postpaid base. 5G users reached 1.2M with higher data consumption driving data monetization.",
+          "speaker": "Management",
+          "source_url": "https://www.entel.cl/investors/fy2025-results/"
+        },
+        {
+          "segment": "chile",
+          "type": "guidance",
+          "content": "FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidance: revenue growth 4-5%, EBITDA margin 33-34%. Capex/revenue expected at 16-18% as 5G build-out phase peaks.",
+          "speaker": "Management",
+          "source_url": "https://www.entel.cl/investors/fy2025-results/"
+        },
+        {
+          "segment": "chile",
+          "type": "strategic",
+          "content": "5G SA network launched covering 45% population. Network slicing tested with 3 mining enterprise customers. 5G FWA serves 50K rural households. SUBTEL infrastructure sharing regulation is net positive — Entel's 4,200 owned towers become revenue-generating asset via mandatory sharing.",
+          "speaker": "Management",
+          "source_url": "https://www.entel.cl/investors/fy2025-results/"
+        }
+      ],
+      "strengths": [
+        "Revenue on growth trajectory",
+        "Top 1 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "5G coverage gap at only 65.0%"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Intensifying market competition",
+          "side_effect": "Pressure on margins and market share",
+          "attack_vector": "Price competition from challengers",
+          "severity": "medium",
+          "evidence": [
+            "Competitive telecom market dynamics"
+          ]
+        }
+      ],
+      "health_rating": "healthy",
+      "key_message": "Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: Revenue on growth trajectory; key challenge: 5G coverage gap at only 65.0%; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc"
+    },
+    "swot": {
+      "strengths": [
+        "Revenue on growth trajectory",
+        "Top 1 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "5G coverage gap at only 65.0%",
+        "Pressure on margins and market share"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
+        "National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
+        "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl",
+        "Entel Chile revenue growth 15.9% YoY",
+        "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
+        "Chilean peso strengthens 8% against USD, easing equipment costs",
+        "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
+        "Chile copper mining boom drives enterprise telecom demand",
+        "Entel Chile launches 5G SA network in Santiago and 15 cities"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
+        "Movistar Chile revenue growth 8.9% YoY",
+        "WOM Chile revenue growth 6.9% YoY",
+        "Claro Chile revenue growth 8.7% YoY",
+        "Tigo Chile pivots to MVNO model, exits direct network investment",
+        "Movistar Chile accelerates FTTH deployment: 3.5M homes passed",
+        "Claro Chile invests $300M in 5G and fiber expansion",
+        "High existing competitors pressure",
+        "High substitutes pressure",
+        "High buyer power pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Revenue on growth trajectory' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Leverage 'Top 1 in revenue market ranking' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'."
+      ],
+      "wo_strategies": [
+        "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Address weakness 'Pressure on margins and market share' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'."
+      ],
+      "st_strategies": [
+        "Use strength 'Revenue on growth trajectory' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Use strength 'Top 1 in revenue market ranking' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Mitigate weakness 'Pressure on margins and market share' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'."
+      ],
+      "key_message": "SWOT analysis identifies 2 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is cautious (WT-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Entel Chile revenue growth 15.9% YoY",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chilean peso strengthens 8% against USD, easing equipment co",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SUBTEL mandates infrastructure sharing for 5G deployment in ",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile copper mining boom drives enterprise telecom demand",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Entel Chile launches 5G SA network in Santiago and 15 cities",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit claro_cl weakness: 5G Deployment: 5.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit claro_cl weakness: Brand Strength: 6.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit wom_cl weakness: 5G Deployment: 7.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit wom_cl weakness: Brand Strength: 7.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit movistar_cl weakness: 5G Deployment: 6.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit movistar_cl weakness: Brand Strength: 7.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.2,
+          "market_share_score": 5.0,
+          "product_fit_score": 4,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.2,
+          "market_share_score": 5.0,
+          "product_fit_score": 4,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.0
+        }
+      ],
+      "grow_invest": [
+        "SO-1",
+        "SO-2",
+        "Entel Chile revenue growth 15.9% YoY",
+        "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
+        "Chilean peso strengthens 8% against USD, easing equipment co",
+        "SUBTEL mandates infrastructure sharing for 5G deployment in ",
+        "Chile copper mining boom drives enterprise telecom demand",
+        "Entel Chile launches 5G SA network in Santiago and 15 cities",
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "Regulatory Environment: Compliance requirements and spectrum",
+        "National Digital Strategy: Fiber/5G coverage mandates may re",
+        "Exploit claro_cl weakness: 5G Deployment: 5.0/100",
+        "Exploit claro_cl weakness: Brand Strength: 6.0/100",
+        "Exploit wom_cl weakness: 5G Deployment: 7.0/100",
+        "Exploit wom_cl weakness: Brand Strength: 7.0/100",
+        "Exploit movistar_cl weakness: 5G Deployment: 6.0/100",
+        "Exploit movistar_cl weakness: Brand Strength: 7.0/100"
+      ],
+      "acquire_skills": [
+        "WO-1",
+        "WO-2"
+      ],
+      "harvest": [],
+      "avoid_exit": [],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Revenue on growth trajectory' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Top 1 in revenue market ranking' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Entel Chile revenue growth 15.9% YoY",
+          "description": "Entel Chile revenue growth 15.9% YoY",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
+          "description": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chilean peso strengthens 8% against USD, easing equipment co",
+          "description": "Chilean peso strengthens 8% against USD, easing equipment costs",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SUBTEL mandates infrastructure sharing for 5G deployment in ",
+          "description": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile copper mining boom drives enterprise telecom demand",
+          "description": "Chile copper mining boom drives enterprise telecom demand",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Entel Chile launches 5G SA network in Santiago and 15 cities",
+          "description": "Entel Chile launches 5G SA network in Santiago and 15 cities",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit claro_cl weakness: 5G Deployment: 5.0/100",
+          "description": "Competitor claro_cl is weak in: 5G Deployment: 5.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "claro_cl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit claro_cl weakness: Brand Strength: 6.0/100",
+          "description": "Competitor claro_cl is weak in: Brand Strength: 6.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "claro_cl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit wom_cl weakness: 5G Deployment: 7.0/100",
+          "description": "Competitor wom_cl is weak in: 5G Deployment: 7.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "wom_cl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit wom_cl weakness: Brand Strength: 7.0/100",
+          "description": "Competitor wom_cl is weak in: Brand Strength: 7.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "wom_cl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit movistar_cl weakness: 5G Deployment: 6.0/100",
+          "description": "Competitor movistar_cl is weak in: 5G Deployment: 6.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "movistar_cl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit movistar_cl weakness: Brand Strength: 7.0/100",
+          "description": "Competitor movistar_cl is weak in: Brand Strength: 7.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "movistar_cl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Pressure on margins and market share' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        }
+      ],
+      "key_message": "SPAN matrix positions 21 opportunities: 19 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 19 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 19,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 19,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 19
+  }
+}

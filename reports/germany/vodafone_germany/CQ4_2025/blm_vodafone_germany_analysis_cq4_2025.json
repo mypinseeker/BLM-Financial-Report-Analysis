@@ -1,0 +1,3355 @@
+{
+  "meta": {
+    "target_operator": "vodafone_germany",
+    "market": "germany",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-11T22:06:59.662393",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "BNetzA: 800/1800/2600MHz频谱延期5年(2025.03决定)；覆盖义务2030年99.5%面积≥50Mbps；€12亿千兆资助计划(2025.01)；Nebenkostenprivileg 2024.07取消(MDU TV法规变更)；光纤目标2025年50%/2030年100% FTTH覆盖",
+            "trend": "Regulatory stance: BNetzA: 800/1800/2600MHz频谱延期5年(2025.03决定)；覆盖义务2030年99.5%面积≥50Mbps；€12亿千兆资助计划(2025.01)；Nebenkostenprivileg 2024.07取消(MDU TV法规变更)；光纤目标2025年50%/2030年100% FTTH覆盖",
+            "trend_direction": "uncertain",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect vodafone_germany",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: BNetzA: 800/1800/2600MHz频谱延期5年(2025.03决定)；覆盖义务2030年99.5%面积≥50Mbps；€12亿千兆资助计划(2025.01)；Nebenkostenprivileg 2024.07取消(MDU TV法规变更)；光纤目标2025年50%/2030年100% FTTH覆盖"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "Gigabit Strategy: FTTH/FTTB 50% by 2025, 100% by 2030; €1.2B Gigabit Funding Programme 2025; Fiber connections +20% YoY; 5G coverage obligation: 99.5% area by 2030",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: Gigabit Strategy: FTTH/FTTB 50% by 2025, 100% by 2030; €1.2B Gigabit Funding Programme 2025; Fiber connections +20% YoY; 5G coverage obligation: 99.5% area by 2030"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+            "current_status": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "trend": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "trend_direction": "uncertain",
+            "industry_impact": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "company_impact": "Potential impact on vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+            "current_status": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "trend": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "trend_direction": "uncertain",
+            "industry_impact": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "company_impact": "Potential impact on vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+            "current_status": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "trend": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "trend_direction": "uncertain",
+            "industry_impact": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "company_impact": "Potential impact on vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+            ],
+            "data_source": "intelligence_events"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 0.8%",
+            "trend": "GDP growth trend: stable (latest 0.8%)",
+            "trend_direction": "stable",
+            "industry_impact": "Slow GDP growth constrains consumer spending and enterprise IT budgets",
+            "company_impact": "Constrained revenue growth for vodafone_germany",
+            "impact_type": "threat",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 0.8%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 2.1%",
+            "trend": "Inflation trend: stable (latest 2.1%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "Manageable cost environment for vodafone_germany",
+            "impact_type": "neutral",
+            "severity": "low",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 2.1%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 56.0% of mobile subscribers",
+            "trend": "5G adoption trend: improving (28.0% -> 56.0%)",
+            "trend_direction": "improving",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 56.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 26.0%",
+            "trend": "Fiber penetration trend: improving (12.0% -> 26.0%)",
+            "trend_direction": "improving",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for vodafone_germany",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 26.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in mass adoption phase (56.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 56.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 26.0%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for vodafone_germany",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 26.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Vodafone restructures cable TV frequencies nationwide",
+            "current_status": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "trend": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "trend_direction": "uncertain",
+            "industry_impact": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "company_impact": "Potential impact on vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Vodafone restructures cable TV frequencies nationwide",
+            "current_status": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "trend": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "trend_direction": "uncertain",
+            "industry_impact": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "company_impact": "Potential impact on vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Vodafone restructures cable TV frequencies nationwide",
+            "current_status": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "trend": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "trend_direction": "uncertain",
+            "industry_impact": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "company_impact": "Potential impact on vodafone_germany",
+            "impact_type": "opportunity",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+            ],
+            "data_source": "intelligence_events"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 12/14 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
+          "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access",
+          "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+          "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+          "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment; Vodafone restructures cable TV frequencies nationwide; Vodafone restructures cable TV frequencies nationwide; Vodafone restructures cable TV frequencies nationwide",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "EUR 12.3B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+0.3% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Stable (industry EBITDA margin ~36.6%)",
+      "industry_concentration": "CR4 = 100% (Deutsche Telekom: 50.3%, Vodafone Germany: 25.1%, Telefonica O2 Germany: 16.2%, 1&1 AG: 8.4%)",
+      "industry_lifecycle_stage": "mature",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 12327.0,
+        "total_mobile_subscribers_k": 143100.0,
+        "total_broadband_subscribers_k": 31420.0,
+        "market_shares": {
+          "deutsche_telekom": 50.3,
+          "vodafone_germany": 25.1,
+          "telefonica_o2": 16.2,
+          "one_and_one": 8.4
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 170.4,
+          "broadband_penetration_pct": 37.4
+        },
+        "operator_count": 4
+      },
+      "changes": [
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
+          "severity": "high",
+          "evidence": [
+            "https://reports.investors.vodafone.com/view/412789358/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
+          "severity": "high",
+          "evidence": [
+            "https://reports.investors.vodafone.com/view/412789358/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
+          "severity": "high",
+          "evidence": [
+            "https://reports.investors.vodafone.com/view/412789358/"
+          ]
+        },
+        {
+          "change_type": "new_entrant",
+          "description": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
+          "severity": "high",
+          "evidence": [
+            "https://www.lightreading.com/finance/germany-s-1-1-migrates-all-mobile-customers-to-open-ran-5g-network"
+          ]
+        },
+        {
+          "change_type": "new_entrant",
+          "description": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
+          "severity": "high",
+          "evidence": [
+            "https://www.lightreading.com/finance/germany-s-1-1-migrates-all-mobile-customers-to-open-ran-5g-network"
+          ]
+        },
+        {
+          "change_type": "new_entrant",
+          "description": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
+          "severity": "high",
+          "evidence": [
+            "https://www.lightreading.com/finance/germany-s-1-1-migrates-all-mobile-customers-to-open-ran-5g-network"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes Skaylink acquisition for €175M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes Skaylink acquisition for €175M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes Skaylink acquisition for €175M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone restructures cable TV frequencies nationwide",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone restructures cable TV frequencies nationwide",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone restructures cable TV frequencies nationwide",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
+          "severity": "high",
+          "evidence": [
+            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
+          "severity": "high",
+          "evidence": [
+            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
+          "severity": "high",
+          "evidence": [
+            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "O2 Germany Q2 2025: revenue -2.4% but IoT +47%, users growing",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "O2 Q2 2025总收入下降2.4%（移动服务收入-3.4%），但用户增长强劲：Q2合同客户+18.4万。IoT连接增长47% YoY（Q2新增17.7万），是最大亮点。5G覆盖98%领先全行业。EBITDA利润率约30.6%稳定。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.de/news/press-releases-telefonica-germany/2025/07/quarterly-results-customer-growth-across-segments-confirms-o2-telefonicas-course-in-the-second-quarter.html"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "O2 Germany Q2 2025: revenue -2.4% but IoT +47%, users growing",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "O2 Q2 2025总收入下降2.4%（移动服务收入-3.4%），但用户增长强劲：Q2合同客户+18.4万。IoT连接增长47% YoY（Q2新增17.7万），是最大亮点。5G覆盖98%领先全行业。EBITDA利润率约30.6%稳定。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.de/news/press-releases-telefonica-germany/2025/07/quarterly-results-customer-growth-across-segments-confirms-o2-telefonicas-course-in-the-second-quarter.html"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "O2 Germany Q2 2025: revenue -2.4% but IoT +47%, users growing",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "O2 Q2 2025总收入下降2.4%（移动服务收入-3.4%），但用户增长强劲：Q2合同客户+18.4万。IoT连接增长47% YoY（Q2新增17.7万），是最大亮点。5G覆盖98%领先全行业。EBITDA利润率约30.6%稳定。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.de/news/press-releases-telefonica-germany/2025/07/quarterly-results-customer-growth-across-segments-confirms-o2-telefonicas-course-in-the-second-quarter.html"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "German telecom market reaches $86B, CAGR 5.53% to 2030",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "VATM第26次市场分析报告：德国电信市场2025年规模$860亿（约€790亿年度），预计至2030年达$1,126亿，CAGR 5.53%。市场有150+服务提供商，竞争激烈。ARPU行业平均下降约4%。移动数据服务收入CAGR 9.5%，5G套餐是主要增长引擎。光纤连接数增长超20%，97%家庭有宽带覆盖。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.vatm.de/wp-content/uploads/2025/06/VATM-Market-Analysis-Germany-2025.pdf"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "German telecom market reaches $86B, CAGR 5.53% to 2030",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "VATM第26次市场分析报告：德国电信市场2025年规模$860亿（约€790亿年度），预计至2030年达$1,126亿，CAGR 5.53%。市场有150+服务提供商，竞争激烈。ARPU行业平均下降约4%。移动数据服务收入CAGR 9.5%，5G套餐是主要增长引擎。光纤连接数增长超20%，97%家庭有宽带覆盖。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.vatm.de/wp-content/uploads/2025/06/VATM-Market-Analysis-Germany-2025.pdf"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "German telecom market reaches $86B, CAGR 5.53% to 2030",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "VATM第26次市场分析报告：德国电信市场2025年规模$860亿（约€790亿年度），预计至2030年达$1,126亿，CAGR 5.53%。市场有150+服务提供商，竞争激烈。ARPU行业平均下降约4%。移动数据服务收入CAGR 9.5%，5G套餐是主要增长引擎。光纤连接数增长超20%，97%家庭有宽带覆盖。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.vatm.de/wp-content/uploads/2025/06/VATM-Market-Analysis-Germany-2025.pdf"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+          "severity": "high",
+          "evidence": [
+            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+          "severity": "high",
+          "evidence": [
+            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+          "severity": "high",
+          "evidence": [
+            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+          ]
+        }
+      ],
+      "opportunities": [
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
+          "severity": "high",
+          "evidence": [
+            "https://reports.investors.vodafone.com/view/412789358/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
+          "severity": "high",
+          "evidence": [
+            "https://reports.investors.vodafone.com/view/412789358/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
+          "severity": "high",
+          "evidence": [
+            "https://reports.investors.vodafone.com/view/412789358/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes Skaylink acquisition for €175M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes Skaylink acquisition for €175M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Vodafone completes Skaylink acquisition for €175M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone restructures cable TV frequencies nationwide",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone restructures cable TV frequencies nationwide",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone restructures cable TV frequencies nationwide",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+          "severity": "medium",
+          "evidence": [
+            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
+          "severity": "high",
+          "evidence": [
+            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
+          "severity": "high",
+          "evidence": [
+            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
+          "severity": "high",
+          "evidence": [
+            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
+          "severity": "high",
+          "evidence": [
+            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+          "severity": "high",
+          "evidence": [
+            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+          "severity": "high",
+          "evidence": [
+            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+          "severity": "high",
+          "evidence": [
+            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+          ]
+        }
+      ],
+      "threats": [],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer High-End",
+          "segment_type": "consumer",
+          "size_estimate": "~13.9M subscribers",
+          "growth_trend": "growing",
+          "our_share": "~25% of postpaid",
+          "unmet_needs": [
+            "Premium 5G standalone experiences",
+            "Ultra-low latency gaming and VR"
+          ],
+          "pain_points": [
+            "Network congestion in urban areas",
+            "Limited premium content bundles"
+          ],
+          "purchase_decision_factors": [
+            "Network quality",
+            "5G coverage",
+            "Brand prestige",
+            "Premium device availability"
+          ],
+          "competitor_gaps": [
+            "DT dominates with Magenta brand premium positioning",
+            "Opportunity in 5G-exclusive premium bundles"
+          ],
+          "opportunity": "Premium 5G and converged services for high-ARPU customers"
+        },
+        {
+          "segment_name": "Consumer Mainstream",
+          "segment_type": "consumer",
+          "size_estimate": "~51.2M subscribers",
+          "growth_trend": "stable",
+          "our_share": "~25% of postpaid",
+          "unmet_needs": [
+            "Better value convergent bundles",
+            "Transparent pricing without hidden fees"
+          ],
+          "pain_points": [
+            "Complex tariff structures",
+            "Long contract lock-in periods"
+          ],
+          "purchase_decision_factors": [
+            "Price-performance ratio",
+            "Network reliability",
+            "Bundle offers",
+            "Contract flexibility"
+          ],
+          "competitor_gaps": [
+            "O2 aggressive on price but weaker on network quality",
+            "1&1 limited by network build-out"
+          ],
+          "opportunity": "Value-for-money bundles combining mobile + broadband"
+        },
+        {
+          "segment_name": "Consumer Price-Sensitive",
+          "segment_type": "consumer",
+          "size_estimate": "~35.1M subscribers",
+          "growth_trend": "shrinking",
+          "our_share": "~19% of prepaid",
+          "unmet_needs": [
+            "Affordable unlimited data plans",
+            "No-contract flexibility"
+          ],
+          "pain_points": [
+            "Data caps at low price points",
+            "Poor customer service at budget brands"
+          ],
+          "purchase_decision_factors": [
+            "Monthly cost",
+            "Data allowance",
+            "No-contract options"
+          ],
+          "competitor_gaps": [
+            "1&1 and O2 sub-brands dominate this space"
+          ],
+          "opportunity": "Selective prepaid-to-postpaid migration campaigns"
+        },
+        {
+          "segment_name": "Consumer Youth",
+          "segment_type": "consumer",
+          "size_estimate": "~17.2M subscribers",
+          "growth_trend": "growing",
+          "our_share": "~23% overall",
+          "unmet_needs": [
+            "Social media and streaming-optimized plans",
+            "eSIM and digital-first experience"
+          ],
+          "pain_points": [
+            "Expensive data top-ups",
+            "Outdated app experiences"
+          ],
+          "purchase_decision_factors": [
+            "Data volume",
+            "App experience",
+            "Social media bundles",
+            "Price"
+          ],
+          "competitor_gaps": [
+            "Lack of digital-native sub-brands across operators"
+          ],
+          "opportunity": "Digital-first sub-brand or youth-targeted bundles"
+        },
+        {
+          "segment_name": "Enterprise Large",
+          "segment_type": "enterprise",
+          "size_estimate": "~47K customers (top 5%)",
+          "growth_trend": "growing",
+          "our_share": "~23% of B2B base",
+          "unmet_needs": [
+            "End-to-end managed SD-WAN",
+            "Private 5G network solutions",
+            "Multi-cloud connectivity"
+          ],
+          "pain_points": [
+            "Complex multi-vendor management",
+            "Slow provisioning times",
+            "Lack of integrated security"
+          ],
+          "purchase_decision_factors": [
+            "SLA guarantees",
+            "Global coverage",
+            "Security certifications",
+            "Total cost of ownership",
+            "Dedicated account management"
+          ],
+          "competitor_gaps": [
+            "DT dominates with T-Systems for large enterprise ICT",
+            "Opportunity in cloud and security managed services"
+          ],
+          "opportunity": "Managed connectivity + cloud services for digital transformation"
+        },
+        {
+          "segment_name": "Enterprise SME",
+          "segment_type": "enterprise",
+          "size_estimate": "~896K customers",
+          "growth_trend": "stable",
+          "our_share": "~23% of B2B base",
+          "unmet_needs": [
+            "Simple all-in-one business connectivity",
+            "Affordable cloud and collaboration tools"
+          ],
+          "pain_points": [
+            "IT resource constraints",
+            "Complex B2B pricing",
+            "Poor onboarding experience"
+          ],
+          "purchase_decision_factors": [
+            "Simplicity",
+            "Price",
+            "Bundled IT services",
+            "Local support"
+          ],
+          "competitor_gaps": [
+            "Most operators lack simplified SME bundles"
+          ],
+          "opportunity": "Simple all-in-one business packages with digital tools"
+        },
+        {
+          "segment_name": "Wholesale MVNO",
+          "segment_type": "wholesale",
+          "size_estimate": "~17.2M MVNO subscribers",
+          "growth_trend": "stable",
+          "our_share": "N/A",
+          "unmet_needs": [
+            "Flexible wholesale pricing models",
+            "Access to 5G network capabilities"
+          ],
+          "pain_points": [
+            "Limited network differentiation",
+            "Dependency on host MNO roadmap"
+          ],
+          "purchase_decision_factors": [
+            "Wholesale rate",
+            "Network quality access",
+            "API availability",
+            "Contract flexibility"
+          ],
+          "competitor_gaps": [
+            "Host MNO network quality is key differentiator for MVNO partners"
+          ],
+          "opportunity": "Expand wholesale partnerships with 5G API access"
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 3.6,
+          "competitor_scores": {
+            "deutsche_telekom": 3.2,
+            "one_and_one": 4.5,
+            "telefonica_o2": 4.2
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Price by 0.4 points. Leader: one_and_one (4.5/5.0)"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 4.0,
+          "competitor_scores": {
+            "deutsche_telekom": 4.8,
+            "one_and_one": 2.2,
+            "telefonica_o2": 4.2
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Above average in Availability but 0.8 points behind leader (deutsche_telekom: 4.8/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 3.8,
+          "competitor_scores": {
+            "deutsche_telekom": 4.4,
+            "one_and_one": 3.6,
+            "telefonica_o2": 3.5
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Packaging by 0.0 points. Leader: deutsche_telekom (4.4/5.0)"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 3.8,
+          "competitor_scores": {
+            "deutsche_telekom": 4.7,
+            "one_and_one": 2.4,
+            "telefonica_o2": 4.2
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Above average in Performance but 0.9 points behind leader (deutsche_telekom: 4.7/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.6,
+          "competitor_scores": {
+            "deutsche_telekom": 4.2,
+            "one_and_one": 3.5,
+            "telefonica_o2": 3.5
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Ease of Use by 0.1 points. Leader: deutsche_telekom (4.2/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 4.1,
+          "competitor_scores": {
+            "deutsche_telekom": 4.6,
+            "one_and_one": 2.8,
+            "telefonica_o2": 3.4
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Above average in Assurances but 0.5 points behind leader (deutsche_telekom: 4.6/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 3.6,
+          "competitor_scores": {
+            "deutsche_telekom": 3.2,
+            "one_and_one": 4.5,
+            "telefonica_o2": 4.2
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Lifecycle Cost by 0.4 points. Leader: one_and_one (4.5/5.0)"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 4.0,
+          "competitor_scores": {
+            "deutsche_telekom": 4.3,
+            "one_and_one": 3.6,
+            "telefonica_o2": 3.8
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Above average in Social/Brand but 0.3 points behind leader (deutsche_telekom: 4.3/5.0)"
+        }
+      ],
+      "customer_value_migration": "Value migration is mixed: some segments trending up while price-sensitive segments face pressure. Differentiated strategy by segment recommended.",
+      "market_outlook": "favorable",
+      "key_message": "German telecom market totals EUR 12327.0M in quarterly revenue; vodafone_germany holds 25.1% market share; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "4 active operators in the market",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 50% of market revenue (total: 12327M EUR)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from -3.4% to +1.1% (spread: 4.5pp)",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 30.8%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 50% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Active new entrant: 1&1 AG",
+              "description": "1&1 AG is currently building/expanding its network presence",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
+              "description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
+              "description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
+              "description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "1&1 AG entering the market may increase competitive pressure on pricing and coverage.",
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 0.93%/month. Highest: 1.05% indicating moderate willingness to switch.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 69%. Moderate contract lock-in moderately constrains buyer mobility.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "telefonica_o2": {
+          "operator": "Telefonica O2 Germany",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 2000.0,
+            "service_revenue": 1700.0,
+            "service_revenue_growth_pct": -3.4,
+            "ebitda": 650.0,
+            "ebitda_margin_pct": 32.5,
+            "ebitda_growth_pct": -1.5,
+            "capex": 500.0,
+            "capex_to_revenue_pct": 25.0,
+            "revenue_trend": "declining",
+            "margin_trend": "improving",
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 45900.0,
+            "mobile_postpaid_k": 22500.0,
+            "mobile_net_adds_k": 170.0,
+            "mobile_churn_pct": 0.9,
+            "mobile_arpu": 10.8,
+            "broadband_total_k": 2400.0,
+            "broadband_net_adds_k": 8.0,
+            "tv_total_k": 570.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 98.0,
+            "four_g_coverage_pct": 99.7,
+            "fiber_homepass_k": 800.0,
+            "cable_homepass_k": 2500.0,
+            "cable_docsis31_pct": 60.0,
+            "technology_mix": {
+              "edge_nodes": 8,
+              "core_vendor": "Nokia",
+              "5g_sa_status": "Commercial since 2025-03",
+              "spectrum_mhz": {
+                "800": 20,
+                "1800": 35,
+                "2100": 30,
+                "2600": 20,
+                "3600": 70
+              },
+              "mobile_vendor": "Nokia + Samsung",
+              "5g_base_stations": 20000,
+              "virtualization_pct": 55
+            }
+          },
+          "product_portfolio": [],
+          "new_product_pipeline": [],
+          "growth_strategy": "",
+          "supply_chain_status": "",
+          "ecosystem_partners": [],
+          "core_control_points": [],
+          "business_model": "",
+          "org_structure": "",
+          "incentive_system": "",
+          "talent_culture": "",
+          "ma_activity": [],
+          "strengths": [
+            "5G Deployment: 88.0/100",
+            "Brand Strength: 75.0/100",
+            "Customer Service: 72.0/100",
+            "Network Coverage: 85.0/100",
+            "Network Quality: 78.0/100",
+            "Pricing Competitiveness: 85.0/100",
+            "Sustainability: 75.0/100"
+          ],
+          "weaknesses": [],
+          "problems": [],
+          "likely_future_actions": [
+            "Telefonica O2 Germany may pursue cost optimization or strategic pivot given declining revenue trend.",
+            "Telefonica O2 Germany is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "Telefonica O2 Germany with 98% 5G coverage is positioned to push 5G monetization through premium tiers and B2B use cases."
+          ],
+          "implications": [
+            {
+              "implication_type": "learning",
+              "description": "Telefonica O2 Germany excels in: 5G Deployment, Brand Strength, Customer Service. Study their approach for best practices.",
+              "evidence": [
+                "5G Deployment: 88.0/100",
+                "Brand Strength: 75.0/100",
+                "Customer Service: 72.0/100"
+              ],
+              "suggested_action": "Benchmark Telefonica O2 Germany's practices in 5G Deployment, Brand Strength, Customer Service."
+            },
+            {
+              "implication_type": "threat",
+              "description": "Telefonica O2 Germany has 98% 5G coverage, creating potential network advantage.",
+              "evidence": [
+                "5G coverage: 98%"
+              ],
+              "suggested_action": "Accelerate 5G deployment to close coverage gap."
+            }
+          ]
+        },
+        "deutsche_telekom": {
+          "operator": "Deutsche Telekom",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 6200.0,
+            "service_revenue": 5460.0,
+            "service_revenue_growth_pct": 1.1,
+            "ebitda": 2610.0,
+            "ebitda_margin_pct": 42.1,
+            "ebitda_growth_pct": 2.6,
+            "capex": 1200.0,
+            "capex_to_revenue_pct": 19.4,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 52200.0,
+            "mobile_postpaid_k": 36800.0,
+            "mobile_net_adds_k": 340.0,
+            "mobile_churn_pct": 0.8,
+            "mobile_arpu": 14.2,
+            "broadband_total_k": 15220.0,
+            "broadband_net_adds_k": 80.0,
+            "tv_total_k": 4380.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 97.0,
+            "four_g_coverage_pct": 99.8,
+            "fiber_homepass_k": 8500.0,
+            "cable_homepass_k": 0.0,
+            "cable_docsis31_pct": 0.0,
+            "technology_mix": {
+              "edge_nodes": 28,
+              "core_vendor": "Ericsson + Nokia",
+              "5g_sa_status": "Commercial since 2024-09",
+              "spectrum_mhz": {
+                "700": 20,
+                "900": 35,
+                "1800": 60,
+                "2100": 50,
+                "2600": 40,
+                "3600": 90
+              },
+              "mobile_vendor": "Ericsson + Huawei (legacy)",
+              "5g_base_stations": 35000,
+              "virtualization_pct": 70
+            }
+          },
+          "product_portfolio": [],
+          "new_product_pipeline": [],
+          "growth_strategy": "",
+          "supply_chain_status": "",
+          "ecosystem_partners": [],
+          "core_control_points": [],
+          "business_model": "",
+          "org_structure": "",
+          "incentive_system": "",
+          "talent_culture": "",
+          "ma_activity": [],
+          "strengths": [
+            "5G Deployment: 95.0/100",
+            "Brand Strength: 90.0/100",
+            "Customer Service: 82.0/100",
+            "Digital Services: 85.0/100",
+            "Enterprise Solutions: 92.0/100",
+            "Network Coverage: 95.0/100",
+            "Network Quality: 92.0/100",
+            "Product Innovation: 88.0/100",
+            "Sustainability: 82.0/100"
+          ],
+          "weaknesses": [],
+          "problems": [],
+          "likely_future_actions": [
+            "Deutsche Telekom is likely to continue aggressive network expansion (capex/revenue at 19% with growing revenue).",
+            "Deutsche Telekom is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "Deutsche Telekom with 97% 5G coverage is positioned to push 5G monetization through premium tiers and B2B use cases."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Deutsche Telekom's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Deutsche Telekom excels in: 5G Deployment, Brand Strength, Customer Service. Study their approach for best practices.",
+              "evidence": [
+                "5G Deployment: 95.0/100",
+                "Brand Strength: 90.0/100",
+                "Customer Service: 82.0/100"
+              ],
+              "suggested_action": "Benchmark Deutsche Telekom's practices in 5G Deployment, Brand Strength, Customer Service."
+            },
+            {
+              "implication_type": "threat",
+              "description": "Deutsche Telekom has 97% 5G coverage, creating potential network advantage.",
+              "evidence": [
+                "5G coverage: 97%"
+              ],
+              "suggested_action": "Accelerate 5G deployment to close coverage gap."
+            }
+          ]
+        },
+        "one_and_one": {
+          "operator": "1&1 AG",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 1035.0,
+            "service_revenue": 915.0,
+            "service_revenue_growth_pct": 0.1,
+            "ebitda": 126.0,
+            "ebitda_margin_pct": 12.2,
+            "ebitda_growth_pct": -7.0,
+            "capex": 400.0,
+            "capex_to_revenue_pct": 38.6,
+            "revenue_trend": "growing",
+            "margin_trend": "declining",
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 12500.0,
+            "mobile_postpaid_k": 10500.0,
+            "mobile_net_adds_k": 30.0,
+            "mobile_churn_pct": 0.95,
+            "mobile_arpu": 9.8,
+            "broadband_total_k": 3860.0,
+            "broadband_net_adds_k": -5.0,
+            "tv_total_k": 420.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "declining",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 55.0,
+            "four_g_coverage_pct": 55.0,
+            "fiber_homepass_k": 0.0,
+            "cable_homepass_k": 0.0,
+            "cable_docsis31_pct": 0.0,
+            "technology_mix": {
+              "edge_nodes": 3,
+              "core_vendor": "Mavenir (cloud-native)",
+              "5g_sa_status": "Commercial, OpenRAN first-mover",
+              "spectrum_mhz": {
+                "2100": 20,
+                "3600": 50
+              },
+              "mobile_vendor": "OpenRAN (Rakuten Symphony)",
+              "5g_base_stations": 4500,
+              "virtualization_pct": 100
+            }
+          },
+          "product_portfolio": [],
+          "new_product_pipeline": [],
+          "growth_strategy": "",
+          "supply_chain_status": "",
+          "ecosystem_partners": [],
+          "core_control_points": [],
+          "business_model": "",
+          "org_structure": "",
+          "incentive_system": "",
+          "talent_culture": "",
+          "ma_activity": [],
+          "strengths": [
+            "Pricing Competitiveness: 90.0/100",
+            "Product Innovation: 72.0/100",
+            "Sustainability: 80.0/100"
+          ],
+          "weaknesses": [],
+          "problems": [],
+          "likely_future_actions": [
+            "1&1 AG is likely to continue aggressive network expansion (capex/revenue at 39% with growing revenue).",
+            "1&1 AG is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "1&1 AG may accelerate fiber migration or FWA push to counter broadband subscriber losses.",
+            "1&1 AG as a new entrant will likely focus on network buildout, aggressive pricing, and customer acquisition.",
+            "1&1 AG will need significant network investment (coverage score: 45.0/100)."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "1&1 AG's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "learning",
+              "description": "1&1 AG excels in: Pricing Competitiveness, Product Innovation, Sustainability. Study their approach for best practices.",
+              "evidence": [
+                "Pricing Competitiveness: 90.0/100",
+                "Product Innovation: 72.0/100",
+                "Sustainability: 80.0/100"
+              ],
+              "suggested_action": "Benchmark 1&1 AG's practices in Pricing Competitiveness, Product Innovation, Sustainability."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "telefonica_o2": 2000.0,
+          "vodafone_germany": 3092.0,
+          "deutsche_telekom": 6200.0,
+          "one_and_one": 1035.0
+        },
+        "revenue_growth": {
+          "telefonica_o2": -3.4,
+          "vodafone_germany": 0.7,
+          "deutsche_telekom": 1.1,
+          "one_and_one": 0.1
+        },
+        "ebitda_margin": {
+          "telefonica_o2": 32.5,
+          "vodafone_germany": 36.2,
+          "deutsche_telekom": 42.1,
+          "one_and_one": 12.2
+        },
+        "subscribers": {
+          "telefonica_o2": 45900.0,
+          "vodafone_germany": 32500.0,
+          "deutsche_telekom": 52200.0,
+          "one_and_one": 12500.0
+        },
+        "arpu": {
+          "telefonica_o2": 10.8,
+          "vodafone_germany": 12.8,
+          "deutsche_telekom": 14.2,
+          "one_and_one": 9.8
+        },
+        "churn": {
+          "telefonica_o2": 0.9,
+          "vodafone_germany": 1.05,
+          "deutsche_telekom": 0.8,
+          "one_and_one": 0.95
+        },
+        "5g_coverage": {
+          "telefonica_o2": 98.0,
+          "vodafone_germany": 92.0,
+          "deutsche_telekom": 97.0,
+          "one_and_one": 55.0
+        }
+      },
+      "competitive_landscape": "The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany, Deutsche Telekom, 1&1 AG. Overall competition intensity is assessed as medium. Revenue ranking: Deutsche Telekom (6200M), Vodafone Germany (3092M), Telefonica O2 Germany (2000M), 1&1 AG (1035M). Five Forces: Existing Competitors: high; New Entrants: medium; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "key_message": "In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 3092.0,
+        "service_revenue": 2726.0,
+        "ebitda": 1120.0,
+        "ebitda_margin_pct": 36.2,
+        "net_income": null,
+        "capex": 800.0,
+        "capex_to_revenue_pct": 25.9,
+        "opex": 1972.0,
+        "employees": 14500,
+        "revenue_qoq_pct": 0.06,
+        "revenue_yoy_pct": 0.72,
+        "ebitda_qoq_pct": 0.9,
+        "ebitda_growth_pct": 1.5,
+        "service_revenue_growth_pct": 0.7,
+        "revenue_trend": [
+          3050.0,
+          3080.0,
+          3060.0,
+          3070.0,
+          3080.0,
+          3090.0,
+          3090.0,
+          3092.0
+        ],
+        "ebitda_trend": [
+          1080.0,
+          1090.0,
+          1090.0,
+          1100.0,
+          1100.0,
+          1110.0,
+          1110.0,
+          1120.0
+        ],
+        "margin_trend": [
+          35.4,
+          35.5,
+          35.6,
+          35.8,
+          35.9,
+          36.0,
+          36.0,
+          36.2
+        ],
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 1520.0,
+          "share_pct": 49.2
+        },
+        "fixed_service_revenue": {
+          "value": 795.0,
+          "share_pct": 25.7
+        },
+        "b2b_revenue": {
+          "value": 520.0,
+          "share_pct": 16.8
+        },
+        "tv_revenue": {
+          "value": 268.0,
+          "share_pct": 8.7
+        },
+        "wholesale_revenue": {
+          "value": 380.0,
+          "share_pct": 12.3
+        },
+        "total_revenue": 3092.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 4,
+        "revenue_rank": 2,
+        "total_revenue": 3092.0,
+        "revenue_market_share_pct": 25.1,
+        "subscriber_rank": 3,
+        "mobile_subscriber_share_pct": 22.7,
+        "broadband_subscriber_share_pct": 31.6,
+        "competitors": {
+          "deutsche_telekom": {
+            "display_name": "Deutsche Telekom",
+            "total_revenue": 6200.0,
+            "mobile_total_k": 52200.0,
+            "broadband_total_k": 15220.0
+          },
+          "telefonica_o2": {
+            "display_name": "Telefonica O2 Germany",
+            "total_revenue": 2000.0,
+            "mobile_total_k": 45900.0,
+            "broadband_total_k": 2400.0
+          },
+          "one_and_one": {
+            "display_name": "1&1 AG",
+            "total_revenue": 1035.0,
+            "mobile_total_k": 12500.0,
+            "broadband_total_k": 3860.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue_share_latest": 25.1,
+        "mobile_share_latest": 22.7,
+        "broadband_share_latest": 31.6
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 1520.0,
+            "mobile_service_growth_pct": 2.8,
+            "mobile_total_k": 32500.0,
+            "mobile_postpaid_k": 23200.0,
+            "mobile_prepaid_k": 6300.0,
+            "mobile_net_adds_k": 80.0,
+            "mobile_churn_pct": 1.05,
+            "mobile_arpu": 12.8,
+            "iot_connections_k": 3000.0
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 1520.0,
+              "previous_value": 1500.0,
+              "yoy_value": 1470.0,
+              "change_qoq": 1.33,
+              "change_yoy": 3.4,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 32500.0,
+              "previous_value": 32300.0,
+              "yoy_value": 31400.0,
+              "change_qoq": 0.62,
+              "change_yoy": 3.5,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 12.8,
+              "previous_value": 12.6,
+              "yoy_value": 12.2,
+              "change_qoq": 1.59,
+              "change_yoy": 4.92,
+              "direction": "improving",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              1450.0,
+              1460.0,
+              1465.0,
+              1470.0,
+              1480.0,
+              1490.0,
+              1500.0,
+              1520.0
+            ],
+            "subscribers": [
+              30500.0,
+              30800.0,
+              31100.0,
+              31400.0,
+              31700.0,
+              32000.0,
+              32300.0,
+              32500.0
+            ],
+            "arpu": [
+              11.8,
+              11.9,
+              12.0,
+              12.2,
+              12.4,
+              12.5,
+              12.6,
+              12.8
+            ],
+            "churn": [
+              1.15,
+              1.12,
+              1.1,
+              1.08,
+              1.06,
+              1.05,
+              1.05,
+              1.05
+            ]
+          },
+          "competitor_comparison": {
+            "Deutsche Telekom": {
+              "mobile_service_revenue": 2555.0,
+              "mobile_total_k": 52200.0,
+              "mobile_arpu": 14.2,
+              "mobile_churn_pct": 0.8
+            },
+            "Telefonica O2 Germany": {
+              "mobile_service_revenue": 1285.0,
+              "mobile_total_k": 45900.0,
+              "mobile_arpu": 10.8,
+              "mobile_churn_pct": 0.9
+            },
+            "1&1 AG": {
+              "mobile_service_revenue": 532.0,
+              "mobile_total_k": 12500.0,
+              "mobile_arpu": 9.8,
+              "mobile_churn_pct": 0.95
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Mobile service revenue at EUR 1520.0M; up 2.8% YoY; ARPU EUR 12.8",
+          "action_required": ""
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 795.0,
+            "fixed_service_growth_pct": -1.1,
+            "broadband_total_k": 9940.0,
+            "broadband_net_adds_k": -63.0,
+            "broadband_cable_k": 6980.0,
+            "broadband_fiber_k": 1480.0,
+            "broadband_dsl_k": 1480.0,
+            "broadband_arpu": 30.2
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 795.0,
+              "previous_value": 798.0,
+              "yoy_value": 808.0,
+              "change_qoq": -0.38,
+              "change_yoy": -1.61,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 9940.0,
+              "previous_value": 9970.0,
+              "yoy_value": 10140.0,
+              "change_qoq": -0.3,
+              "change_yoy": -1.97,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 30.2,
+              "previous_value": 30.0,
+              "yoy_value": 29.2,
+              "change_qoq": 0.67,
+              "change_yoy": 3.42,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              820.0,
+              815.0,
+              810.0,
+              808.0,
+              805.0,
+              802.0,
+              798.0,
+              795.0
+            ],
+            "subscribers": [
+              10320.0,
+              10280.0,
+              10210.0,
+              10140.0,
+              10080.0,
+              10020.0,
+              9970.0,
+              9940.0
+            ],
+            "arpu": [
+              28.5,
+              28.8,
+              29.0,
+              29.2,
+              29.5,
+              29.8,
+              30.0,
+              30.2
+            ],
+            "fiber": [
+              850.0,
+              920.0,
+              1000.0,
+              1080.0,
+              1180.0,
+              1280.0,
+              1380.0,
+              1480.0
+            ],
+            "cable": [
+              7500.0,
+              7450.0,
+              7380.0,
+              7300.0,
+              7220.0,
+              7140.0,
+              7060.0,
+              6980.0
+            ]
+          },
+          "competitor_comparison": {
+            "Deutsche Telekom": {
+              "fixed_service_revenue": 1910.0,
+              "broadband_total_k": 15220.0,
+              "broadband_fiber_k": 6300.0
+            },
+            "Telefonica O2 Germany": {
+              "fixed_service_revenue": 192.0,
+              "broadband_total_k": 2400.0,
+              "broadband_fiber_k": 550.0
+            },
+            "1&1 AG": {
+              "fixed_service_revenue": 287.0,
+              "broadband_total_k": 3860.0,
+              "broadband_fiber_k": 900.0
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Fixed service revenue EUR 795.0M; growth -1.1% YoY; Fiber subs 1480K",
+          "action_required": ""
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 520.0,
+            "b2b_growth_pct": 8.5,
+            "b2b_customers_k": 215.0,
+            "b2b_share_of_revenue_pct": 16.8
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 520.0,
+              "previous_value": 500.0,
+              "yoy_value": 445.0,
+              "change_qoq": 4.0,
+              "change_yoy": 16.85,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "customers",
+              "current_value": 215.0,
+              "previous_value": 210.0,
+              "yoy_value": 196.0,
+              "change_qoq": 2.38,
+              "change_yoy": 9.69,
+              "direction": "improving",
+              "significance": "moderate"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              410.0,
+              420.0,
+              430.0,
+              445.0,
+              460.0,
+              480.0,
+              500.0,
+              520.0
+            ],
+            "customers": [
+              185.0,
+              188.0,
+              192.0,
+              196.0,
+              200.0,
+              205.0,
+              210.0,
+              215.0
+            ]
+          },
+          "competitor_comparison": {
+            "Deutsche Telekom": {
+              "b2b_revenue": 1230.0,
+              "b2b_growth_pct": 7.5,
+              "b2b_customers_k": 490.0
+            },
+            "Telefonica O2 Germany": {
+              "b2b_revenue": 500.0,
+              "b2b_growth_pct": 13.0,
+              "b2b_customers_k": 175.0
+            },
+            "1&1 AG": {
+              "b2b_revenue": 92.0,
+              "b2b_growth_pct": 9.0,
+              "b2b_customers_k": 63.0
+            }
+          },
+          "attributions": [],
+          "health_status": "strong",
+          "key_message": "B2B revenue EUR 520.0M; growth +8.5% YoY; 16.8% of total revenue",
+          "action_required": ""
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": 268.0,
+            "tv_total_k": 7740.0,
+            "tv_net_adds_k": -6.0,
+            "fmc_total_k": 4900.0,
+            "fmc_penetration_pct": 49.3
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 268.0,
+              "previous_value": 270.0,
+              "yoy_value": 278.0,
+              "change_qoq": -0.74,
+              "change_yoy": -3.6,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 7740.0,
+              "previous_value": 7750.0,
+              "yoy_value": 7950.0,
+              "change_qoq": -0.13,
+              "change_yoy": -2.64,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": 4900.0,
+              "previous_value": 4800.0,
+              "yoy_value": 4500.0,
+              "change_qoq": 2.08,
+              "change_yoy": 8.89,
+              "direction": "improving",
+              "significance": "moderate"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              285.0,
+              283.0,
+              280.0,
+              278.0,
+              275.0,
+              273.0,
+              270.0,
+              268.0
+            ],
+            "tv_subscribers": [
+              8120.0,
+              8080.0,
+              8020.0,
+              7950.0,
+              7880.0,
+              7810.0,
+              7750.0,
+              7740.0
+            ],
+            "fmc_subscribers": [
+              4200.0,
+              4300.0,
+              4400.0,
+              4500.0,
+              4600.0,
+              4700.0,
+              4800.0,
+              4900.0
+            ],
+            "fmc_penetration": [
+              40.7,
+              41.8,
+              43.1,
+              44.4,
+              45.6,
+              46.9,
+              48.1,
+              49.3
+            ]
+          },
+          "competitor_comparison": {
+            "Deutsche Telekom": {
+              "tv_total_k": 4380.0,
+              "fmc_total_k": 7900.0,
+              "fmc_penetration_pct": 51.9
+            },
+            "Telefonica O2 Germany": {
+              "tv_total_k": 570.0,
+              "fmc_total_k": 1150.0,
+              "fmc_penetration_pct": 47.9
+            },
+            "1&1 AG": {
+              "tv_total_k": 420.0,
+              "fmc_total_k": 1550.0,
+              "fmc_penetration_pct": 40.2
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "TV subscribers 7740K; FMC 4900K; FMC penetration 49.3%",
+          "action_required": ""
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": 380.0,
+            "wholesale_share_of_revenue_pct": 12.3
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 380.0,
+              "previous_value": 320.0,
+              "yoy_value": 200.0,
+              "change_qoq": 18.75,
+              "change_yoy": 90.0,
+              "direction": "improving",
+              "significance": "significant"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              180.0,
+              185.0,
+              190.0,
+              200.0,
+              220.0,
+              260.0,
+              320.0,
+              380.0
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [],
+          "health_status": "strong",
+          "key_message": "Wholesale revenue EUR 380.0M; 12.3% of total",
+          "action_required": ""
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "edge_nodes": 12,
+          "core_vendor": "Ericsson",
+          "5g_sa_status": "Testing, planned 2026",
+          "spectrum_mhz": {
+            "700": 20,
+            "1800": 50,
+            "2100": 40,
+            "2600": 20,
+            "3600": 90
+          },
+          "mobile_vendor": "Ericsson + Nokia (non-standalone 5G)",
+          "5g_base_stations": 18500,
+          "virtualization_pct": 45
+        },
+        "controlled_vs_resale": {},
+        "coverage": {
+          "5g": 92.0,
+          "4g": 99.5
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 1500.0,
+          "cable_homepass_k": 24000.0
+        },
+        "evolution_strategy": {},
+        "investment_direction": "stable",
+        "vs_competitors": "",
+        "consumer_impact": "",
+        "b2b_impact": "",
+        "cost_impact": ""
+      },
+      "customer_perception": {},
+      "leadership_changes": [],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Cable network (largest in Germany)"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "GigaCable Max ultra-fast broadband"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "",
+      "talent_assessment": {},
+      "performance_gap": "",
+      "opportunity_gap": "",
+      "strategic_review": "",
+      "management_commentary": [
+        {
+          "segment": "germany_b2b",
+          "type": "explanation",
+          "content": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_b2b",
+          "type": "explanation",
+          "content": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_b2b",
+          "type": "explanation",
+          "content": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_broadband",
+          "type": "explanation",
+          "content": "宽带定价策略：2026年1月再次提价，采用'more-for-more'策略。固网消费者收入已企稳。新客宽带ARPU创三年新高（+21% YoY）。预计Q4总量趋势相似，但价值方程在发挥作用。2025年3月至10月间的零售定价行动正在支撑ARPU趋势。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_broadband",
+          "type": "explanation",
+          "content": "宽带定价策略：2026年1月再次提价，采用'more-for-more'策略。固网消费者收入已企稳。新客宽带ARPU创三年新高（+21% YoY）。预计Q4总量趋势相似，但价值方程在发挥作用。2025年3月至10月间的零售定价行动正在支撑ARPU趋势。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_broadband",
+          "type": "explanation",
+          "content": "宽带定价策略：2026年1月再次提价，采用'more-for-more'策略。固网消费者收入已企稳。新客宽带ARPU创三年新高（+21% YoY）。预计Q4总量趋势相似，但价值方程在发挥作用。2025年3月至10月间的零售定价行动正在支撑ARPU趋势。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_mobile",
+          "type": "explanation",
+          "content": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_mobile",
+          "type": "explanation",
+          "content": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany_mobile",
+          "type": "explanation",
+          "content": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
+          "speaker": "Management",
+          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
+        },
+        {
+          "segment": "germany",
+          "type": "guidance",
+          "content": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
+          "speaker": "Management",
+          "source_url": "https://fintool.com/app/research/companies/VOD/earnings/Q3%202026"
+        },
+        {
+          "segment": "germany",
+          "type": "guidance",
+          "content": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
+          "speaker": "Management",
+          "source_url": "https://fintool.com/app/research/companies/VOD/earnings/Q3%202026"
+        },
+        {
+          "segment": "germany",
+          "type": "guidance",
+          "content": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
+          "speaker": "Management",
+          "source_url": "https://fintool.com/app/research/companies/VOD/earnings/Q3%202026"
+        },
+        {
+          "segment": "group",
+          "type": "guidance",
+          "content": "集团FY26指引重申上限：EBITDAaL €113-116亿，自由现金流€24-26亿。YTD EBITDAaL增长5.3%至€85亿，符合预期。集团服务收入Q3增长5.4%。2025年11月宣布FY26股息每股增长2.5%，反映中期自由现金流增长信心。",
+          "speaker": "Management",
+          "source_url": "https://www.stocktitan.net/sec-filings/VOD/6-k-vodafone-group-public-ltd-co-current-report-foreign-issuer-17b0d1c9489d.html"
+        },
+        {
+          "segment": "group",
+          "type": "guidance",
+          "content": "集团FY26指引重申上限：EBITDAaL €113-116亿，自由现金流€24-26亿。YTD EBITDAaL增长5.3%至€85亿，符合预期。集团服务收入Q3增长5.4%。2025年11月宣布FY26股息每股增长2.5%，反映中期自由现金流增长信心。",
+          "speaker": "Management",
+          "source_url": "https://www.stocktitan.net/sec-filings/VOD/6-k-vodafone-group-public-ltd-co-current-report-foreign-issuer-17b0d1c9489d.html"
+        },
+        {
+          "segment": "group",
+          "type": "guidance",
+          "content": "集团FY26指引重申上限：EBITDAaL €113-116亿，自由现金流€24-26亿。YTD EBITDAaL增长5.3%至€85亿，符合预期。集团服务收入Q3增长5.4%。2025年11月宣布FY26股息每股增长2.5%，反映中期自由现金流增长信心。",
+          "speaker": "Management",
+          "source_url": "https://www.stocktitan.net/sec-filings/VOD/6-k-vodafone-group-public-ltd-co-current-report-foreign-issuer-17b0d1c9489d.html"
+        }
+      ],
+      "strengths": [
+        "Brand Strength: score 82 (market avg 78)",
+        "Enterprise Solutions: score 82 (market avg 74)",
+        "Network Coverage: score 80 (market avg 76)",
+        "Strong EBITDA margin at 36.2%",
+        "Revenue on growth trajectory",
+        "Top 2 in revenue market ranking",
+        "Extensive 5G coverage at 92.0%"
+      ],
+      "weaknesses": [
+        "Customer Service: score 70 (market avg 74)",
+        "Pricing Competitiveness: score 72 (market avg 78)"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "1&1 building own mobile network and migrating users off Vodafone wholesale",
+          "side_effect": "Loss of wholesale revenue as 1&1 users migrate to own network",
+          "attack_vector": "1&1 positions as independent operator with competitive pricing",
+          "severity": "high",
+          "evidence": [
+            "1&1 new entrant in Germany market",
+            "Building Open RAN network"
+          ]
+        },
+        {
+          "trigger_action": "Heavy reliance on cable (DOCSIS) technology while market shifts to fiber",
+          "side_effect": "Technology perception gap as competitors lead fiber deployment",
+          "attack_vector": "DT markets fiber superiority; cable seen as legacy",
+          "severity": "high",
+          "evidence": [
+            "Cable-dominant broadband base",
+            "DT aggressively deploying FTTH"
+          ]
+        },
+        {
+          "trigger_action": "Low fiber penetration compared to Deutsche Telekom",
+          "side_effect": "Competitive disadvantage in future-proof broadband",
+          "attack_vector": "Customers migrating to FTTH offerings from DT",
+          "severity": "medium",
+          "evidence": [
+            "Fiber subscriber base significantly smaller than cable"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #2 of 4 operators in market; revenue EUR 3092.0M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现E"
+    },
+    "swot": {
+      "strengths": [
+        "Brand Strength: score 82 (market avg 78)",
+        "Enterprise Solutions: score 82 (market avg 74)",
+        "Network Coverage: score 80 (market avg 76)",
+        "Strong EBITDA margin at 36.2%",
+        "Revenue on growth trajectory",
+        "Top 2 in revenue market ranking",
+        "Extensive 5G coverage at 92.0%"
+      ],
+      "weaknesses": [
+        "Customer Service: score 70 (market avg 74)",
+        "Pricing Competitiveness: score 72 (market avg 78)",
+        "Loss of wholesale revenue as 1&1 users migrate to own network",
+        "Technology perception gap as competitors lead fiber deployment",
+        "Competitive disadvantage in future-proof broadband"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
+        "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access",
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+        "Vodafone completes 1&1 customer migration: 12M users on network",
+        "Vodafone completes Skaylink acquisition for €175M",
+        "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+        "Vodafone restructures cable TV frequencies nationwide",
+        "DT reboots fibre tactics, targets Vodafone cable footprint",
+        "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
+        "High existing competitors pressure",
+        "High substitutes pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
+        "Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.",
+        "Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+        "Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
+        "Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.",
+        "Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+        "Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'."
+      ],
+      "st_strategies": [
+        "Use strength 'Brand Strength: score 82 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
+        "Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'High existing competitors pressure'.",
+        "Use strength 'Network Coverage: score 80 (market avg 76)' to counter the threat of 'High substitutes pressure'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Customer Service: score 70 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
+        "Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'High existing competitors pressure'.",
+        "Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High substitutes pressure'."
+      ],
+      "key_message": "SWOT analysis identifies 7 strengths, 5 weaknesses, 12 opportunities, and 3 threats. The recommended strategic posture is offensive (SO-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SO-4",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Vodafone completes 1&1 customer migration: 12M users on netw",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Vodafone completes Skaylink acquisition for €175M",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Vodafone restructures cable TV frequencies nationwide",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.2,
+          "market_share_score": 5.0,
+          "product_fit_score": 4,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.2,
+          "market_share_score": 5.0,
+          "product_fit_score": 4,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "WO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.2,
+          "market_share_score": 5.0,
+          "product_fit_score": 4,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "WO-4",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.2,
+          "market_share_score": 5.0,
+          "product_fit_score": 4,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.0
+        }
+      ],
+      "grow_invest": [
+        "SO-1",
+        "SO-2",
+        "SO-3",
+        "SO-4",
+        "Vodafone completes 1&1 customer migration: 12M users on netw",
+        "Vodafone completes Skaylink acquisition for €175M",
+        "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+        "Vodafone restructures cable TV frequencies nationwide",
+        "DT reboots fibre tactics, targets Vodafone cable footprint",
+        "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "Regulatory Environment: Compliance requirements and spectrum",
+        "National Digital Strategy: Fiber/5G coverage mandates may re",
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent"
+      ],
+      "acquire_skills": [
+        "WO-1",
+        "WO-2",
+        "WO-3",
+        "WO-4"
+      ],
+      "harvest": [],
+      "avoid_exit": [],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-3",
+          "description": "Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-4",
+          "description": "Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Vodafone completes 1&1 customer migration: 12M users on netw",
+          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+          "derived_from": [
+            "market_opportunity",
+            "merger"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Vodafone completes Skaylink acquisition for €175M",
+          "description": "Vodafone completes Skaylink acquisition for €175M",
+          "derived_from": [
+            "market_opportunity",
+            "merger"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
+          "derived_from": [
+            "market_opportunity",
+            "merger"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Vodafone restructures cable TV frequencies nationwide",
+          "description": "Vodafone restructures cable TV frequencies nationwide",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
+          "derived_from": [
+            "market_opportunity",
+            "merger"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent",
+          "description": "Policy opportunity: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-3",
+          "description": "Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-4",
+          "description": "Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        }
+      ],
+      "key_message": "SPAN matrix positions 21 opportunities: 17 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 17 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 19,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 19,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 19
+  }
+}

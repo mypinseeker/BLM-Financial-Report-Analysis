@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLM Five Looks Analysis - entel_cl</title>
+<style>
+:root {
+    --primary: rgb(0, 51, 102);
+    --secondary: rgb(51, 51, 51);
+    --text: rgb(51, 51, 51);
+    --light-text: rgb(128, 128, 128);
+    --positive: rgb(0, 128, 0);
+    --negative: rgb(200, 0, 0);
+    --warning: rgb(255, 165, 0);
+    --bg: #ffffff;
+    --card-bg: #f8f9fa;
+    --border: #e0e0e0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.header {
+    background: var(--primary);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.header h1 { font-size: 28px; margin-bottom: 8px; }
+.header .meta { font-size: 14px; opacity: 0.9; }
+.section {
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.section-toggle {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--card-bg);
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 3px solid var(--primary);
+}
+.section-toggle:hover { background: #f0f0f0; }
+.section-content {
+    padding: 20px;
+}
+.metric-cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+.metric-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 180px;
+    flex: 1;
+}
+.metric-card .label { font-size: 12px; color: var(--light-text); }
+.metric-card .value { font-size: 24px; font-weight: bold; color: var(--primary); }
+.key-message {
+    background: var(--primary);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.tracked {
+    border-bottom: 1px dotted var(--light-text);
+    cursor: help;
+    position: relative;
+}
+.tracked:hover::after {
+    content: attr(data-source);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+}
+ul { margin: 8px 0 8px 24px; }
+li { margin-bottom: 4px; }
+h3 { color: var(--primary); margin: 16px 0 8px; }
+.swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+}
+.swot-cell {
+    padding: 16px;
+    border-radius: 8px;
+    min-height: 120px;
+}
+.swot-cell h4 { margin-bottom: 8px; color: white; }
+.swot-s { background: #4CAF50; color: white; }
+.swot-w { background: #F44336; color: white; }
+.swot-o { background: #2196F3; color: white; }
+.swot-t { background: #FF9800; color: white; }
+.priority-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.p0 { background: var(--primary); }
+.p1 { background: var(--warning); }
+.p2 { background: var(--positive); }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+th { background: var(--card-bg); font-weight: bold; }
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--light-text);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+}
+@media (max-width: 768px) {
+    .metric-cards { flex-direction: column; }
+    .swot-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>BLM Five Looks Strategic Analysis</h1>
+<div class="meta">
+    Target: entel_cl |
+    Market: chile |
+    Period: CQ4_2025 |
+    Generated: 2026-02-11
+</div>
+</div>
+<div class="section">
+<button class="section-toggle">[-] Executive Summary</button>
+<div class="section-content">
+<table><tr><td><strong>Trends</strong></td><td>Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -&gt; CQ4_2025))</td></tr>
+<tr><td><strong>Market/Customer</strong></td><td>German telecom market totals EUR 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; gaps in Price, Availability; Market presents a balanced mix of opportunities and challenges.</td></tr>
+<tr><td><strong>Competition</strong></td><td>In a 5-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 58% share. Strongest competitive force: Existing Competitors.</td></tr>
+<tr><td><strong>Self</strong></td><td>Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: Revenue on growth trajectory; key challenge: 5G coverage gap at only 65.0%; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc</td></tr>
+<tr><td><strong>SWOT</strong></td><td>SWOT analysis identifies 2 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is cautious (WT-dominant).</td></tr>
+<tr><td><strong>Opportunities</strong></td><td>SPAN matrix positions 21 opportunities: 19 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 19 grow/invest items for maximum strategic impact.</td></tr>
+</table>
+</div></div>
+<div class="section">
+<button class="section-toggle">[-] 01 Trends (PEST)</button>
+<div class="section-content">
+<h3>Political</h3><ul><li>◆ Regulatory Environment</li><li>▲ National Digital Strategy</li><li>▲ SUBTEL mandates infrastructure sharing for 5G deployment in rural areas</li><li>● Chile passes new Telecom Reform Law strengthening SUBTEL enforcement</li></ul><h3>Economic</h3><ul><li>▲ GDP Growth</li><li>◆ Inflation</li></ul><h3>Society</h3><ul><li>▲ 5G Adoption Rate</li><li>◆ Fiber Broadband Penetration</li></ul><h3>Technology</h3><ul><li>▲ 5G Network Evolution</li><li>◆ Fiber/FTTH Deployment</li><li>▲ Entel Chile launches 5G SA network in Santiago and 15 cities</li></ul><h3>Industry Environment</h3><ul><li>Market Size: EUR 1391.0B (quarterly, CQ4_2025)</li><li>Growth Rate: +7.2% YoY (CQ2_2025 -&gt; CQ4_2025)</li><li>Lifecycle: late_growth</li></ul>
+<div class="key-message">Key Message: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -&gt; CQ4_2025))</div>
+</div></div>
+<div class="section">
+<button class="section-toggle">[-] 02 Market/Customer ($APPEALS)</button>
+<div class="section-content">
+<div class="metric-cards"><div class="metric-card"><div class="label">Calendar Quarter</div><div class="value">CQ4_2025</div></div><div class="metric-card"><div class="label">Total Revenue</div><div class="value">1391000.0</div></div><div class="metric-card"><div class="label">Total Mobile Subscribers K</div><div class="value">30500.0</div></div><div class="metric-card"><div class="label">Total Broadband Subscribers K</div><div class="value">4180.0</div></div></div><h3>Market Changes</h3><ul><li>Entel Chile revenue growth 15.9% YoY</li><li>Movistar Chile revenue growth 8.9% YoY</li><li>WOM Chile revenue growth 6.9% YoY</li><li>Claro Chile revenue growth 8.7% YoY</li><li>Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable</li><li>Chilean peso strengthens 8% against USD, easing equipment costs</li></ul><h3>$APPEALS Assessment</h3><table><tr><th>Dimension</th><th>Our Score</th><th>Priority</th></tr><tr><td>Price</td><td>0.3/5</td><td>critical</td></tr><tr><td>Availability</td><td>0.5/5</td><td>critical</td></tr><tr><td>Packaging</td><td>0.3/5</td><td>important</td></tr><tr><td>Performance</td><td>0.4/5</td><td>critical</td></tr><tr><td>Ease of Use</td><td>0.4/5</td><td>important</td></tr><tr><td>Assurances</td><td>0.4/5</td><td>important</td></tr><tr><td>Lifecycle Cost</td><td>0.3/5</td><td>important</td></tr><tr><td>Social/Brand</td><td>0.4/5</td><td>nice_to_have</td></tr></table>
+<div class="key-message">Key Message: German telecom market totals EUR 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; gaps in Price, Availability; Market presents a balanced mix of opportunities and challenges.</div>
+</div></div>
+<div class="section">
+<button class="section-toggle">[-] 03 Competition (Porter)</button>
+<div class="section-content">
+<h3>Five Forces</h3><table><tr><th>Force</th><th>Level</th></tr><tr><td>existing_competitors</td><td>high</td></tr><tr><td>new_entrants</td><td>low</td></tr><tr><td>substitutes</td><td>high</td></tr><tr><td>supplier_power</td><td>medium</td></tr><tr><td>buyer_power</td><td>high</td></tr></table><h3>claro_cl</h3><strong>Weaknesses:</strong><ul><li>5G Deployment: 5.0/100</li><li>Brand Strength: 6.0/100</li><li>Customer Service: 5.0/100</li><li>Digital Services: 6.0/100</li></ul><h3>tigo_chile</h3><h3>wom_cl</h3><strong>Weaknesses:</strong><ul><li>5G Deployment: 7.0/100</li><li>Brand Strength: 7.0/100</li><li>Customer Service: 7.0/100</li><li>Digital Services: 8.0/100</li></ul>
+<div class="key-message">Key Message: In a 5-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 58% share. Strongest competitive force: Existing Competitors.</div>
+</div></div>
+<div class="section">
+<button class="section-toggle">[-] 04 Self (BMC + Capability)</button>
+<div class="section-content">
+<h3>Health Rating: <span style="color: var(--primary)">HEALTHY</span></h3><div class="metric-cards"><div class="metric-card"><div class="label">Total Revenue</div><div class="value">811000.0</div></div><div class="metric-card"><div class="label">Service Revenue</div><div class="value">732000.0</div></div><div class="metric-card"><div class="label">Ebitda</div><div class="value">243000.0</div></div><div class="metric-card"><div class="label">Ebitda Margin Pct</div><div class="value">30.0</div></div></div><h3>Business Segments</h3><table><tr><th>Segment</th><th>Health</th></tr><tr><td>Mobile</td><td>strong</td></tr><tr><td>Fixed Broadband</td><td>strong</td></tr><tr><td>B2B</td><td>strong</td></tr><tr><td>TV/Convergence</td><td>strong</td></tr></table><h3 style="color: var(--positive)">Strengths</h3><ul><li>Revenue on growth trajectory</li><li>Top 1 in revenue market ranking</li></ul><h3 style="color: var(--negative)">Weaknesses</h3><ul><li>5G coverage gap at only 65.0%</li></ul>
+<div class="key-message">Key Message: Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: Revenue on growth trajectory; key challenge: 5G coverage gap at only 65.0%; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc</div>
+</div></div>
+<div class="section">
+<button class="section-toggle">[-] SWOT Synthesis</button>
+<div class="section-content">
+<div class="swot-grid"><div class="swot-cell swot-s"><h4>Strengths</h4><ul><li>Revenue on growth trajectory</li><li>Top 1 in revenue market ranking</li></ul></div><div class="swot-cell swot-w"><h4>Weaknesses</h4><ul><li>5G coverage gap at only 65.0%</li><li>Pressure on margins and market share</li></ul></div><div class="swot-cell swot-o"><h4>Opportunities</h4><ul><li>Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl</li><li>National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access</li><li>SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl</li><li>Entel Chile revenue growth 15.9% YoY</li><li>Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable</li></ul></div><div class="swot-cell swot-t"><h4>Threats</h4><ul><li>Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl</li><li>Movistar Chile revenue growth 8.9% YoY</li><li>WOM Chile revenue growth 6.9% YoY</li><li>Claro Chile revenue growth 8.7% YoY</li><li>Tigo Chile pivots to MVNO model, exits direct network investment</li></ul></div></div><h3>SO Strategies</h3><ul><li>Leverage &#x27;Revenue on growth trajectory&#x27; to capture the opportunity of &#x27;Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl&#x27;.</li><li>Leverage &#x27;Top 1 in revenue market ranking&#x27; to capture the opportunity of &#x27;National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access&#x27;.</li></ul><h3>WO Strategies</h3><ul><li>Address weakness &#x27;5G coverage gap at only 65.0%&#x27; to unlock the opportunity of &#x27;Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl&#x27;.</li><li>Address weakness &#x27;Pressure on margins and market share&#x27; to unlock the opportunity of &#x27;National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access&#x27;.</li></ul><h3>ST Strategies</h3><ul><li>Use strength &#x27;Revenue on growth trajectory&#x27; to counter the threat of &#x27;Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl&#x27;.</li><li>Use strength &#x27;Top 1 in revenue market ranking&#x27; to counter the threat of &#x27;Movistar Chile revenue growth 8.9% YoY&#x27;.</li></ul><h3>WT Strategies</h3><ul><li>Mitigate weakness &#x27;5G coverage gap at only 65.0%&#x27; and defend against the threat of &#x27;Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl&#x27;.</li><li>Mitigate weakness &#x27;Pressure on margins and market share&#x27; and defend against the threat of &#x27;Movistar Chile revenue growth 8.9% YoY&#x27;.</li></ul>
+<div class="key-message">Key Message: SWOT analysis identifies 2 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is cautious (WT-dominant).</div>
+</div></div>
+<div class="section">
+<button class="section-toggle">[-] 05 Opportunities (SPAN)</button>
+<div class="section-content">
+<h3>SPAN Matrix Positions</h3><table><tr><th>Opportunity</th><th>Attractiveness</th><th>Position</th><th>Quadrant</th></tr><tr><td>SO-1</td><td>5.6</td><td>5.5</td><td>grow_invest</td></tr><tr><td>SO-2</td><td>5.6</td><td>5.5</td><td>grow_invest</td></tr><tr><td>Entel Chile revenue growth 15.9% YoY</td><td>5.5</td><td>5.0</td><td>grow_invest</td></tr><tr><td>Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s</td><td>5.0</td><td>5.0</td><td>grow_invest</td></tr><tr><td>Chilean peso strengthens 8% against USD, easing equipment co</td><td>5.0</td><td>5.0</td><td>grow_invest</td></tr><tr><td>SUBTEL mandates infrastructure sharing for 5G deployment in </td><td>5.5</td><td>5.0</td><td>grow_invest</td></tr><tr><td>Chile copper mining boom drives enterprise telecom demand</td><td>5.0</td><td>5.0</td><td>grow_invest</td></tr><tr><td>Entel Chile launches 5G SA network in Santiago and 15 cities</td><td>5.5</td><td>5.0</td><td>grow_invest</td></tr></table><h3>Prioritized Opportunities</h3><div style="margin: 8px 0; padding: 12px; background: var(--card-bg); border-radius: 6px;"><span class="priority-badge p0">P0</span> <strong>SO-1</strong> (Market: N/A)<br><small>Leverage &#x27;Revenue on growth trajectory&#x27; to capture the opportunity of &#x27;Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl&#x27;.</small></div><div style="margin: 8px 0; padding: 12px; background: var(--card-bg); border-radius: 6px;"><span class="priority-badge p0">P0</span> <strong>SO-2</strong> (Market: N/A)<br><small>Leverage &#x27;Top 1 in revenue market ranking&#x27; to capture the opportunity of &#x27;National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access&#x27;.</small></div><div style="margin: 8px 0; padding: 12px; background: var(--card-bg); border-radius: 6px;"><span class="priority-badge p0">P0</span> <strong>Entel Chile revenue growth 15.9% YoY</strong> (Market: N/A)<br><small>Entel Chile revenue growth 15.9% YoY</small></div><div style="margin: 8px 0; padding: 12px; background: var(--card-bg); border-radius: 6px;"><span class="priority-badge p0">P0</span> <strong>Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s</strong> (Market: N/A)<br><small>Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable</small></div><div style="margin: 8px 0; padding: 12px; background: var(--card-bg); border-radius: 6px;"><span class="priority-badge p0">P0</span> <strong>Chilean peso strengthens 8% against USD, easing equipment co</strong> (Market: N/A)<br><small>Chilean peso strengthens 8% against USD, easing equipment costs</small></div><div style="margin: 8px 0; padding: 12px; background: var(--card-bg); border-radius: 6px;"><span class="priority-badge p0">P0</span> <strong>SUBTEL mandates infrastructure sharing for 5G deployment in </strong> (Market: N/A)<br><small>SUBTEL mandates infrastructure sharing for 5G deployment in rural areas</small></div>
+<div class="key-message">Key Message: SPAN matrix positions 21 opportunities: 19 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 19 grow/invest items for maximum strategic impact.</div>
+</div></div>
+<div class="section">
+<button class="section-toggle">[-] Data Provenance</button>
+<div class="section-content">
+<div class="metric-cards"><div class="metric-card"><div class="label">Total Points</div><div class="value">19</div></div><div class="metric-card"><div class="label">High Confidence</div><div class="value">0</div></div><div class="metric-card"><div class="label">Medium</div><div class="value">0</div></div><div class="metric-card"><div class="label">Sources</div><div class="value">0</div></div></div>
+
+</div></div>
+<div class="footer">Generated by BLM Analysis Engine | 2026-02-11 22:23</div>
+<script>
+document.querySelectorAll('.section-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        btn.textContent = btn.textContent.includes('+') ?
+            btn.textContent.replace('+', '-') : btn.textContent.replace('-', '+');
+    });
+});
+</script>
+</body>
+</html>
