@@ -72,7 +72,7 @@ def _expand_tariffs(operator_id, plans, snapshots, defaults=None):
 # Snapshot periods — 3 recent half-year periods
 # ============================================================================
 
-CHILE_SNAPSHOTS = ["H2_2024", "H1_2025", "H2_2025"]
+CHILE_SNAPSHOTS = ["H1_2024", "H2_2024", "H1_2025", "H2_2025", "H1_2026"]
 
 
 # ============================================================================

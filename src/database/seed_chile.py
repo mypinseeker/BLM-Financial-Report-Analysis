@@ -92,6 +92,8 @@ def seed_financial_data(db: TelecomDatabase):
                 "fixed_service_growth_pct": rev_data.get("fixed_service_growth_pct", [None] * 8)[i],
                 "b2b_revenue": rev_data.get("b2b_revenue", [None] * 8)[i],
                 "b2b_growth_pct": rev_data.get("b2b_growth_pct", [None] * 8)[i],
+                "tv_revenue": rev_data.get("tv_revenue", [None] * 8)[i],
+                "wholesale_revenue": rev_data.get("wholesale_revenue", [None] * 8)[i],
                 # Profitability
                 "ebitda": prof_data.get("ebitda", [None] * 8)[i],
                 "ebitda_margin_pct": prof_data.get("ebitda_margin_pct", [None] * 8)[i],
@@ -138,6 +140,7 @@ def seed_subscriber_data(db: TelecomDatabase):
             total_mobile_m = mob_data.get("total_mobile_subs_m", [None] * 8)[i]
             postpaid_m = mob_data.get("postpaid_subs_m", [None] * 8)[i]
             prepaid_m = mob_data.get("prepaid_subs_m", [None] * 8)[i]
+            iot_m = mob_data.get("iot_connections_m", [None] * 8)[i]
 
             # Fixed broadband — convert from millions to thousands
             bb_total_m = fix_data.get("broadband_subs_m", [None] * 8)[i]
@@ -157,6 +160,8 @@ def seed_subscriber_data(db: TelecomDatabase):
                 "mobile_net_adds_k": mob_data.get("net_adds_k", [None] * 8)[i],
                 "mobile_churn_pct": mob_data.get("monthly_churn_pct", [None] * 8)[i],
                 "mobile_arpu": mob_data.get("mobile_arpu_clp", [None] * 8)[i],
+                # IoT (in thousands)
+                "iot_connections_k": iot_m * 1000 if iot_m is not None else None,
                 # Broadband (in thousands)
                 "broadband_total_k": bb_total_m * 1000 if bb_total_m is not None else None,
                 "broadband_net_adds_k": fix_data.get("net_adds_k", [None] * 8)[i],
@@ -170,6 +175,8 @@ def seed_subscriber_data(db: TelecomDatabase):
                 # FMC (in thousands)
                 "fmc_total_k": fmc_m * 1000 if fmc_m is not None else None,
                 "fmc_penetration_pct": tv_data.get("fmc_penetration_pct", [None] * 8)[i],
+                # B2B
+                "b2b_customers_k": mob_data.get("b2b_customers_k", [None] * 8)[i],
                 # Source
                 "source_url": mob_data.get("_source", ""),
             }
@@ -282,6 +289,32 @@ def seed_network_data(db: TelecomDatabase):
     print(f"  Inserted {count} network infrastructure records")
 
 
+def seed_executives(db: TelecomDatabase):
+    """Insert executive data (CEO/CFO/CTO) for Chile operators."""
+    from src.blm._legacy.chile_market_comprehensive_data import EXECUTIVE_DATA
+
+    count = 0
+    for legacy_name, exec_data in EXECUTIVE_DATA.items():
+        op_id = LEGACY_NAME_TO_ID.get(legacy_name)
+        if not op_id:
+            print(f"  WARNING: Unknown operator '{legacy_name}', skipping")
+            continue
+
+        for role in ["ceo", "cfo", "cto"]:
+            if role in exec_data:
+                info = exec_data[role]
+                db.upsert_executive(op_id, {
+                    "name": info.get("name"),
+                    "title": role.upper(),
+                    "start_date": info.get("since"),
+                    "is_current": 1,
+                    "background": info.get("background"),
+                })
+                count += 1
+
+    print(f"  Inserted {count} executive records")
+
+
 def seed_all(db_path: str = "data/telecom.db"):
     """Run complete Chile seed process.
 
@@ -295,26 +328,28 @@ def seed_all(db_path: str = "data/telecom.db"):
     db = TelecomDatabase(db_path)
     db.init()
 
-    print("Step 1/6: Registering operators...")
+    print("Step 1/8: Registering operators...")
     seed_operators(db)
 
-    print("Step 2/6: Inserting financial data (8 quarters x 4 operators)...")
+    print("Step 2/8: Inserting financial data (8 quarters x 4 operators)...")
     seed_financial_data(db)
 
-    print("Step 3/6: Inserting subscriber data (8 quarters x 4 operators)...")
+    print("Step 3/8: Inserting subscriber data (8 quarters x 4 operators)...")
     seed_subscriber_data(db)
 
-    print("Step 4/6: Inserting competitive scores...")
+    print("Step 4/8: Inserting competitive scores...")
     seed_competitive_scores(db)
 
-    print("Step 5/6: Inserting macro environment data...")
+    print("Step 5/8: Inserting macro environment data...")
     seed_macro_data(db)
 
-    print("Step 6/6: Inserting network infrastructure data...")
+    print("Step 6/8: Inserting network infrastructure data...")
     seed_network_data(db)
 
-    # Seed tariff data
-    print("Bonus: Inserting tariff data...")
+    print("Step 7/8: Inserting executive data...")
+    seed_executives(db)
+
+    print("Step 8/8: Inserting tariff data...")
     from src.database.seed_tariffs_chile import seed_tariffs_chile
     seed_tariffs_chile(db)
 
