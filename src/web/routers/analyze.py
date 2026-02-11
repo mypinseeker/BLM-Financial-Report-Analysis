@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 from typing import Optional
 
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, BackgroundTasks, HTTPException, Query
 from pydantic import BaseModel
 
 from src.web.services.supabase_data import get_data_service
@@ -36,8 +36,9 @@ class GroupAnalysisRequest(BaseModel):
 # ------------------------------------------------------------------
 
 @router.post("/single")
-def create_single_analysis(req: SingleMarketRequest):
-    """Create a single-market analysis job."""
+def create_single_analysis(req: SingleMarketRequest,
+                           background_tasks: BackgroundTasks):
+    """Create a single-market analysis job and auto-trigger execution."""
     svc = get_data_service()
 
     # Validate operator exists
@@ -60,14 +61,20 @@ def create_single_analysis(req: SingleMarketRequest):
 
     try:
         job = svc.create_analysis_job(job_data)
-        return {"job_id": job.get("id"), "status": "pending"}
+        job_id = job.get("id")
+
+        # Auto-trigger execution in background
+        background_tasks.add_task(_execute_single, job_id)
+
+        return {"job_id": job_id, "status": "pending"}
     except Exception as e:
         raise HTTPException(500, f"Failed to create job: {e}")
 
 
 @router.post("/group")
-def create_group_analysis(req: GroupAnalysisRequest):
-    """Create a group analysis job spanning multiple markets."""
+def create_group_analysis(req: GroupAnalysisRequest,
+                          background_tasks: BackgroundTasks):
+    """Create a group analysis job and auto-trigger execution."""
     svc = get_data_service()
 
     # Validate group exists
@@ -99,7 +106,12 @@ def create_group_analysis(req: GroupAnalysisRequest):
 
     try:
         job = svc.create_analysis_job(job_data)
-        return {"job_id": job.get("id"), "status": "pending", "markets": markets}
+        job_id = job.get("id")
+
+        # Auto-trigger execution in background
+        background_tasks.add_task(_execute_group, job_id)
+
+        return {"job_id": job_id, "status": "pending", "markets": markets}
     except Exception as e:
         raise HTTPException(500, f"Failed to create job: {e}")
 
@@ -154,8 +166,65 @@ def get_analysis_results(job_id: int):
     }
 
 
+@router.post("/{job_id}/execute")
+def execute_analysis(job_id: int, background_tasks: BackgroundTasks):
+    """Trigger analysis execution for a pending or failed job.
+
+    On Vercel (hobby): will timeout after 10s — use CLI instead.
+    On self-hosted / Vercel Pro: runs via BackgroundTasks.
+    """
+    svc = get_data_service()
+    job = svc.get_analysis_job(job_id)
+    if not job:
+        raise HTTPException(404, f"Job #{job_id} not found")
+
+    if job.get("status") not in ("pending", "failed"):
+        raise HTTPException(
+            400,
+            f"Job #{job_id} is '{job.get('status')}' — can only execute pending or failed jobs",
+        )
+
+    job_type = job.get("job_type", "single_market")
+    if job_type == "group_analysis":
+        background_tasks.add_task(_execute_group, job_id)
+    else:
+        background_tasks.add_task(_execute_single, job_id)
+
+    return {"job_id": job_id, "status": "executing"}
+
+
 @router.get("")
 def list_analysis_jobs(status: Optional[str] = Query(None)):
     """List all analysis jobs, optionally filtered by status."""
     svc = get_data_service()
     return svc.get_analysis_jobs(status=status)
+
+
+# ------------------------------------------------------------------
+# Background execution helpers
+# ------------------------------------------------------------------
+
+def _execute_single(job_id: int) -> None:
+    """Background task: run a single-market analysis."""
+    try:
+        from src.web.services.analysis_runner import AnalysisRunnerService
+        svc = get_data_service()
+        runner = AnalysisRunnerService(svc)
+        runner.run_single(job_id)
+    except Exception as e:
+        print(f"[!] Background single analysis #{job_id} failed: {e}")
+        import traceback
+        traceback.print_exc()
+
+
+def _execute_group(job_id: int) -> None:
+    """Background task: run a group analysis."""
+    try:
+        from src.web.services.analysis_runner import AnalysisRunnerService
+        svc = get_data_service()
+        runner = AnalysisRunnerService(svc)
+        runner.run_group(job_id)
+    except Exception as e:
+        print(f"[!] Background group analysis #{job_id} failed: {e}")
+        import traceback
+        traceback.print_exc()

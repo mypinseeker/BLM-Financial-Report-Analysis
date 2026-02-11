@@ -442,6 +442,40 @@ class SupabaseDataService:
         return len(resp.data) if resp.data else 0
 
     # ------------------------------------------------------------------
+    # Storage upload
+    # ------------------------------------------------------------------
+
+    def upload_output_file(self, bucket: str, path: str, data: bytes,
+                           content_type: str = "application/octet-stream") -> str:
+        """Upload a file to Supabase Storage. Returns the storage path."""
+        self._client.storage.from_(bucket).upload(
+            path, data,
+            file_options={"content-type": content_type, "upsert": "true"}
+        )
+        return path
+
+    def ensure_bucket(self, bucket: str, public: bool = False) -> None:
+        """Create a storage bucket if it doesn't exist."""
+        try:
+            self._client.storage.get_bucket(bucket)
+        except Exception:
+            self._client.storage.create_bucket(
+                bucket, options={"public": public}
+            )
+
+    def register_analysis_output(self, output_data: dict) -> dict:
+        """Register an output in analysis_outputs table (upsert)."""
+        resp = (
+            self._client.table("analysis_outputs")
+            .upsert(
+                output_data,
+                on_conflict="market_id,operator_id,analysis_period,output_type,module_name",
+            )
+            .execute()
+        )
+        return resp.data[0] if resp.data else {}
+
+    # ------------------------------------------------------------------
     # Cloud status
     # ------------------------------------------------------------------
 

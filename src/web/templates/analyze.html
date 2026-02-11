@@ -983,17 +983,25 @@ function pollJobStatus() {
                 if (status === 'completed') {
                     icon.innerHTML = '&#10003;';
                     icon.style.color = 'var(--positive)';
-                    statusEl.innerHTML = '<span style="color:var(--positive);">BLM Five Looks complete</span> <a href="/outputs" style="color:var(--primary-light);font-size:12px;margin-left:8px;">View Report</a>';
+                    statusEl.innerHTML = '<span style="color:var(--positive);">Complete</span>'
+                        + ' <a href="/outputs" style="color:var(--primary-light);font-size:12px;margin-left:8px;">View Reports</a>'
+                        + ' <a href="/outputs?market=' + market + '" style="color:var(--primary-light);font-size:12px;margin-left:4px;">Downloads</a>';
+                } else if (status === 'uploading') {
+                    icon.innerHTML = '&#10227;';
+                    icon.style.color = 'var(--primary-light)';
+                    statusEl.textContent = 'Uploading outputs...';
+                    statusEl.style.color = 'var(--primary-light)';
                 } else if (status.startsWith('running')) {
                     icon.innerHTML = '&#10227;';
                     icon.style.color = 'var(--warning)';
-                    statusEl.textContent = status.replace('running_', 'Running: ');
+                    const phase = status.replace('running_', '').replace('running', 'starting');
+                    const phaseLabels = {pull: 'Pulling data', engine: 'Running Five Looks', output: 'Generating outputs', starting: 'Starting'};
+                    statusEl.textContent = phaseLabels[phase] || 'Running: ' + phase;
                     statusEl.style.color = 'var(--warning)';
                 } else if (status === 'failed') {
                     icon.innerHTML = '&#10007;';
                     icon.style.color = 'var(--negative)';
-                    statusEl.textContent = 'Failed';
-                    statusEl.style.color = 'var(--negative)';
+                    statusEl.innerHTML = '<span style="color:var(--negative);">Failed</span>';
                 }
             });
 
@@ -1011,8 +1019,9 @@ function pollJobStatus() {
                 }
             } else if (job.status === 'failed') {
                 clearInterval(pollTimer);
-                document.getElementById('progress-subtitle').textContent =
-                    'Analysis failed: ' + (job.error_message || 'Unknown error');
+                document.getElementById('progress-subtitle').innerHTML =
+                    'Analysis failed: ' + (job.error_message || 'Unknown error')
+                    + '<br><button class="btn btn-secondary" onclick="reExecuteJob()" style="margin-top:12px;">Re-execute</button>';
             }
         })
         .catch(() => {}); // Silently retry
@@ -1025,6 +1034,25 @@ function cancelAnalysis() {
 
 function viewResults() {
     window.location.href = '/outputs';
+}
+
+function reExecuteJob() {
+    if (!currentJobId) return;
+
+    document.getElementById('progress-subtitle').textContent = 'Re-executing analysis...';
+
+    fetch('/api/analyze/' + currentJobId + '/execute', { method: 'POST' })
+        .then(r => {
+            if (!r.ok) throw new Error('Re-execute failed');
+            return r.json();
+        })
+        .then(() => {
+            startPolling();
+        })
+        .catch(err => {
+            document.getElementById('progress-subtitle').textContent =
+                'Re-execute failed: ' + err.message;
+        });
 }
 </script>
 {% endblock %}
