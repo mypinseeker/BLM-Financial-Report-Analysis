@@ -741,16 +741,99 @@ function onGroupChange() {
         });
 }
 
-function fetchMarketData(market, btn) {
-    btn.textContent = 'Fetching...';
+async function fetchMarketData(market, btn) {
     btn.disabled = true;
-    // Placeholder — actual Gemini fetch would go through /api/data/fetch
-    setTimeout(() => {
-        btn.textContent = 'Queued';
+    const origText = btn.textContent;
+
+    // Find the operator_id for this market from the sub-list row
+    const row = btn.closest('.sub-row');
+    const checkbox = row ? row.querySelector('input[type=checkbox]') : null;
+    const operatorId = checkbox ? checkbox.dataset.market : market;
+
+    // Get the first operator in this market (the group subsidiary)
+    let opId = '';
+    try {
+        const ops = await fetch('/api/markets/' + market + '/operators').then(r => r.json());
+        // Find the group subsidiary (operator with group_id)
+        const groupId = document.getElementById('sel-group').value;
+        opId = ops.length > 0 ? ops[0].operator_id : market;
+        // Prefer the operator whose group matches
+        for (const op of ops) {
+            if (op.operator_id.startsWith('tigo_') || op.operator_id.includes(groupId)) {
+                opId = op.operator_id;
+                break;
+            }
+        }
+    } catch(e) {
+        opId = market;
+    }
+
+    const TABLE_TYPES = ['financial', 'subscriber', 'tariff', 'macro', 'network'];
+
+    try {
+        // Step 1: Discover
+        btn.textContent = 'Discovering...';
         btn.style.background = 'var(--warning)';
         btn.style.color = '#fff';
         btn.style.borderColor = 'var(--warning)';
-    }, 800);
+
+        const discResp = await fetch('/api/extract/discover', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ operator_id: opId, market: market })
+        });
+        if (!discResp.ok) throw new Error('Discovery failed: ' + (await discResp.text()));
+        const disc = await discResp.json();
+        const jobId = disc.job_id;
+
+        // Step 2: Download
+        btn.textContent = 'Downloading...';
+        const dlResp = await fetch('/api/extract/download', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ job_id: jobId })
+        });
+        if (!dlResp.ok) throw new Error('Download failed: ' + (await dlResp.text()));
+
+        // Step 3: Extract each table
+        for (const tbl of TABLE_TYPES) {
+            btn.textContent = 'Extracting ' + tbl + '...';
+            const extResp = await fetch('/api/extract/run', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    job_id: jobId,
+                    table_type: tbl,
+                    target_quarter: document.getElementById('sel-period-group').value || 'CQ4_2025'
+                })
+            });
+            if (!extResp.ok) {
+                console.warn('Extraction warning for ' + tbl + ': ' + (await extResp.text()));
+            }
+        }
+
+        // Done — show Review link
+        btn.textContent = 'Review';
+        btn.style.background = 'var(--positive)';
+        btn.style.borderColor = 'var(--positive)';
+        btn.disabled = false;
+        btn.onclick = function() { window.location.href = '/review/' + jobId; };
+
+    } catch(err) {
+        btn.textContent = 'Error';
+        btn.style.background = 'var(--negative)';
+        btn.style.borderColor = 'var(--negative)';
+        btn.title = err.message || String(err);
+        console.error('Fetch data error:', err);
+        // Allow retry
+        setTimeout(() => {
+            btn.textContent = origText;
+            btn.style.background = '';
+            btn.style.color = '';
+            btn.style.borderColor = '';
+            btn.disabled = false;
+        }, 5000);
+    }
 }
 
 function fetchAllData() {

@@ -100,3 +100,44 @@ def data_status_api(market_id: str):
     """Return data completeness for a market."""
     svc = get_data_service()
     return svc.get_data_status_for_market(market_id)
+
+
+# ------------------------------------------------------------------
+# Review pages
+# ------------------------------------------------------------------
+
+@router.get("/review")
+def review_list_page(request: Request):
+    """List all extraction jobs for review."""
+    svc = get_data_service()
+    jobs = svc.list_extraction_jobs()
+    return templates.TemplateResponse("review_list.html", {
+        "request": request,
+        "jobs": jobs,
+    })
+
+
+@router.get("/review/{job_id}")
+def review_page(request: Request, job_id: int):
+    """Review a specific extraction job."""
+    import json
+    svc = get_data_service()
+    job = svc.get_extraction_job(job_id)
+
+    # Parse JSON fields
+    extracted = {}
+    if job:
+        raw = job.get("extracted_data") or {}
+        if isinstance(raw, str):
+            try:
+                extracted = json.loads(raw)
+            except json.JSONDecodeError:
+                extracted = {}
+        else:
+            extracted = raw
+
+    return templates.TemplateResponse("review.html", {
+        "request": request,
+        "job": job,
+        "extracted_json": json.dumps(extracted) if job else "{}",
+    })

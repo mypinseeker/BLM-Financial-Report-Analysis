@@ -1,0 +1,507 @@
+{% extends "base.html" %}
+{% block title %}Review Extraction — BLM{% endblock %}
+
+{% block extra_head %}
+<style>
+/* Review page styles */
+.review-header {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.review-header h2 { color: var(--primary); margin-bottom: 8px; }
+.review-meta { display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--light-text); }
+.review-meta .item { display: flex; align-items: center; gap: 6px; }
+.review-meta .label { font-weight: 600; color: var(--text); }
+
+/* Tabs */
+.tab-bar {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 0;
+}
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-text);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all .15s;
+}
+.tab-btn:hover { color: var(--primary); }
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+.tab-btn .count {
+    font-size: 11px;
+    background: var(--border);
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+.tab-btn.active .count { background: var(--primary); color: #fff; }
+
+/* Data table */
+.tab-content { display: none; }
+.tab-content.visible { display: block; }
+
+.data-table-wrap {
+    overflow-x: auto;
+    margin-top: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.data-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.data-table th {
+    background: #f0f0f0;
+    padding: 8px 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+}
+.data-table td {
+    padding: 6px 12px;
+    border-top: 1px solid #f0f0f0;
+    white-space: nowrap;
+}
+.data-table td[contenteditable=true] {
+    cursor: text;
+    outline: none;
+}
+.data-table td[contenteditable=true]:focus {
+    background: #e8eaf6;
+    box-shadow: inset 0 0 0 1px var(--primary-light);
+}
+.data-table td.null-cell {
+    background: #f9f9f9;
+    color: #bdbdbd;
+    font-style: italic;
+}
+
+/* Confidence indicators */
+.conf-badge {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+.conf-high { background: var(--positive); }
+.conf-medium { background: var(--warning); }
+.conf-low { background: var(--negative); }
+
+/* Action buttons */
+.review-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+}
+.btn-danger {
+    background: #fff;
+    color: var(--negative);
+    border: 1px solid var(--negative);
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-danger:hover { background: var(--negative); color: #fff; }
+.btn-approve {
+    background: var(--positive);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-approve:hover { opacity: .9; }
+.btn-approve:disabled { background: #bdbdbd; cursor: not-allowed; }
+
+/* Status message */
+.status-msg {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+}
+.status-msg.success { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.status-msg.error { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+.status-msg.info { background: #e3f2fd; color: #1565c0; border: 1px solid #90caf9; }
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 48px;
+    color: var(--light-text);
+}
+.empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+
+/* Legend */
+.legend {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--light-text);
+    margin-top: 8px;
+    padding: 8px 0;
+}
+.legend .item { display: flex; align-items: center; gap: 4px; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumb">
+    <a href="/analyze">Analyze</a> &rsaquo; Review Extraction #{{ job.id if job else '?' }}
+</div>
+
+{% if not job %}
+<div class="empty-state">
+    <div class="icon">&#x1f50d;</div>
+    <h2>Job Not Found</h2>
+    <p>The extraction job was not found. <a href="/analyze">Go back to Analyze</a>.</p>
+</div>
+{% else %}
+
+<!-- Header -->
+<div class="review-header">
+    <h2>Review Extraction: Job #{{ job.id }}</h2>
+    <div class="review-meta">
+        <div class="item"><span class="label">Operator:</span> {{ job.operator_id }}</div>
+        <div class="item"><span class="label">Market:</span> {{ job.market }}</div>
+        <div class="item"><span class="label">Period:</span> {{ job.report_period or 'N/A' }}</div>
+        <div class="item"><span class="label">Status:</span>
+            <span class="badge {% if job.status == 'extracted' %}badge-positive{% elif job.status == 'error' %}badge-negative{% else %}badge-warning{% endif %}">
+                {{ job.status }}
+            </span>
+        </div>
+        {% if job.report_title %}
+        <div class="item"><span class="label">Report:</span> {{ job.report_title }}</div>
+        {% endif %}
+        {% if job.discovered_pdf_url %}
+        <div class="item"><a href="{{ job.discovered_pdf_url }}" target="_blank" style="color:var(--primary-light);">View PDF</a></div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Tabs -->
+<div class="tab-bar" id="tab-bar">
+    <!-- Populated by JS -->
+</div>
+
+<!-- Tab content panels -->
+<div id="tab-panels">
+    <!-- Populated by JS -->
+</div>
+
+<!-- Legend -->
+<div class="legend">
+    <div class="item"><span class="conf-badge conf-high">H</span> High confidence (&ge;0.8)</div>
+    <div class="item"><span class="conf-badge conf-medium">M</span> Medium (0.5-0.8)</div>
+    <div class="item"><span class="conf-badge conf-low">L</span> Low (&lt;0.5)</div>
+    <div class="item"><span style="background:#f9f9f9;padding:2px 6px;border:1px solid #ddd;border-radius:3px;font-style:italic;color:#bdbdbd;">null</span> Not extracted</div>
+</div>
+
+<!-- Actions -->
+<div class="review-actions">
+    <button class="btn-danger" onclick="rejectJob()">Reject &amp; Discard</button>
+    <div style="display:flex;gap:12px;align-items:center;">
+        <span id="action-status" style="font-size:13px;color:var(--light-text);"></span>
+        <button class="btn-approve" id="btn-approve" onclick="approveJob()">
+            Approve &amp; Commit to Database
+        </button>
+    </div>
+</div>
+
+<!-- Status messages -->
+<div id="status-area"></div>
+
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if job %}
+<script>
+const JOB_ID = {{ job.id }};
+const JOB_STATUS = "{{ job.status }}";
+
+// Extracted data (passed from server as JSON)
+let extractedData = {};
+try {
+    extractedData = JSON.parse('{{ extracted_json | safe }}');
+} catch(e) {
+    extractedData = {};
+}
+
+// Table display configs
+const TABLE_CONFIGS = {
+    financial: {
+        label: 'Financial',
+        columns: [
+            'calendar_quarter', 'total_revenue', 'service_revenue', 'service_revenue_growth_pct',
+            'mobile_service_revenue', 'fixed_service_revenue', 'b2b_revenue',
+            'ebitda', 'ebitda_margin_pct', 'net_income', 'capex', 'capex_to_revenue_pct',
+            'opex', 'employees', 'confidence'
+        ],
+        idColumn: 'calendar_quarter'
+    },
+    subscriber: {
+        label: 'Subscriber',
+        columns: [
+            'calendar_quarter', 'mobile_total_k', 'mobile_postpaid_k', 'mobile_prepaid_k',
+            'mobile_net_adds_k', 'mobile_churn_pct', 'mobile_arpu',
+            'broadband_total_k', 'broadband_fiber_k', 'broadband_arpu',
+            'tv_total_k', 'fmc_total_k', 'confidence'
+        ],
+        idColumn: 'calendar_quarter'
+    },
+    tariff: {
+        label: 'Tariffs',
+        columns: [
+            'plan_name', 'plan_type', 'plan_tier', 'monthly_price',
+            'data_allowance', 'speed_mbps', 'contract_months',
+            'includes_5g', 'technology', 'confidence'
+        ],
+        idColumn: 'plan_name'
+    },
+    macro: {
+        label: 'Macro',
+        columns: [
+            'calendar_quarter', 'gdp_growth_pct', 'inflation_pct', 'unemployment_pct',
+            'telecom_market_size_eur_b', 'telecom_growth_pct',
+            'five_g_adoption_pct', 'fiber_penetration_pct', 'confidence'
+        ],
+        idColumn: 'calendar_quarter'
+    },
+    network: {
+        label: 'Network',
+        columns: [
+            'calendar_quarter', 'five_g_coverage_pct', 'four_g_coverage_pct',
+            'fiber_homepass_k', 'fiber_connected_k',
+            'cable_homepass_k', 'cable_docsis31_pct', 'confidence'
+        ],
+        idColumn: 'calendar_quarter'
+    }
+};
+
+// ------------------------------------------------------------------
+// Build tabs and tables
+// ------------------------------------------------------------------
+function initReview() {
+    const tabBar = document.getElementById('tab-bar');
+    const panels = document.getElementById('tab-panels');
+    const types = Object.keys(TABLE_CONFIGS);
+    let firstTab = null;
+
+    types.forEach(type => {
+        const config = TABLE_CONFIGS[type];
+        const rows = extractedData[type] || [];
+        const count = rows.length;
+
+        // Tab button
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn';
+        btn.dataset.type = type;
+        btn.innerHTML = config.label + '<span class="count">' + count + '</span>';
+        btn.onclick = () => switchTab(type);
+        tabBar.appendChild(btn);
+
+        // Panel
+        const panel = document.createElement('div');
+        panel.className = 'tab-content';
+        panel.id = 'panel-' + type;
+
+        if (count === 0) {
+            panel.innerHTML = '<div class="empty-state" style="padding:24px;"><p>No data extracted for this table.</p></div>';
+        } else {
+            panel.innerHTML = buildTable(type, config, rows);
+        }
+
+        panels.appendChild(panel);
+
+        if (!firstTab) firstTab = type;
+    });
+
+    if (firstTab) switchTab(firstTab);
+
+    // Disable approve if already approved/rejected
+    if (JOB_STATUS === 'approved' || JOB_STATUS === 'rejected') {
+        document.getElementById('btn-approve').disabled = true;
+        document.getElementById('action-status').textContent = 'Job already ' + JOB_STATUS;
+    }
+}
+
+function switchTab(type) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(p => p.classList.remove('visible'));
+
+    const btn = document.querySelector('.tab-btn[data-type="' + type + '"]');
+    if (btn) btn.classList.add('active');
+
+    const panel = document.getElementById('panel-' + type);
+    if (panel) panel.classList.add('visible');
+}
+
+function buildTable(type, config, rows) {
+    let html = '<div class="data-table-wrap"><table class="data-table">';
+
+    // Header
+    html += '<thead><tr>';
+    config.columns.forEach(col => {
+        const label = col.replace(/_/g, ' ').replace(/pct/g, '%').replace(/ k$/g, ' (K)');
+        html += '<th>' + label + '</th>';
+    });
+    html += '</tr></thead>';
+
+    // Body
+    html += '<tbody>';
+    rows.forEach((row, rowIdx) => {
+        html += '<tr>';
+        config.columns.forEach(col => {
+            const val = row[col];
+            const isConfidence = col === 'confidence';
+            const isEditable = !isConfidence && col !== config.idColumn;
+
+            if (isConfidence) {
+                const conf = parseFloat(val) || 0;
+                const cls = conf >= 0.8 ? 'conf-high' : (conf >= 0.5 ? 'conf-medium' : 'conf-low');
+                const letter = conf >= 0.8 ? 'H' : (conf >= 0.5 ? 'M' : 'L');
+                html += '<td><span class="conf-badge ' + cls + '">' + letter + '</span> ' + conf.toFixed(2) + '</td>';
+            } else if (val === null || val === undefined || val === '') {
+                html += '<td class="null-cell"' + (isEditable ? ' contenteditable="true"' : '') +
+                        ' data-type="' + type + '" data-row="' + rowIdx + '" data-col="' + col + '">null</td>';
+            } else {
+                const display = typeof val === 'number' ? formatNumber(val) : val;
+                html += '<td' + (isEditable ? ' contenteditable="true"' : '') +
+                        ' data-type="' + type + '" data-row="' + rowIdx + '" data-col="' + col + '">' + display + '</td>';
+            }
+        });
+        html += '</tr>';
+    });
+    html += '</tbody></table></div>';
+
+    return html;
+}
+
+function formatNumber(val) {
+    if (val === null || val === undefined) return '';
+    if (Number.isInteger(val)) return val.toLocaleString();
+    return parseFloat(val.toFixed(2)).toLocaleString();
+}
+
+// ------------------------------------------------------------------
+// Collect edited data from contenteditable cells
+// ------------------------------------------------------------------
+function collectEditedData() {
+    const edited = JSON.parse(JSON.stringify(extractedData));
+
+    document.querySelectorAll('.data-table td[contenteditable]').forEach(td => {
+        const type = td.dataset.type;
+        const rowIdx = parseInt(td.dataset.row);
+        const col = td.dataset.col;
+        let val = td.textContent.trim();
+
+        if (!edited[type] || !edited[type][rowIdx]) return;
+
+        // Parse value
+        if (val === 'null' || val === '') {
+            val = null;
+        } else if (val === 'true') {
+            val = true;
+        } else if (val === 'false') {
+            val = false;
+        } else {
+            // Try numeric
+            const num = parseFloat(val.replace(/,/g, ''));
+            if (!isNaN(num)) val = num;
+        }
+
+        edited[type][rowIdx][col] = val;
+    });
+
+    return edited;
+}
+
+// ------------------------------------------------------------------
+// Actions
+// ------------------------------------------------------------------
+function approveJob() {
+    const btn = document.getElementById('btn-approve');
+    btn.disabled = true;
+    btn.textContent = 'Approving...';
+
+    // First update extracted_data with any edits
+    const editedData = collectEditedData();
+
+    // Update the job's extracted_data with edits, then approve
+    fetch('/api/extract/' + JOB_ID, { method: 'GET' })
+        .then(r => r.json())
+        .then(job => {
+            // Update extracted data on the job first
+            return fetch('/api/extract/' + JOB_ID + '/approve', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+            });
+        })
+        .then(r => r.json())
+        .then(data => {
+            showStatus('success', 'Data approved and committed to database! ' + JSON.stringify(data.results));
+            btn.textContent = 'Approved';
+        })
+        .catch(err => {
+            showStatus('error', 'Approval failed: ' + err);
+            btn.disabled = false;
+            btn.textContent = 'Approve & Commit to Database';
+        });
+}
+
+function rejectJob() {
+    if (!confirm('Are you sure you want to reject and discard all extracted data?')) return;
+
+    fetch('/api/extract/' + JOB_ID + '/reject', { method: 'POST' })
+        .then(r => r.json())
+        .then(data => {
+            showStatus('info', 'Extraction rejected. Data discarded.');
+            document.getElementById('btn-approve').disabled = true;
+        })
+        .catch(err => {
+            showStatus('error', 'Rejection failed: ' + err);
+        });
+}
+
+function showStatus(type, msg) {
+    const area = document.getElementById('status-area');
+    area.innerHTML = '<div class="status-msg ' + type + '">' + msg + '</div>';
+}
+
+// Init on load
+initReview();
+</script>
+{% endif %}
+{% endblock %}

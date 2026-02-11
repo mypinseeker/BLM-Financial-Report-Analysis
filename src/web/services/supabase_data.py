@@ -331,6 +331,117 @@ class SupabaseDataService:
         return self._select("analysis_jobs", filters=filters, order="created_at")
 
     # ------------------------------------------------------------------
+    # Extraction Jobs
+    # ------------------------------------------------------------------
+
+    def create_extraction_job(self, job_data: dict) -> dict:
+        """Create a new extraction job and return it."""
+        resp = self._client.table("extraction_jobs").insert(job_data).execute()
+        return resp.data[0] if resp.data else {}
+
+    def get_extraction_job(self, job_id: int) -> dict | None:
+        rows = self._select("extraction_jobs", filters={"id": job_id}, limit=1)
+        return rows[0] if rows else None
+
+    def update_extraction_job(self, job_id: int, updates: dict) -> dict | None:
+        resp = (
+            self._client.table("extraction_jobs")
+            .update(updates)
+            .eq("id", job_id)
+            .execute()
+        )
+        return resp.data[0] if resp.data else None
+
+    def list_extraction_jobs(self, status: str | None = None) -> list[dict]:
+        filters = {}
+        if status:
+            filters["status"] = status
+        return self._select("extraction_jobs", filters=filters, order="created_at")
+
+    # ------------------------------------------------------------------
+    # 5-Table Upsert (for extraction pipeline)
+    # ------------------------------------------------------------------
+
+    def upsert_financial_quarterly(self, rows: list[dict]) -> list[dict]:
+        """Upsert financial_quarterly rows. Conflict: operator_id,calendar_quarter."""
+        if not rows:
+            return []
+        resp = (
+            self._client.table("financial_quarterly")
+            .upsert(rows, on_conflict="operator_id,calendar_quarter")
+            .execute()
+        )
+        return resp.data or []
+
+    def upsert_subscriber_quarterly(self, rows: list[dict]) -> list[dict]:
+        """Upsert subscriber_quarterly rows. Conflict: operator_id,calendar_quarter."""
+        if not rows:
+            return []
+        resp = (
+            self._client.table("subscriber_quarterly")
+            .upsert(rows, on_conflict="operator_id,calendar_quarter")
+            .execute()
+        )
+        return resp.data or []
+
+    def upsert_tariffs(self, rows: list[dict]) -> list[dict]:
+        """Upsert tariffs rows. Conflict: operator_id,plan_name,plan_type,snapshot_period."""
+        if not rows:
+            return []
+        resp = (
+            self._client.table("tariffs")
+            .upsert(rows, on_conflict="operator_id,plan_name,plan_type,snapshot_period")
+            .execute()
+        )
+        return resp.data or []
+
+    def upsert_macro_environment(self, rows: list[dict]) -> list[dict]:
+        """Upsert macro_environment rows. Conflict: country,calendar_quarter."""
+        if not rows:
+            return []
+        resp = (
+            self._client.table("macro_environment")
+            .upsert(rows, on_conflict="country,calendar_quarter")
+            .execute()
+        )
+        return resp.data or []
+
+    def upsert_network_infrastructure(self, rows: list[dict]) -> list[dict]:
+        """Upsert network_infrastructure rows. Conflict: operator_id,calendar_quarter."""
+        if not rows:
+            return []
+        resp = (
+            self._client.table("network_infrastructure")
+            .upsert(rows, on_conflict="operator_id,calendar_quarter")
+            .execute()
+        )
+        return resp.data or []
+
+    # ------------------------------------------------------------------
+    # Source Registry & Provenance
+    # ------------------------------------------------------------------
+
+    def register_source(self, source_data: dict) -> dict:
+        """Register a data source. Upsert on source_id."""
+        resp = (
+            self._client.table("source_registry")
+            .upsert(source_data, on_conflict="source_id")
+            .execute()
+        )
+        return resp.data[0] if resp.data else {}
+
+    def record_provenance(self, provenance_rows: list[dict]) -> int:
+        """Insert provenance records. Returns count of inserted rows."""
+        if not provenance_rows:
+            return 0
+        resp = (
+            self._client.table("data_provenance")
+            .insert(provenance_rows)
+            .execute()
+        )
+        return len(resp.data) if resp.data else 0
+
+    # ------------------------------------------------------------------
     # Cloud status
     # ------------------------------------------------------------------
 
