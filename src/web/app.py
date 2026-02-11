@@ -26,10 +26,13 @@ def create_app() -> FastAPI:
 
     # Register API routers
     from src.web.routers import markets, operators, outputs, cloud, pages
+    from src.web.routers import groups, analyze
     app.include_router(markets.router)
     app.include_router(operators.router)
     app.include_router(outputs.router)
     app.include_router(cloud.router)
+    app.include_router(groups.router)
+    app.include_router(analyze.router)
     app.include_router(pages.router)
 
     return app

@@ -194,6 +194,143 @@ class SupabaseDataService:
         return self._client.storage.from_("blm-outputs").download(storage_path)
 
     # ------------------------------------------------------------------
+    # Operator Groups
+    # ------------------------------------------------------------------
+
+    def get_operator_groups(self) -> list[dict]:
+        """Return all operator groups."""
+        return self._select("operator_groups", order="group_name")
+
+    def get_operator_group(self, group_id: str) -> dict | None:
+        rows = self._select("operator_groups", filters={"group_id": group_id}, limit=1)
+        return rows[0] if rows else None
+
+    def get_group_subsidiaries(self, group_id: str) -> list[dict]:
+        """Return subsidiaries for a group with operator details."""
+        subs = self._select("group_subsidiaries", filters={"group_id": group_id})
+        for s in subs:
+            op = self.get_operator(s.get("operator_id", ""))
+            if op:
+                s["operator_display_name"] = op.get("display_name", "")
+                s["country"] = op.get("country", "")
+        return subs
+
+    def get_group_data_status(self, group_id: str) -> list[dict]:
+        """Return data completeness for each subsidiary market."""
+        subs = self.get_group_subsidiaries(group_id)
+        results = []
+        for s in subs:
+            market = s.get("market", "")
+            op_id = s.get("operator_id", "")
+            status = self._get_data_status_for_operator(op_id, market)
+            status["market"] = market
+            status["operator_id"] = op_id
+            status["local_brand"] = s.get("local_brand", "")
+            status["country"] = s.get("country", "")
+            results.append(status)
+        return results
+
+    def _get_data_status_for_operator(self, operator_id: str, market: str) -> dict:
+        """Check data completeness for a specific operator."""
+        tables = {
+            "financial": ("financial_quarterly", {"operator_id": operator_id}),
+            "subscriber": ("subscriber_quarterly", {"operator_id": operator_id}),
+            "network": ("network_infrastructure", {"operator_id": operator_id}),
+        }
+        # Market-level tables
+        market_tables = {
+            "tariffs": ("tariffs", None),  # need operator IDs
+            "macro": ("macro_environment", {"country": market.replace("_", " ").title()}),
+        }
+
+        result = {}
+        for key, (table, filters) in tables.items():
+            try:
+                rows = self._select(table, filters=filters, limit=1)
+                result[key] = len(rows) > 0
+            except Exception:
+                result[key] = False
+
+        # Tariffs: check if any operator in this market has tariff data
+        try:
+            ops = self.get_operators_in_market(market)
+            op_ids = [o["operator_id"] for o in ops]
+            if op_ids:
+                q = self._client.table("tariffs").select("id", count="exact").in_("operator_id", op_ids).limit(1)
+                resp = q.execute()
+                result["tariffs"] = (resp.count or 0) > 0
+            else:
+                result["tariffs"] = False
+        except Exception:
+            result["tariffs"] = False
+
+        for key, (table, filters) in market_tables.items():
+            if key == "tariffs":
+                continue
+            try:
+                rows = self._select(table, filters=filters, limit=1)
+                result[key] = len(rows) > 0
+            except Exception:
+                result[key] = False
+
+        # Calculate overall completeness percentage
+        checks = list(result.values())
+        result["completeness_pct"] = int(sum(checks) / max(len(checks), 1) * 100)
+        return result
+
+    def get_data_status_for_market(self, market_id: str) -> dict:
+        """Return data completeness summary for a market."""
+        ops = self.get_operators_in_market(market_id)
+        if not ops:
+            return {"completeness_pct": 0, "operators": []}
+
+        op_statuses = []
+        for op in ops:
+            status = self._get_data_status_for_operator(
+                op["operator_id"], market_id
+            )
+            status["operator_id"] = op["operator_id"]
+            status["display_name"] = op.get("display_name", "")
+            op_statuses.append(status)
+
+        avg_pct = int(
+            sum(s["completeness_pct"] for s in op_statuses) / max(len(op_statuses), 1)
+        )
+        return {
+            "market_id": market_id,
+            "completeness_pct": avg_pct,
+            "operators": op_statuses,
+        }
+
+    # ------------------------------------------------------------------
+    # Analysis Jobs
+    # ------------------------------------------------------------------
+
+    def create_analysis_job(self, job_data: dict) -> dict:
+        """Create a new analysis job and return it."""
+        resp = self._client.table("analysis_jobs").insert(job_data).execute()
+        return resp.data[0] if resp.data else {}
+
+    def get_analysis_job(self, job_id: int) -> dict | None:
+        rows = self._select("analysis_jobs", filters={"id": job_id}, limit=1)
+        return rows[0] if rows else None
+
+    def update_analysis_job(self, job_id: int, updates: dict) -> dict | None:
+        resp = (
+            self._client.table("analysis_jobs")
+            .update(updates)
+            .eq("id", job_id)
+            .execute()
+        )
+        return resp.data[0] if resp.data else None
+
+    def get_analysis_jobs(self, status: str | None = None) -> list[dict]:
+        filters = {}
+        if status:
+            filters["status"] = status
+        return self._select("analysis_jobs", filters=filters, order="created_at")
+
+    # ------------------------------------------------------------------
     # Cloud status
     # ------------------------------------------------------------------
 

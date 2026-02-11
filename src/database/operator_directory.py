@@ -1,8 +1,56 @@
 """Operator directory with fiscal year configuration and metadata.
 
 This module contains the canonical registry of telecom operators,
-their fiscal year configurations, and earnings calendars.
+their fiscal year configurations, earnings calendars, and operator groups.
 """
+
+# ============================================================================
+# Operator Groups — multinational parent companies
+# ============================================================================
+
+OPERATOR_GROUPS = {
+    "millicom": {
+        "group_id": "millicom",
+        "group_name": "Millicom International Cellular S.A.",
+        "brand_name": "Tigo",
+        "headquarters": "Luxembourg",
+        "ir_url": "https://www.millicom.com/investors/",
+        "stock_ticker": "TIGO (NASDAQ)",
+        "markets_count": 9,
+        "notes": "Leading provider of mobile and cable services in Latin America",
+    },
+    "vodafone_group": {
+        "group_id": "vodafone_group",
+        "group_name": "Vodafone Group Plc",
+        "brand_name": "Vodafone",
+        "headquarters": "London, UK",
+        "ir_url": "https://www.vodafone.com/investors",
+        "stock_ticker": "VOD (LSE/NASDAQ)",
+        "markets_count": 15,
+    },
+    "telefonica_group": {
+        "group_id": "telefonica_group",
+        "group_name": "Telefonica S.A.",
+        "brand_name": "Movistar",
+        "headquarters": "Madrid, Spain",
+        "ir_url": "https://www.telefonica.com/en/shareholders-investors/",
+        "stock_ticker": "TEF (BME/NYSE)",
+        "markets_count": 12,
+    },
+    "america_movil": {
+        "group_id": "america_movil",
+        "group_name": "America Movil S.A.B. de C.V.",
+        "brand_name": "Claro",
+        "headquarters": "Mexico City, Mexico",
+        "ir_url": "https://www.americamovil.com/English/investors/",
+        "stock_ticker": "AMX (BMV/NYSE)",
+        "markets_count": 25,
+    },
+}
+
+# ============================================================================
+# Operator Directory — all registered operators
+# ============================================================================
 
 OPERATOR_DIRECTORY = {
     "vodafone_germany": {
@@ -56,6 +104,391 @@ OPERATOR_DIRECTORY = {
         "fiscal_year_label": "",
         "quarter_naming": "calendar",
         "currency": "EUR",
+    },
+
+    # ========================================================================
+    # Guatemala
+    # ========================================================================
+    "tigo_guatemala": {
+        "display_name": "Tigo Guatemala",
+        "parent_company": "Millicom International Cellular",
+        "country": "Guatemala",
+        "region": "Latin America",
+        "market": "guatemala",
+        "operator_type": "incumbent",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "fiscal_year_label": "",
+        "quarter_naming": "calendar",
+        "currency": "GTQ",
+    },
+    "claro_gt": {
+        "display_name": "Claro Guatemala",
+        "parent_company": "America Movil",
+        "country": "Guatemala",
+        "region": "Latin America",
+        "market": "guatemala",
+        "operator_type": "challenger",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "GTQ",
+    },
+    "movistar_gt": {
+        "display_name": "Movistar Guatemala",
+        "parent_company": "Telefonica S.A.",
+        "country": "Guatemala",
+        "region": "Latin America",
+        "market": "guatemala",
+        "operator_type": "challenger",
+        "group_id": "telefonica_group",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "GTQ",
+    },
+
+    # ========================================================================
+    # Honduras
+    # ========================================================================
+    "tigo_honduras": {
+        "display_name": "Tigo Honduras",
+        "parent_company": "Millicom International Cellular",
+        "country": "Honduras",
+        "region": "Latin America",
+        "market": "honduras",
+        "operator_type": "incumbent",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "HNL",
+    },
+    "claro_hn": {
+        "display_name": "Claro Honduras",
+        "parent_company": "America Movil",
+        "country": "Honduras",
+        "region": "Latin America",
+        "market": "honduras",
+        "operator_type": "challenger",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "HNL",
+    },
+    "digicel_hn": {
+        "display_name": "Digicel Honduras",
+        "parent_company": "Digicel Group",
+        "country": "Honduras",
+        "region": "Latin America",
+        "market": "honduras",
+        "operator_type": "challenger",
+        "fiscal_year_start_month": 4,
+        "quarter_naming": "fiscal",
+        "currency": "HNL",
+    },
+
+    # ========================================================================
+    # El Salvador
+    # ========================================================================
+    "tigo_el_salvador": {
+        "display_name": "Tigo El Salvador",
+        "parent_company": "Millicom International Cellular",
+        "country": "El Salvador",
+        "region": "Latin America",
+        "market": "el_salvador",
+        "operator_type": "challenger",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "USD",
+    },
+    "claro_sv": {
+        "display_name": "Claro El Salvador",
+        "parent_company": "America Movil",
+        "country": "El Salvador",
+        "region": "Latin America",
+        "market": "el_salvador",
+        "operator_type": "incumbent",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "USD",
+    },
+    "digicel_sv": {
+        "display_name": "Digicel El Salvador",
+        "parent_company": "Digicel Group",
+        "country": "El Salvador",
+        "region": "Latin America",
+        "market": "el_salvador",
+        "operator_type": "challenger",
+        "fiscal_year_start_month": 4,
+        "quarter_naming": "fiscal",
+        "currency": "USD",
+    },
+
+    # ========================================================================
+    # Colombia
+    # ========================================================================
+    "tigo_colombia": {
+        "display_name": "Tigo Colombia",
+        "parent_company": "Millicom International Cellular",
+        "country": "Colombia",
+        "region": "Latin America",
+        "market": "colombia",
+        "operator_type": "challenger",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "COP",
+    },
+    "claro_co": {
+        "display_name": "Claro Colombia",
+        "parent_company": "America Movil",
+        "country": "Colombia",
+        "region": "Latin America",
+        "market": "colombia",
+        "operator_type": "incumbent",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "COP",
+    },
+    "movistar_co": {
+        "display_name": "Movistar Colombia",
+        "parent_company": "Telefonica S.A.",
+        "country": "Colombia",
+        "region": "Latin America",
+        "market": "colombia",
+        "operator_type": "challenger",
+        "group_id": "telefonica_group",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "COP",
+    },
+    "wom_co": {
+        "display_name": "WOM Colombia",
+        "parent_company": "WOM S.A.",
+        "country": "Colombia",
+        "region": "Latin America",
+        "market": "colombia",
+        "operator_type": "new_entrant",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "COP",
+    },
+
+    # ========================================================================
+    # Panama
+    # ========================================================================
+    "tigo_panama": {
+        "display_name": "Tigo Panama",
+        "parent_company": "Millicom International Cellular",
+        "country": "Panama",
+        "region": "Latin America",
+        "market": "panama",
+        "operator_type": "challenger",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "USD",
+    },
+    "claro_pa": {
+        "display_name": "Claro Panama",
+        "parent_company": "America Movil",
+        "country": "Panama",
+        "region": "Latin America",
+        "market": "panama",
+        "operator_type": "incumbent",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "USD",
+    },
+    "digicel_pa": {
+        "display_name": "Digicel Panama",
+        "parent_company": "Digicel Group",
+        "country": "Panama",
+        "region": "Latin America",
+        "market": "panama",
+        "operator_type": "challenger",
+        "fiscal_year_start_month": 4,
+        "quarter_naming": "fiscal",
+        "currency": "USD",
+    },
+
+    # ========================================================================
+    # Bolivia
+    # ========================================================================
+    "tigo_bolivia": {
+        "display_name": "Tigo Bolivia",
+        "parent_company": "Millicom International Cellular",
+        "country": "Bolivia",
+        "region": "Latin America",
+        "market": "bolivia",
+        "operator_type": "incumbent",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "BOB",
+    },
+    "entel_bo": {
+        "display_name": "Entel Bolivia",
+        "parent_company": "Entel S.A. (State-owned)",
+        "country": "Bolivia",
+        "region": "Latin America",
+        "market": "bolivia",
+        "operator_type": "incumbent",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "BOB",
+    },
+    "viva_bo": {
+        "display_name": "Viva Bolivia",
+        "parent_company": "NuevaTel PCS",
+        "country": "Bolivia",
+        "region": "Latin America",
+        "market": "bolivia",
+        "operator_type": "challenger",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "BOB",
+    },
+
+    # ========================================================================
+    # Paraguay
+    # ========================================================================
+    "tigo_paraguay": {
+        "display_name": "Tigo Paraguay",
+        "parent_company": "Millicom International Cellular",
+        "country": "Paraguay",
+        "region": "Latin America",
+        "market": "paraguay",
+        "operator_type": "incumbent",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "PYG",
+    },
+    "claro_py": {
+        "display_name": "Claro Paraguay",
+        "parent_company": "America Movil",
+        "country": "Paraguay",
+        "region": "Latin America",
+        "market": "paraguay",
+        "operator_type": "challenger",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "PYG",
+    },
+    "personal_py": {
+        "display_name": "Personal Paraguay",
+        "parent_company": "Telecom Argentina (Grupo Clarin)",
+        "country": "Paraguay",
+        "region": "Latin America",
+        "market": "paraguay",
+        "operator_type": "challenger",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "PYG",
+    },
+
+    # ========================================================================
+    # Nicaragua
+    # ========================================================================
+    "tigo_nicaragua": {
+        "display_name": "Tigo Nicaragua",
+        "parent_company": "Millicom International Cellular",
+        "country": "Nicaragua",
+        "region": "Latin America",
+        "market": "nicaragua",
+        "operator_type": "incumbent",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "NIO",
+    },
+    "claro_ni": {
+        "display_name": "Claro Nicaragua",
+        "parent_company": "America Movil",
+        "country": "Nicaragua",
+        "region": "Latin America",
+        "market": "nicaragua",
+        "operator_type": "challenger",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "NIO",
+    },
+
+    # ========================================================================
+    # Chile
+    # ========================================================================
+    "tigo_chile": {
+        "display_name": "Tigo Chile",
+        "parent_company": "Millicom International Cellular",
+        "country": "Chile",
+        "region": "Latin America",
+        "market": "chile",
+        "operator_type": "challenger",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "CLP",
+    },
+    "entel_cl": {
+        "display_name": "Entel Chile",
+        "parent_company": "Entel S.A.",
+        "country": "Chile",
+        "region": "Latin America",
+        "market": "chile",
+        "operator_type": "incumbent",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "CLP",
+    },
+    "wom_cl": {
+        "display_name": "WOM Chile",
+        "parent_company": "WOM S.A.",
+        "country": "Chile",
+        "region": "Latin America",
+        "market": "chile",
+        "operator_type": "challenger",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "CLP",
+    },
+    "claro_cl": {
+        "display_name": "Claro Chile",
+        "parent_company": "America Movil",
+        "country": "Chile",
+        "region": "Latin America",
+        "market": "chile",
+        "operator_type": "challenger",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "CLP",
+    },
+    "movistar_cl": {
+        "display_name": "Movistar Chile",
+        "parent_company": "Telefonica S.A.",
+        "country": "Chile",
+        "region": "Latin America",
+        "market": "chile",
+        "operator_type": "incumbent",
+        "group_id": "telefonica_group",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "CLP",
     },
 }
 
@@ -113,3 +546,21 @@ def get_operators_for_market(market: str) -> list:
 def get_operator_info(operator_id: str) -> dict:
     """Get operator metadata by ID. Returns empty dict if not found."""
     return OPERATOR_DIRECTORY.get(operator_id, {})
+
+
+def get_operators_for_group(group_id: str) -> list:
+    """Get all operator IDs belonging to a given group."""
+    return [
+        op_id for op_id, info in OPERATOR_DIRECTORY.items()
+        if info.get("group_id") == group_id
+    ]
+
+
+def get_group_info(group_id: str) -> dict:
+    """Get group metadata by ID. Returns empty dict if not found."""
+    return OPERATOR_GROUPS.get(group_id, {})
+
+
+def get_all_markets() -> list[str]:
+    """Get all unique market IDs."""
+    return sorted(set(info["market"] for info in OPERATOR_DIRECTORY.values()))

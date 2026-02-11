@@ -1,0 +1,947 @@
+{% extends "base.html" %}
+{% block title %}Strategic Analysis — BLM{% endblock %}
+
+{% block extra_head %}
+<style>
+/* Wizard steps indicator */
+.wizard-steps {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 24px 0 32px;
+}
+.wizard-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: var(--light-text);
+    position: relative;
+}
+.wizard-step .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--border);
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+.wizard-step.active .step-num {
+    background: var(--primary);
+    color: #fff;
+}
+.wizard-step.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+.wizard-step.done .step-num {
+    background: var(--positive);
+    color: #fff;
+}
+.wizard-step + .wizard-step::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--border);
+    position: absolute;
+    left: -20px;
+    top: 50%;
+}
+.wizard-step.active + .wizard-step::before,
+.wizard-step.done + .wizard-step::before {
+    background: var(--primary);
+}
+
+/* Mode selection cards */
+.mode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+.mode-card {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 28px;
+    cursor: pointer;
+    transition: all .2s;
+    text-align: center;
+}
+.mode-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    transform: translateY(-3px);
+}
+.mode-card.selected {
+    border-color: var(--primary);
+    background: #e8eaf6;
+}
+.mode-card .icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+.mode-card h3 {
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.mode-card .desc {
+    color: var(--light-text);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.mode-card .example {
+    font-size: 12px;
+    color: var(--light-text);
+    background: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Step panels */
+.step-panel { display: none; }
+.step-panel.visible { display: block; }
+
+/* Config form */
+.config-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 20px;
+}
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fff;
+}
+.form-group select:focus, .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 2px rgba(57,73,171,.15);
+}
+
+/* Data status bar */
+.data-status-section {
+    margin-top: 24px;
+}
+.data-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.data-bar:last-child { border-bottom: none; }
+.data-bar .label { width: 100px; font-size: 13px; font-weight: 600; }
+.data-bar .bar-track {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.data-bar .bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width .4s;
+}
+.bar-fill.full { background: var(--positive); }
+.bar-fill.partial { background: var(--warning); }
+.bar-fill.empty { background: var(--negative); width: 0 !important; }
+.data-bar .status-icon { font-size: 16px; width: 24px; text-align: center; }
+
+/* Competitor checkboxes */
+.competitor-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.competitor-list label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: #fff;
+}
+.competitor-list label:hover { background: #f5f5f5; }
+.competitor-list input[type=checkbox] { accent-color: var(--primary); }
+
+/* Subsidiary list */
+.sub-list {
+    margin-top: 16px;
+}
+.sub-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background: #fff;
+    transition: background .15s;
+}
+.sub-row:hover { background: #fafafa; }
+.sub-row input[type=checkbox] { accent-color: var(--primary); flex-shrink: 0; }
+.sub-row .market-name { font-weight: 600; min-width: 120px; }
+.sub-row .brand { color: var(--primary-light); min-width: 100px; font-size: 13px; }
+.sub-row .competitors { flex: 1; font-size: 12px; color: var(--light-text); }
+.sub-row .completeness {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.sub-row .completeness .mini-bar {
+    width: 60px;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.sub-row .completeness .mini-fill {
+    height: 100%;
+    border-radius: 3px;
+}
+.sub-row .fetch-btn {
+    font-size: 12px;
+    padding: 4px 10px;
+    border: 1px solid var(--primary-light);
+    border-radius: 4px;
+    color: var(--primary-light);
+    background: transparent;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.sub-row .fetch-btn:hover { background: var(--primary); color: #fff; }
+
+/* Nav buttons */
+.wizard-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+.btn {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all .15s;
+}
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+.btn-primary:hover { background: var(--primary-light); }
+.btn-primary:disabled { background: #bdbdbd; cursor: not-allowed; }
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-outline:hover { background: #e8eaf6; }
+.btn-secondary {
+    background: var(--secondary);
+    color: #fff;
+}
+.btn-secondary:hover { opacity: .9; }
+
+/* Loading spinner */
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin .6s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 class="section-title">BLM Strategic Analysis</h1>
+<p class="meta">Choose your analysis target and configure parameters</p>
+
+<!-- Wizard Steps Indicator -->
+<div class="wizard-steps">
+    <div class="wizard-step active" id="ind-step1">
+        <span class="step-num">1</span> Choose Mode
+    </div>
+    <div class="wizard-step" id="ind-step2">
+        <span class="step-num">2</span> Configure
+    </div>
+    <div class="wizard-step" id="ind-step3">
+        <span class="step-num">3</span> Launch
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STEP 1: Choose Analysis Mode                                  -->
+<!-- ============================================================ -->
+<div class="step-panel visible" id="step1">
+    <div class="mode-grid">
+        <div class="mode-card" onclick="selectMode('single')">
+            <div class="icon">&#x1f4ca;</div>
+            <h3>Single Market Analysis</h3>
+            <p class="desc">
+                Analyze one operator in a specific country market,
+                comparing against local competitors using BLM Five Looks.
+            </p>
+            <span class="example">Example: Germany &mdash; Vodafone vs DT, O2, 1&amp;1</span>
+        </div>
+        <div class="mode-card" onclick="selectMode('group')">
+            <div class="icon">&#x1f310;</div>
+            <h3>Group Analysis</h3>
+            <p class="desc">
+                Analyze a multinational operator group across all its markets,
+                with per-country Five Looks and a group summary report.
+            </p>
+            <span class="example">Example: Millicom (Tigo) &mdash; 9 LATAM countries</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STEP 2a: Single Market Configuration                          -->
+<!-- ============================================================ -->
+<div class="step-panel" id="step2-single">
+    <h2 style="margin-bottom: 16px; color: var(--primary);">Configure Single Market Analysis</h2>
+
+    <div class="config-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label>Country / Market</label>
+                <select id="sel-market" onchange="onMarketChange()">
+                    <option value="">-- Select Market --</option>
+                    {% for m in markets %}
+                    <option value="{{ m.market_id }}">
+                        {{ m.display_name | default(m.market_name, true) }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Target Operator</label>
+                <select id="sel-operator">
+                    <option value="">-- Select market first --</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Analysis Period</label>
+                <select id="sel-period-single">
+                    <option value="CQ4_2025" selected>CQ4 2025 (Oct-Dec)</option>
+                    <option value="CQ3_2025">CQ3 2025 (Jul-Sep)</option>
+                    <option value="CQ2_2025">CQ2 2025 (Apr-Jun)</option>
+                    <option value="CQ1_2025">CQ1 2025 (Jan-Mar)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Historical Range</label>
+                <select id="sel-quarters-single">
+                    <option value="8" selected>8 quarters (2 years)</option>
+                    <option value="4">4 quarters (1 year)</option>
+                    <option value="12">12 quarters (3 years)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Competitors (dynamic) -->
+        <div style="margin-top: 16px;">
+            <label style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .3px;">
+                Competitors (auto-selected, can deselect)
+            </label>
+            <div class="competitor-list" id="competitor-list">
+                <span style="color: var(--light-text); font-size: 13px;">Select a market first</span>
+            </div>
+        </div>
+
+        <!-- Data status -->
+        <div class="data-status-section" id="single-data-status" style="display: none;">
+            <h3 style="font-size: 15px; margin-bottom: 12px; color: var(--primary);">Data Status</h3>
+            <div id="single-data-bars"></div>
+        </div>
+    </div>
+
+    <div class="wizard-nav">
+        <button class="btn btn-outline" onclick="goToStep(1)">&larr; Back</button>
+        <button class="btn btn-primary" id="btn-start-single" onclick="startSingleAnalysis()" disabled>
+            Start Analysis &rarr;
+        </button>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STEP 2b: Group Configuration                                  -->
+<!-- ============================================================ -->
+<div class="step-panel" id="step2-group">
+    <h2 style="margin-bottom: 16px; color: var(--primary);">Configure Group Analysis</h2>
+
+    <div class="config-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label>Operator Group</label>
+                <select id="sel-group" onchange="onGroupChange()">
+                    <option value="">-- Select Group --</option>
+                    {% for g in groups %}
+                    <option value="{{ g.group_id }}">
+                        {{ g.group_name }}
+                        {% if g.brand_name %}({{ g.brand_name }}){% endif %}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Analysis Period</label>
+                <select id="sel-period-group">
+                    <option value="CQ4_2025" selected>CQ4 2025 (Oct-Dec)</option>
+                    <option value="CQ3_2025">CQ3 2025 (Jul-Sep)</option>
+                    <option value="CQ2_2025">CQ2 2025 (Apr-Jun)</option>
+                    <option value="CQ1_2025">CQ1 2025 (Jan-Mar)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Group info -->
+        <div id="group-info" style="display: none;">
+            <div class="metric-row" style="margin-bottom: 16px;">
+                <div class="metric">
+                    <div class="label">Headquarters</div>
+                    <div class="value" style="font-size: 16px;" id="g-hq">-</div>
+                </div>
+                <div class="metric">
+                    <div class="label">Stock Ticker</div>
+                    <div class="value" style="font-size: 16px;" id="g-ticker">-</div>
+                </div>
+                <div class="metric">
+                    <div class="label">Markets</div>
+                    <div class="value" id="g-markets-count">-</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subsidiary list -->
+        <div style="margin-top: 16px;">
+            <label style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .3px;">
+                Subsidiaries &amp; Markets
+            </label>
+            <div class="sub-list" id="sub-list">
+                <span style="color: var(--light-text); font-size: 13px; padding: 12px;">Select a group first</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wizard-nav">
+        <button class="btn btn-outline" onclick="goToStep(1)">&larr; Back</button>
+        <div style="display: flex; gap: 12px;">
+            <button class="btn btn-secondary" id="btn-fetch-all" onclick="fetchAllData()" style="display: none;">
+                Fetch All Data
+            </button>
+            <button class="btn btn-primary" id="btn-start-group" onclick="startGroupAnalysis()" disabled>
+                Start Analysis &rarr;
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- STEP 3: Analysis Progress                                     -->
+<!-- ============================================================ -->
+<div class="step-panel" id="step3">
+    <h2 style="margin-bottom: 4px; color: var(--primary);" id="progress-title">Analysis in Progress</h2>
+    <p class="meta" id="progress-subtitle">Running BLM Five Looks analysis...</p>
+
+    <div class="config-form" style="margin-top: 20px;">
+        <div id="progress-list"></div>
+    </div>
+
+    <div class="wizard-nav">
+        <button class="btn btn-outline" onclick="cancelAnalysis()">Cancel</button>
+        <button class="btn btn-primary" id="btn-view-results" onclick="viewResults()" style="display: none;">
+            View Results &rarr;
+        </button>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// ================================================================
+// State
+// ================================================================
+let currentStep = 1;
+let selectedMode = null; // "single" | "group"
+let currentJobId = null;
+let pollTimer = null;
+
+// Pre-loaded data from server
+const marketsData = {{ markets | tojson }};
+const groupsData = {{ groups | tojson }};
+
+// ================================================================
+// Step navigation
+// ================================================================
+function goToStep(step) {
+    // Hide all panels
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('visible'));
+
+    // Show target panel
+    if (step === 1) {
+        document.getElementById('step1').classList.add('visible');
+    } else if (step === 2) {
+        if (selectedMode === 'single') {
+            document.getElementById('step2-single').classList.add('visible');
+        } else {
+            document.getElementById('step2-group').classList.add('visible');
+        }
+    } else if (step === 3) {
+        document.getElementById('step3').classList.add('visible');
+    }
+
+    // Update step indicators
+    for (let i = 1; i <= 3; i++) {
+        const el = document.getElementById('ind-step' + i);
+        el.classList.remove('active', 'done');
+        if (i < step) el.classList.add('done');
+        if (i === step) el.classList.add('active');
+    }
+    currentStep = step;
+}
+
+// ================================================================
+// Mode selection
+// ================================================================
+function selectMode(mode) {
+    selectedMode = mode;
+    document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+    event.currentTarget.classList.add('selected');
+    setTimeout(() => goToStep(2), 200);
+}
+
+// ================================================================
+// Single Market — dynamic operator/competitor loading
+// ================================================================
+function onMarketChange() {
+    const marketId = document.getElementById('sel-market').value;
+    const opSelect = document.getElementById('sel-operator');
+    const compList = document.getElementById('competitor-list');
+    const statusSection = document.getElementById('single-data-status');
+
+    opSelect.innerHTML = '<option value="">Loading...</option>';
+    compList.innerHTML = '<span style="color:var(--light-text);font-size:13px;">Loading...</span>';
+    statusSection.style.display = 'none';
+    document.getElementById('btn-start-single').disabled = true;
+
+    if (!marketId) {
+        opSelect.innerHTML = '<option value="">-- Select market first --</option>';
+        compList.innerHTML = '<span style="color:var(--light-text);font-size:13px;">Select a market first</span>';
+        return;
+    }
+
+    fetch('/api/markets/' + marketId + '/operators')
+        .then(r => r.json())
+        .then(operators => {
+            // Populate operator dropdown
+            opSelect.innerHTML = '<option value="">-- Select Operator --</option>';
+            operators.forEach(op => {
+                const opt = document.createElement('option');
+                opt.value = op.operator_id;
+                opt.textContent = op.display_name + ' (' + (op.operator_type || '') + ')';
+                opSelect.appendChild(opt);
+            });
+
+            // Populate competitor checkboxes
+            compList.innerHTML = '';
+            operators.forEach(op => {
+                const lbl = document.createElement('label');
+                lbl.innerHTML = '<input type="checkbox" checked value="' + op.operator_id + '"> ' + op.display_name;
+                compList.appendChild(lbl);
+            });
+
+            opSelect.onchange = function() {
+                // Uncheck the selected operator from competitors
+                document.querySelectorAll('#competitor-list input').forEach(cb => {
+                    cb.checked = cb.value !== opSelect.value;
+                });
+                document.getElementById('btn-start-single').disabled = !opSelect.value;
+
+                // Load data status
+                if (opSelect.value) {
+                    loadSingleDataStatus(marketId);
+                }
+            };
+        })
+        .catch(err => {
+            opSelect.innerHTML = '<option value="">Error loading operators</option>';
+            compList.innerHTML = '<span style="color:var(--negative);">Failed to load</span>';
+        });
+}
+
+function loadSingleDataStatus(marketId) {
+    const statusSection = document.getElementById('single-data-status');
+    const barsDiv = document.getElementById('single-data-bars');
+
+    fetch('/api/data-status/' + marketId)
+        .then(r => r.json())
+        .then(data => {
+            statusSection.style.display = 'block';
+            barsDiv.innerHTML = '';
+
+            const categories = [
+                {key: 'financial', label: 'Financial'},
+                {key: 'subscriber', label: 'Subscriber'},
+                {key: 'tariffs', label: 'Tariffs'},
+                {key: 'macro', label: 'Macro'},
+                {key: 'network', label: 'Network'},
+            ];
+
+            categories.forEach(cat => {
+                const hasData = data[cat.key] || false;
+                const pct = hasData ? 100 : 0;
+                const cls = pct === 100 ? 'full' : (pct > 0 ? 'partial' : 'empty');
+                const icon = pct === 100 ? '&#10003;' : '&#9675;';
+
+                barsDiv.innerHTML += `
+                    <div class="data-bar">
+                        <span class="label">${cat.label}</span>
+                        <div class="bar-track"><div class="bar-fill ${cls}" style="width:${pct}%"></div></div>
+                        <span class="status-icon">${icon}</span>
+                    </div>`;
+            });
+        })
+        .catch(() => {
+            statusSection.style.display = 'block';
+            barsDiv.innerHTML = '<p style="color:var(--negative);font-size:13px;">Failed to load data status</p>';
+        });
+}
+
+// ================================================================
+// Group Analysis — dynamic subsidiary loading
+// ================================================================
+function onGroupChange() {
+    const groupId = document.getElementById('sel-group').value;
+    const subList = document.getElementById('sub-list');
+    const groupInfo = document.getElementById('group-info');
+    const fetchAllBtn = document.getElementById('btn-fetch-all');
+    const startBtn = document.getElementById('btn-start-group');
+
+    subList.innerHTML = '<span style="color:var(--light-text);font-size:13px;padding:12px;">Loading...</span>';
+    groupInfo.style.display = 'none';
+    fetchAllBtn.style.display = 'none';
+    startBtn.disabled = true;
+
+    if (!groupId) {
+        subList.innerHTML = '<span style="color:var(--light-text);font-size:13px;padding:12px;">Select a group first</span>';
+        return;
+    }
+
+    // Load group details
+    fetch('/api/groups/' + groupId)
+        .then(r => r.json())
+        .then(group => {
+            groupInfo.style.display = 'block';
+            document.getElementById('g-hq').textContent = group.headquarters || '-';
+            document.getElementById('g-ticker').textContent = group.stock_ticker || '-';
+            document.getElementById('g-markets-count').textContent = group.markets_count || '-';
+
+            // Load data status for each subsidiary
+            return fetch('/api/groups/' + groupId + '/data-status');
+        })
+        .then(r => r.json())
+        .then(statusList => {
+            subList.innerHTML = '';
+            fetchAllBtn.style.display = 'inline-block';
+            startBtn.disabled = false;
+
+            statusList.forEach(s => {
+                const pct = s.completeness_pct || 0;
+                const fillColor = pct >= 80 ? 'var(--positive)' : (pct > 0 ? 'var(--warning)' : 'var(--negative)');
+                const country = s.country || s.market || '';
+                const brand = s.local_brand || s.operator_id || '';
+
+                // Build competitors string
+                let compStr = 'vs ';
+                fetch('/api/markets/' + s.market + '/operators')
+                    .then(r => r.json())
+                    .then(ops => {
+                        const comps = ops.filter(o => o.operator_id !== s.operator_id)
+                                         .map(o => o.display_name.replace(/ (Guatemala|Honduras|El Salvador|Colombia|Panama|Bolivia|Paraguay|Nicaragua|Chile)/, ''))
+                                         .join(', ');
+                        const compEl = document.getElementById('comp-' + s.market);
+                        if (compEl) compEl.textContent = 'vs ' + (comps || 'N/A');
+                    });
+
+                const row = document.createElement('div');
+                row.className = 'sub-row';
+                row.innerHTML = `
+                    <input type="checkbox" checked data-market="${s.market}">
+                    <span class="market-name">${country}</span>
+                    <span class="brand">${brand}</span>
+                    <span class="competitors" id="comp-${s.market}">vs ...</span>
+                    <span class="completeness">
+                        <div class="mini-bar">
+                            <div class="mini-fill" style="width:${pct}%;background:${fillColor}"></div>
+                        </div>
+                        ${pct}%
+                    </span>
+                    <button class="fetch-btn" onclick="fetchMarketData('${s.market}', this)">Fetch Data</button>
+                `;
+                subList.appendChild(row);
+            });
+        })
+        .catch(err => {
+            subList.innerHTML = '<span style="color:var(--negative);font-size:13px;padding:12px;">Failed to load group data</span>';
+        });
+}
+
+function fetchMarketData(market, btn) {
+    btn.textContent = 'Fetching...';
+    btn.disabled = true;
+    // Placeholder — actual Gemini fetch would go through /api/data/fetch
+    setTimeout(() => {
+        btn.textContent = 'Queued';
+        btn.style.background = 'var(--warning)';
+        btn.style.color = '#fff';
+        btn.style.borderColor = 'var(--warning)';
+    }, 800);
+}
+
+function fetchAllData() {
+    document.querySelectorAll('.sub-row .fetch-btn').forEach(btn => {
+        const market = btn.closest('.sub-row').querySelector('input').dataset.market;
+        fetchMarketData(market, btn);
+    });
+}
+
+// ================================================================
+// Start Analysis
+// ================================================================
+function startSingleAnalysis() {
+    const market = document.getElementById('sel-market').value;
+    const operator = document.getElementById('sel-operator').value;
+    const period = document.getElementById('sel-period-single').value;
+    const nQuarters = parseInt(document.getElementById('sel-quarters-single').value);
+    const competitors = [];
+    document.querySelectorAll('#competitor-list input:checked').forEach(cb => {
+        if (cb.value !== operator) competitors.push(cb.value);
+    });
+
+    const btn = document.getElementById('btn-start-single');
+    btn.innerHTML = '<span class="spinner"></span> Creating...';
+    btn.disabled = true;
+
+    fetch('/api/analyze/single', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            market, target_operator: operator,
+            analysis_period: period, n_quarters: nQuarters,
+            competitors
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        currentJobId = data.job_id;
+        document.getElementById('progress-title').textContent = 'Single Market Analysis';
+        document.getElementById('progress-subtitle').textContent =
+            'Analyzing ' + operator + ' in ' + market + '...';
+        showProgressForSingle(market);
+        goToStep(3);
+    })
+    .catch(err => {
+        btn.innerHTML = 'Start Analysis &rarr;';
+        btn.disabled = false;
+        alert('Failed to create analysis job: ' + err);
+    });
+}
+
+function startGroupAnalysis() {
+    const groupId = document.getElementById('sel-group').value;
+    const period = document.getElementById('sel-period-group').value;
+    const selectedMarkets = [];
+    document.querySelectorAll('#sub-list input:checked').forEach(cb => {
+        selectedMarkets.push(cb.dataset.market);
+    });
+
+    const btn = document.getElementById('btn-start-group');
+    btn.innerHTML = '<span class="spinner"></span> Creating...';
+    btn.disabled = true;
+
+    fetch('/api/analyze/group', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            group_id: groupId,
+            analysis_period: period,
+            selected_markets: selectedMarkets
+        })
+    })
+    .then(r => r.json())
+    .then(data => {
+        currentJobId = data.job_id;
+        const groupName = document.getElementById('sel-group').selectedOptions[0].textContent.trim();
+        document.getElementById('progress-title').textContent = groupName + ' — Group Analysis';
+        document.getElementById('progress-subtitle').textContent =
+            'Running BLM Five Looks for ' + data.markets.length + ' markets...';
+        showProgressForGroup(data.markets);
+        goToStep(3);
+        startPolling();
+    })
+    .catch(err => {
+        btn.innerHTML = 'Start Analysis &rarr;';
+        btn.disabled = false;
+        alert('Failed to create analysis job: ' + err);
+    });
+}
+
+// ================================================================
+// Progress Tracking
+// ================================================================
+function showProgressForSingle(market) {
+    const list = document.getElementById('progress-list');
+    list.innerHTML = `
+        <div class="data-bar">
+            <span style="font-size:18px;width:28px;text-align:center;">&#9711;</span>
+            <span class="label" style="width:auto;flex:1;">${market}</span>
+            <span style="font-size:13px;color:var(--light-text);">Pending</span>
+        </div>
+    `;
+    startPolling();
+}
+
+function showProgressForGroup(markets) {
+    const list = document.getElementById('progress-list');
+    list.innerHTML = '';
+    markets.forEach(m => {
+        list.innerHTML += `
+            <div class="data-bar" id="prog-${m}">
+                <span style="font-size:18px;width:28px;text-align:center;" class="prog-icon">&#9675;</span>
+                <span class="label" style="width:auto;flex:1;">${m}</span>
+                <span class="prog-status" style="font-size:13px;color:var(--light-text);">Queued</span>
+            </div>
+        `;
+    });
+    // Add group summary row
+    list.innerHTML += `
+        <div class="data-bar" id="prog-group-summary" style="border-top:2px solid var(--border);margin-top:8px;padding-top:12px;">
+            <span style="font-size:18px;width:28px;text-align:center;" class="prog-icon">&#9675;</span>
+            <span class="label" style="width:auto;flex:1;font-weight:700;">Group Summary</span>
+            <span class="prog-status" style="font-size:13px;color:var(--light-text);">Waiting for all countries</span>
+        </div>
+    `;
+}
+
+function startPolling() {
+    if (pollTimer) clearInterval(pollTimer);
+    pollTimer = setInterval(pollJobStatus, 3000);
+}
+
+function pollJobStatus() {
+    if (!currentJobId) return;
+
+    fetch('/api/analyze/' + currentJobId)
+        .then(r => r.json())
+        .then(job => {
+            const progress = job.progress || {};
+
+            Object.entries(progress).forEach(([market, status]) => {
+                const row = document.getElementById('prog-' + market);
+                if (!row) return;
+                const icon = row.querySelector('.prog-icon');
+                const statusEl = row.querySelector('.prog-status');
+
+                if (status === 'completed') {
+                    icon.innerHTML = '&#10003;';
+                    icon.style.color = 'var(--positive)';
+                    statusEl.innerHTML = '<span style="color:var(--positive);">BLM Five Looks complete</span> <a href="/outputs" style="color:var(--primary-light);font-size:12px;margin-left:8px;">View Report</a>';
+                } else if (status.startsWith('running')) {
+                    icon.innerHTML = '&#10227;';
+                    icon.style.color = 'var(--warning)';
+                    statusEl.textContent = status.replace('running_', 'Running: ');
+                    statusEl.style.color = 'var(--warning)';
+                } else if (status === 'failed') {
+                    icon.innerHTML = '&#10007;';
+                    icon.style.color = 'var(--negative)';
+                    statusEl.textContent = 'Failed';
+                    statusEl.style.color = 'var(--negative)';
+                }
+            });
+
+            if (job.status === 'completed') {
+                clearInterval(pollTimer);
+                document.getElementById('btn-view-results').style.display = 'inline-block';
+                document.getElementById('progress-subtitle').textContent = 'Analysis complete!';
+
+                // Update group summary
+                const sumRow = document.getElementById('prog-group-summary');
+                if (sumRow) {
+                    sumRow.querySelector('.prog-icon').innerHTML = '&#10003;';
+                    sumRow.querySelector('.prog-icon').style.color = 'var(--positive)';
+                    sumRow.querySelector('.prog-status').innerHTML = '<span style="color:var(--positive);">Complete</span>';
+                }
+            } else if (job.status === 'failed') {
+                clearInterval(pollTimer);
+                document.getElementById('progress-subtitle').textContent =
+                    'Analysis failed: ' + (job.error_message || 'Unknown error');
+            }
+        })
+        .catch(() => {}); // Silently retry
+}
+
+function cancelAnalysis() {
+    if (pollTimer) clearInterval(pollTimer);
+    goToStep(1);
+}
+
+function viewResults() {
+    window.location.href = '/outputs';
+}
+</script>
+{% endblock %}

@@ -9,9 +9,27 @@ To add a new market:
 
 from src.models.market_config import MarketConfig
 from src.models.market_configs.germany import GERMANY_CONFIG
+from src.models.market_configs.guatemala import GUATEMALA_CONFIG
+from src.models.market_configs.honduras import HONDURAS_CONFIG
+from src.models.market_configs.el_salvador import EL_SALVADOR_CONFIG
+from src.models.market_configs.colombia import COLOMBIA_CONFIG
+from src.models.market_configs.panama import PANAMA_CONFIG
+from src.models.market_configs.bolivia import BOLIVIA_CONFIG
+from src.models.market_configs.paraguay import PARAGUAY_CONFIG
+from src.models.market_configs.nicaragua import NICARAGUA_CONFIG
+from src.models.market_configs.chile import CHILE_CONFIG
 
 MARKET_REGISTRY: dict[str, MarketConfig] = {
     "germany": GERMANY_CONFIG,
+    "guatemala": GUATEMALA_CONFIG,
+    "honduras": HONDURAS_CONFIG,
+    "el_salvador": EL_SALVADOR_CONFIG,
+    "colombia": COLOMBIA_CONFIG,
+    "panama": PANAMA_CONFIG,
+    "bolivia": BOLIVIA_CONFIG,
+    "paraguay": PARAGUAY_CONFIG,
+    "nicaragua": NICARAGUA_CONFIG,
+    "chile": CHILE_CONFIG,
 }
 
 

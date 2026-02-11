@@ -27,6 +27,20 @@ def dashboard(request: Request):
     })
 
 
+@router.get("/analyze")
+def analyze_page(request: Request):
+    """Analysis target selection wizard."""
+    svc = get_data_service()
+    markets = svc.get_available_markets()
+    groups = svc.get_operator_groups()
+
+    return templates.TemplateResponse("analyze.html", {
+        "request": request,
+        "markets": markets,
+        "groups": groups,
+    })
+
+
 @router.get("/market/{market_id}")
 def market_page(request: Request, market_id: str):
     svc = get_data_service()
@@ -75,3 +89,14 @@ def outputs_page(request: Request):
         "request": request,
         "outputs": outputs,
     })
+
+
+# ------------------------------------------------------------------
+# API: data status for a market (used by analyze wizard)
+# ------------------------------------------------------------------
+
+@router.get("/api/data-status/{market_id}")
+def data_status_api(market_id: str):
+    """Return data completeness for a market."""
+    svc = get_data_service()
+    return svc.get_data_status_for_market(market_id)
