@@ -53,7 +53,12 @@ class RunRequest(BaseModel):
 # ------------------------------------------------------------------
 
 def _get_extraction_service() -> ExtractionService:
-    return ExtractionService(get_gemini_service())
+    try:
+        return ExtractionService(get_gemini_service())
+    except GeminiError as e:
+        raise HTTPException(500, f"Gemini init failed: {e}")
+    except Exception as e:
+        raise HTTPException(500, f"Extraction service init failed: {e}")
 
 
 # ------------------------------------------------------------------
@@ -230,6 +235,22 @@ async def run_extraction(req: RunRequest):
 
 
 # ------------------------------------------------------------------
+# Debug: check env vars
+# ------------------------------------------------------------------
+
+@router.get("/debug/env")
+def debug_env():
+    """Debug: check if required env vars are set (values masked)."""
+    import os
+    gemini_key = os.getenv("GEMINI_API_KEY", "")
+    supabase_url = os.getenv("SUPABASE_URL", "")
+    return {
+        "GEMINI_API_KEY": f"{gemini_key[:8]}...{gemini_key[-4:]}" if len(gemini_key) > 12 else ("SET" if gemini_key else "MISSING"),
+        "SUPABASE_URL": supabase_url[:30] + "..." if supabase_url else "MISSING",
+    }
+
+
+# ------------------------------------------------------------------
 # 4. Get job status and data
 # ------------------------------------------------------------------
 
@@ -397,3 +418,5 @@ def _table_name(table_type: str) -> str:
         "macro": "macro_environment",
         "network": "network_infrastructure",
     }.get(table_type, table_type)
+
+
