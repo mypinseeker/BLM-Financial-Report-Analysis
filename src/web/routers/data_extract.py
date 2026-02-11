@@ -149,16 +149,26 @@ async def download_report(req: DownloadRequest):
             "job_id": req.job_id,
             "status": "uploaded",
             "file_uri": file_uri,
+            "mode": "pdf",
         }
 
     except Exception as e:
-        logger.exception("Download/upload failed for job %d", req.job_id)
+        # PDF download failed — fall back to search-based extraction
+        logger.warning("PDF download failed for job %d: %s. Falling back to search mode.", req.job_id, e)
         svc.update_extraction_job(req.job_id, {
-            "status": "error",
-            "current_step": "download",
-            "error_message": str(e),
+            "status": "uploaded",
+            "current_step": "search_fallback",
+            "gemini_file_uri": "search",
+            "error_message": f"PDF download failed, using search mode: {e}",
         })
-        raise HTTPException(500, f"Download/upload failed: {e}")
+
+        return {
+            "job_id": req.job_id,
+            "status": "uploaded",
+            "file_uri": "search",
+            "mode": "search_fallback",
+            "message": f"PDF not downloadable, will use Google Search for extraction",
+        }
 
 
 # ------------------------------------------------------------------

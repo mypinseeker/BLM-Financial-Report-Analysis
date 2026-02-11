@@ -15,29 +15,33 @@ def get_discovery_prompt(
 ) -> tuple[str, str]:
     """Prompt for discovering the latest earnings report PDF via Google Search."""
     system_instruction = (
-        "You are a financial research assistant specialized in telecom operator "
-        "earnings reports. Your task is to find the most recent quarterly or annual "
-        "earnings report PDF for a specific telecom operator. "
-        "Return ONLY a JSON object with the discovered information."
+        "You are a financial research assistant specialized in finding direct PDF "
+        "download links for telecom operator earnings reports. "
+        "You MUST return a direct link to a .pdf file, NOT an HTML page. "
+        "Return ONLY a JSON object."
     )
     period_hint = f" Focus on the {report_period} period." if report_period else ""
-    user_prompt = f"""Find the most recent quarterly earnings report PDF for: {operator_name}
+    user_prompt = f"""Find the DIRECT PDF download URL for the most recent quarterly earnings report for: {operator_name}
 Investor Relations page: {ir_url}{period_hint}
 
-Search for the latest quarterly results, earnings release, or financial report PDF.
-Look on the company's official investor relations page and related press releases.
+IMPORTANT RULES:
+1. The pdf_url MUST be a direct link to a PDF file (typically ending in .pdf)
+2. Do NOT return an HTML page URL — it must be a downloadable PDF
+3. Search for "earnings release PDF", "quarterly report PDF", "results PDF" on the company's IR site
+4. For Millicom/Tigo, look at: https://www.millicom.com/investors/reports-and-presentations/
+5. Common PDF URL patterns: /files/*.pdf, /media/*.pdf, /documents/*.pdf, /wp-content/*.pdf
 
 Return a JSON object with these exact fields:
 {{
-    "pdf_url": "direct URL to the PDF file (must end in .pdf or be a direct download link)",
+    "pdf_url": "DIRECT URL to the PDF file (must be a real .pdf download link, NOT an HTML page)",
     "report_title": "title of the report (e.g., 'Q4 2025 Earnings Release')",
-    "report_period": "period in format like 'CQ4_2025' or 'FY2025'",
-    "ir_page_url": "URL of the investor relations page where the report was found",
+    "report_period": "period in CQ format like 'CQ4_2025' or 'CQ3_2025'",
+    "ir_page_url": "URL of the investor relations page where the PDF link was found",
     "confidence": 0.0 to 1.0
 }}
 
-If you cannot find a direct PDF link, provide the best available report page URL as pdf_url.
-If you are unsure about the period, use your best estimate based on the report title and date."""
+If you absolutely cannot find a direct PDF link, set confidence to 0.2 and explain in report_title.
+NEVER return an HTML page URL as pdf_url."""
     return system_instruction, user_prompt
 
 

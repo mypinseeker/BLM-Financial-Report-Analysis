@@ -103,11 +103,21 @@ class ExtractionService:
                 f"Failed to download PDF ({resp.status_code}): {pdf_url}"
             )
 
-        content_type = resp.headers.get("content-type", "application/pdf")
-        if "pdf" not in content_type.lower() and not pdf_url.lower().endswith(".pdf"):
-            logger.warning("Downloaded content may not be PDF: %s", content_type)
-
+        content_type = resp.headers.get("content-type", "")
         file_bytes = resp.content
+
+        # Validate this is actually a PDF (check magic bytes and content-type)
+        is_pdf = (
+            file_bytes[:5] == b"%PDF-"
+            or "pdf" in content_type.lower()
+            or pdf_url.lower().endswith(".pdf")
+        )
+        if not is_pdf:
+            raise RuntimeError(
+                f"Downloaded file is not a PDF (content-type: {content_type}). "
+                f"The URL may be an HTML page, not a direct PDF link: {pdf_url}"
+            )
+
         size_mb = len(file_bytes) / (1024 * 1024)
         logger.info("Downloaded %.1f MB from %s", size_mb, pdf_url)
 
@@ -165,8 +175,22 @@ class ExtractionService:
         else:
             raise ValueError(f"Unknown table type: {table_type}")
 
-        # Call Gemini with the uploaded file
-        result = await self.gemini.generate_with_file(file_uri, prompt, sys_inst)
+        # Call Gemini: use uploaded file if available, else fall back to search
+        if file_uri and file_uri != "search":
+            result = await self.gemini.generate_with_file(file_uri, prompt, sys_inst)
+        else:
+            # Enhance prompt for search mode
+            parent = op_info.get("parent_company", "")
+            search_hint = (
+                f"\n\nIMPORTANT: Search the web for {operator_name}"
+                f"{' (' + parent + ')' if parent else ''} quarterly financial results. "
+                f"Look for earnings releases, investor presentations, and press releases "
+                f"from the company's official website. Extract actual numbers reported "
+                f"in the earnings results. Use Google Search to find the data."
+            )
+            result = await self.gemini.generate_with_search(
+                prompt + search_hint, sys_inst
+            )
 
         # Normalize: result might be a dict with a "data" key or a list directly
         rows = self._normalize_rows(result)
