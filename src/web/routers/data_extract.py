@@ -332,10 +332,12 @@ def approve_extraction(job_id: int):
         if not rows or table_type not in upsert_map:
             continue
 
-        # Strip 'confidence' field before upsert (not a DB column)
+        # Strip fields not in the DB schema for each table type
         clean_rows = []
         for row in rows:
             confidence = row.pop("confidence", None)
+            # Remove fields that don't exist in certain tables
+            row = _clean_row_for_table(table_type, row)
             clean_rows.append(row)
             # Build provenance
             if confidence is not None:
@@ -454,5 +456,52 @@ def _table_name(table_type: str) -> str:
         "macro": "macro_environment",
         "network": "network_infrastructure",
     }.get(table_type, table_type)
+
+
+# Allowed columns per table (from schema.sql). Extra fields are stripped before upsert.
+_TABLE_COLUMNS: dict[str, set[str]] = {
+    "financial": {
+        "operator_id", "period", "calendar_quarter", "period_start", "period_end",
+        "report_date", "report_status", "total_revenue", "service_revenue",
+        "service_revenue_growth_pct", "mobile_service_revenue", "mobile_service_growth_pct",
+        "fixed_service_revenue", "fixed_service_growth_pct", "b2b_revenue", "b2b_growth_pct",
+        "tv_revenue", "wholesale_revenue", "other_revenue", "ebitda", "ebitda_margin_pct",
+        "ebitda_growth_pct", "net_income", "capex", "capex_to_revenue_pct", "opex",
+        "opex_to_revenue_pct", "employees", "source_url", "notes",
+    },
+    "subscriber": {
+        "operator_id", "period", "calendar_quarter", "period_start", "period_end",
+        "report_status", "mobile_total_k", "mobile_postpaid_k", "mobile_prepaid_k",
+        "mobile_net_adds_k", "mobile_churn_pct", "mobile_arpu", "iot_connections_k",
+        "broadband_total_k", "broadband_net_adds_k", "broadband_cable_k", "broadband_fiber_k",
+        "broadband_dsl_k", "broadband_fwa_k", "broadband_arpu", "tv_total_k", "tv_net_adds_k",
+        "fmc_total_k", "fmc_penetration_pct", "b2b_customers_k", "source_url", "notes",
+    },
+    "tariff": {
+        "operator_id", "plan_name", "plan_type", "plan_tier", "monthly_price",
+        "data_allowance", "speed_mbps", "contract_months", "includes_5g", "technology",
+        "effective_date", "snapshot_period", "source_url", "notes",
+    },
+    "macro": {
+        "country", "calendar_quarter", "gdp_growth_pct", "inflation_pct",
+        "unemployment_pct", "telecom_market_size_eur_b", "telecom_growth_pct",
+        "five_g_adoption_pct", "fiber_penetration_pct", "regulatory_environment",
+        "digital_strategy", "energy_cost_index", "consumer_confidence_index",
+        "source_url", "notes",
+    },
+    "network": {
+        "operator_id", "calendar_quarter", "five_g_coverage_pct", "four_g_coverage_pct",
+        "fiber_homepass_k", "fiber_connected_k", "cable_homepass_k", "cable_docsis31_pct",
+        "technology_mix", "quality_scores", "source_url", "notes",
+    },
+}
+
+
+def _clean_row_for_table(table_type: str, row: dict) -> dict:
+    """Strip fields that don't exist in the target DB table."""
+    allowed = _TABLE_COLUMNS.get(table_type)
+    if not allowed:
+        return row
+    return {k: v for k, v in row.items() if k in allowed}
 
 
