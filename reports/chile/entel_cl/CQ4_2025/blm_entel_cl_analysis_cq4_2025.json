@@ -3,7 +3,7 @@
     "target_operator": "entel_cl",
     "market": "chile",
     "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-11T22:23:25.133809",
+    "generated_at": "2026-02-11T22:47:52.641279",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -228,7 +228,7 @@
         "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment; Entel Chile launches 5G SA network in Santiago and 15 cities",
         "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
       },
-      "industry_market_size": "EUR 1391.0B (quarterly, CQ4_2025)",
+      "industry_market_size": "CLP 1391.0B (quarterly, CQ4_2025)",
       "industry_growth_rate": "+7.2% YoY (CQ2_2025 -> CQ4_2025)",
       "industry_profit_trend": "Improving (industry EBITDA margin 27.4%, up from 24.5%)",
       "industry_concentration": "CR4 = 100% (Entel Chile: 58.3%, Movistar Chile: 17.6%, WOM Chile: 13.3%, Claro Chile: 10.8%)",
@@ -708,103 +708,103 @@
         {
           "dimension": "$",
           "dimension_name": "Price",
-          "our_score": 0.3,
+          "our_score": 3.0,
           "competitor_scores": {
-            "claro_cl": 0.3,
-            "movistar_cl": 0.3,
-            "wom_cl": 0.5
+            "claro_cl": 3.5,
+            "movistar_cl": 3.0,
+            "wom_cl": 4.5
           },
           "customer_priority": "critical",
-          "gap_analysis": "Below market average in Price by 0.1 points. Leader: wom_cl (0.5/5.0)"
+          "gap_analysis": "Below market average in Price by 0.7 points. Leader: wom_cl (4.5/5.0)"
         },
         {
           "dimension": "A1",
           "dimension_name": "Availability",
-          "our_score": 0.5,
+          "our_score": 4.5,
           "competitor_scores": {
-            "claro_cl": 0.3,
-            "movistar_cl": 0.4,
-            "wom_cl": 0.2
+            "claro_cl": 3.5,
+            "movistar_cl": 4.0,
+            "wom_cl": 2.5
           },
           "customer_priority": "critical",
-          "gap_analysis": "Market leader in Availability (score 0.5/5.0)"
+          "gap_analysis": "Market leader in Availability (score 4.5/5.0)"
         },
         {
           "dimension": "P1",
           "dimension_name": "Packaging",
-          "our_score": 0.3,
+          "our_score": 3.5,
           "competitor_scores": {
-            "claro_cl": 0.2,
-            "movistar_cl": 0.3,
-            "wom_cl": 0.4
+            "claro_cl": 2.5,
+            "movistar_cl": 3.0,
+            "wom_cl": 4.0
           },
           "customer_priority": "important",
-          "gap_analysis": "Above average in Packaging but 0.1 points behind leader (wom_cl: 0.4/5.0)"
+          "gap_analysis": "Above average in Packaging but 0.5 points behind leader (wom_cl: 4.0/5.0)"
         },
         {
           "dimension": "P2",
           "dimension_name": "Performance",
-          "our_score": 0.4,
+          "our_score": 4.2,
           "competitor_scores": {
-            "claro_cl": 0.3,
-            "movistar_cl": 0.3,
-            "wom_cl": 0.3
+            "claro_cl": 2.8,
+            "movistar_cl": 3.2,
+            "wom_cl": 3.0
           },
           "customer_priority": "critical",
-          "gap_analysis": "Market leader in Performance (score 0.4/5.0)"
+          "gap_analysis": "Market leader in Performance (score 4.2/5.0)"
         },
         {
           "dimension": "E",
           "dimension_name": "Ease of Use",
-          "our_score": 0.4,
+          "our_score": 3.8,
           "competitor_scores": {
-            "claro_cl": 0.3,
-            "movistar_cl": 0.3,
-            "wom_cl": 0.4
+            "claro_cl": 2.8,
+            "movistar_cl": 3.2,
+            "wom_cl": 3.8
           },
           "customer_priority": "important",
-          "gap_analysis": "Market leader in Ease of Use (score 0.4/5.0)"
+          "gap_analysis": "Market leader in Ease of Use (score 3.8/5.0)"
         },
         {
           "dimension": "A2",
           "dimension_name": "Assurances",
-          "our_score": 0.4,
+          "our_score": 4.0,
           "competitor_scores": {
-            "claro_cl": 0.2,
-            "movistar_cl": 0.3,
-            "wom_cl": 0.1
+            "claro_cl": 2.5,
+            "movistar_cl": 3.5,
+            "wom_cl": 1.5
           },
           "customer_priority": "important",
-          "gap_analysis": "Market leader in Assurances (score 0.4/5.0)"
+          "gap_analysis": "Market leader in Assurances (score 4.0/5.0)"
         },
         {
           "dimension": "L",
           "dimension_name": "Lifecycle Cost",
-          "our_score": 0.3,
+          "our_score": 3.0,
           "competitor_scores": {
-            "claro_cl": 0.3,
-            "movistar_cl": 0.3,
-            "wom_cl": 0.5
+            "claro_cl": 3.5,
+            "movistar_cl": 3.0,
+            "wom_cl": 4.5
           },
           "customer_priority": "important",
-          "gap_analysis": "Below market average in Lifecycle Cost by 0.1 points. Leader: wom_cl (0.5/5.0)"
+          "gap_analysis": "Below market average in Lifecycle Cost by 0.7 points. Leader: wom_cl (4.5/5.0)"
         },
         {
           "dimension": "S",
           "dimension_name": "Social/Brand",
-          "our_score": 0.4,
+          "our_score": 4.0,
           "competitor_scores": {
-            "claro_cl": 0.3,
-            "movistar_cl": 0.3,
-            "wom_cl": 0.3
+            "claro_cl": 2.8,
+            "movistar_cl": 3.5,
+            "wom_cl": 2.8
           },
           "customer_priority": "nice_to_have",
-          "gap_analysis": "Market leader in Social/Brand (score 0.4/5.0)"
+          "gap_analysis": "Market leader in Social/Brand (score 4.0/5.0)"
         }
       ],
       "customer_value_migration": "Value migration trending upward: customers willing to pay more for premium connectivity and convergent bundles. Focus on upselling and cross-selling opportunities.",
       "market_outlook": "mixed",
-      "key_message": "German telecom market totals EUR 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; gaps in Price, Availability; Market presents a balanced mix of opportunities and challenges."
+      "key_message": "Chile telecom market totals CLP 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; competitive strengths in Availability, Performance; Market presents a balanced mix of opportunities and challenges."
     },
     "competition": {
       "five_forces": {
@@ -820,7 +820,7 @@
             },
             {
               "name": "Market concentration",
-              "description": "Top operator holds 58% of market revenue (total: 1391000M EUR)",
+              "description": "Top operator holds 58% of market revenue (total: 1391000M CLP)",
               "impact": "high",
               "trend": "stable"
             },
@@ -2162,34 +2162,59 @@
         }
       ],
       "strengths": [
+        "5G Deployment: score 80 (market avg 65)",
+        "Brand Strength: score 90 (market avg 72)",
+        "Customer Service: score 80 (market avg 65)",
+        "Enterprise Solutions: score 80 (market avg 58)",
+        "Network Coverage: score 90 (market avg 72)",
+        "Network Quality: score 90 (market avg 68)",
+        "Product Innovation: score 70 (market avg 65)",
+        "Sustainability: score 70 (market avg 58)",
+        "brand_strength: score 90 (market avg 72)",
+        "customer_experience: score 80 (market avg 65)",
+        "financial_strength: score 90 (market avg 65)",
+        "innovation: score 70 (market avg 65)",
+        "market_share: score 90 (market avg 68)",
+        "network_quality: score 90 (market avg 68)",
+        "Strong EBITDA margin at 30.0%",
         "Revenue on growth trajectory",
+        "Dominant market share at 58.3%",
         "Top 1 in revenue market ranking"
       ],
       "weaknesses": [
+        "Pricing Competitiveness: score 60 (market avg 70)",
+        "pricing_competitiveness: score 60 (market avg 70)",
         "5G coverage gap at only 65.0%"
       ],
-      "exposure_points": [
-        {
-          "trigger_action": "Intensifying market competition",
-          "side_effect": "Pressure on margins and market share",
-          "attack_vector": "Price competition from challengers",
-          "severity": "medium",
-          "evidence": [
-            "Competitive telecom market dynamics"
-          ]
-        }
-      ],
+      "exposure_points": [],
       "health_rating": "healthy",
-      "key_message": "Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: Revenue on growth trajectory; key challenge: 5G coverage gap at only 65.0%; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc"
+      "key_message": "Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc"
     },
     "swot": {
       "strengths": [
+        "5G Deployment: score 80 (market avg 65)",
+        "Brand Strength: score 90 (market avg 72)",
+        "Customer Service: score 80 (market avg 65)",
+        "Enterprise Solutions: score 80 (market avg 58)",
+        "Network Coverage: score 90 (market avg 72)",
+        "Network Quality: score 90 (market avg 68)",
+        "Product Innovation: score 70 (market avg 65)",
+        "Sustainability: score 70 (market avg 58)",
+        "brand_strength: score 90 (market avg 72)",
+        "customer_experience: score 80 (market avg 65)",
+        "financial_strength: score 90 (market avg 65)",
+        "innovation: score 70 (market avg 65)",
+        "market_share: score 90 (market avg 68)",
+        "network_quality: score 90 (market avg 68)",
+        "Strong EBITDA margin at 30.0%",
         "Revenue on growth trajectory",
+        "Dominant market share at 58.3%",
         "Top 1 in revenue market ranking"
       ],
       "weaknesses": [
-        "5G coverage gap at only 65.0%",
-        "Pressure on margins and market share"
+        "Pricing Competitiveness: score 60 (market avg 70)",
+        "pricing_competitiveness: score 60 (market avg 70)",
+        "5G coverage gap at only 65.0%"
       ],
       "opportunities": [
         "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
@@ -2215,22 +2240,28 @@
         "High buyer power pressure"
       ],
       "so_strategies": [
-        "Leverage 'Revenue on growth trajectory' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Leverage 'Top 1 in revenue market ranking' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'."
+        "Leverage '5G Deployment: score 80 (market avg 65)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Leverage 'Brand Strength: score 90 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+        "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
+        "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'Entel Chile revenue growth 15.9% YoY'."
       ],
       "wo_strategies": [
-        "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Address weakness 'Pressure on margins and market share' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'."
+        "Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Address weakness 'pricing_competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+        "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'."
       ],
       "st_strategies": [
-        "Use strength 'Revenue on growth trajectory' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Use strength 'Top 1 in revenue market ranking' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'."
+        "Use strength '5G Deployment: score 80 (market avg 65)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Use strength 'Brand Strength: score 90 (market avg 72)' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'.",
+        "Use strength 'Customer Service: score 80 (market avg 65)' to counter the threat of 'WOM Chile revenue growth 6.9% YoY'.",
+        "Use strength 'Enterprise Solutions: score 80 (market avg 58)' to counter the threat of 'Claro Chile revenue growth 8.7% YoY'."
       ],
       "wt_strategies": [
-        "Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Mitigate weakness 'Pressure on margins and market share' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'."
+        "Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Mitigate weakness 'pricing_competitiveness: score 60 (market avg 70)' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'.",
+        "Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'WOM Chile revenue growth 6.9% YoY'."
       ],
-      "key_message": "SWOT analysis identifies 2 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is cautious (WT-dominant)."
+      "key_message": "SWOT analysis identifies 18 strengths, 3 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is offensive (SO-dominant)."
     },
     "opportunities": {
       "span_positions": [
@@ -2252,6 +2283,38 @@
         },
         {
           "opportunity_name": "SO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.6,
+          "market_share_score": 5.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SO-4",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -2569,11 +2632,29 @@
           "quadrant": "acquire_skills",
           "recommended_strategy": "Build missing capabilities before committing major resources.",
           "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "WO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.2,
+          "market_share_score": 5.0,
+          "product_fit_score": 4,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.0
         }
       ],
       "grow_invest": [
         "SO-1",
         "SO-2",
+        "SO-3",
+        "SO-4",
         "Entel Chile revenue growth 15.9% YoY",
         "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
         "Chilean peso strengthens 8% against USD, easing equipment co",
@@ -2594,7 +2675,8 @@
       ],
       "acquire_skills": [
         "WO-1",
-        "WO-2"
+        "WO-2",
+        "WO-3"
       ],
       "harvest": [],
       "avoid_exit": [],
@@ -2602,7 +2684,7 @@
       "opportunities": [
         {
           "name": "SO-1",
-          "description": "Leverage 'Revenue on growth trajectory' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+          "description": "Leverage '5G Deployment: score 80 (market avg 65)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -2616,7 +2698,35 @@
         },
         {
           "name": "SO-2",
-          "description": "Leverage 'Top 1 in revenue market ranking' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+          "description": "Leverage 'Brand Strength: score 90 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-3",
+          "description": "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-4",
+          "description": "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'Entel Chile revenue growth 15.9% YoY'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -2880,7 +2990,7 @@
         },
         {
           "name": "WO-1",
-          "description": "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+          "description": "Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
           "derived_from": [
             "swot_wo_strategy"
           ],
@@ -2894,7 +3004,21 @@
         },
         {
           "name": "WO-2",
-          "description": "Address weakness 'Pressure on margins and market share' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+          "description": "Address weakness 'pricing_competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-3",
+          "description": "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
           "derived_from": [
             "swot_wo_strategy"
           ],
@@ -2907,7 +3031,7 @@
           "priority_rationale": "Quadrant: acquire_skills"
         }
       ],
-      "key_message": "SPAN matrix positions 21 opportunities: 19 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 19 grow/invest items for maximum strategic impact."
+      "key_message": "SPAN matrix positions 24 opportunities: 21 grow/invest, 3 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 21 grow/invest items for maximum strategic impact."
     }
   },
   "data_quality": {

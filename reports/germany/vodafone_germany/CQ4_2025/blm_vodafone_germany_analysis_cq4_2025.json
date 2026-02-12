@@ -3,7 +3,7 @@
     "target_operator": "vodafone_germany",
     "market": "germany",
     "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-11T22:06:59.662393",
+    "generated_at": "2026-02-11T22:48:27.890907",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -67,36 +67,36 @@
           {
             "dimension": "P",
             "dimension_name": "Political",
-            "factor_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
-            "current_status": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
-            "trend": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "factor_name": "German government launches €1.2B Gigabit Funding Programme 2025",
+            "current_status": "德国联邦数字化与交通部启动2025年千兆资助计划，拨款€12亿用于光纤基础设施建设。目标：2025年50%家庭FTTH/FTTB覆盖，2030年100%光纤覆盖。光纤连接数同比增长超20%。",
+            "trend": "德国联邦数字化与交通部启动2025年千兆资助计划，拨款€12亿用于光纤基础设施建设。目标：2025年50%家庭FTTH/FTTB覆盖，2030年100%光纤覆盖。光纤连接数同比增长超20%。",
             "trend_direction": "uncertain",
-            "industry_impact": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "industry_impact": "德国联邦数字化与交通部启动2025年千兆资助计划，拨款€12亿用于光纤基础设施建设。目标：2025年50%家庭FTTH/FTTB覆盖，2030年100%光纤覆盖。光纤连接数同比增长超20%。",
             "company_impact": "Potential impact on vodafone_germany",
             "impact_type": "opportunity",
             "severity": "high",
             "time_horizon": "short_term",
             "predictability": "uncertain",
             "evidence": [
-              "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+              "https://digital-strategy.ec.europa.eu/en/policies/digital-connectivity-germany"
             ],
             "data_source": "intelligence_events"
           },
           {
             "dimension": "P",
             "dimension_name": "Political",
-            "factor_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
-            "current_status": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
-            "trend": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "factor_name": "Nebenkostenprivileg (MDU cable TV bundling) abolished",
+            "current_status": "自2024年7月1日起，房东不得再将有线电视费用计入物业附加费(Nebenkostenprivileg)。Vodafone受影响最大：原850万MDU用户，保留率约50%（~400万留存）。固网服务收入H1 FY25下降5.9%。到Q3 FY26固网降幅收窄至-1.1%，逆风减弱中。",
+            "trend": "自2024年7月1日起，房东不得再将有线电视费用计入物业附加费(Nebenkostenprivileg)。Vodafone受影响最大：原850万MDU用户，保留率约50%（~400万留存）。固网服务收入H1 FY25下降5.9%。到Q3 FY26固网降幅收窄至-1.1%，逆风减弱中。",
             "trend_direction": "uncertain",
-            "industry_impact": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
+            "industry_impact": "自2024年7月1日起，房东不得再将有线电视费用计入物业附加费(Nebenkostenprivileg)。Vodafone受影响最大：原850万MDU用户，保留率约50%（~400万留存）。固网服务收入H1 FY25下降5.9%。到Q3 FY26固网降幅收窄至-1.1%，逆风减弱中。",
             "company_impact": "Potential impact on vodafone_germany",
-            "impact_type": "opportunity",
+            "impact_type": "threat",
             "severity": "high",
             "time_horizon": "short_term",
             "predictability": "uncertain",
             "evidence": [
-              "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
+              "https://www.broadbandtvnews.com/2024/05/14/vodafones-german-recovery-hit-by-end-to-mdu-tv-switch/"
             ],
             "data_source": "intelligence_events"
           }
@@ -235,54 +235,36 @@
           {
             "dimension": "T",
             "dimension_name": "Technology",
-            "factor_name": "Vodafone restructures cable TV frequencies nationwide",
-            "current_status": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-            "trend": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "factor_name": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+            "current_status": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
+            "trend": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
             "trend_direction": "uncertain",
-            "industry_impact": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
+            "industry_impact": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
             "company_impact": "Potential impact on vodafone_germany",
             "impact_type": "opportunity",
-            "severity": "medium",
+            "severity": "high",
             "time_horizon": "short_term",
             "predictability": "uncertain",
             "evidence": [
-              "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
-            ],
-            "data_source": "intelligence_events"
-          },
-          {
-            "dimension": "T",
-            "dimension_name": "Technology",
-            "factor_name": "Vodafone restructures cable TV frequencies nationwide",
-            "current_status": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-            "trend": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-            "trend_direction": "uncertain",
-            "industry_impact": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-            "company_impact": "Potential impact on vodafone_germany",
-            "impact_type": "opportunity",
-            "severity": "medium",
-            "time_horizon": "short_term",
-            "predictability": "uncertain",
-            "evidence": [
-              "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
+              "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
             ],
             "data_source": "intelligence_events"
           }
         ],
         "overall_weather": "sunny",
-        "weather_explanation": "Mostly favorable: 12/14 factors present opportunities",
+        "weather_explanation": "Mostly favorable: 10/13 factors present opportunities",
         "policy_opportunities": [
           "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
           "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access",
           "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
-          "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
-          "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany"
+          "German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany"
         ],
         "policy_threats": [
-          "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany"
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
+          "Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany"
         ],
-        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment; Vodafone restructures cable TV frequencies nationwide; Vodafone restructures cable TV frequencies nationwide; Vodafone restructures cable TV frequencies nationwide",
-        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment; Vodafone restructures cable TV frequencies nationwide; Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished."
       },
       "industry_market_size": "EUR 12.3B (quarterly, CQ4_2025)",
       "industry_growth_rate": "+0.3% YoY (CQ2_2025 -> CQ4_2025)",
@@ -310,7 +292,7 @@
         "B2B/ICT growing faster than consumer segment",
         "Fiber displacing copper and cable broadband"
       ],
-      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))"
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished.. Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))"
     },
     "market_customer": {
       "market_snapshot": {
@@ -344,54 +326,6 @@
           ]
         },
         {
-          "change_type": "merger",
-          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
-          "severity": "high",
-          "evidence": [
-            "https://reports.investors.vodafone.com/view/412789358/"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
-          "severity": "high",
-          "evidence": [
-            "https://reports.investors.vodafone.com/view/412789358/"
-          ]
-        },
-        {
-          "change_type": "new_entrant",
-          "description": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "both",
-          "impact_description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
-          "severity": "high",
-          "evidence": [
-            "https://www.lightreading.com/finance/germany-s-1-1-migrates-all-mobile-customers-to-open-ran-5g-network"
-          ]
-        },
-        {
-          "change_type": "new_entrant",
-          "description": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "both",
-          "impact_description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
-          "severity": "high",
-          "evidence": [
-            "https://www.lightreading.com/finance/germany-s-1-1-migrates-all-mobile-customers-to-open-ran-5g-network"
-          ]
-        },
-        {
           "change_type": "new_entrant",
           "description": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
           "source": "peer_driven",
@@ -417,30 +351,6 @@
         },
         {
           "change_type": "merger",
-          "description": "Vodafone completes Skaylink acquisition for €175M",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Vodafone completes Skaylink acquisition for €175M",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
-          ]
-        },
-        {
-          "change_type": "merger",
           "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -449,54 +359,6 @@
           "severity": "medium",
           "evidence": [
             "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
-          ]
-        },
-        {
-          "change_type": "technology",
-          "description": "Vodafone restructures cable TV frequencies nationwide",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
-          ]
-        },
-        {
-          "change_type": "technology",
-          "description": "Vodafone restructures cable TV frequencies nationwide",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
           ]
         },
         {
@@ -525,30 +387,6 @@
         },
         {
           "change_type": "merger",
-          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
-          "severity": "high",
-          "evidence": [
-            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
-          "severity": "high",
-          "evidence": [
-            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
-          ]
-        },
-        {
-          "change_type": "merger",
           "description": "O2 Germany Q2 2025: revenue -2.4% but IoT +47%, users growing",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -557,54 +395,6 @@
           "severity": "medium",
           "evidence": [
             "https://www.telefonica.de/news/press-releases-telefonica-germany/2025/07/quarterly-results-customer-growth-across-segments-confirms-o2-telefonicas-course-in-the-second-quarter.html"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "O2 Germany Q2 2025: revenue -2.4% but IoT +47%, users growing",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "both",
-          "impact_description": "O2 Q2 2025总收入下降2.4%（移动服务收入-3.4%），但用户增长强劲：Q2合同客户+18.4万。IoT连接增长47% YoY（Q2新增17.7万），是最大亮点。5G覆盖98%领先全行业。EBITDA利润率约30.6%稳定。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.telefonica.de/news/press-releases-telefonica-germany/2025/07/quarterly-results-customer-growth-across-segments-confirms-o2-telefonicas-course-in-the-second-quarter.html"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "O2 Germany Q2 2025: revenue -2.4% but IoT +47%, users growing",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "both",
-          "impact_description": "O2 Q2 2025总收入下降2.4%（移动服务收入-3.4%），但用户增长强劲：Q2合同客户+18.4万。IoT连接增长47% YoY（Q2新增17.7万），是最大亮点。5G覆盖98%领先全行业。EBITDA利润率约30.6%稳定。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.telefonica.de/news/press-releases-telefonica-germany/2025/07/quarterly-results-customer-growth-across-segments-confirms-o2-telefonicas-course-in-the-second-quarter.html"
-          ]
-        },
-        {
-          "change_type": "technology",
-          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
-          ]
-        },
-        {
-          "change_type": "technology",
-          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
           ]
         },
         {
@@ -629,54 +419,6 @@
           "severity": "medium",
           "evidence": [
             "https://www.vatm.de/wp-content/uploads/2025/06/VATM-Market-Analysis-Germany-2025.pdf"
-          ]
-        },
-        {
-          "change_type": "pricing",
-          "description": "German telecom market reaches $86B, CAGR 5.53% to 2030",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "both",
-          "impact_description": "VATM第26次市场分析报告：德国电信市场2025年规模$860亿（约€790亿年度），预计至2030年达$1,126亿，CAGR 5.53%。市场有150+服务提供商，竞争激烈。ARPU行业平均下降约4%。移动数据服务收入CAGR 9.5%，5G套餐是主要增长引擎。光纤连接数增长超20%，97%家庭有宽带覆盖。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.vatm.de/wp-content/uploads/2025/06/VATM-Market-Analysis-Germany-2025.pdf"
-          ]
-        },
-        {
-          "change_type": "pricing",
-          "description": "German telecom market reaches $86B, CAGR 5.53% to 2030",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "both",
-          "impact_description": "VATM第26次市场分析报告：德国电信市场2025年规模$860亿（约€790亿年度），预计至2030年达$1,126亿，CAGR 5.53%。市场有150+服务提供商，竞争激烈。ARPU行业平均下降约4%。移动数据服务收入CAGR 9.5%，5G套餐是主要增长引擎。光纤连接数增长超20%，97%家庭有宽带覆盖。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.vatm.de/wp-content/uploads/2025/06/VATM-Market-Analysis-Germany-2025.pdf"
-          ]
-        },
-        {
-          "change_type": "pricing",
-          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
-          "severity": "high",
-          "evidence": [
-            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
-          ]
-        },
-        {
-          "change_type": "pricing",
-          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
-          "severity": "high",
-          "evidence": [
-            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
           ]
         },
         {
@@ -707,30 +449,6 @@
         },
         {
           "change_type": "merger",
-          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
-          "severity": "high",
-          "evidence": [
-            "https://reports.investors.vodafone.com/view/412789358/"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Vodafone completes 1&1 customer migration: 12M users on network",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone成功完成1&1客户迁移，1200万1&1客户已使用Vodafone全国5G网络。这是欧洲电信史上规模最大的客户迁移之一。批发收入贡献预计Q4 FY26达到完整运行率(full run-rate)。网络测试结果持续改善，迁移未影响网络质量。",
-          "severity": "high",
-          "evidence": [
-            "https://reports.investors.vodafone.com/view/412789358/"
-          ]
-        },
-        {
-          "change_type": "merger",
           "description": "Vodafone completes Skaylink acquisition for €175M",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -739,54 +457,6 @@
           "severity": "high",
           "evidence": [
             "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Vodafone completes Skaylink acquisition for €175M",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Vodafone completes Skaylink acquisition for €175M",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone完成对Skaylink的收购（€1.75亿，EV/EBITDA 7.0x），获得500+云和安全专家。Skaylink擅长AWS/Azure部署与迁移、AI解决方案。新任B2B负责人Hagen Rickmann目标：5年增加€10亿企业收入。这是Vodafone Business从连接型收入向数字化服务转型的关键一步。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-completes-the-acquisition-of-skaylink"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电Q3 2025集团收入€289.35亿（+1.5% YoY），EBITDAaL利润率38.2%。净利润增长14.3%至€26.7亿。YTD自由现金流+6.8%至€161亿。德国区Q4展望：EBITDA增速>2%，受益于成本节约和工资/能源压力缓解。Q4 2025完整财报定于2026年2月26日发布。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.telekom.com/en/investor-relations/publications/financial-results/financial-results-2025"
           ]
         },
         {
@@ -814,54 +484,6 @@
           ]
         },
         {
-          "change_type": "technology",
-          "description": "Vodafone restructures cable TV frequencies nationwide",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
-          ]
-        },
-        {
-          "change_type": "technology",
-          "description": "Vodafone restructures cable TV frequencies nationwide",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone开始在全国Cable网络重组频率，创建统一频谱并释放宽带容量。技术升级覆盖400+城市、860万TV连接，预计2026年中完成。目标：为更快的宽带速度释放频谱资源。",
-          "severity": "medium",
-          "evidence": [
-            "https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
-          "severity": "high",
-          "evidence": [
-            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
-          ]
-        },
-        {
-          "change_type": "merger",
-          "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
-          "source": "peer_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "德电调整光纤策略，开始在Vodafone Cable覆盖区域积极部署FTTH，直接与Vodafone的Cable+Fiber混合网络竞争。这是DT利用光纤先发优势抢夺Vodafone固网用户的进攻性策略。",
-          "severity": "high",
-          "evidence": [
-            "https://www.telcotitans.com/deutsche-telekomwatch/germany-dt-targets-vodafone-as-it-reboots-fibre-tactics/9904.article"
-          ]
-        },
-        {
           "change_type": "merger",
           "description": "DT reboots fibre tactics, targets Vodafone cable footprint",
           "source": "peer_driven",
@@ -883,54 +505,6 @@
           "severity": "high",
           "evidence": [
             "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
-          ]
-        },
-        {
-          "change_type": "technology",
-          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
-          ]
-        },
-        {
-          "change_type": "technology",
-          "description": "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "Vodafone与Altice合资成立FibreCo，6年内为700万家庭部署FTTH。80%在Vodafone现有Cable覆盖区升级，20%新区域扩展。同步推进Cable升级：node splitting + DOCSIS 3.1 high-split（3Gbps）→ DOCSIS 4.0（10Gbps）。这是Vodafone从Cable向Fiber转型的核心战略举措。",
-          "severity": "high",
-          "evidence": [
-            "https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany"
-          ]
-        },
-        {
-          "change_type": "pricing",
-          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
-          "severity": "high",
-          "evidence": [
-            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
-          ]
-        },
-        {
-          "change_type": "pricing",
-          "description": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years",
-          "source": "external_player_driven",
-          "time_horizon": "medium_term",
-          "impact_type": "opportunity",
-          "impact_description": "BNetzA决定将800MHz、1800MHz、2600MHz频谱使用权延期5年（原2025年底到期）。附加条件：2030年99.5%国土面积≥50Mbps覆盖；2029年各州人口稀疏市镇99%家庭≥100Mbps。三家运营商须向MVNO/服务提供商协商频谱使用。特别要求：三家须向1&1提供800MHz 2×5MHz共用；O2须继续出租2600MHz 2×10MHz给1&1。预计2029年重新拍卖。",
-          "severity": "high",
-          "evidence": [
-            "https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html"
           ]
         },
         {
@@ -1230,7 +804,7 @@
       ],
       "customer_value_migration": "Value migration is mixed: some segments trending up while price-sensitive segments face pressure. Differentiated strategy by segment recommended.",
       "market_outlook": "favorable",
-      "key_message": "German telecom market totals EUR 12327.0M in quarterly revenue; vodafone_germany holds 25.1% market share; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats."
+      "key_message": "Germany telecom market totals EUR 12327.0M in quarterly revenue; vodafone_germany holds 25.1% market share; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats."
     },
     "competition": {
       "five_forces": {
@@ -2626,8 +2200,7 @@
         "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
         "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access",
         "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
-        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
-        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+        "German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany",
         "Vodafone completes 1&1 customer migration: 12M users on network",
         "Vodafone completes Skaylink acquisition for €175M",
         "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
@@ -2638,6 +2211,7 @@
       ],
       "threats": [
         "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
+        "Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany",
         "High existing competitors pressure",
         "High substitutes pressure"
       ],
@@ -2645,25 +2219,27 @@
         "Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
         "Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.",
         "Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
-        "Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'."
+        "Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany'."
       ],
       "wo_strategies": [
         "Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
         "Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.",
         "Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
-        "Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'."
+        "Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany'."
       ],
       "st_strategies": [
         "Use strength 'Brand Strength: score 82 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
-        "Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'High existing competitors pressure'.",
-        "Use strength 'Network Coverage: score 80 (market avg 76)' to counter the threat of 'High substitutes pressure'."
+        "Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany'.",
+        "Use strength 'Network Coverage: score 80 (market avg 76)' to counter the threat of 'High existing competitors pressure'.",
+        "Use strength 'Strong EBITDA margin at 36.2%' to counter the threat of 'High substitutes pressure'."
       ],
       "wt_strategies": [
         "Mitigate weakness 'Customer Service: score 70 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
-        "Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'High existing competitors pressure'.",
-        "Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High substitutes pressure'."
+        "Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany'.",
+        "Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High existing competitors pressure'.",
+        "Mitigate weakness 'Technology perception gap as competitors lead fiber deployment' and defend against the threat of 'High substitutes pressure'."
       ],
-      "key_message": "SWOT analysis identifies 7 strengths, 5 weaknesses, 12 opportunities, and 3 threats. The recommended strategic posture is offensive (SO-dominant)."
+      "key_message": "SWOT analysis identifies 7 strengths, 5 weaknesses, 11 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant)."
     },
     "opportunities": {
       "span_positions": [
@@ -2940,6 +2516,22 @@
           "bubble_size": 1.0
         },
         {
+          "opportunity_name": "German government launches €1.2B Gigabit Funding Programme 2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
           "opportunity_name": "WO-1",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
@@ -3021,7 +2613,8 @@
         "Open RAN for vendor diversification and cost reduction",
         "Regulatory Environment: Compliance requirements and spectrum",
         "National Digital Strategy: Fiber/5G coverage mandates may re",
-        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent"
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent",
+        "German government launches €1.2B Gigabit Funding Programme 2"
       ],
       "acquire_skills": [
         "WO-1",
@@ -3077,7 +2670,7 @@
         },
         {
           "name": "SO-4",
-          "description": "Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+          "description": "Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -3279,6 +2872,20 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
+          "name": "German government launches €1.2B Gigabit Funding Programme 2",
+          "description": "Policy opportunity: German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
           "name": "WO-1",
           "description": "Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
           "derived_from": [
@@ -3322,7 +2929,7 @@
         },
         {
           "name": "WO-4",
-          "description": "Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.",
+          "description": "Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany'.",
           "derived_from": [
             "swot_wo_strategy"
           ],
@@ -3335,7 +2942,7 @@
           "priority_rationale": "Quadrant: acquire_skills"
         }
       ],
-      "key_message": "SPAN matrix positions 21 opportunities: 17 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 17 grow/invest items for maximum strategic impact."
+      "key_message": "SPAN matrix positions 22 opportunities: 18 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 18 grow/invest items for maximum strategic impact."
     }
   },
   "data_quality": {

@@ -162,6 +162,8 @@ def _build_key_message(
     weaknesses: list[str],
     opportunities: list[str],
     threats: list[str],
+    market_share: float = None,
+    health_rating: str = None,
 ) -> str:
     """Construct a summary key message for the SWOT analysis."""
     n_s = len(strengths)
@@ -172,11 +174,22 @@ def _build_key_message(
     if n_s == 0 and n_w == 0 and n_o == 0 and n_t == 0:
         return "Insufficient data to produce a SWOT assessment."
 
-    # Determine dominant posture
+    # Determine dominant posture with market context
     internal_balance = n_s - n_w
     external_balance = n_o - n_t
 
-    if internal_balance > 0 and external_balance > 0:
+    # Market leaders (>35% share) or healthy operators get posture boost:
+    # raw count can be misleading when data collection generates many threats
+    # from competitor growth entries (each competitor = 1 threat).
+    is_strong_position = (
+        (market_share is not None and market_share > 35)
+        or (health_rating in ("HEALTHY", "STRONG"))
+    )
+
+    if is_strong_position and external_balance >= -2:
+        # Strong operators with roughly balanced externals → offensive
+        posture = "offensive (SO-dominant)"
+    elif internal_balance > 0 and external_balance > 0:
         posture = "offensive (SO-dominant)"
     elif internal_balance > 0 and external_balance <= 0:
         posture = "defensive (ST-dominant)"
@@ -245,8 +258,18 @@ def synthesize_swot(
     st_strategies = _generate_st_strategies(strengths, threats)
     wt_strategies = _generate_wt_strategies(weaknesses, threats)
 
-    # --- Step 3: Build key message ---
-    key_message = _build_key_message(strengths, weaknesses, opportunities, threats)
+    # --- Step 3: Build key message (with market context) ---
+    market_share = None
+    health_rating = None
+    if self_analysis:
+        mp = getattr(self_analysis, "market_positions", None)
+        if mp:
+            market_share = mp.get("revenue_market_share_pct")
+        health_rating = getattr(self_analysis, "health_rating", None)
+    key_message = _build_key_message(
+        strengths, weaknesses, opportunities, threats,
+        market_share=market_share, health_rating=health_rating,
+    )
 
     # --- Step 4: Optionally track in provenance ---
     if provenance is not None:

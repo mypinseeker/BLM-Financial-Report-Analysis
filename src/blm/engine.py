@@ -107,6 +107,7 @@ class BLMAnalysisEngine:
             target_period=self.target_period,
             n_quarters=self.n_quarters,
             provenance=self.provenance,
+            market_config=self.market_config,
         )
 
     def look_at_market_customer(self):
@@ -141,6 +142,7 @@ class BLMAnalysisEngine:
             target_operator=self.target_operator,
             target_period=self.target_period,
             n_quarters=self.n_quarters,
+            market_config=self.market_config,
             provenance=self.provenance,
         )
 

@@ -340,12 +340,13 @@ def _build_market_snapshot(db, market: str, latest_cq: str,
         "operator_count": len(comparison),
     }
 
+    currency = market_config.currency if market_config else "USD"
     if provenance:
         provenance.track(
             value=round(total_revenue, 1),
             field_name="market_total_revenue",
             period=latest_cq,
-            unit="EUR millions",
+            unit=f"{currency} millions",
         )
 
     return snapshot
@@ -357,8 +358,10 @@ def _build_market_snapshot(db, market: str, latest_cq: str,
 
 def _detect_market_changes(db, market: str, target_operator: str,
                             latest_cq: str, n_quarters: int,
-                            provenance=None) -> list[MarketChange]:
+                            provenance=None,
+                            market_config: MarketConfig = None) -> list[MarketChange]:
     """Detect significant market changes by comparing quarters."""
+    currency = market_config.currency if market_config else "USD"
     changes = []
 
     prev_cq = _get_previous_quarter(latest_cq)
@@ -403,7 +406,7 @@ def _detect_market_changes(db, market: str, target_operator: str,
                 change_type="pricing",
                 description=(
                     f"{display_name} revenue {direction} {abs(qoq_rev_change):.1f}% QoQ "
-                    f"(EUR {current_rev:.0f}M vs {prev_rev:.0f}M)"
+                    f"({currency} {current_rev:.0f}M vs {prev_rev:.0f}M)"
                 ),
                 source="peer_driven",
                 time_horizon="short_term",
@@ -490,7 +493,7 @@ def _detect_market_changes(db, market: str, target_operator: str,
                 change_type="pricing",
                 description=(
                     f"{display_name} mobile ARPU {direction} "
-                    f"{abs(arpu_change):.1f}% QoQ (EUR {current_arpu:.1f})"
+                    f"{abs(arpu_change):.1f}% QoQ ({currency} {current_arpu:.1f})"
                 ),
                 source="peer_driven",
                 time_horizon="short_term",
@@ -534,9 +537,16 @@ def _detect_market_changes(db, market: str, target_operator: str,
                     evidence=[f"Margin change: {margin_delta:+.1f}pp"],
                 ))
 
-    # --- Intelligence events ---
+    # --- Intelligence events (deduplicated) ---
     try:
-        events = db.get_intelligence_events(market=market, days_back=365)
+        raw_events = db.get_intelligence_events(market=market, days_back=365)
+        seen_titles = set()
+        events = []
+        for e in raw_events:
+            t = e.get("title", "")
+            if t not in seen_titles:
+                seen_titles.add(t)
+                events.append(e)
         for evt in events:
             category = evt.get("category", "")
             impact_type_raw = evt.get("impact_type", "neutral")
@@ -812,6 +822,10 @@ def _build_appeals_assessment(db, market: str, target_operator: str,
             operator_scores[op_id] = {}
         operator_scores[op_id][dim] = score
 
+    # Auto-detect score scale: if max score <= 10, data is on 1-10 scale
+    all_values = [s for op in operator_scores.values() for s in op.values() if s is not None]
+    scale_factor = 10 if (all_values and max(all_values) <= 10) else 1
+
     assessments = []
     for dim_code, dim_info in APPEALS_DIMENSION_MAP.items():
         # Compute target score (average of mapped competitive score dimensions)
@@ -819,7 +833,7 @@ def _build_appeals_assessment(db, market: str, target_operator: str,
         for sd in dim_info["score_dimensions"]:
             val = operator_scores.get(target_operator, {}).get(sd)
             if val is not None:
-                our_raw_scores.append(val)
+                our_raw_scores.append(val * scale_factor)
 
         # Convert 0-100 scale to 1-5 scale
         our_avg_100 = sum(our_raw_scores) / len(our_raw_scores) if our_raw_scores else 0
@@ -834,7 +848,7 @@ def _build_appeals_assessment(db, market: str, target_operator: str,
             for sd in dim_info["score_dimensions"]:
                 val = op_dims.get(sd)
                 if val is not None:
-                    comp_raw.append(val)
+                    comp_raw.append(val * scale_factor)
             if comp_raw:
                 comp_avg = sum(comp_raw) / len(comp_raw)
                 competitor_scores[op_id] = round(comp_avg / 20, 1)
@@ -945,8 +959,12 @@ def _generate_key_message(snapshot: dict, changes: list[MarketChange],
                             segments: list[CustomerSegment],
                             appeals: list[APPEALSAssessment],
                             target_operator: str,
-                            market_outlook: str) -> str:
+                            market_outlook: str,
+                            market_config: MarketConfig = None) -> str:
     """Generate a concise key message summarizing the market analysis."""
+    mkt_name = market_config.market_name if market_config else "Telecom"
+    currency = market_config.currency if market_config else "USD"
+
     # Count opportunities and threats
     opportunities = [c for c in changes if c.impact_type == "opportunity"]
     threats = [c for c in changes if c.impact_type == "threat"]
@@ -963,7 +981,7 @@ def _generate_key_message(snapshot: dict, changes: list[MarketChange],
 
     if total_rev != "N/A":
         parts.append(
-            f"German telecom market totals EUR {total_rev}M in quarterly revenue"
+            f"{mkt_name} telecom market totals {currency} {total_rev}M in quarterly revenue"
         )
 
     if our_share != "N/A":
@@ -1061,7 +1079,8 @@ def analyze_market_customer(
 
     # 2. Detect market changes
     changes = _detect_market_changes(
-        db, market, target_operator, latest_cq, n_quarters, provenance
+        db, market, target_operator, latest_cq, n_quarters, provenance,
+        market_config=market_config,
     )
 
     # 3. Separate opportunities and threats
@@ -1086,7 +1105,8 @@ def analyze_market_customer(
 
     # 8. Generate key message
     key_message = _generate_key_message(
-        snapshot, changes, segments, appeals, target_operator, market_outlook
+        snapshot, changes, segments, appeals, target_operator, market_outlook,
+        market_config=market_config,
     )
 
     return MarketCustomerInsight(

@@ -34,6 +34,7 @@ def analyze_trends(
     target_period: str = None,
     n_quarters: int = 8,
     provenance=None,
+    market_config=None,
 ) -> TrendAnalysis:
     """Run the complete Look 1: Trends analysis.
 
@@ -94,7 +95,7 @@ def analyze_trends(
     # ------------------------------------------------------------------
     # 4. Industry environment analysis
     # ------------------------------------------------------------------
-    ind = _analyse_industry(market_ts, operators, n_quarters, provenance)
+    ind = _analyse_industry(market_ts, operators, n_quarters, provenance, market_config)
 
     # ------------------------------------------------------------------
     # 5. Assemble the top-level key message
@@ -133,9 +134,18 @@ def _resolve_country(db, market: str) -> str:
 # ---------------------------------------------------------------------------
 
 def _get_intelligence_safe(db, market: str) -> list:
-    """Retrieve intelligence events, returning empty list on failure."""
+    """Retrieve intelligence events, deduplicated by title."""
     try:
-        return db.get_intelligence_events(market=market, days_back=730)
+        raw = db.get_intelligence_events(market=market, days_back=730)
+        # Deduplicate by title (database may contain duplicate inserts)
+        seen = set()
+        unique = []
+        for evt in raw:
+            title = evt.get("title", "")
+            if title not in seen:
+                seen.add(title)
+                unique.append(evt)
+        return unique
     except Exception:
         return []
 
@@ -587,6 +597,7 @@ def _analyse_industry(
     operators: list,
     n_quarters: int,
     provenance,
+    market_config=None,
 ) -> dict:
     """Compute industry-level metrics from the market time series."""
     result = {
@@ -625,9 +636,9 @@ def _analyse_industry(
         latest_rows = by_quarter[latest_q]
         total_rev = sum(r.get("total_revenue") or 0 for r in latest_rows)
         if total_rev > 0:
-            # Revenue is in EUR millions, convert to billions for display
-            result["market_size"] = f"EUR {total_rev / 1000:.1f}B (quarterly, {latest_q})"
-            _track_prov(provenance, total_rev, "industry_market_size", unit="EUR M")
+            currency = market_config.currency if market_config else "USD"
+            result["market_size"] = f"{currency} {total_rev / 1000:.1f}B (quarterly, {latest_q})"
+            _track_prov(provenance, total_rev, "industry_market_size", unit=f"{currency} M")
         else:
             result["market_size"] = "N/A"
 

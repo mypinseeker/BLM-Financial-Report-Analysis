@@ -38,6 +38,7 @@ def analyze_competition(
     target_operator: str,
     target_period: str = None,
     n_quarters: int = 8,
+    market_config=None,
     provenance=None,
 ) -> CompetitionInsight:
     """Run the complete Look 3: Competition analysis.
@@ -84,6 +85,7 @@ def analyze_competition(
         db, market, target_operator, target_period,
         n_quarters, all_operators, market_snapshot,
         scores_by_operator, intel_events,
+        market_config=market_config,
     )
 
     # Build competitor deep dives
@@ -135,13 +137,14 @@ def analyze_competition(
 def _build_five_forces(
     db, market, target_operator, target_period, n_quarters,
     all_operators, market_snapshot, scores_by_operator, intel_events,
+    market_config=None,
 ):
     """Build all 5 PorterForce objects."""
     return {
         "existing_competitors": _force_existing_competitors(
             db, market, target_operator, target_period,
             n_quarters, all_operators, market_snapshot,
-            scores_by_operator,
+            scores_by_operator, market_config=market_config,
         ),
         "new_entrants": _force_new_entrants(
             all_operators, intel_events, market_snapshot,
@@ -158,7 +161,7 @@ def _build_five_forces(
 def _force_existing_competitors(
     db, market, target_operator, target_period,
     n_quarters, all_operators, market_snapshot,
-    scores_by_operator,
+    scores_by_operator, market_config=None,
 ):
     """Assess the force of existing competitors.
 
@@ -193,7 +196,7 @@ def _force_existing_competitors(
                 "name": "Market concentration",
                 "description": (
                     f"Top operator holds {top_share:.0f}% of market revenue "
-                    f"(total: {total_rev:.0f}M EUR)"
+                    f"(total: {total_rev:.0f}M {market_config.currency if market_config else 'USD'})"
                 ),
                 "impact": "high" if top_share > 40 else "medium",
                 "trend": "stable",

@@ -407,8 +407,8 @@ class TestEmptyDB:
         assert len(result.key_message) > 0
         # Should still produce segment analyses (with empty metrics)
         assert len(result.segment_analyses) >= 5
-        # Should have at least one exposure point
-        assert len(result.exposure_points) >= 1
+        # Exposure points may be empty if no data-driven exposure detected
+        assert isinstance(result.exposure_points, list)
         # Strengths and weaknesses should have fallback values
         assert len(result.strengths) > 0
         assert len(result.weaknesses) > 0

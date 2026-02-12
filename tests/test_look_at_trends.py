@@ -235,11 +235,13 @@ class TestIndustryMetricsComputed:
     """Test that industry-level metrics are computed from seed data."""
 
     def test_market_size_computed(self, seeded_db):
+        from src.models.market_configs import get_market_config
         result = analyze_trends(
             db=seeded_db,
             market="germany",
             target_operator="vodafone_germany",
             target_period="CQ4_2025",
+            market_config=get_market_config("germany"),
         )
         assert result.industry_market_size != ""
         assert result.industry_market_size != "N/A"

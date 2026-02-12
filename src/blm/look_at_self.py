@@ -405,13 +405,13 @@ def _analyze_mobile_segment(
     growth_pct = key_metrics.get("mobile_service_growth_pct")
     msg_parts = []
     if rev_val is not None:
-        msg_parts.append(f"Mobile service revenue at EUR {rev_val}M")
+        msg_parts.append(f"Mobile service revenue at {rev_val}M")
     if growth_pct is not None:
         direction = "up" if growth_pct > 0 else "down"
         msg_parts.append(f"{direction} {abs(growth_pct):.1f}% YoY")
     arpu = key_metrics.get("mobile_arpu")
     if arpu is not None:
-        msg_parts.append(f"ARPU EUR {arpu}")
+        msg_parts.append(f"ARPU {arpu}")
     key_message = "; ".join(msg_parts) if msg_parts else "Insufficient data for mobile segment assessment"
 
     return SegmentAnalysis(
@@ -499,7 +499,7 @@ def _analyze_fixed_segment(
     fiber_k = key_metrics.get("broadband_fiber_k")
     msg_parts = []
     if rev_val is not None:
-        msg_parts.append(f"Fixed service revenue EUR {rev_val}M")
+        msg_parts.append(f"Fixed service revenue {rev_val}M")
     if growth_pct is not None:
         msg_parts.append(f"growth {growth_pct:+.1f}% YoY")
     if fiber_k is not None:
@@ -578,7 +578,7 @@ def _analyze_b2b_segment(
 
     msg_parts = []
     if b2b_rev is not None:
-        msg_parts.append(f"B2B revenue EUR {b2b_rev}M")
+        msg_parts.append(f"B2B revenue {b2b_rev}M")
     growth = key_metrics.get("b2b_growth_pct")
     if growth is not None:
         msg_parts.append(f"growth {growth:+.1f}% YoY")
@@ -724,7 +724,7 @@ def _analyze_wholesale_segment(
 
     msg_parts = []
     if ws_rev is not None:
-        msg_parts.append(f"Wholesale revenue EUR {ws_rev}M")
+        msg_parts.append(f"Wholesale revenue {ws_rev}M")
     if ws_share is not None:
         msg_parts.append(f"{ws_share}% of total")
     key_message = "; ".join(msg_parts) if msg_parts else "Insufficient data for wholesale assessment"
@@ -971,15 +971,22 @@ def _identify_exposure_points(
                 evidence=[f"Revenue declined {rev_change:.1f}% QoQ"],
             ))
 
-    # 3. If no exposures found, add a generic one
-    if not exposures:
-        exposures.append(ExposurePoint(
-            trigger_action="Intensifying market competition",
-            side_effect="Pressure on margins and market share",
-            attack_vector="Price competition from challengers",
-            severity="medium",
-            evidence=["Competitive telecom market dynamics"],
-        ))
+    # 3. Only add generic exposure if no specific ones and revenue is declining
+    if not exposures and financial_data and len(financial_data) >= 2:
+        latest_fin = financial_data[-1]
+        prev_fin = financial_data[-2]
+        rev_change = _safe_pct_change(
+            _safe_get(latest_fin, "total_revenue"),
+            _safe_get(prev_fin, "total_revenue"),
+        )
+        if rev_change is not None and rev_change < 0:
+            exposures.append(ExposurePoint(
+                trigger_action="Intensifying market competition",
+                side_effect="Pressure on margins and market share",
+                attack_vector="Price competition from challengers",
+                severity="medium",
+                evidence=["Competitive telecom market dynamics"],
+            ))
 
     return exposures
 
@@ -1012,18 +1019,24 @@ def _derive_strengths_weaknesses(
             all_scores = []
 
         if all_scores:
-            # Compute market average per dimension
+            # Auto-detect score scale: if max score <= 10, data is on 1-10 scale
+            all_vals = [r.get("score") for r in all_scores if r.get("score") is not None]
+            scale_factor = 10 if (all_vals and max(all_vals) <= 10) else 1
+
+            # Compute market average per dimension (normalize case to avoid dupes)
             dim_scores = {}
             for row in all_scores:
-                dim = row.get("dimension")
+                dim_raw = row.get("dimension", "")
+                dim = dim_raw.replace("_", " ").title()  # normalize: pricing_competitiveness → Pricing Competitiveness
                 score = row.get("score")
                 if dim and score is not None:
+                    score_norm = score * scale_factor
                     if dim not in dim_scores:
                         dim_scores[dim] = {"total": 0, "count": 0, "target": None}
-                    dim_scores[dim]["total"] += score
+                    dim_scores[dim]["total"] += score_norm
                     dim_scores[dim]["count"] += 1
                     if row.get("operator_id") == target_operator:
-                        dim_scores[dim]["target"] = score
+                        dim_scores[dim]["target"] = score_norm
 
             for dim, info in dim_scores.items():
                 if info["target"] is not None and info["count"] > 0:
@@ -1037,9 +1050,9 @@ def _derive_strengths_weaknesses(
     if financial_health:
         margin = financial_health.get("ebitda_margin_pct")
         if margin is not None:
-            if margin >= 35:
+            if margin >= 28:
                 strengths.append(f"Strong EBITDA margin at {margin:.1f}%")
-            elif margin < 25:
+            elif margin < 20:
                 weaknesses.append(f"Below-average EBITDA margin at {margin:.1f}%")
 
         rev_growing = financial_health.get("revenue_growing", False)
@@ -1052,10 +1065,13 @@ def _derive_strengths_weaknesses(
 
     # 3. Market position
     rev_rank = market_positions.get("revenue_rank")
+    rev_share = market_positions.get("revenue_market_share_pct")
+    if rev_share is not None and rev_share > 30:
+        strengths.append(f"Dominant market share at {rev_share:.1f}%")
     if rev_rank is not None:
         if rev_rank <= 2:
             strengths.append(f"Top {rev_rank} in revenue market ranking")
-        elif rev_rank >= 3:
+        elif rev_rank >= 4:
             weaknesses.append(f"Ranked #{rev_rank} in revenue among competitors")
 
     # 4. Network strength
@@ -1068,7 +1084,7 @@ def _derive_strengths_weaknesses(
 
     # Ensure at least one item in each list
     if not strengths:
-        strengths.append("Established market presence in Germany")
+        strengths.append(f"Established market presence")
     if not weaknesses:
         weaknesses.append("No critical weaknesses identified from available data")
 
@@ -1153,8 +1169,10 @@ def _synthesize_key_message(
     market_positions: dict,
     strengths: list,
     weaknesses: list,
+    market_config=None,
 ) -> str:
     """Synthesize a key message summarizing the self-analysis."""
+    currency = market_config.currency if market_config else "USD"
     parts = []
 
     # Operator identity
@@ -1168,7 +1186,7 @@ def _synthesize_key_message(
         total_rev = financial_health.get("total_revenue")
         margin = financial_health.get("ebitda_margin_pct")
         if total_rev:
-            parts.append(f"revenue EUR {total_rev}M")
+            parts.append(f"revenue {currency} {total_rev}M")
         if margin:
             parts.append(f"EBITDA margin {margin:.1f}%")
 
@@ -1336,6 +1354,7 @@ def analyze_self(
         target_operator, health_rating,
         financial_health, market_positions,
         strengths, weaknesses,
+        market_config=market_config,
     )
 
     # ------------------------------------------------------------------

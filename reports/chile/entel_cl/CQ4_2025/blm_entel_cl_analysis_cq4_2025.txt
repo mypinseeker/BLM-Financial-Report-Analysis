@@ -48,16 +48,16 @@
     Consumer Price-Sensitive (shrinking)
     Enterprise Large (growing)
   [$APPEALS Scores]
-    Price                [..........] 0.3/5
-    Availability         [#.........] 0.5/5
-    Packaging            [..........] 0.3/5
-    Performance          [..........] 0.4/5
-    Ease of Use          [..........] 0.4/5
-    Assurances           [..........] 0.4/5
-    Lifecycle Cost       [..........] 0.3/5
-    Social/Brand         [..........] 0.4/5
+    Price                [######....] 3.0/5
+    Availability         [#########.] 4.5/5
+    Packaging            [#######...] 3.5/5
+    Performance          [########..] 4.2/5
+    Ease of Use          [#######...] 3.8/5
+    Assurances           [########..] 4.0/5
+    Lifecycle Cost       [######....] 3.0/5
+    Social/Brand         [########..] 4.0/5
 
-  → Key Message: German telecom market totals EUR 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; gaps in Price, Availability; Market presents a balanced mix of opportunities and challenges.
+  → Key Message: Chile telecom market totals CLP 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; competitive strengths in Availability, Performance; Market presents a balanced mix of opportunities and challenges.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 03 COMPETITION (Porter's Five Forces)                                       │
@@ -93,22 +93,31 @@
     B2B                  [strong]
     TV/Convergence       [strong]
   [Strengths]
-    + Revenue on growth trajectory
-    + Top 1 in revenue market ranking
+    + 5G Deployment: score 80 (market avg 65)
+    + Brand Strength: score 90 (market avg 72)
+    + Customer Service: score 80 (market avg 65)
+    + Enterprise Solutions: score 80 (market avg 58)
+    + Network Coverage: score 90 (market avg 72)
   [Weaknesses]
+    - Pricing Competitiveness: score 60 (market avg 70)
+    - pricing_competitiveness: score 60 (market avg 70)
     - 5G coverage gap at only 65.0%
 
-  → Key Message: Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: Revenue on growth trajectory; key challenge: 5G coverage gap at only 65.0%; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc
+  → Key Message: Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ SWOT SYNTHESIS                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
   [Strengths]
-    + Revenue on growth trajectory
-    + Top 1 in revenue market ranking
+    + 5G Deployment: score 80 (market avg 65)
+    + Brand Strength: score 90 (market avg 72)
+    + Customer Service: score 80 (market avg 65)
+    + Enterprise Solutions: score 80 (market avg 58)
+    + Network Coverage: score 90 (market avg 72)
   [Weaknesses]
+    - Pricing Competitiveness: score 60 (market avg 70)
+    - pricing_competitiveness: score 60 (market avg 70)
     - 5G coverage gap at only 65.0%
-    - Pressure on margins and market share
   [Opportunities]
     ^ Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl
     ^ National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access
@@ -122,19 +131,23 @@
     v Claro Chile revenue growth 8.7% YoY
     v Tigo Chile pivots to MVNO model, exits direct network investment
   [SO Strategies]
-    → Leverage 'Revenue on growth trajectory' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
-    → Leverage 'Top 1 in revenue market ranking' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
+    → Leverage '5G Deployment: score 80 (market avg 65)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Leverage 'Brand Strength: score 90 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
+    → Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.
   [WO Strategies]
-    → Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
-    → Address weakness 'Pressure on margins and market share' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
+    → Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Address weakness 'pricing_competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
+    → Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.
   [ST Strategies]
-    → Use strength 'Revenue on growth trajectory' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
-    → Use strength 'Top 1 in revenue market ranking' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'.
+    → Use strength '5G Deployment: score 80 (market avg 65)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Use strength 'Brand Strength: score 90 (market avg 72)' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'.
+    → Use strength 'Customer Service: score 80 (market avg 65)' to counter the threat of 'WOM Chile revenue growth 6.9% YoY'.
   [WT Strategies]
-    → Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
-    → Mitigate weakness 'Pressure on margins and market share' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'.
+    → Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
+    → Mitigate weakness 'pricing_competitiveness: score 60 (market avg 70)' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'.
+    → Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'WOM Chile revenue growth 6.9% YoY'.
 
-  → Key Message: SWOT analysis identifies 2 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is cautious (WT-dominant).
+  → Key Message: SWOT analysis identifies 18 strengths, 3 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is offensive (SO-dominant).
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 05 OPPORTUNITIES (SPAN Matrix)                                              │
@@ -144,29 +157,30 @@
     ──────────────────────────────────────────────────────────────────────
     SO-1                                 5.6        5.5     grow_invest
     SO-2                                 5.6        5.5     grow_invest
+    SO-3                                 5.6        5.5     grow_invest
+    SO-4                                 5.6        5.5     grow_invest
     Entel Chile revenue growth 15.9% YoY            5.5        5.0     grow_invest
     Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s            5.0        5.0     grow_invest
     Chilean peso strengthens 8% against USD, easing equipment co            5.0        5.0     grow_invest
     SUBTEL mandates infrastructure sharing for 5G deployment in             5.5        5.0     grow_invest
-    Chile copper mining boom drives enterprise telecom demand            5.0        5.0     grow_invest
-    Entel Chile launches 5G SA network in Santiago and 15 cities            5.5        5.0     grow_invest
   [Grow/Invest]
     → SO-1
     → SO-2
-    → Entel Chile revenue growth 15.9% YoY
-    → Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s
+    → SO-3
+    → SO-4
   [Acquire Skills]
     → WO-1
     → WO-2
+    → WO-3
   [Priority Ranking]
     [P0] SO-1 (Market: N/A)
     [P0] SO-2 (Market: N/A)
+    [P0] SO-3 (Market: N/A)
+    [P0] SO-4 (Market: N/A)
     [P0] Entel Chile revenue growth 15.9% YoY (Market: N/A)
     [P0] Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s (Market: N/A)
-    [P0] Chilean peso strengthens 8% against USD, easing equipment co (Market: N/A)
-    [P0] SUBTEL mandates infrastructure sharing for 5G deployment in  (Market: N/A)
 
-  → Key Message: SPAN matrix positions 21 opportunities: 19 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 19 grow/invest items for maximum strategic impact.
+  → Key Message: SPAN matrix positions 24 opportunities: 21 grow/invest, 3 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 21 grow/invest items for maximum strategic impact.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ DATA PROVENANCE                                                             │

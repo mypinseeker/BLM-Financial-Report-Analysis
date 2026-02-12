@@ -11,7 +11,7 @@
     ◆ Regulatory Environment
     ▲ National Digital Strategy
     ▲ BNetzA extends 800/1800/2600 MHz spectrum by 5 years
-    ▲ BNetzA extends 800/1800/2600 MHz spectrum by 5 years
+    ▲ German government launches €1.2B Gigabit Funding Programme 2025
   [Economic]
     ▼ GDP Growth
     ● Inflation
@@ -22,11 +22,11 @@
     ▲ 5G Network Evolution
     ◆ Fiber/FTTH Deployment
     ▲ Vodafone restructures cable TV frequencies nationwide
-    ▲ Vodafone restructures cable TV frequencies nationwide
+    ▲ Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years
   Industry Lifecycle: mature
   Growth Rate: +0.3% YoY (CQ2_2025 -> CQ4_2025)
 
-  → Key Message: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))
+  → Key Message: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished.. Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 02 MARKET/CUSTOMER ($APPEALS)                                               │
@@ -39,10 +39,10 @@
     market_shares: {'deutsche_telekom': 50.3, 'vodafone_germany': 25.1, 'telefonica_o2': 16.2, 'one_and_one': 8.4}
   [Market Changes]
     ▲ Vodafone completes 1&1 customer migration: 12M users on network
-    ▲ Vodafone completes 1&1 customer migration: 12M users on network
-    ▲ Vodafone completes 1&1 customer migration: 12M users on network
     ◆ 1&1 completes OpenRAN migration, reaches 25% own network coverage
-    ◆ 1&1 completes OpenRAN migration, reaches 25% own network coverage
+    ▲ Vodafone completes Skaylink acquisition for €175M
+    ▲ Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%
+    ▲ Vodafone restructures cable TV frequencies nationwide
   [Customer Segments]
     Consumer High-End (growing)
     Consumer Mainstream (stable)
@@ -58,7 +58,7 @@
     Lifecycle Cost       [#######...] 3.6/5
     Social/Brand         [########..] 4.0/5
 
-  → Key Message: German telecom market totals EUR 12327.0M in quarterly revenue; vodafone_germany holds 25.1% market share; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
+  → Key Message: Germany telecom market totals EUR 12327.0M in quarterly revenue; vodafone_germany holds 25.1% market share; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 03 COMPETITION (Porter's Five Forces)                                       │
@@ -125,10 +125,11 @@
     ^ Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
     ^ National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access
     ^ BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany
-    ^ BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany
-    ^ BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany
+    ^ German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany
+    ^ Vodafone completes 1&1 customer migration: 12M users on network
   [Threats]
     v Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
+    v Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany
     v High existing competitors pressure
     v High substitutes pressure
   [SO Strategies]
@@ -141,14 +142,14 @@
     → Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.
   [ST Strategies]
     → Use strength 'Brand Strength: score 82 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-    → Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'High existing competitors pressure'.
-    → Use strength 'Network Coverage: score 80 (market avg 76)' to counter the threat of 'High substitutes pressure'.
+    → Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany'.
+    → Use strength 'Network Coverage: score 80 (market avg 76)' to counter the threat of 'High existing competitors pressure'.
   [WT Strategies]
     → Mitigate weakness 'Customer Service: score 70 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-    → Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'High existing competitors pressure'.
-    → Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High substitutes pressure'.
+    → Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany'.
+    → Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High existing competitors pressure'.
 
-  → Key Message: SWOT analysis identifies 7 strengths, 5 weaknesses, 12 opportunities, and 3 threats. The recommended strategic posture is offensive (SO-dominant).
+  → Key Message: SWOT analysis identifies 7 strengths, 5 weaknesses, 11 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant).
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 05 OPPORTUNITIES (SPAN Matrix)                                              │
@@ -182,7 +183,7 @@
     [P0] Vodafone completes 1&1 customer migration: 12M users on netw (Market: N/A)
     [P0] Vodafone completes Skaylink acquisition for €175M (Market: N/A)
 
-  → Key Message: SPAN matrix positions 21 opportunities: 17 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 17 grow/invest items for maximum strategic impact.
+  → Key Message: SPAN matrix positions 22 opportunities: 18 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 18 grow/invest items for maximum strategic impact.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ DATA PROVENANCE                                                             │
