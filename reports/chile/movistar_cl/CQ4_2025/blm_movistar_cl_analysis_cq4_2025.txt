@@ -1,0 +1,231 @@
+────────────────────────────────────────────────────────────────────────────────
+                       BLM Five Looks Strategic Analysis                        
+                              Target: movistar_cl                               
+                        Market: chile | Period: CQ4_2025                        
+────────────────────────────────────────────────────────────────────────────────
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 01 TRENDS (PEST Framework)                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Political]
+    ◆ Regulatory Environment
+    ▲ National Digital Strategy
+  [Economic]
+    ▲ GDP Growth
+    ◆ Inflation
+  [Society]
+    ▲ 5G Adoption Rate
+    ◆ Fiber Broadband Penetration
+  [Technology]
+    ▲ 5G Network Evolution
+    ◆ Fiber/FTTH Deployment
+  Industry Lifecycle: late_growth
+  Growth Rate: +7.2% YoY (CQ2_2025 -> CQ4_2025)
+
+  → Key Message: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 02 MARKET/CUSTOMER ($APPEALS)                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Market Snapshot]
+    calendar_quarter: CQ4_2025
+    total_revenue: 1391000.0
+    total_mobile_subscribers_k: 30500.0
+    total_broadband_subscribers_k: 4180.0
+    market_shares: {'Entel Chile': 58.3, 'Movistar Chile': 17.6, 'WOM Chile': 13.3, 'Claro Chile': 10.8}
+  [Market Changes]
+    ▼ Entel Chile revenue growth 15.9% YoY
+    ▲ Movistar Chile revenue growth 8.9% YoY
+    ▼ WOM Chile revenue growth 6.9% YoY
+    ▼ Claro Chile revenue growth 8.7% YoY
+  [Customer Segments]
+    Consumer Postpaid Premium (growing)
+    Consumer Mainstream (stable)
+    Consumer Price-Sensitive (shrinking)
+    Enterprise Large (growing)
+  [$APPEALS Scores]
+    Price                [######....] 3.0/5
+    Availability         [########..] 4.0/5
+    Packaging            [######....] 3.0/5
+    Performance          [######....] 3.2/5
+    Ease of Use          [######....] 3.2/5
+    Assurances           [#######...] 3.5/5
+    Lifecycle Cost       [######....] 3.0/5
+    Social/Brand         [#######...] 3.5/5
+
+  → Key Message: Chile telecom market totals CLP 1.39T in quarterly revenue; competitive strengths in Availability; Market faces significant competitive headwinds.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 03 COMPETITION (Porter's Five Forces)                                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Five Forces]
+    existing_competitors      [!!!] high
+    new_entrants              [!] low
+    substitutes               [!!!] high
+    supplier_power            [!!] medium
+    buyer_power               [!!!] high
+  Overall Intensity: MEDIUM
+  [claro_cl]
+    Weaknesses: 5G Deployment: score 50 (market avg 65), Brand Strength: score 60 (market avg 72), Customer Service: score 50 (market avg 65)
+    Strategy: Revenue-led profitable growth; subscriber acquisition focus
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; low-margin / scale-focused
+    Problems: Competitive gap in 5G Deployment, Competitive gap in Brand Strength, Competitive gap in Customer Service
+    Org: CTO: Gonzalo Guzmán (VTR cable network operations); CEO: Cristián Aránguiz (ClaroVTR JV integration lead); CFO: Felipe Ponce (AMX Southern Cone finance)
+    Ecosystem: Network vendor: Ericsson + Nokia
+    Control Points: Own fiber infrastructure (1200k homes); Own cable infrastructure (3500k homes)
+  [wom_cl]
+    Strengths: 5G Deployment: score 70 (market avg 65), Customer Service: score 70 (market avg 65), Digital Services: score 80 (market avg 70)
+    Weaknesses: Enterprise Solutions: score 30 (market avg 58), Network Coverage: score 50 (market avg 72), Network Quality: score 50 (market avg 68)
+    Strategy: Revenue-led profitable growth; subscriber acquisition focus
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; low-margin / scale-focused
+    Problems: Competitive gap in Enterprise Solutions, Competitive gap in Network Coverage, Competitive gap in Network Quality
+    Org: CEO: Chris Bannister (Post-Ch.11 CEO, former Digicel Group); CFO: Rodrigo Aravena (Restructuring finance specialist); CTO: Ignacio Albornoz (Samsung 5G SA partnership lead)
+    Ecosystem: Network vendor: Samsung (5G), Nokia (4G legacy)
+    Control Points: Market leadership in Pricing Competitiveness; Market leadership in Digital Services; Market leadership in Product Innovation
+  [entel_cl]
+    Strengths: 5G Deployment: score 80 (market avg 65), Brand Strength: score 90 (market avg 72), Customer Service: score 80 (market avg 65)
+    Weaknesses: Pricing Competitiveness: score 60 (market avg 70)
+    Strategy: Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push; 5G network leadership
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile
+    Problems: Competitive gap in Pricing Competitiveness
+    Org: CTO: Carlos Zenteno (Network engineering, Ericsson); CFO: Emilio Novoa (Entel finance executive); CEO: Antonio Büchi (Former CFO Entel S.A.)
+    Ecosystem: Network vendor: Ericsson (5G NSA + SA trial)
+    Control Points: Market leadership in Brand Strength; Market leadership in Network Coverage; Market leadership in Network Quality
+
+  → Key Message: In a 4-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 18% share. Strongest competitive force: Existing Competitors.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 04 SELF (BMC + Capability)                                                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+  Health Rating: HEALTHY
+  [Financial Health]
+    total_revenue: 245000.0
+    service_revenue: 220000.0
+    ebitda: 68600.0
+    ebitda_margin_pct: 28.0
+    net_income: 18000.0
+  [Business Segments]
+    Mobile               [strong]
+    Fixed Broadband      [stable]
+    B2B                  [strong]
+    TV/Convergence       [strong]
+  [Strengths]
+    + Enterprise Solutions: score 70 (market avg 58)
+    + Network Coverage: score 80 (market avg 72)
+    + Sustainability: score 70 (market avg 58)
+    + Strong EBITDA margin at 28.0%
+    + Revenue on growth trajectory
+  [Weaknesses]
+    - 5G Deployment: score 60 (market avg 65)
+    - Customer Service: score 60 (market avg 65)
+    - Pricing Competitiveness: score 60 (market avg 70)
+    - Product Innovation: score 60 (market avg 65)
+    - 5G coverage gap at only 55.0%
+  [Leadership]
+    Roberto Muñoz, CEO
+    Pablo Iacobelli, CFO
+    Cristian Rojo, CTO
+  [Customer Perception] Customer Service -5pp vs market; Brand Strength -2pp vs market; Pricing Competitiveness -10pp vs market
+  [Performance Gap] Top performance gaps: EBITDA margin gap: -2.0pp vs leader (Entel Chile at 30.0%); Revenue share gap: -40.7pp vs leader (58.3%); 5G Deployment: -20pp vs leader
+  [Opportunity Gap] Top opportunity gaps: B2B revenue gap (77% below market leader)
+  [Strategic Review] Overall healthy position. Revenue trajectory growing, margins healthy (28.0%). Execution balanced — strengths and weaknesses roughly even. Primary risk: 5G Deployment: score 60 (market avg 65)
+
+  → Key Message: Ranked #2 of 4 operators in market; revenue CLP 245.0B; EBITDA margin 28.0%; overall healthy operations; key strength: Enterprise Solutions; key challenge: 5G Deployment
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ SWOT SYNTHESIS                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [Strengths]
+    + Enterprise Solutions: score 70 (market avg 58)
+    + Network Coverage: score 80 (market avg 72)
+    + Sustainability: score 70 (market avg 58)
+    + Strong EBITDA margin at 28.0%
+    + Revenue on growth trajectory
+  [Weaknesses]
+    - 5G Deployment: score 60 (market avg 65)
+    - Customer Service: score 60 (market avg 65)
+    - Pricing Competitiveness: score 60 (market avg 70)
+    - Product Innovation: score 60 (market avg 65)
+    - 5G coverage gap at only 55.0%
+  [Opportunities]
+    ^ Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
+    ^ National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access
+    ^ Movistar Chile revenue growth 8.9% YoY
+  [Threats]
+    v Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
+    v Entel Chile revenue growth 15.9% YoY
+    v WOM Chile revenue growth 6.9% YoY
+    v Claro Chile revenue growth 8.7% YoY
+    v High existing competitors pressure
+  [SO Strategies]
+    → Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
+    → Leverage 'Network Coverage: score 80 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access'.
+    → Leverage 'Sustainability: score 70 (market avg 58)' to capture the opportunity of 'Movistar Chile revenue growth 8.9% YoY'.
+  [WO Strategies]
+    → Address weakness '5G Deployment: score 60 (market avg 65)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
+    → Address weakness 'Customer Service: score 60 (market avg 65)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access'.
+    → Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Movistar Chile revenue growth 8.9% YoY'.
+  [ST Strategies]
+    → Use strength 'Enterprise Solutions: score 70 (market avg 58)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
+    → Use strength 'Network Coverage: score 80 (market avg 72)' to counter the threat of 'Entel Chile revenue growth 15.9% YoY'.
+    → Use strength 'Sustainability: score 70 (market avg 58)' to counter the threat of 'WOM Chile revenue growth 6.9% YoY'.
+  [WT Strategies]
+    → Mitigate weakness '5G Deployment: score 60 (market avg 65)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
+    → Mitigate weakness 'Customer Service: score 60 (market avg 65)' and defend against the threat of 'Entel Chile revenue growth 15.9% YoY'.
+    → Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'WOM Chile revenue growth 6.9% YoY'.
+
+  → Key Message: SWOT analysis identifies 6 strengths, 7 weaknesses, 3 opportunities, and 7 threats. The recommended strategic posture is cautious (WT-dominant).
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ 05 OPPORTUNITIES (SPAN Matrix)                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+  [SPAN Positions]
+    Name                      Attractiveness   Position        Quadrant
+    ──────────────────────────────────────────────────────────────────────
+    SO-1                                 6.1        5.7     grow_invest
+    SO-2                                 6.1        5.7     grow_invest
+    SO-3                                 6.1        5.7     grow_invest
+    Movistar Chile revenue growth 8.9% YoY            5.2        5.2     grow_invest
+    5G SA enabling network slicing and enterprise services            5.2        4.7  acquire_skills
+    AI/ML for network optimization and customer experience            5.2        4.7  acquire_skills
+    Open RAN for vendor diversification and cost reduction            5.2        4.7  acquire_skills
+    Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl            5.9        5.2     grow_invest
+  [Grow/Invest]
+    → SO-1
+    → SO-2
+    → SO-3
+    → Movistar Chile revenue growth 8.9% YoY
+  [Acquire Skills]
+    → 5G SA enabling network slicing and enterprise services
+    → AI/ML for network optimization and customer experience
+    → Open RAN for vendor diversification and cost reduction
+    → WO-1
+  [Harvest]
+    → ST-1
+    → ST-2
+    → ST-3
+    → ST-4
+  [Avoid/Exit]
+    → WT-1
+    → WT-2
+    → WT-3
+    → WT-4
+  [Priority Ranking]
+    [P0] SO-1 (Market: N/A)
+    [P0] SO-2 (Market: N/A)
+    [P0] SO-3 (Market: N/A)
+    [P0] Movistar Chile revenue growth 8.9% YoY (Market: N/A)
+    [P1] 5G SA enabling network slicing and enterprise services (Market: N/A)
+    [P1] AI/ML for network optimization and customer experience (Market: N/A)
+
+  → Key Message: SPAN matrix positions 25 opportunities: 11 grow/invest, 6 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 11 grow/invest items for maximum strategic impact.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ DATA PROVENANCE                                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+  Total data points: 20
+  High confidence: 0
+  Medium confidence: 0
+  Low/Estimated: 20
+  Unique sources: 0
+────────────────────────────────────────────────────────────────────────────────
