@@ -362,6 +362,25 @@ class AnalysisRunnerService:
         except Exception as e:
             print(f"    [!] PPT generation failed: {e}")
 
+        # 5. MD (Strategic Insight Report)
+        try:
+            from src.output.md_generator import BLMMdGenerator
+            md_gen = BLMMdGenerator()
+            md_name = f"blm_{safe_op}_analysis_{period.lower()}.md"
+            md_content = md_gen.generate(result)
+            md_path = output_dir / md_name
+            md_path.write_text(md_content, encoding="utf-8")
+            outputs.append({
+                "type": "md",
+                "file_name": md_name,
+                "file_path": str(md_path),
+                "content_type": "text/markdown",
+                "size_bytes": md_path.stat().st_size,
+            })
+            print(f"    MD: {md_name}")
+        except Exception as e:
+            print(f"    [!] MD generation failed: {e}")
+
         return outputs
 
     def _generate_group_summary_outputs(self, summary: dict,
