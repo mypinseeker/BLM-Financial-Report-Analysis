@@ -12,6 +12,11 @@ Usage:
 
     # Check job status
     python3 -m src.cli_analyze status --job-id 42
+
+    # Market readiness audit
+    python3 -m src.cli_analyze audit --market chile --reference germany --period CQ4_2025
+    python3 -m src.cli_analyze audit --market chile --period CQ4_2025  # absolute thresholds
+    python3 -m src.cli_analyze audit --market chile --reference germany --output-json /tmp/audit.json
 """
 
 from __future__ import annotations
@@ -222,6 +227,88 @@ def cmd_status(args):
     return 0
 
 
+def cmd_audit(args):
+    """Run a market readiness audit."""
+    from pathlib import Path
+    from src.web.services.market_audit import MarketAuditService
+
+    svc = _get_service()
+
+    # Validate target market has operators
+    target_ops = svc.get_operators_in_market(args.market)
+    if not target_ops:
+        print(f"ERROR: No operators found for market '{args.market}'")
+        sys.exit(1)
+
+    # Interactive target operator selection
+    print(f"\nOperators in {args.market}:")
+    for i, op in enumerate(target_ops, 1):
+        print(f"  {i}. {op.get('display_name', op['operator_id'])} ({op['operator_id']})")
+
+    if len(target_ops) == 1:
+        target_operator = target_ops[0]["operator_id"]
+        print(f"  -> Auto-selected: {target_operator}")
+    else:
+        choice = input(f"Select target operator [1-{len(target_ops)}]: ").strip()
+        try:
+            idx = int(choice) - 1
+            if idx < 0 or idx >= len(target_ops):
+                raise ValueError()
+            target_operator = target_ops[idx]["operator_id"]
+        except (ValueError, IndexError):
+            print("ERROR: Invalid selection")
+            sys.exit(1)
+
+    # Reference market operator selection (if provided)
+    ref_operator = ""
+    if args.reference:
+        ref_ops = svc.get_operators_in_market(args.reference)
+        if not ref_ops:
+            print(f"ERROR: No operators found for reference market '{args.reference}'")
+            sys.exit(1)
+
+        print(f"\nOperators in {args.reference}:")
+        for i, op in enumerate(ref_ops, 1):
+            print(f"  {i}. {op.get('display_name', op['operator_id'])} ({op['operator_id']})")
+
+        if len(ref_ops) == 1:
+            ref_operator = ref_ops[0]["operator_id"]
+            print(f"  -> Auto-selected: {ref_operator}")
+        else:
+            choice = input(f"Select reference operator [1-{len(ref_ops)}]: ").strip()
+            try:
+                idx = int(choice) - 1
+                if idx < 0 or idx >= len(ref_ops):
+                    raise ValueError()
+                ref_operator = ref_ops[idx]["operator_id"]
+            except (ValueError, IndexError):
+                print("ERROR: Invalid selection")
+                sys.exit(1)
+
+    # Run audit
+    audit_svc = MarketAuditService(svc)
+    report = audit_svc.run_audit(
+        target_market=args.market,
+        target_operator=target_operator,
+        reference=args.reference or "",
+        ref_operator=ref_operator,
+        period=args.period,
+        n_quarters=args.n_quarters,
+    )
+    print(audit_svc.format_console_report(report))
+
+    if args.output_json:
+        out_path = Path(args.output_json)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        out_path.write_text(
+            json.dumps(report.to_dict(), indent=2, default=str),
+            encoding="utf-8",
+        )
+        print(f"\nJSON report saved to: {args.output_json}")
+
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="BLM Analysis CLI — Execute analysis jobs"
@@ -250,6 +337,14 @@ def main():
     p_status = sub.add_parser("status", help="Check a job's status")
     p_status.add_argument("--job-id", type=int, required=True, help="Job ID")
 
+    # audit
+    p_audit = sub.add_parser("audit", help="Market readiness audit")
+    p_audit.add_argument("--market", required=True, help="Target market ID (e.g., chile)")
+    p_audit.add_argument("--reference", default=None, help="Reference market ID (e.g., germany). Omit for absolute thresholds.")
+    p_audit.add_argument("--period", default="CQ4_2025", help="Analysis period (default: CQ4_2025)")
+    p_audit.add_argument("--n-quarters", type=int, default=8, help="Historical range in quarters (default: 8)")
+    p_audit.add_argument("--output-json", default=None, help="Path to save JSON report")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -261,6 +356,7 @@ def main():
         "group": cmd_group,
         "list": cmd_list,
         "status": cmd_status,
+        "audit": cmd_audit,
     }
 
     exit_code = commands[args.command](args)
