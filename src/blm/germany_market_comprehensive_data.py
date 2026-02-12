@@ -537,7 +537,7 @@ EXECUTIVE_CHANGES = {
         "_source": "O2 Germany, LinkedIn",
     },
     "1&1 AG": {
-        "ceo": {"name": "Ralph Dommermuth", "since": "1988-01", "background": "创始人"},
+        "ceo": {"name": "Ralph Dommermuth", "since": "1988-01", "background": "Founder"},
         "cfo": {"name": "Markus Huhn", "since": "2017-06", "background": "United Internet"},
         "cto": {"name": "Karsten Pradel", "since": "2022-01", "background": "Network expert"},
         "recent_changes": [

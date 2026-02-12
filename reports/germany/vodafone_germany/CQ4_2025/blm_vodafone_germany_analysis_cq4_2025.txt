@@ -94,7 +94,7 @@
     Strategy: Market share expansion (investing for growth); subscriber acquisition focus
     Business Model: Convergent (mobile + fixed); service-revenue dominant; low-margin / scale-focused
     Problems: Competitive gap in 5G Deployment, Competitive gap in Brand Strength, Competitive gap in Digital Services
-    Org: CTO: Karsten Pradel (Network expert); CFO: Markus Huhn (United Internet); CEO: Ralph Dommermuth (创始人)
+    Org: CTO: Karsten Pradel (Network expert); CFO: Markus Huhn (United Internet); CEO: Ralph Dommermuth (Founder)
     Ecosystem: Network vendor: OpenRAN (Rakuten Symphony)
     Control Points: Market leadership in Pricing Competitiveness; Market leadership in Sustainability; Scale advantage (12.5m mobile subs)
 
@@ -131,9 +131,9 @@
   [Customer Perception] Customer Service -4pp vs market; Brand Strength +4pp vs market; Pricing Competitiveness -6pp vs market
   [Performance Gap] Top performance gaps: EBITDA margin gap: -5.9pp vs leader (Deutsche Telekom at 42.1%); Revenue share gap: -25.2pp vs leader (50.3%); 5G Deployment: -19pp vs leader
   [Opportunity Gap] Top opportunity gaps: FTTH migration upside (fiber only 6% of homepass footprint); B2B revenue gap (58% below market leader)
-  [Strategic Review] Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。. Revenue trajectory growing, margins strong (36.2%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Customer Service: score 70 (market avg 74)
+  [Strategic Review] Management outlook: Germany EBITDA: H2 performing better than H1, but FY26 will not return to positive growth.. Revenue trajectory growing, margins strong (36.2%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Customer Service: score 70 (market avg 74)
 
-  → Key Message: Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。
+  → Key Message: Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: Germany EBITDA: H2 performing better than H1, but FY26 will not return to positive growth. Key tailwinds: (1) MDU YoY base effect starting to fade from Q3; (2) 1&1 wholesale revenue reaching full run-rate by Q4; (3) MVNO base effects.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ SWOT SYNTHESIS                                                              │

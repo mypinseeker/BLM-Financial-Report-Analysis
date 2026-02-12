@@ -1,8 +1,10 @@
 # ROADMAP.md — BLM Five Looks Analysis Engine
 
-## Current Status (2026-02-10)
+## Current Status (2026-02-12)
 
-All milestones **COMPLETE**. Project archived as **v1.0.0**.
+Engine v1.0.0 complete. Six enhancement task packages (TP-1 through TP-6) delivered on top,
+adding Supabase cloud pipeline, AI extraction, multi-market analysis, engine quality
+improvements, market readiness audit, and data gap remediation.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -12,13 +14,64 @@ M3  Output Layer               ████████████████�
 M4  Integration & Testing      ████████████████████  DONE
 M5  Global Market Adaptation   ████████████████████  DONE  (9decb30)
 M6  Deep Analysis Pipeline     ████████████████████  DONE  (v1.0.0)
+TP-1  Cloud Pipeline + Wizard  ████████████████████  DONE  (2026-02-10)
+TP-2  AI Data Extraction       ████████████████████  DONE  (2026-02-10)
+TP-3  Analysis Execution       ████████████████████  DONE  (2026-02-11)
+TP-4  Engine Quality (18 items)████████████████████  DONE  (2026-02-11)
+TP-5  Market Readiness Audit   ████████████████████  DONE  (2026-02-12)
+TP-6  Fill Data Gaps (10 flds) ████████████████████  DONE  (2026-02-12)
 ```
 
-### Latest Output: v1.0.0 Deep Analysis
-- **PPT**: `data/output/blm_vodafone_germany_deep_analysis.pptx` — 48 slides, 34 charts
-- **PDF**: `data/output/blm_vodafone_germany_full_analysis_cq4_2025.pdf` — 85 pages, A4
-- **MD**: `data/output/blm_vodafone_germany_full_analysis_cq4_2025.md` — 2,887 lines
-- **Tag**: `v1.0.0` on `main`
+### Latest Reports: CQ4_2025
+- **Germany/Vodafone**: `reports/germany/vodafone_germany/CQ4_2025/` — JSON, TXT, HTML, PPTX
+- **Chile/Entel**: `reports/chile/entel_cl/CQ4_2025/` — JSON, TXT, HTML, PPTX
+- **Audit scores**: Germany 96/A, Chile 93/A
+- **Tests**: 609 passing
+
+---
+
+## Task Package History
+
+### TP-1: Cloud Pipeline + Object Selection Wizard (2026-02-10)
+- FastAPI + Jinja2 web app, Supabase (PostgreSQL) backend
+- Object selection wizard for multi-market analysis
+- Routers: markets, operators, outputs, cloud, groups, analyze, data_extract, audit, pages
+- 40 total API routes, Vercel deployment via `api/index.py`
+
+### TP-2: AI Data Extraction Pipeline (2026-02-10)
+- GeminiService (httpx REST, no SDK), ExtractionService, 6 extraction prompts
+- 7 API endpoints: `/api/extract/{discover,download,run,{id},approve,reject,list}`
+- Review UI: `/review` + `/review/{job_id}` (editable tables, confidence colors)
+- SupabaseDataService: extraction CRUD, 5-table upsert, provenance tracking
+- extraction_jobs table SQL
+
+### TP-3: Analysis Execution + Report Generation (2026-02-11)
+- AnalysisRunnerService: Pull-to-SQLite → BLMAnalysisEngine → 4 output formats → Supabase upload
+- GroupSummaryGenerator: cross-market comparison (revenue, subs, competitive position)
+- CLI: `python3 -m src.cli_analyze {single,group,list,status,audit}`
+- Web: `POST /api/analyze/{id}/execute` + auto-trigger via BackgroundTasks
+- analyze.html: download links, re-execute button, phase-labeled progress
+
+### TP-4: Engine Quality Improvements (2026-02-11) — 18 items, 4 sprints
+- **Sprint 1** (8 quick wins): Chile data population, segment fields, scale auto-detect
+- **Sprint 2** (6 items): Relative scoring, revenue B/T format, fuzzy dedup (intel, Five Forces, SWOT, mgmt commentary)
+- **Sprint 3** (4 items): SPAN matrix overhaul (real scores, 4 quadrants), provenance wiring, SWOT opportunity filter, PEST company_impact
+- **Backlog** (3 items): `_fmt_rev()` revenue formatting (M/B/T), competitor deep-dive enrichment (growth_strategy, problems, product_portfolio, business_model, ma_activity)
+- Commits: `17bbdd3` → `67aafdc` → `aea9252` → `e01e514`
+
+### TP-5: Market Readiness Audit (2026-02-12)
+- MarketAuditService: 3-layer audit (Data/Analysis/Provenance), scored/graded reports
+- CLI: `python3 -m src.cli_analyze audit --market X --reference Y --period CQ4_2025`
+- API: `GET /api/audit/{market}?operator=X&reference=Y&ref_operator=Z`
+- Scoring: 0.35×data + 0.45×analysis + 0.20×provenance → A/B/C/D/F grade
+- Commits: `a8183be`, `dd0338a` (audit fix)
+
+### TP-6: Fill Data Gaps (2026-02-12) — 10 fields
+- **NetworkAnalysis** (7 fields): homepass_vs_connect (enhanced with penetration), controlled_vs_resale, evolution_strategy, vs_competitors, consumer_impact, b2b_impact, cost_impact
+- **SegmentAnalysis** (2 fields): attributions (per segment from earnings+intel+changes), action_required (URGENT/MONITOR/SUSTAIN/GROW/MAINTAIN)
+- **SelfInsight** (1 field): org_culture (leadership stability + strategic orientation + config)
+- New MarketConfig field: `operator_network_enrichments` (Germany 4 ops, Chile 5 ops)
+- Commit: `cdce1e5`
 
 ---
 
@@ -68,47 +121,37 @@ result = engine.run_five_looks()  # uses UK config automatically
 - **Consolidated outputs** — full analysis MD (2,887 lines), chaptered PDF (85 pages), final PPT (48 slides)
 - **16 chart types utilized** — all including SPAN bubble, Porter's Five Forces, SWOT matrix, $APPEALS radar
 
-### Key commits
-```
-e1dfe66 Add PDF version of full analysis (85 pages, A4, chaptered)
-59e3c43 Add consolidated full analysis document (8 modules, ~2,800 lines)
-2885d1b Improve PPT visual quality: brand colors, SPAN layout, text sizing
-411f617 Replace Q1-Q8 sequential labels with calendar quarters (CQ1'24–CQ4'25)
-9495773 Add deep analysis PPT generator — 48 slides, 34 charts from 8 MD files
-1036a7d Add Executive Summary — BLM Strategic Assessment capstone
-```
-
 ---
 
-## Next Phase: Data Enrichment & Quality
+## Remaining Backlog
 
 ### P0 — Data Gaps (Impact: Analysis Quality)
 
-| ID | Task | Impact | Status |
-|----|------|--------|--------|
-| P0-1 | ~~Fill tariffs table~~ — 466 tariff records (4 ops × 7 periods × 7 types), upsert/query/comparison methods | ~~$APPEALS Price dimension lacks real pricing data~~ | **DONE** `9decb30` |
-| P0-2 | **Populate CompetitorDeepDive fields** — 12 fields never filled (product_portfolio, growth_strategy, business_model, org_structure, etc.) | Competitor slides show limited content | Open |
-| P0-3 | **Populate SelfInsight fields** — 6 fields empty (customer_perception, performance_gap, opportunity_gap, talent_assessment, leadership_changes, strategic_review) | Org & Talent slide sparse; gap analysis concepts missing | Open |
+| ID | Task | Status |
+|----|------|--------|
+| P0-1 | ~~Fill tariffs table~~ | **DONE** `9decb30` |
+| P0-2 | ~~Populate CompetitorDeepDive fields~~ — growth_strategy, problems, product_portfolio, business_model, ma_activity | **DONE** TP-4 Backlog `e01e514` |
+| P0-3 | ~~Populate SelfInsight 6 fields~~ — customer_perception, performance_gap, opportunity_gap, talent_assessment, leadership_changes, strategic_review | **DONE** TP-4 Sprint 3 `aea9252` |
 
 ### P1 — Output Quality
 
-| ID | Task | Impact | Files |
-|----|------|--------|-------|
-| P1-1 | **Persist data_provenance** — ProvenanceStore only in-memory; add save_to_db/load_from_db | No audit trail across runs | `provenance.py`, `db.py` |
-| P1-2 | **Fill NetworkAnalysis 7 fields** — controlled_vs_resale, homepass_vs_connect, evolution_strategy, vs_competitors, consumer_impact, b2b_impact, cost_impact | Network slide lacks strategic depth | `self_analysis.py`, `look_at_self.py` |
-| P1-3 | **Use remaining 4 chart types** — radar_chart, stacked_bar, heatmap, timeline_chart | 4 of 18 chart types still unused | `ppt_generator.py`, `ppt_charts.py` |
-| P1-4 | **Clean seed data language** — intelligence_events has mixed Chinese/English descriptions | JSON/HTML/TXT outputs show mixed language | `seed_internet_data.py` |
-| P1-5 | **Implement user_feedback persistence** — Add upsert_feedback() + CLI command | Draft->Final loop lacks persistence | `feedback.py`, `db.py` |
+| ID | Task | Impact | Status |
+|----|------|--------|--------|
+| P1-1 | **Persist data_provenance** — ProvenanceStore only in-memory; add save_to_db/load_from_db | No audit trail across runs | Open |
+| P1-2 | ~~Fill NetworkAnalysis 7 fields~~ | ~~Network slide lacks strategic depth~~ | **DONE** TP-6 `cdce1e5` |
+| P1-3 | **Use remaining 3 chart types** — stacked_bar, heatmap, timeline_chart | 3 of 18 chart types still unused | Open |
+| P1-4 | **Clean seed data language** — intelligence_events has mixed Chinese/English descriptions | JSON/HTML/TXT outputs show mixed language | Open |
+| P1-5 | **Implement user_feedback persistence** — Add upsert_feedback() + CLI command | Draft→Final loop lacks persistence | Open |
 
 ### P2 — Tech Debt
 
-| ID | Task | Impact | Files |
-|----|------|--------|-------|
-| P2-1 | **Remove 12 legacy file duplicates** — src/blm/ root vs src/blm/_legacy/ | Maintainability risk | 12 files in `src/blm/` |
-| P2-2 | **Add openpyxl to requirements.txt** | 3 test failures | `requirements.txt` |
-| P2-3 | **Differentiate SPAN bubble sizes** — addressable_market always "N/A", bubble_size always 2.0 | SPAN chart lacks visual hierarchy | `look_at_opportunities.py` |
-| P2-4 | **Add "Three Decisions" slides** — Strategy/Key Tasks/Execution (BLM Phase 2) | BLM framework incomplete | New module needed |
-| P2-5 | ~~Multi-market support~~ — MarketConfig registry + data-driven segments/BMC/exposures; new market = config + seed only | ~~Cannot analyze other markets~~ | **DONE** `9decb30` |
+| ID | Task | Impact | Status |
+|----|------|--------|--------|
+| P2-1 | **Remove 12 legacy file duplicates** — src/blm/ root vs src/blm/_legacy/ | Maintainability risk | Open |
+| P2-2 | **Add openpyxl to requirements.txt** | Test failures | Open |
+| P2-3 | **Differentiate SPAN bubble sizes** — addressable_market always "N/A", bubble_size always 2.0 | SPAN chart lacks visual hierarchy | Open |
+| P2-4 | **Add "Three Decisions" slides** — Strategy/Key Tasks/Execution (BLM Phase 2) | BLM framework incomplete | Open |
+| P2-5 | ~~Multi-market support~~ | **DONE** `9decb30` |
 
 ---
 
@@ -160,5 +203,5 @@ path = gen.generate(result, mode="draft",
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 606 passed, 2 openpyxl failures (unrelated)
+python3 -m pytest tests/ --tb=short  # 609 passed
 ```
