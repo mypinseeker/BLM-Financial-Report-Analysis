@@ -853,6 +853,196 @@ def _derive_business_model(financial_health: dict, subscriber_health: dict) -> s
     return "; ".join(parts) if parts else ""
 
 
+def _derive_new_product_pipeline(intel_events: list, comp_id: str,
+                                  earnings_highlights: list) -> list[str]:
+    """Extract new product pipeline items from intel events and earnings."""
+    keywords = {"launch", "rollout", "upgrade", "new service", "new product",
+                "new plan", "new tariff", "pilot", "beta", "deploy"}
+    results = []
+    seen = set()
+
+    for ev in intel_events:
+        if ev.get("operator_id") != comp_id:
+            continue
+        title = (ev.get("title") or "").lower()
+        if any(kw in title for kw in keywords):
+            item = ev.get("title", "")
+            if item and item.lower() not in seen:
+                seen.add(item.lower())
+                results.append(item)
+
+    for eh in earnings_highlights:
+        content = (eh.get("content") or "").lower()
+        if any(kw in content for kw in keywords):
+            snippet = eh.get("content", "")[:120]
+            if snippet and snippet.lower() not in seen:
+                seen.add(snippet.lower())
+                results.append(snippet)
+
+    return results[:5]
+
+
+def _derive_supply_chain_status(network_status: dict) -> str:
+    """Synthesize supply chain status from network infrastructure data."""
+    if network_status.get("status") == "no_data":
+        return ""
+
+    tech_mix = network_status.get("technology_mix")
+    if not tech_mix or not isinstance(tech_mix, dict):
+        return ""
+
+    parts = []
+    vendor = tech_mix.get("mobile_vendor")
+    if vendor:
+        parts.append(f"Primary vendor: {vendor}")
+    virt_pct = tech_mix.get("virtualization_pct")
+    if virt_pct is not None:
+        parts.append(f"{virt_pct}% virtualized")
+    sa_status = tech_mix.get("5g_sa_status")
+    if sa_status:
+        parts.append(f"5G SA: {sa_status}")
+    core_vendor = tech_mix.get("core_vendor")
+    if core_vendor:
+        parts.append(f"Core: {core_vendor}")
+
+    return "; ".join(parts)
+
+
+def _derive_ecosystem_partners(intel_events: list, comp_id: str,
+                                network_status: dict) -> list[str]:
+    """Extract ecosystem partners from intel events and network vendor info."""
+    keywords = {"partner", "alliance", "consortium", "joint venture",
+                "jv ", "collaboration", "agreement with", "deal with"}
+    results = []
+    seen = set()
+
+    for ev in intel_events:
+        if ev.get("operator_id") != comp_id:
+            continue
+        title = (ev.get("title") or "").lower()
+        if any(kw in title for kw in keywords):
+            item = ev.get("title", "")
+            if item and item.lower() not in seen:
+                seen.add(item.lower())
+                results.append(item)
+
+    # Add network vendor as ecosystem partner
+    if network_status.get("status") != "no_data":
+        tech_mix = network_status.get("technology_mix")
+        if tech_mix and isinstance(tech_mix, dict):
+            vendor = tech_mix.get("mobile_vendor")
+            if vendor and vendor.lower() not in seen:
+                seen.add(vendor.lower())
+                results.append(f"Network vendor: {vendor}")
+
+    return results[:5]
+
+
+def _derive_core_control_points(comp_scores: dict, network_status: dict,
+                                 subscriber_health: dict) -> list[str]:
+    """Derive core control points from competitive scores, infra, and scale."""
+    results = []
+
+    # Top competitive dimensions scoring ≥80
+    for dim, score in sorted(comp_scores.items(), key=lambda x: x[1] or 0,
+                             reverse=True):
+        if score and score >= 80:
+            results.append(f"Market leadership in {dim}")
+
+    # Network infrastructure ownership
+    if network_status.get("status") != "no_data":
+        fiber_k = network_status.get("fiber_homepass_k")
+        if fiber_k and fiber_k > 0:
+            results.append(f"Own fiber infrastructure ({fiber_k:.0f}k homes)")
+        cable_k = network_status.get("cable_homepass_k")
+        if cable_k and cable_k > 0:
+            results.append(f"Own cable infrastructure ({cable_k:.0f}k homes)")
+
+    # Subscriber scale advantage
+    if subscriber_health.get("status") != "no_data":
+        mobile_k = subscriber_health.get("mobile_total_k")
+        if mobile_k and mobile_k > 10000:
+            results.append(f"Scale advantage ({mobile_k / 1000:.1f}m mobile subs)")
+
+    return results[:5]
+
+
+def _derive_org_structure(db, comp_id: str) -> str:
+    """Build org structure summary from executive records."""
+    executives = db.get_executives(comp_id)
+    if not executives:
+        return ""
+
+    current = [e for e in executives if e.get("is_current")]
+    if not current:
+        return ""
+
+    parts = []
+    for exec_rec in current:
+        title = exec_rec.get("title", "")
+        name = exec_rec.get("name", "")
+        bg = exec_rec.get("background", "")
+        label = f"{title}: {name}"
+        if bg:
+            label += f" ({bg})"
+        parts.append(label)
+
+    return "; ".join(parts[:5])
+
+
+def _derive_incentive_system(financial_health: dict, growth_strategy: str) -> str:
+    """Infer incentive alignment from financial trajectory."""
+    if financial_health.get("status") == "no_data":
+        return ""
+
+    margin_trend = financial_health.get("margin_trend", "")
+    rev_trend = financial_health.get("revenue_trend", "")
+
+    if margin_trend == "improving":
+        return "Efficiency/profitability-focused incentive alignment"
+    if rev_trend == "growing" and margin_trend != "declining":
+        return "Growth-oriented with volume/revenue targets"
+    if rev_trend == "declining":
+        return "Restructuring mode — cost discipline focus"
+
+    # Fallback from growth_strategy keywords
+    gs = growth_strategy.lower()
+    if "cost" in gs or "margin" in gs:
+        return "Cost discipline and margin protection"
+    if "growth" in gs or "acquisition" in gs:
+        return "Growth and market share targets"
+
+    return "Balanced efficiency and growth targets"
+
+
+def _derive_talent_culture(db, comp_id: str, comp_scores: dict) -> str:
+    """Infer talent/culture profile from executives and innovation scores."""
+    executives = db.get_executives(comp_id)
+    current = [e for e in executives if e.get("is_current")] if executives else []
+
+    # Innovation and Digital scores for tech orientation
+    innovation = comp_scores.get("Product Innovation") or 0
+    digital = comp_scores.get("Digital Services") or 0
+    avg_tech = (innovation + digital) / 2 if (innovation or digital) else 0
+
+    if avg_tech >= 75:
+        culture = "tech-forward"
+    elif avg_tech >= 50:
+        culture = "transitioning to digital"
+    elif avg_tech > 0:
+        culture = "traditional"
+    else:
+        culture = ""
+
+    parts = []
+    if current:
+        parts.append(f"{len(current)} C-suite leaders")
+    if culture:
+        parts.append(f"{culture} culture")
+
+    return "; ".join(parts)
+
+
 # ============================================================================
 # Competitor Deep Dive
 # ============================================================================
@@ -907,6 +1097,22 @@ def _build_competitor_deep_dive(
     product_portfolio = _derive_product_portfolio(comp_scores, subscriber_health)
     business_model = _derive_business_model(financial_health, subscriber_health)
 
+    # 7 newly populated fields
+    earnings_highlights = db.get_earnings_highlights(comp_id, target_period)
+    new_product_pipeline = _derive_new_product_pipeline(
+        intel_events, comp_id, earnings_highlights,
+    )
+    supply_chain_status = _derive_supply_chain_status(network_status)
+    ecosystem_partners = _derive_ecosystem_partners(
+        intel_events, comp_id, network_status,
+    )
+    core_control_points = _derive_core_control_points(
+        comp_scores, network_status, subscriber_health,
+    )
+    org_structure = _derive_org_structure(db, comp_id)
+    incentive_system = _derive_incentive_system(financial_health, growth_strategy)
+    talent_culture = _derive_talent_culture(db, comp_id, comp_scores)
+
     return CompetitorDeepDive(
         operator=display_name,
         financial_health=financial_health,
@@ -921,6 +1127,13 @@ def _build_competitor_deep_dive(
         problems=problems,
         product_portfolio=product_portfolio,
         business_model=business_model,
+        new_product_pipeline=new_product_pipeline,
+        supply_chain_status=supply_chain_status,
+        ecosystem_partners=ecosystem_partners,
+        core_control_points=core_control_points,
+        org_structure=org_structure,
+        incentive_system=incentive_system,
+        talent_culture=talent_culture,
     )
 
 

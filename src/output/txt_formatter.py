@@ -180,6 +180,18 @@ class BLMTxtFormatter:
             ma = getattr(dd, 'ma_activity', [])
             if ma:
                 lines.append(f"    M&A: {'; '.join(ma[:3])}")
+            pipeline = getattr(dd, 'new_product_pipeline', [])
+            if pipeline:
+                lines.append(f"    Product Pipeline: {'; '.join(pipeline[:3])}")
+            org = getattr(dd, 'org_structure', '')
+            if org:
+                lines.append(f"    Org: {org}")
+            eco = getattr(dd, 'ecosystem_partners', [])
+            if eco:
+                lines.append(f"    Ecosystem: {'; '.join(eco[:3])}")
+            ctrl = getattr(dd, 'core_control_points', [])
+            if ctrl:
+                lines.append(f"    Control Points: {'; '.join(ctrl[:3])}")
 
         lines.append(self._key_message(getattr(comp, 'key_message', '')))
         return "\n".join(lines)
