@@ -17,7 +17,7 @@ from ..md_utils import (
     section_header, section_divider, md_table, md_kv_table,
     blockquote, bold, code_block, bullet_list,
     operator_display_name, market_display_name,
-    safe_get, safe_list, safe_dict, fmt_currency, fmt_pct,
+    safe_get, safe_list, safe_dict, fmt_currency, fmt_pct, fmt_smart_value,
     empty_section_notice,
 )
 
@@ -163,7 +163,9 @@ def _render_situation(result, diagnosis, config) -> str:
                     if k in ct:
                         rank_str = _compute_metric_rank(ct[k], result.target_operator, val)
                         break
-            position_rows.append([metric, str(val), rank_str, ""])
+            # Smart-format the value based on metric type
+            val_key = keys[0]  # use the first matching key name for formatting
+            position_rows.append([metric, fmt_smart_value(val_key, val, config), rank_str, ""])
 
     if position_rows:
         lines.append(md_table(["Metric", "Value", "Rank", "Assessment"], position_rows))
@@ -246,8 +248,11 @@ def _render_central_diagnosis(result, diagnosis, config) -> str:
     if not label:
         return ""
 
+    # Strip "The " prefix to avoid "The 'The Squeezed Middle'"
+    label_bare = label.replace("The ", "", 1) if label.startswith("The ") else label
+
     lines = [
-        section_header(f'3. The "{label}" — Central Diagnosis', 2),
+        section_header(f'3. "{label}" — Central Diagnosis', 2),
         "",
         diagnosis.central_diagnosis,
     ]
@@ -272,7 +277,8 @@ def _render_central_diagnosis(result, diagnosis, config) -> str:
                     if isinstance(values, dict):
                         row = [metric.replace("_", " ").title()]
                         for op in operators:
-                            row.append(str(values.get(op, "—")))
+                            val = values.get(op, "—")
+                            row.append(fmt_smart_value(metric, val, config))
                         rows.append(row)
                 if rows:
                     lines.append(md_table(headers, rows[:10]))

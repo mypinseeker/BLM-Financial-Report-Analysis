@@ -300,9 +300,27 @@ def _render_dict_section(data: dict, lines: list):
         lines.append(f"**{title}**:")
         if isinstance(v, list):
             for item in v[:8]:
-                lines.append(f"- {item}")
+                if isinstance(item, dict):
+                    # Compact dict items
+                    parts = [f"{dk}: {dv}" for dk, dv in item.items()]
+                    lines.append(f"- {'; '.join(parts)}")
+                else:
+                    lines.append(f"- {item}")
         elif isinstance(v, dict):
-            rows = [[sk.replace("_", " ").title(), str(sv)] for sk, sv in v.items()]
-            lines.append(md_table(["Item", "Value"], rows))
+            # Check for nested dicts with simple values
+            has_nested = any(isinstance(sv, (dict, list)) for sv in v.values())
+            if has_nested:
+                # Flatten nested dicts for display
+                for sk, sv in v.items():
+                    if isinstance(sv, dict):
+                        compact = "; ".join(f"{dk}: {dv}" for dk, dv in sv.items())
+                        lines.append(f"  - **{sk.replace('_', ' ').title()}**: {compact}")
+                    elif isinstance(sv, list):
+                        lines.append(f"  - **{sk.replace('_', ' ').title()}**: {', '.join(str(x) for x in sv)}")
+                    else:
+                        lines.append(f"  - **{sk.replace('_', ' ').title()}**: {sv}")
+            else:
+                rows = [[sk.replace("_", " ").title(), str(sv)] for sk, sv in v.items()]
+                lines.append(md_table(["Item", "Value"], rows))
         else:
             lines.append(str(v))

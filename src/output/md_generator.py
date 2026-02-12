@@ -211,10 +211,12 @@ class BLMMdGenerator:
 
             footnotes = prov.to_footnotes()
             if footnotes:
+                # Deduplicate sources
+                unique_sources = list(dict.fromkeys(footnotes))
                 lines.append("")
                 lines.append("### Sources")
                 lines.append("")
-                for fn in footnotes[:15]:
+                for fn in unique_sources[:15]:
                     lines.append(f"- {fn}")
 
         lines.append("")

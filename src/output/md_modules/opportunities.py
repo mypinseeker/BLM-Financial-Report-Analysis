@@ -133,7 +133,9 @@ def _render_quadrant_detail(opp, attr: str, title: str, description: str) -> str
     if not items:
         return ""
 
-    lines = [section_header(f"2. {title} Opportunities", 2)]
+    # Section number depends on quadrant
+    section_num = {"grow_invest": 2, "acquire_skills": 3}.get(attr, 2)
+    lines = [section_header(f"{section_num}. {title} Opportunities", 2)]
     lines.append(f"*{description}*")
     lines.append("")
 

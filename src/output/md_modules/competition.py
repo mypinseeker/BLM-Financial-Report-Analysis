@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from ..md_utils import (
     section_header, section_divider, md_table,
-    bold, bullet_list,
+    bold, bullet_list, fmt_smart_value, fmt_currency, fmt_pct,
     safe_get, safe_list, safe_dict,
     operator_display_name,
     empty_section_notice,
@@ -44,10 +44,10 @@ def render_competition(result, diagnosis, config) -> str:
     parts.append(_render_five_forces(comp))
 
     # 3. Competitor Deep Dives
-    parts.append(_render_deep_dives(comp, result.target_operator))
+    parts.append(_render_deep_dives(comp, result.target_operator, config))
 
     # 4. Comparison Dashboard
-    parts.append(_render_comparison_dashboard(comp))
+    parts.append(_render_comparison_dashboard(comp, config))
 
     # 5. Competitive Dynamics
     parts.append(_render_dynamics(comp, diagnosis))
@@ -164,7 +164,7 @@ def _render_five_forces(comp) -> str:
     return "\n".join(lines)
 
 
-def _render_deep_dives(comp, target_operator: str) -> str:
+def _render_deep_dives(comp, target_operator: str, config=None) -> str:
     analyses = safe_dict(comp, "competitor_analyses")
     if not analyses:
         return ""
@@ -177,18 +177,27 @@ def _render_deep_dives(comp, target_operator: str) -> str:
         lines.append(section_header(f"{op_name}", 3))
         lines.append("")
 
-        # Financial profile
+        # Financial profile — skip trend arrays and internal flags
         fh = safe_dict(dd, "financial_health")
         sh = safe_dict(dd, "subscriber_health")
+        _SKIP_KEYS = {
+            'revenue_trend', 'ebitda_trend', 'margin_trend',
+            'revenue_growing', 'margin_healthy',
+            'quarters_analyzed', 'status', 'latest_quarter',
+        }
 
         if fh or sh:
             lines.append(section_header("Financial & Subscriber Profile", 4))
             lines.append("")
             profile_rows = []
             for k, v in fh.items():
-                profile_rows.append([k.replace("_", " ").title(), str(v)])
+                if k in _SKIP_KEYS or isinstance(v, (list, tuple)):
+                    continue
+                profile_rows.append([k.replace("_", " ").title(), fmt_smart_value(k, v, config)])
             for k, v in sh.items():
-                profile_rows.append([k.replace("_", " ").title(), str(v)])
+                if k in _SKIP_KEYS or isinstance(v, (list, tuple)):
+                    continue
+                profile_rows.append([k.replace("_", " ").title(), fmt_smart_value(k, v, config)])
             if profile_rows:
                 lines.append(md_table(["Metric", "Value"], profile_rows))
             lines.append("")
@@ -211,7 +220,8 @@ def _render_deep_dives(comp, target_operator: str) -> str:
             lines.append(section_header("Network Status", 4))
             lines.append("")
             for k, v in network.items():
-                lines.append(f"- **{k.replace('_', ' ').title()}**: {v}")
+                display_v = fmt_smart_value(k, v, config)
+                lines.append(f"- **{k.replace('_', ' ').title()}**: {display_v}")
             lines.append("")
 
         # Product portfolio
@@ -303,7 +313,7 @@ def _render_deep_dives(comp, target_operator: str) -> str:
     return "\n".join(lines)
 
 
-def _render_comparison_dashboard(comp) -> str:
+def _render_comparison_dashboard(comp, config=None) -> str:
     ct = safe_dict(comp, "comparison_table")
     if not ct:
         return ""
@@ -328,7 +338,8 @@ def _render_comparison_dashboard(comp) -> str:
         display_metric = metric.replace("_", " ").title()
         row = [bold(display_metric)]
         for op in all_ops:
-            row.append(str(values.get(op, "—")))
+            val = values.get(op, "—")
+            row.append(fmt_smart_value(metric, val, config))
         rows.append(row)
 
     if rows:

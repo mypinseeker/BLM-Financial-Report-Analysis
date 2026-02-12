@@ -230,7 +230,8 @@ def _render_synthesis(swot, diagnosis) -> str:
 
     # Reference central diagnosis
     if diagnosis.central_diagnosis_label:
-        lines.append(f"This SWOT analysis reinforces the **\"{diagnosis.central_diagnosis_label}\"** "
+        label = diagnosis.central_diagnosis_label
+        lines.append(f"This SWOT analysis reinforces the **\"{label}\"** "
                      f"central diagnosis identified across all Five Looks.")
         lines.append("")
 

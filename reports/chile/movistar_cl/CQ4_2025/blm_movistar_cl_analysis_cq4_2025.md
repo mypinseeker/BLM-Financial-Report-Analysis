@@ -1,6 +1,6 @@
 # Movistar Chile — BLM Strategic Assessment: Complete Analysis
 
-> **Period**: CQ4_2025
+> **Period**: unknown
 > **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + SPAN
 > **Protagonist**: Movistar Chile
 > **Market**: Chilean Telecommunications
@@ -36,7 +36,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 # Executive Summary — Movistar Chile BLM Strategic Assessment
 
-**Period**: CQ4_2025
+**Period**: unknown
 
 **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + Opportunities
 
@@ -48,7 +48,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 ## The One-Line Verdict
 
-**Movistar Chile is a financially stable #2 operator facing a significant gap to the market leader with a 3-5 year window to exploit claro_cl weakness: 5g deployment: score 50 (market avg 65).**
+**Movistar Chile is a financially stable #2 operator facing a significant gap to the market leader with a 3-5 year window to accelerate Mobile Growth.**
 
 ---
 
@@ -70,7 +70,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 | Metric | Value | Rank | Assessment |
 | :--- | :--- | :--- | :--- |
-| Revenue | 245000.0 | #2 |  |
+| Revenue | $245,000M | #2 |  |
 
 ### 1.3 The Headline Numbers
 
@@ -85,7 +85,7 @@ EBITDA              68600.0/q
 
 ### Look 1: Trends (PEST)
 
-**Net assessment: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))**
+**Net assessment: Favorable macro environment in a late_growth market (+7.2% YoY (CQ2_2025 -> CQ4_2025) YoY). 2 policy opportunities vs 1 policy threats.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -97,7 +97,7 @@ EBITDA              68600.0/q
 
 ### Look 2: Market & Customer ($APPEALS)
 
-**Net assessment: Chile telecom market totals CLP 1.39T in quarterly revenue; competitive strengths in Availability; Market faces significant competitive headwinds.**
+**Net assessment: Movistar Chile leads in 0 of 8 $APPEALS dimensions and trails in 8. 5 customer segments identified.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -108,7 +108,7 @@ EBITDA              68600.0/q
 
 ### Look 3: Competition
 
-**Net assessment: In a 4-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 18% share. Strongest competitive force: Existing Competitors.**
+**Net assessment: #2 of 4 operators in a medium-intensity market. Strongest force: existing competitors. Key differentiators: Enterprise Solutions: score 70 (market avg 58), Network Coverage: score 80 (market avg 72).**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -119,7 +119,7 @@ EBITDA              68600.0/q
 
 ### Look 4: Self-Analysis
 
-**Net assessment: Ranked #2 of 4 operators in market; revenue CLP 245.0B; EBITDA margin 28.0%; overall healthy operations; key strength: Enterprise Solutions; key challenge: 5G Deployment**
+**Net assessment: Overall healthy operator. EBITDA margin 28.0%. 4 of 5 segments rated 'strong'. Key challenge: 5G Deployment: score 60 (market avg 65).**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -135,7 +135,7 @@ EBITDA              68600.0/q
 
 ### SWOT Synthesis
 
-**Net assessment: SWOT analysis identifies 6 strengths, 7 weaknesses, 3 opportunities, and 7 threats. The recommended strategic posture is cautious (WT-dominant).**
+**Net assessment: S:6/W:7/O:3/T:7 — Cautious (WT-dominant). Weaknesses exceed strengths, threats dominate opportunities.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -145,7 +145,7 @@ EBITDA              68600.0/q
 
 ### Look 5: Opportunities (SPAN)
 
-**Net assessment: SPAN matrix positions 25 opportunities: 11 grow/invest, 6 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 11 grow/invest items for maximum strategic impact.**
+**Net assessment: 25 opportunities mapped: 11 grow/invest, 6 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 11 grow/invest items.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -154,68 +154,89 @@ EBITDA              68600.0/q
 
 ---
 
-## 3. The "The Distant Second" — Central Diagnosis
+## 3. "The Distant Second" — Central Diagnosis
 
-The single most important finding across all Five Looks is Movistar Chile's "The Distant Second" positioning.
+The single most important finding across all Five Looks is Movistar Chile's "Distant Second" positioning.
 
 This is not a temporary market condition — it is a structural competitive problem that manifests in every dimension:
 
 
 **The escape routes** (not mutually exclusive):
-1. Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
-2. Leverage 'Network Coverage: score 80 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access'.
-3. Leverage 'Sustainability: score 70 (market avg 58)' to capture the opportunity of 'Movistar Chile revenue growth 8.9% YoY'.
+1. Leverage Enterprise Solutions for Regulatory Environment
+2. Leverage Network Coverage for National Digital Strategy
+3. Leverage Sustainability for Movistar Chile revenue growth 8.9% YoY
 
 | Dimension | Claro Chile | Entel | Movistar Chile | WOM Chile |
 | :--- | :--- | :--- | :--- | :--- |
-| Revenue | 150000.0 | 811000.0 | 245000.0 | 185000.0 |
-| Revenue Growth | 2.2 | 5.5 | 3.2 | 6.8 |
-| Ebitda Margin | 22.0 | 30.0 | 28.0 | 20.0 |
-| Subscribers | 5350.0 | 10900.0 | 7550.0 | 6700.0 |
-| Arpu | 6500.0 | 9500.0 | 7500.0 | 5200.0 |
-| Churn | 1.62 | 1.32 | 1.52 | 1.65 |
-| 5G Coverage | 50.0 | 65.0 | 55.0 | 35.0 |
+| Revenue | $150,000M | $811,000M | $245,000M | $185,000M |
+| Revenue Growth | +2.2% | +5.5% | +3.2% | +6.8% |
+| Ebitda Margin | 22.0% | 30.0% | 28.0% | 20.0% |
+| Subscribers | 5,350K | 10,900K | 7,550K | 6,700K |
+| Arpu | $6500.00 | $9500.00 | $7500.00 | $5200.00 |
+| Churn | 1.6% | 1.3% | 1.5% | 1.6% |
+| 5G Coverage | 50.0% | 65.0% | 55.0% | 35.0% |
 
 ---
 
 ## 4. Strategic Priorities — Consolidated
 
-Across all analyses, 5 strategic priorities emerge consistently:
+Across all analyses, 7 strategic priorities emerge consistently:
 
-### Priority 1: Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) (EXISTENTIAL)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Addressable market | N/A |
-| Approach | Competitor claro_cl is weak in: 5G Deployment: score 50 (market avg 65) |
-
-### Priority 2: Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72) (EXISTENTIAL)
+### Priority 1: Accelerate Mobile Growth (EXISTENTIAL)
 
 | Aspect | Detail |
 | :--- | :--- |
-| Addressable market | N/A |
-| Approach | Competitor claro_cl is weak in: Brand Strength: score 60 (market avg 72) |
+| Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
+| Time window | immediate |
+| Approach | Increase investment in Mobile to capture growth momentum |
 
-### Priority 3: Exploit entel_cl weakness: Pricing Competitiveness: score 60 (market avg 70) (EXISTENTIAL)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Addressable market | N/A |
-| Approach | Competitor entel_cl is weak in: Pricing Competitiveness: score 60 (market avg 70) |
-
-### Priority 4: Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg 58) (EXISTENTIAL)
+### Priority 2: Accelerate B2B Growth (EXISTENTIAL)
 
 | Aspect | Detail |
 | :--- | :--- |
-| Addressable market | N/A |
-| Approach | Competitor wom_cl is weak in: Enterprise Solutions: score 30 (market avg 58) |
+| Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
+| Time window | immediate |
+| Approach | Increase investment in B2B to capture growth momentum |
 
-### Priority 5: Exploit wom_cl weakness: Network Coverage: score 50 (market avg 72) (EXISTENTIAL)
+### Priority 3: Accelerate TV/Convergence Growth (EXISTENTIAL)
 
 | Aspect | Detail |
 | :--- | :--- |
-| Addressable market | N/A |
-| Approach | Competitor wom_cl is weak in: Network Coverage: score 50 (market avg 72) |
+| Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
+| Time window | immediate |
+| Approach | Increase investment in TV/Convergence to capture growth momentum |
+
+### Priority 4: Accelerate Wholesale Growth (STRATEGIC)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
+| Time window | immediate |
+| Approach | Increase investment in Wholesale to capture growth momentum |
+
+### Priority 5: Close 5G Deployment Gap (STRATEGIC)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | 5G Deployment: score 60 (market avg 65) |
+| Time window | 1-2 years |
+| Approach | Targeted investment to close gap in 5G Deployment |
+
+### Priority 6: Close Customer Service Gap (STRATEGIC)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | Customer Service: score 60 (market avg 65) |
+| Time window | 1-2 years |
+| Approach | Targeted investment to close gap in Customer Service |
+
+### Priority 7: Close Pricing Competitiveness Gap (IMPORTANT)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | Pricing Competitiveness: score 60 (market avg 70) |
+| Time window | 1-2 years |
+| Approach | Targeted investment to close gap in Pricing Competitiveness |
 
 ---
 
@@ -233,12 +254,16 @@ Equally important — strategic traps to avoid:
 
 ## 6. Timeline & Sequencing
 
-**MEDIUM-TERM (2-3 years)**
-  - Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65)
-  - Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72)
-  - Exploit entel_cl weakness: Pricing Competitiveness: score 60 (market avg 70)
-  - Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg 58)
-  - Exploit wom_cl weakness: Network Coverage: score 50 (market avg 72)
+**IMMEDIATE (Now)**
+  - Accelerate Mobile Growth
+  - Accelerate B2B Growth
+  - Accelerate TV/Convergence Growth
+  - Accelerate Wholesale Growth
+
+**SHORT-TERM (6-18 months)**
+  - Close 5G Deployment Gap
+  - Close Customer Service Gap
+  - Close Pricing Competitiveness Gap
 
 
 ---
@@ -247,7 +272,7 @@ Equally important — strategic traps to avoid:
 
 ### 7.1 If Executed Well (Bull Case)
 
-**Scenario**: Execute all 5 strategic priorities successfully
+**Scenario**: Execute all 7 strategic priorities successfully
 **Revenue impact**: +10-16% over 5 years
 **Conditions**: Full execution of P0 opportunities, favorable market conditions
 
@@ -259,7 +284,7 @@ Equally important — strategic traps to avoid:
 
 ### 7.3 Base Case
 
-**Scenario**: Execute 2-3 of 5 priorities; moderate improvement
+**Scenario**: Execute 2-3 of 7 priorities; moderate improvement
 **Revenue impact**: +3-6% over 5 years
 
 ### 7.4 Net Assessment
@@ -279,9 +304,9 @@ Equally important — strategic traps to avoid:
 <!-- ============================================================ -->
 
 
-# Chilean Telecom Macro Trends — PEST Deep Analysis (CQ4_2025)
+# Chilean Telecom Macro Trends — PEST Deep Analysis (unknown)
 
-**Data basis**: PEST framework | 8 macro factors | CQ4_2025 market data | Regulatory/event intelligence | Industry lifecycle assessment
+**Data basis**: PEST framework | 8 macro factors | unknown market data | Regulatory/event intelligence | Industry lifecycle assessment
 
 ---
 
@@ -293,7 +318,7 @@ Equally important — strategic traps to avoid:
 | :--- | :--- | :--- |
 | Market size | **CLP 1.4T (quarterly, CQ4_2025)** | Market scale |
 | YoY growth | **+7.2% YoY (CQ2_2025 -> CQ4_2025)** |  |
-| Profit trend | Improving (industry EBITDA margin 27.4%, up from 24.5%) |  |
+| Profit trend | Improving (industry EBITDA margin 27.4%, up from 25.7%) |  |
 | Concentration | **CR4 = 100% (Entel Chile: 58.3%, Movistar Chile: 17.6%, WOM Chile: 13.3%, Claro Chile: 10.8%)** | Market structure |
 | Lifecycle stage | **Late_Growth** |  |
 
@@ -425,7 +450,7 @@ Being in the **late_growth** phase means:
 | Factor | Detail |
 | :--- | :--- |
 | Severity | **High** |
-| Trend | Improving |
+| Trend | Stable |
 | Impact type | Both |
 | Time horizon | Medium Term |
 
@@ -503,7 +528,7 @@ Being in the **late_growth** phase means:
 
 **Key message**: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))
 
-**Net assessment**: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))
+**Net assessment**: Favorable macro environment in a late_growth market (+7.2% YoY (CQ2_2025 -> CQ4_2025) YoY). 2 policy opportunities vs 1 policy threats.
 
 ### Policy Opportunities
 
@@ -522,7 +547,7 @@ Being in the **late_growth** phase means:
 <!-- ============================================================ -->
 
 
-# Market & Customer Analysis — $APPEALS Framework (CQ4_2025)
+# Market & Customer Analysis — $APPEALS Framework (unknown)
 
 **Protagonist**: Movistar Chile
 
@@ -535,11 +560,11 @@ Being in the **late_growth** phase means:
 | Metric | Value |
 | :--- | :--- |
 | Calendar Quarter | CQ4_2025 |
-| Total Revenue | 1391000.0 |
-| Total Mobile Subscribers K | 30500.0 |
-| Total Broadband Subscribers K | 4180.0 |
-| Market Shares | {'Entel Chile': 58.3, 'Movistar Chile': 17.6, 'WOM Chile': 13.3, 'Claro Chile': 10.8} |
-| Penetration Rates | {'mobile_penetration_pct': 156.4, 'broadband_penetration_pct': 21.4} |
+| Total Revenue | $1,391,000M |
+| Total Mobile Subscribers K | 30,500K |
+| Total Broadband Subscribers K | 4,180K |
+| Market Shares | Entel Chile: 58.3%; Movistar Chile: 17.6%; WOM Chile: 13.3%; Claro Chile: 10.8% |
+| Penetration Rates | Mobile Penetration Pct: 156.4; Broadband Penetration Pct: 21.4 |
 | Operator Count | 4 |
 
 **Market outlook**: Challenging
@@ -656,7 +681,7 @@ Value migration trending upward: customers willing to pay more for premium conne
 
 **Key message**: Chile telecom market totals CLP 1.39T in quarterly revenue; competitive strengths in Availability; Market faces significant competitive headwinds.
 
-**Net assessment**: Chile telecom market totals CLP 1.39T in quarterly revenue; competitive strengths in Availability; Market faces significant competitive headwinds.
+**Net assessment**: Movistar Chile leads in 0 of 8 $APPEALS dimensions and trails in 8. 5 customer segments identified.
 
 ---
 
@@ -666,7 +691,7 @@ Value migration trending upward: customers willing to pay more for premium conne
 <!-- ============================================================ -->
 
 
-# Tariff Deep Analysis (CQ4_2025)
+# Tariff Deep Analysis (unknown)
 
 ---
 
@@ -674,32 +699,32 @@ Value migration trending upward: customers willing to pay more for premium conne
 
 
 **Claro Cl**:
-- {'snapshot': 'H1_2024', 'l': 21990.0, 'm': 15990.0, 's': 10990.0, 'xl': 29990.0}
-- {'snapshot': 'H1_2025', 'l': 21990.0, 'm': 15990.0, 's': 10990.0, 'xl': 29990.0}
-- {'snapshot': 'H1_2026', 'l': 21990.0, 'm': 15990.0, 's': 10990.0, 'xl': 29990.0}
-- {'snapshot': 'H2_2024', 'l': 21990.0, 'm': 15990.0, 's': 10990.0, 'xl': 29990.0}
-- {'snapshot': 'H2_2025', 'l': 21990.0, 'm': 15990.0, 's': 10990.0, 'xl': 29990.0}
+- snapshot: H1_2024; l: 21990.0; m: 15990.0; s: 10990.0; xl: 29990.0
+- snapshot: H1_2025; l: 21990.0; m: 15990.0; s: 10990.0; xl: 29990.0
+- snapshot: H1_2026; l: 21990.0; m: 15990.0; s: 10990.0; xl: 29990.0
+- snapshot: H2_2024; l: 21990.0; m: 15990.0; s: 10990.0; xl: 29990.0
+- snapshot: H2_2025; l: 21990.0; m: 15990.0; s: 10990.0; xl: 29990.0
 
 **Entel Cl**:
-- {'snapshot': 'H1_2024', 'l': 24990.0, 'm': 17990.0, 's': 12990.0, 'xl': 34990.0}
-- {'snapshot': 'H1_2025', 'l': 24990.0, 'm': 17990.0, 's': 12990.0, 'xl': 34990.0}
-- {'snapshot': 'H1_2026', 'l': 24990.0, 'm': 17990.0, 's': 12990.0, 'xl': 34990.0}
-- {'snapshot': 'H2_2024', 'l': 24990.0, 'm': 17990.0, 's': 12990.0, 'xl': 34990.0}
-- {'snapshot': 'H2_2025', 'l': 24990.0, 'm': 17990.0, 's': 12990.0, 'xl': 34990.0}
+- snapshot: H1_2024; l: 24990.0; m: 17990.0; s: 12990.0; xl: 34990.0
+- snapshot: H1_2025; l: 24990.0; m: 17990.0; s: 12990.0; xl: 34990.0
+- snapshot: H1_2026; l: 24990.0; m: 17990.0; s: 12990.0; xl: 34990.0
+- snapshot: H2_2024; l: 24990.0; m: 17990.0; s: 12990.0; xl: 34990.0
+- snapshot: H2_2025; l: 24990.0; m: 17990.0; s: 12990.0; xl: 34990.0
 
 **Movistar Cl**:
-- {'snapshot': 'H1_2024', 'l': 22990.0, 'm': 16990.0, 's': 11990.0, 'xl': 32990.0}
-- {'snapshot': 'H1_2025', 'l': 22990.0, 'm': 16990.0, 's': 11990.0, 'xl': 32990.0}
-- {'snapshot': 'H1_2026', 'l': 22990.0, 'm': 16990.0, 's': 11990.0, 'xl': 32990.0}
-- {'snapshot': 'H2_2024', 'l': 22990.0, 'm': 16990.0, 's': 11990.0, 'xl': 32990.0}
-- {'snapshot': 'H2_2025', 'l': 22990.0, 'm': 16990.0, 's': 11990.0, 'xl': 32990.0}
+- snapshot: H1_2024; l: 22990.0; m: 16990.0; s: 11990.0; xl: 32990.0
+- snapshot: H1_2025; l: 22990.0; m: 16990.0; s: 11990.0; xl: 32990.0
+- snapshot: H1_2026; l: 22990.0; m: 16990.0; s: 11990.0; xl: 32990.0
+- snapshot: H2_2024; l: 22990.0; m: 16990.0; s: 11990.0; xl: 32990.0
+- snapshot: H2_2025; l: 22990.0; m: 16990.0; s: 11990.0; xl: 32990.0
 
 **Wom Cl**:
-- {'snapshot': 'H1_2024', 'l': 16990.0, 'm': 11990.0, 's': 7990.0, 'xl': 22990.0}
-- {'snapshot': 'H1_2025', 'l': 16990.0, 'm': 11990.0, 's': 7990.0, 'xl': 22990.0}
-- {'snapshot': 'H1_2026', 'l': 16990.0, 'm': 11990.0, 's': 7990.0, 'xl': 22990.0}
-- {'snapshot': 'H2_2024', 'l': 16990.0, 'm': 11990.0, 's': 7990.0, 'xl': 22990.0}
-- {'snapshot': 'H2_2025', 'l': 16990.0, 'm': 11990.0, 's': 7990.0, 'xl': 22990.0}
+- snapshot: H1_2024; l: 16990.0; m: 11990.0; s: 7990.0; xl: 22990.0
+- snapshot: H1_2025; l: 16990.0; m: 11990.0; s: 7990.0; xl: 22990.0
+- snapshot: H1_2026; l: 16990.0; m: 11990.0; s: 7990.0; xl: 22990.0
+- snapshot: H2_2024; l: 16990.0; m: 11990.0; s: 7990.0; xl: 22990.0
+- snapshot: H2_2025; l: 16990.0; m: 11990.0; s: 7990.0; xl: 22990.0
 
 ---
 
@@ -709,7 +734,7 @@ Value migration trending upward: customers willing to pay more for premium conne
 <!-- ============================================================ -->
 
 
-# Competition Analysis — Porter's Five Forces + Deep Dives (CQ4_2025)
+# Competition Analysis — Porter's Five Forces + Deep Dives (unknown)
 
 **Protagonist**: Movistar Chile
 
@@ -811,34 +836,26 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 
 | Metric | Value |
 | :--- | :--- |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Revenue | 150000.0 |
-| Service Revenue | 133000.0 |
-| Service Revenue Growth Pct | 2.2 |
-| Ebitda | 33000.0 |
-| Ebitda Margin Pct | 22.0 |
-| Ebitda Growth Pct | 6.0 |
-| Capex | 30000.0 |
-| Capex To Revenue Pct | 20.0 |
-| Revenue Trend | growing |
-| Margin Trend | improving |
-| Quarters Analyzed | 8 |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Mobile Total K | 5350.0 |
-| Mobile Postpaid K | 3030.0 |
-| Mobile Net Adds K | 15.0 |
-| Mobile Churn Pct | 1.62 |
-| Mobile Arpu | 6500.0 |
-| Broadband Total K | 1550.0 |
-| Broadband Fiber K | 460.0 |
-| Broadband Net Adds K | 5.0 |
-| Tv Total K | 990.0 |
+| Revenue | $150,000M |
+| Service Revenue | $133,000M |
+| Service Revenue Growth Pct | 2.2% |
+| Ebitda | $33,000M |
+| Ebitda Margin Pct | 22.0% |
+| Ebitda Growth Pct | 6.0% |
+| Capex | $30,000M |
+| Capex To Revenue Pct | 20.0% |
+| Mobile Total K | 5,350K |
+| Mobile Postpaid K | 3,030K |
+| Mobile Net Adds K | 15K |
+| Mobile Churn Pct | 1.6% |
+| Mobile Arpu | $6500.00 |
+| Broadband Total K | 1,550K |
+| Broadband Fiber K | 460K |
+| Broadband Net Adds K | 5K |
+| Tv Total K | 990K |
 | Mobile Trend | growing |
 | Broadband Trend | flat |
 | Arpu Trend | growing |
-| Quarters Analyzed | 8 |
 
 **Growth strategy**: Revenue-led profitable growth; subscriber acquisition focus
 
@@ -847,12 +864,12 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 #### Network Status
 
 - **Status**: data_available
-- **Five G Coverage Pct**: 50.0
-- **Four G Coverage Pct**: 96.0
-- **Fiber Homepass K**: 1200.0
-- **Cable Homepass K**: 3500.0
-- **Cable Docsis31 Pct**: 70.0
-- **Technology Mix**: {'mobile_vendor': 'Ericsson + Nokia', '5g_sa_status': 'NSA commercial only', 'spectrum_mhz': {'700': 20, '1900': 20, '2600': 40, '3500': 60}, '5g_base_stations': 2800, 'core_vendor': 'Ericsson', 'virtualization_pct': 30, 'edge_nodes': 3}
+- **Five G Coverage Pct**: 50.0%
+- **Four G Coverage Pct**: 96.0%
+- **Fiber Homepass K**: 1,200K
+- **Cable Homepass K**: 3,500K
+- **Cable Docsis31 Pct**: 70.0%
+- **Technology Mix**: Mobile Vendor: Ericsson + Nokia; 5G Sa Status: NSA commercial only; Spectrum Mhz: {'700': 20, '1900': 20, '2600': 40, '3500': 60}; 5G Base Stations: 2800; Core Vendor: Ericsson; Virtualization Pct: 30; Edge Nodes: 3
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband (incl. fiber/FTTH); TV/Video; Digital services
 
@@ -897,34 +914,26 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 
 | Metric | Value |
 | :--- | :--- |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Revenue | 185000.0 |
-| Service Revenue | 172000.0 |
-| Service Revenue Growth Pct | 6.8 |
-| Ebitda | 37000.0 |
-| Ebitda Margin Pct | 20.0 |
-| Ebitda Growth Pct | 12.0 |
-| Capex | 28000.0 |
-| Capex To Revenue Pct | 15.1 |
-| Revenue Trend | growing |
-| Margin Trend | improving |
-| Quarters Analyzed | 8 |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Mobile Total K | 6700.0 |
-| Mobile Postpaid K | 3700.0 |
-| Mobile Net Adds K | 55.0 |
-| Mobile Churn Pct | 1.65 |
-| Mobile Arpu | 5200.0 |
-| Broadband Total K | 120.0 |
-| Broadband Fiber K | 0.0 |
-| Broadband Net Adds K | 5.0 |
-| Tv Total K | 0.0 |
+| Revenue | $185,000M |
+| Service Revenue | $172,000M |
+| Service Revenue Growth Pct | 6.8% |
+| Ebitda | $37,000M |
+| Ebitda Margin Pct | 20.0% |
+| Ebitda Growth Pct | 12.0% |
+| Capex | $28,000M |
+| Capex To Revenue Pct | 15.1% |
+| Mobile Total K | 6,700K |
+| Mobile Postpaid K | 3,700K |
+| Mobile Net Adds K | 55K |
+| Mobile Churn Pct | 1.6% |
+| Mobile Arpu | $5200.00 |
+| Broadband Total K | 120K |
+| Broadband Fiber K | 0K |
+| Broadband Net Adds K | 5K |
+| Tv Total K | 0K |
 | Mobile Trend | growing |
 | Broadband Trend | growing |
 | Arpu Trend | growing |
-| Quarters Analyzed | 8 |
 
 **Growth strategy**: Revenue-led profitable growth; subscriber acquisition focus
 
@@ -933,12 +942,12 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 #### Network Status
 
 - **Status**: data_available
-- **Five G Coverage Pct**: 35.0
-- **Four G Coverage Pct**: 92.0
-- **Fiber Homepass K**: 0.0
-- **Cable Homepass K**: 0.0
-- **Cable Docsis31 Pct**: 0.0
-- **Technology Mix**: {'mobile_vendor': 'Samsung (5G), Nokia (4G legacy)', '5g_sa_status': 'SA commercial since 2024 (first in Chile)', 'spectrum_mhz': {'700': 10, '1900': 20, '2600': 20, '3500': 80}, '5g_base_stations': 1800, 'core_vendor': 'Samsung', 'virtualization_pct': 60, 'edge_nodes': 2}
+- **Five G Coverage Pct**: 35.0%
+- **Four G Coverage Pct**: 92.0%
+- **Fiber Homepass K**: 0K
+- **Cable Homepass K**: 0K
+- **Cable Docsis31 Pct**: 0.0%
+- **Technology Mix**: Mobile Vendor: Samsung (5G), Nokia (4G legacy); 5G Sa Status: SA commercial since 2024 (first in Chile); Spectrum Mhz: {'700': 10, '1900': 20, '2600': 20, '3500': 80}; 5G Base Stations: 1800; Core Vendor: Samsung; Virtualization Pct: 60; Edge Nodes: 2
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband; Digital services
 
@@ -984,34 +993,26 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 
 | Metric | Value |
 | :--- | :--- |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Revenue | 811000.0 |
-| Service Revenue | 732000.0 |
-| Service Revenue Growth Pct | 5.5 |
-| Ebitda | 243000.0 |
-| Ebitda Margin Pct | 30.0 |
-| Ebitda Growth Pct | 6.5 |
-| Capex | 125000.0 |
-| Capex To Revenue Pct | 15.4 |
-| Revenue Trend | growing |
-| Margin Trend | improving |
-| Quarters Analyzed | 8 |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Mobile Total K | 10900.0 |
-| Mobile Postpaid K | 7200.0 |
-| Mobile Net Adds K | 45.0 |
-| Mobile Churn Pct | 1.32 |
-| Mobile Arpu | 9500.0 |
-| Broadband Total K | 560.0 |
-| Broadband Fiber K | 440.0 |
-| Broadband Net Adds K | 10.0 |
-| Tv Total K | 120.0 |
+| Revenue | $811,000M |
+| Service Revenue | $732,000M |
+| Service Revenue Growth Pct | 5.5% |
+| Ebitda | $243,000M |
+| Ebitda Margin Pct | 30.0% |
+| Ebitda Growth Pct | 6.5% |
+| Capex | $125,000M |
+| Capex To Revenue Pct | 15.4% |
+| Mobile Total K | 10,900K |
+| Mobile Postpaid K | 7,200K |
+| Mobile Net Adds K | 45K |
+| Mobile Churn Pct | 1.3% |
+| Mobile Arpu | $9500.00 |
+| Broadband Total K | 560K |
+| Broadband Fiber K | 440K |
+| Broadband Net Adds K | 10K |
+| Tv Total K | 120K |
 | Mobile Trend | growing |
 | Broadband Trend | growing |
 | Arpu Trend | growing |
-| Quarters Analyzed | 8 |
 
 **Growth strategy**: Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push; 5G network leadership
 
@@ -1020,12 +1021,12 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 #### Network Status
 
 - **Status**: data_available
-- **Five G Coverage Pct**: 65.0
-- **Four G Coverage Pct**: 98.0
-- **Fiber Homepass K**: 1800.0
-- **Cable Homepass K**: 0.0
-- **Cable Docsis31 Pct**: 0.0
-- **Technology Mix**: {'mobile_vendor': 'Ericsson (5G NSA + SA trial)', '5g_sa_status': 'SA trial in Santiago, NSA commercial', 'spectrum_mhz': {'700': 20, '1900': 30, '2100': 20, '2600': 40, '3500': 80}, '5g_base_stations': 4200, 'core_vendor': 'Ericsson', 'virtualization_pct': 40, 'edge_nodes': 5}
+- **Five G Coverage Pct**: 65.0%
+- **Four G Coverage Pct**: 98.0%
+- **Fiber Homepass K**: 1,800K
+- **Cable Homepass K**: 0K
+- **Cable Docsis31 Pct**: 0.0%
+- **Technology Mix**: Mobile Vendor: Ericsson (5G NSA + SA trial); 5G Sa Status: SA trial in Santiago, NSA commercial; Spectrum Mhz: {'700': 20, '1900': 30, '2100': 20, '2600': 40, '3500': 80}; 5G Base Stations: 4200; Core Vendor: Ericsson; Virtualization Pct: 40; Edge Nodes: 5
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband (incl. fiber/FTTH); TV/Video; Enterprise/B2B solutions; Digital services
 
@@ -1067,13 +1068,13 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 
 | Metric | Claro Chile | Entel | Movistar Chile | WOM Chile |
 | :--- | :--- | :--- | :--- | :--- |
-| **Revenue** | 150000.0 | 811000.0 | 245000.0 | 185000.0 |
-| **Revenue Growth** | 2.2 | 5.5 | 3.2 | 6.8 |
-| **Ebitda Margin** | 22.0 | 30.0 | 28.0 | 20.0 |
-| **Subscribers** | 5350.0 | 10900.0 | 7550.0 | 6700.0 |
-| **Arpu** | 6500.0 | 9500.0 | 7500.0 | 5200.0 |
-| **Churn** | 1.62 | 1.32 | 1.52 | 1.65 |
-| **5G Coverage** | 50.0 | 65.0 | 55.0 | 35.0 |
+| **Revenue** | $150,000M | $811,000M | $245,000M | $185,000M |
+| **Revenue Growth** | +2.2% | +5.5% | +3.2% | +6.8% |
+| **Ebitda Margin** | 22.0% | 30.0% | 28.0% | 20.0% |
+| **Subscribers** | 5,350K | 10,900K | 7,550K | 6,700K |
+| **Arpu** | $6500.00 | $9500.00 | $7500.00 | $5200.00 |
+| **Churn** | 1.6% | 1.3% | 1.5% | 1.6% |
+| **5G Coverage** | 50.0% | 65.0% | 55.0% | 35.0% |
 
 ---
 
@@ -1083,7 +1084,7 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 
 **Key message**: In a 4-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 18% share. Strongest competitive force: Existing Competitors.
 
-**Net assessment**: In a 4-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 18% share. Strongest competitive force: Existing Competitors.
+**Net assessment**: #2 of 4 operators in a medium-intensity market. Strongest force: existing competitors. Key differentiators: Enterprise Solutions: score 70 (market avg 58), Network Coverage: score 80 (market avg 72).
 
 ---
 
@@ -1103,7 +1104,7 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 <!-- ============================================================ -->
 
 
-# Self Analysis — Movistar Chile (CQ4_2025)
+# Self Analysis — Movistar Chile (unknown)
 
 **Framework**: Business Model Canvas (BMC) + Capability Assessment
 
@@ -1115,25 +1116,20 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 
 | KPI | Value |
 | :--- | :--- |
-| Total Revenue | 245000.0 |
-| Service Revenue | 220000.0 |
-| Ebitda | 68600.0 |
-| Ebitda Margin Pct | 28.0 |
-| Net Income | 18000.0 |
-| Capex | 44000.0 |
-| Capex To Revenue Pct | 18.0 |
-| Opex | 176400.0 |
-| Employees | 3800 |
-| Revenue Qoq Pct | 2.94 |
-| Revenue Yoy Pct | 8.89 |
-| Ebitda Qoq Pct | 6.69 |
-| Ebitda Growth Pct | 5.5 |
-| Service Revenue Growth Pct | 3.2 |
-| Revenue Trend | [212000.0, 216000.0, 220000.0, 225000.0, 228000.0, 232000.0, 238000.0, 245000.0] |
-| Ebitda Trend | [53000.0, 54500.0, 56000.0, 58500.0, 59300.0, 61400.0, 64300.0, 68600.0] |
-| Margin Trend | [25.0, 25.2, 25.5, 26.0, 26.0, 26.5, 27.0, 28.0] |
-| Revenue Growing | True |
-| Margin Healthy | False |
+| Total Revenue | $245,000M |
+| Service Revenue | $220,000M |
+| Ebitda | $68,600M |
+| Ebitda Margin Pct | 28.0% |
+| Net Income | $18,000M |
+| Capex | $44,000M |
+| Capex To Revenue Pct | 18.0% |
+| Opex | $176,400M |
+| Employees | 3,800 |
+| Revenue Qoq Pct | 2.9% |
+| Revenue Yoy Pct | 8.9% |
+| Ebitda Qoq Pct | 6.7% |
+| Ebitda Growth Pct | 5.5% |
+| Service Revenue Growth Pct | 3.2% |
 
 ### Revenue Trends (Recent Quarters)
 
@@ -1151,13 +1147,13 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 | Segment | Revenue | Share |
 | :--- | :--- | :--- |
-| Mobile Service Revenue | {'value': 129000.0, 'share_pct': 52.7} |  |
-| Fixed Service Revenue | {'value': 76000.0, 'share_pct': 31.0} |  |
-| B2B Revenue | {'value': 15000.0, 'share_pct': 6.1} |  |
-| Tv Revenue | {'value': 12000.0, 'share_pct': 4.9} |  |
-| Wholesale Revenue | {'value': 12000.0, 'share_pct': 4.9} |  |
-| Other Revenue | {'value': 1000.0, 'share_pct': 0.4} |  |
-| Total Revenue | 245000.0 | 100.0% |
+| Mobile Service Revenue | $129,000M | 52.7% |
+| Fixed Service Revenue | $76,000M | 31.0% |
+| B2B Revenue | $15,000M | 6.1% |
+| Tv Revenue | $12,000M | 4.9% |
+| Wholesale Revenue | $12,000M | 4.9% |
+| Other Revenue | $1,000M | 0.4% |
+| **Total** | **$245,000M** | **100.0%** |
 
 ---
 
@@ -1310,11 +1306,11 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 ### Technology Mix
 
-| Technology | Share/Detail |
+| Technology | Detail |
 | :--- | :--- |
 | Mobile Vendor | Nokia + Huawei (legacy) |
 | 5G Sa Status | NSA commercial only |
-| Spectrum Mhz | {'700': 20, '1900': 40, '2100': 30, '2600': 30, '3500': 60} |
+| Spectrum Mhz | 700: 20; 1900: 40; 2100: 30; 2600: 30; 3500: 60 |
 | 5G Base Stations | 3500 |
 | Core Vendor | Nokia |
 | Virtualization Pct | 35 |
@@ -1324,29 +1320,29 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 | Technology | Coverage |
 | :--- | :--- |
-| 5G | 55.0 |
-| 4G | 97.0 |
+| 5G | 55.0% |
+| 4G | 97.0% |
 
 ### Controlled vs. Resale
 
-| Type | Share |
+| Type | Detail |
 | :--- | :--- |
-| Own Infrastructure | ['fiber', 'mobile'] |
+| Own Infrastructure | fiber, mobile |
 | Summary | Own fiber (largest FTTH: 3.5M homes passed) + copper legacy; mobile own-network; ~90% self-built, some rural wholesale. |
 
 ### Homepass vs. Connect
 
 | Metric | Value |
 | :--- | :--- |
-| Fiber Homepass K | 3200.0 |
-| Cable Homepass K | 0.0 |
-| Fiber Connected K | 1100.0 |
-| Cable Connected K | 0.0 |
-| Fiber Penetration Pct | 34.4 |
+| Fiber Homepass K | 3,200K |
+| Cable Homepass K | 0K |
+| Fiber Connected K | 1,100K |
+| Cable Connected K | 0K |
+| Fiber Penetration Pct | 34.4% |
 
 ### Evolution Strategy
 
-- **Data Signals**: ['5G SA: NSA commercial only', 'Fiber-only fixed footprint']
+- **Data Signals**: 5G SA: NSA commercial only, Fiber-only fixed footprint
 - **Summary**: FTTH expansion to 4.5M homes by 2027; copper sunset roadmap; 5G deployment (NSA first, SA planned); convergent Fusión strategy.
 
 **Investment direction**: stable
@@ -1429,7 +1425,7 @@ Telefonica Group culture — global processes with local execution; convergent s
 
 **Key message**: Ranked #2 of 4 operators in market; revenue CLP 245.0B; EBITDA margin 28.0%; overall healthy operations; key strength: Enterprise Solutions; key challenge: 5G Deployment
 
-**Net assessment**: Ranked #2 of 4 operators in market; revenue CLP 245.0B; EBITDA margin 28.0%; overall healthy operations; key strength: Enterprise Solutions; key challenge: 5G Deployment
+**Net assessment**: Overall healthy operator. EBITDA margin 28.0%. 4 of 5 segments rated 'strong'. Key challenge: 5G Deployment: score 60 (market avg 65).
 
 ---
 
@@ -1439,7 +1435,7 @@ Telefonica Group culture — global processes with local execution; convergent s
 <!-- ============================================================ -->
 
 
-# SWOT Synthesis — Movistar Chile (CQ4_2025)
+# SWOT Synthesis — Movistar Chile (unknown)
 
 **Competitive stance**: **Cautious (WT-dominant)**
 
@@ -1554,7 +1550,7 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 
 This SWOT analysis reinforces the **"The Distant Second"** central diagnosis identified across all Five Looks.
 
-**Net assessment**: SWOT analysis identifies 6 strengths, 7 weaknesses, 3 opportunities, and 7 threats. The recommended strategic posture is cautious (WT-dominant).
+**Net assessment**: S:6/W:7/O:3/T:7 — Cautious (WT-dominant). Weaknesses exceed strengths, threats dominate opportunities.
 
 ---
 
@@ -1564,7 +1560,7 @@ This SWOT analysis reinforces the **"The Distant Second"** central diagnosis ide
 <!-- ============================================================ -->
 
 
-# Opportunities Analysis — SPAN Matrix (CQ4_2025)
+# Opportunities Analysis — SPAN Matrix (unknown)
 
 **Protagonist**: Movistar Chile
 
@@ -1739,7 +1735,7 @@ Competitor entel_cl is weak in: Pricing Competitiveness: score 60 (market avg 70
 
 ---
 
-## 2. Acquire Skills Opportunities
+## 3. Acquire Skills Opportunities
 *Build capability before competing*
 
 ### 1. 5G SA enabling network slicing and enterprise services
@@ -1903,11 +1899,17 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 
 ### Immediate Actions (Next Quarter)
 
-- **Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65)**: Competitor claro_cl is weak in: 5G Deployment: score 50 (market avg 65)
-- **Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72)**: Competitor claro_cl is weak in: Brand Strength: score 60 (market avg 72)
-- **Exploit entel_cl weakness: Pricing Competitiveness: score 60 (market avg 70)**: Competitor entel_cl is weak in: Pricing Competitiveness: score 60 (market avg 70)
+- **Accelerate Mobile Growth**: Mobile showing strong momentum at  — invest to accelerate
+- **Accelerate B2B Growth**: B2B showing strong momentum at  — invest to accelerate
+- **Accelerate TV/Convergence Growth**: TV/Convergence showing strong momentum at  — invest to accelerate
 
-**Net assessment**: SPAN matrix positions 25 opportunities: 11 grow/invest, 6 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 11 grow/invest items for maximum strategic impact.
+### Medium-Term Initiatives (1-3 Years)
+
+- **Close 5G Deployment Gap**: 5G Deployment: score 60 (market avg 65)
+- **Close Customer Service Gap**: Customer Service: score 60 (market avg 65)
+- **Close Pricing Competitiveness Gap**: Pricing Competitiveness: score 60 (market avg 70)
+
+**Net assessment**: 25 opportunities mapped: 11 grow/invest, 6 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 11 grow/invest items.
 
 ---
 
@@ -1926,5 +1928,5 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 
 ---
 
-*Generated: 2026-02-12 | Movistar Chile BLM Strategic Assessment (CQ4_2025)*
+*Generated: 2026-02-12 | Movistar Chile BLM Strategic Assessment (unknown)*
 *Framework: Business Leadership Model — Five Looks + SWOT + SPAN*

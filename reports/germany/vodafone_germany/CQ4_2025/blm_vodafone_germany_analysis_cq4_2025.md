@@ -1,6 +1,6 @@
 # Vodafone Germany — BLM Strategic Assessment: Complete Analysis
 
-> **Period**: CQ4_2025
+> **Period**: unknown
 > **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + SPAN
 > **Protagonist**: Vodafone Germany
 > **Market**: German Telecommunications
@@ -36,7 +36,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 # Executive Summary — Vodafone Germany BLM Strategic Assessment
 
-**Period**: CQ4_2025
+**Period**: unknown
 
 **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + Opportunities
 
@@ -48,7 +48,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 ## The One-Line Verdict
 
-**Vodafone Germany is a operationally stable #2 operator trapped in a "squeezed middle" with a 3-5 year window to 5g sa enabling network slicing and enterprise services.**
+**Vodafone Germany is an operationally stable #2 operator trapped in a "squeezed middle" with a 3-5 year window to accelerate B2B Growth.**
 
 ---
 
@@ -70,7 +70,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 | Metric | Value | Rank | Assessment |
 | :--- | :--- | :--- | :--- |
-| Revenue | 3092.0 | #2 |  |
+| Revenue | €3,092M | #2 |  |
 
 ### 1.3 The Headline Numbers
 
@@ -85,7 +85,7 @@ EBITDA               1120.0/q
 
 ### Look 1: Trends (PEST)
 
-**Net assessment: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))**
+**Net assessment: Favorable macro environment in a mature market (+0.3% YoY (CQ2_2025 -> CQ4_2025) YoY). 4 policy opportunities vs 2 policy threats.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -97,7 +97,7 @@ EBITDA               1120.0/q
 
 ### Look 2: Market & Customer ($APPEALS)
 
-**Net assessment: Germany telecom market totals EUR 12.3B in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.**
+**Net assessment: Vodafone Germany leads in 0 of 8 $APPEALS dimensions and trails in 8. 7 customer segments identified.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -108,7 +108,7 @@ EBITDA               1120.0/q
 
 ### Look 3: Competition
 
-**Net assessment: In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors.**
+**Net assessment: #2 of 4 operators in a medium-intensity market. Strongest force: existing competitors. Key differentiators: Brand Strength: score 82 (market avg 78), Enterprise Solutions: score 82 (market avg 74).**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -119,7 +119,7 @@ EBITDA               1120.0/q
 
 ### Look 4: Self-Analysis
 
-**Net assessment: Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: Germany EBITDA: H2 performing better than H1, but FY26 will not return to positive growth. Key tailwinds: (1) MDU YoY base effect starting to fade from Q3; (2) 1&1 wholesale revenue reaching full run-rate by Q4; (3) MVNO base effects.**
+**Net assessment: Overall stable operator. EBITDA margin 36.2%. 2 of 5 segments rated 'strong'. Key challenge: Customer Service: score 70 (market avg 74).**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -135,7 +135,7 @@ EBITDA               1120.0/q
 
 ### SWOT Synthesis
 
-**Net assessment: SWOT analysis identifies 7 strengths, 5 weaknesses, 10 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant).**
+**Net assessment: S:7/W:5/O:10/T:4 — Offensive (SO-dominant). Strengths outweigh weaknesses, opportunities outweigh threats.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -145,7 +145,7 @@ EBITDA               1120.0/q
 
 ### Look 5: Opportunities (SPAN)
 
-**Net assessment: SPAN matrix positions 35 opportunities: 23 grow/invest, 4 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 23 grow/invest items for maximum strategic impact.**
+**Net assessment: 35 opportunities mapped: 23 grow/invest, 4 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 23 grow/invest items.**
 
 | Finding | Impact |
 | :--- | :--- |
@@ -154,68 +154,86 @@ EBITDA               1120.0/q
 
 ---
 
-## 3. The "The Squeezed Middle" — Central Diagnosis
+## 3. "The Squeezed Middle" — Central Diagnosis
 
-The single most important finding across all Five Looks is Vodafone Germany's "The Squeezed Middle" positioning.
+The single most important finding across all Five Looks is Vodafone Germany's "Squeezed Middle" positioning.
 
 This is not a temporary market condition — it is a structural competitive problem that manifests in every dimension:
 
 
 **The escape routes** (not mutually exclusive):
-1. Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-2. Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.
-3. Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany'.
+1. Leverage Brand Strength for Regulatory Environment
+2. Leverage Enterprise Solutions for National Digital Strategy
+3. Leverage Network Coverage for BNetzA extends 800/1800/2600 MHz spec...
 
 | Dimension | Deutsche Telekom | One And One | Telefonica O2 | Vodafone Germany |
 | :--- | :--- | :--- | :--- | :--- |
-| Revenue | 6200.0 | 1035.0 | 2000.0 | 3092.0 |
-| Revenue Growth | 1.1 | 0.1 | -3.4 | 0.7 |
-| Ebitda Margin | 42.1 | 12.2 | 32.5 | 36.2 |
-| Subscribers | 52200.0 | 12500.0 | 45900.0 | 32500.0 |
-| Arpu | 14.2 | 9.8 | 10.8 | 12.8 |
-| Churn | 0.8 | 0.95 | 0.9 | 1.05 |
-| 5G Coverage | 97.0 | 55.0 | 98.0 | 92.0 |
+| Revenue | €6,200M | €1,035M | €2,000M | €3,092M |
+| Revenue Growth | +1.1% | +0.1% | -3.4% | +0.7% |
+| Ebitda Margin | 42.1% | 12.2% | 32.5% | 36.2% |
+| Subscribers | 52,200K | 12,500K | 45,900K | 32,500K |
+| Arpu | €14.20 | €9.80 | €10.80 | €12.80 |
+| Churn | 0.8% | 0.9% | 0.9% | 1.1% |
+| 5G Coverage | 97.0% | 55.0% | 98.0% | 92.0% |
 
 ---
 
 ## 4. Strategic Priorities — Consolidated
 
-Across all analyses, 5 strategic priorities emerge consistently:
+Across all analyses, 7 strategic priorities emerge consistently:
 
-### Priority 1: 5G SA enabling network slicing and enterprise services (EXISTENTIAL)
+### Priority 1: Accelerate B2B Growth (EXISTENTIAL)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
+| Time window | immediate |
+| Approach | Increase investment in B2B to capture growth momentum |
+
+### Priority 2: Accelerate Wholesale Growth (EXISTENTIAL)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
+| Time window | immediate |
+| Approach | Increase investment in Wholesale to capture growth momentum |
+
+### Priority 3: Close Customer Service Gap (EXISTENTIAL)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | Customer Service: score 70 (market avg 74) |
+| Time window | 1-2 years |
+| Approach | Targeted investment to close gap in Customer Service |
+
+### Priority 4: Close Pricing Competitiveness Gap (STRATEGIC)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Current capability | Pricing Competitiveness: score 72 (market avg 78) |
+| Time window | 1-2 years |
+| Approach | Targeted investment to close gap in Pricing Competitiveness |
+
+### Priority 5: Maximize Wholesale Revenue (STRATEGIC)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Addressable market | N/A |
-| Approach | Technology trend: 5G SA enabling network slicing and enterprise services |
+| Approach | Vodafone completes 1&1 customer migration: 12M users on network |
 
-### Priority 2: AI/ML for network optimization and customer experience (EXISTENTIAL)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Addressable market | N/A |
-| Approach | Technology trend: AI/ML for network optimization and customer experience |
-
-### Priority 3: BNetzA extends 800/1800/2600 MHz spectrum by 5 years (EXISTENTIAL)
+### Priority 6: Integrate Strategic Acquisitions (STRATEGIC)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Addressable market | N/A |
-| Approach | BNetzA extends 800/1800/2600 MHz spectrum by 5 years |
+| Approach | Vodafone completes Skaylink acquisition for €175M |
 
-### Priority 4: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create n (EXISTENTIAL)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Addressable market | N/A |
-| Approach | Policy opportunity: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany |
-
-### Priority 5: DT reboots fibre tactics, targets Vodafone cable footprint (EXISTENTIAL)
+### Priority 7: Optimize Cable Network (IMPORTANT)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Addressable market | N/A |
-| Approach | DT reboots fibre tactics, targets Vodafone cable footprint |
+| Approach | Vodafone restructures cable TV frequencies nationwide |
 
 ---
 
@@ -233,12 +251,18 @@ Equally important — strategic traps to avoid:
 
 ## 6. Timeline & Sequencing
 
+**IMMEDIATE (Now)**
+  - Accelerate B2B Growth
+  - Accelerate Wholesale Growth
+
+**SHORT-TERM (6-18 months)**
+  - Close Customer Service Gap
+  - Close Pricing Competitiveness Gap
+
 **MEDIUM-TERM (2-3 years)**
-  - 5G SA enabling network slicing and enterprise services
-  - AI/ML for network optimization and customer experience
-  - BNetzA extends 800/1800/2600 MHz spectrum by 5 years
-  - BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create n
-  - DT reboots fibre tactics, targets Vodafone cable footprint
+  - Maximize Wholesale Revenue
+  - Integrate Strategic Acquisitions
+  - Optimize Cable Network
 
 
 ---
@@ -247,7 +271,7 @@ Equally important — strategic traps to avoid:
 
 ### 7.1 If Executed Well (Bull Case)
 
-**Scenario**: Execute all 5 strategic priorities successfully
+**Scenario**: Execute all 7 strategic priorities successfully
 **Revenue impact**: +10-16% over 5 years
 **Conditions**: Full execution of P0 opportunities, favorable market conditions
 
@@ -259,7 +283,7 @@ Equally important — strategic traps to avoid:
 
 ### 7.3 Base Case
 
-**Scenario**: Execute 2-3 of 5 priorities; moderate improvement
+**Scenario**: Execute 2-3 of 7 priorities; moderate improvement
 **Revenue impact**: +3-6% over 5 years
 
 ### 7.4 Net Assessment
@@ -279,9 +303,9 @@ Equally important — strategic traps to avoid:
 <!-- ============================================================ -->
 
 
-# German Telecom Macro Trends — PEST Deep Analysis (CQ4_2025)
+# German Telecom Macro Trends — PEST Deep Analysis (unknown)
 
-**Data basis**: PEST framework | 13 macro factors | CQ4_2025 market data | Regulatory/event intelligence | Industry lifecycle assessment
+**Data basis**: PEST framework | 13 macro factors | unknown market data | Regulatory/event intelligence | Industry lifecycle assessment
 
 ---
 
@@ -588,7 +612,7 @@ Being in the **mature** phase means:
 
 **Key message**: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))
 
-**Net assessment**: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))
+**Net assessment**: Favorable macro environment in a mature market (+0.3% YoY (CQ2_2025 -> CQ4_2025) YoY). 4 policy opportunities vs 2 policy threats.
 
 ### Policy Opportunities
 
@@ -610,7 +634,7 @@ Being in the **mature** phase means:
 <!-- ============================================================ -->
 
 
-# Market & Customer Analysis — $APPEALS Framework (CQ4_2025)
+# Market & Customer Analysis — $APPEALS Framework (unknown)
 
 **Protagonist**: Vodafone Germany
 
@@ -623,11 +647,11 @@ Being in the **mature** phase means:
 | Metric | Value |
 | :--- | :--- |
 | Calendar Quarter | CQ4_2025 |
-| Total Revenue | 12327.0 |
-| Total Mobile Subscribers K | 143100.0 |
-| Total Broadband Subscribers K | 31420.0 |
-| Market Shares | {'Deutsche Telekom': 50.3, 'Vodafone Germany': 25.1, 'Telefonica O2 Germany': 16.2, '1&1 AG': 8.4} |
-| Penetration Rates | {'mobile_penetration_pct': 170.4, 'broadband_penetration_pct': 37.4} |
+| Total Revenue | €12,327M |
+| Total Mobile Subscribers K | 143,100K |
+| Total Broadband Subscribers K | 31,420K |
+| Market Shares | Deutsche Telekom: 50.3%; Vodafone Germany: 25.1%; Telefonica O2 Germany: 16.2%; 1&1 AG: 8.4% |
+| Penetration Rates | Mobile Penetration Pct: 170.4; Broadband Penetration Pct: 37.4 |
 | Operator Count | 4 |
 
 **Market outlook**: Favorable
@@ -765,7 +789,7 @@ Value migration is mixed: some segments trending up while price-sensitive segmen
 
 **Key message**: Germany telecom market totals EUR 12.3B in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
 
-**Net assessment**: Germany telecom market totals EUR 12.3B in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
+**Net assessment**: Vodafone Germany leads in 0 of 8 $APPEALS dimensions and trails in 8. 7 customer segments identified.
 
 ---
 
@@ -775,7 +799,7 @@ Value migration is mixed: some segments trending up while price-sensitive segmen
 <!-- ============================================================ -->
 
 
-# Tariff Deep Analysis (CQ4_2025)
+# Tariff Deep Analysis (unknown)
 
 ---
 
@@ -783,40 +807,40 @@ Value migration is mixed: some segments trending up while price-sensitive segmen
 
 
 **Deutsche Telekom**:
-- {'snapshot': 'H1_2023', 'l': 60.0, 'm': 50.0, 's': 40.0, 'xl': 85.0}
-- {'snapshot': 'H1_2024', 'l': 60.0, 'm': 50.0, 's': 40.0, 'xl': 85.0}
-- {'snapshot': 'H1_2025', 'l': 60.0, 'm': 50.0, 's': 40.0, 'xl': 85.0}
-- {'snapshot': 'H1_2026', 'l': 60.0, 'm': 50.0, 's': 40.0, 'xl': 85.0}
-- {'snapshot': 'H2_2023', 'l': 60.0, 'm': 50.0, 's': 40.0, 'xl': 85.0}
-- {'snapshot': 'H2_2024', 'l': 60.0, 'm': 50.0, 's': 40.0, 'xl': 85.0}
-- {'snapshot': 'H2_2025', 'l': 60.0, 'm': 50.0, 's': 40.0, 'xl': 85.0}
+- snapshot: H1_2023; l: 60.0; m: 50.0; s: 40.0; xl: 85.0
+- snapshot: H1_2024; l: 60.0; m: 50.0; s: 40.0; xl: 85.0
+- snapshot: H1_2025; l: 60.0; m: 50.0; s: 40.0; xl: 85.0
+- snapshot: H1_2026; l: 60.0; m: 50.0; s: 40.0; xl: 85.0
+- snapshot: H2_2023; l: 60.0; m: 50.0; s: 40.0; xl: 85.0
+- snapshot: H2_2024; l: 60.0; m: 50.0; s: 40.0; xl: 85.0
+- snapshot: H2_2025; l: 60.0; m: 50.0; s: 40.0; xl: 85.0
 
 **One And One**:
-- {'snapshot': 'H1_2023', 'l': 25.0, 'm': 15.0, 's': 10.0, 'xl': 35.0}
-- {'snapshot': 'H1_2024', 'l': 30.0, 'm': 20.0, 's': 15.0, 'xl': 40.0}
-- {'snapshot': 'H1_2025', 'l': 30.0, 'm': 20.0, 's': 15.0, 'xl': 40.0}
-- {'snapshot': 'H1_2026', 'l': 30.0, 'm': 20.0, 's': 15.0, 'xl': 40.0}
-- {'snapshot': 'H2_2023', 'l': 25.0, 'm': 15.0, 's': 10.0, 'xl': 35.0}
-- {'snapshot': 'H2_2024', 'l': 30.0, 'm': 20.0, 's': 15.0, 'xl': 40.0}
-- {'snapshot': 'H2_2025', 'l': 30.0, 'm': 20.0, 's': 15.0, 'xl': 40.0}
+- snapshot: H1_2023; l: 25.0; m: 15.0; s: 10.0; xl: 35.0
+- snapshot: H1_2024; l: 30.0; m: 20.0; s: 15.0; xl: 40.0
+- snapshot: H1_2025; l: 30.0; m: 20.0; s: 15.0; xl: 40.0
+- snapshot: H1_2026; l: 30.0; m: 20.0; s: 15.0; xl: 40.0
+- snapshot: H2_2023; l: 25.0; m: 15.0; s: 10.0; xl: 35.0
+- snapshot: H2_2024; l: 30.0; m: 20.0; s: 15.0; xl: 40.0
+- snapshot: H2_2025; l: 30.0; m: 20.0; s: 15.0; xl: 40.0
 
 **Telefonica O2**:
-- {'snapshot': 'H1_2023', 'l': 35.0, 'm': 25.0, 's': 15.0, 'xl': 55.0}
-- {'snapshot': 'H1_2024', 'l': 30.0, 'm': 23.0, 's': 15.0, 'xl': 50.0}
-- {'snapshot': 'H1_2025', 'l': 25.0, 'm': 20.0, 's': 15.0, 'xl': 60.0}
-- {'snapshot': 'H1_2026', 'l': 25.0, 'm': 20.0, 's': 15.0, 'xl': 60.0}
-- {'snapshot': 'H2_2023', 'l': 30.0, 'm': 23.0, 's': 15.0, 'xl': 50.0}
-- {'snapshot': 'H2_2024', 'l': 25.0, 'm': 20.0, 's': 15.0, 'xl': 60.0}
-- {'snapshot': 'H2_2025', 'l': 25.0, 'm': 20.0, 's': 15.0, 'xl': 60.0}
+- snapshot: H1_2023; l: 35.0; m: 25.0; s: 15.0; xl: 55.0
+- snapshot: H1_2024; l: 30.0; m: 23.0; s: 15.0; xl: 50.0
+- snapshot: H1_2025; l: 25.0; m: 20.0; s: 15.0; xl: 60.0
+- snapshot: H1_2026; l: 25.0; m: 20.0; s: 15.0; xl: 60.0
+- snapshot: H2_2023; l: 30.0; m: 23.0; s: 15.0; xl: 50.0
+- snapshot: H2_2024; l: 25.0; m: 20.0; s: 15.0; xl: 60.0
+- snapshot: H2_2025; l: 25.0; m: 20.0; s: 15.0; xl: 60.0
 
 **Vodafone Germany**:
-- {'snapshot': 'H1_2023', 'l': 50.0, 'm': 40.0, 's': 30.0, 'xl': 60.0}
-- {'snapshot': 'H1_2024', 'l': 50.0, 'm': 40.0, 's': 30.0, 'xl': 60.0}
-- {'snapshot': 'H1_2025', 'l': 40.0, 'm': 33.0, 's': 25.0, 'xl': 55.0}
-- {'snapshot': 'H1_2026', 'l': 40.0, 'm': 33.0, 's': 25.0, 'xl': 55.0}
-- {'snapshot': 'H2_2023', 'l': 50.0, 'm': 40.0, 's': 30.0, 'xl': 60.0}
-- {'snapshot': 'H2_2024', 'l': 40.0, 'm': 33.0, 's': 25.0, 'xl': 55.0}
-- {'snapshot': 'H2_2025', 'l': 40.0, 'm': 33.0, 's': 25.0, 'xl': 55.0}
+- snapshot: H1_2023; l: 50.0; m: 40.0; s: 30.0; xl: 60.0
+- snapshot: H1_2024; l: 50.0; m: 40.0; s: 30.0; xl: 60.0
+- snapshot: H1_2025; l: 40.0; m: 33.0; s: 25.0; xl: 55.0
+- snapshot: H1_2026; l: 40.0; m: 33.0; s: 25.0; xl: 55.0
+- snapshot: H2_2023; l: 50.0; m: 40.0; s: 30.0; xl: 60.0
+- snapshot: H2_2024; l: 40.0; m: 33.0; s: 25.0; xl: 55.0
+- snapshot: H2_2025; l: 40.0; m: 33.0; s: 25.0; xl: 55.0
 
 ---
 
@@ -826,7 +850,7 @@ Value migration is mixed: some segments trending up while price-sensitive segmen
 <!-- ============================================================ -->
 
 
-# Competition Analysis — Porter's Five Forces + Deep Dives (CQ4_2025)
+# Competition Analysis — Porter's Five Forces + Deep Dives (unknown)
 
 **Protagonist**: Vodafone Germany
 
@@ -931,34 +955,26 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 | Metric | Value |
 | :--- | :--- |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Revenue | 2000.0 |
-| Service Revenue | 1700.0 |
-| Service Revenue Growth Pct | -3.4 |
-| Ebitda | 650.0 |
-| Ebitda Margin Pct | 32.5 |
-| Ebitda Growth Pct | -1.5 |
-| Capex | 500.0 |
-| Capex To Revenue Pct | 25.0 |
-| Revenue Trend | declining |
-| Margin Trend | improving |
-| Quarters Analyzed | 8 |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Mobile Total K | 45900.0 |
-| Mobile Postpaid K | 22500.0 |
-| Mobile Net Adds K | 170.0 |
-| Mobile Churn Pct | 0.9 |
-| Mobile Arpu | 10.8 |
-| Broadband Total K | 2400.0 |
-| Broadband Fiber K | 550.0 |
-| Broadband Net Adds K | 8.0 |
-| Tv Total K | 570.0 |
+| Revenue | €2,000M |
+| Service Revenue | €1,700M |
+| Service Revenue Growth Pct | -3.4% |
+| Ebitda | €650M |
+| Ebitda Margin Pct | 32.5% |
+| Ebitda Growth Pct | -1.5% |
+| Capex | €500M |
+| Capex To Revenue Pct | 25.0% |
+| Mobile Total K | 45,900K |
+| Mobile Postpaid K | 22,500K |
+| Mobile Net Adds K | 170K |
+| Mobile Churn Pct | 0.9% |
+| Mobile Arpu | €10.80 |
+| Broadband Total K | 2,400K |
+| Broadband Fiber K | 550K |
+| Broadband Net Adds K | 8K |
+| Tv Total K | 570K |
 | Mobile Trend | growing |
 | Broadband Trend | growing |
 | Arpu Trend | growing |
-| Quarters Analyzed | 8 |
 
 **Growth strategy**: Margin optimization / cost transformation; subscriber acquisition focus; 5G network leadership
 
@@ -967,12 +983,12 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 #### Network Status
 
 - **Status**: data_available
-- **Five G Coverage Pct**: 98.0
-- **Four G Coverage Pct**: 99.7
-- **Fiber Homepass K**: 800.0
-- **Cable Homepass K**: 2500.0
-- **Cable Docsis31 Pct**: 60.0
-- **Technology Mix**: {'edge_nodes': 8, 'core_vendor': 'Nokia', '5g_sa_status': 'Commercial since 2025-03', 'spectrum_mhz': {'800': 20, '1800': 35, '2100': 30, '2600': 20, '3600': 70}, 'mobile_vendor': 'Nokia + Samsung', '5g_base_stations': 20000, 'virtualization_pct': 55}
+- **Five G Coverage Pct**: 98.0%
+- **Four G Coverage Pct**: 99.7%
+- **Fiber Homepass K**: 800K
+- **Cable Homepass K**: 2,500K
+- **Cable Docsis31 Pct**: 60.0%
+- **Technology Mix**: Edge Nodes: 8; Core Vendor: Nokia; 5G Sa Status: Commercial since 2025-03; Spectrum Mhz: {'800': 20, '1800': 35, '2100': 30, '2600': 20, '3600': 70}; Mobile Vendor: Nokia + Samsung; 5G Base Stations: 20000; Virtualization Pct: 55
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband (incl. fiber/FTTH); TV/Video; Enterprise/B2B solutions; Digital services
 
@@ -1016,34 +1032,26 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 | Metric | Value |
 | :--- | :--- |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Revenue | 6200.0 |
-| Service Revenue | 5460.0 |
-| Service Revenue Growth Pct | 1.1 |
-| Ebitda | 2610.0 |
-| Ebitda Margin Pct | 42.1 |
-| Ebitda Growth Pct | 2.6 |
-| Capex | 1200.0 |
-| Capex To Revenue Pct | 19.4 |
-| Revenue Trend | growing |
-| Margin Trend | improving |
-| Quarters Analyzed | 8 |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Mobile Total K | 52200.0 |
-| Mobile Postpaid K | 36800.0 |
-| Mobile Net Adds K | 340.0 |
-| Mobile Churn Pct | 0.8 |
-| Mobile Arpu | 14.2 |
-| Broadband Total K | 15220.0 |
-| Broadband Fiber K | 6300.0 |
-| Broadband Net Adds K | 80.0 |
-| Tv Total K | 4380.0 |
+| Revenue | €6,200M |
+| Service Revenue | €5,460M |
+| Service Revenue Growth Pct | 1.1% |
+| Ebitda | €2,610M |
+| Ebitda Margin Pct | 42.1% |
+| Ebitda Growth Pct | 2.6% |
+| Capex | €1,200M |
+| Capex To Revenue Pct | 19.4% |
+| Mobile Total K | 52,200K |
+| Mobile Postpaid K | 36,800K |
+| Mobile Net Adds K | 340K |
+| Mobile Churn Pct | 0.8% |
+| Mobile Arpu | €14.20 |
+| Broadband Total K | 15,220K |
+| Broadband Fiber K | 6,300K |
+| Broadband Net Adds K | 80K |
+| Tv Total K | 4,380K |
 | Mobile Trend | growing |
 | Broadband Trend | growing |
 | Arpu Trend | growing |
-| Quarters Analyzed | 8 |
 
 **Growth strategy**: Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push; 5G network leadership
 
@@ -1052,12 +1060,12 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 #### Network Status
 
 - **Status**: data_available
-- **Five G Coverage Pct**: 97.0
-- **Four G Coverage Pct**: 99.8
-- **Fiber Homepass K**: 8500.0
-- **Cable Homepass K**: 0.0
-- **Cable Docsis31 Pct**: 0.0
-- **Technology Mix**: {'edge_nodes': 28, 'core_vendor': 'Ericsson + Nokia', '5g_sa_status': 'Commercial since 2024-09', 'spectrum_mhz': {'700': 20, '900': 35, '1800': 60, '2100': 50, '2600': 40, '3600': 90}, 'mobile_vendor': 'Ericsson + Huawei (legacy)', '5g_base_stations': 35000, 'virtualization_pct': 70}
+- **Five G Coverage Pct**: 97.0%
+- **Four G Coverage Pct**: 99.8%
+- **Fiber Homepass K**: 8,500K
+- **Cable Homepass K**: 0K
+- **Cable Docsis31 Pct**: 0.0%
+- **Technology Mix**: Edge Nodes: 28; Core Vendor: Ericsson + Nokia; 5G Sa Status: Commercial since 2024-09; Spectrum Mhz: {'700': 20, '900': 35, '1800': 60, '2100': 50, '2600': 40, '3600': 90}; Mobile Vendor: Ericsson + Huawei (legacy); 5G Base Stations: 35000; Virtualization Pct: 70
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband (incl. fiber/FTTH); TV/Video; Enterprise/B2B solutions; Digital services
 
@@ -1103,34 +1111,26 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 | Metric | Value |
 | :--- | :--- |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Revenue | 1035.0 |
-| Service Revenue | 915.0 |
-| Service Revenue Growth Pct | 0.1 |
-| Ebitda | 126.0 |
-| Ebitda Margin Pct | 12.2 |
-| Ebitda Growth Pct | -7.0 |
-| Capex | 400.0 |
-| Capex To Revenue Pct | 38.6 |
-| Revenue Trend | growing |
-| Margin Trend | declining |
-| Quarters Analyzed | 8 |
-| Status | data_available |
-| Latest Quarter | CQ4_2025 |
-| Mobile Total K | 12500.0 |
-| Mobile Postpaid K | 10500.0 |
-| Mobile Net Adds K | 30.0 |
-| Mobile Churn Pct | 0.95 |
-| Mobile Arpu | 9.8 |
-| Broadband Total K | 3860.0 |
-| Broadband Fiber K | 900.0 |
-| Broadband Net Adds K | -5.0 |
-| Tv Total K | 420.0 |
+| Revenue | €1,035M |
+| Service Revenue | €915M |
+| Service Revenue Growth Pct | 0.1% |
+| Ebitda | €126M |
+| Ebitda Margin Pct | 12.2% |
+| Ebitda Growth Pct | -7.0% |
+| Capex | €400M |
+| Capex To Revenue Pct | 38.6% |
+| Mobile Total K | 12,500K |
+| Mobile Postpaid K | 10,500K |
+| Mobile Net Adds K | 30K |
+| Mobile Churn Pct | 0.9% |
+| Mobile Arpu | €9.80 |
+| Broadband Total K | 3,860K |
+| Broadband Fiber K | 900K |
+| Broadband Net Adds K | -5K |
+| Tv Total K | 420K |
 | Mobile Trend | growing |
 | Broadband Trend | declining |
 | Arpu Trend | growing |
-| Quarters Analyzed | 8 |
 
 **Growth strategy**: Market share expansion (investing for growth); subscriber acquisition focus
 
@@ -1139,12 +1139,12 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 #### Network Status
 
 - **Status**: data_available
-- **Five G Coverage Pct**: 55.0
-- **Four G Coverage Pct**: 55.0
-- **Fiber Homepass K**: 0.0
-- **Cable Homepass K**: 0.0
-- **Cable Docsis31 Pct**: 0.0
-- **Technology Mix**: {'edge_nodes': 3, 'core_vendor': 'Mavenir (cloud-native)', '5g_sa_status': 'Commercial, OpenRAN first-mover', 'spectrum_mhz': {'2100': 20, '3600': 50}, 'mobile_vendor': 'OpenRAN (Rakuten Symphony)', '5g_base_stations': 4500, 'virtualization_pct': 100}
+- **Five G Coverage Pct**: 55.0%
+- **Four G Coverage Pct**: 55.0%
+- **Fiber Homepass K**: 0K
+- **Cable Homepass K**: 0K
+- **Cable Docsis31 Pct**: 0.0%
+- **Technology Mix**: Edge Nodes: 3; Core Vendor: Mavenir (cloud-native); 5G Sa Status: Commercial, OpenRAN first-mover; Spectrum Mhz: {'2100': 20, '3600': 50}; Mobile Vendor: OpenRAN (Rakuten Symphony); 5G Base Stations: 4500; Virtualization Pct: 100
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband (incl. fiber/FTTH); TV/Video; Digital services
 
@@ -1193,13 +1193,13 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 | Metric | Deutsche Telekom | One And One | Telefonica O2 | Vodafone Germany |
 | :--- | :--- | :--- | :--- | :--- |
-| **Revenue** | 6200.0 | 1035.0 | 2000.0 | 3092.0 |
-| **Revenue Growth** | 1.1 | 0.1 | -3.4 | 0.7 |
-| **Ebitda Margin** | 42.1 | 12.2 | 32.5 | 36.2 |
-| **Subscribers** | 52200.0 | 12500.0 | 45900.0 | 32500.0 |
-| **Arpu** | 14.2 | 9.8 | 10.8 | 12.8 |
-| **Churn** | 0.8 | 0.95 | 0.9 | 1.05 |
-| **5G Coverage** | 97.0 | 55.0 | 98.0 | 92.0 |
+| **Revenue** | €6,200M | €1,035M | €2,000M | €3,092M |
+| **Revenue Growth** | +1.1% | +0.1% | -3.4% | +0.7% |
+| **Ebitda Margin** | 42.1% | 12.2% | 32.5% | 36.2% |
+| **Subscribers** | 52,200K | 12,500K | 45,900K | 32,500K |
+| **Arpu** | €14.20 | €9.80 | €10.80 | €12.80 |
+| **Churn** | 0.8% | 0.9% | 0.9% | 1.1% |
+| **5G Coverage** | 97.0% | 55.0% | 98.0% | 92.0% |
 
 ---
 
@@ -1209,7 +1209,7 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 **Key message**: In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors.
 
-**Net assessment**: In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors.
+**Net assessment**: #2 of 4 operators in a medium-intensity market. Strongest force: existing competitors. Key differentiators: Brand Strength: score 82 (market avg 78), Enterprise Solutions: score 82 (market avg 74).
 
 ---
 
@@ -1230,7 +1230,7 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 <!-- ============================================================ -->
 
 
-# Self Analysis — Vodafone Germany (CQ4_2025)
+# Self Analysis — Vodafone Germany (unknown)
 
 **Framework**: Business Model Canvas (BMC) + Capability Assessment
 
@@ -1242,25 +1242,20 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 | KPI | Value |
 | :--- | :--- |
-| Total Revenue | 3092.0 |
-| Service Revenue | 2726.0 |
-| Ebitda | 1120.0 |
-| Ebitda Margin Pct | 36.2 |
-| Net Income | None |
-| Capex | 800.0 |
-| Capex To Revenue Pct | 25.9 |
-| Opex | 1972.0 |
-| Employees | 14500 |
-| Revenue Qoq Pct | 0.06 |
-| Revenue Yoy Pct | 0.72 |
-| Ebitda Qoq Pct | 0.9 |
-| Ebitda Growth Pct | 1.5 |
-| Service Revenue Growth Pct | 0.7 |
-| Revenue Trend | [3050.0, 3080.0, 3060.0, 3070.0, 3080.0, 3090.0, 3090.0, 3092.0] |
-| Ebitda Trend | [1080.0, 1090.0, 1090.0, 1100.0, 1100.0, 1110.0, 1110.0, 1120.0] |
-| Margin Trend | [35.4, 35.5, 35.6, 35.8, 35.9, 36.0, 36.0, 36.2] |
-| Revenue Growing | True |
-| Margin Healthy | True |
+| Total Revenue | €3,092M |
+| Service Revenue | €2,726M |
+| Ebitda | €1,120M |
+| Ebitda Margin Pct | 36.2% |
+| Net Income | N/A |
+| Capex | €800M |
+| Capex To Revenue Pct | 25.9% |
+| Opex | €1,972M |
+| Employees | 14,500 |
+| Revenue Qoq Pct | 0.1% |
+| Revenue Yoy Pct | 0.7% |
+| Ebitda Qoq Pct | 0.9% |
+| Ebitda Growth Pct | 1.5% |
+| Service Revenue Growth Pct | 0.7% |
 
 ### Revenue Trends (Recent Quarters)
 
@@ -1278,12 +1273,12 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 | Segment | Revenue | Share |
 | :--- | :--- | :--- |
-| Mobile Service Revenue | {'value': 1520.0, 'share_pct': 49.2} |  |
-| Fixed Service Revenue | {'value': 795.0, 'share_pct': 25.7} |  |
-| B2B Revenue | {'value': 520.0, 'share_pct': 16.8} |  |
-| Tv Revenue | {'value': 268.0, 'share_pct': 8.7} |  |
-| Wholesale Revenue | {'value': 380.0, 'share_pct': 12.3} |  |
-| Total Revenue | 3092.0 | 100.0% |
+| Mobile Service Revenue | €1,520M | 49.2% |
+| Fixed Service Revenue | €795M | 25.7% |
+| B2B Revenue | €520M | 16.8% |
+| Tv Revenue | €268M | 8.7% |
+| Wholesale Revenue | €380M | 12.3% |
+| **Total** | **€3,483M** | **100.0%** |
 
 ---
 
@@ -1442,12 +1437,12 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 ### Technology Mix
 
-| Technology | Share/Detail |
+| Technology | Detail |
 | :--- | :--- |
 | Edge Nodes | 12 |
 | Core Vendor | Ericsson |
 | 5G Sa Status | Testing, planned 2026 |
-| Spectrum Mhz | {'700': 20, '1800': 50, '2100': 40, '2600': 20, '3600': 90} |
+| Spectrum Mhz | 700: 20; 1800: 50; 2100: 40; 2600: 20; 3600: 90 |
 | Mobile Vendor | Ericsson + Nokia (non-standalone 5G) |
 | 5G Base Stations | 18500 |
 | Virtualization Pct | 45 |
@@ -1456,31 +1451,31 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 | Technology | Coverage |
 | :--- | :--- |
-| 5G | 92.0 |
-| 4G | 99.5 |
+| 5G | 92.0% |
+| 4G | 99.5% |
 
 ### Controlled vs. Resale
 
-| Type | Share |
+| Type | Detail |
 | :--- | :--- |
-| Own Infrastructure | ['cable', 'fiber', 'mobile'] |
+| Own Infrastructure | cable, fiber, mobile |
 | Summary | Fully owned cable-HFC network (largest in Germany ~24M homes passed); fiber via JV with Altice (FibreConnect); mobile own-network. ~95% self-built infrastructure, ~5% wholesale/resale. |
 
 ### Homepass vs. Connect
 
 | Metric | Value |
 | :--- | :--- |
-| Fiber Homepass K | 1500.0 |
-| Cable Homepass K | 24000.0 |
-| Fiber Connected K | 1480.0 |
-| Cable Connected K | 6980.0 |
-| Fiber Penetration Pct | 98.7 |
-| Cable Penetration Pct | 29.1 |
+| Fiber Homepass K | 1,500K |
+| Cable Homepass K | 24,000K |
+| Fiber Connected K | 1,480K |
+| Cable Connected K | 6,980K |
+| Fiber Penetration Pct | 98.7% |
+| Cable Penetration Pct | 29.1% |
 
 ### Evolution Strategy
 
-- **Data Signals**: ['5G SA: Testing, planned 2026', 'Cable-dominant, fiber transition underway']
-- **Recent Tech Initiatives**: ['Vodafone restructures cable TV frequencies nationwide']
+- **Data Signals**: 5G SA: Testing, planned 2026, Cable-dominant, fiber transition underway
+- **Recent Tech Initiatives**: Vodafone restructures cable TV frequencies nationwide
 - **Summary**: DOCSIS 3.1→4.0 cable upgrade path for 1 Gbps+; parallel FTTH deployment via FibreConnect JV targeting 7M homes by 2028; 5G NSA rollout on 3.6 GHz.
 
 **Investment direction**: stable
@@ -1565,7 +1560,7 @@ Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture;
 
 **Key message**: Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: Germany EBITDA: H2 performing better than H1, but FY26 will not return to positive growth. Key tailwinds: (1) MDU YoY base effect starting to fade from Q3; (2) 1&1 wholesale revenue reaching full run-rate by Q4; (3) MVNO base effects.
 
-**Net assessment**: Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: Germany EBITDA: H2 performing better than H1, but FY26 will not return to positive growth. Key tailwinds: (1) MDU YoY base effect starting to fade from Q3; (2) 1&1 wholesale revenue reaching full run-rate by Q4; (3) MVNO base effects.
+**Net assessment**: Overall stable operator. EBITDA margin 36.2%. 2 of 5 segments rated 'strong'. Key challenge: Customer Service: score 70 (market avg 74).
 
 ---
 
@@ -1575,7 +1570,7 @@ Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture;
 <!-- ============================================================ -->
 
 
-# SWOT Synthesis — Vodafone Germany (CQ4_2025)
+# SWOT Synthesis — Vodafone Germany (unknown)
 
 **Competitive stance**: **Offensive (SO-dominant)**
 
@@ -1695,7 +1690,7 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 
 This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis identified across all Five Looks.
 
-**Net assessment**: SWOT analysis identifies 7 strengths, 5 weaknesses, 10 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant).
+**Net assessment**: S:7/W:5/O:10/T:4 — Offensive (SO-dominant). Strengths outweigh weaknesses, opportunities outweigh threats.
 
 ---
 
@@ -1705,7 +1700,7 @@ This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis id
 <!-- ============================================================ -->
 
 
-# Opportunities Analysis — SPAN Matrix (CQ4_2025)
+# Opportunities Analysis — SPAN Matrix (unknown)
 
 **Protagonist**: Vodafone Germany
 
@@ -2022,7 +2017,7 @@ Competitor one_and_one is weak in: Brand Strength: score 65 (market avg 78)
 
 ---
 
-## 2. Acquire Skills Opportunities
+## 3. Acquire Skills Opportunities
 *Build capability before competing*
 
 ### 1. WO-1
@@ -2174,11 +2169,16 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 
 ### Immediate Actions (Next Quarter)
 
-- **5G SA enabling network slicing and enterprise services**: Technology trend: 5G SA enabling network slicing and enterprise services
-- **AI/ML for network optimization and customer experience**: Technology trend: AI/ML for network optimization and customer experience
-- **BNetzA extends 800/1800/2600 MHz spectrum by 5 years**: BNetzA extends 800/1800/2600 MHz spectrum by 5 years
+- **Accelerate B2B Growth**: B2B showing strong momentum at  — invest to accelerate
+- **Accelerate Wholesale Growth**: Wholesale showing strong momentum at  — invest to accelerate
+- **Maximize Wholesale Revenue**: Vodafone completes 1&1 customer migration: 12M users on network
 
-**Net assessment**: SPAN matrix positions 35 opportunities: 23 grow/invest, 4 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 23 grow/invest items for maximum strategic impact.
+### Medium-Term Initiatives (1-3 Years)
+
+- **Close Customer Service Gap**: Customer Service: score 70 (market avg 74)
+- **Close Pricing Competitiveness Gap**: Pricing Competitiveness: score 72 (market avg 78)
+
+**Net assessment**: 35 opportunities mapped: 23 grow/invest, 4 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 23 grow/invest items.
 
 ---
 
@@ -2193,27 +2193,13 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 | High confidence | 0 |
 | Medium confidence | 19 |
 | Low/Estimated | 1 |
-| Unique sources | 14 |
+| Unique sources | 12 |
 
 ### Sources
 
 - telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
-- telecom.db
 
 ---
 
-*Generated: 2026-02-12 | Vodafone Germany BLM Strategic Assessment (CQ4_2025)*
+*Generated: 2026-02-12 | Vodafone Germany BLM Strategic Assessment (unknown)*
 *Framework: Business Leadership Model — Five Looks + SWOT + SPAN*

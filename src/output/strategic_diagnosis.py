@@ -224,9 +224,12 @@ class StrategicDiagnosisComputer:
         # Collect dimension analysis
         dimensions = self._build_dimension_analysis()
 
+        # Strip "The " for natural prose
+        label_bare = label.replace("The ", "", 1)
+
         explanation_parts = [
             f"The single most important finding across all Five Looks is {target_name}'s "
-            f'"{label}" positioning.',
+            f'"{label_bare}" positioning.',
         ]
         if dimensions:
             explanation_parts.append(
@@ -234,10 +237,10 @@ class StrategicDiagnosisComputer:
                 "competitive problem that manifests in every dimension:"
             )
 
-        # Add escape routes from SWOT SO strategies
+        # Add escape routes from SWOT SO strategies — use short labels
         so_strategies = safe_list(self.result.swot, "so_strategies") if self.result.swot else []
         if so_strategies:
-            routes = so_strategies[:3]
+            routes = [_short_strategy_label(s) for s in so_strategies[:3]]
             explanation_parts.append(
                 "\n**The escape routes** (not mutually exclusive):\n"
                 + "\n".join(f"{i}. {r}" for i, r in enumerate(routes, 1))
@@ -319,7 +322,9 @@ class StrategicDiagnosisComputer:
     # ------------------------------------------------------------------
 
     def _compute_net_assessments(self):
-        # Trends
+        target_name = operator_display_name(self.result.target_operator)
+
+        # Trends — synthesized from PEST data
         trends = self.result.trends
         if trends:
             pest = safe_get(trends, "pest")
@@ -327,37 +332,67 @@ class StrategicDiagnosisComputer:
             threats = len(safe_list(pest, "policy_threats")) if pest else 0
             weather = safe_get(pest, "overall_weather", "mixed") if pest else "mixed"
             lifecycle = safe_get(trends, "industry_lifecycle_stage", "mature")
+            growth = safe_get(trends, "industry_growth_rate", "")
+            weather_adj = "Favorable" if weather in ("sunny", "mixed") else "Challenging"
+            growth_str = f" ({growth} YoY)" if growth else ""
             self._d.trends_net_assessment = (
-                f"{'Favorable' if weather in ('sunny', 'mixed') else 'Challenging'} "
-                f"macro environment in a {lifecycle} market"
+                f"{weather_adj} macro environment in a {lifecycle} market{growth_str}. "
+                f"{opps} policy opportunities vs {threats} policy threats."
             )
-            if safe_get(trends, "key_message"):
-                self._d.trends_net_assessment = safe_get(trends, "key_message")
         else:
             self._d.trends_net_assessment = "Insufficient trend data"
 
-        # Market/Customer
+        # Market/Customer — synthesized from market data
         mci = self.result.market_customer
         if mci:
-            self._d.market_net_assessment = safe_get(mci, "key_message", "Market analysis available")
+            snapshot = safe_dict(mci, "market_snapshot")
+            rev = snapshot.get("total_revenue", "")
+            n_segs = len(safe_list(mci, "customer_segments"))
+            appeals = safe_list(mci, "appeals_assessment")
+            wins = sum(1 for a in appeals if _to_float(safe_get(a, "our_score", 0)) >=
+                       max((_to_float(v) for v in safe_dict(a, "competitor_scores").values()), default=0))
+            gaps = sum(1 for a in appeals if _to_float(safe_get(a, "our_score", 0)) <
+                       max((_to_float(v) for v in safe_dict(a, "competitor_scores").values()), default=0))
+            self._d.market_net_assessment = (
+                f"{target_name} leads in {wins} of {len(appeals)} $APPEALS dimensions "
+                f"and trails in {gaps}. {n_segs} customer segments identified."
+            )
         else:
             self._d.market_net_assessment = "Insufficient market data"
 
-        # Competition
+        # Competition — synthesized from competitor data
         comp = self.result.competition
         if comp:
-            self._d.competition_net_assessment = safe_get(comp, "key_message", "Competition analysis available")
+            n_comp = len(safe_dict(comp, "competitor_analyses"))
+            intensity = safe_get(comp, "overall_competition_intensity", "medium")
+            rank = self._d.operator_rank
+            self._d.competition_net_assessment = (
+                f"#{rank} of {n_comp + 1} operators in a {intensity}-intensity market. "
+                f"Strongest force: existing competitors. "
+                f"Key differentiators: {', '.join(safe_list(self.result.self_analysis, 'strengths')[:2]) or 'N/A'}."
+            )
         else:
             self._d.competition_net_assessment = "Insufficient competition data"
 
-        # Self
+        # Self — synthesized from health + segments
         sa = self.result.self_analysis
         if sa:
-            self._d.self_net_assessment = safe_get(sa, "key_message", "Self analysis available")
+            health = safe_get(sa, "health_rating", "stable")
+            fh = safe_dict(sa, "financial_health")
+            margin = fh.get("ebitda_margin_pct") or fh.get("ebitda_margin")
+            n_strong = sum(1 for s in safe_list(sa, "segment_analyses")
+                          if safe_get(s, "health_status") == "strong")
+            n_segs = len(safe_list(sa, "segment_analyses"))
+            margin_str = f" EBITDA margin {fmt_pct(_to_float(margin), show_sign=False)}" if margin else ""
+            self._d.self_net_assessment = (
+                f"Overall {health} operator.{margin_str}. "
+                f"{n_strong} of {n_segs} segments rated 'strong'. "
+                f"Key challenge: {safe_list(sa, 'weaknesses')[0][:60] if safe_list(sa, 'weaknesses') else 'N/A'}."
+            )
         else:
             self._d.self_net_assessment = "Insufficient self-analysis data"
 
-        # Tariff
+        # Tariff — synthesized
         tariff = self.result.tariff_analysis
         if tariff:
             self._d.tariff_net_assessment = (
@@ -366,23 +401,34 @@ class StrategicDiagnosisComputer:
         else:
             self._d.tariff_net_assessment = "No tariff data available"
 
-        # SWOT
+        # SWOT — synthesized from balance
         swot = self.result.swot
         if swot:
-            self._d.swot_net_assessment = safe_get(swot, "key_message",
-                                                    f"{self._d.competitive_stance}")
+            s = len(safe_list(swot, "strengths"))
+            w = len(safe_list(swot, "weaknesses"))
+            o = len(safe_list(swot, "opportunities"))
+            t = len(safe_list(swot, "threats"))
+            stance = self._d.competitive_stance
+            self._d.swot_net_assessment = (
+                f"S:{s}/W:{w}/O:{o}/T:{t} — {stance}. "
+                f"{'Strengths outweigh weaknesses' if s >= w else 'Weaknesses exceed strengths'}, "
+                f"{'opportunities outweigh threats' if o >= t else 'threats dominate opportunities'}."
+            )
         else:
             self._d.swot_net_assessment = "Insufficient SWOT data"
 
-        # Opportunities
+        # Opportunities — synthesized from SPAN
         opp = self.result.opportunities
         if opp:
             gi = len(safe_list(opp, "grow_invest"))
-            total = len(safe_list(opp, "span_positions")) or (gi + len(safe_list(opp, "acquire_skills")) + len(safe_list(opp, "harvest")) + len(safe_list(opp, "avoid_exit")))
-            pct = (gi / total * 100) if total > 0 else 0
+            ask = len(safe_list(opp, "acquire_skills"))
+            harvest = len(safe_list(opp, "harvest"))
+            avoid = len(safe_list(opp, "avoid_exit"))
+            total = gi + ask + harvest + avoid
             self._d.opportunities_net_assessment = (
-                safe_get(opp, "key_message") or
-                f"{gi} of {total} opportunities ({pct:.0f}%) in Grow/Invest quadrant"
+                f"{total} opportunities mapped: {gi} grow/invest, {ask} acquire skills, "
+                f"{harvest} harvest, {avoid} avoid/exit. "
+                f"Focus resources on the {gi} grow/invest items."
             )
         else:
             self._d.opportunities_net_assessment = "Insufficient opportunity data"
@@ -392,44 +438,115 @@ class StrategicDiagnosisComputer:
     # ------------------------------------------------------------------
 
     def _compute_priorities(self):
-        opp = self.result.opportunities
-        if opp is None:
-            return
+        """Derive 5 strategic priorities from analysis data.
 
-        items = safe_list(opp, "opportunities")
-        if not items:
-            return
-
-        # Sort: P0 first, then P1, then by name
-        priority_order = {"P0": 0, "P1": 1, "P2": 2, "P3": 3}
-        sorted_items = sorted(items, key=lambda x: (
-            priority_order.get(safe_get(x, "priority", "P2"), 2),
-            safe_get(x, "name", "")
-        ))
-
-        fh = safe_dict(self.result.self_analysis, "financial_health") if self.result.self_analysis else {}
-
+        Uses segment health, weaknesses, and top opportunities to produce
+        actionable, concisely-labelled priorities with proper P0/P1/P2 tiering.
+        """
         priorities = []
-        for item in sorted_items[:5]:
-            name = safe_get(item, "name", "Unknown")
-            desc = safe_get(item, "description", "")
-            cap = safe_get(item, "our_capability", "")
-            market = safe_get(item, "addressable_market", "N/A")
-            window = safe_get(item, "time_window", "")
-            priority_level = safe_get(item, "priority", "P1")
+        seen_labels = set()
 
-            priorities.append({
-                "name": name,
-                "description": desc,
-                "metric": market,
-                "current": cap,
-                "target": "",
-                "how": desc,
-                "priority": priority_level,
-                "time_window": window,
-            })
+        # 1. Derive from segment analysis — segments needing action
+        sa = self.result.self_analysis
+        if sa:
+            for seg in safe_list(sa, "segment_analyses"):
+                health = safe_get(seg, "health_status", "stable")
+                action = safe_get(seg, "action_required", "")
+                name = safe_get(seg, "segment_name", "")
+                km = safe_get(seg, "key_metrics", {})
+                rev = km.get("revenue") or km.get("quarterly_revenue")
+                rev_str = fmt_currency(rev, self.config) if rev else ""
 
-        self._d.priorities = priorities
+                if health == "strong" and "GROW" in action:
+                    label = f"Accelerate {name} Growth"
+                    if label not in seen_labels:
+                        seen_labels.add(label)
+                        priorities.append({
+                            "name": label,
+                            "description": f"{name} showing strong momentum at {rev_str} — invest to accelerate",
+                            "metric": rev_str,
+                            "current": f"{health.title()} — {action}",
+                            "how": f"Increase investment in {name} to capture growth momentum",
+                            "priority": "P0",
+                            "time_window": "immediate",
+                        })
+                elif health == "stable" and "MAINTAIN" in action:
+                    # Only include if revenue is declining
+                    changes = safe_list(seg, "changes")
+                    declining = any(safe_get(c, "direction") == "Declining" for c in changes)
+                    if declining:
+                        label = f"Defend {name}"
+                        if label not in seen_labels:
+                            seen_labels.add(label)
+                            priorities.append({
+                                "name": label,
+                                "description": f"{name} revenue under pressure at {rev_str} — stabilize and protect",
+                                "metric": rev_str,
+                                "current": f"{health.title()} — declining trajectory",
+                                "how": f"Deploy retention programs and pricing optimization for {name}",
+                                "priority": "P0",
+                                "time_window": "immediate",
+                            })
+
+        # 2. Derive from key weaknesses — gaps to close
+        if sa:
+            for w in safe_list(sa, "weaknesses")[:3]:
+                w_str = str(w)
+                # Extract dimension name from "X: score N (market avg M)"
+                if ": score" in w_str:
+                    dim_name = w_str.split(":")[0].strip()
+                    label = f"Close {dim_name} Gap"
+                elif "coverage" in w_str.lower():
+                    label = "Close 5G Coverage Gap"
+                elif "fiber" in w_str.lower() or "ftth" in w_str.lower():
+                    label = "Accelerate FTTH Migration"
+                else:
+                    continue  # Skip generic weaknesses
+                if label not in seen_labels:
+                    seen_labels.add(label)
+                    priorities.append({
+                        "name": label,
+                        "description": w_str,
+                        "metric": "",
+                        "current": w_str[:80],
+                        "how": f"Targeted investment to close gap in {label.replace('Close ', '').replace(' Gap', '')}",
+                        "priority": "P1",
+                        "time_window": "1-2 years",
+                    })
+
+        # 3. Derive from top grow_invest opportunities
+        opp = self.result.opportunities
+        if opp:
+            gi_items = safe_list(opp, "grow_invest")
+            opportunities_list = safe_list(opp, "opportunities")
+            opp_map = {safe_get(o, "name", "").lower(): o for o in opportunities_list}
+
+            for gi_name in gi_items[:8]:
+                detail = opp_map.get(gi_name.lower(), {})
+                label = _derive_opportunity_label(gi_name, detail)
+                if label and label not in seen_labels:
+                    seen_labels.add(label)
+                    desc = safe_get(detail, "description", gi_name)
+                    priorities.append({
+                        "name": label,
+                        "description": desc,
+                        "metric": safe_get(detail, "addressable_market", ""),
+                        "current": safe_get(detail, "our_capability", ""),
+                        "how": desc[:120] if desc else "",
+                        "priority": "P1",
+                        "time_window": safe_get(detail, "time_window", ""),
+                    })
+
+        # Assign proper tiering: top 3 = P0, next 3 = P1, rest = P2
+        for i, p in enumerate(priorities):
+            if i < 3:
+                p["priority"] = "P0"
+            elif i < 6:
+                p["priority"] = "P1"
+            else:
+                p["priority"] = "P2"
+
+        self._d.priorities = priorities[:7]  # Max 7
 
     # ------------------------------------------------------------------
     # Strategic traps
@@ -607,10 +724,12 @@ class StrategicDiagnosisComputer:
         }
         challenge = challenge_map.get(label, f'in a "{label}" position')
 
-        # Top priority
+        # Top priority — keep title case for readability
         top_priority = "execute its transformation agenda"
         if self._d.priorities:
-            top_priority = self._d.priorities[0].get("name", top_priority).lower()
+            p_name = self._d.priorities[0].get("name", top_priority)
+            # Convert to lowercase but preserve proper casing for acronyms
+            top_priority = p_name[0].lower() + p_name[1:] if p_name else top_priority
 
         # Time window from opportunities
         window = "3-5 year"
@@ -622,8 +741,9 @@ class StrategicDiagnosisComputer:
             elif any("1-2" in w for w in windows if w):
                 window = "2-3 year"
 
+        article = "an" if health_adj[0] in "aeiouAEIOU" else "a"
         self._d.one_line_verdict = (
-            f"{target_name} is a {health_adj} {ordinal} operator {challenge} "
+            f"{target_name} is {article} {health_adj} {ordinal} operator {challenge} "
             f"with a {window} window to {top_priority}."
         )
 
@@ -631,6 +751,103 @@ class StrategicDiagnosisComputer:
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+def _derive_opportunity_label(name: str, detail: dict) -> str:
+    """Generate a short, action-oriented strategic label from an opportunity name."""
+    import re
+    # Skip generic SO/WO/ST/WT items — they are already covered by segment/weakness priorities
+    if re.match(r'^(SO|WO|ST|WT)-\d+$', name):
+        return ""
+
+    n = name.lower()
+
+    # Technology trends → action-oriented label
+    if "5g sa" in n or "network slicing" in n:
+        return "Deploy 5G SA & Network Slicing"
+    if "ai/ml" in n or "ai " in n:
+        return "Deploy AI/ML for Network & CX"
+    if "open ran" in n:
+        return "Evaluate Open RAN Transition"
+    if "fiber" in n or "ftth" in n or "fibre" in n:
+        return "Accelerate FTTH Rollout"
+
+    # Regulatory/policy
+    if "spectrum" in n:
+        return "Capitalize on Spectrum Renewal"
+    if "gigabit" in n or "funding" in n or "subsidy" in n:
+        return "Capture Government Funding"
+    if "regulatory" in n or "compliance" in n:
+        return "Navigate Regulatory Landscape"
+    if "digital strategy" in n:
+        return "Align to National Digital Strategy"
+
+    # Market events
+    if "migration" in n or "wholesale" in n or "1&1" in n:
+        return "Maximize Wholesale Revenue"
+    if "acquisition" in n or "skaylink" in n:
+        return "Integrate Strategic Acquisitions"
+    if "cable" in n and "frequenc" in n:
+        return "Optimize Cable Network"
+
+    # Competitor weaknesses
+    if n.startswith("exploit") and "weakness" in n:
+        derived = safe_list(detail, "derived_from")
+        comp_name = derived[-1] if derived else ""
+        if comp_name:
+            comp_display = operator_display_name(comp_name)
+            return f"Exploit {comp_display} Weakness"
+        return ""
+
+    # Market events / earnings calls — skip as priorities (too verbose/tactical)
+    if re.search(r'Q[1-4]\s+20\d{2}', name) or "earnings" in n:
+        return ""
+    if "revenue +" in n or "revenue -" in n or "net profit" in n:
+        return ""
+
+    # Generic restructuring events — too tactical for strategic priority
+    if "restructure" in n or "restructuring" in n:
+        return ""
+
+    # IoT / B2B / Enterprise
+    if "iot" in n or "b2b" in n or "enterprise" in n:
+        return "Expand B2B & Enterprise Solutions"
+    if "fwa" in n or "fixed wireless" in n:
+        return "Scale Fixed Wireless Access"
+    if "convergence" in n or "bundle" in n or "fmc" in n:
+        return "Drive Convergence & Bundling"
+    if "digital" in n and "service" in n:
+        return "Launch Digital Services Portfolio"
+
+    # Fallback: truncate and capitalize
+    if len(name) > 50:
+        return name[:47] + "..."
+    return name
+
+
+def _short_strategy_label(strategy_text: str) -> str:
+    """Extract a concise label from a SWOT strategy description.
+
+    E.g. "Leverage 'Brand Strength: score 82 (market avg 78)' to capture the
+    opportunity of 'Regulatory Environment...'" → "Leverage Brand Strength for
+    Regulatory Positioning"
+    """
+    import re
+    # Extract the strength/weakness name
+    m = re.search(r"'([^':]+?)(?:: score|\s*')", strategy_text)
+    capability = m.group(1).strip() if m else ""
+
+    # Extract the opportunity/threat name
+    m2 = re.search(r"(?:opportunity|threat) of '([^':]+?)(?:: |')", strategy_text)
+    target = m2.group(1).strip() if m2 else ""
+
+    if capability and target:
+        # Shorten target
+        if len(target) > 40:
+            target = target[:37] + "..."
+        action = "Leverage" if "everage" in strategy_text else "Address" if "ddress" in strategy_text else "Use"
+        return f"{action} {capability} for {target}"
+    return strategy_text[:80]
+
 
 def _to_float(val) -> float:
     """Safely convert a value to float."""

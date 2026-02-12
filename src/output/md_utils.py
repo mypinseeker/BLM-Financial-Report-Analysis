@@ -131,6 +131,96 @@ def fmt_subs(value_k) -> str:
     return f"{num:.0f}K"
 
 
+def fmt_smart_value(key: str, value, config=None) -> str:
+    """Intelligently format a value based on its key name and type.
+
+    Handles dict unpacking, list compacting, currency/subscriber/pct formatting.
+    """
+    if value is None:
+        return "N/A"
+
+    # Unpack dict values like {'value': 1520.0, 'share_pct': 49.2}
+    if isinstance(value, dict):
+        if 'value' in value:
+            inner = value['value']
+            share = value.get('share_pct')
+            formatted = fmt_smart_value(key, inner, config)
+            if share is not None:
+                return f"{formatted} ({share:.1f}%)"
+            return formatted
+        # Compact format for other dicts (spectrum, etc.)
+        parts = []
+        for k, v in value.items():
+            dk = k.replace('_', ' ').title()
+            parts.append(f"{dk}: {v}")
+        return '; '.join(parts)
+
+    # Unpack list values
+    if isinstance(value, (list, tuple)):
+        return ', '.join(str(x) for x in value)
+
+    # Boolean
+    if isinstance(value, bool):
+        return "Yes" if value else "No"
+
+    k_lower = key.lower()
+
+    # Revenue/EBITDA/financial fields → currency (but not margins/ratios)
+    _rev_tokens = ('revenue', 'ebitda', 'net_income', 'capex', 'opex')
+    _exclude_rev = ('pct', 'growth', 'trend', 'growing', 'margin', 'share')
+    if (any(rk in k_lower for rk in _rev_tokens)
+            and not any(ex in k_lower for ex in _exclude_rev)):
+        return fmt_currency(value, config)
+
+    # Subscriber fields → K formatting
+    _sub_tokens = ('subscriber', 'subs')
+    if ('_k' in k_lower and 'pct' not in k_lower) or any(st in k_lower for st in _sub_tokens):
+        return fmt_subs(value)
+
+    # Percentage fields
+    if '_pct' in k_lower:
+        try:
+            return fmt_pct(float(value), show_sign=False)
+        except (TypeError, ValueError):
+            return str(value)
+
+    # Growth fields
+    if 'growth' in k_lower:
+        try:
+            return fmt_pct(float(value), show_sign=True)
+        except (TypeError, ValueError):
+            return str(value)
+
+    # ARPU
+    if 'arpu' in k_lower:
+        try:
+            symbol = ""
+            if config:
+                symbol = getattr(config, 'currency_symbol', '')
+            return f"{symbol}{float(value):.2f}"
+        except (TypeError, ValueError):
+            return str(value)
+
+    # Churn / share / coverage / penetration — percentage-like fields
+    _pct_tokens = ('churn', 'share', 'coverage', 'penetration', 'margin')
+    if any(tok in k_lower for tok in _pct_tokens) and 'trend' not in k_lower:
+        try:
+            num = float(value)
+            if abs(num) <= 100:  # Looks like a percentage
+                return fmt_pct(num, show_sign=False)
+        except (TypeError, ValueError):
+            pass
+
+    # Generic numeric with comma formatting
+    try:
+        num = float(value)
+        if num == int(num) and abs(num) >= 100:
+            return f"{int(num):,}"
+        return str(value)
+    except (TypeError, ValueError):
+        return str(value)
+
+
 def fmt_number(value, decimals: int = 0, show_sign: bool = False) -> str:
     """Format a generic number with thousands separators."""
     if value is None:

@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from ..md_utils import (
     section_header, section_divider, md_table, md_kv_table,
-    bold, bullet_list, fmt_pct,
+    bold, bullet_list, fmt_pct, fmt_smart_value,
     safe_get, safe_list, safe_dict,
     operator_display_name,
     empty_section_notice,
@@ -73,7 +73,12 @@ def _render_market_snapshot(mci, config) -> str:
     rows = []
     for key, value in snapshot.items():
         display_key = key.replace("_", " ").title()
-        rows.append([display_key, str(value)])
+        # Market shares dict gets special display
+        if key == "market_shares" and isinstance(value, dict):
+            shares = "; ".join(f"{k}: {v}%" for k, v in value.items())
+            rows.append([display_key, shares])
+        else:
+            rows.append([display_key, fmt_smart_value(key, value, config)])
 
     lines.append(md_table(["Metric", "Value"], rows))
 

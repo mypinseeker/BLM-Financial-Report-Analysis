@@ -15,7 +15,7 @@ from __future__ import annotations
 from ..md_utils import (
     section_header, section_divider, md_table, md_kv_table,
     bold, bullet_list, code_block,
-    fmt_currency, fmt_pct, fmt_subs,
+    fmt_currency, fmt_pct, fmt_subs, fmt_smart_value,
     safe_get, safe_list, safe_dict,
     operator_display_name,
     empty_section_notice,
@@ -78,10 +78,21 @@ def _render_financial_health(sa, config) -> str:
 
     lines = [section_header("1. Financial Health Dashboard", 2), ""]
 
+    # Skip trend arrays and internal flags — those are rendered separately
+    _SKIP_KEYS = {
+        'revenue_trend', 'ebitda_trend', 'margin_trend',
+        'revenue_growing', 'margin_healthy',
+        'quarters_analyzed', 'status', 'latest_quarter',
+    }
+
     rows = []
     for k, v in fh.items():
+        if k in _SKIP_KEYS:
+            continue
+        if isinstance(v, (list, tuple)):
+            continue  # skip trend arrays
         display_key = k.replace("_", " ").title()
-        rows.append([display_key, str(v)])
+        rows.append([display_key, fmt_smart_value(k, v, config)])
 
     lines.append(md_table(["KPI", "Value"], rows))
 
@@ -116,15 +127,43 @@ def _render_revenue_breakdown(sa, config) -> str:
 
     lines = [section_header("2. Revenue Breakdown", 2), ""]
 
+    # Skip the 'total_revenue' entry if present — it's not a segment
+    _SKIP_RB = {'total_revenue', 'quarterly_revenue', 'total'}
+
+    # Extract numeric values (handling dict entries like {'value': 1520, 'share_pct': 49.2})
+    def _extract_num(v):
+        if isinstance(v, dict):
+            return float(v.get('value', 0))
+        if _is_number(v):
+            return float(v)
+        return 0.0
+
+    segment_items = {k: v for k, v in rb.items() if k not in _SKIP_RB}
+    total = sum(_extract_num(v) for v in segment_items.values())
+
     rows = []
-    total = sum(float(v) for v in rb.values() if _is_number(v))
-    for segment, value in rb.items():
+    for segment, value in segment_items.items():
         display_name = segment.replace("_", " ").title()
-        val_str = str(value)
-        share = ""
-        if _is_number(value) and total > 0:
-            share = fmt_pct(float(value) / total * 100, show_sign=False)
+
+        if isinstance(value, dict):
+            # Dict with value and share_pct
+            num = float(value.get('value', 0))
+            share_pct = value.get('share_pct')
+            val_str = fmt_currency(num, config)
+            share = fmt_pct(share_pct, show_sign=False) if share_pct is not None else ""
+        elif _is_number(value):
+            num = float(value)
+            val_str = fmt_currency(num, config)
+            share = fmt_pct(num / total * 100, show_sign=False) if total > 0 else ""
+        else:
+            val_str = str(value)
+            share = ""
+
         rows.append([display_name, val_str, share])
+
+    # Add total row
+    if total > 0:
+        rows.append([bold("Total"), bold(fmt_currency(total, config)), bold("100.0%")])
 
     lines.append(md_table(["Segment", "Revenue", "Share"], rows))
     lines.append("")
@@ -240,14 +279,24 @@ def _render_network(sa) -> str:
     if tech:
         lines.append(section_header("Technology Mix", 3))
         lines.append("")
-        rows = [[k.replace("_", " ").title(), str(v)] for k, v in tech.items()]
-        lines.append(md_table(["Technology", "Share/Detail"], rows))
+        rows = []
+        for k, v in tech.items():
+            display_k = k.replace("_", " ").title()
+            # Unpack nested dicts (e.g. spectrum_mhz: {700: 20, 1800: 50})
+            if isinstance(v, dict):
+                display_v = "; ".join(f"{sk}: {sv}" for sk, sv in v.items())
+            elif isinstance(v, list):
+                display_v = ", ".join(str(x) for x in v)
+            else:
+                display_v = str(v)
+            rows.append([display_k, display_v])
+        lines.append(md_table(["Technology", "Detail"], rows))
         lines.append("")
 
     if coverage:
         lines.append(section_header("Coverage", 3))
         lines.append("")
-        rows = [[k.replace("_", " ").upper(), str(v)] for k, v in coverage.items()]
+        rows = [[k.replace("_", " ").upper(), f"{v}%"] for k, v in coverage.items()]
         lines.append(md_table(["Technology", "Coverage"], rows))
         lines.append("")
 
@@ -261,14 +310,25 @@ def _render_network(sa) -> str:
     if controlled:
         lines.append(section_header("Controlled vs. Resale", 3))
         lines.append("")
-        rows = [[k.replace("_", " ").title(), str(v)] for k, v in controlled.items()]
-        lines.append(md_table(["Type", "Share"], rows))
+        rows = []
+        for k, v in controlled.items():
+            display_k = k.replace("_", " ").title()
+            if isinstance(v, list):
+                display_v = ", ".join(str(x) for x in v)
+            else:
+                display_v = str(v)
+            rows.append([display_k, display_v])
+        lines.append(md_table(["Type", "Detail"], rows))
         lines.append("")
 
     if homepass:
         lines.append(section_header("Homepass vs. Connect", 3))
         lines.append("")
-        rows = [[k.replace("_", " ").title(), str(v)] for k, v in homepass.items()]
+        rows = []
+        for k, v in homepass.items():
+            display_k = k.replace("_", " ").title()
+            display_v = fmt_smart_value(k, v, None)
+            rows.append([display_k, display_v])
         lines.append(md_table(["Metric", "Value"], rows))
         lines.append("")
 
@@ -276,7 +336,8 @@ def _render_network(sa) -> str:
         lines.append(section_header("Evolution Strategy", 3))
         lines.append("")
         for k, v in evolution.items():
-            lines.append(f"- **{k.replace('_', ' ').title()}**: {v}")
+            display_v = ", ".join(str(x) for x in v) if isinstance(v, list) else str(v)
+            lines.append(f"- **{k.replace('_', ' ').title()}**: {display_v}")
         lines.append("")
 
     # Impact assessments
