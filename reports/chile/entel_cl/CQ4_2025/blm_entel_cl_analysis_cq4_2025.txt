@@ -10,8 +10,8 @@
   [Political]
     ◆ Regulatory Environment
     ▲ National Digital Strategy
+    ▲ SUBTEL approves 700 MHz refarming for 5G rural broadband
     ▲ SUBTEL mandates infrastructure sharing for 5G deployment in rural areas
-    ● Chile passes new Telecom Reform Law strengthening SUBTEL enforcement
   [Economic]
     ▲ GDP Growth
     ◆ Inflation
@@ -21,7 +21,8 @@
   [Technology]
     ▲ 5G Network Evolution
     ◆ Fiber/FTTH Deployment
-    ▲ Entel Chile launches 5G SA network in Santiago and 15 cities
+    ● WOM Chile accelerates 5G deployment to 25% population coverage
+    ▲ Chile 5G FWA subscribers reach 120K, filling rural broadband gap
   Industry Lifecycle: late_growth
   Growth Rate: +7.2% YoY (CQ2_2025 -> CQ4_2025)
 
@@ -41,7 +42,7 @@
     ▼ Movistar Chile revenue growth 8.9% YoY
     ▼ WOM Chile revenue growth 6.9% YoY
     ▼ Claro Chile revenue growth 8.7% YoY
-    ▲ Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable
+    ◆ Claro Chile FY2025 revenue +2.5% YoY, mobile market share stable at 10.8%
   [Customer Segments]
     Consumer Postpaid Premium (stable)
     Consumer Mainstream (stable)
@@ -70,10 +71,10 @@
     buyer_power               [!!!] high
   Overall Intensity: MEDIUM
   [claro_cl]
-    Weaknesses: 5G Deployment: 5.0/100, Brand Strength: 6.0/100, Customer Service: 5.0/100
   [tigo_chile]
   [wom_cl]
-    Weaknesses: 5G Deployment: 7.0/100, Brand Strength: 7.0/100, Customer Service: 7.0/100
+    Strengths: Digital Capabilities: 80.0/100, Digital Services: 80.0/100, Innovation: 80.0/100
+    Weaknesses: Enterprise Solutions: 30.0/100
 
   → Key Message: In a 5-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 58% share. Strongest competitive force: Existing Competitors.
 
@@ -119,19 +120,19 @@
   [Opportunities]
     ^ Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl
     ^ National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access
+    ^ SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl
     ^ SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl
     ^ Entel Chile revenue growth 15.9% YoY
-    ^ Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable
   [Threats]
     v Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl
     v Movistar Chile revenue growth 8.9% YoY
     v WOM Chile revenue growth 6.9% YoY
     v Claro Chile revenue growth 8.7% YoY
-    v Tigo Chile pivots to MVNO model, exits direct network investment
+    v WOM Chile post-restructuring: aggressive pricing returns to market
   [SO Strategies]
     → Leverage '5G Deployment: score 80 (market avg 65)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
     → Leverage 'Brand Strength: score 90 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
-    → Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.
+    → Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl'.
   [WO Strategies]
     → Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
     → Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.
@@ -143,7 +144,7 @@
     → Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.
     → Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'.
 
-  → Key Message: SWOT analysis identifies 16 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is offensive (SO-dominant).
+  → Key Message: SWOT analysis identifies 16 strengths, 2 weaknesses, 21 opportunities, and 16 threats. The recommended strategic posture is offensive (SO-dominant).
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 05 OPPORTUNITIES (SPAN Matrix)                                              │
@@ -157,8 +158,8 @@
     SO-4                                 5.6        5.5     grow_invest
     Entel Chile revenue growth 15.9% YoY            5.5        5.0     grow_invest
     Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s            5.0        5.0     grow_invest
-    Chilean peso strengthens 8% against USD, easing equipment co            5.0        5.0     grow_invest
-    SUBTEL mandates infrastructure sharing for 5G deployment in             5.5        5.0     grow_invest
+    Chile telecom sector capex reaches $1.8B in 2025, highest ev            5.0        5.0     grow_invest
+    Chile GDP growth 2.8% in 2025, consumer spending up 3.5%            5.0        5.0     grow_invest
   [Grow/Invest]
     → SO-1
     → SO-2
@@ -175,7 +176,7 @@
     [P0] Entel Chile revenue growth 15.9% YoY (Market: N/A)
     [P0] Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s (Market: N/A)
 
-  → Key Message: SPAN matrix positions 23 opportunities: 21 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 21 grow/invest items for maximum strategic impact.
+  → Key Message: SPAN matrix positions 30 opportunities: 28 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 28 grow/invest items for maximum strategic impact.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ DATA PROVENANCE                                                             │

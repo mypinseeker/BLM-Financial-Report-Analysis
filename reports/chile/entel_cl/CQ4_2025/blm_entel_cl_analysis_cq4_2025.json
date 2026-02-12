@@ -3,7 +3,7 @@
     "target_operator": "entel_cl",
     "market": "chile",
     "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-12T06:27:17.175326",
+    "generated_at": "2026-02-12T07:04:17.662385",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -49,6 +49,24 @@
           {
             "dimension": "P",
             "dimension_name": "Political",
+            "factor_name": "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+            "current_status": "SUBTEL approved the refarming of 700 MHz spectrum for 5G NR deployment in rural areas. Entel and Movistar allocated 2x10 MHz each. Expected to bring 5G broadband to 2M additional rural households by 2027. Government subsidies of $200M available for rural deployment.",
+            "trend": "SUBTEL approved the refarming of 700 MHz spectrum for 5G NR deployment in rural areas. Entel and Movistar allocated 2x10 MHz each. Expected to bring 5G broadband to 2M additional rural households by 2027. Government subsidies of $200M available for rural deployment.",
+            "trend_direction": "uncertain",
+            "industry_impact": "SUBTEL approved the refarming of 700 MHz spectrum for 5G NR deployment in rural areas. Entel and Movistar allocated 2x10 MHz each. Expected to bring 5G broadband to 2M additional rural households by 2027. Government subsidies of $200M available for rural deployment.",
+            "company_impact": "Potential impact on entel_cl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.subtel.gob.cl/700mhz-refarming/"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
             "factor_name": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
             "current_status": "SUBTEL issued new regulation mandating tower and passive infrastructure sharing for 5G deployment in rural and underserved areas. Operators must provide access at regulated rates. Measure expected to accelerate rural 5G coverage from 15% to 40% by 2027. Benefits smaller operators (WOM, Tigo) who have limited tower portfolios.",
             "trend": "SUBTEL issued new regulation mandating tower and passive infrastructure sharing for 5G deployment in rural and underserved areas. Operators must provide access at regulated rates. Measure expected to accelerate rural 5G coverage from 15% to 40% by 2027. Benefits smaller operators (WOM, Tigo) who have limited tower portfolios.",
@@ -67,18 +85,18 @@
           {
             "dimension": "P",
             "dimension_name": "Political",
-            "factor_name": "Chile passes new Telecom Reform Law strengthening SUBTEL enforcement",
-            "current_status": "Chilean Congress approved telecom reform law giving SUBTEL stronger enforcement powers over service quality, network outage reporting, and consumer protection. New penalties up to 15,000 UTM ($1.1M USD) for service interruptions. Operators must publish quarterly quality dashboards. Law also accelerates municipal permitting for 5G antenna deployment.",
-            "trend": "Chilean Congress approved telecom reform law giving SUBTEL stronger enforcement powers over service quality, network outage reporting, and consumer protection. New penalties up to 15,000 UTM ($1.1M USD) for service interruptions. Operators must publish quarterly quality dashboards. Law also accelerates municipal permitting for 5G antenna deployment.",
+            "factor_name": "SUBTEL mandates net neutrality enforcement for 5G network slicing",
+            "current_status": "SUBTEL issued new rules clarifying that 5G network slicing for enterprise is exempt from net neutrality for B2B services, but consumer slicing must comply with equal treatment. Creates regulatory clarity for enterprise private 5G monetization. Consumer 5G plans cannot be speed-tiered beyond basic/premium.",
+            "trend": "SUBTEL issued new rules clarifying that 5G network slicing for enterprise is exempt from net neutrality for B2B services, but consumer slicing must comply with equal treatment. Creates regulatory clarity for enterprise private 5G monetization. Consumer 5G plans cannot be speed-tiered beyond basic/premium.",
             "trend_direction": "uncertain",
-            "industry_impact": "Chilean Congress approved telecom reform law giving SUBTEL stronger enforcement powers over service quality, network outage reporting, and consumer protection. New penalties up to 15,000 UTM ($1.1M USD) for service interruptions. Operators must publish quarterly quality dashboards. Law also accelerates municipal permitting for 5G antenna deployment.",
+            "industry_impact": "SUBTEL issued new rules clarifying that 5G network slicing for enterprise is exempt from net neutrality for B2B services, but consumer slicing must comply with equal treatment. Creates regulatory clarity for enterprise private 5G monetization. Consumer 5G plans cannot be speed-tiered beyond basic/premium.",
             "company_impact": "Potential impact on entel_cl",
             "impact_type": "neutral",
-            "severity": "high",
+            "severity": "medium",
             "time_horizon": "short_term",
             "predictability": "uncertain",
             "evidence": [
-              "https://www.bcn.cl/leychile/telecom-reform-2025/"
+              "https://www.subtel.gob.cl/net-neutrality-5g-slicing/"
             ],
             "data_source": "intelligence_events"
           }
@@ -199,33 +217,70 @@
           {
             "dimension": "T",
             "dimension_name": "Technology",
-            "factor_name": "Entel Chile launches 5G SA network in Santiago and 15 cities",
-            "current_status": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
-            "trend": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
+            "factor_name": "WOM Chile accelerates 5G deployment to 25% population coverage",
+            "current_status": "WOM Chile reached 25% 5G population coverage, up from 10% pre-restructuring. New investor group approved $80M 5G capex for 2026. Using Samsung RAN equipment. Strategy focuses on urban hotspots and FWA for residential broadband market entry.",
+            "trend": "WOM Chile reached 25% 5G population coverage, up from 10% pre-restructuring. New investor group approved $80M 5G capex for 2026. Using Samsung RAN equipment. Strategy focuses on urban hotspots and FWA for residential broadband market entry.",
             "trend_direction": "uncertain",
-            "industry_impact": "Entel became the first Chilean operator to launch standalone 5G (SA) network, covering Santiago, Valparaiso, Concepcion, and 12 other cities. 5G SA enables network slicing for enterprise customers. Initial focus on fixed wireless access (FWA) for underserved areas plus enterprise private networks for mining sector.",
+            "industry_impact": "WOM Chile reached 25% 5G population coverage, up from 10% pre-restructuring. New investor group approved $80M 5G capex for 2026. Using Samsung RAN equipment. Strategy focuses on urban hotspots and FWA for residential broadband market entry.",
+            "company_impact": "Potential impact on entel_cl",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.wom.cl/5g-coverage-update/"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
+            "current_status": "5G Fixed Wireless Access (FWA) subscribers in Chile reached 120K across all operators. Entel leads with 50K, Movistar 35K, Claro 25K, WOM 10K. Average FWA speed: 150 Mbps. SUBTEL reports FWA addresses 40% of previously unserved rural households. Priced at CLP 19,990 (competitive with fiber).",
+            "trend": "5G Fixed Wireless Access (FWA) subscribers in Chile reached 120K across all operators. Entel leads with 50K, Movistar 35K, Claro 25K, WOM 10K. Average FWA speed: 150 Mbps. SUBTEL reports FWA addresses 40% of previously unserved rural households. Priced at CLP 19,990 (competitive with fiber).",
+            "trend_direction": "uncertain",
+            "industry_impact": "5G Fixed Wireless Access (FWA) subscribers in Chile reached 120K across all operators. Entel leads with 50K, Movistar 35K, Claro 25K, WOM 10K. Average FWA speed: 150 Mbps. SUBTEL reports FWA addresses 40% of previously unserved rural households. Priced at CLP 19,990 (competitive with fiber).",
+            "company_impact": "Potential impact on entel_cl",
+            "impact_type": "opportunity",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [
+              "https://www.subtel.gob.cl/5g-fwa-statistics-2025/"
+            ],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Chile becomes first LATAM country with nationwide fiber backbone",
+            "current_status": "Chile completed its nationwide fiber backbone with the Fibra Óptica Austral project connecting Punta Arenas to the national network. Total fiber backbone: 42,000 km. Every region now has 100G+ backbone capacity. Benefits all operators with lower transport costs and enables rural broadband expansion.",
+            "trend": "Chile completed its nationwide fiber backbone with the Fibra Óptica Austral project connecting Punta Arenas to the national network. Total fiber backbone: 42,000 km. Every region now has 100G+ backbone capacity. Benefits all operators with lower transport costs and enables rural broadband expansion.",
+            "trend_direction": "uncertain",
+            "industry_impact": "Chile completed its nationwide fiber backbone with the Fibra Óptica Austral project connecting Punta Arenas to the national network. Total fiber backbone: 42,000 km. Every region now has 100G+ backbone capacity. Benefits all operators with lower transport costs and enables rural broadband expansion.",
             "company_impact": "Potential impact on entel_cl",
             "impact_type": "opportunity",
             "severity": "high",
             "time_horizon": "short_term",
             "predictability": "uncertain",
             "evidence": [
-              "https://www.entel.cl/5g-standalone-launch/"
+              "https://www.subtel.gob.cl/fibra-optica-austral-complete/"
             ],
             "data_source": "intelligence_events"
           }
         ],
         "overall_weather": "sunny",
-        "weather_explanation": "Mostly favorable: 10/11 factors present opportunities",
+        "weather_explanation": "Mostly favorable: 12/14 factors present opportunities",
         "policy_opportunities": [
           "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
           "National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
+          "SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl",
           "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl"
         ],
         "policy_threats": [
           "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl"
         ],
-        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment; Entel Chile launches 5G SA network in Santiago and 15 cities",
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment; Chile 5G FWA subscribers reach 120K, filling rural broadband gap; Chile becomes first LATAM country with nationwide fiber backbone",
         "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
       },
       "industry_market_size": "CLP 1391.0B (quarterly, CQ4_2025)",
@@ -326,6 +381,30 @@
         },
         {
           "change_type": "technology",
+          "description": "Claro Chile FY2025 revenue +2.5% YoY, mobile market share stable at 10.8%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "Claro Chile reported FY2025 revenue of CLP 300B (+2.5% YoY). Mobile subscriber base stable at 3.3M with improving postpaid mix. EBITDA margin declined to 26% due to $300M investment program. B2B segment grew 7% driven by América Móvil group enterprise contracts.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.americamovil.com/investors/claro-chile-fy2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Movistar Chile FY2025 revenue +3.1% YoY, EBITDA margin 28.5%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "Movistar Chile reported FY2025 revenue growth of 3.1% YoY to CLP 490B. EBITDA margin slightly declined to 28.5% (-0.3pp) due to fiber rollout costs. Mobile service revenue grew 2.8% while fixed grew 4.2%. Postpaid base grew 4.1% to 3.8M. Convergence penetration at 38%.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.com/en/investors/movistar-chile-fy2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
           "description": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -334,6 +413,138 @@
           "severity": "medium",
           "evidence": [
             "https://www.entel.cl/investors/fy2025-results/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Combined telecom capex in Chile reached $1.8B in 2025, driven by 5G deployment ($900M), FTTH expansion ($600M), and data center ($300M). Entel capex $380M (21%), Movistar $420M (23%), Claro $350M (19%), WOM $150M (8%). Industry capex/revenue at 18.5%.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/telecom-investment-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "WOM Chile H2 2025 revenue +5.2% YoY, subscriber base recovers",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "WOM Chile reported H2 2025 revenue growth of 5.2% YoY following restructuring completion. Mobile subscriber base recovered to 7.5M (+3% vs pre-restructuring low). ARPU stabilized at CLP 6,800. New management targets breakeven EBITDA by Q2 2026.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.wom.cl/investors/h2-2025-results/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chilean GDP grew 2.8% in 2025 (vs 2.1% in 2024), supported by copper exports and services sector. Consumer spending up 3.5%, benefiting telecom retail. Central bank cut rates to 5.0% from 6.5%. Inflation fell to 3.2%. Favorable macro for telecom subscriber growth and ARPU.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.bcentral.cl/web/banco-central-de-chile/gdp-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile enterprise telecom market grows 9% YoY to CLP 380B",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chile enterprise telecom market grew 9% YoY to CLP 380B in 2025. Key drivers: cloud connectivity (+22%), IoT/M2M (+18%), and managed security (+30%). Mining sector accounts for 35% of enterprise spend. Entel leads with 32% share, Movistar at 28%, Claro at 22%.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.idc.com/getdoc.jsp?containerId=LA-chile-enterprise-2025"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL reported Chile mobile penetration at 138% with 26.8M unique subscribers. 5G users reached 4.5M (17% of mobile base). Average mobile data consumption grew to 18 GB/month (+40% YoY). Fiber broadband penetration at 65% of fixed connections.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/market-statistics-q3-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile central bank cuts rate to 5.0%, easing operator financing costs",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Banco Central de Chile cut the policy rate from 6.5% to 5.0% through 2025 as inflation fell to 3.2%. Lower rates reduce financing costs for operators' capex programs. Particularly benefits WOM (post-restructuring refinancing) and Claro ($300M investment plan).",
+          "severity": "medium",
+          "evidence": [
+            "https://www.bcentral.cl/monetary-policy-december-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Average blended mobile ARPU in Chile stabilized at CLP 7,200 after declining 12% since WOM's entry in 2015. Premium tier (>CLP 20K) grew 15% YoY, driven by 5G adoption and larger data bundles. Convergent bundles ARPU 40% higher than standalone mobile. ARPU growth expected to resume in 2026.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/arpu-trends-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "WOM Chile accelerates 5G deployment to 25% population coverage",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "WOM Chile reached 25% 5G population coverage, up from 10% pre-restructuring. New investor group approved $80M 5G capex for 2026. Using Samsung RAN equipment. Strategy focuses on urban hotspots and FWA for residential broadband market entry.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.wom.cl/5g-coverage-update/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL awarded Entel Chile the best network quality certification for 2025, the fifth consecutive year. Entel ranked #1 in download speed (180 Mbps avg), upload speed (45 Mbps), latency (18ms), and video streaming quality. Award reinforces Entel's premium brand positioning.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/network-quality-awards-2025/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "WOM Chile post-restructuring: aggressive pricing returns to market",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "After emerging from Chapter 11 with $800M less debt, WOM Chile launched aggressive new pricing: unlimited 5G data at CLP 15,990 (30% below Entel equivalent). WOM's cost structure now significantly lower with reduced debt service. Strategy targets 8M subscriber milestone by end-2026.",
+          "severity": "high",
+          "evidence": [
+            "https://www.wom.cl/5g-unlimited-launch/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "5G Fixed Wireless Access (FWA) subscribers in Chile reached 120K across all operators. Entel leads with 50K, Movistar 35K, Claro 25K, WOM 10K. Average FWA speed: 150 Mbps. SUBTEL reports FWA addresses 40% of previously unserved rural households. Priced at CLP 19,990 (competitive with fiber).",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/5g-fwa-statistics-2025/"
           ]
         },
         {
@@ -349,6 +560,42 @@
           ]
         },
         {
+          "change_type": "pricing",
+          "description": "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL approved the refarming of 700 MHz spectrum for 5G NR deployment in rural areas. Entel and Movistar allocated 2x10 MHz each. Expected to bring 5G broadband to 2M additional rural households by 2027. Government subsidies of $200M available for rural deployment.",
+          "severity": "high",
+          "evidence": [
+            "https://www.subtel.gob.cl/700mhz-refarming/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Tigo Chile MVNO launches on Entel network, targets enterprise niche",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "Tigo Chile officially launched MVNO service on Entel's network, focusing on enterprise B2B customers and Millicom's LATAM cross-border clients. Pricing at enterprise rates only, no consumer plans. Initial 15K enterprise lines migrated. Entel earns wholesale revenue per subscriber.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.millicom.com/tigo-chile-mvno-launch/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Opensignal: Entel #1 overall, WOM gains ground in 5G experience",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "Opensignal Chile report: Entel leads in 7/10 categories including download speed, video experience, and 5G reach. WOM won 5G download speed category in Santiago. Movistar leads in WiFi experience. Claro improved most in core experience metrics (+15% YoY). Gap narrowing in key metros.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.opensignal.com/reports/2025/chile/"
+          ]
+        },
+        {
           "change_type": "merger",
           "description": "WOM Chile emerges from restructuring with new investor group",
           "source": "peer_driven",
@@ -358,6 +605,42 @@
           "severity": "high",
           "evidence": [
             "https://www.reuters.com/business/wom-chile-emerges-restructuring/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "GTD (regional ISP) expands fiber to 12 cities, enters mobile as MVNO",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Regional fiber ISP GTD expanded FTTH to 12 cities (from 6), reaching 800K homes passed. Also launched mobile MVNO on Movistar's network. Convergent bundles priced 20% below big-3 operators. Growing threat in mid-size cities where Entel and Movistar have less focus.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.gtd.cl/expansion-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile digital economy grows 12% YoY, telecom infra demand surges",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chile's digital economy reached 8.5% of GDP in 2025, growing 12% YoY. E-commerce transactions up 25%, driving mobile data consumption +35% YoY. Data center investment reached $1.2B with Google and AWS expanding Chilean presence. Enterprise cloud adoption at 45%.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.economia.gob.cl/digital-economy-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile becomes first LATAM country with nationwide fiber backbone",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chile completed its nationwide fiber backbone with the Fibra Óptica Austral project connecting Punta Arenas to the national network. Total fiber backbone: 42,000 km. Every region now has 100G+ backbone capacity. Benefits all operators with lower transport costs and enables rural broadband expansion.",
+          "severity": "high",
+          "evidence": [
+            "https://www.subtel.gob.cl/fibra-optica-austral-complete/"
           ]
         },
         {
@@ -374,6 +657,30 @@
         },
         {
           "change_type": "technology",
+          "description": "Claro Chile deploys 5G in Santiago and 5 regional cities",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Claro Chile activated 5G service in Santiago and 5 additional cities (Antofagasta, La Serena, Temuco, Rancagua, Iquique). Using 3.5 GHz spectrum with Nokia equipment. Population coverage at 20%. Positions as aggressive price competitor with 5G plans starting 15% below Entel.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.clarochile.cl/5g-launch/"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "SUBTEL mandates net neutrality enforcement for 5G network slicing",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "SUBTEL issued new rules clarifying that 5G network slicing for enterprise is exempt from net neutrality for B2B services, but consumer slicing must comply with equal treatment. Creates regulatory clarity for enterprise private 5G monetization. Consumer 5G plans cannot be speed-tiered beyond basic/premium.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/net-neutrality-5g-slicing/"
+          ]
+        },
+        {
+          "change_type": "technology",
           "description": "Chile copper mining boom drives enterprise telecom demand",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -382,6 +689,18 @@
           "severity": "medium",
           "evidence": [
             "https://www.mch.cl/mining-telecom-demand-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Movistar Chile launches 5G in 8 cities, partners with Huawei",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Movistar Chile launched commercial 5G NSA in 8 cities using Huawei RAN equipment. Initial coverage focused on Santiago, Valparaiso, Concepcion. 5G population coverage reached 30%. Plans to migrate to 5G SA by H2 2026. 5G pricing at CLP 2,000/month premium over 4G plans.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.com/en/movistar-chile-5g-launch/"
           ]
         },
         {
@@ -398,6 +717,18 @@
         },
         {
           "change_type": "merger",
+          "description": "Movistar Chile reaches 3.5M FTTH homes passed, 55% urban coverage",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Telefonica's Movistar Chile accelerated FTTH deployment to 3.5M homes passed (55% urban), with FTTH subscriber base growing 32% YoY to 1.4M. Average speeds increased to 600 Mbps. Targets 4.5M homes by end-2026. This makes Movistar the #1 fiber operator in Chile by homes passed.",
+          "severity": "high",
+          "evidence": [
+            "https://www.telefonica.com/en/movistar-chile-fiber-update/"
+          ]
+        },
+        {
+          "change_type": "merger",
           "description": "Movistar Chile accelerates FTTH deployment: 3.5M homes passed",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -406,6 +737,18 @@
           "severity": "medium",
           "evidence": [
             "https://www.telefonica.com/en/communication-room/movistar-chile-fiber/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Claro Chile announces $300M 5G and fiber expansion plan",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "América Móvil's Claro Chile committed $300M for 2025-2026 5G+FTTH expansion. Targets 1,500 new 5G sites and 500K additional fiber homes. Strategic shift from mobile-only to convergent model. Launched first triple-play bundles combining mobile, fiber, and Claro TV+.",
+          "severity": "high",
+          "evidence": [
+            "https://www.americamovil.com/investors/claro-chile-capex-plan/"
           ]
         },
         {
@@ -460,6 +803,102 @@
         },
         {
           "change_type": "technology",
+          "description": "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Combined telecom capex in Chile reached $1.8B in 2025, driven by 5G deployment ($900M), FTTH expansion ($600M), and data center ($300M). Entel capex $380M (21%), Movistar $420M (23%), Claro $350M (19%), WOM $150M (8%). Industry capex/revenue at 18.5%.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/telecom-investment-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chilean GDP grew 2.8% in 2025 (vs 2.1% in 2024), supported by copper exports and services sector. Consumer spending up 3.5%, benefiting telecom retail. Central bank cut rates to 5.0% from 6.5%. Inflation fell to 3.2%. Favorable macro for telecom subscriber growth and ARPU.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.bcentral.cl/web/banco-central-de-chile/gdp-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile enterprise telecom market grows 9% YoY to CLP 380B",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chile enterprise telecom market grew 9% YoY to CLP 380B in 2025. Key drivers: cloud connectivity (+22%), IoT/M2M (+18%), and managed security (+30%). Mining sector accounts for 35% of enterprise spend. Entel leads with 32% share, Movistar at 28%, Claro at 22%.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.idc.com/getdoc.jsp?containerId=LA-chile-enterprise-2025"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL reported Chile mobile penetration at 138% with 26.8M unique subscribers. 5G users reached 4.5M (17% of mobile base). Average mobile data consumption grew to 18 GB/month (+40% YoY). Fiber broadband penetration at 65% of fixed connections.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/market-statistics-q3-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile central bank cuts rate to 5.0%, easing operator financing costs",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Banco Central de Chile cut the policy rate from 6.5% to 5.0% through 2025 as inflation fell to 3.2%. Lower rates reduce financing costs for operators' capex programs. Particularly benefits WOM (post-restructuring refinancing) and Claro ($300M investment plan).",
+          "severity": "medium",
+          "evidence": [
+            "https://www.bcentral.cl/monetary-policy-december-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Average blended mobile ARPU in Chile stabilized at CLP 7,200 after declining 12% since WOM's entry in 2015. Premium tier (>CLP 20K) grew 15% YoY, driven by 5G adoption and larger data bundles. Convergent bundles ARPU 40% higher than standalone mobile. ARPU growth expected to resume in 2026.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/arpu-trends-2025/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL awarded Entel Chile the best network quality certification for 2025, the fifth consecutive year. Entel ranked #1 in download speed (180 Mbps avg), upload speed (45 Mbps), latency (18ms), and video streaming quality. Award reinforces Entel's premium brand positioning.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/network-quality-awards-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "5G Fixed Wireless Access (FWA) subscribers in Chile reached 120K across all operators. Entel leads with 50K, Movistar 35K, Claro 25K, WOM 10K. Average FWA speed: 150 Mbps. SUBTEL reports FWA addresses 40% of previously unserved rural households. Priced at CLP 19,990 (competitive with fiber).",
+          "severity": "medium",
+          "evidence": [
+            "https://www.subtel.gob.cl/5g-fwa-statistics-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
           "description": "Chilean peso strengthens 8% against USD, easing equipment costs",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -468,6 +907,42 @@
           "severity": "medium",
           "evidence": [
             "https://www.bcentral.cl/web/banco-central-de-chile/"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "SUBTEL approved the refarming of 700 MHz spectrum for 5G NR deployment in rural areas. Entel and Movistar allocated 2x10 MHz each. Expected to bring 5G broadband to 2M additional rural households by 2027. Government subsidies of $200M available for rural deployment.",
+          "severity": "high",
+          "evidence": [
+            "https://www.subtel.gob.cl/700mhz-refarming/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile digital economy grows 12% YoY, telecom infra demand surges",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chile's digital economy reached 8.5% of GDP in 2025, growing 12% YoY. E-commerce transactions up 25%, driving mobile data consumption +35% YoY. Data center investment reached $1.2B with Google and AWS expanding Chilean presence. Enterprise cloud adoption at 45%.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.economia.gob.cl/digital-economy-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Chile becomes first LATAM country with nationwide fiber backbone",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Chile completed its nationwide fiber backbone with the Fibra Óptica Austral project connecting Punta Arenas to the national network. Total fiber backbone: 42,000 km. Every region now has 100G+ backbone capacity. Benefits all operators with lower transport costs and enables rural broadband expansion.",
+          "severity": "high",
+          "evidence": [
+            "https://www.subtel.gob.cl/fibra-optica-austral-complete/"
           ]
         },
         {
@@ -546,6 +1021,54 @@
         },
         {
           "change_type": "merger",
+          "description": "WOM Chile post-restructuring: aggressive pricing returns to market",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "After emerging from Chapter 11 with $800M less debt, WOM Chile launched aggressive new pricing: unlimited 5G data at CLP 15,990 (30% below Entel equivalent). WOM's cost structure now significantly lower with reduced debt service. Strategy targets 8M subscriber milestone by end-2026.",
+          "severity": "high",
+          "evidence": [
+            "https://www.wom.cl/5g-unlimited-launch/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "GTD (regional ISP) expands fiber to 12 cities, enters mobile as MVNO",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Regional fiber ISP GTD expanded FTTH to 12 cities (from 6), reaching 800K homes passed. Also launched mobile MVNO on Movistar's network. Convergent bundles priced 20% below big-3 operators. Growing threat in mid-size cities where Entel and Movistar have less focus.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.gtd.cl/expansion-2025/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Claro Chile deploys 5G in Santiago and 5 regional cities",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Claro Chile activated 5G service in Santiago and 5 additional cities (Antofagasta, La Serena, Temuco, Rancagua, Iquique). Using 3.5 GHz spectrum with Nokia equipment. Population coverage at 20%. Positions as aggressive price competitor with 5G plans starting 15% below Entel.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.clarochile.cl/5g-launch/"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Movistar Chile launches 5G in 8 cities, partners with Huawei",
+          "source": "external_player_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Movistar Chile launched commercial 5G NSA in 8 cities using Huawei RAN equipment. Initial coverage focused on Santiago, Valparaiso, Concepcion. 5G population coverage reached 30%. Plans to migrate to 5G SA by H2 2026. 5G pricing at CLP 2,000/month premium over 4G plans.",
+          "severity": "medium",
+          "evidence": [
+            "https://www.telefonica.com/en/movistar-chile-5g-launch/"
+          ]
+        },
+        {
+          "change_type": "merger",
           "description": "Tigo Chile pivots to MVNO model, exits direct network investment",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -558,6 +1081,18 @@
         },
         {
           "change_type": "merger",
+          "description": "Movistar Chile reaches 3.5M FTTH homes passed, 55% urban coverage",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Telefonica's Movistar Chile accelerated FTTH deployment to 3.5M homes passed (55% urban), with FTTH subscriber base growing 32% YoY to 1.4M. Average speeds increased to 600 Mbps. Targets 4.5M homes by end-2026. This makes Movistar the #1 fiber operator in Chile by homes passed.",
+          "severity": "high",
+          "evidence": [
+            "https://www.telefonica.com/en/movistar-chile-fiber-update/"
+          ]
+        },
+        {
+          "change_type": "merger",
           "description": "Movistar Chile accelerates FTTH deployment: 3.5M homes passed",
           "source": "peer_driven",
           "time_horizon": "medium_term",
@@ -566,6 +1101,18 @@
           "severity": "medium",
           "evidence": [
             "https://www.telefonica.com/en/communication-room/movistar-chile-fiber/"
+          ]
+        },
+        {
+          "change_type": "merger",
+          "description": "Claro Chile announces $300M 5G and fiber expansion plan",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "América Móvil's Claro Chile committed $300M for 2025-2026 5G+FTTH expansion. Targets 1,500 new 5G sites and 500K additional fiber homes. Strategic shift from mobile-only to convergent model. Launched first triple-play bundles combining mobile, fiber, and Claro TV+.",
+          "severity": "high",
+          "evidence": [
+            "https://www.americamovil.com/investors/claro-chile-capex-plan/"
           ]
         },
         {
@@ -1034,31 +1581,11 @@
           "talent_culture": "",
           "ma_activity": [],
           "strengths": [],
-          "weaknesses": [
-            "5G Deployment: 5.0/100",
-            "Brand Strength: 6.0/100",
-            "Customer Service: 5.0/100",
-            "Digital Services: 6.0/100",
-            "Enterprise Solutions: 5.0/100",
-            "Network Coverage: 7.0/100",
-            "Network Quality: 6.0/100",
-            "Pricing Competitiveness: 7.0/100",
-            "Product Innovation: 5.0/100",
-            "Sustainability: 5.0/100",
-            "brand_strength: 6.0/100",
-            "customer_experience: 5.0/100",
-            "digital_capabilities: 6.0/100",
-            "financial_strength: 6.0/100",
-            "innovation: 5.0/100",
-            "market_share: 5.0/100",
-            "network_quality: 6.0/100",
-            "pricing_competitiveness: 7.0/100"
-          ],
+          "weaknesses": [],
           "problems": [],
           "likely_future_actions": [
             "Claro Chile is likely to continue aggressive network expansion (capex/revenue at 20% with growing revenue).",
-            "Claro Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
-            "Claro Chile will need significant network investment (coverage score: 7.0/100)."
+            "Claro Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
           ],
           "implications": [
             {
@@ -1068,16 +1595,6 @@
                 "Revenue trend: growing"
               ],
               "suggested_action": "Monitor pricing and go-to-market strategies."
-            },
-            {
-              "implication_type": "opportunity",
-              "description": "Claro Chile is weak in: 5G Deployment, Brand Strength, Customer Service. Target can differentiate in these dimensions.",
-              "evidence": [
-                "5G Deployment: 5.0/100",
-                "Brand Strength: 6.0/100",
-                "Customer Service: 5.0/100"
-              ],
-              "suggested_action": "Invest in 5G Deployment, Brand Strength, Customer Service to capture customers dissatisfied with Claro Chile."
             }
           ]
         },
@@ -1203,32 +1720,20 @@
           "incentive_system": "",
           "talent_culture": "",
           "ma_activity": [],
-          "strengths": [],
+          "strengths": [
+            "Digital Capabilities: 80.0/100",
+            "Digital Services: 80.0/100",
+            "Innovation: 80.0/100",
+            "Pricing Competitiveness: 90.0/100",
+            "Product Innovation: 80.0/100"
+          ],
           "weaknesses": [
-            "5G Deployment: 7.0/100",
-            "Brand Strength: 7.0/100",
-            "Customer Service: 7.0/100",
-            "Digital Services: 8.0/100",
-            "Enterprise Solutions: 3.0/100",
-            "Network Coverage: 5.0/100",
-            "Network Quality: 5.0/100",
-            "Pricing Competitiveness: 9.0/100",
-            "Product Innovation: 8.0/100",
-            "Sustainability: 4.0/100",
-            "brand_strength: 7.0/100",
-            "customer_experience: 7.0/100",
-            "digital_capabilities: 8.0/100",
-            "financial_strength: 4.0/100",
-            "innovation: 8.0/100",
-            "market_share: 6.0/100",
-            "network_quality: 5.0/100",
-            "pricing_competitiveness: 9.0/100"
+            "Enterprise Solutions: 30.0/100"
           ],
           "problems": [],
           "likely_future_actions": [
             "WOM Chile is likely to continue aggressive network expansion (capex/revenue at 15% with growing revenue).",
-            "WOM Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
-            "WOM Chile will need significant network investment (coverage score: 5.0/100)."
+            "WOM Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
           ],
           "implications": [
             {
@@ -1241,13 +1746,21 @@
             },
             {
               "implication_type": "opportunity",
-              "description": "WOM Chile is weak in: 5G Deployment, Brand Strength, Customer Service. Target can differentiate in these dimensions.",
+              "description": "WOM Chile is weak in: Enterprise Solutions. Target can differentiate in these dimensions.",
               "evidence": [
-                "5G Deployment: 7.0/100",
-                "Brand Strength: 7.0/100",
-                "Customer Service: 7.0/100"
+                "Enterprise Solutions: 30.0/100"
               ],
-              "suggested_action": "Invest in 5G Deployment, Brand Strength, Customer Service to capture customers dissatisfied with WOM Chile."
+              "suggested_action": "Invest in Enterprise Solutions to capture customers dissatisfied with WOM Chile."
+            },
+            {
+              "implication_type": "learning",
+              "description": "WOM Chile excels in: Digital Capabilities, Digital Services, Innovation. Study their approach for best practices.",
+              "evidence": [
+                "Digital Capabilities: 80.0/100",
+                "Digital Services: 80.0/100",
+                "Innovation: 80.0/100"
+              ],
+              "suggested_action": "Benchmark WOM Chile's practices in Digital Capabilities, Digital Services, Innovation."
             }
           ]
         },
@@ -1318,32 +1831,14 @@
           "incentive_system": "",
           "talent_culture": "",
           "ma_activity": [],
-          "strengths": [],
-          "weaknesses": [
-            "5G Deployment: 6.0/100",
-            "Brand Strength: 7.0/100",
-            "Customer Service: 6.0/100",
-            "Digital Services: 7.0/100",
-            "Enterprise Solutions: 7.0/100",
-            "Network Coverage: 8.0/100",
-            "Network Quality: 7.0/100",
-            "Pricing Competitiveness: 6.0/100",
-            "Product Innovation: 6.0/100",
-            "Sustainability: 7.0/100",
-            "brand_strength: 7.0/100",
-            "customer_experience: 6.0/100",
-            "digital_capabilities: 7.0/100",
-            "financial_strength: 7.0/100",
-            "innovation: 6.0/100",
-            "market_share: 7.0/100",
-            "network_quality: 7.0/100",
-            "pricing_competitiveness: 6.0/100"
+          "strengths": [
+            "Network Coverage: 80.0/100"
           ],
+          "weaknesses": [],
           "problems": [],
           "likely_future_actions": [
             "Movistar Chile is likely to continue aggressive network expansion (capex/revenue at 18% with growing revenue).",
-            "Movistar Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
-            "Movistar Chile will need significant network investment (coverage score: 8.0/100)."
+            "Movistar Chile is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
           ],
           "implications": [
             {
@@ -1355,14 +1850,12 @@
               "suggested_action": "Monitor pricing and go-to-market strategies."
             },
             {
-              "implication_type": "opportunity",
-              "description": "Movistar Chile is weak in: 5G Deployment, Brand Strength, Customer Service. Target can differentiate in these dimensions.",
+              "implication_type": "learning",
+              "description": "Movistar Chile excels in: Network Coverage. Study their approach for best practices.",
               "evidence": [
-                "5G Deployment: 6.0/100",
-                "Brand Strength: 7.0/100",
-                "Customer Service: 6.0/100"
+                "Network Coverage: 80.0/100"
               ],
-              "suggested_action": "Invest in 5G Deployment, Brand Strength, Customer Service to capture customers dissatisfied with Movistar Chile."
+              "suggested_action": "Benchmark Movistar Chile's practices in Network Coverage."
             }
           ]
         }
@@ -2213,10 +2706,22 @@
       "opportunities": [
         "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
         "National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
+        "SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl",
         "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl",
         "Entel Chile revenue growth 15.9% YoY",
         "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
+        "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
+        "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
+        "Chile enterprise telecom market grows 9% YoY to CLP 380B",
+        "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
+        "Chile central bank cuts rate to 5.0%, easing operator financing costs",
+        "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
+        "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
+        "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
         "Chilean peso strengthens 8% against USD, easing equipment costs",
+        "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+        "Chile digital economy grows 12% YoY, telecom infra demand surges",
+        "Chile becomes first LATAM country with nationwide fiber backbone",
         "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
         "Chile copper mining boom drives enterprise telecom demand",
         "Entel Chile launches 5G SA network in Santiago and 15 cities"
@@ -2226,8 +2731,14 @@
         "Movistar Chile revenue growth 8.9% YoY",
         "WOM Chile revenue growth 6.9% YoY",
         "Claro Chile revenue growth 8.7% YoY",
+        "WOM Chile post-restructuring: aggressive pricing returns to market",
+        "GTD (regional ISP) expands fiber to 12 cities, enters mobile as MVNO",
+        "Claro Chile deploys 5G in Santiago and 5 regional cities",
+        "Movistar Chile launches 5G in 8 cities, partners with Huawei",
         "Tigo Chile pivots to MVNO model, exits direct network investment",
+        "Movistar Chile reaches 3.5M FTTH homes passed, 55% urban coverage",
         "Movistar Chile accelerates FTTH deployment: 3.5M homes passed",
+        "Claro Chile announces $300M 5G and fiber expansion plan",
         "Claro Chile invests $300M in 5G and fiber expansion",
         "High existing competitors pressure",
         "High substitutes pressure",
@@ -2236,8 +2747,8 @@
       "so_strategies": [
         "Leverage '5G Deployment: score 80 (market avg 65)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
         "Leverage 'Brand Strength: score 90 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
-        "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
-        "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'Entel Chile revenue growth 15.9% YoY'."
+        "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl'.",
+        "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'."
       ],
       "wo_strategies": [
         "Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
@@ -2253,7 +2764,7 @@
         "Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
         "Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'."
       ],
-      "key_message": "SWOT analysis identifies 16 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is offensive (SO-dominant)."
+      "key_message": "SWOT analysis identifies 16 strengths, 2 weaknesses, 21 opportunities, and 16 threats. The recommended strategic posture is offensive (SO-dominant)."
     },
     "opportunities": {
       "span_positions": [
@@ -2354,12 +2865,188 @@
           "bubble_size": 1.0
         },
         {
+          "opportunity_name": "Chile telecom sector capex reaches $1.8B in 2025, highest ev",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile enterprise telecom market grows 9% YoY to CLP 380B",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile central bank cuts rate to 5.0%, easing operator financ",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile ARPU stabilizes after 3-year decline, premium tier gro",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Entel Chile wins SUBTEL network quality award for 5th consec",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile 5G FWA subscribers reach 120K, filling rural broadband",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
           "opportunity_name": "Chilean peso strengthens 8% against USD, easing equipment co",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
           "strategic_value_score": 5.0,
           "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile digital economy grows 12% YoY, telecom infra demand su",
+          "market_size_score": 5.0,
+          "market_growth_score": 5,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Chile becomes first LATAM country with nationwide fiber back",
+          "market_size_score": 5.0,
+          "market_growth_score": 7,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.5,
           "market_share_score": 5.0,
           "product_fit_score": 5.0,
           "brand_channel_score": 5.0,
@@ -2498,87 +3185,23 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Exploit claro_cl weakness: 5G Deployment: 5.0/100",
+          "opportunity_name": "SUBTEL approves 700 MHz refarming for 5G rural broadband: Po",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
-          "strategic_value_score": 5.0,
-          "market_attractiveness": 5.0,
-          "market_share_score": 6,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
           "product_fit_score": 5.0,
-          "brand_channel_score": 6,
+          "brand_channel_score": 5.0,
           "tech_capability_score": 5.0,
-          "competitive_position": 5.5,
+          "competitive_position": 5.0,
           "quadrant": "grow_invest",
           "recommended_strategy": "Invest aggressively to grow market share and revenue.",
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Exploit claro_cl weakness: Brand Strength: 6.0/100",
-          "market_size_score": 5.0,
-          "market_growth_score": 5.0,
-          "profit_potential_score": 5.0,
-          "strategic_value_score": 5.0,
-          "market_attractiveness": 5.0,
-          "market_share_score": 6,
-          "product_fit_score": 5.0,
-          "brand_channel_score": 6,
-          "tech_capability_score": 5.0,
-          "competitive_position": 5.5,
-          "quadrant": "grow_invest",
-          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
-          "bubble_size": 1.0
-        },
-        {
-          "opportunity_name": "Exploit wom_cl weakness: 5G Deployment: 7.0/100",
-          "market_size_score": 5.0,
-          "market_growth_score": 5.0,
-          "profit_potential_score": 5.0,
-          "strategic_value_score": 5.0,
-          "market_attractiveness": 5.0,
-          "market_share_score": 6,
-          "product_fit_score": 5.0,
-          "brand_channel_score": 6,
-          "tech_capability_score": 5.0,
-          "competitive_position": 5.5,
-          "quadrant": "grow_invest",
-          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
-          "bubble_size": 1.0
-        },
-        {
-          "opportunity_name": "Exploit wom_cl weakness: Brand Strength: 7.0/100",
-          "market_size_score": 5.0,
-          "market_growth_score": 5.0,
-          "profit_potential_score": 5.0,
-          "strategic_value_score": 5.0,
-          "market_attractiveness": 5.0,
-          "market_share_score": 6,
-          "product_fit_score": 5.0,
-          "brand_channel_score": 6,
-          "tech_capability_score": 5.0,
-          "competitive_position": 5.5,
-          "quadrant": "grow_invest",
-          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
-          "bubble_size": 1.0
-        },
-        {
-          "opportunity_name": "Exploit movistar_cl weakness: 5G Deployment: 6.0/100",
-          "market_size_score": 5.0,
-          "market_growth_score": 5.0,
-          "profit_potential_score": 5.0,
-          "strategic_value_score": 5.0,
-          "market_attractiveness": 5.0,
-          "market_share_score": 6,
-          "product_fit_score": 5.0,
-          "brand_channel_score": 6,
-          "tech_capability_score": 5.0,
-          "competitive_position": 5.5,
-          "quadrant": "grow_invest",
-          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
-          "bubble_size": 1.0
-        },
-        {
-          "opportunity_name": "Exploit movistar_cl weakness: Brand Strength: 7.0/100",
+          "opportunity_name": "Exploit wom_cl weakness: Enterprise Solutions: 30.0/100",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -2633,7 +3256,18 @@
         "SO-4",
         "Entel Chile revenue growth 15.9% YoY",
         "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
+        "Chile telecom sector capex reaches $1.8B in 2025, highest ev",
+        "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
+        "Chile enterprise telecom market grows 9% YoY to CLP 380B",
+        "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
+        "Chile central bank cuts rate to 5.0%, easing operator financ",
+        "Chile ARPU stabilizes after 3-year decline, premium tier gro",
+        "Entel Chile wins SUBTEL network quality award for 5th consec",
+        "Chile 5G FWA subscribers reach 120K, filling rural broadband",
         "Chilean peso strengthens 8% against USD, easing equipment co",
+        "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+        "Chile digital economy grows 12% YoY, telecom infra demand su",
+        "Chile becomes first LATAM country with nationwide fiber back",
         "SUBTEL mandates infrastructure sharing for 5G deployment in ",
         "Chile copper mining boom drives enterprise telecom demand",
         "Entel Chile launches 5G SA network in Santiago and 15 cities",
@@ -2642,12 +3276,8 @@
         "Open RAN for vendor diversification and cost reduction",
         "Regulatory Environment: Compliance requirements and spectrum",
         "National Digital Strategy: Fiber/5G coverage mandates may re",
-        "Exploit claro_cl weakness: 5G Deployment: 5.0/100",
-        "Exploit claro_cl weakness: Brand Strength: 6.0/100",
-        "Exploit wom_cl weakness: 5G Deployment: 7.0/100",
-        "Exploit wom_cl weakness: Brand Strength: 7.0/100",
-        "Exploit movistar_cl weakness: 5G Deployment: 6.0/100",
-        "Exploit movistar_cl weakness: Brand Strength: 7.0/100"
+        "SUBTEL approves 700 MHz refarming for 5G rural broadband: Po",
+        "Exploit wom_cl weakness: Enterprise Solutions: 30.0/100"
       ],
       "acquire_skills": [
         "WO-1",
@@ -2687,7 +3317,7 @@
         },
         {
           "name": "SO-3",
-          "description": "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
+          "description": "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -2701,7 +3331,7 @@
         },
         {
           "name": "SO-4",
-          "description": "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'Entel Chile revenue growth 15.9% YoY'.",
+          "description": "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -2744,8 +3374,173 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
+          "name": "Chile telecom sector capex reaches $1.8B in 2025, highest ev",
+          "description": "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
+          "description": "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile enterprise telecom market grows 9% YoY to CLP 380B",
+          "description": "Chile enterprise telecom market grows 9% YoY to CLP 380B",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
+          "description": "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile central bank cuts rate to 5.0%, easing operator financ",
+          "description": "Chile central bank cuts rate to 5.0%, easing operator financing costs",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile ARPU stabilizes after 3-year decline, premium tier gro",
+          "description": "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Entel Chile wins SUBTEL network quality award for 5th consec",
+          "description": "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
+          "derived_from": [
+            "market_opportunity",
+            "merger"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile 5G FWA subscribers reach 120K, filling rural broadband",
+          "description": "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
           "name": "Chilean peso strengthens 8% against USD, easing equipment co",
           "description": "Chilean peso strengthens 8% against USD, easing equipment costs",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+          "description": "SUBTEL approves 700 MHz refarming for 5G rural broadband",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile digital economy grows 12% YoY, telecom infra demand su",
+          "description": "Chile digital economy grows 12% YoY, telecom infra demand surges",
+          "derived_from": [
+            "market_opportunity",
+            "technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Chile becomes first LATAM country with nationwide fiber back",
+          "description": "Chile becomes first LATAM country with nationwide fiber backbone",
           "derived_from": [
             "market_opportunity",
             "technology"
@@ -2874,11 +3669,10 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Exploit claro_cl weakness: 5G Deployment: 5.0/100",
-          "description": "Competitor claro_cl is weak in: 5G Deployment: 5.0/100",
+          "name": "SUBTEL approves 700 MHz refarming for 5G rural broadband: Po",
+          "description": "Policy opportunity: SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl",
           "derived_from": [
-            "competitor_weakness",
-            "claro_cl"
+            "trend_policy_opportunity"
           ],
           "addressable_market": "N/A",
           "addressable_market_source": "",
@@ -2889,71 +3683,11 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Exploit claro_cl weakness: Brand Strength: 6.0/100",
-          "description": "Competitor claro_cl is weak in: Brand Strength: 6.0/100",
-          "derived_from": [
-            "competitor_weakness",
-            "claro_cl"
-          ],
-          "addressable_market": "N/A",
-          "addressable_market_source": "",
-          "our_capability": "",
-          "competition_intensity": "",
-          "time_window": "",
-          "priority": "P0",
-          "priority_rationale": "Quadrant: grow_invest"
-        },
-        {
-          "name": "Exploit wom_cl weakness: 5G Deployment: 7.0/100",
-          "description": "Competitor wom_cl is weak in: 5G Deployment: 7.0/100",
+          "name": "Exploit wom_cl weakness: Enterprise Solutions: 30.0/100",
+          "description": "Competitor wom_cl is weak in: Enterprise Solutions: 30.0/100",
           "derived_from": [
             "competitor_weakness",
             "wom_cl"
-          ],
-          "addressable_market": "N/A",
-          "addressable_market_source": "",
-          "our_capability": "",
-          "competition_intensity": "",
-          "time_window": "",
-          "priority": "P0",
-          "priority_rationale": "Quadrant: grow_invest"
-        },
-        {
-          "name": "Exploit wom_cl weakness: Brand Strength: 7.0/100",
-          "description": "Competitor wom_cl is weak in: Brand Strength: 7.0/100",
-          "derived_from": [
-            "competitor_weakness",
-            "wom_cl"
-          ],
-          "addressable_market": "N/A",
-          "addressable_market_source": "",
-          "our_capability": "",
-          "competition_intensity": "",
-          "time_window": "",
-          "priority": "P0",
-          "priority_rationale": "Quadrant: grow_invest"
-        },
-        {
-          "name": "Exploit movistar_cl weakness: 5G Deployment: 6.0/100",
-          "description": "Competitor movistar_cl is weak in: 5G Deployment: 6.0/100",
-          "derived_from": [
-            "competitor_weakness",
-            "movistar_cl"
-          ],
-          "addressable_market": "N/A",
-          "addressable_market_source": "",
-          "our_capability": "",
-          "competition_intensity": "",
-          "time_window": "",
-          "priority": "P0",
-          "priority_rationale": "Quadrant: grow_invest"
-        },
-        {
-          "name": "Exploit movistar_cl weakness: Brand Strength: 7.0/100",
-          "description": "Competitor movistar_cl is weak in: Brand Strength: 7.0/100",
-          "derived_from": [
-            "competitor_weakness",
-            "movistar_cl"
           ],
           "addressable_market": "N/A",
           "addressable_market_source": "",
@@ -2992,7 +3726,7 @@
           "priority_rationale": "Quadrant: acquire_skills"
         }
       ],
-      "key_message": "SPAN matrix positions 23 opportunities: 21 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 21 grow/invest items for maximum strategic impact."
+      "key_message": "SPAN matrix positions 30 opportunities: 28 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 28 grow/invest items for maximum strategic impact."
     }
   },
   "data_quality": {

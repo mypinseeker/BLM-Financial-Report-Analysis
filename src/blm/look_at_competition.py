@@ -822,16 +822,20 @@ def _assess_network_status(db, operator_id, target_period):
 def _derive_strengths_weaknesses(comp_scores, display_name):
     """Derive strengths and weaknesses from competitive scores.
 
-    Dimensions with score > 70 are strengths; < 40 are weaknesses.
+    Scores are assumed to be on a 0-100 scale (normalised upstream by
+    _group_scores_by_operator). Dimensions > 70 → strength; < 40 → weakness.
     """
     strengths = []
     weaknesses = []
 
     for dimension, score in sorted(comp_scores.items()):
+        if score is None:
+            continue
+        label = f"{dimension}: {score:.1f}/100"
         if score > 70:
-            strengths.append(f"{dimension}: {score}/100")
+            strengths.append(label)
         elif score < 40:
-            weaknesses.append(f"{dimension}: {score}/100")
+            weaknesses.append(label)
 
     return strengths, weaknesses
 
@@ -895,12 +899,12 @@ def _infer_future_actions(
             f"network buildout, aggressive pricing, and customer acquisition."
         )
 
-    # Low network scores => investment needed
+    # Low network scores => investment needed (scores already normalised to 0-100)
     net_cov = comp_scores.get("Network Coverage", 0)
     if net_cov > 0 and net_cov < 50:
         actions.append(
             f"{display_name} will need significant network investment "
-            f"(coverage score: {net_cov}/100)."
+            f"(coverage score: {net_cov:.0f}/100)."
         )
 
     # If no specific actions could be inferred
@@ -1201,16 +1205,39 @@ def _group_scores_by_operator(comp_scores):
     """Group competitive score records by operator_id.
 
     Returns {operator_id: {dimension: score}}.
+    Normalises dimension names (snake_case → Title Case) and deduplicates.
+    Auto-detects 0-10 vs 0-100 scale and normalises to 0-100.
     """
-    result = {}
+    raw = {}
     for row in comp_scores:
         op_id = row.get("operator_id", "")
-        dim = row.get("dimension", "")
+        dim_raw = row.get("dimension", "")
         score = row.get("score", 0)
-        if op_id not in result:
-            result[op_id] = {}
-        result[op_id][dim] = score
-    return result
+        if op_id not in raw:
+            raw[op_id] = {}
+        # Normalise dimension name: "brand_strength" → "Brand Strength"
+        dim = dim_raw.replace("_", " ").title()
+        # If duplicate after normalisation, keep the higher score
+        if dim in raw[op_id]:
+            raw[op_id][dim] = max(raw[op_id][dim], score)
+        else:
+            raw[op_id][dim] = score
+
+    # Auto-detect scale: if max score across all operators <= 10, assume 0-10
+    all_values = [
+        s for op_scores in raw.values()
+        for s in op_scores.values()
+        if s is not None
+    ]
+    scale_factor = 10 if (all_values and max(all_values) <= 10) else 1
+
+    if scale_factor != 1:
+        for op_id in raw:
+            for dim in raw[op_id]:
+                if raw[op_id][dim] is not None:
+                    raw[op_id][dim] = raw[op_id][dim] * scale_factor
+
+    return raw
 
 
 def _safe_intelligence_events(db, market=None, days_back=730):
