@@ -1,0 +1,306 @@
+{
+  "target_market": "chile",
+  "reference_market": "germany",
+  "target_operator": "entel_cl",
+  "reference_operator": "vodafone_germany",
+  "period": "CQ4_2025",
+  "timestamp": "2026-02-12T13:19:30.562770",
+  "data_audit": [
+    {
+      "table_name": "financial_quarterly",
+      "operator_id": "entel_cl",
+      "row_count": 8,
+      "reference_row_count": 8,
+      "field_completeness": 1.0,
+      "reference_completeness": 0.889,
+      "quarter_count": 8,
+      "reference_quarter_count": 8,
+      "score": 100.0
+    },
+    {
+      "table_name": "subscriber_quarterly",
+      "operator_id": "entel_cl",
+      "row_count": 8,
+      "reference_row_count": 8,
+      "field_completeness": 0.125,
+      "reference_completeness": 0.125,
+      "quarter_count": 8,
+      "reference_quarter_count": 8,
+      "score": 69.4
+    },
+    {
+      "table_name": "network_infrastructure",
+      "operator_id": "entel_cl",
+      "row_count": 4,
+      "reference_row_count": 1,
+      "field_completeness": 0.0,
+      "reference_completeness": 0.0,
+      "quarter_count": 4,
+      "reference_quarter_count": 1,
+      "score": 65.0
+    },
+    {
+      "table_name": "tariffs",
+      "operator_id": "entel_cl",
+      "row_count": 60,
+      "reference_row_count": 124,
+      "field_completeness": 0.6,
+      "reference_completeness": 0.6,
+      "quarter_count": 5,
+      "reference_quarter_count": 7,
+      "score": 58.2
+    },
+    {
+      "table_name": "intelligence_events",
+      "operator_id": "entel_cl",
+      "row_count": 36,
+      "reference_row_count": 36,
+      "field_completeness": 1.0,
+      "reference_completeness": 1.0,
+      "quarter_count": 0,
+      "reference_quarter_count": 0,
+      "score": 75.0
+    },
+    {
+      "table_name": "competitive_scores",
+      "operator_id": "entel_cl",
+      "row_count": 18,
+      "reference_row_count": 10,
+      "field_completeness": 0.667,
+      "reference_completeness": 0.667,
+      "quarter_count": 1,
+      "reference_quarter_count": 1,
+      "score": 88.3
+    },
+    {
+      "table_name": "macro_environment",
+      "operator_id": "entel_cl",
+      "row_count": 0,
+      "reference_row_count": 0,
+      "field_completeness": 0.0,
+      "reference_completeness": 0.0,
+      "quarter_count": 0,
+      "reference_quarter_count": 0,
+      "score": 0.0
+    },
+    {
+      "table_name": "earnings_call_highlights",
+      "operator_id": "entel_cl",
+      "row_count": 12,
+      "reference_row_count": 15,
+      "field_completeness": 0.25,
+      "reference_completeness": 0.25,
+      "quarter_count": 4,
+      "reference_quarter_count": 1,
+      "score": 65.8
+    }
+  ],
+  "data_score": 65.2,
+  "target_metrics": {
+    "pest_factor_count": 14,
+    "policy_opportunities": 4,
+    "policy_threats": 1,
+    "market_changes": 37,
+    "market_opportunities": 17,
+    "customer_segments": 5,
+    "appeals_dimensions": 8,
+    "competitor_deep_dives": 4,
+    "competitor_fields_filled": 16,
+    "segment_analyses": 5,
+    "exposure_points": 0,
+    "bmc_fields_filled": 9,
+    "swot_total": 53,
+    "strategy_count": 12,
+    "span_positions": 44,
+    "opportunity_items": 44,
+    "unique_sources": 36,
+    "estimated_pct": 5.0,
+    "total_data_points": 20
+  },
+  "reference_metrics": {
+    "pest_factor_count": 13,
+    "policy_opportunities": 4,
+    "policy_threats": 2,
+    "market_changes": 10,
+    "market_opportunities": 7,
+    "customer_segments": 7,
+    "appeals_dimensions": 8,
+    "competitor_deep_dives": 3,
+    "competitor_fields_filled": 12,
+    "segment_analyses": 5,
+    "exposure_points": 3,
+    "bmc_fields_filled": 9,
+    "swot_total": 26,
+    "strategy_count": 16,
+    "span_positions": 35,
+    "opportunity_items": 35,
+    "unique_sources": 14,
+    "estimated_pct": 5.0,
+    "total_data_points": 20
+  },
+  "analysis_dimensions": [
+    {
+      "dimension": "PEST Factors",
+      "target_value": 14,
+      "reference_value": 13,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Policy Opportunities",
+      "target_value": 4,
+      "reference_value": 4,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Policy Threats",
+      "target_value": 1,
+      "reference_value": 2,
+      "score_pct": 50.0,
+      "grade": "D",
+      "recommendation": "Low: 1 vs 2 in reference \u2014 enrich input data for better coverage"
+    },
+    {
+      "dimension": "Market Changes",
+      "target_value": 37,
+      "reference_value": 10,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Market Opportunities",
+      "target_value": 17,
+      "reference_value": 7,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Customer Segments",
+      "target_value": 5,
+      "reference_value": 7,
+      "score_pct": 71.4,
+      "grade": "B",
+      "recommendation": ""
+    },
+    {
+      "dimension": "APPEALS Dimensions",
+      "target_value": 8,
+      "reference_value": 8,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Competitor Deep Dives",
+      "target_value": 4,
+      "reference_value": 3,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Competitor Fields Filled",
+      "target_value": 16,
+      "reference_value": 12,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Segment Analyses",
+      "target_value": 5,
+      "reference_value": 5,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Exposure Points",
+      "target_value": 0,
+      "reference_value": 3,
+      "score_pct": 0.0,
+      "grade": "F",
+      "recommendation": "Missing: 0 vs 3 in reference \u2014 add data/events to populate this dimension"
+    },
+    {
+      "dimension": "BMC Fields Filled",
+      "target_value": 9,
+      "reference_value": 9,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "SWOT Total Items",
+      "target_value": 53,
+      "reference_value": 26,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Strategy Count",
+      "target_value": 12,
+      "reference_value": 16,
+      "score_pct": 75.0,
+      "grade": "B",
+      "recommendation": ""
+    },
+    {
+      "dimension": "SPAN Positions",
+      "target_value": 44,
+      "reference_value": 35,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Opportunity Items",
+      "target_value": 44,
+      "reference_value": 35,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    }
+  ],
+  "analysis_score": 87.3,
+  "provenance_dimensions": [
+    {
+      "dimension": "Unique Sources",
+      "target_value": 36,
+      "reference_value": 14,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Non-Estimated Data %",
+      "target_value": 95.0,
+      "reference_value": 95.0,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    },
+    {
+      "dimension": "Tracked Data Points",
+      "target_value": 20,
+      "reference_value": 20,
+      "score_pct": 100.0,
+      "grade": "A",
+      "recommendation": ""
+    }
+  ],
+  "provenance_score": 100.0,
+  "overall_score": 82.1,
+  "overall_grade": "B",
+  "top_recommendations": [
+    "[F] Analysis: Exposure Points \u2014 Missing: 0 vs 3 in reference \u2014 add data/events to populate this dimension",
+    "[F] Data: macro_environment \u2014 0 rows vs 0 \u2014 completeness 0%",
+    "[D] Analysis: Policy Threats \u2014 Low: 1 vs 2 in reference \u2014 enrich input data for better coverage"
+  ]
+}
