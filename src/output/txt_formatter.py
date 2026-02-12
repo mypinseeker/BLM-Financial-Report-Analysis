@@ -224,6 +224,38 @@ class BLMTxtFormatter:
             for w in weaknesses[:5]:
                 lines.append(f"    - {w}")
 
+        # Leadership
+        leadership = getattr(self_analysis, 'leadership_changes', [])
+        if leadership:
+            current = [e for e in leadership if e.get("is_current")]
+            if current:
+                lines.append("  [Leadership]")
+                for e in current[:6]:
+                    tenure = e.get("tenure_years")
+                    tenure_str = f" ({tenure:.0f}y)" if tenure else ""
+                    lines.append(f"    {e.get('name', '')}, {e.get('title', '')}{tenure_str}")
+
+        # Customer Perception
+        cp = getattr(self_analysis, 'customer_perception', {})
+        cp_summary = cp.get("summary", "") if isinstance(cp, dict) else ""
+        if cp_summary:
+            lines.append(f"  [Customer Perception] {cp_summary}")
+
+        # Performance Gap
+        perf_gap = getattr(self_analysis, 'performance_gap', '')
+        if perf_gap:
+            lines.append(f"  [Performance Gap] {perf_gap}")
+
+        # Opportunity Gap
+        opp_gap = getattr(self_analysis, 'opportunity_gap', '')
+        if opp_gap:
+            lines.append(f"  [Opportunity Gap] {opp_gap}")
+
+        # Strategic Review
+        strat_review = getattr(self_analysis, 'strategic_review', '')
+        if strat_review:
+            lines.append(f"  [Strategic Review] {strat_review}")
+
         lines.append(self._key_message(getattr(self_analysis, 'key_message', '')))
         return "\n".join(lines)
 

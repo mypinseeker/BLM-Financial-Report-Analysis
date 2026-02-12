@@ -1227,6 +1227,319 @@ def _synthesize_key_message(
 
 
 # ============================================================================
+# SelfInsight Field Builders
+# ============================================================================
+
+_TITLE_PRIORITY = {"CEO": 0, "CFO": 1, "CTO": 2, "COO": 3, "CMO": 4}
+
+
+def _title_sort_key(title: str) -> int:
+    """Sort executives by C-suite importance, others last."""
+    upper = title.upper()
+    for key, rank in _TITLE_PRIORITY.items():
+        if key in upper:
+            return rank
+    return 99
+
+
+def _build_leadership_changes(db: TelecomDatabase, target_operator: str) -> list[dict]:
+    """Build leadership_changes from executive data."""
+    try:
+        execs = db.get_executives(target_operator)
+    except Exception:
+        return []
+    result = []
+    for ex in execs:
+        title = ex.get("title", "")
+        tenure_years = None
+        start = ex.get("start_date")
+        if start:
+            try:
+                from datetime import date
+                start_dt = date.fromisoformat(str(start)[:10])
+                tenure_years = round((date.today() - start_dt).days / 365.25, 1)
+            except Exception:
+                pass
+        result.append({
+            "name": ex.get("name", ""),
+            "title": title,
+            "is_current": bool(ex.get("is_current", True)),
+            "start_date": start or "",
+            "background": ex.get("background", ""),
+            "tenure_years": tenure_years,
+        })
+    result.sort(key=lambda e: _title_sort_key(e["title"]))
+    return result
+
+
+def _build_talent_assessment(leadership: list[dict], target_scores: dict) -> dict:
+    """Assess talent quality from leadership roster + competitive capability scores."""
+    current = [e for e in leadership if e.get("is_current")]
+    c_suite = [e for e in current if any(
+        t in (e.get("title") or "").upper() for t in ("CEO", "CFO", "CTO", "COO", "CMO")
+    )]
+    tenures = [e["tenure_years"] for e in current if e.get("tenure_years") is not None]
+    avg_tenure = round(sum(tenures) / len(tenures), 1) if tenures else None
+
+    key_leaders = [f"{e['name']} ({e['title']})" for e in c_suite[:5]]
+
+    # Capability alignment from competitive scores
+    capability_dims = ["Customer Service", "Enterprise Solutions", "Digital Services"]
+    alignment_parts = []
+    for dim in capability_dims:
+        score = target_scores.get(dim)
+        if score is not None:
+            level = "strong" if score >= 70 else "adequate" if score >= 50 else "developing"
+            alignment_parts.append(f"{dim}: {level}")
+
+    # Overall assessment
+    if avg_tenure is not None and avg_tenure >= 3 and len(c_suite) >= 3:
+        assessment = "Stable, experienced leadership team"
+    elif avg_tenure is not None and avg_tenure < 1.5:
+        assessment = "Leadership team in transition — several recent appointments"
+    elif len(c_suite) >= 2:
+        assessment = "Adequate leadership coverage"
+    else:
+        assessment = "Limited executive visibility from available data"
+
+    return {
+        "c_suite_count": len(c_suite),
+        "avg_tenure_years": avg_tenure,
+        "key_leaders": key_leaders,
+        "capability_alignment": alignment_parts,
+        "assessment": assessment,
+    }
+
+
+def _build_customer_perception(
+    target_scores: dict, all_op_scores: dict, market: str,
+) -> dict:
+    """Assess customer perception from 3 perception-related competitive dimensions."""
+    focus_dims = ["Customer Service", "Brand Strength", "Pricing Competitiveness"]
+    breakdown = {}
+    verdicts = []
+
+    for dim in focus_dims:
+        t_score = target_scores.get(dim)
+        if t_score is None:
+            continue
+        # Market average (all operators for this dim)
+        others = [scores.get(dim) for op, scores in all_op_scores.items() if scores.get(dim) is not None]
+        if not others:
+            continue
+        mkt_avg = sum(others) / len(others)
+        gap = t_score - mkt_avg
+        if gap > 3:
+            verdict = "above average"
+        elif gap < -3:
+            verdict = "below average"
+        else:
+            verdict = "at average"
+        verdicts.append(verdict)
+        breakdown[dim] = {
+            "score": round(t_score, 1),
+            "market_avg": round(mkt_avg, 1),
+            "gap_pp": round(gap, 1),
+            "verdict": verdict,
+        }
+
+    # Overall
+    if verdicts:
+        above = verdicts.count("above average")
+        below = verdicts.count("below average")
+        if above > below:
+            overall = "positive"
+        elif below > above:
+            overall = "negative"
+        else:
+            overall = "mixed"
+    else:
+        overall = "insufficient data"
+
+    # Summary narrative
+    parts = []
+    for dim, info in breakdown.items():
+        sign = "+" if info["gap_pp"] >= 0 else ""
+        parts.append(f"{dim} {sign}{info['gap_pp']:.0f}pp vs market")
+    summary = "; ".join(parts) if parts else "No perception data available"
+
+    return {
+        "breakdown": breakdown,
+        "overall_verdict": overall,
+        "summary": summary,
+    }
+
+
+def _build_performance_gap(
+    target_scores: dict,
+    all_op_scores: dict,
+    market_comparison: list,
+    financial_health: dict,
+) -> str:
+    """Identify top performance gaps vs market leader."""
+    gaps = []
+
+    # Leader = first entry in market_comparison (sorted by revenue DESC)
+    leader = market_comparison[0] if market_comparison else {}
+    leader_id = leader.get("operator_id", "")
+
+    # EBITDA margin gap
+    target_margin = financial_health.get("ebitda_margin_pct")
+    leader_margin = leader.get("ebitda_margin_pct")
+    if target_margin is not None and leader_margin is not None and leader_id:
+        margin_gap = target_margin - leader_margin
+        if abs(margin_gap) > 0.5:
+            gaps.append(
+                f"EBITDA margin gap: {margin_gap:+.1f}pp vs leader "
+                f"({leader.get('display_name', leader_id)} at {leader_margin:.1f}%)"
+            )
+
+    # Revenue share gap
+    total_rev_all = sum(
+        c.get("total_revenue", 0) or 0 for c in market_comparison
+    )
+    if total_rev_all > 0:
+        target_comp = next(
+            (c for c in market_comparison if c.get("operator_id") == financial_health.get("operator_id")),
+            None,
+        )
+        # Find target by checking all entries
+        if target_comp is None and market_comparison:
+            target_rev = financial_health.get("total_revenue")
+            if target_rev:
+                target_comp = next(
+                    (c for c in market_comparison if abs((c.get("total_revenue") or 0) - target_rev) < 1),
+                    None,
+                )
+        leader_share = ((leader.get("total_revenue") or 0) / total_rev_all) * 100
+        if target_comp:
+            target_share = ((target_comp.get("total_revenue") or 0) / total_rev_all) * 100
+            share_gap = target_share - leader_share
+            if abs(share_gap) > 0.5:
+                gaps.append(f"Revenue share gap: {share_gap:+.1f}pp vs leader ({leader_share:.1f}%)")
+
+    # Weakest competitive score gaps vs leader
+    leader_scores = all_op_scores.get(leader_id, {})
+    score_gaps = []
+    for dim, t_val in target_scores.items():
+        l_val = leader_scores.get(dim)
+        if t_val is not None and l_val is not None:
+            score_gaps.append((dim, t_val - l_val))
+    score_gaps.sort(key=lambda x: x[1])
+    for dim, gap in score_gaps[:2]:
+        if gap < -2:
+            gaps.append(f"{dim}: {gap:+.0f}pp vs leader")
+
+    if not gaps:
+        return "No significant performance gaps identified from available data"
+    return "Top performance gaps: " + "; ".join(gaps[:3])
+
+
+def _build_opportunity_gap(
+    segment_analyses: list,
+    network: NetworkAnalysis,
+    market_comparison: list,
+    financial_health: dict,
+) -> str:
+    """Identify top opportunity gaps from segment health, network, and B2B."""
+    opps = []
+
+    # 1. Segment recovery opportunities
+    for seg in segment_analyses:
+        if seg.health_status in ("weakening", "critical"):
+            opps.append(f"{seg.segment_name} segment recovery (currently {seg.health_status})")
+
+    # 2. FTTH migration upside
+    fiber_hp = network.homepass_vs_connect.get("fiber_homepass_k") or 0
+    cable_hp = network.homepass_vs_connect.get("cable_homepass_k") or 0
+    if cable_hp > 0 and fiber_hp > 0:
+        ratio = fiber_hp / (fiber_hp + cable_hp)
+        if ratio < 0.5:
+            opps.append(f"FTTH migration upside (fiber only {ratio*100:.0f}% of homepass footprint)")
+    elif cable_hp > 0 and fiber_hp == 0:
+        opps.append("FTTH migration upside (no fiber homepass footprint yet)")
+
+    # 3. B2B revenue gap vs leader
+    if market_comparison:
+        leader = market_comparison[0]
+        leader_b2b = leader.get("b2b_revenue") or 0
+        # Find target
+        target_rev = financial_health.get("total_revenue")
+        target_comp = None
+        if target_rev:
+            target_comp = next(
+                (c for c in market_comparison if abs((c.get("total_revenue") or 0) - target_rev) < 1),
+                None,
+            )
+        if target_comp:
+            target_b2b = target_comp.get("b2b_revenue") or 0
+            if leader_b2b > 0 and target_b2b < leader_b2b * 0.8:
+                gap_pct = ((leader_b2b - target_b2b) / leader_b2b) * 100
+                opps.append(f"B2B revenue gap ({gap_pct:.0f}% below market leader)")
+
+    if not opps:
+        return "No significant opportunity gaps identified from available data"
+    return "Top opportunity gaps: " + "; ".join(opps[:3])
+
+
+def _build_strategic_review(
+    management_commentary: list,
+    financial_health: dict,
+    strengths: list,
+    weaknesses: list,
+    health_rating: str,
+    share_trends: dict,
+) -> str:
+    """Synthesize strategic review from management guidance + financial trajectory."""
+    parts = []
+
+    # 1. Management guidance
+    guidance = [c for c in management_commentary if c.get("type") == "guidance"]
+    if guidance:
+        stmt = guidance[0]["content"]
+        if len(stmt) > 200:
+            cut = stmt[:200]
+            last_period = cut.rfind(".")
+            stmt = cut[:last_period + 1] if last_period > 80 else cut.rstrip() + "..."
+        parts.append(f"Management outlook: {stmt}")
+
+    # 2. Financial trajectory
+    rev_trend = "growing" if financial_health.get("revenue_growing") else "flat/declining"
+    margin = financial_health.get("ebitda_margin_pct")
+    if margin is not None:
+        margin_qual = "strong" if margin >= 35 else "healthy" if margin >= 28 else "under pressure"
+        parts.append(f"Revenue trajectory {rev_trend}, margins {margin_qual} ({margin:.1f}%)")
+    elif financial_health:
+        parts.append(f"Revenue trajectory {rev_trend}")
+
+    # 3. Execution assessment from strengths/weaknesses balance
+    s_count = len(strengths)
+    w_count = len(weaknesses)
+    if s_count > w_count + 1:
+        parts.append("Execution momentum positive — strengths outweigh weaknesses")
+    elif w_count > s_count + 1:
+        parts.append("Execution under pressure — weaknesses outnumber strengths")
+    else:
+        parts.append("Execution balanced — strengths and weaknesses roughly even")
+
+    # 4. Key risks (from top weakness)
+    if weaknesses:
+        parts.append(f"Primary risk: {weaknesses[0]}")
+
+    # Fallback when no management commentary
+    if not guidance:
+        health_desc = {
+            "healthy": "Overall healthy position",
+            "stable": "Stable operations with room for improvement",
+            "concerning": "Concerning trends requiring strategic attention",
+            "critical": "Critical position requiring urgent intervention",
+        }
+        parts.insert(0, health_desc.get(health_rating, "Assessment based on available data"))
+
+    return ". ".join(parts)
+
+
+# ============================================================================
 # Main Entry Point
 # ============================================================================
 
@@ -1415,6 +1728,39 @@ def analyze_self(
             key_message += f"; Management outlook: {outlook}"
 
     # ------------------------------------------------------------------
+    # 12b. Populate 6 SelfInsight fields
+    # ------------------------------------------------------------------
+    # Restructure competitive scores into {operator_id: {dim: score}}
+    all_op_scores: dict[str, dict[str, float]] = {}
+    try:
+        raw_scores = db.get_competitive_scores(market, latest_cq)
+        all_vals = [r.get("score") for r in raw_scores if r.get("score") is not None]
+        sf = 10 if (all_vals and max(all_vals) <= 10) else 1
+        for row in raw_scores:
+            op = row.get("operator_id", "")
+            dim = row.get("dimension", "").replace("_", " ").title()
+            score = row.get("score")
+            if op and dim and score is not None:
+                all_op_scores.setdefault(op, {})[dim] = score * sf
+    except Exception:
+        pass
+    target_scores = all_op_scores.get(target_operator, {})
+
+    leadership_changes = _build_leadership_changes(db, target_operator)
+    talent_assessment = _build_talent_assessment(leadership_changes, target_scores)
+    customer_perception = _build_customer_perception(target_scores, all_op_scores, market)
+    performance_gap = _build_performance_gap(
+        target_scores, all_op_scores, comparison, financial_health,
+    )
+    opportunity_gap = _build_opportunity_gap(
+        segment_analyses, network, comparison, financial_health,
+    )
+    strategic_review = _build_strategic_review(
+        management_commentary, financial_health,
+        strengths, weaknesses, health_rating, share_trends,
+    )
+
+    # ------------------------------------------------------------------
     # 13. Assemble SelfInsight
     # ------------------------------------------------------------------
     return SelfInsight(
@@ -1424,11 +1770,17 @@ def analyze_self(
         share_trends=share_trends,
         segment_analyses=segment_analyses,
         network=network,
+        customer_perception=customer_perception,
+        leadership_changes=leadership_changes,
+        talent_assessment=talent_assessment,
         bmc=bmc,
         exposure_points=exposure_points,
         strengths=strengths,
         weaknesses=weaknesses,
         management_commentary=management_commentary,
+        performance_gap=performance_gap,
+        opportunity_gap=opportunity_gap,
+        strategic_review=strategic_review,
         health_rating=health_rating,
         key_message=key_message,
     )
