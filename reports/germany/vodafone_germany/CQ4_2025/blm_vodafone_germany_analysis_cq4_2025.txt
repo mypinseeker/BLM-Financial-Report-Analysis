@@ -76,18 +76,27 @@
     Strategy: Margin optimization / cost transformation; subscriber acquisition focus; 5G network leadership
     Business Model: Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile
     Problems: Competitive gap in Enterprise Solutions, Competitive gap in Product Innovation, Revenue under pressure (declining trend)
+    Org: CTO: Mallik Rao (Telefónica Group); CFO: Markus Rolle (Finance veteran); CEO: Markus Haas (CFO O2 Germany)
+    Ecosystem: Network vendor: Nokia + Samsung
+    Control Points: Market leadership in 5G Deployment; Market leadership in Network Coverage; Market leadership in Pricing Competitiveness
   [deutsche_telekom]
     Strengths: 5G Deployment: score 95 (market avg 75), Brand Strength: score 90 (market avg 78), Customer Service: score 82 (market avg 74)
     Weaknesses: Pricing Competitiveness: score 65 (market avg 78)
     Strategy: Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push; 5G network leadership
     Business Model: Mobile-centric with fixed complement; service-revenue dominant; high-margin profile
     Problems: Competitive gap in Pricing Competitiveness
+    Org: CEO: Srini Gopalan (DT Board, Consumer); CFO: Christian Illek (McKinsey partner); CTO: Claudia Nemat (Tech/Innovation)
+    Ecosystem: Network vendor: Ericsson + Huawei (legacy)
+    Control Points: Market leadership in 5G Deployment; Market leadership in Network Coverage; Market leadership in Enterprise Solutions
   [one_and_one]
     Strengths: Pricing Competitiveness: score 90 (market avg 78)
     Weaknesses: 5G Deployment: score 40 (market avg 75), Brand Strength: score 65 (market avg 78), Digital Services: score 68 (market avg 74)
     Strategy: Market share expansion (investing for growth); subscriber acquisition focus
     Business Model: Convergent (mobile + fixed); service-revenue dominant; low-margin / scale-focused
     Problems: Competitive gap in 5G Deployment, Competitive gap in Brand Strength, Competitive gap in Digital Services
+    Org: CTO: Karsten Pradel (Network expert); CFO: Markus Huhn (United Internet); CEO: Ralph Dommermuth (创始人)
+    Ecosystem: Network vendor: OpenRAN (Rakuten Symphony)
+    Control Points: Market leadership in Pricing Competitiveness; Market leadership in Sustainability; Scale advantage (12.5m mobile subs)
 
   → Key Message: In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors.
 
@@ -115,6 +124,14 @@
   [Weaknesses]
     - Customer Service: score 70 (market avg 74)
     - Pricing Competitiveness: score 72 (market avg 78)
+  [Leadership]
+    Marcel de Groot, CEO (2y)
+    Anna Googel, CFO (4y)
+    Gerhard Mack, CTO (8y)
+  [Customer Perception] Customer Service -4pp vs market; Brand Strength +4pp vs market; Pricing Competitiveness -6pp vs market
+  [Performance Gap] Top performance gaps: EBITDA margin gap: -5.9pp vs leader (Deutsche Telekom at 42.1%); Revenue share gap: -25.2pp vs leader (50.3%); 5G Deployment: -19pp vs leader
+  [Opportunity Gap] Top opportunity gaps: FTTH migration upside (fiber only 6% of homepass footprint); B2B revenue gap (58% below market leader)
+  [Strategic Review] Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。. Revenue trajectory growing, margins strong (36.2%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Customer Service: score 70 (market avg 74)
 
   → Key Message: Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。
 

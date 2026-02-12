@@ -3,7 +3,7 @@
     "target_operator": "vodafone_germany",
     "market": "germany",
     "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-12T09:28:01.655410",
+    "generated_at": "2026-02-12T16:25:41.337079",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -1046,13 +1046,21 @@
           ],
           "new_product_pipeline": [],
           "growth_strategy": "Margin optimization / cost transformation; subscriber acquisition focus; 5G network leadership",
-          "supply_chain_status": "",
-          "ecosystem_partners": [],
-          "core_control_points": [],
+          "supply_chain_status": "Primary vendor: Nokia + Samsung; 55% virtualized; 5G SA: Commercial since 2025-03; Core: Nokia",
+          "ecosystem_partners": [
+            "Network vendor: Nokia + Samsung"
+          ],
+          "core_control_points": [
+            "Market leadership in 5G Deployment",
+            "Market leadership in Network Coverage",
+            "Market leadership in Pricing Competitiveness",
+            "Own fiber infrastructure (800k homes)",
+            "Own cable infrastructure (2500k homes)"
+          ],
           "business_model": "Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile",
-          "org_structure": "",
-          "incentive_system": "",
-          "talent_culture": "",
+          "org_structure": "CTO: Mallik Rao (Telefónica Group); CFO: Markus Rolle (Finance veteran); CEO: Markus Haas (CFO O2 Germany)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "3 C-suite leaders; transitioning to digital culture",
           "ma_activity": [],
           "strengths": [
             "5G Deployment: score 88 (market avg 75)",
@@ -1170,13 +1178,21 @@
           ],
           "new_product_pipeline": [],
           "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push; 5G network leadership",
-          "supply_chain_status": "",
-          "ecosystem_partners": [],
-          "core_control_points": [],
+          "supply_chain_status": "Primary vendor: Ericsson + Huawei (legacy); 70% virtualized; 5G SA: Commercial since 2024-09; Core: Ericsson + Nokia",
+          "ecosystem_partners": [
+            "Network vendor: Ericsson + Huawei (legacy)"
+          ],
+          "core_control_points": [
+            "Market leadership in 5G Deployment",
+            "Market leadership in Network Coverage",
+            "Market leadership in Enterprise Solutions",
+            "Market leadership in Network Quality",
+            "Market leadership in Brand Strength"
+          ],
           "business_model": "Mobile-centric with fixed complement; service-revenue dominant; high-margin profile",
-          "org_structure": "",
-          "incentive_system": "",
-          "talent_culture": "",
+          "org_structure": "CEO: Srini Gopalan (DT Board, Consumer); CFO: Christian Illek (McKinsey partner); CTO: Claudia Nemat (Tech/Innovation)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "3 C-suite leaders; tech-forward culture",
           "ma_activity": [],
           "strengths": [
             "5G Deployment: score 95 (market avg 75)",
@@ -1298,13 +1314,19 @@
           ],
           "new_product_pipeline": [],
           "growth_strategy": "Market share expansion (investing for growth); subscriber acquisition focus",
-          "supply_chain_status": "",
-          "ecosystem_partners": [],
-          "core_control_points": [],
+          "supply_chain_status": "Primary vendor: OpenRAN (Rakuten Symphony); 100% virtualized; 5G SA: Commercial, OpenRAN first-mover; Core: Mavenir (cloud-native)",
+          "ecosystem_partners": [
+            "Network vendor: OpenRAN (Rakuten Symphony)"
+          ],
+          "core_control_points": [
+            "Market leadership in Pricing Competitiveness",
+            "Market leadership in Sustainability",
+            "Scale advantage (12.5m mobile subs)"
+          ],
           "business_model": "Convergent (mobile + fixed); service-revenue dominant; low-margin / scale-focused",
-          "org_structure": "",
-          "incentive_system": "",
-          "talent_culture": "",
+          "org_structure": "CTO: Karsten Pradel (Network expert); CFO: Markus Huhn (United Internet); CEO: Ralph Dommermuth (创始人)",
+          "incentive_system": "Growth and market share targets",
+          "talent_culture": "3 C-suite leaders; transitioning to digital culture",
           "ma_activity": [],
           "strengths": [
             "Pricing Competitiveness: score 90 (market avg 78)"
@@ -1628,10 +1650,56 @@
               "mobile_churn_pct": 0.95
             }
           },
-          "attributions": [],
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone completes 1&1 customer migration: 12M users on network",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            }
+          ],
           "health_status": "stable",
           "key_message": "Mobile service revenue at 1,520M; up 2.8% YoY; ARPU 12.8",
-          "action_required": ""
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
         },
         {
           "segment_name": "Fixed Broadband",
@@ -1747,10 +1815,38 @@
               "broadband_fiber_k": 900.0
             }
           },
-          "attributions": [],
+          "attributions": [
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone restructures cable TV frequencies nationwide",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone restructures cable TV frequencies nationwide",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone restructures cable TV frequencies nationwide",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            }
+          ],
           "health_status": "stable",
           "key_message": "Fixed service revenue 795.0M; growth -1.1% YoY; Fiber subs 1480K",
-          "action_required": ""
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
         },
         {
           "segment_name": "B2B",
@@ -1822,10 +1918,56 @@
               "b2b_customers_k": 63.0
             }
           },
-          "attributions": [],
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone completes Skaylink acquisition for €175M",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone completes Skaylink acquisition for €175M",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            }
+          ],
           "health_status": "strong",
           "key_message": "B2B revenue 520.0M; growth +8.5% YoY; 16.8% of total revenue",
-          "action_required": ""
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
         },
         {
           "segment_name": "TV/Convergence",
@@ -1928,10 +2070,47 @@
               "fmc_penetration_pct": 40.2
             }
           },
-          "attributions": [],
+          "attributions": [
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone restructures cable TV frequencies nationwide",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone restructures cable TV frequencies nationwide",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            },
+            {
+              "attribution_type": "market_change",
+              "description": "Vodafone restructures cable TV frequencies nationwide",
+              "confidence": "medium",
+              "evidence": [
+                "Intelligence: market data"
+              ],
+              "source": "intelligence_event"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "fmc_subscribers increased 2.1% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: fmc_subscribers = 4900.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
           "health_status": "stable",
           "key_message": "TV subscribers 7740K; FMC 4900K; FMC penetration 49.3%",
-          "action_required": ""
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
         },
         {
           "segment_name": "Wholesale",
@@ -1965,10 +2144,47 @@
             ]
           },
           "competitor_comparison": {},
-          "attributions": [],
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: Management"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 18.8% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 380.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
           "health_status": "strong",
           "key_message": "Wholesale revenue 380.0M; 12.3% of total",
-          "action_required": ""
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
         }
       ],
       "network": {
@@ -1987,7 +2203,14 @@
           "5g_base_stations": 18500,
           "virtualization_pct": 45
         },
-        "controlled_vs_resale": {},
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "cable",
+            "fiber",
+            "mobile"
+          ],
+          "summary": "Fully owned cable-HFC network (largest in Germany ~24M homes passed); fiber via JV with Altice (FibreConnect); mobile own-network. ~95% self-built infrastructure, ~5% wholesale/resale."
+        },
         "coverage": {
           "5g": 92.0,
           "4g": 99.5
@@ -1995,17 +2218,80 @@
         "quality_scores": {},
         "homepass_vs_connect": {
           "fiber_homepass_k": 1500.0,
-          "cable_homepass_k": 24000.0
+          "cable_homepass_k": 24000.0,
+          "fiber_connected_k": 1480.0,
+          "cable_connected_k": 6980.0,
+          "fiber_penetration_pct": 98.7,
+          "cable_penetration_pct": 29.1
         },
-        "evolution_strategy": {},
+        "evolution_strategy": {
+          "data_signals": [
+            "5G SA: Testing, planned 2026",
+            "Cable-dominant, fiber transition underway"
+          ],
+          "recent_tech_initiatives": [
+            "Vodafone restructures cable TV frequencies nationwide",
+            "Vodafone restructures cable TV frequencies nationwide",
+            "Vodafone restructures cable TV frequencies nationwide"
+          ],
+          "summary": "DOCSIS 3.1→4.0 cable upgrade path for 1 Gbps+; parallel FTTH deployment via FibreConnect JV targeting 7M homes by 2028; 5G NSA rollout on 3.6 GHz."
+        },
         "investment_direction": "stable",
-        "vs_competitors": "",
-        "consumer_impact": "",
-        "b2b_impact": "",
-        "cost_impact": ""
+        "vs_competitors": "5G: behind Telefonica O2 Germany by 6pp; Fiber: 1.9x more homepass than Telefonica O2 Germany; 5G: behind Deutsche Telekom by 5pp; Fiber: 5.7x less homepass than Deutsche Telekom",
+        "consumer_impact": "Strong 5G coverage (92.0%); Cable-dominant broadband mix",
+        "b2b_impact": "Edge computing: 12 nodes; IoT connections: 3000K; B2B revenue share: 17%",
+        "cost_impact": "High capex intensity (25.9%); Dual fixed-network cost (fiber + cable)"
       },
-      "customer_perception": {},
-      "leadership_changes": [],
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 70.0,
+            "market_avg": 73.5,
+            "gap_pp": -3.5,
+            "verdict": "below average"
+          },
+          "Brand Strength": {
+            "score": 82.0,
+            "market_avg": 78.0,
+            "gap_pp": 4.0,
+            "verdict": "above average"
+          },
+          "Pricing Competitiveness": {
+            "score": 72.0,
+            "market_avg": 78.0,
+            "gap_pp": -6.0,
+            "verdict": "below average"
+          }
+        },
+        "overall_verdict": "negative",
+        "summary": "Customer Service -4pp vs market; Brand Strength +4pp vs market; Pricing Competitiveness -6pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Marcel de Groot",
+          "title": "CEO",
+          "is_current": true,
+          "start_date": "2023-09-01",
+          "background": "CFO VF Netherlands",
+          "tenure_years": 2.5
+        },
+        {
+          "name": "Anna Googel",
+          "title": "CFO",
+          "is_current": true,
+          "start_date": "2022-01-01",
+          "background": "Internal promotion",
+          "tenure_years": 4.1
+        },
+        {
+          "name": "Gerhard Mack",
+          "title": "CTO",
+          "is_current": true,
+          "start_date": "2018-04-01",
+          "background": "Network veteran",
+          "tenure_years": 7.9
+        }
+      ],
       "bmc": {
         "key_partners": [
           "Network equipment vendors (Ericsson, Nokia)",
@@ -2074,11 +2360,25 @@
           "Device sales and financing"
         ]
       },
-      "org_culture": "",
-      "talent_assessment": {},
-      "performance_gap": "",
-      "opportunity_gap": "",
-      "strategic_review": "",
+      "org_culture": "Stable leadership team (avg tenure >3 years); High-investment posture; Moderate strategic activity (3 recent initiatives); Transformation-oriented culture under Vodafone Group direction; customer-centricity push via NPS programs; agile transformation in digital operations; German engineering tradition meets UK group culture.",
+      "talent_assessment": {
+        "c_suite_count": 3,
+        "avg_tenure_years": 4.8,
+        "key_leaders": [
+          "Marcel de Groot (CEO)",
+          "Anna Googel (CFO)",
+          "Gerhard Mack (CTO)"
+        ],
+        "capability_alignment": [
+          "Customer Service: strong",
+          "Enterprise Solutions: strong",
+          "Digital Services: strong"
+        ],
+        "assessment": "Stable, experienced leadership team"
+      },
+      "performance_gap": "Top performance gaps: EBITDA margin gap: -5.9pp vs leader (Deutsche Telekom at 42.1%); Revenue share gap: -25.2pp vs leader (50.3%); 5G Deployment: -19pp vs leader",
+      "opportunity_gap": "Top opportunity gaps: FTTH migration upside (fiber only 6% of homepass footprint); B2B revenue gap (58% below market leader)",
+      "strategic_review": "Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。. Revenue trajectory growing, margins strong (36.2%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Customer Service: score 70 (market avg 74)",
       "management_commentary": [
         {
           "segment": "germany_b2b",
