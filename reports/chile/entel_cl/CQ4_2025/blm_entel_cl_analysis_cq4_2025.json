@@ -3,7 +3,7 @@
     "target_operator": "entel_cl",
     "market": "chile",
     "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-11T22:47:52.641279",
+    "generated_at": "2026-02-12T06:27:17.175326",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -1648,7 +1648,7 @@
           },
           "attributions": [],
           "health_status": "strong",
-          "key_message": "Mobile service revenue at EUR 538000.0M; up 6.2% YoY; ARPU EUR 9500.0",
+          "key_message": "Mobile service revenue at 538000.0M; up 6.2% YoY; ARPU 9500.0",
           "action_required": ""
         },
         {
@@ -1772,7 +1772,7 @@
           },
           "attributions": [],
           "health_status": "strong",
-          "key_message": "Fixed service revenue EUR 128000.0M; growth +3.2% YoY; Fiber subs 440K",
+          "key_message": "Fixed service revenue 128000.0M; growth +3.2% YoY; Fiber subs 440K",
           "action_required": ""
         },
         {
@@ -1852,7 +1852,7 @@
           },
           "attributions": [],
           "health_status": "strong",
-          "key_message": "B2B revenue EUR 66000.0M; growth +5.0% YoY; 8.1% of total revenue",
+          "key_message": "B2B revenue 66000.0M; growth +5.0% YoY; 8.1% of total revenue",
           "action_required": ""
         },
         {
@@ -2000,7 +2000,7 @@
           "competitor_comparison": {},
           "attributions": [],
           "health_status": "strong",
-          "key_message": "Wholesale revenue EUR 19000.0M; 2.3% of total",
+          "key_message": "Wholesale revenue 19000.0M; 2.3% of total",
           "action_required": ""
         }
       ],
@@ -2170,12 +2170,10 @@
         "Network Quality: score 90 (market avg 68)",
         "Product Innovation: score 70 (market avg 65)",
         "Sustainability: score 70 (market avg 58)",
-        "brand_strength: score 90 (market avg 72)",
-        "customer_experience: score 80 (market avg 65)",
-        "financial_strength: score 90 (market avg 65)",
-        "innovation: score 70 (market avg 65)",
-        "market_share: score 90 (market avg 68)",
-        "network_quality: score 90 (market avg 68)",
+        "Customer Experience: score 80 (market avg 65)",
+        "Financial Strength: score 90 (market avg 65)",
+        "Innovation: score 70 (market avg 65)",
+        "Market Share: score 90 (market avg 68)",
         "Strong EBITDA margin at 30.0%",
         "Revenue on growth trajectory",
         "Dominant market share at 58.3%",
@@ -2183,12 +2181,11 @@
       ],
       "weaknesses": [
         "Pricing Competitiveness: score 60 (market avg 70)",
-        "pricing_competitiveness: score 60 (market avg 70)",
         "5G coverage gap at only 65.0%"
       ],
       "exposure_points": [],
       "health_rating": "healthy",
-      "key_message": "Ranked #1 of 5 operators in market; revenue EUR 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc"
+      "key_message": "Ranked #1 of 5 operators in market; revenue CLP 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc"
     },
     "swot": {
       "strengths": [
@@ -2200,12 +2197,10 @@
         "Network Quality: score 90 (market avg 68)",
         "Product Innovation: score 70 (market avg 65)",
         "Sustainability: score 70 (market avg 58)",
-        "brand_strength: score 90 (market avg 72)",
-        "customer_experience: score 80 (market avg 65)",
-        "financial_strength: score 90 (market avg 65)",
-        "innovation: score 70 (market avg 65)",
-        "market_share: score 90 (market avg 68)",
-        "network_quality: score 90 (market avg 68)",
+        "Customer Experience: score 80 (market avg 65)",
+        "Financial Strength: score 90 (market avg 65)",
+        "Innovation: score 70 (market avg 65)",
+        "Market Share: score 90 (market avg 68)",
         "Strong EBITDA margin at 30.0%",
         "Revenue on growth trajectory",
         "Dominant market share at 58.3%",
@@ -2213,7 +2208,6 @@
       ],
       "weaknesses": [
         "Pricing Competitiveness: score 60 (market avg 70)",
-        "pricing_competitiveness: score 60 (market avg 70)",
         "5G coverage gap at only 65.0%"
       ],
       "opportunities": [
@@ -2247,8 +2241,7 @@
       ],
       "wo_strategies": [
         "Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Address weakness 'pricing_competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
-        "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'."
+        "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'."
       ],
       "st_strategies": [
         "Use strength '5G Deployment: score 80 (market avg 65)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
@@ -2258,10 +2251,9 @@
       ],
       "wt_strategies": [
         "Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Mitigate weakness 'pricing_competitiveness: score 60 (market avg 70)' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'.",
-        "Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'WOM Chile revenue growth 6.9% YoY'."
+        "Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'."
       ],
-      "key_message": "SWOT analysis identifies 18 strengths, 3 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is offensive (SO-dominant)."
+      "key_message": "SWOT analysis identifies 16 strengths, 2 weaknesses, 9 opportunities, and 10 threats. The recommended strategic posture is offensive (SO-dominant)."
     },
     "opportunities": {
       "span_positions": [
@@ -2632,22 +2624,6 @@
           "quadrant": "acquire_skills",
           "recommended_strategy": "Build missing capabilities before committing major resources.",
           "bubble_size": 1.0
-        },
-        {
-          "opportunity_name": "WO-3",
-          "market_size_score": 5.0,
-          "market_growth_score": 5.0,
-          "profit_potential_score": 5.0,
-          "strategic_value_score": 6,
-          "market_attractiveness": 5.2,
-          "market_share_score": 5.0,
-          "product_fit_score": 4,
-          "brand_channel_score": 5.0,
-          "tech_capability_score": 5.0,
-          "competitive_position": 4.75,
-          "quadrant": "acquire_skills",
-          "recommended_strategy": "Build missing capabilities before committing major resources.",
-          "bubble_size": 1.0
         }
       ],
       "grow_invest": [
@@ -2675,8 +2651,7 @@
       ],
       "acquire_skills": [
         "WO-1",
-        "WO-2",
-        "WO-3"
+        "WO-2"
       ],
       "harvest": [],
       "avoid_exit": [],
@@ -3004,21 +2979,7 @@
         },
         {
           "name": "WO-2",
-          "description": "Address weakness 'pricing_competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
-          "derived_from": [
-            "swot_wo_strategy"
-          ],
-          "addressable_market": "N/A",
-          "addressable_market_source": "",
-          "our_capability": "",
-          "competition_intensity": "",
-          "time_window": "",
-          "priority": "P1",
-          "priority_rationale": "Quadrant: acquire_skills"
-        },
-        {
-          "name": "WO-3",
-          "description": "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
+          "description": "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
           "derived_from": [
             "swot_wo_strategy"
           ],
@@ -3031,7 +2992,7 @@
           "priority_rationale": "Quadrant: acquire_skills"
         }
       ],
-      "key_message": "SPAN matrix positions 24 opportunities: 21 grow/invest, 3 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 21 grow/invest items for maximum strategic impact."
+      "key_message": "SPAN matrix positions 23 opportunities: 21 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 21 grow/invest items for maximum strategic impact."
     }
   },
   "data_quality": {
