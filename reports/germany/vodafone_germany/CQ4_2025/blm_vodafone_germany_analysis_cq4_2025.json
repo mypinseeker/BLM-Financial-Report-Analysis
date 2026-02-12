@@ -2,8 +2,8 @@
   "meta": {
     "target_operator": "vodafone_germany",
     "market": "germany",
-    "analysis_period": "unknown",
-    "generated_at": "2026-02-12T09:02:40.666323",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-12T09:28:01.655410",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -145,7 +145,7 @@
             "dimension_name": "Society",
             "factor_name": "5G Adoption Rate",
             "current_status": "5G adoption at 56.0% of mobile subscribers",
-            "trend": "5G adoption trend: improving (44.0% -> 56.0%)",
+            "trend": "5G adoption trend: improving (28.0% -> 56.0%)",
             "trend_direction": "improving",
             "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
             "company_impact": "5G adoption growth supports premium pricing and new service revenue for vodafone_germany",
@@ -163,7 +163,7 @@
             "dimension_name": "Society",
             "factor_name": "Fiber Broadband Penetration",
             "current_status": "Fiber penetration at 26.0%",
-            "trend": "Fiber penetration trend: improving (20.0% -> 26.0%)",
+            "trend": "Fiber penetration trend: improving (12.0% -> 26.0%)",
             "trend_direction": "improving",
             "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
             "company_impact": "Fiber migration presents both investment challenge and growth opportunity for vodafone_germany",
@@ -804,7 +804,7 @@
       ],
       "customer_value_migration": "Value migration is mixed: some segments trending up while price-sensitive segments face pressure. Differentiated strategy by segment recommended.",
       "market_outlook": "favorable",
-      "key_message": "Germany telecom market totals EUR 12327.0M in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats."
+      "key_message": "Germany telecom market totals EUR 12.3B in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats."
     },
     "competition": {
       "five_forces": {
@@ -820,7 +820,7 @@
             },
             {
               "name": "Market concentration",
-              "description": "Top operator holds 50% of market revenue (total: 12327M EUR)",
+              "description": "Top operator holds 50% of market revenue (total: EUR 12.3B)",
               "impact": "high",
               "trend": "stable"
             },
@@ -1006,6 +1006,7 @@
             "mobile_churn_pct": 0.9,
             "mobile_arpu": 10.8,
             "broadband_total_k": 2400.0,
+            "broadband_fiber_k": 550.0,
             "broadband_net_adds_k": 8.0,
             "tv_total_k": 570.0,
             "mobile_trend": "growing",
@@ -1036,13 +1037,19 @@
               "virtualization_pct": 55
             }
           },
-          "product_portfolio": [],
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions",
+            "Digital services"
+          ],
           "new_product_pipeline": [],
-          "growth_strategy": "",
+          "growth_strategy": "Margin optimization / cost transformation; subscriber acquisition focus; 5G network leadership",
           "supply_chain_status": "",
           "ecosystem_partners": [],
           "core_control_points": [],
-          "business_model": "",
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile",
           "org_structure": "",
           "incentive_system": "",
           "talent_culture": "",
@@ -1056,7 +1063,11 @@
             "Enterprise Solutions: score 68 (market avg 74)",
             "Product Innovation: score 70 (market avg 76)"
           ],
-          "problems": [],
+          "problems": [
+            "Competitive gap in Enterprise Solutions",
+            "Competitive gap in Product Innovation",
+            "Revenue under pressure (declining trend)"
+          ],
           "likely_future_actions": [
             "Telefonica O2 Germany may pursue cost optimization or strategic pivot given declining revenue trend.",
             "Telefonica O2 Germany is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
@@ -1118,6 +1129,7 @@
             "mobile_churn_pct": 0.8,
             "mobile_arpu": 14.2,
             "broadband_total_k": 15220.0,
+            "broadband_fiber_k": 6300.0,
             "broadband_net_adds_k": 80.0,
             "tv_total_k": 4380.0,
             "mobile_trend": "growing",
@@ -1149,13 +1161,19 @@
               "virtualization_pct": 70
             }
           },
-          "product_portfolio": [],
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions",
+            "Digital services"
+          ],
           "new_product_pipeline": [],
-          "growth_strategy": "",
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push; 5G network leadership",
           "supply_chain_status": "",
           "ecosystem_partners": [],
           "core_control_points": [],
-          "business_model": "",
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; high-margin profile",
           "org_structure": "",
           "incentive_system": "",
           "talent_culture": "",
@@ -1173,7 +1191,9 @@
           "weaknesses": [
             "Pricing Competitiveness: score 65 (market avg 78)"
           ],
-          "problems": [],
+          "problems": [
+            "Competitive gap in Pricing Competitiveness"
+          ],
           "likely_future_actions": [
             "Deutsche Telekom is likely to continue aggressive network expansion (capex/revenue at 19% with growing revenue).",
             "Deutsche Telekom is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
@@ -1242,6 +1262,7 @@
             "mobile_churn_pct": 0.95,
             "mobile_arpu": 9.8,
             "broadband_total_k": 3860.0,
+            "broadband_fiber_k": 900.0,
             "broadband_net_adds_k": -5.0,
             "tv_total_k": 420.0,
             "mobile_trend": "growing",
@@ -1269,13 +1290,18 @@
               "virtualization_pct": 100
             }
           },
-          "product_portfolio": [],
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Digital services"
+          ],
           "new_product_pipeline": [],
-          "growth_strategy": "",
+          "growth_strategy": "Market share expansion (investing for growth); subscriber acquisition focus",
           "supply_chain_status": "",
           "ecosystem_partners": [],
           "core_control_points": [],
-          "business_model": "",
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; low-margin / scale-focused",
           "org_structure": "",
           "incentive_system": "",
           "talent_culture": "",
@@ -1291,7 +1317,17 @@
             "Network Coverage: score 45 (market avg 76)",
             "Network Quality: score 55 (market avg 76)"
           ],
-          "problems": [],
+          "problems": [
+            "Competitive gap in 5G Deployment",
+            "Competitive gap in Brand Strength",
+            "Competitive gap in Digital Services",
+            "Competitive gap in Enterprise Solutions",
+            "Competitive gap in Network Coverage",
+            "Competitive gap in Network Quality",
+            "Margin erosion",
+            "EBITDA contraction (-7.0%)",
+            "Broadband subscriber losses"
+          ],
           "likely_future_actions": [
             "1&1 AG is likely to continue aggressive network expansion (capex/revenue at 39% with growing revenue).",
             "1&1 AG is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
@@ -1373,7 +1409,7 @@
           "one_and_one": 55.0
         }
       },
-      "competitive_landscape": "The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany, Deutsche Telekom, 1&1 AG. Overall competition intensity is assessed as medium. Revenue ranking: Deutsche Telekom (6200M), Vodafone Germany (3092M), Telefonica O2 Germany (2000M), 1&1 AG (1035M). Five Forces: Existing Competitors: high; New Entrants: medium; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "competitive_landscape": "The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany, Deutsche Telekom, 1&1 AG. Overall competition intensity is assessed as medium. Revenue ranking: Deutsche Telekom (6,200M), Vodafone Germany (3,092M), Telefonica O2 Germany (2,000M), 1&1 AG (1,035M). Five Forces: Existing Competitors: high; New Entrants: medium; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
       "key_message": "In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors."
     },
     "self_analysis": {
@@ -1594,7 +1630,7 @@
           },
           "attributions": [],
           "health_status": "stable",
-          "key_message": "Mobile service revenue at 1520.0M; up 2.8% YoY; ARPU 12.8",
+          "key_message": "Mobile service revenue at 1,520M; up 2.8% YoY; ARPU 12.8",
           "action_required": ""
         },
         {
@@ -2125,7 +2161,7 @@
         }
       ],
       "health_rating": "stable",
-      "key_message": "Ranked #2 of 4 operators in market; revenue EUR 3092.0M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。"
+      "key_message": "Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。"
     },
     "swot": {
       "strengths": [
@@ -3309,7 +3345,7 @@
     "low_confidence": 0,
     "estimated": 1,
     "with_conflicts": 0,
-    "unique_sources": 12
+    "unique_sources": 14
   },
   "provenance": {
     "footnotes": [
@@ -3333,7 +3369,7 @@
       "telecom.db",
       "telecom.db"
     ],
-    "source_count": 12,
+    "source_count": 14,
     "value_count": 20
   }
 }

@@ -28,6 +28,24 @@ from src.models.competition import (
 
 
 # ============================================================================
+# Revenue formatting
+# ============================================================================
+
+
+def _fmt_rev(val_m: float, currency: str = "") -> str:
+    """Format a revenue value in millions to a human-readable string."""
+    prefix = f"{currency} " if currency else ""
+    if val_m >= 1_000_000:
+        return f"{prefix}{val_m / 1_000_000:.2f}T"
+    elif val_m >= 10_000:
+        return f"{prefix}{val_m / 1_000:.1f}B"
+    elif val_m >= 1_000:
+        return f"{prefix}{val_m:,.0f}M"
+    else:
+        return f"{prefix}{val_m:,.1f}M"
+
+
+# ============================================================================
 # Dedup helpers
 # ============================================================================
 
@@ -245,7 +263,7 @@ def _force_existing_competitors(
                 "name": "Market concentration",
                 "description": (
                     f"Top operator holds {top_share:.0f}% of market revenue "
-                    f"(total: {total_rev:.0f}M {market_config.currency if market_config else 'USD'})"
+                    f"(total: {_fmt_rev(total_rev, market_config.currency if market_config else 'USD')})"
                 ),
                 "impact": "high" if top_share > 40 else "medium",
                 "trend": "stable",
@@ -679,6 +697,163 @@ def _force_buyer_power(
 
 
 # ============================================================================
+# Competitor Deep Dive — Derived fields
+# ============================================================================
+
+
+def _derive_growth_strategy(financial_health: dict, subscriber_health: dict,
+                            comp_scores: dict) -> str:
+    """Infer growth strategy from financial and subscriber trends."""
+    if financial_health.get("status") == "no_data":
+        return ""
+
+    parts = []
+    rev_trend = financial_health.get("revenue_trend", "")
+    margin_trend = financial_health.get("margin_trend", "")
+    sub_trend = subscriber_health.get("mobile_trend", "") if subscriber_health.get("status") != "no_data" else ""
+
+    # Revenue + margin pattern → strategy inference
+    if rev_trend == "growing" and margin_trend == "improving":
+        parts.append("Revenue-led profitable growth")
+    elif rev_trend == "growing" and margin_trend == "declining":
+        parts.append("Market share expansion (investing for growth)")
+    elif rev_trend == "declining" and margin_trend == "improving":
+        parts.append("Margin optimization / cost transformation")
+    elif rev_trend == "declining":
+        parts.append("Defensive cost restructuring")
+    elif rev_trend == "growing":
+        parts.append("Steady growth trajectory")
+
+    # Subscriber pattern
+    if sub_trend == "growing":
+        parts.append("subscriber acquisition focus")
+    elif sub_trend == "declining":
+        parts.append("ARPU-led value strategy")
+
+    # Competitive dimension hints
+    high_scores = [d for d, s in comp_scores.items() if s and s >= 80]
+    if "Enterprise Solutions" in high_scores or "enterprise_solutions" in [d.lower().replace(" ", "_") for d in high_scores]:
+        parts.append("strong B2B/enterprise push")
+    if "5G Deployment" in high_scores:
+        parts.append("5G network leadership")
+
+    return "; ".join(parts)
+
+
+def _derive_ma_activity(intel_events: list, comp_id: str) -> list[str]:
+    """Extract M&A events from intelligence events for a competitor."""
+    ma_keywords = {"acqui", "merger", "joint venture", "jv ", "divest",
+                   "sale of", "sells ", "buys ", "partnership", "stake"}
+    results = []
+    for ev in intel_events:
+        if ev.get("operator_id") != comp_id:
+            continue
+        title = (ev.get("title") or "").lower()
+        if any(kw in title for kw in ma_keywords):
+            results.append(ev.get("title", ""))
+    return results
+
+
+def _derive_problems(weaknesses: list, financial_health: dict,
+                     subscriber_health: dict) -> list[str]:
+    """Derive key problems from weaknesses and declining metrics."""
+    problems = []
+    # Weaknesses are already diagnosed
+    for w in weaknesses:
+        dim = w.split(":")[0].strip() if ":" in w else w
+        problems.append(f"Competitive gap in {dim}")
+
+    # Financial stress signals
+    if financial_health.get("revenue_trend") == "declining":
+        problems.append("Revenue under pressure (declining trend)")
+    if financial_health.get("margin_trend") == "declining":
+        problems.append("Margin erosion")
+    growth = financial_health.get("ebitda_growth_pct")
+    if growth is not None and growth < -5:
+        problems.append(f"EBITDA contraction ({growth:+.1f}%)")
+
+    # Subscriber stress
+    if subscriber_health.get("status") != "no_data":
+        if subscriber_health.get("mobile_trend") == "declining":
+            problems.append("Mobile subscriber losses")
+        if subscriber_health.get("broadband_trend") == "declining":
+            problems.append("Broadband subscriber losses")
+
+    return problems
+
+
+def _derive_product_portfolio(comp_scores: dict, subscriber_health: dict) -> list[str]:
+    """Infer product portfolio areas from scores and subscriber data."""
+    portfolio = []
+    # All operators have mobile
+    portfolio.append("Mobile (postpaid + prepaid)")
+
+    # Check for broadband from subscriber data
+    if subscriber_health.get("status") != "no_data":
+        bb_total = subscriber_health.get("broadband_total_k")
+        if bb_total and bb_total > 0:
+            fiber_k = subscriber_health.get("broadband_fiber_k")
+            if fiber_k and fiber_k > 0:
+                portfolio.append("Fixed broadband (incl. fiber/FTTH)")
+            else:
+                portfolio.append("Fixed broadband")
+
+        tv_k = subscriber_health.get("tv_total_k")
+        if tv_k and tv_k > 0:
+            portfolio.append("TV/Video")
+
+    # From competitive dimensions
+    if comp_scores.get("Enterprise Solutions") and comp_scores["Enterprise Solutions"] >= 60:
+        portfolio.append("Enterprise/B2B solutions")
+    if comp_scores.get("Digital Services") and comp_scores["Digital Services"] >= 60:
+        portfolio.append("Digital services")
+
+    return portfolio
+
+
+def _derive_business_model(financial_health: dict, subscriber_health: dict) -> str:
+    """Infer business model type from revenue and subscriber mix."""
+    if financial_health.get("status") == "no_data":
+        return ""
+
+    rev = financial_health.get("revenue")
+    service_rev = financial_health.get("service_revenue")
+
+    parts = []
+    # Check if mobile-dominant or convergent
+    if subscriber_health.get("status") != "no_data":
+        mobile_k = subscriber_health.get("mobile_total_k") or 0
+        bb_k = subscriber_health.get("broadband_total_k") or 0
+        if bb_k > 0 and mobile_k > 0:
+            ratio = bb_k / mobile_k
+            if ratio > 0.3:
+                parts.append("Convergent (mobile + fixed)")
+            else:
+                parts.append("Mobile-centric with fixed complement")
+        elif mobile_k > 0:
+            parts.append("Mobile-only operator")
+
+    # Service revenue ratio
+    if rev and service_rev and rev > 0:
+        svc_pct = (service_rev / rev) * 100
+        if svc_pct >= 85:
+            parts.append("service-revenue dominant")
+        elif svc_pct >= 70:
+            parts.append("balanced service + equipment revenue")
+
+    margin = financial_health.get("ebitda_margin_pct")
+    if margin:
+        if margin >= 35:
+            parts.append("high-margin profile")
+        elif margin >= 25:
+            parts.append("moderate-margin profile")
+        else:
+            parts.append("low-margin / scale-focused")
+
+    return "; ".join(parts) if parts else ""
+
+
+# ============================================================================
 # Competitor Deep Dive
 # ============================================================================
 
@@ -723,6 +898,15 @@ def _build_competitor_deep_dive(
         strengths, weaknesses, likely_future_actions,
     )
 
+    # Derived skeleton fields
+    growth_strategy = _derive_growth_strategy(
+        financial_health, subscriber_health, comp_scores,
+    )
+    ma_activity = _derive_ma_activity(intel_events, comp_id)
+    problems = _derive_problems(weaknesses, financial_health, subscriber_health)
+    product_portfolio = _derive_product_portfolio(comp_scores, subscriber_health)
+    business_model = _derive_business_model(financial_health, subscriber_health)
+
     return CompetitorDeepDive(
         operator=display_name,
         financial_health=financial_health,
@@ -732,6 +916,11 @@ def _build_competitor_deep_dive(
         weaknesses=weaknesses,
         likely_future_actions=likely_future_actions,
         implications=implications,
+        growth_strategy=growth_strategy,
+        ma_activity=ma_activity,
+        problems=problems,
+        product_portfolio=product_portfolio,
+        business_model=business_model,
     )
 
 
@@ -802,6 +991,7 @@ def _assess_subscriber_health(db, operator_id, target_period, n_quarters):
         "mobile_churn_pct": latest.get("mobile_churn_pct"),
         "mobile_arpu": latest.get("mobile_arpu"),
         "broadband_total_k": latest.get("broadband_total_k"),
+        "broadband_fiber_k": latest.get("broadband_fiber_k"),
         "broadband_net_adds_k": latest.get("broadband_net_adds_k"),
         "tv_total_k": latest.get("tv_total_k"),
     }
@@ -1178,7 +1368,7 @@ def _build_landscape_narrative(
     if revenues:
         revenues.sort(key=lambda x: x[1], reverse=True)
         ranking = ", ".join(
-            f"{name} ({rev:.0f}M)" for name, rev in revenues
+            f"{name} ({_fmt_rev(rev)})" for name, rev in revenues
         )
         parts.append(f"Revenue ranking: {ranking}.")
 

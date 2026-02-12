@@ -168,6 +168,18 @@ class BLMTxtFormatter:
                 lines.append(f"    Strengths: {', '.join(strengths[:3])}")
             if weaknesses:
                 lines.append(f"    Weaknesses: {', '.join(weaknesses[:3])}")
+            strategy = getattr(dd, 'growth_strategy', '')
+            if strategy:
+                lines.append(f"    Strategy: {strategy}")
+            biz_model = getattr(dd, 'business_model', '')
+            if biz_model:
+                lines.append(f"    Business Model: {biz_model}")
+            problems = getattr(dd, 'problems', [])
+            if problems:
+                lines.append(f"    Problems: {', '.join(problems[:3])}")
+            ma = getattr(dd, 'ma_activity', [])
+            if ma:
+                lines.append(f"    M&A: {'; '.join(ma[:3])}")
 
         lines.append(self._key_message(getattr(comp, 'key_message', '')))
         return "\n".join(lines)

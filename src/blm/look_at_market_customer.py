@@ -30,6 +30,27 @@ from src.database.period_utils import PeriodConverter
 
 
 # ============================================================================
+# Revenue formatting
+# ============================================================================
+
+
+def _fmt_rev(val_m: float, currency: str = "") -> str:
+    """Format a revenue value in millions to a human-readable string.
+
+    Examples: 3092.0 → '3,092M', 12327.0 → '12.3B', 1391000.0 → '1.39T'.
+    """
+    prefix = f"{currency} " if currency else ""
+    if val_m >= 1_000_000:
+        return f"{prefix}{val_m / 1_000_000:.2f}T"
+    elif val_m >= 10_000:
+        return f"{prefix}{val_m / 1_000:.1f}B"
+    elif val_m >= 1_000:
+        return f"{prefix}{val_m:,.0f}M"
+    else:
+        return f"{prefix}{val_m:,.1f}M"
+
+
+# ============================================================================
 # $APPEALS dimension mapping from competitive_scores dimension names
 # ============================================================================
 
@@ -409,7 +430,7 @@ def _detect_market_changes(db, market: str, target_operator: str,
                 change_type="pricing",
                 description=(
                     f"{display_name} revenue {direction} {abs(qoq_rev_change):.1f}% QoQ "
-                    f"({currency} {current_rev:.0f}M vs {prev_rev:.0f}M)"
+                    f"({_fmt_rev(current_rev, currency)} vs {_fmt_rev(prev_rev, currency)})"
                 ),
                 source="peer_driven",
                 time_horizon="short_term",
@@ -1008,7 +1029,7 @@ def _generate_key_message(snapshot: dict, changes: list[MarketChange],
 
     if total_rev != "N/A":
         parts.append(
-            f"{mkt_name} telecom market totals {currency} {total_rev}M in quarterly revenue"
+            f"{mkt_name} telecom market totals {_fmt_rev(total_rev, currency)} in quarterly revenue"
         )
 
     if our_share != "N/A":

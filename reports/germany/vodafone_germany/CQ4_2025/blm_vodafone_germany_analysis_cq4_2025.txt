@@ -1,7 +1,7 @@
 ────────────────────────────────────────────────────────────────────────────────
                        BLM Five Looks Strategic Analysis                        
                             Target: vodafone_germany                            
-                       Market: germany | Period: unknown                        
+                       Market: germany | Period: CQ4_2025                       
 ────────────────────────────────────────────────────────────────────────────────
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
@@ -58,7 +58,7 @@
     Lifecycle Cost       [#######...] 3.6/5
     Social/Brand         [########..] 4.0/5
 
-  → Key Message: Germany telecom market totals EUR 12327.0M in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
+  → Key Message: Germany telecom market totals EUR 12.3B in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 03 COMPETITION (Porter's Five Forces)                                       │
@@ -73,12 +73,21 @@
   [telefonica_o2]
     Strengths: 5G Deployment: score 88 (market avg 75), Network Coverage: score 85 (market avg 76), Pricing Competitiveness: score 85 (market avg 78)
     Weaknesses: Enterprise Solutions: score 68 (market avg 74), Product Innovation: score 70 (market avg 76)
+    Strategy: Margin optimization / cost transformation; subscriber acquisition focus; 5G network leadership
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile
+    Problems: Competitive gap in Enterprise Solutions, Competitive gap in Product Innovation, Revenue under pressure (declining trend)
   [deutsche_telekom]
     Strengths: 5G Deployment: score 95 (market avg 75), Brand Strength: score 90 (market avg 78), Customer Service: score 82 (market avg 74)
     Weaknesses: Pricing Competitiveness: score 65 (market avg 78)
+    Strategy: Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push; 5G network leadership
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; high-margin profile
+    Problems: Competitive gap in Pricing Competitiveness
   [one_and_one]
     Strengths: Pricing Competitiveness: score 90 (market avg 78)
     Weaknesses: 5G Deployment: score 40 (market avg 75), Brand Strength: score 65 (market avg 78), Digital Services: score 68 (market avg 74)
+    Strategy: Market share expansion (investing for growth); subscriber acquisition focus
+    Business Model: Convergent (mobile + fixed); service-revenue dominant; low-margin / scale-focused
+    Problems: Competitive gap in 5G Deployment, Competitive gap in Brand Strength, Competitive gap in Digital Services
 
   → Key Message: In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors.
 
@@ -107,7 +116,7 @@
     - Customer Service: score 70 (market avg 74)
     - Pricing Competitiveness: score 72 (market avg 78)
 
-  → Key Message: Ranked #2 of 4 operators in market; revenue EUR 3092.0M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。
+  → Key Message: Ranked #2 of 4 operators in market; revenue EUR 3,092M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ SWOT SYNTHESIS                                                              │
@@ -205,7 +214,7 @@
   High confidence: 0
   Medium confidence: 19
   Low/Estimated: 1
-  Unique sources: 12
+  Unique sources: 14
 
   [Sources]
     telecom.db

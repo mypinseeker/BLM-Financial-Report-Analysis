@@ -1,7 +1,7 @@
 ────────────────────────────────────────────────────────────────────────────────
                        BLM Five Looks Strategic Analysis                        
                                 Target: entel_cl                                
-                        Market: chile | Period: unknown                         
+                        Market: chile | Period: CQ4_2025                        
 ────────────────────────────────────────────────────────────────────────────────
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
@@ -53,7 +53,7 @@
     Lifecycle Cost       [######....] 3.0/5
     Social/Brand         [########..] 4.0/5
 
-  → Key Message: Chile telecom market totals CLP 1391000.0M in quarterly revenue; competitive strengths in Availability, Performance; Market faces significant competitive headwinds.
+  → Key Message: Chile telecom market totals CLP 1.39T in quarterly revenue; competitive strengths in Availability, Performance; Market faces significant competitive headwinds.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 03 COMPETITION (Porter's Five Forces)                                       │
@@ -67,12 +67,21 @@
   Overall Intensity: MEDIUM
   [claro_cl]
     Weaknesses: 5G Deployment: score 50 (market avg 65), Brand Strength: score 60 (market avg 72), Customer Service: score 50 (market avg 65)
+    Strategy: Revenue-led profitable growth; subscriber acquisition focus
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; low-margin / scale-focused
+    Problems: Competitive gap in 5G Deployment, Competitive gap in Brand Strength, Competitive gap in Customer Service
   [wom_cl]
     Strengths: 5G Deployment: score 70 (market avg 65), Customer Service: score 70 (market avg 65), Digital Services: score 80 (market avg 70)
     Weaknesses: Enterprise Solutions: score 30 (market avg 58), Network Coverage: score 50 (market avg 72), Network Quality: score 50 (market avg 68)
+    Strategy: Revenue-led profitable growth; subscriber acquisition focus
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; low-margin / scale-focused
+    Problems: Competitive gap in Enterprise Solutions, Competitive gap in Network Coverage, Competitive gap in Network Quality
   [movistar_cl]
     Strengths: Enterprise Solutions: score 70 (market avg 58), Network Coverage: score 80 (market avg 72), Sustainability: score 70 (market avg 58)
     Weaknesses: 5G Deployment: score 60 (market avg 65), Customer Service: score 60 (market avg 65), Pricing Competitiveness: score 60 (market avg 70)
+    Strategy: Revenue-led profitable growth; subscriber acquisition focus
+    Business Model: Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile
+    Problems: Competitive gap in 5G Deployment, Competitive gap in Customer Service, Competitive gap in Pricing Competitiveness
 
   → Key Message: In a 4-player market with medium competition intensity, Entel Chile leads with 58% revenue share. Target operator holds 58% share. Strongest competitive force: Existing Competitors.
 
@@ -101,7 +110,7 @@
     - Pricing Competitiveness: score 60 (market avg 70)
     - 5G coverage gap at only 65.0%
 
-  → Key Message: Ranked #1 of 4 operators in market; revenue CLP 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness
+  → Key Message: Ranked #1 of 4 operators in market; revenue CLP 811.0B; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ SWOT SYNTHESIS                                                              │

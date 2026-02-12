@@ -24,6 +24,24 @@ from src.models.self_analysis import (
 
 
 # ============================================================================
+# Revenue formatting
+# ============================================================================
+
+
+def _fmt_rev(val_m: float, currency: str = "") -> str:
+    """Format a revenue value in millions to a human-readable string."""
+    prefix = f"{currency} " if currency else ""
+    if val_m >= 1_000_000:
+        return f"{prefix}{val_m / 1_000_000:.2f}T"
+    elif val_m >= 10_000:
+        return f"{prefix}{val_m / 1_000:.1f}B"
+    elif val_m >= 1_000:
+        return f"{prefix}{val_m:,.0f}M"
+    else:
+        return f"{prefix}{val_m:,.1f}M"
+
+
+# ============================================================================
 # Constants
 # ============================================================================
 
@@ -405,7 +423,7 @@ def _analyze_mobile_segment(
     growth_pct = key_metrics.get("mobile_service_growth_pct")
     msg_parts = []
     if rev_val is not None:
-        msg_parts.append(f"Mobile service revenue at {rev_val}M")
+        msg_parts.append(f"Mobile service revenue at {_fmt_rev(rev_val)}")
     if growth_pct is not None:
         direction = "up" if growth_pct > 0 else "down"
         msg_parts.append(f"{direction} {abs(growth_pct):.1f}% YoY")
@@ -499,7 +517,7 @@ def _analyze_fixed_segment(
     fiber_k = key_metrics.get("broadband_fiber_k")
     msg_parts = []
     if rev_val is not None:
-        msg_parts.append(f"Fixed service revenue {rev_val}M")
+        msg_parts.append(f"Fixed service revenue {_fmt_rev(rev_val)}")
     if growth_pct is not None:
         msg_parts.append(f"growth {growth_pct:+.1f}% YoY")
     if fiber_k is not None:
@@ -578,7 +596,7 @@ def _analyze_b2b_segment(
 
     msg_parts = []
     if b2b_rev is not None:
-        msg_parts.append(f"B2B revenue {b2b_rev}M")
+        msg_parts.append(f"B2B revenue {_fmt_rev(b2b_rev)}")
     growth = key_metrics.get("b2b_growth_pct")
     if growth is not None:
         msg_parts.append(f"growth {growth:+.1f}% YoY")
@@ -724,7 +742,7 @@ def _analyze_wholesale_segment(
 
     msg_parts = []
     if ws_rev is not None:
-        msg_parts.append(f"Wholesale revenue {ws_rev}M")
+        msg_parts.append(f"Wholesale revenue {_fmt_rev(ws_rev)}")
     if ws_share is not None:
         msg_parts.append(f"{ws_share}% of total")
     key_message = "; ".join(msg_parts) if msg_parts else "Insufficient data for wholesale assessment"
@@ -1186,7 +1204,7 @@ def _synthesize_key_message(
         total_rev = financial_health.get("total_revenue")
         margin = financial_health.get("ebitda_margin_pct")
         if total_rev:
-            parts.append(f"revenue {currency} {total_rev}M")
+            parts.append(f"revenue {_fmt_rev(total_rev, currency)}")
         if margin:
             parts.append(f"EBITDA margin {margin:.1f}%")
 
