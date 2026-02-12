@@ -11,6 +11,8 @@ Produces the Opportunities section containing:
 """
 from __future__ import annotations
 
+import re
+
 from ..md_utils import (
     section_header, section_divider, md_table,
     bold, bullet_list, fmt_pct,
@@ -20,6 +22,36 @@ from ..md_utils import (
 )
 
 
+def _descriptive_label(name: str, detail: dict = None) -> str:
+    """Convert generic SO-1/WO-1/ST-1/WT-1 labels into descriptive names.
+
+    Also shortens verbose opportunity names for section headers.
+    """
+    # If it's a SWOT strategy ID, extract label from description
+    if re.match(r'^(SO|WO|ST|WT)-\d+$', name):
+        desc = safe_get(detail, "description", "") if detail else ""
+        if not desc:
+            return name
+        # Extract key phrases from strategy description
+        m = re.search(r"'([^':]+?)(?:: score|\s*')", desc)
+        capability = m.group(1).strip() if m else ""
+        m2 = re.search(r"(?:opportunity|threat) of '([^':]+?)(?:: |')", desc)
+        target = m2.group(1).strip() if m2 else ""
+        prefix_map = {"SO": "Leverage", "WO": "Address", "ST": "Defend", "WT": "Mitigate"}
+        prefix = prefix_map.get(name.split("-")[0], "Act on")
+        if capability and target:
+            target_short = target[:40] + "..." if len(target) > 40 else target
+            return f"{prefix} {capability} → {target_short}"
+        if capability:
+            return f"{prefix} {capability}"
+        return desc[:60] + "..." if len(desc) > 60 else desc
+
+    # Shorten overly verbose names
+    if len(name) > 70:
+        return name[:67] + "..."
+    return name
+
+
 def render_opportunities(result, diagnosis, config) -> str:
     """Render Module 05: Opportunities (SPAN Matrix) Analysis."""
     opp = result.opportunities
@@ -27,7 +59,8 @@ def render_opportunities(result, diagnosis, config) -> str:
         return empty_section_notice("Opportunities (SPAN)")
 
     parts = []
-    target_name = operator_display_name(result.target_operator)
+    target_op = result.target_operator or ""
+    target_name = operator_display_name(target_op)
     period = result.analysis_period or ""
 
     # Module title
@@ -39,15 +72,15 @@ def render_opportunities(result, diagnosis, config) -> str:
     parts.append("---")
 
     # 1. SPAN Matrix Overview
-    parts.append(_render_span_overview(opp))
+    parts.append(_render_span_overview(opp, target_op))
 
     # 2. Grow/Invest
     parts.append(_render_quadrant_detail(opp, "grow_invest", "Grow/Invest",
-                                          "Execute aggressively — highest priority"))
+                                          "Execute aggressively — highest priority", target_op))
 
     # 3. Acquire Skills
     parts.append(_render_quadrant_detail(opp, "acquire_skills", "Acquire Skills",
-                                          "Build capability before competing"))
+                                          "Build capability before competing", target_op))
 
     # 4. Harvest / Avoid
     parts.append(_render_harvest_avoid(opp))
@@ -68,7 +101,8 @@ def render_opportunities(result, diagnosis, config) -> str:
 # Sub-renderers
 # ---------------------------------------------------------------------------
 
-def _render_span_overview(opp) -> str:
+def _render_span_overview(opp, target_op: str = "") -> str:
+    target_display = operator_display_name(target_op) if target_op else ""
     positions = safe_list(opp, "span_positions")
     gi = safe_list(opp, "grow_invest")
     ask = safe_list(opp, "acquire_skills")
@@ -107,6 +141,8 @@ def _render_span_overview(opp) -> str:
         pos_rows = []
         for p in positions:
             name = safe_get(p, "opportunity_name", "")
+            if target_op and target_op in name:
+                name = name.replace(target_op, target_display)
             ma = safe_get(p, "market_attractiveness", 0)
             cp = safe_get(p, "competitive_position", 0)
             quad = safe_get(p, "quadrant", "").replace("_", " ").title()
@@ -128,10 +164,13 @@ def _render_span_overview(opp) -> str:
     return "\n".join(lines)
 
 
-def _render_quadrant_detail(opp, attr: str, title: str, description: str) -> str:
+def _render_quadrant_detail(opp, attr: str, title: str, description: str,
+                            target_op: str = "") -> str:
     items = safe_list(opp, attr)
     if not items:
         return ""
+
+    target_display = operator_display_name(target_op) if target_op else ""
 
     # Section number depends on quadrant
     section_num = {"grow_invest": 2, "acquire_skills": 3}.get(attr, 2)
@@ -148,14 +187,16 @@ def _render_quadrant_detail(opp, attr: str, title: str, description: str) -> str
             opp_map[name.lower()] = o
 
     for i, item in enumerate(items, 1):
-        lines.append(f"### {i}. {item}")
-        lines.append("")
-
         # Try to find detailed record
         detail = opp_map.get(item.lower())
+        display_name = _descriptive_label(item, detail)
+        lines.append(f"### {i}. {display_name}")
+        lines.append("")
         if detail:
             desc = safe_get(detail, "description", "")
             if desc:
+                if target_op and target_op in desc:
+                    desc = desc.replace(target_op, target_display)
                 lines.append(desc)
                 lines.append("")
 
@@ -202,12 +243,17 @@ def _render_harvest_avoid(opp) -> str:
 
     lines = [section_header("4. Harvest & Avoid/Exit", 2), ""]
 
+    # Build opp_map for label lookup
+    opportunities = safe_list(opp, "opportunities")
+    opp_map = {safe_get(o, "name", "").lower(): o for o in opportunities}
+
     if harvest:
         lines.append(section_header("Harvest", 3))
         lines.append("*Extract remaining value — do not invest for growth*")
         lines.append("")
         for item in harvest:
-            lines.append(f"- {item}")
+            detail = opp_map.get(item.lower())
+            lines.append(f"- {_descriptive_label(item, detail)}")
         lines.append("")
 
     if avoid:
@@ -215,7 +261,8 @@ def _render_harvest_avoid(opp) -> str:
         lines.append("*No viable path — exit or do not enter*")
         lines.append("")
         for item in avoid:
-            lines.append(f"- {item}")
+            detail = opp_map.get(item.lower())
+            lines.append(f"- {_descriptive_label(item, detail)}")
 
     lines.append("")
     lines.append("---")
@@ -230,11 +277,23 @@ def _render_priority_ranking(opp) -> str:
 
     lines = [section_header("5. Portfolio Prioritization", 2), ""]
 
-    # Group by priority
-    p0 = [o for o in opportunities if safe_get(o, "priority") == "P0"]
-    p1 = [o for o in opportunities if safe_get(o, "priority") == "P1"]
-    p2 = [o for o in opportunities if safe_get(o, "priority") == "P2"]
-    other = [o for o in opportunities if safe_get(o, "priority") not in ("P0", "P1", "P2")]
+    # Apply smart tiering based on quadrant rather than trusting engine P0/P1/P2
+    # Grow/invest → P0 (top 5) then P1; Acquire skills → P1; Harvest → P2; Avoid → P2
+    gi_names = set(x.lower() for x in safe_list(opp, "grow_invest"))
+    ask_names = set(x.lower() for x in safe_list(opp, "acquire_skills"))
+
+    p0, p1, p2 = [], [], []
+    for o in opportunities:
+        name_lower = safe_get(o, "name", "").lower()
+        if name_lower in gi_names:
+            if len(p0) < 5:
+                p0.append(o)
+            else:
+                p1.append(o)
+        elif name_lower in ask_names:
+            p1.append(o)
+        else:
+            p2.append(o)
 
     for label, items, desc in [
         ("P0 — Must Do (Existential)", p0, "Failure to execute threatens survival or core business"),
@@ -250,10 +309,11 @@ def _render_priority_ranking(opp) -> str:
         rows = []
         for o in items:
             name = safe_get(o, "name", "")
+            display = _descriptive_label(name, o)
             market = safe_get(o, "addressable_market", "N/A")
             window = safe_get(o, "time_window", "")
             capability = safe_get(o, "our_capability", "")
-            rows.append([name, str(market), window, capability])
+            rows.append([display, str(market), window, capability])
 
         lines.append(md_table(
             ["Opportunity", "Addressable Market", "Time Window", "Capability"],
@@ -283,12 +343,18 @@ def _render_financial_impact(opp, diagnosis) -> str:
     lines = [section_header("6. Financial Impact Assessment", 2), ""]
 
     # Build financial summary from available data
+    gi_names = set(x.lower() for x in safe_list(opp, "grow_invest"))
     rows = []
-    for o in opportunities[:10]:
+    for i, o in enumerate(opportunities[:10]):
         name = safe_get(o, "name", "")
+        display = _descriptive_label(name, o)
         market = safe_get(o, "addressable_market", "N/A")
-        priority = safe_get(o, "priority", "")
-        rows.append([name, priority, str(market)])
+        # Smart priority based on quadrant position
+        if name.lower() in gi_names:
+            priority = "P0" if i < 5 else "P1"
+        else:
+            priority = safe_get(o, "priority", "P2")
+        rows.append([display, priority, str(market)])
 
     if rows:
         lines.append(md_table(["Opportunity", "Priority", "Addressable Market"], rows))

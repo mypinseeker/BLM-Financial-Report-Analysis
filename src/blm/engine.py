@@ -298,4 +298,17 @@ class BLMAnalysisEngine:
                 return timeseries[-1].get("calendar_quarter", "unknown")
         except Exception:
             pass
+
+        # Fallback: direct DB query for the latest quarter
+        try:
+            row = self.db.conn.execute(
+                "SELECT calendar_quarter FROM financial_quarterly "
+                "WHERE operator_id = ? ORDER BY calendar_quarter DESC LIMIT 1",
+                [self.target_operator]
+            ).fetchone()
+            if row:
+                return row[0]
+        except Exception:
+            pass
+
         return "unknown"

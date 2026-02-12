@@ -178,12 +178,12 @@ def _render_situation(result, diagnosis, config) -> str:
     lines.append("")
 
     headline_lines = []
-    for metric, keys, suffix in [
-        ("Revenue", ["revenue", "total_revenue", "quarterly_revenue"], "/q"),
-        ("EBITDA", ["ebitda", "ebitda_value"], "/q"),
-        ("Mobile", ["mobile_net_adds", "net_adds_mobile"], "/q net adds"),
-        ("Broadband", ["bb_net_adds", "net_adds_bb", "broadband_net_adds"], "/q net adds"),
-        ("B2B", ["b2b_revenue", "enterprise_revenue"], "/q"),
+    for metric, keys, suffix, is_currency in [
+        ("Revenue", ["revenue", "total_revenue", "quarterly_revenue"], "/q", True),
+        ("EBITDA", ["ebitda", "ebitda_value"], "/q", True),
+        ("Mobile", ["mobile_net_adds", "net_adds_mobile"], "/q net adds", False),
+        ("Broadband", ["bb_net_adds", "net_adds_bb", "broadband_net_adds"], "/q net adds", False),
+        ("B2B", ["b2b_revenue", "enterprise_revenue"], "/q", True),
     ]:
         val = None
         for k in keys:
@@ -198,7 +198,14 @@ def _render_situation(result, diagnosis, config) -> str:
                 if growth is not None:
                     break
             growth_str = f"  ({fmt_pct(growth)})" if growth is not None else ""
-            headline_lines.append(f"{metric:14s} {str(val):>12s}{suffix}{growth_str}")
+            if is_currency:
+                val_str = fmt_currency(val, config)
+            else:
+                try:
+                    val_str = f"{float(val):,.0f}K"
+                except (TypeError, ValueError):
+                    val_str = str(val)
+            headline_lines.append(f"{metric:14s} {val_str:>12s}{suffix}{growth_str}")
 
     if headline_lines:
         lines.append(code_block("\n".join(headline_lines)))

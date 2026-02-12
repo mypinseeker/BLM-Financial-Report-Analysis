@@ -1,6 +1,6 @@
 # Movistar Chile — BLM Strategic Assessment: Complete Analysis
 
-> **Period**: unknown
+> **Period**: CQ4_2025
 > **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + SPAN
 > **Protagonist**: Movistar Chile
 > **Market**: Chilean Telecommunications
@@ -36,7 +36,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 # Executive Summary — Movistar Chile BLM Strategic Assessment
 
-**Period**: unknown
+**Period**: CQ4_2025
 
 **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + Opportunities
 
@@ -75,8 +75,8 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 ### 1.3 The Headline Numbers
 
 ```
-Revenue            245000.0/q
-EBITDA              68600.0/q
+Revenue           $245,000M/q
+EBITDA             $68,600M/q
 ```
 
 ---
@@ -163,7 +163,7 @@ This is not a temporary market condition — it is a structural competitive prob
 
 **The escape routes** (not mutually exclusive):
 1. Leverage Enterprise Solutions for Regulatory Environment
-2. Leverage Network Coverage for National Digital Strategy
+2. Leverage Network Coverage for Digital Strategy Alignment
 3. Leverage Sustainability for Movistar Chile revenue growth 8.9% YoY
 
 | Dimension | Claro Chile | Entel | Movistar Chile | WOM Chile |
@@ -186,6 +186,7 @@ Across all analyses, 7 strategic priorities emerge consistently:
 
 | Aspect | Detail |
 | :--- | :--- |
+| Addressable market | $129,000M |
 | Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
 | Time window | immediate |
 | Approach | Increase investment in Mobile to capture growth momentum |
@@ -194,6 +195,7 @@ Across all analyses, 7 strategic priorities emerge consistently:
 
 | Aspect | Detail |
 | :--- | :--- |
+| Addressable market | $15,000M |
 | Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
 | Time window | immediate |
 | Approach | Increase investment in B2B to capture growth momentum |
@@ -202,6 +204,7 @@ Across all analyses, 7 strategic priorities emerge consistently:
 
 | Aspect | Detail |
 | :--- | :--- |
+| Addressable market | $12,000M |
 | Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
 | Time window | immediate |
 | Approach | Increase investment in TV/Convergence to capture growth momentum |
@@ -210,6 +213,7 @@ Across all analyses, 7 strategic priorities emerge consistently:
 
 | Aspect | Detail |
 | :--- | :--- |
+| Addressable market | $12,000M |
 | Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
 | Time window | immediate |
 | Approach | Increase investment in Wholesale to capture growth momentum |
@@ -298,15 +302,25 @@ Equally important — strategic traps to avoid:
 
 ---
 
+## 8. Success Metrics Dashboard
+
+| KPI | Current | 12-Month | 3-Year | 5-Year |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mobile revenue** | $129,000M | — | — | Growth |
+| **Fixed Broadband revenue** | $76,000M | — | — | Growth |
+| **B2B revenue** | $15,000M | — | — | Growth |
+
+---
+
 
 <!-- ============================================================ -->
 <!-- MODULE: 01 — Look 1: Trends — PEST Analysis -->
 <!-- ============================================================ -->
 
 
-# Chilean Telecom Macro Trends — PEST Deep Analysis (unknown)
+# Chilean Telecom Macro Trends — PEST Deep Analysis (CQ4_2025)
 
-**Data basis**: PEST framework | 8 macro factors | unknown market data | Regulatory/event intelligence | Industry lifecycle assessment
+**Data basis**: PEST framework | 8 macro factors | CQ4_2025 market data | Regulatory/event intelligence | Industry lifecycle assessment
 
 ---
 
@@ -318,7 +332,7 @@ Equally important — strategic traps to avoid:
 | :--- | :--- | :--- |
 | Market size | **CLP 1.4T (quarterly, CQ4_2025)** | Market scale |
 | YoY growth | **+7.2% YoY (CQ2_2025 -> CQ4_2025)** |  |
-| Profit trend | Improving (industry EBITDA margin 27.4%, up from 25.7%) |  |
+| Profit trend | Improving (industry EBITDA margin 27.4%, up from 24.5%) |  |
 | Concentration | **CR4 = 100% (Entel Chile: 58.3%, Movistar Chile: 17.6%, WOM Chile: 13.3%, Claro Chile: 10.8%)** | Market structure |
 | Lifecycle stage | **Late_Growth** |  |
 
@@ -365,7 +379,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: Regulatory framework shapes competitive dynamics and investment requirements
 
-**Company impact**: Compliance requirements and spectrum policies directly affect movistar_cl
+**Company impact**: Compliance requirements and spectrum policies directly affect Movistar Chile
 
 - Macro data: SUBTEL (Subsecretaria de Telecomunicaciones) regulates. Pro-competition: MVNOs enabled, number portability since 2012, net neutrality since 2010. 5G spectrum auction completed 2021. ClaroVTR merger approved 2022 with conditions.
 
@@ -382,7 +396,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: Policy targets create both mandate and subsidy opportunities for network operators
 
-**Company impact**: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access
+**Company impact**: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access
 
 - Digital strategy: 5G adoption: 15%, Fiber penetration: 45%, Mobile penetration: 154%
 
@@ -403,7 +417,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: Strong GDP growth boosts both consumer and enterprise spending
 
-**Company impact**: Supported revenue growth for movistar_cl
+**Company impact**: Supported revenue growth for Movistar Chile
 
 - GDP growth: 2.5%
 
@@ -420,7 +434,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: Inflation affects both OPEX (energy, wages) and consumer willingness to pay
 
-**Company impact**: OPEX pressure for movistar_cl
+**Company impact**: OPEX pressure for Movistar Chile
 
 - Inflation: 3.2%
 
@@ -441,7 +455,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: Growing 5G adoption validates network investment and enables new use cases
 
-**Company impact**: 5G adoption growth supports premium pricing and new service revenue for movistar_cl
+**Company impact**: 5G adoption growth supports premium pricing and new service revenue for Movistar Chile
 
 - 5G adoption: 15.0%
 
@@ -450,7 +464,7 @@ Being in the **late_growth** phase means:
 | Factor | Detail |
 | :--- | :--- |
 | Severity | **High** |
-| Trend | Stable |
+| Trend | Improving |
 | Impact type | Both |
 | Time horizon | Medium Term |
 
@@ -458,7 +472,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: Growing fiber adoption accelerates fixed broadband technology transition from copper/cable
 
-**Company impact**: Fiber migration presents both investment challenge and growth opportunity for movistar_cl
+**Company impact**: Fiber migration presents both investment challenge and growth opportunity for Movistar Chile
 
 - Fiber penetration: 45.0%
 
@@ -479,7 +493,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: 5G enables network slicing, enterprise services, and FWA -- new revenue streams
 
-**Company impact**: 5G network capabilities are key competitive differentiator for movistar_cl
+**Company impact**: 5G network capabilities are key competitive differentiator for Movistar Chile
 
 - 5G adoption: 15.0%
 
@@ -496,7 +510,7 @@ Being in the **late_growth** phase means:
 
 **Industry impact**: Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX
 
-**Company impact**: Fiber strategy (build vs buy vs partner) is a critical decision for movistar_cl
+**Company impact**: Fiber strategy (build vs buy vs partner) is a critical decision for Movistar Chile
 
 - Fiber penetration: 45.0%
 
@@ -532,12 +546,12 @@ Being in the **late_growth** phase means:
 
 ### Policy Opportunities
 
-- Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
-- National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access
+- Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile
+- National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access
 
 ### Policy Threats
 
-- Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
+- Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile
 
 ---
 
@@ -547,7 +561,7 @@ Being in the **late_growth** phase means:
 <!-- ============================================================ -->
 
 
-# Market & Customer Analysis — $APPEALS Framework (unknown)
+# Market & Customer Analysis — $APPEALS Framework (CQ4_2025)
 
 **Protagonist**: Movistar Chile
 
@@ -691,7 +705,7 @@ Value migration trending upward: customers willing to pay more for premium conne
 <!-- ============================================================ -->
 
 
-# Tariff Deep Analysis (unknown)
+# Tariff Deep Analysis (CQ4_2025)
 
 ---
 
@@ -734,7 +748,7 @@ Value migration trending upward: customers willing to pay more for premium conne
 <!-- ============================================================ -->
 
 
-# Competition Analysis — Porter's Five Forces + Deep Dives (unknown)
+# Competition Analysis — Porter's Five Forces + Deep Dives (CQ4_2025)
 
 **Protagonist**: Movistar Chile
 
@@ -1104,7 +1118,7 @@ The market comprises 4 active operators: Claro Chile, WOM Chile, Entel Chile, Mo
 <!-- ============================================================ -->
 
 
-# Self Analysis — Movistar Chile (unknown)
+# Self Analysis — Movistar Chile (CQ4_2025)
 
 **Framework**: Business Model Canvas (BMC) + Capability Assessment
 
@@ -1150,7 +1164,7 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 | Mobile Service Revenue | $129,000M | 52.7% |
 | Fixed Service Revenue | $76,000M | 31.0% |
 | B2B Revenue | $15,000M | 6.1% |
-| Tv Revenue | $12,000M | 4.9% |
+| TV Revenue | $12,000M | 4.9% |
 | Wholesale Revenue | $12,000M | 4.9% |
 | Other Revenue | $1,000M | 0.4% |
 | **Total** | **$245,000M** | **100.0%** |
@@ -1161,25 +1175,25 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 | Segment | Revenue | Health | Action Required |
 | :--- | :--- | :--- | :--- |
-| Mobile | — | **Strong** | GROW: Strong momentum — invest to accelerate growth |
-| Fixed Broadband | — | **Stable** | GROW: Improving trajectory — consider incremental investment |
-| B2B | — | **Strong** | GROW: Strong momentum — invest to accelerate growth |
-| TV/Convergence | — | **Strong** | GROW: Strong momentum — invest to accelerate growth |
-| Wholesale | — | **Strong** | GROW: Strong momentum — invest to accelerate growth |
+| Mobile | $129,000M | **Strong** | GROW: Strong momentum — invest to accelerate growth |
+| Fixed Broadband | $76,000M | **Stable** | GROW: Improving trajectory — consider incremental investment |
+| B2B | $15,000M | **Strong** | GROW: Strong momentum — invest to accelerate growth |
+| TV/Convergence | $12,000M | **Strong** | GROW: Strong momentum — invest to accelerate growth |
+| Wholesale | $12,000M | **Strong** | GROW: Strong momentum — invest to accelerate growth |
 
 ### Segment: Mobile [Strong]
 
 | Metric | Value |
 | :--- | :--- |
-| Mobile Service Revenue | 129000.0 |
-| Mobile Service Growth Pct | 2.8 |
-| Mobile Total K | 7550.0 |
-| Mobile Postpaid K | 4650.0 |
-| Mobile Prepaid K | 2900.0 |
-| Mobile Net Adds K | 25.0 |
-| Mobile Churn Pct | 1.52 |
-| Mobile Arpu | 7500.0 |
-| Iot Connections K | 800.0 |
+| Mobile Service Revenue | $129,000M |
+| Mobile Service Growth % | 2.8% |
+| Mobile Total (K) | 7,550K |
+| Mobile Postpaid (K) | 4,650K |
+| Mobile Prepaid (K) | 2,900K |
+| Mobile Net Adds (K) | 25K |
+| Mobile Churn % | 1.5% |
+| Mobile ARPU | $7500.00 |
+| IoT Connections (K) | 800K |
 
 #### Changes
 
@@ -1202,14 +1216,14 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 | Metric | Value |
 | :--- | :--- |
-| Fixed Service Revenue | 76000.0 |
-| Fixed Service Growth Pct | 2.5 |
-| Broadband Total K | 1950.0 |
-| Broadband Net Adds K | 12.0 |
-| Broadband Cable K | 0.0 |
-| Broadband Fiber K | 1100.0 |
-| Broadband Dsl K | 850.0 |
-| Broadband Arpu | 24000.0 |
+| Fixed Service Revenue | $76,000M |
+| Fixed Service Growth % | 2.5% |
+| Broadband Total (K) | 1,950K |
+| Broadband Net Adds (K) | 12K |
+| Broadband Cable (K) | 0K |
+| Broadband Fiber (K) | 1,100K |
+| Broadband Dsl (K) | 850K |
+| Broadband ARPU | $24000.00 |
 
 #### Changes
 
@@ -1231,10 +1245,10 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 | Metric | Value |
 | :--- | :--- |
-| B2B Revenue | 15000.0 |
-| B2B Growth Pct | 4.0 |
-| B2B Customers K | 34.0 |
-| B2B Share Of Revenue Pct | 6.1 |
+| B2B Revenue | $15,000M |
+| B2B Growth % | 4.0% |
+| B2B Customers (K) | 34K |
+| B2B Share Of Revenue % | 6.1% |
 
 #### Changes
 
@@ -1256,11 +1270,11 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 | Metric | Value |
 | :--- | :--- |
-| Tv Revenue | 12000.0 |
-| Tv Total K | 740.0 |
-| Tv Net Adds K | 10.0 |
-| Fmc Total K | 730.0 |
-| Fmc Penetration Pct | 37.4 |
+| TV Revenue | $12,000M |
+| TV Total (K) | 740K |
+| TV Net Adds (K) | 10K |
+| FMC Total (K) | 730K |
+| FMC Penetration % | 37.4% |
 
 #### Changes
 
@@ -1284,8 +1298,8 @@ Wholesale       11000.0 → 11200.0 → 11500.0 → 12000.0
 
 | Metric | Value |
 | :--- | :--- |
-| Wholesale Revenue | 12000.0 |
-| Wholesale Share Of Revenue Pct | 4.9 |
+| Wholesale Revenue | $12,000M |
+| Wholesale Share Of Revenue % | 4.9% |
 
 #### Changes
 
@@ -1435,7 +1449,7 @@ Telefonica Group culture — global processes with local execution; convergent s
 <!-- ============================================================ -->
 
 
-# SWOT Synthesis — Movistar Chile (unknown)
+# SWOT Synthesis — Movistar Chile (CQ4_2025)
 
 **Competitive stance**: **Cautious (WT-dominant)**
 
@@ -1486,15 +1500,15 @@ Note: Weaknesses often compound. For example, '5G Deployment: score 60 (market a
 
 ## 4. Opportunities
 
-1. Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
-2. National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access
+1. Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile
+2. National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access
 3. Movistar Chile revenue growth 8.9% YoY
 
 ---
 
 ## 5. Threats
 
-1. Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
+1. Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile
 2. Entel Chile revenue growth 15.9% YoY
 3. WOM Chile revenue growth 6.9% YoY
 4. Claro Chile revenue growth 8.7% YoY
@@ -1513,21 +1527,21 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 ### SO Strategies (Strengths × Opportunities)
 *Use strengths to capture opportunities* — Posture: Offensive
 
-1. Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
-2. Leverage 'Network Coverage: score 80 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access'.
+1. Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile'.
+2. Leverage 'Network Coverage: score 80 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access'.
 3. Leverage 'Sustainability: score 70 (market avg 58)' to capture the opportunity of 'Movistar Chile revenue growth 8.9% YoY'.
 
 ### WO Strategies (Weaknesses × Opportunities)
 *Fix weaknesses to capture opportunities* — Posture: Developmental
 
-1. Address weakness '5G Deployment: score 60 (market avg 65)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
-2. Address weakness 'Customer Service: score 60 (market avg 65)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access'.
+1. Address weakness '5G Deployment: score 60 (market avg 65)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile'.
+2. Address weakness 'Customer Service: score 60 (market avg 65)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access'.
 3. Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Movistar Chile revenue growth 8.9% YoY'.
 
 ### ST Strategies (Strengths × Threats)
 *Use strengths to counter threats* — Posture: Defensive
 
-1. Use strength 'Enterprise Solutions: score 70 (market avg 58)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
+1. Use strength 'Enterprise Solutions: score 70 (market avg 58)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile'.
 2. Use strength 'Network Coverage: score 80 (market avg 72)' to counter the threat of 'Entel Chile revenue growth 15.9% YoY'.
 3. Use strength 'Sustainability: score 70 (market avg 58)' to counter the threat of 'WOM Chile revenue growth 6.9% YoY'.
 4. Use strength 'Strong EBITDA margin at 28.0%' to counter the threat of 'Claro Chile revenue growth 8.7% YoY'.
@@ -1535,7 +1549,7 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 ### WT Strategies (Weaknesses × Threats)
 *Minimize weaknesses and avoid threats* — Posture: Survival
 
-1. Mitigate weakness '5G Deployment: score 60 (market avg 65)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
+1. Mitigate weakness '5G Deployment: score 60 (market avg 65)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile'.
 2. Mitigate weakness 'Customer Service: score 60 (market avg 65)' and defend against the threat of 'Entel Chile revenue growth 15.9% YoY'.
 3. Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'WOM Chile revenue growth 6.9% YoY'.
 4. Mitigate weakness 'Product Innovation: score 60 (market avg 65)' and defend against the threat of 'Claro Chile revenue growth 8.7% YoY'.
@@ -1560,7 +1574,7 @@ This SWOT analysis reinforces the **"The Distant Second"** central diagnosis ide
 <!-- ============================================================ -->
 
 
-# Opportunities Analysis — SPAN Matrix (unknown)
+# Opportunities Analysis — SPAN Matrix (CQ4_2025)
 
 **Protagonist**: Movistar Chile
 
@@ -1588,8 +1602,8 @@ This SWOT analysis reinforces the **"The Distant Second"** central diagnosis ide
 | 5G SA enabling network slicing and enterprise services | 5.2 | 4.7 | Acquire Skills | Build missing capabilities before committing major |
 | AI/ML for network optimization and customer experience | 5.2 | 4.7 | Acquire Skills | Build missing capabilities before committing major |
 | Open RAN for vendor diversification and cost reduction | 5.2 | 4.7 | Acquire Skills | Build missing capabilities before committing major |
-| Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl | 5.9 | 5.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access | 5.9 | 5.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile | 5.9 | 5.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access | 5.9 | 5.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg 58) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
@@ -1612,20 +1626,9 @@ This SWOT analysis reinforces the **"The Distant Second"** central diagnosis ide
 ## 2. Grow/Invest Opportunities
 *Execute aggressively — highest priority*
 
-### 1. SO-1
+### 1. Leverage Enterprise Solutions → Regulatory Environment
 
-Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: swot_so_strategy*
-
-### 2. SO-2
-
-Leverage 'Network Coverage: score 80 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access'.
+Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1634,7 +1637,18 @@ Leverage 'Network Coverage: score 80 (market avg 72)' to capture the opportunity
 
 *Derived from: swot_so_strategy*
 
-### 3. SO-3
+### 2. Leverage Network Coverage → National Digital Strategy
+
+Leverage 'Network Coverage: score 80 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access'.
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: swot_so_strategy*
+
+### 3. Leverage Sustainability → Movistar Chile revenue growth 8.9% YoY
 
 Leverage 'Sustainability: score 70 (market avg 58)' to capture the opportunity of 'Movistar Chile revenue growth 8.9% YoY'.
 
@@ -1656,9 +1670,9 @@ Movistar Chile revenue growth 8.9% YoY
 
 *Derived from: market_opportunity, pricing*
 
-### 5. Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
+### 5. Regulatory Environment: Compliance requirements and spectrum polici...
 
-Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl
+Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1667,9 +1681,9 @@ Policy opportunity: Regulatory Environment: Compliance requirements and spectrum
 
 *Derived from: trend_policy_opportunity*
 
-### 6. National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access
+### 6. National Digital Strategy: Fiber/5G coverage mandates may require m...
 
-Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access
+Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1700,7 +1714,7 @@ Competitor claro_cl is weak in: Brand Strength: score 60 (market avg 72)
 
 *Derived from: competitor_weakness, claro_cl*
 
-### 9. Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg 58)
+### 9. Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg...
 
 Competitor wom_cl is weak in: Enterprise Solutions: score 30 (market avg 58)
 
@@ -1722,7 +1736,7 @@ Competitor wom_cl is weak in: Network Coverage: score 50 (market avg 72)
 
 *Derived from: competitor_weakness, wom_cl*
 
-### 11. Exploit entel_cl weakness: Pricing Competitiveness: score 60 (market avg 70)
+### 11. Exploit entel_cl weakness: Pricing Competitiveness: score 60 (marke...
 
 Competitor entel_cl is weak in: Pricing Competitiveness: score 60 (market avg 70)
 
@@ -1771,20 +1785,9 @@ Technology trend: Open RAN for vendor diversification and cost reduction
 
 *Derived from: trend_technology*
 
-### 4. WO-1
+### 4. Address 5G Deployment → Regulatory Environment
 
-Address weakness '5G Deployment: score 60 (market avg 65)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl'.
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P1** |
-| Rationale | Quadrant: acquire_skills |
-
-*Derived from: swot_wo_strategy*
-
-### 5. WO-2
-
-Address weakness 'Customer Service: score 60 (market avg 65)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access'.
+Address weakness '5G Deployment: score 60 (market avg 65)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1793,7 +1796,18 @@ Address weakness 'Customer Service: score 60 (market avg 65)' to unlock the oppo
 
 *Derived from: swot_wo_strategy*
 
-### 6. WO-3
+### 5. Address Customer Service → National Digital Strategy
+
+Address weakness 'Customer Service: score 60 (market avg 65)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access'.
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P1** |
+| Rationale | Quadrant: acquire_skills |
+
+*Derived from: swot_wo_strategy*
+
+### 6. Address Pricing Competitiveness → Movistar Chile revenue growth 8.9% YoY
 
 Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Movistar Chile revenue growth 8.9% YoY'.
 
@@ -1811,18 +1825,18 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 ### Harvest
 *Extract remaining value — do not invest for growth*
 
-- ST-1
-- ST-2
-- ST-3
-- ST-4
+- Defend Enterprise Solutions → Regulatory Environment
+- Defend Network Coverage → Entel Chile revenue growth 15.9% YoY
+- Defend Sustainability → WOM Chile revenue growth 6.9% YoY
+- Defend Strong EBITDA margin at 28.0% → Claro Chile revenue growth 8.7% YoY
 
 ### Avoid/Exit
 *No viable path — exit or do not enter*
 
-- WT-1
-- WT-2
-- WT-3
-- WT-4
+- Mitigate 5G Deployment → Regulatory Environment
+- Mitigate Customer Service → Entel Chile revenue growth 15.9% YoY
+- Mitigate Pricing Competitiveness → WOM Chile revenue growth 6.9% YoY
+- Mitigate Product Innovation → Claro Chile revenue growth 8.7% YoY
 
 ---
 
@@ -1833,17 +1847,11 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 
 | Opportunity | Addressable Market | Time Window | Capability |
 | :--- | :--- | :--- | :--- |
-| SO-1 | N/A |  |  |
-| SO-2 | N/A |  |  |
-| SO-3 | N/A |  |  |
+| Leverage Enterprise Solutions → Regulatory Environment | N/A |  |  |
+| Leverage Network Coverage → National Digital Strategy | N/A |  |  |
+| Leverage Sustainability → Movistar Chile revenue growth 8.9% YoY | N/A |  |  |
 | Movistar Chile revenue growth 8.9% YoY | N/A |  |  |
-| Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl | N/A |  |  |
-| National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access | N/A |  |  |
-| Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | N/A |  |  |
-| Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72) | N/A |  |  |
-| Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg 58) | N/A |  |  |
-| Exploit wom_cl weakness: Network Coverage: score 50 (market avg 72) | N/A |  |  |
-| Exploit entel_cl weakness: Pricing Competitiveness: score 60 (market avg 70) | N/A |  |  |
+| Regulatory Environment: Compliance requirements and spectrum polici... | N/A |  |  |
 
 ### P1 — Should Do (Strategic)
 *High-impact strategic initiatives*
@@ -1853,23 +1861,29 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 | 5G SA enabling network slicing and enterprise services | N/A |  |  |
 | AI/ML for network optimization and customer experience | N/A |  |  |
 | Open RAN for vendor diversification and cost reduction | N/A |  |  |
-| WO-1 | N/A |  |  |
-| WO-2 | N/A |  |  |
-| WO-3 | N/A |  |  |
-| ST-1 | N/A |  |  |
-| ST-2 | N/A |  |  |
-| ST-3 | N/A |  |  |
-| ST-4 | N/A |  |  |
+| National Digital Strategy: Fiber/5G coverage mandates may require m... | N/A |  |  |
+| Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | N/A |  |  |
+| Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72) | N/A |  |  |
+| Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg... | N/A |  |  |
+| Exploit wom_cl weakness: Network Coverage: score 50 (market avg 72) | N/A |  |  |
+| Exploit entel_cl weakness: Pricing Competitiveness: score 60 (marke... | N/A |  |  |
+| Address 5G Deployment → Regulatory Environment | N/A |  |  |
+| Address Customer Service → National Digital Strategy | N/A |  |  |
+| Address Pricing Competitiveness → Movistar Chile revenue growth 8.9% YoY | N/A |  |  |
 
 ### P2 — Could Do (Opportunistic)
 *Worthwhile if resources allow*
 
 | Opportunity | Addressable Market | Time Window | Capability |
 | :--- | :--- | :--- | :--- |
-| WT-1 | N/A |  |  |
-| WT-2 | N/A |  |  |
-| WT-3 | N/A |  |  |
-| WT-4 | N/A |  |  |
+| Defend Enterprise Solutions → Regulatory Environment | N/A |  |  |
+| Defend Network Coverage → Entel Chile revenue growth 15.9% YoY | N/A |  |  |
+| Defend Sustainability → WOM Chile revenue growth 6.9% YoY | N/A |  |  |
+| Defend Strong EBITDA margin at 28.0% → Claro Chile revenue growth 8.7% YoY | N/A |  |  |
+| Mitigate 5G Deployment → Regulatory Environment | N/A |  |  |
+| Mitigate Customer Service → Entel Chile revenue growth 15.9% YoY | N/A |  |  |
+| Mitigate Pricing Competitiveness → WOM Chile revenue growth 6.9% YoY | N/A |  |  |
+| Mitigate Product Innovation → Claro Chile revenue growth 8.7% YoY | N/A |  |  |
 
 ---
 
@@ -1877,16 +1891,16 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 
 | Opportunity | Priority | Addressable Market |
 | :--- | :--- | :--- |
-| SO-1 | P0 | N/A |
-| SO-2 | P0 | N/A |
-| SO-3 | P0 | N/A |
+| Leverage Enterprise Solutions → Regulatory Environment | P0 | N/A |
+| Leverage Network Coverage → National Digital Strategy | P0 | N/A |
+| Leverage Sustainability → Movistar Chile revenue growth 8.9% YoY | P0 | N/A |
 | Movistar Chile revenue growth 8.9% YoY | P0 | N/A |
 | 5G SA enabling network slicing and enterprise services | P1 | N/A |
 | AI/ML for network optimization and customer experience | P1 | N/A |
 | Open RAN for vendor diversification and cost reduction | P1 | N/A |
-| Regulatory Environment: Compliance requirements and spectrum policies directly affect movistar_cl | P0 | N/A |
-| National Digital Strategy: Fiber/5G coverage mandates may require movistar_cl investment but also enable subsidy access | P0 | N/A |
-| Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | P0 | N/A |
+| Regulatory Environment: Compliance requirements and spectrum polici... | P1 | N/A |
+| National Digital Strategy: Fiber/5G coverage mandates may require m... | P1 | N/A |
+| Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | P1 | N/A |
 
 **Bull case (full execution)**: +10-16% over 5 years
 **Bear case (no execution)**: -6-12% over 5 years
@@ -1899,9 +1913,9 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 
 ### Immediate Actions (Next Quarter)
 
-- **Accelerate Mobile Growth**: Mobile showing strong momentum at  — invest to accelerate
-- **Accelerate B2B Growth**: B2B showing strong momentum at  — invest to accelerate
-- **Accelerate TV/Convergence Growth**: TV/Convergence showing strong momentum at  — invest to accelerate
+- **Accelerate Mobile Growth**: Mobile showing strong momentum at $129,000M — invest to accelerate
+- **Accelerate B2B Growth**: B2B showing strong momentum at $15,000M — invest to accelerate
+- **Accelerate TV/Convergence Growth**: TV/Convergence showing strong momentum at $12,000M — invest to accelerate
 
 ### Medium-Term Initiatives (1-3 Years)
 
@@ -1928,5 +1942,5 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 
 ---
 
-*Generated: 2026-02-12 | Movistar Chile BLM Strategic Assessment (unknown)*
+*Generated: 2026-02-12 | Movistar Chile BLM Strategic Assessment (CQ4_2025)*
 *Framework: Business Leadership Model — Five Looks + SWOT + SPAN*

@@ -1,6 +1,6 @@
 # Vodafone Germany — BLM Strategic Assessment: Complete Analysis
 
-> **Period**: unknown
+> **Period**: CQ4_2025
 > **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + SPAN
 > **Protagonist**: Vodafone Germany
 > **Market**: German Telecommunications
@@ -36,7 +36,7 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 
 # Executive Summary — Vodafone Germany BLM Strategic Assessment
 
-**Period**: unknown
+**Period**: CQ4_2025
 
 **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + Opportunities
 
@@ -75,8 +75,8 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 ### 1.3 The Headline Numbers
 
 ```
-Revenue              3092.0/q
-EBITDA               1120.0/q
+Revenue             €3,092M/q
+EBITDA              €1,120M/q
 ```
 
 ---
@@ -163,8 +163,8 @@ This is not a temporary market condition — it is a structural competitive prob
 
 **The escape routes** (not mutually exclusive):
 1. Leverage Brand Strength for Regulatory Environment
-2. Leverage Enterprise Solutions for National Digital Strategy
-3. Leverage Network Coverage for BNetzA extends 800/1800/2600 MHz spec...
+2. Leverage Enterprise Solutions for Digital Strategy Alignment
+3. Leverage Network Coverage for Spectrum Positioning
 
 | Dimension | Deutsche Telekom | One And One | Telefonica O2 | Vodafone Germany |
 | :--- | :--- | :--- | :--- | :--- |
@@ -186,6 +186,7 @@ Across all analyses, 7 strategic priorities emerge consistently:
 
 | Aspect | Detail |
 | :--- | :--- |
+| Addressable market | €520M |
 | Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
 | Time window | immediate |
 | Approach | Increase investment in B2B to capture growth momentum |
@@ -194,6 +195,7 @@ Across all analyses, 7 strategic priorities emerge consistently:
 
 | Aspect | Detail |
 | :--- | :--- |
+| Addressable market | €380M |
 | Current capability | Strong — GROW: Strong momentum — invest to accelerate growth |
 | Time window | immediate |
 | Approach | Increase investment in Wholesale to capture growth momentum |
@@ -297,15 +299,25 @@ Equally important — strategic traps to avoid:
 
 ---
 
+## 8. Success Metrics Dashboard
+
+| KPI | Current | 12-Month | 3-Year | 5-Year |
+| :--- | :--- | :--- | :--- | :--- |
+| **Mobile revenue** | €1,520M | — | — | Growth |
+| **Fixed Broadband revenue** | €795M | — | — | Growth |
+| **B2B revenue** | €520M | — | — | Growth |
+
+---
+
 
 <!-- ============================================================ -->
 <!-- MODULE: 01 — Look 1: Trends — PEST Analysis -->
 <!-- ============================================================ -->
 
 
-# German Telecom Macro Trends — PEST Deep Analysis (unknown)
+# German Telecom Macro Trends — PEST Deep Analysis (CQ4_2025)
 
-**Data basis**: PEST framework | 13 macro factors | unknown market data | Regulatory/event intelligence | Industry lifecycle assessment
+**Data basis**: PEST framework | 13 macro factors | CQ4_2025 market data | Regulatory/event intelligence | Industry lifecycle assessment
 
 ---
 
@@ -364,7 +376,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: Regulatory framework shapes competitive dynamics and investment requirements
 
-**Company impact**: Compliance requirements and spectrum policies directly affect vodafone_germany
+**Company impact**: Compliance requirements and spectrum policies directly affect Vodafone Germany
 
 - Macro data: BNetzA: 800/1800/2600MHz spectrum extended 5 years (March 2025 decision); Coverage obligation: 99.5% area ≥50Mbps by 2030; €1.2B Gigabit Funding Programme (Jan 2025); Nebenkostenprivileg abolished July 2024 (MDU TV regulation change); Fiber targets: 50% FTTH by 2025, 100% by 2030
 
@@ -381,7 +393,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: Policy targets create both mandate and subsidy opportunities for network operators
 
-**Company impact**: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access
+**Company impact**: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access
 
 - Digital strategy: Gigabit Strategy: FTTH/FTTB 50% by 2025, 100% by 2030; €1.2B Gigabit Funding Programme 2025; Fiber connections +20% YoY; 5G coverage obligation: 99.5% area by 2030
 
@@ -396,9 +408,7 @@ Being in the **mature** phase means:
 
 **Current status**: BNetzA decided to extend 800MHz, 1800MHz, and 2600MHz spectrum usage rights by 5 years (originally expiring end of 2025). Conditions: 99.5% national area coverage ≥50Mbps by 2030; 99% of households in sparsely populated municipalities ≥100Mbps by 2029. All three operators must negotiate spectrum sharing with MVNOs/service providers. Special requirement: all three must provide 800MHz 2×5MHz shared access to 1&1; O2 must continue leasing 2600MHz 2×10MHz to 1&1. Re-auction expected in 2029.
 
-**Industry impact**: BNetzA decided to extend 800MHz, 1800MHz, and 2600MHz spectrum usage rights by 5 years (originally expiring end of 2025). Conditions: 99.5% national area coverage ≥50Mbps by 2030; 99% of households in sparsely populated municipalities ≥100Mbps by 2029. All three operators must negotiate spectrum sharing with MVNOs/service providers. Special requirement: all three must provide 800MHz 2×5MHz shared access to 1&1; O2 must continue leasing 2600MHz 2×10MHz to 1&1. Re-auction expected in 2029.
-
-**Company impact**: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany
+**Company impact**: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany
 
 - https://www.bundesnetzagentur.de/SharedDocs/Pressemitteilungen/EN/2025/20250324_frequenzen.html
 
@@ -413,9 +423,7 @@ Being in the **mature** phase means:
 
 **Current status**: German Federal Ministry for Digital and Transport launches the 2025 Gigabit Funding Programme, allocating €1.2B for fiber infrastructure. Targets: 50% household FTTH/FTTB coverage by 2025, 100% fiber coverage by 2030. Fiber connections grew over 20% YoY.
 
-**Industry impact**: German Federal Ministry for Digital and Transport launches the 2025 Gigabit Funding Programme, allocating €1.2B for fiber infrastructure. Targets: 50% household FTTH/FTTB coverage by 2025, 100% fiber coverage by 2030. Fiber connections grew over 20% YoY.
-
-**Company impact**: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany
+**Company impact**: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany
 
 - https://digital-strategy.ec.europa.eu/en/policies/digital-connectivity-germany
 
@@ -430,9 +438,7 @@ Being in the **mature** phase means:
 
 **Current status**: From July 1, 2024, landlords can no longer include cable TV fees in ancillary costs (Nebenkostenprivileg abolished). Vodafone most affected: originally 8.5M MDU subscribers, retention rate ~50% (~4M retained). Fixed-line service revenue declined 5.9% in H1 FY25. By Q3 FY26, fixed-line decline narrowed to -1.1%, headwind easing.
 
-**Industry impact**: From July 1, 2024, landlords can no longer include cable TV fees in ancillary costs (Nebenkostenprivileg abolished). Vodafone most affected: originally 8.5M MDU subscribers, retention rate ~50% (~4M retained). Fixed-line service revenue declined 5.9% in H1 FY25. By Q3 FY26, fixed-line decline narrowed to -1.1%, headwind easing.
-
-**Company impact**: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations
+**Company impact**: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict Vodafone Germany operations
 
 - https://www.broadbandtvnews.com/2024/05/14/vodafones-german-recovery-hit-by-end-to-mdu-tv-switch/
 
@@ -453,7 +459,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: Slow GDP growth constrains consumer spending and enterprise IT budgets
 
-**Company impact**: Constrained revenue growth for vodafone_germany
+**Company impact**: Constrained revenue growth for Vodafone Germany
 
 - GDP growth: 0.8%
 
@@ -470,7 +476,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: Inflation affects both OPEX (energy, wages) and consumer willingness to pay
 
-**Company impact**: Manageable cost environment for vodafone_germany
+**Company impact**: Manageable cost environment for Vodafone Germany
 
 - Inflation: 2.1%
 
@@ -491,7 +497,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: Growing 5G adoption validates network investment and enables new use cases
 
-**Company impact**: 5G adoption growth supports premium pricing and new service revenue for vodafone_germany
+**Company impact**: 5G adoption growth supports premium pricing and new service revenue for Vodafone Germany
 
 - 5G adoption: 56.0%
 
@@ -508,7 +514,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: Growing fiber adoption accelerates fixed broadband technology transition from copper/cable
 
-**Company impact**: Fiber migration presents both investment challenge and growth opportunity for vodafone_germany
+**Company impact**: Fiber migration presents both investment challenge and growth opportunity for Vodafone Germany
 
 - Fiber penetration: 26.0%
 
@@ -529,7 +535,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: 5G enables network slicing, enterprise services, and FWA -- new revenue streams
 
-**Company impact**: 5G network capabilities are key competitive differentiator for vodafone_germany
+**Company impact**: 5G network capabilities are key competitive differentiator for Vodafone Germany
 
 - 5G adoption: 56.0%
 
@@ -546,7 +552,7 @@ Being in the **mature** phase means:
 
 **Industry impact**: Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX
 
-**Company impact**: Fiber strategy (build vs buy vs partner) is a critical decision for vodafone_germany
+**Company impact**: Fiber strategy (build vs buy vs partner) is a critical decision for Vodafone Germany
 
 - Fiber penetration: 26.0%
 
@@ -561,9 +567,7 @@ Being in the **mature** phase means:
 
 **Current status**: Vodafone begins nationwide cable network frequency restructuring, creating unified spectrum and releasing broadband capacity. Technical upgrade covers 400+ cities and 8.6M TV connections, expected completion mid-2026. Goal: free up spectrum resources for faster broadband speeds.
 
-**Industry impact**: Vodafone begins nationwide cable network frequency restructuring, creating unified spectrum and releasing broadband capacity. Technical upgrade covers 400+ cities and 8.6M TV connections, expected completion mid-2026. Goal: free up spectrum resources for faster broadband speeds.
-
-**Company impact**: Vodafone restructures cable TV frequencies nationwide strengthens vodafone_germany competitive position and market presence
+**Company impact**: Vodafone restructures cable TV frequencies nationwide strengthens Vodafone Germany competitive position and market presence
 
 - https://www.broadbandtvnews.com/2025/09/01/vodafone-restructures-tv-frequencies-across-germany-to-boost-cable-performance/
 
@@ -578,9 +582,7 @@ Being in the **mature** phase means:
 
 **Current status**: Vodafone and Altice formed FibreCo JV to deploy FTTH to 7M homes over 6 years. 80% upgrading within Vodafone's existing cable footprint, 20% greenfield expansion. Simultaneously advancing cable upgrades: node splitting + DOCSIS 3.1 high-split (3Gbps) → DOCSIS 4.0 (10Gbps). This is Vodafone's core strategic move in transitioning from cable to fiber.
 
-**Industry impact**: Vodafone and Altice formed FibreCo JV to deploy FTTH to 7M homes over 6 years. 80% upgrading within Vodafone's existing cable footprint, 20% greenfield expansion. Simultaneously advancing cable upgrades: node splitting + DOCSIS 3.1 high-split (3Gbps) → DOCSIS 4.0 (10Gbps). This is Vodafone's core strategic move in transitioning from cable to fiber.
-
-**Company impact**: Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years strengthens vodafone_germany competitive position and market presence
+**Company impact**: Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years strengthens Vodafone Germany competitive position and market presence
 
 - https://www.vodafone.com/news/newsroom/corporate-and-financial/vodafone-altice-create-joint-venture-deploy-fibre-to-the-home-germany
 
@@ -616,15 +618,15 @@ Being in the **mature** phase means:
 
 ### Policy Opportunities
 
-- Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
-- National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access
-- BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany
-- German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany
+- Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany
+- National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access
+- BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany
+- German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany
 
 ### Policy Threats
 
-- Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
-- Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations
+- Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany
+- Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict Vodafone Germany operations
 
 ---
 
@@ -634,7 +636,7 @@ Being in the **mature** phase means:
 <!-- ============================================================ -->
 
 
-# Market & Customer Analysis — $APPEALS Framework (unknown)
+# Market & Customer Analysis — $APPEALS Framework (CQ4_2025)
 
 **Protagonist**: Vodafone Germany
 
@@ -799,7 +801,7 @@ Value migration is mixed: some segments trending up while price-sensitive segmen
 <!-- ============================================================ -->
 
 
-# Tariff Deep Analysis (unknown)
+# Tariff Deep Analysis (CQ4_2025)
 
 ---
 
@@ -850,7 +852,7 @@ Value migration is mixed: some segments trending up while price-sensitive segmen
 <!-- ============================================================ -->
 
 
-# Competition Analysis — Porter's Five Forces + Deep Dives (unknown)
+# Competition Analysis — Porter's Five Forces + Deep Dives (CQ4_2025)
 
 **Protagonist**: Vodafone Germany
 
@@ -1230,7 +1232,7 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 <!-- ============================================================ -->
 
 
-# Self Analysis — Vodafone Germany (unknown)
+# Self Analysis — Vodafone Germany (CQ4_2025)
 
 **Framework**: Business Model Canvas (BMC) + Capability Assessment
 
@@ -1276,7 +1278,7 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 | Mobile Service Revenue | €1,520M | 49.2% |
 | Fixed Service Revenue | €795M | 25.7% |
 | B2B Revenue | €520M | 16.8% |
-| Tv Revenue | €268M | 8.7% |
+| TV Revenue | €268M | 8.7% |
 | Wholesale Revenue | €380M | 12.3% |
 | **Total** | **€3,483M** | **100.0%** |
 
@@ -1286,25 +1288,25 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 | Segment | Revenue | Health | Action Required |
 | :--- | :--- | :--- | :--- |
-| Mobile | — | **Stable** | GROW: Improving trajectory — consider incremental investment |
-| Fixed Broadband | — | **Stable** | MAINTAIN: Stable performance — optimize current operations |
-| B2B | — | **Strong** | GROW: Strong momentum — invest to accelerate growth |
-| TV/Convergence | — | **Stable** | GROW: Improving trajectory — consider incremental investment |
-| Wholesale | — | **Strong** | GROW: Strong momentum — invest to accelerate growth |
+| Mobile | €1,520M | **Stable** | GROW: Improving trajectory — consider incremental investment |
+| Fixed Broadband | €795M | **Stable** | MAINTAIN: Stable performance — optimize current operations |
+| B2B | €520M | **Strong** | GROW: Strong momentum — invest to accelerate growth |
+| TV/Convergence | €268M | **Stable** | GROW: Improving trajectory — consider incremental investment |
+| Wholesale | €380M | **Strong** | GROW: Strong momentum — invest to accelerate growth |
 
 ### Segment: Mobile [Stable]
 
 | Metric | Value |
 | :--- | :--- |
-| Mobile Service Revenue | 1520.0 |
-| Mobile Service Growth Pct | 2.8 |
-| Mobile Total K | 32500.0 |
-| Mobile Postpaid K | 23200.0 |
-| Mobile Prepaid K | 6300.0 |
-| Mobile Net Adds K | 80.0 |
-| Mobile Churn Pct | 1.05 |
-| Mobile Arpu | 12.8 |
-| Iot Connections K | 3000.0 |
+| Mobile Service Revenue | €1,520M |
+| Mobile Service Growth % | 2.8% |
+| Mobile Total (K) | 32,500K |
+| Mobile Postpaid (K) | 23,200K |
+| Mobile Prepaid (K) | 6,300K |
+| Mobile Net Adds (K) | 80K |
+| Mobile Churn % | 1.1% |
+| Mobile ARPU | €12.80 |
+| IoT Connections (K) | 3,000K |
 
 #### Changes
 
@@ -1328,14 +1330,14 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 | Metric | Value |
 | :--- | :--- |
-| Fixed Service Revenue | 795.0 |
-| Fixed Service Growth Pct | -1.1 |
-| Broadband Total K | 9940.0 |
-| Broadband Net Adds K | -63.0 |
-| Broadband Cable K | 6980.0 |
-| Broadband Fiber K | 1480.0 |
-| Broadband Dsl K | 1480.0 |
-| Broadband Arpu | 30.2 |
+| Fixed Service Revenue | €795M |
+| Fixed Service Growth % | -1.1% |
+| Broadband Total (K) | 9,940K |
+| Broadband Net Adds (K) | -63K |
+| Broadband Cable (K) | 6,980K |
+| Broadband Fiber (K) | 1,480K |
+| Broadband Dsl (K) | 1,480K |
+| Broadband ARPU | €30.20 |
 
 #### Changes
 
@@ -1358,10 +1360,10 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 | Metric | Value |
 | :--- | :--- |
-| B2B Revenue | 520.0 |
-| B2B Growth Pct | 8.5 |
-| B2B Customers K | 215.0 |
-| B2B Share Of Revenue Pct | 16.8 |
+| B2B Revenue | €520M |
+| B2B Growth % | 8.5% |
+| B2B Customers (K) | 215K |
+| B2B Share Of Revenue % | 16.8% |
 
 #### Changes
 
@@ -1385,11 +1387,11 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 | Metric | Value |
 | :--- | :--- |
-| Tv Revenue | 268.0 |
-| Tv Total K | 7740.0 |
-| Tv Net Adds K | -6.0 |
-| Fmc Total K | 4900.0 |
-| Fmc Penetration Pct | 49.3 |
+| TV Revenue | €268M |
+| TV Total (K) | 7,740K |
+| TV Net Adds (K) | -6K |
+| FMC Total (K) | 4,900K |
+| FMC Penetration % | 49.3% |
 
 #### Changes
 
@@ -1412,8 +1414,8 @@ Wholesale       220.0 → 260.0 → 320.0 → 380.0
 
 | Metric | Value |
 | :--- | :--- |
-| Wholesale Revenue | 380.0 |
-| Wholesale Share Of Revenue Pct | 12.3 |
+| Wholesale Revenue | €380M |
+| Wholesale Share Of Revenue % | 12.3% |
 
 #### Changes
 
@@ -1570,7 +1572,7 @@ Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture;
 <!-- ============================================================ -->
 
 
-# SWOT Synthesis — Vodafone Germany (unknown)
+# SWOT Synthesis — Vodafone Germany (CQ4_2025)
 
 **Competitive stance**: **Offensive (SO-dominant)**
 
@@ -1620,10 +1622,10 @@ Note: Weaknesses often compound. For example, 'Customer Service: score 70 (marke
 
 ## 4. Opportunities
 
-1. Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
-2. National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access
-3. BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany
-4. German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany
+1. Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany
+2. National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access
+3. BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany
+4. German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany
 5. Vodafone completes 1&1 customer migration: 12M users on network
 6. Vodafone completes Skaylink acquisition for €175M
 7. Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%
@@ -1635,8 +1637,8 @@ Note: Weaknesses often compound. For example, 'Customer Service: score 70 (marke
 
 ## 5. Threats
 
-1. Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
-2. Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations
+1. Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany
+2. Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict Vodafone Germany operations
 3. High existing competitors pressure
 4. High substitutes pressure
 
@@ -1651,32 +1653,32 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 ### SO Strategies (Strengths × Opportunities)
 *Use strengths to capture opportunities* — Posture: Offensive
 
-1. Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-2. Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.
-3. Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany'.
-4. Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany'.
+1. Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany'.
+2. Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access'.
+3. Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany'.
+4. Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany'.
 
 ### WO Strategies (Weaknesses × Opportunities)
 *Fix weaknesses to capture opportunities* — Posture: Developmental
 
-1. Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-2. Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.
-3. Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany'.
-4. Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany'.
+1. Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany'.
+2. Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access'.
+3. Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany'.
+4. Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany'.
 
 ### ST Strategies (Strengths × Threats)
 *Use strengths to counter threats* — Posture: Defensive
 
-1. Use strength 'Brand Strength: score 82 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-2. Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations'.
+1. Use strength 'Brand Strength: score 82 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany'.
+2. Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict Vodafone Germany operations'.
 3. Use strength 'Network Coverage: score 80 (market avg 76)' to counter the threat of 'High existing competitors pressure'.
 4. Use strength 'Strong EBITDA margin at 36.2%' to counter the threat of 'High substitutes pressure'.
 
 ### WT Strategies (Weaknesses × Threats)
 *Minimize weaknesses and avoid threats* — Posture: Survival
 
-1. Mitigate weakness 'Customer Service: score 70 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-2. Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations'.
+1. Mitigate weakness 'Customer Service: score 70 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany'.
+2. Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict Vodafone Germany operations'.
 3. Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High existing competitors pressure'.
 4. Mitigate weakness 'Technology perception gap as competitors lead fiber deployment' and defend against the threat of 'High substitutes pressure'.
 
@@ -1700,7 +1702,7 @@ This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis id
 <!-- ============================================================ -->
 
 
-# Opportunities Analysis — SPAN Matrix (unknown)
+# Opportunities Analysis — SPAN Matrix (CQ4_2025)
 
 **Protagonist**: Vodafone Germany
 
@@ -1735,8 +1737,8 @@ This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis id
 | 5G SA enabling network slicing and enterprise services | 6.5 | 5.7 | Grow Invest | Invest aggressively to grow market share and reven |
 | AI/ML for network optimization and customer experience | 6.5 | 5.7 | Grow Invest | Invest aggressively to grow market share and reven |
 | Open RAN for vendor diversification and cost reduction | 6.5 | 5.7 | Grow Invest | Invest aggressively to grow market share and reven |
-| Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy ac | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy ac | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create n | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Progra | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (market avg 74) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
@@ -1762,20 +1764,9 @@ This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis id
 ## 2. Grow/Invest Opportunities
 *Execute aggressively — highest priority*
 
-### 1. SO-1
+### 1. Leverage Brand Strength → Regulatory Environment
 
-Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: swot_so_strategy*
-
-### 2. SO-2
-
-Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.
+Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1784,9 +1775,9 @@ Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportu
 
 *Derived from: swot_so_strategy*
 
-### 3. SO-3
+### 2. Leverage Enterprise Solutions → National Digital Strategy
 
-Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany'.
+Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1795,9 +1786,20 @@ Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity
 
 *Derived from: swot_so_strategy*
 
-### 4. SO-4
+### 3. Leverage Network Coverage → BNetzA extends 800/1800/2600 MHz spectru...
 
-Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany'.
+Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany'.
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: swot_so_strategy*
+
+### 4. Leverage Strong EBITDA margin at 36.2% → German government launches €1.2B Gigabit...
+
+Leverage 'Strong EBITDA margin at 36.2%' to capture the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1916,20 +1918,9 @@ Technology trend: Open RAN for vendor diversification and cost reduction
 
 *Derived from: trend_technology*
 
-### 15. Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
+### 15. Regulatory Environment: Compliance requirements and spectrum polici...
 
-Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: trend_policy_opportunity*
-
-### 16. National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy ac
-
-Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access
+Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1938,20 +1929,9 @@ Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may re
 
 *Derived from: trend_policy_opportunity*
 
-### 17. BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create n
+### 16. National Digital Strategy: Fiber/5G coverage mandates may require v...
 
-Policy opportunity: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: trend_policy_opportunity*
-
-### 18. German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Progra
-
-Policy opportunity: German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany
+Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1960,7 +1940,29 @@ Policy opportunity: German government launches €1.2B Gigabit Funding Programme
 
 *Derived from: trend_policy_opportunity*
 
-### 19. Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (market avg 74)
+### 17. BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extend...
+
+Policy opportunity: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: trend_policy_opportunity*
+
+### 18. German government launches €1.2B Gigabit Funding Programme 2025: Ge...
+
+Policy opportunity: German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: trend_policy_opportunity*
+
+### 19. Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (mar...
 
 Competitor telefonica_o2 is weak in: Enterprise Solutions: score 68 (market avg 74)
 
@@ -1971,7 +1973,7 @@ Competitor telefonica_o2 is weak in: Enterprise Solutions: score 68 (market avg 
 
 *Derived from: competitor_weakness, telefonica_o2*
 
-### 20. Exploit telefonica_o2 weakness: Product Innovation: score 70 (market avg 76)
+### 20. Exploit telefonica_o2 weakness: Product Innovation: score 70 (marke...
 
 Competitor telefonica_o2 is weak in: Product Innovation: score 70 (market avg 76)
 
@@ -1982,7 +1984,7 @@ Competitor telefonica_o2 is weak in: Product Innovation: score 70 (market avg 76
 
 *Derived from: competitor_weakness, telefonica_o2*
 
-### 21. Exploit deutsche_telekom weakness: Pricing Competitiveness: score 65 (market avg 78)
+### 21. Exploit deutsche_telekom weakness: Pricing Competitiveness: score 6...
 
 Competitor deutsche_telekom is weak in: Pricing Competitiveness: score 65 (market avg 78)
 
@@ -2020,20 +2022,9 @@ Competitor one_and_one is weak in: Brand Strength: score 65 (market avg 78)
 ## 3. Acquire Skills Opportunities
 *Build capability before competing*
 
-### 1. WO-1
+### 1. Address Customer Service → Regulatory Environment
 
-Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P1** |
-| Rationale | Quadrant: acquire_skills |
-
-*Derived from: swot_wo_strategy*
-
-### 2. WO-2
-
-Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.
+Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Vodafone Germany'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -2042,9 +2033,9 @@ Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock t
 
 *Derived from: swot_wo_strategy*
 
-### 3. WO-3
+### 2. Address Pricing Competitiveness → National Digital Strategy
 
-Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany'.
+Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy access'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -2053,9 +2044,20 @@ Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network'
 
 *Derived from: swot_wo_strategy*
 
-### 4. WO-4
+### 3. Address Loss of wholesale revenue as 1&1 users migrate to own network → BNetzA extends 800/1800/2600 MHz spectru...
 
-Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany'.
+Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for Vodafone Germany'.
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P1** |
+| Rationale | Quadrant: acquire_skills |
+
+*Derived from: swot_wo_strategy*
+
+### 4. Address Technology perception gap as competitors lead fiber deployment → German government launches €1.2B Gigabit...
+
+Address weakness 'Technology perception gap as competitors lead fiber deployment' to unlock the opportunity of 'German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for Vodafone Germany'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -2071,18 +2073,18 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 ### Harvest
 *Extract remaining value — do not invest for growth*
 
-- ST-1
-- ST-2
-- ST-3
-- ST-4
+- Defend Brand Strength → Regulatory Environment
+- Defend Enterprise Solutions → Nebenkostenprivileg (MDU cable TV bundli...
+- Defend Network Coverage → High existing competitors pressure
+- Defend Strong EBITDA margin at 36.2% → High substitutes pressure
 
 ### Avoid/Exit
 *No viable path — exit or do not enter*
 
-- WT-1
-- WT-2
-- WT-3
-- WT-4
+- Mitigate Customer Service → Regulatory Environment
+- Mitigate Pricing Competitiveness → Nebenkostenprivileg (MDU cable TV bundli...
+- Mitigate Loss of wholesale revenue as 1&1 users migrate to own network → High existing competitors pressure
+- Mitigate Technology perception gap as competitors lead fiber deployment → High substitutes pressure
 
 ---
 
@@ -2093,11 +2095,17 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 
 | Opportunity | Addressable Market | Time Window | Capability |
 | :--- | :--- | :--- | :--- |
-| SO-1 | N/A |  |  |
-| SO-2 | N/A |  |  |
-| SO-3 | N/A |  |  |
-| SO-4 | N/A |  |  |
+| Leverage Brand Strength → Regulatory Environment | N/A |  |  |
+| Leverage Enterprise Solutions → National Digital Strategy | N/A |  |  |
+| Leverage Network Coverage → BNetzA extends 800/1800/2600 MHz spectru... | N/A |  |  |
+| Leverage Strong EBITDA margin at 36.2% → German government launches €1.2B Gigabit... | N/A |  |  |
 | Vodafone completes 1&1 customer migration: 12M users on network | N/A |  |  |
+
+### P1 — Should Do (Strategic)
+*High-impact strategic initiatives*
+
+| Opportunity | Addressable Market | Time Window | Capability |
+| :--- | :--- | :--- | :--- |
 | Vodafone completes Skaylink acquisition for €175M | N/A |  |  |
 | Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3% | N/A |  |  |
 | Vodafone restructures cable TV frequencies nationwide | N/A |  |  |
@@ -2107,39 +2115,33 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 | 5G SA enabling network slicing and enterprise services | N/A |  |  |
 | AI/ML for network optimization and customer experience | N/A |  |  |
 | Open RAN for vendor diversification and cost reduction | N/A |  |  |
-| Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany | N/A |  |  |
-| National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy ac | N/A |  |  |
-| BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create n | N/A |  |  |
-| German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Progra | N/A |  |  |
-| Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (market avg 74) | N/A |  |  |
-| Exploit telefonica_o2 weakness: Product Innovation: score 70 (market avg 76) | N/A |  |  |
-| Exploit deutsche_telekom weakness: Pricing Competitiveness: score 65 (market avg 78) | N/A |  |  |
+| Regulatory Environment: Compliance requirements and spectrum polici... | N/A |  |  |
+| National Digital Strategy: Fiber/5G coverage mandates may require v... | N/A |  |  |
+| BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extend... | N/A |  |  |
+| German government launches €1.2B Gigabit Funding Programme 2025: Ge... | N/A |  |  |
+| Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (mar... | N/A |  |  |
+| Exploit telefonica_o2 weakness: Product Innovation: score 70 (marke... | N/A |  |  |
+| Exploit deutsche_telekom weakness: Pricing Competitiveness: score 6... | N/A |  |  |
 | Exploit one_and_one weakness: 5G Deployment: score 40 (market avg 75) | N/A |  |  |
 | Exploit one_and_one weakness: Brand Strength: score 65 (market avg 78) | N/A |  |  |
-
-### P1 — Should Do (Strategic)
-*High-impact strategic initiatives*
-
-| Opportunity | Addressable Market | Time Window | Capability |
-| :--- | :--- | :--- | :--- |
-| WO-1 | N/A |  |  |
-| WO-2 | N/A |  |  |
-| WO-3 | N/A |  |  |
-| WO-4 | N/A |  |  |
-| ST-1 | N/A |  |  |
-| ST-2 | N/A |  |  |
-| ST-3 | N/A |  |  |
-| ST-4 | N/A |  |  |
+| Address Customer Service → Regulatory Environment | N/A |  |  |
+| Address Pricing Competitiveness → National Digital Strategy | N/A |  |  |
+| Address Loss of wholesale revenue as 1&1 users migrate to own network → BNetzA extends 800/1800/2600 MHz spectru... | N/A |  |  |
+| Address Technology perception gap as competitors lead fiber deployment → German government launches €1.2B Gigabit... | N/A |  |  |
 
 ### P2 — Could Do (Opportunistic)
 *Worthwhile if resources allow*
 
 | Opportunity | Addressable Market | Time Window | Capability |
 | :--- | :--- | :--- | :--- |
-| WT-1 | N/A |  |  |
-| WT-2 | N/A |  |  |
-| WT-3 | N/A |  |  |
-| WT-4 | N/A |  |  |
+| Defend Brand Strength → Regulatory Environment | N/A |  |  |
+| Defend Enterprise Solutions → Nebenkostenprivileg (MDU cable TV bundli... | N/A |  |  |
+| Defend Network Coverage → High existing competitors pressure | N/A |  |  |
+| Defend Strong EBITDA margin at 36.2% → High substitutes pressure | N/A |  |  |
+| Mitigate Customer Service → Regulatory Environment | N/A |  |  |
+| Mitigate Pricing Competitiveness → Nebenkostenprivileg (MDU cable TV bundli... | N/A |  |  |
+| Mitigate Loss of wholesale revenue as 1&1 users migrate to own network → High existing competitors pressure | N/A |  |  |
+| Mitigate Technology perception gap as competitors lead fiber deployment → High substitutes pressure | N/A |  |  |
 
 ---
 
@@ -2147,16 +2149,16 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 
 | Opportunity | Priority | Addressable Market |
 | :--- | :--- | :--- |
-| SO-1 | P0 | N/A |
-| SO-2 | P0 | N/A |
-| SO-3 | P0 | N/A |
-| SO-4 | P0 | N/A |
+| Leverage Brand Strength → Regulatory Environment | P0 | N/A |
+| Leverage Enterprise Solutions → National Digital Strategy | P0 | N/A |
+| Leverage Network Coverage → BNetzA extends 800/1800/2600 MHz spectru... | P0 | N/A |
+| Leverage Strong EBITDA margin at 36.2% → German government launches €1.2B Gigabit... | P0 | N/A |
 | Vodafone completes 1&1 customer migration: 12M users on network | P0 | N/A |
-| Vodafone completes Skaylink acquisition for €175M | P0 | N/A |
-| Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3% | P0 | N/A |
-| Vodafone restructures cable TV frequencies nationwide | P0 | N/A |
-| DT reboots fibre tactics, targets Vodafone cable footprint | P0 | N/A |
-| Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years | P0 | N/A |
+| Vodafone completes Skaylink acquisition for €175M | P1 | N/A |
+| Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3% | P1 | N/A |
+| Vodafone restructures cable TV frequencies nationwide | P1 | N/A |
+| DT reboots fibre tactics, targets Vodafone cable footprint | P1 | N/A |
+| Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years | P1 | N/A |
 
 **Bull case (full execution)**: +10-16% over 5 years
 **Bear case (no execution)**: -6-12% over 5 years
@@ -2169,8 +2171,8 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 
 ### Immediate Actions (Next Quarter)
 
-- **Accelerate B2B Growth**: B2B showing strong momentum at  — invest to accelerate
-- **Accelerate Wholesale Growth**: Wholesale showing strong momentum at  — invest to accelerate
+- **Accelerate B2B Growth**: B2B showing strong momentum at €520M — invest to accelerate
+- **Accelerate Wholesale Growth**: Wholesale showing strong momentum at €380M — invest to accelerate
 - **Maximize Wholesale Revenue**: Vodafone completes 1&1 customer migration: 12M users on network
 
 ### Medium-Term Initiatives (1-3 Years)
@@ -2193,7 +2195,7 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 | High confidence | 0 |
 | Medium confidence | 19 |
 | Low/Estimated | 1 |
-| Unique sources | 12 |
+| Unique sources | 14 |
 
 ### Sources
 
@@ -2201,5 +2203,5 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 
 ---
 
-*Generated: 2026-02-12 | Vodafone Germany BLM Strategic Assessment (unknown)*
+*Generated: 2026-02-12 | Vodafone Germany BLM Strategic Assessment (CQ4_2025)*
 *Framework: Business Leadership Model — Five Looks + SWOT + SPAN*

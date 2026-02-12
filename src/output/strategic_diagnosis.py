@@ -454,7 +454,7 @@ class StrategicDiagnosisComputer:
                 action = safe_get(seg, "action_required", "")
                 name = safe_get(seg, "segment_name", "")
                 km = safe_get(seg, "key_metrics", {})
-                rev = km.get("revenue") or km.get("quarterly_revenue")
+                rev = _find_segment_revenue(km)
                 rev_str = fmt_currency(rev, self.config) if rev else ""
 
                 if health == "strong" and "GROW" in action:
@@ -683,11 +683,11 @@ class StrategicDiagnosisComputer:
             name = safe_get(seg, "segment_name", "Segment")
             health = safe_get(seg, "health_status", "stable")
             km = safe_get(seg, "key_metrics", {})
-            rev = km.get("revenue") or km.get("quarterly_revenue")
+            rev = _find_segment_revenue(km)
             if rev is not None:
                 dashboard.append({
                     "kpi": f"{name} revenue",
-                    "current": str(rev),
+                    "current": fmt_currency(rev, self.config),
                     "q2_target": "—",
                     "q4_target": "—",
                     "fy_target": "Growth" if health != "critical" else "Stabilize",
@@ -841,12 +841,51 @@ def _short_strategy_label(strategy_text: str) -> str:
     target = m2.group(1).strip() if m2 else ""
 
     if capability and target:
-        # Shorten target
-        if len(target) > 40:
-            target = target[:37] + "..."
+        # Shorten verbose target names to their core topic
+        target = _shorten_policy_name(target)
         action = "Leverage" if "everage" in strategy_text else "Address" if "ddress" in strategy_text else "Use"
         return f"{action} {capability} for {target}"
     return strategy_text[:80]
+
+
+def _shorten_policy_name(name: str) -> str:
+    """Shorten verbose policy/event names to concise topics.
+
+    E.g. 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years' → 'Spectrum Extension'
+    """
+    n = name.lower()
+    if "spectrum" in n:
+        return "Spectrum Positioning"
+    if "gigabit" in n or "funding" in n or "subsidy" in n:
+        return "Government Funding"
+    if "nebenkostenprivileg" in n or "mdu" in n:
+        return "MDU Regulation Change"
+    if "digital strategy" in n or "digital transform" in n:
+        return "Digital Strategy Alignment"
+    if "fiber" in n or "ftth" in n or "fibre" in n:
+        return "Fiber Expansion"
+    if "5g" in n and "coverage" in n:
+        return "5G Coverage"
+    if "cable" in n and "frequenc" in n:
+        return "Cable Network Optimization"
+    # Generic fallback: truncate at a word boundary
+    if len(name) > 45:
+        truncated = name[:42]
+        last_space = truncated.rfind(" ")
+        if last_space > 20:
+            return truncated[:last_space] + "..."
+        return truncated + "..."
+    return name
+
+
+def _find_segment_revenue(km: dict):
+    """Find the revenue value in a key_metrics dict, trying various key patterns."""
+    if not km:
+        return None
+    for k, v in km.items():
+        if 'revenue' in k.lower() and 'growth' not in k.lower() and 'share' not in k.lower():
+            return v
+    return None
 
 
 def _to_float(val) -> float:

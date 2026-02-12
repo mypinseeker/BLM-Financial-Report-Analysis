@@ -27,6 +27,7 @@ def render_trends(result, diagnosis, config) -> str:
     parts = []
     market_name = market_display_name(result.market) if result.market else "Market"
     period = result.analysis_period or ""
+    target_op = result.target_operator or ""
 
     # Module title
     parts.append(f"# {market_name.split()[0]} Telecom Macro Trends — PEST Deep Analysis ({period})")
@@ -43,13 +44,13 @@ def render_trends(result, diagnosis, config) -> str:
     parts.append(_render_pest_weather(trends))
 
     # 3-6. Detailed PEST factors
-    parts.append(_render_pest_details(trends))
+    parts.append(_render_pest_details(trends, target_op))
 
     # 7. Value Transfer
     parts.append(_render_value_transfer(trends))
 
     # 8. Impact Matrix
-    parts.append(_render_impact_matrix(trends, diagnosis))
+    parts.append(_render_impact_matrix(trends, diagnosis, target_op))
 
     return "\n\n".join(p for p in parts if p)
 
@@ -173,10 +174,12 @@ def _render_pest_weather(trends) -> str:
     return "\n".join(lines)
 
 
-def _render_pest_details(trends) -> str:
+def _render_pest_details(trends, target_op: str = "") -> str:
     pest = safe_get(trends, "pest")
     if pest is None:
         return ""
+
+    target_display = operator_display_name(target_op) if target_op else "the operator"
 
     sections = []
     section_num = 3
@@ -227,12 +230,16 @@ def _render_pest_details(trends) -> str:
                 lines.append(f"**Current status**: {status}")
 
             industry_impact = safe_get(factor, "industry_impact", "")
-            if industry_impact:
+            # Skip industry_impact if identical to current_status (dedup)
+            if industry_impact and industry_impact != status:
                 lines.append("")
                 lines.append(f"**Industry impact**: {industry_impact}")
 
             company_impact = safe_get(factor, "company_impact", "")
             if company_impact:
+                # Replace raw operator_id with display name
+                if target_op:
+                    company_impact = company_impact.replace(target_op, target_display)
                 lines.append("")
                 lines.append(f"**Company impact**: {company_impact}")
 
@@ -287,12 +294,15 @@ def _render_value_transfer(trends) -> str:
     return "\n".join(lines)
 
 
-def _render_impact_matrix(trends, diagnosis) -> str:
+def _render_impact_matrix(trends, diagnosis, target_op: str = "") -> str:
+    target_display = operator_display_name(target_op) if target_op else "the operator"
     lines = [section_header("Impact Assessment & Net Assessment", 2)]
     lines.append("")
 
     km = safe_get(trends, "key_message", "")
     if km:
+        if target_op:
+            km = km.replace(target_op, target_display)
         lines.append(f"**Key message**: {km}")
         lines.append("")
 
@@ -308,12 +318,16 @@ def _render_impact_matrix(trends, diagnosis) -> str:
             lines.append(section_header("Policy Opportunities", 3))
             lines.append("")
             for o in opps:
+                if target_op:
+                    o = o.replace(target_op, target_display)
                 lines.append(f"- {o}")
             lines.append("")
         if threats:
             lines.append(section_header("Policy Threats", 3))
             lines.append("")
             for t in threats:
+                if target_op:
+                    t = t.replace(target_op, target_display)
                 lines.append(f"- {t}")
 
     lines.append("")

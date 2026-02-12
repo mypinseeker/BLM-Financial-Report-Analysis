@@ -143,7 +143,7 @@ def _render_revenue_breakdown(sa, config) -> str:
 
     rows = []
     for segment, value in segment_items.items():
-        display_name = segment.replace("_", " ").title()
+        display_name = _fix_metric_casing(segment.replace("_", " ").title())
 
         if isinstance(value, dict):
             # Dict with value and share_pct
@@ -186,9 +186,10 @@ def _render_segments(sa, config) -> str:
         name = safe_get(seg, "segment_name", "")
         health = safe_get(seg, "health_status", "stable")
         km = safe_get(seg, "key_metrics", {})
-        rev = km.get("revenue", km.get("quarterly_revenue", "—"))
+        rev = _find_revenue(km)
+        rev_str = fmt_currency(rev, config) if rev is not None else "—"
         action = safe_get(seg, "action_required", "")
-        summary_rows.append([name, str(rev), bold(health.title()), action[:60]])
+        summary_rows.append([name, rev_str, bold(health.title()), action[:60]])
 
     lines.append(md_table(["Segment", "Revenue", "Health", "Action Required"], summary_rows))
 
@@ -210,7 +211,8 @@ def _render_segments(sa, config) -> str:
         if km_dict:
             metric_rows = []
             for k, v in km_dict.items():
-                metric_rows.append([k.replace("_", " ").title(), str(v)])
+                display_key = _fix_metric_casing(k.replace("_", " ").title())
+                metric_rows.append([display_key, fmt_smart_value(k, v, config)])
             lines.append(md_table(["Metric", "Value"], metric_rows))
             lines.append("")
 
@@ -527,9 +529,35 @@ def _render_diagnosis_summary(sa, diagnosis) -> str:
 # Helpers
 # ---------------------------------------------------------------------------
 
+def _find_revenue(km: dict):
+    """Find the revenue value in a key_metrics dict, trying various key patterns."""
+    for k, v in km.items():
+        if 'revenue' in k.lower() and 'growth' not in k.lower() and 'share' not in k.lower():
+            return v
+    return None
+
+
 def _is_number(val) -> bool:
     try:
         float(val)
         return True
     except (TypeError, ValueError):
         return False
+
+
+def _fix_metric_casing(text: str) -> str:
+    """Fix title-cased metric names: Tv→TV, Bb→BB, B2B, Fmc→FMC, Iot→IoT, 5G etc."""
+    import re
+    replacements = {
+        "Tv ": "TV ", "Bb ": "BB ", "Fmc ": "FMC ", "Iot ": "IoT ",
+        "5g ": "5G ", "4g ": "4G ", "Ftth ": "FTTH ", "Arpu": "ARPU",
+        "Yoy": "YoY", "Pct": "%", "B2b": "B2B", " K": " (K)",
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    # Fix trailing tokens
+    if text.endswith(" Pct"):
+        text = text[:-4] + " %"
+    if text.endswith(" K"):
+        text = text[:-2] + " (K)"
+    return text
