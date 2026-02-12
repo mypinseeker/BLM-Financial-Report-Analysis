@@ -127,29 +127,29 @@
   [Opportunities]
     ^ Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
     ^ National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access
-    ^ BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany
-    ^ German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany
+    ^ BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany
+    ^ German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Programme 2025: may create new market access or subsidy opportunities for vodafone_germany
     ^ Vodafone completes 1&1 customer migration: 12M users on network
   [Threats]
     v Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany
-    v Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany
+    v Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations
     v High existing competitors pressure
     v High substitutes pressure
   [SO Strategies]
     → Leverage 'Brand Strength: score 82 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
     → Leverage 'Enterprise Solutions: score 82 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.
-    → Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.
+    → Leverage 'Network Coverage: score 80 (market avg 76)' to capture the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany'.
   [WO Strategies]
     → Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
     → Address weakness 'Pricing Competitiveness: score 72 (market avg 78)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access'.
-    → Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany'.
+    → Address weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' to unlock the opportunity of 'BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create new market access or subsidy opportunities for vodafone_germany'.
   [ST Strategies]
     → Use strength 'Brand Strength: score 82 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-    → Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany'.
+    → Use strength 'Enterprise Solutions: score 82 (market avg 74)' to counter the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations'.
     → Use strength 'Network Coverage: score 80 (market avg 76)' to counter the threat of 'High existing competitors pressure'.
   [WT Strategies]
     → Mitigate weakness 'Customer Service: score 70 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.
-    → Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany'.
+    → Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Nebenkostenprivileg (MDU cable TV bundling) abolished: may increase compliance costs or restrict vodafone_germany operations'.
     → Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High existing competitors pressure'.
 
   → Key Message: SWOT analysis identifies 7 strengths, 5 weaknesses, 10 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant).
@@ -160,14 +160,14 @@
   [SPAN Positions]
     Name                      Attractiveness   Position        Quadrant
     ──────────────────────────────────────────────────────────────────────
-    SO-1                                 5.6        5.5     grow_invest
-    SO-2                                 5.6        5.5     grow_invest
-    SO-3                                 5.6        5.5     grow_invest
-    SO-4                                 5.6        5.5     grow_invest
-    Vodafone completes 1&1 customer migration: 12M users on network            5.5        5.0     grow_invest
-    Vodafone completes Skaylink acquisition for €175M            5.5        5.0     grow_invest
-    Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%            5.0        5.0     grow_invest
-    Vodafone restructures cable TV frequencies nationwide            5.0        5.0     grow_invest
+    SO-1                                 6.8        6.7     grow_invest
+    SO-2                                 6.8        6.7     grow_invest
+    SO-3                                 6.8        6.7     grow_invest
+    SO-4                                 6.8        6.7     grow_invest
+    Vodafone completes 1&1 customer migration: 12M users on network            6.7        6.2     grow_invest
+    Vodafone completes Skaylink acquisition for €175M            6.7        6.2     grow_invest
+    Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%            5.7        6.2     grow_invest
+    Vodafone restructures cable TV frequencies nationwide            5.7        6.2     grow_invest
   [Grow/Invest]
     → SO-1
     → SO-2
@@ -178,6 +178,16 @@
     → WO-2
     → WO-3
     → WO-4
+  [Harvest]
+    → ST-1
+    → ST-2
+    → ST-3
+    → ST-4
+  [Avoid/Exit]
+    → WT-1
+    → WT-2
+    → WT-3
+    → WT-4
   [Priority Ranking]
     [P0] SO-1 (Market: N/A)
     [P0] SO-2 (Market: N/A)
@@ -186,14 +196,26 @@
     [P0] Vodafone completes 1&1 customer migration: 12M users on network (Market: N/A)
     [P0] Vodafone completes Skaylink acquisition for €175M (Market: N/A)
 
-  → Key Message: SPAN matrix positions 27 opportunities: 23 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 23 grow/invest items for maximum strategic impact.
+  → Key Message: SPAN matrix positions 35 opportunities: 23 grow/invest, 4 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 23 grow/invest items for maximum strategic impact.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ DATA PROVENANCE                                                             │
 └──────────────────────────────────────────────────────────────────────────────┘
-  Total data points: 19
+  Total data points: 20
   High confidence: 0
-  Medium confidence: 0
-  Low/Estimated: 19
-  Unique sources: 0
+  Medium confidence: 19
+  Low/Estimated: 1
+  Unique sources: 12
+
+  [Sources]
+    telecom.db
+    telecom.db
+    telecom.db
+    telecom.db
+    telecom.db
+    telecom.db
+    telecom.db
+    telecom.db
+    telecom.db
+    telecom.db
 ────────────────────────────────────────────────────────────────────────────────

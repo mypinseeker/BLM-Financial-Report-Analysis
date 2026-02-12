@@ -889,6 +889,63 @@ def _build_key_message(pest: PESTAnalysis, ind: dict, market: str) -> str:
 # Utility helpers
 # ---------------------------------------------------------------------------
 
+def _derive_company_impact(event: dict, dimension: str, target_operator: str) -> str:
+    """Generate meaningful company-specific impact text from an event.
+
+    Incorporates the event title/description to create contextual impact
+    statements rather than generic templates.
+    """
+    title = event.get("title", "")
+    impact = event.get("impact_type", "neutral")
+    event_op = event.get("operator_id", "")
+
+    # Shorten the event title for embedding in impact text
+    short_title = title[:80].rstrip(".") if title else "this development"
+
+    # If the event is about the target operator directly
+    if event_op and event_op.replace("_", " ").lower() in target_operator.replace("_", " ").lower():
+        if impact == "positive":
+            return f"{short_title} strengthens {target_operator} competitive position and market presence"
+        elif impact == "negative":
+            return f"{short_title} increases operational pressure on {target_operator}"
+        return f"{short_title} directly affects {target_operator} strategy"
+
+    # If the event is about a competitor
+    if event_op and event_op != target_operator:
+        op_display = event_op.replace("_", " ").title()
+        if impact == "positive":
+            return f"{short_title}: {op_display} strengthening increases competitive pressure on {target_operator}"
+        elif impact == "negative":
+            return f"{short_title}: {op_display} setback may create market share opportunity for {target_operator}"
+        return f"{short_title}: requires strategic response from {target_operator}"
+
+    # Market-wide / regulatory events — combine template with event details
+    dim_templates = {
+        "P": {
+            "positive": f"{short_title}: may create new market access or subsidy opportunities for {target_operator}",
+            "negative": f"{short_title}: may increase compliance costs or restrict {target_operator} operations",
+            "neutral": f"{short_title}: requires {target_operator} to monitor and adapt strategy",
+        },
+        "E": {
+            "positive": f"{short_title}: supports consumer spending and {target_operator} revenue growth",
+            "negative": f"{short_title}: may constrain {target_operator} revenue and increase cost pressure",
+            "neutral": f"{short_title}: affects {target_operator} demand environment",
+        },
+        "S": {
+            "positive": f"{short_title}: creates new service demand for {target_operator}",
+            "negative": f"{short_title}: may erode {target_operator} traditional revenue streams",
+            "neutral": f"{short_title}: affects {target_operator} customer base dynamics",
+        },
+        "T": {
+            "positive": f"{short_title}: enables new services and efficiency gains for {target_operator}",
+            "negative": f"{short_title}: may require significant {target_operator} investment to stay competitive",
+            "neutral": f"{short_title}: requires {target_operator} to evaluate build vs buy vs partner",
+        },
+    }
+    dim_map = dim_templates.get(dimension, dim_templates["T"])
+    return dim_map.get(impact, dim_map["neutral"])
+
+
 def _event_to_pest_factor(
     event: dict,
     dimension: str,
@@ -910,7 +967,7 @@ def _event_to_pest_factor(
         trend=event.get("description", ""),
         trend_direction="uncertain",
         industry_impact=event.get("description", ""),
-        company_impact=f"Potential impact on {target_operator}",
+        company_impact=_derive_company_impact(event, dimension, target_operator),
         impact_type=impact_map.get(impact, "neutral"),
         severity=event.get("severity", "medium"),
         time_horizon="short_term",

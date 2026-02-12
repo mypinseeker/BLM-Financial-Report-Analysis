@@ -148,14 +148,14 @@
   [SPAN Positions]
     Name                      Attractiveness   Position        Quadrant
     ──────────────────────────────────────────────────────────────────────
-    SO-1                                 5.6        5.5     grow_invest
-    SO-2                                 5.6        5.5     grow_invest
-    SO-3                                 5.6        5.5     grow_invest
-    Entel Chile revenue growth 15.9% YoY            5.5        5.0     grow_invest
-    5G SA enabling network slicing and enterprise services            5.2        5.2     grow_invest
-    AI/ML for network optimization and customer experience            5.2        5.2     grow_invest
-    Open RAN for vendor diversification and cost reduction            5.2        5.2     grow_invest
-    Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl            5.4        5.0     grow_invest
+    SO-1                                 7.4        7.7     grow_invest
+    SO-2                                 7.4        7.7     grow_invest
+    SO-3                                 7.4        7.7     grow_invest
+    Entel Chile revenue growth 15.9% YoY            7.2        7.2     grow_invest
+    5G SA enabling network slicing and enterprise services            6.5        6.7     grow_invest
+    AI/ML for network optimization and customer experience            6.5        6.7     grow_invest
+    Open RAN for vendor diversification and cost reduction            6.5        6.7     grow_invest
+    Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl            7.2        7.2     grow_invest
   [Grow/Invest]
     → SO-1
     → SO-2
@@ -164,6 +164,14 @@
   [Acquire Skills]
     → WO-1
     → WO-2
+  [Harvest]
+    → ST-1
+    → ST-2
+    → ST-3
+    → ST-4
+  [Avoid/Exit]
+    → WT-1
+    → WT-2
   [Priority Ranking]
     [P0] SO-1 (Market: N/A)
     [P0] SO-2 (Market: N/A)
@@ -172,14 +180,14 @@
     [P0] 5G SA enabling network slicing and enterprise services (Market: N/A)
     [P0] AI/ML for network optimization and customer experience (Market: N/A)
 
-  → Key Message: SPAN matrix positions 17 opportunities: 15 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 15 grow/invest items for maximum strategic impact.
+  → Key Message: SPAN matrix positions 23 opportunities: 15 grow/invest, 2 acquire skills, 4 harvest, 2 avoid/exit. Focus resources on the 15 grow/invest items for maximum strategic impact.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ DATA PROVENANCE                                                             │
 └──────────────────────────────────────────────────────────────────────────────┘
-  Total data points: 19
+  Total data points: 20
   High confidence: 0
   Medium confidence: 0
-  Low/Estimated: 19
+  Low/Estimated: 20
   Unique sources: 0
 ────────────────────────────────────────────────────────────────────────────────

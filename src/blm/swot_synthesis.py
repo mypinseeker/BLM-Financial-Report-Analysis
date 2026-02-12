@@ -82,18 +82,51 @@ def _extract_weaknesses(self_analysis: SelfInsight) -> list[str]:
     return items
 
 
+def _is_actionable_opportunity(desc: str) -> bool:
+    """Filter out pure macro context items that lack strategic action potential.
+
+    Items like "Chile GDP growth 2.8%" or "Consumer spending up 3.5%" are
+    useful as context in PEST but don't belong in SWOT opportunities because
+    they have no specific strategic action the operator can take.
+    """
+    if not desc:
+        return False
+    desc_lower = desc.lower()
+    # Macro-only indicators — no operator can "act on" GDP growth
+    macro_only_patterns = [
+        "gdp growth",
+        "gdp decline",
+        "consumer spending",
+        "inflation rate",
+        "unemployment rate",
+        "population growth",
+        "cpi ",
+        "interest rate",
+    ]
+    for pattern in macro_only_patterns:
+        if pattern in desc_lower:
+            return False
+    return True
+
+
 def _extract_opportunities(
     trends: TrendAnalysis,
     market_customer: MarketCustomerInsight,
 ) -> list[str]:
-    """Aggregate opportunities from trend policy_opportunities and market opportunities."""
+    """Aggregate opportunities from trend policy_opportunities and market opportunities.
+
+    Filters out pure macro context items (GDP, CPI, population stats) that
+    lack actionable strategic value for the SWOT matrix.
+    """
     items: list[str] = []
     if trends and trends.pest and trends.pest.policy_opportunities:
-        items.extend(trends.pest.policy_opportunities)
+        for po in trends.pest.policy_opportunities:
+            if _is_actionable_opportunity(po):
+                items.append(po)
     if market_customer and market_customer.opportunities:
         for mc in market_customer.opportunities:
             desc = mc.description
-            if desc and desc not in items:
+            if desc and desc not in items and _is_actionable_opportunity(desc):
                 items.append(desc)
     return items
 
@@ -103,14 +136,19 @@ def _extract_threats(
     market_customer: MarketCustomerInsight,
     competition: CompetitionInsight,
 ) -> list[str]:
-    """Aggregate threats from trends, market, and high-pressure competitive forces."""
+    """Aggregate threats from trends, market, and high-pressure competitive forces.
+
+    Filters out pure macro context items that lack actionable threat value.
+    """
     items: list[str] = []
     if trends and trends.pest and trends.pest.policy_threats:
-        items.extend(trends.pest.policy_threats)
+        for pt in trends.pest.policy_threats:
+            if _is_actionable_opportunity(pt):
+                items.append(pt)
     if market_customer and market_customer.threats:
         for mc in market_customer.threats:
             desc = mc.description
-            if desc and desc not in items:
+            if desc and desc not in items and _is_actionable_opportunity(desc):
                 items.append(desc)
     if competition and competition.five_forces:
         for force_name, force in competition.five_forces.items():

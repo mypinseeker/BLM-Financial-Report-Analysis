@@ -170,12 +170,15 @@ def _extract_raw_opportunities(
     # 2. Market changes classified as opportunities
     if market_customer and market_customer.opportunities:
         for mc in market_customer.opportunities:
+            sev_growth = {"high": 8, "medium": 6, "low": 4}.get(mc.severity, 5)
+            sev_profit = {"high": 7, "medium": 5, "low": 4}.get(mc.severity, 5)
             _add(
                 name=mc.description[:120] if mc.description else f"Market-{mc.change_type}",
                 description=mc.description,
                 derived_from=["market_opportunity", mc.change_type],
                 source_scores={
-                    "market_growth_score": 7 if mc.severity == "high" else 5,
+                    "market_growth_score": sev_growth,
+                    "profit_potential_score": sev_profit,
                 },
             )
 
@@ -219,7 +222,7 @@ def _extract_raw_opportunities(
                         },
                     )
 
-    # 6. WO strategies (improvement opportunities)
+    # 6. WO strategies (improvement opportunities — weak position → acquire_skills)
     if swot and swot.wo_strategies:
         for idx, strat in enumerate(swot.wo_strategies):
             _add(
@@ -228,30 +231,165 @@ def _extract_raw_opportunities(
                 derived_from=["swot_wo_strategy"],
                 source_scores={
                     "strategic_value_score": 6,
-                    "product_fit_score": 4,
+                    "product_fit_score": 3,
+                    "brand_channel_score": 3,
+                    "tech_capability_score": 3,
+                    "market_share_score": 3,
+                },
+            )
+
+    # 7. ST strategies (defensive — strong position, low attractiveness → harvest)
+    if swot and swot.st_strategies:
+        for idx, strat in enumerate(swot.st_strategies):
+            _add(
+                name=f"ST-{idx + 1}",
+                description=strat,
+                derived_from=["swot_st_strategy"],
+                source_scores={
+                    "strategic_value_score": 3,
+                    "market_growth_score": 3,
+                    "profit_potential_score": 4,
+                    "market_size_score": 4,
+                    "product_fit_score": 7,
+                    "brand_channel_score": 7,
+                    "tech_capability_score": 6,
+                    "market_share_score": 6,
+                },
+            )
+
+    # 8. WT strategies (retreat — weak position, low attractiveness → avoid_exit)
+    if swot and swot.wt_strategies:
+        for idx, strat in enumerate(swot.wt_strategies):
+            _add(
+                name=f"WT-{idx + 1}",
+                description=strat,
+                derived_from=["swot_wt_strategy"],
+                source_scores={
+                    "strategic_value_score": 2,
+                    "market_growth_score": 2,
+                    "profit_potential_score": 3,
+                    "market_size_score": 3,
+                    "product_fit_score": 3,
+                    "brand_channel_score": 3,
+                    "tech_capability_score": 3,
+                    "market_share_score": 3,
                 },
             )
 
     return raw
 
 
+def _extract_real_scores(
+    self_analysis: SelfInsight,
+    trends: TrendAnalysis,
+) -> dict:
+    """Extract real data-driven base scores for SPAN dimensions.
+
+    Returns a dict of score names → 1-10 float values derived from actual
+    analysis data. Missing values default to 5.0.
+    """
+    base: dict[str, float] = {}
+
+    # --- Market attractiveness ---
+    # Market size: map revenue rank to score (leader=8, #2=6, #3=4, #4+=3)
+    mp = getattr(self_analysis, "market_positions", {}) or {}
+    rev_share = mp.get("revenue_market_share_pct")
+    if rev_share is not None:
+        if rev_share > 40:
+            base["market_size_score"] = 8.0
+        elif rev_share > 25:
+            base["market_size_score"] = 6.5
+        elif rev_share > 15:
+            base["market_size_score"] = 5.0
+        else:
+            base["market_size_score"] = 3.5
+
+    # Market growth: derive from industry growth rate string
+    if trends and hasattr(trends, "industry_growth_rate") and trends.industry_growth_rate:
+        gr_str = trends.industry_growth_rate
+        try:
+            gr_val = float(gr_str.split("%")[0].replace("+", ""))
+            if gr_val > 10:
+                base["market_growth_score"] = 9.0
+            elif gr_val > 5:
+                base["market_growth_score"] = 7.0
+            elif gr_val > 0:
+                base["market_growth_score"] = 5.0
+            elif gr_val > -2:
+                base["market_growth_score"] = 3.5
+            else:
+                base["market_growth_score"] = 2.0
+        except (ValueError, IndexError):
+            pass
+
+    # Profit potential: from EBITDA margin
+    fh = getattr(self_analysis, "financial_health", {}) or {}
+    margin = fh.get("ebitda_margin_pct")
+    if margin is not None:
+        if margin > 35:
+            base["profit_potential_score"] = 8.0
+        elif margin > 28:
+            base["profit_potential_score"] = 6.5
+        elif margin > 20:
+            base["profit_potential_score"] = 5.0
+        else:
+            base["profit_potential_score"] = 3.5
+
+    # --- Competitive position ---
+    # Market share → position score
+    if rev_share is not None:
+        base["market_share_score"] = _clamp(rev_share / 10 + 1)  # 50% → 6.0, 25% → 3.5, 10% → 2.0
+
+    # Brand/channel: from self strengths containing "Brand"
+    strengths = getattr(self_analysis, "strengths", []) or []
+    for s in strengths:
+        if "Brand" in s:
+            try:
+                # Parse "Brand Strength: score 82 (market avg 78)"
+                score_part = s.split("score")[1].split("(")[0].strip()
+                sc = float(score_part)
+                base["brand_channel_score"] = _clamp(sc / 10)  # 82 → 8.2
+            except (IndexError, ValueError):
+                base["brand_channel_score"] = 7.0
+            break
+
+    # Tech capability: from strengths containing "5G" or "Network"
+    for s in strengths:
+        if "5G" in s or "Network" in s:
+            try:
+                score_part = s.split("score")[1].split("(")[0].strip()
+                sc = float(score_part)
+                base["tech_capability_score"] = _clamp(sc / 10)
+            except (IndexError, ValueError):
+                base["tech_capability_score"] = 7.0
+            break
+
+    return base
+
+
 def _score_opportunity(
     raw: dict,
     self_analysis: SelfInsight,
     competition: CompetitionInsight,
+    real_base: dict = None,
 ) -> SPANPosition:
     """Score a raw opportunity on both SPAN dimensions and assign quadrant.
 
-    When hard data is unavailable the function uses heuristic defaults (5/10)
-    supplemented by any ``source_scores`` hints extracted earlier.
+    Uses real data-driven base scores (from ``real_base``) supplemented by
+    source-specific ``source_scores`` hints. Falls back to 5.0 when no
+    data is available.
     """
-    scores = raw.get("source_scores", {})
+    source_scores = raw.get("source_scores", {})
+    base = real_base or {}
 
-    # Market attractiveness sub-scores
-    market_size_score = _clamp(scores.get("market_size_score", 5.0))
-    market_growth_score = _clamp(scores.get("market_growth_score", 5.0))
-    profit_potential_score = _clamp(scores.get("profit_potential_score", 5.0))
-    strategic_value_score = _clamp(scores.get("strategic_value_score", 5.0))
+    # Market attractiveness sub-scores (prefer source hints > real base > 5.0)
+    market_size_score = _clamp(source_scores.get("market_size_score",
+                               base.get("market_size_score", 5.0)))
+    market_growth_score = _clamp(source_scores.get("market_growth_score",
+                                 base.get("market_growth_score", 5.0)))
+    profit_potential_score = _clamp(source_scores.get("profit_potential_score",
+                                    base.get("profit_potential_score", 5.0)))
+    strategic_value_score = _clamp(source_scores.get("strategic_value_score", 5.0))
 
     market_attractiveness = _compute_market_attractiveness(
         market_size_score, market_growth_score,
@@ -259,10 +397,14 @@ def _score_opportunity(
     )
 
     # Competitive position sub-scores
-    market_share_score = _clamp(scores.get("market_share_score", 5.0))
-    product_fit_score = _clamp(scores.get("product_fit_score", 5.0))
-    brand_channel_score = _clamp(scores.get("brand_channel_score", 5.0))
-    tech_capability_score = _clamp(scores.get("tech_capability_score", 5.0))
+    market_share_score = _clamp(source_scores.get("market_share_score",
+                                base.get("market_share_score", 5.0)))
+    product_fit_score = _clamp(source_scores.get("product_fit_score",
+                               base.get("product_fit_score", 5.0)))
+    brand_channel_score = _clamp(source_scores.get("brand_channel_score",
+                                 base.get("brand_channel_score", 5.0)))
+    tech_capability_score = _clamp(source_scores.get("tech_capability_score",
+                                   base.get("tech_capability_score", 5.0)))
 
     competitive_position = _compute_competitive_position(
         market_share_score, product_fit_score,
@@ -286,7 +428,7 @@ def _score_opportunity(
         competitive_position=round(competitive_position, 2),
         quadrant=quadrant,
         recommended_strategy=recommended_strategy,
-        bubble_size=1.0,  # Default; overridden if addressable market data exists
+        bubble_size=1.0,
     )
 
 
@@ -413,9 +555,10 @@ def analyze_opportunities(
     )
 
     # --- Step 2: Score each on SPAN matrix ---
+    real_base = _extract_real_scores(self_analysis, trends)
     span_positions: list[SPANPosition] = []
     for raw in raw_list:
-        sp = _score_opportunity(raw, self_analysis, competition)
+        sp = _score_opportunity(raw, self_analysis, competition, real_base)
         span_positions.append(sp)
 
     # --- Step 3: Group by quadrant ---
