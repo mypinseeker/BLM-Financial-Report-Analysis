@@ -301,6 +301,7 @@ def _build_market_snapshot(db, market: str, latest_cq: str,
     market_shares = {}
     operator_revenues = {}
 
+    op_display_names = {}
     for row in comparison:
         op_id = row["operator_id"]
         rev = _safe_get(row, "total_revenue", 0)
@@ -311,13 +312,15 @@ def _build_market_snapshot(db, market: str, latest_cq: str,
         total_mobile_subs += mobile_k
         total_broadband_subs += bb_k
         operator_revenues[op_id] = rev
+        op_display_names[op_id] = row.get("display_name", op_id)
 
-    # Compute market shares
+    # Compute market shares (keyed by display_name for readability)
     for op_id, rev in operator_revenues.items():
+        display = op_display_names.get(op_id, op_id)
         if total_revenue > 0:
-            market_shares[op_id] = round(rev / total_revenue * 100, 1)
+            market_shares[display] = round(rev / total_revenue * 100, 1)
         else:
-            market_shares[op_id] = 0
+            market_shares[display] = 0
 
     # Compute penetration rates using market population
     population_k = market_config.population_k if market_config else 84000
@@ -622,6 +625,8 @@ def _build_customer_segments(db, market: str, target_operator: str,
     target_bb_k = 0
     target_b2b_k = 0
 
+    # Build competitor list (display names of non-target operators)
+    competitors = []
     for row in comparison:
         mobile = _safe_get(row, "mobile_total_k", 0)
         postpaid = _safe_get(row, "mobile_postpaid_k", 0)
@@ -641,6 +646,16 @@ def _build_customer_segments(db, market: str, target_operator: str,
             target_postpaid_k = postpaid
             target_bb_k = bb
             target_b2b_k = b2b
+        else:
+            rev = _safe_get(row, "total_revenue", 0)
+            competitors.append({
+                "name": row.get("display_name", row["operator_id"]),
+                "revenue": rev,
+            })
+
+    # Sort competitors by revenue descending for segment gap descriptions
+    competitors.sort(key=lambda c: c["revenue"], reverse=True)
+    comp_names = [c["name"] for c in competitors]
 
     # Use market config segments if available, fall back to hardcoded German segments
     segment_defs = market_config.customer_segments if market_config else GERMAN_TELECOM_SEGMENTS
@@ -661,11 +676,13 @@ def _build_customer_segments(db, market: str, target_operator: str,
                 seg, seg_def["segment_name"],
                 total_mobile_k, total_postpaid_k, total_prepaid_k,
                 target_mobile_k, target_postpaid_k,
+                comp_names,
             )
         elif seg_def["segment_type"] == "enterprise":
             _populate_enterprise_segment(
                 seg, seg_def["segment_name"],
                 total_b2b_k, target_b2b_k,
+                comp_names,
             )
         elif seg_def["segment_type"] == "wholesale":
             _populate_wholesale_segment(seg, total_mobile_k)
@@ -680,17 +697,22 @@ def _populate_consumer_segment(seg: CustomerSegment, name: str,
                                  total_postpaid_k: float,
                                  total_prepaid_k: float,
                                  target_mobile_k: float,
-                                 target_postpaid_k: float):
+                                 target_postpaid_k: float,
+                                 comp_names: list[str] = None):
     """Populate consumer segment with estimated data."""
+    if comp_names is None:
+        comp_names = []
     # Use postpaid/prepaid mix as proxy for segment distribution
     if total_mobile_k <= 0:
         seg.size_estimate = "N/A"
         seg.our_share = "N/A"
         return
 
-    postpaid_ratio = total_postpaid_k / total_mobile_k if total_mobile_k > 0 else 0
+    # Dynamic competitor references (top-2 by revenue)
+    c1 = comp_names[0] if len(comp_names) > 0 else "Market leader"
+    c2 = comp_names[1] if len(comp_names) > 1 else "Second competitor"
 
-    if name == "Consumer High-End":
+    if name in ("Consumer High-End", "Consumer Postpaid Premium"):
         # Approx 15% of postpaid base
         est_size = total_postpaid_k * 0.15
         seg.size_estimate = f"~{est_size / 1000:.1f}M subscribers"
@@ -698,7 +720,7 @@ def _populate_consumer_segment(seg: CustomerSegment, name: str,
         if target_postpaid_k > 0:
             seg.our_share = f"~{target_postpaid_k / total_postpaid_k * 100:.0f}% of postpaid"
         seg.competitor_gaps = [
-            "DT dominates with Magenta brand premium positioning",
+            f"{c1} competes with premium brand positioning",
             "Opportunity in 5G-exclusive premium bundles",
         ]
         seg.opportunity = (
@@ -712,8 +734,8 @@ def _populate_consumer_segment(seg: CustomerSegment, name: str,
         if target_postpaid_k > 0:
             seg.our_share = f"~{target_postpaid_k / total_postpaid_k * 100:.0f}% of postpaid"
         seg.competitor_gaps = [
-            "O2 aggressive on price but weaker on network quality",
-            "1&1 limited by network build-out",
+            f"{c2} aggressive on price but weaker on network quality",
+            f"{c1} competes on brand and convergence",
         ]
         seg.opportunity = (
             "Value-for-money bundles combining mobile + broadband"
@@ -727,7 +749,7 @@ def _populate_consumer_segment(seg: CustomerSegment, name: str,
         if total_prepaid_k > 0 and target_prepaid > 0:
             seg.our_share = f"~{target_prepaid / total_prepaid_k * 100:.0f}% of prepaid"
         seg.competitor_gaps = [
-            "1&1 and O2 sub-brands dominate this space",
+            f"Low-cost brands and sub-brands ({c2}, {c1}) compete here",
         ]
         seg.opportunity = (
             "Selective prepaid-to-postpaid migration campaigns"
@@ -749,8 +771,13 @@ def _populate_consumer_segment(seg: CustomerSegment, name: str,
 
 def _populate_enterprise_segment(seg: CustomerSegment, name: str,
                                    total_b2b_k: float,
-                                   target_b2b_k: float):
+                                   target_b2b_k: float,
+                                   comp_names: list[str] = None):
     """Populate enterprise segment with estimated data."""
+    if comp_names is None:
+        comp_names = []
+    c1 = comp_names[0] if len(comp_names) > 0 else "Market leader"
+
     if name == "Enterprise Large":
         seg.size_estimate = (
             f"~{total_b2b_k * 0.05:.0f}K customers (top 5%)"
@@ -760,7 +787,7 @@ def _populate_enterprise_segment(seg: CustomerSegment, name: str,
         if target_b2b_k > 0 and total_b2b_k > 0:
             seg.our_share = f"~{target_b2b_k / total_b2b_k * 100:.0f}% of B2B base"
         seg.competitor_gaps = [
-            "DT dominates with T-Systems for large enterprise ICT",
+            f"{c1} competes in large enterprise ICT",
             "Opportunity in cloud and security managed services",
         ]
         seg.opportunity = (

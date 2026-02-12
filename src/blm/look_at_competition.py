@@ -1008,7 +1008,10 @@ def _build_comparison_table(
 
     for op in all_operators:
         op_id = op["operator_id"]
-        display = op.get("display_name", op_id)
+
+        # Ensure every operator appears in every metric (even if None)
+        for metric in table:
+            table[metric].setdefault(op_id, None)
 
         # Financial data
         fin_ts = db.get_financial_timeseries(op_id, n_quarters=1,

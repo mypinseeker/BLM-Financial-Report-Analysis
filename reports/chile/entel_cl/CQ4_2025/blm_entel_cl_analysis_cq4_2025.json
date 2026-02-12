@@ -3,7 +3,7 @@
     "target_operator": "entel_cl",
     "market": "chile",
     "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-12T07:04:17.662385",
+    "generated_at": "2026-02-12T08:34:25.172607",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -309,7 +309,7 @@
         "B2B/ICT growing faster than consumer segment",
         "Fiber displacing copper and cable broadband"
       ],
-      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration.. Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))"
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+7.2% YoY (CQ2_2025 -> CQ4_2025))"
     },
     "market_customer": {
       "market_snapshot": {
@@ -318,11 +318,11 @@
         "total_mobile_subscribers_k": 30500.0,
         "total_broadband_subscribers_k": 4180.0,
         "market_shares": {
-          "entel_cl": 58.3,
-          "movistar_cl": 17.6,
-          "wom_cl": 13.3,
-          "claro_cl": 10.8,
-          "tigo_chile": 0.0
+          "Entel Chile": 58.3,
+          "Movistar Chile": 17.6,
+          "WOM Chile": 13.3,
+          "Claro Chile": 10.8,
+          "Tigo Chile": 0.0
         },
         "penetration_rates": {
           "mobile_penetration_pct": 156.4,
@@ -1132,9 +1132,9 @@
         {
           "segment_name": "Consumer Postpaid Premium",
           "segment_type": "consumer",
-          "size_estimate": "",
-          "growth_trend": "stable",
-          "our_share": "",
+          "size_estimate": "~2.8M subscribers",
+          "growth_trend": "growing",
+          "our_share": "~39% of postpaid",
           "unmet_needs": [
             "5G coverage and experiences",
             "Premium convergent bundles (fiber+mobile+streaming)"
@@ -1149,8 +1149,11 @@
             "Bundle value",
             "Brand perception"
           ],
-          "competitor_gaps": [],
-          "opportunity": ""
+          "competitor_gaps": [
+            "Movistar Chile competes with premium brand positioning",
+            "Opportunity in 5G-exclusive premium bundles"
+          ],
+          "opportunity": "Premium 5G and converged services for high-ARPU customers"
         },
         {
           "segment_name": "Consumer Mainstream",
@@ -1172,8 +1175,8 @@
             "Contract flexibility"
           ],
           "competitor_gaps": [
-            "O2 aggressive on price but weaker on network quality",
-            "1&1 limited by network build-out"
+            "WOM Chile aggressive on price but weaker on network quality",
+            "Movistar Chile competes on brand and convergence"
           ],
           "opportunity": "Value-for-money bundles combining mobile + broadband"
         },
@@ -1197,7 +1200,7 @@
             "No-contract options"
           ],
           "competitor_gaps": [
-            "1&1 and O2 sub-brands dominate this space"
+            "Low-cost brands and sub-brands (WOM Chile, Movistar Chile) compete here"
           ],
           "opportunity": "Selective prepaid-to-postpaid migration campaigns"
         },
@@ -1221,7 +1224,7 @@
             "Innovation capability"
           ],
           "competitor_gaps": [
-            "DT dominates with T-Systems for large enterprise ICT",
+            "Movistar Chile competes in large enterprise ICT",
             "Opportunity in cloud and security managed services"
           ],
           "opportunity": "Managed connectivity + cloud services for digital transformation"
@@ -1259,10 +1262,11 @@
           "competitor_scores": {
             "claro_cl": 3.5,
             "movistar_cl": 3.0,
+            "tigo_chile": 3.0,
             "wom_cl": 4.5
           },
           "customer_priority": "critical",
-          "gap_analysis": "Below market average in Price by 0.7 points. Leader: wom_cl (4.5/5.0)"
+          "gap_analysis": "Below market average in Price by 0.5 points. Leader: wom_cl (4.5/5.0)"
         },
         {
           "dimension": "A1",
@@ -1271,6 +1275,7 @@
           "competitor_scores": {
             "claro_cl": 3.5,
             "movistar_cl": 4.0,
+            "tigo_chile": 1.5,
             "wom_cl": 2.5
           },
           "customer_priority": "critical",
@@ -1283,6 +1288,7 @@
           "competitor_scores": {
             "claro_cl": 2.5,
             "movistar_cl": 3.0,
+            "tigo_chile": 2.0,
             "wom_cl": 4.0
           },
           "customer_priority": "important",
@@ -1295,6 +1301,7 @@
           "competitor_scores": {
             "claro_cl": 2.8,
             "movistar_cl": 3.2,
+            "tigo_chile": 1.2,
             "wom_cl": 3.0
           },
           "customer_priority": "critical",
@@ -1307,6 +1314,7 @@
           "competitor_scores": {
             "claro_cl": 2.8,
             "movistar_cl": 3.2,
+            "tigo_chile": 2.5,
             "wom_cl": 3.8
           },
           "customer_priority": "important",
@@ -1319,6 +1327,7 @@
           "competitor_scores": {
             "claro_cl": 2.5,
             "movistar_cl": 3.5,
+            "tigo_chile": 2.5,
             "wom_cl": 1.5
           },
           "customer_priority": "important",
@@ -1331,10 +1340,11 @@
           "competitor_scores": {
             "claro_cl": 3.5,
             "movistar_cl": 3.0,
+            "tigo_chile": 3.0,
             "wom_cl": 4.5
           },
           "customer_priority": "important",
-          "gap_analysis": "Below market average in Lifecycle Cost by 0.7 points. Leader: wom_cl (4.5/5.0)"
+          "gap_analysis": "Below market average in Lifecycle Cost by 0.5 points. Leader: wom_cl (4.5/5.0)"
         },
         {
           "dimension": "S",
@@ -1343,6 +1353,7 @@
           "competitor_scores": {
             "claro_cl": 2.8,
             "movistar_cl": 3.5,
+            "tigo_chile": 2.0,
             "wom_cl": 2.8
           },
           "customer_priority": "nice_to_have",
@@ -1351,7 +1362,7 @@
       ],
       "customer_value_migration": "Value migration trending upward: customers willing to pay more for premium connectivity and convergent bundles. Focus on upselling and cross-selling opportunities.",
       "market_outlook": "mixed",
-      "key_message": "Chile telecom market totals CLP 1391000.0M in quarterly revenue; entel_cl holds 58.3% market share; competitive strengths in Availability, Performance; Market presents a balanced mix of opportunities and challenges."
+      "key_message": "Chile telecom market totals CLP 1391000.0M in quarterly revenue; competitive strengths in Availability, Performance; Market presents a balanced mix of opportunities and challenges."
     },
     "competition": {
       "five_forces": {
@@ -1646,13 +1657,29 @@
           "talent_culture": "",
           "ma_activity": [],
           "strengths": [],
-          "weaknesses": [],
+          "weaknesses": [
+            "5G Deployment: 20.0/100",
+            "Network Coverage: 30.0/100",
+            "Network Quality: 30.0/100"
+          ],
           "problems": [],
           "likely_future_actions": [
             "Tigo Chile may pursue cost optimization or strategic pivot given declining revenue trend.",
-            "Tigo Chile may accelerate fiber migration or FWA push to counter broadband subscriber losses."
+            "Tigo Chile may accelerate fiber migration or FWA push to counter broadband subscriber losses.",
+            "Tigo Chile will need significant network investment (coverage score: 30/100)."
           ],
-          "implications": []
+          "implications": [
+            {
+              "implication_type": "opportunity",
+              "description": "Tigo Chile is weak in: 5G Deployment, Network Coverage, Network Quality. Target can differentiate in these dimensions.",
+              "evidence": [
+                "5G Deployment: 20.0/100",
+                "Network Coverage: 30.0/100",
+                "Network Quality: 30.0/100"
+              ],
+              "suggested_action": "Invest in 5G Deployment, Network Coverage, Network Quality to capture customers dissatisfied with Tigo Chile."
+            }
+          ]
         },
         "wom_cl": {
           "operator": "WOM Chile",
@@ -1863,42 +1890,49 @@
       "comparison_table": {
         "revenue": {
           "claro_cl": 150000.0,
+          "tigo_chile": null,
           "wom_cl": 185000.0,
           "entel_cl": 811000.0,
           "movistar_cl": 245000.0
         },
         "revenue_growth": {
           "claro_cl": 2.2,
+          "tigo_chile": null,
           "wom_cl": 6.8,
           "entel_cl": 5.5,
           "movistar_cl": 3.2
         },
         "ebitda_margin": {
           "claro_cl": 22.0,
+          "tigo_chile": null,
           "wom_cl": 20.0,
           "entel_cl": 30.0,
           "movistar_cl": 28.0
         },
         "subscribers": {
           "claro_cl": 5350.0,
+          "tigo_chile": null,
           "wom_cl": 6700.0,
           "entel_cl": 10900.0,
           "movistar_cl": 7550.0
         },
         "arpu": {
           "claro_cl": 6500.0,
+          "tigo_chile": null,
           "wom_cl": 5200.0,
           "entel_cl": 9500.0,
           "movistar_cl": 7500.0
         },
         "churn": {
           "claro_cl": 1.62,
+          "tigo_chile": null,
           "wom_cl": 1.65,
           "entel_cl": 1.32,
           "movistar_cl": 1.52
         },
         "5g_coverage": {
           "claro_cl": 50.0,
+          "tigo_chile": null,
           "wom_cl": 35.0,
           "entel_cl": 65.0,
           "movistar_cl": 55.0
@@ -2655,14 +2689,15 @@
         }
       ],
       "strengths": [
-        "5G Deployment: score 80 (market avg 65)",
-        "Brand Strength: score 90 (market avg 72)",
-        "Customer Service: score 80 (market avg 65)",
-        "Enterprise Solutions: score 80 (market avg 58)",
-        "Network Coverage: score 90 (market avg 72)",
-        "Network Quality: score 90 (market avg 68)",
-        "Product Innovation: score 70 (market avg 65)",
-        "Sustainability: score 70 (market avg 58)",
+        "5G Deployment: score 80 (market avg 56)",
+        "Brand Strength: score 90 (market avg 69)",
+        "Customer Service: score 80 (market avg 62)",
+        "Digital Services: score 70 (market avg 66)",
+        "Enterprise Solutions: score 80 (market avg 56)",
+        "Network Coverage: score 90 (market avg 64)",
+        "Network Quality: score 90 (market avg 63)",
+        "Product Innovation: score 70 (market avg 60)",
+        "Sustainability: score 70 (market avg 54)",
         "Customer Experience: score 80 (market avg 65)",
         "Financial Strength: score 90 (market avg 65)",
         "Innovation: score 70 (market avg 65)",
@@ -2673,23 +2708,24 @@
         "Top 1 in revenue market ranking"
       ],
       "weaknesses": [
-        "Pricing Competitiveness: score 60 (market avg 70)",
+        "Pricing Competitiveness: score 60 (market avg 69)",
         "5G coverage gap at only 65.0%"
       ],
       "exposure_points": [],
       "health_rating": "healthy",
-      "key_message": "Ranked #1 of 5 operators in market; revenue CLP 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidanc"
+      "key_message": "Ranked #1 of 5 operators in market; revenue CLP 811000.0M; EBITDA margin 30.0%; overall healthy operations; key strength: 5G Deployment; key challenge: Pricing Competitiveness; Management outlook: FY2025 total revenue CLP 2.1T (+4.2% YoY). EBITDA margin improved to 32.8% (+0.7pp). Management reaffirms FY2026 guidance: revenue growth 4-5%, EBITDA margin 33-34%. Capex/revenue expected at 16-18% as 5G build-out phase peaks."
     },
     "swot": {
       "strengths": [
-        "5G Deployment: score 80 (market avg 65)",
-        "Brand Strength: score 90 (market avg 72)",
-        "Customer Service: score 80 (market avg 65)",
-        "Enterprise Solutions: score 80 (market avg 58)",
-        "Network Coverage: score 90 (market avg 72)",
-        "Network Quality: score 90 (market avg 68)",
-        "Product Innovation: score 70 (market avg 65)",
-        "Sustainability: score 70 (market avg 58)",
+        "5G Deployment: score 80 (market avg 56)",
+        "Brand Strength: score 90 (market avg 69)",
+        "Customer Service: score 80 (market avg 62)",
+        "Digital Services: score 70 (market avg 66)",
+        "Enterprise Solutions: score 80 (market avg 56)",
+        "Network Coverage: score 90 (market avg 64)",
+        "Network Quality: score 90 (market avg 63)",
+        "Product Innovation: score 70 (market avg 60)",
+        "Sustainability: score 70 (market avg 54)",
         "Customer Experience: score 80 (market avg 65)",
         "Financial Strength: score 90 (market avg 65)",
         "Innovation: score 70 (market avg 65)",
@@ -2700,7 +2736,7 @@
         "Top 1 in revenue market ranking"
       ],
       "weaknesses": [
-        "Pricing Competitiveness: score 60 (market avg 70)",
+        "Pricing Competitiveness: score 60 (market avg 69)",
         "5G coverage gap at only 65.0%"
       ],
       "opportunities": [
@@ -2745,26 +2781,26 @@
         "High buyer power pressure"
       ],
       "so_strategies": [
-        "Leverage '5G Deployment: score 80 (market avg 65)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Leverage 'Brand Strength: score 90 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
-        "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl'.",
-        "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'."
+        "Leverage '5G Deployment: score 80 (market avg 56)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Leverage 'Brand Strength: score 90 (market avg 69)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+        "Leverage 'Customer Service: score 80 (market avg 62)' to capture the opportunity of 'SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl'.",
+        "Leverage 'Digital Services: score 70 (market avg 66)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'."
       ],
       "wo_strategies": [
-        "Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Address weakness 'Pricing Competitiveness: score 60 (market avg 69)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
         "Address weakness '5G coverage gap at only 65.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'."
       ],
       "st_strategies": [
-        "Use strength '5G Deployment: score 80 (market avg 65)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
-        "Use strength 'Brand Strength: score 90 (market avg 72)' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'.",
-        "Use strength 'Customer Service: score 80 (market avg 65)' to counter the threat of 'WOM Chile revenue growth 6.9% YoY'.",
-        "Use strength 'Enterprise Solutions: score 80 (market avg 58)' to counter the threat of 'Claro Chile revenue growth 8.7% YoY'."
+        "Use strength '5G Deployment: score 80 (market avg 56)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Use strength 'Brand Strength: score 90 (market avg 69)' to counter the threat of 'Movistar Chile revenue growth 8.9% YoY'.",
+        "Use strength 'Customer Service: score 80 (market avg 62)' to counter the threat of 'WOM Chile revenue growth 6.9% YoY'.",
+        "Use strength 'Digital Services: score 70 (market avg 66)' to counter the threat of 'Claro Chile revenue growth 8.7% YoY'."
       ],
       "wt_strategies": [
-        "Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 70)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+        "Mitigate weakness 'Pricing Competitiveness: score 60 (market avg 69)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
         "Mitigate weakness '5G coverage gap at only 65.0%' and defend against the threat of 'Movistar Chile revenue growth 8.9% YoY'."
       ],
-      "key_message": "SWOT analysis identifies 16 strengths, 2 weaknesses, 21 opportunities, and 16 threats. The recommended strategic posture is offensive (SO-dominant)."
+      "key_message": "SWOT analysis identifies 17 strengths, 2 weaknesses, 21 opportunities, and 16 threats. The recommended strategic posture is offensive (SO-dominant)."
     },
     "opportunities": {
       "span_positions": [
@@ -2849,7 +2885,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
+          "opportunity_name": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -2865,7 +2901,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Chile telecom sector capex reaches $1.8B in 2025, highest ev",
+          "opportunity_name": "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -2929,7 +2965,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Chile central bank cuts rate to 5.0%, easing operator financ",
+          "opportunity_name": "Chile central bank cuts rate to 5.0%, easing operator financing costs",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -2945,7 +2981,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Chile ARPU stabilizes after 3-year decline, premium tier gro",
+          "opportunity_name": "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -2961,7 +2997,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Entel Chile wins SUBTEL network quality award for 5th consec",
+          "opportunity_name": "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -2977,7 +3013,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Chile 5G FWA subscribers reach 120K, filling rural broadband",
+          "opportunity_name": "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -2993,7 +3029,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Chilean peso strengthens 8% against USD, easing equipment co",
+          "opportunity_name": "Chilean peso strengthens 8% against USD, easing equipment costs",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -3025,7 +3061,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Chile digital economy grows 12% YoY, telecom infra demand su",
+          "opportunity_name": "Chile digital economy grows 12% YoY, telecom infra demand surges",
           "market_size_score": 5.0,
           "market_growth_score": 5,
           "profit_potential_score": 5.0,
@@ -3041,7 +3077,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Chile becomes first LATAM country with nationwide fiber back",
+          "opportunity_name": "Chile becomes first LATAM country with nationwide fiber backbone",
           "market_size_score": 5.0,
           "market_growth_score": 7,
           "profit_potential_score": 5.0,
@@ -3057,7 +3093,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "SUBTEL mandates infrastructure sharing for 5G deployment in ",
+          "opportunity_name": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
           "market_size_score": 5.0,
           "market_growth_score": 7,
           "profit_potential_score": 5.0,
@@ -3153,7 +3189,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum",
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -3169,7 +3205,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -3185,7 +3221,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "SUBTEL approves 700 MHz refarming for 5G rural broadband: Po",
+          "opportunity_name": "SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -3196,6 +3232,54 @@
           "brand_channel_score": 5.0,
           "tech_capability_score": 5.0,
           "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.4,
+          "market_share_score": 5.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.0,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit tigo_chile weakness: 5G Deployment: 20.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit tigo_chile weakness: Network Coverage: 30.0/100",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
           "quadrant": "grow_invest",
           "recommended_strategy": "Invest aggressively to grow market share and revenue.",
           "bubble_size": 1.0
@@ -3255,28 +3339,31 @@
         "SO-3",
         "SO-4",
         "Entel Chile revenue growth 15.9% YoY",
-        "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
-        "Chile telecom sector capex reaches $1.8B in 2025, highest ev",
+        "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
+        "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
         "Chile GDP growth 2.8% in 2025, consumer spending up 3.5%",
         "Chile enterprise telecom market grows 9% YoY to CLP 380B",
         "Chile mobile penetration reaches 138%, 5G users hit 4.5M",
-        "Chile central bank cuts rate to 5.0%, easing operator financ",
-        "Chile ARPU stabilizes after 3-year decline, premium tier gro",
-        "Entel Chile wins SUBTEL network quality award for 5th consec",
-        "Chile 5G FWA subscribers reach 120K, filling rural broadband",
-        "Chilean peso strengthens 8% against USD, easing equipment co",
+        "Chile central bank cuts rate to 5.0%, easing operator financing costs",
+        "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
+        "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
+        "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
+        "Chilean peso strengthens 8% against USD, easing equipment costs",
         "SUBTEL approves 700 MHz refarming for 5G rural broadband",
-        "Chile digital economy grows 12% YoY, telecom infra demand su",
-        "Chile becomes first LATAM country with nationwide fiber back",
-        "SUBTEL mandates infrastructure sharing for 5G deployment in ",
+        "Chile digital economy grows 12% YoY, telecom infra demand surges",
+        "Chile becomes first LATAM country with nationwide fiber backbone",
+        "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
         "Chile copper mining boom drives enterprise telecom demand",
         "Entel Chile launches 5G SA network in Santiago and 15 cities",
         "5G SA enabling network slicing and enterprise services",
         "AI/ML for network optimization and customer experience",
         "Open RAN for vendor diversification and cost reduction",
-        "Regulatory Environment: Compliance requirements and spectrum",
-        "National Digital Strategy: Fiber/5G coverage mandates may re",
-        "SUBTEL approves 700 MHz refarming for 5G rural broadband: Po",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
+        "National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
+        "SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl",
+        "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl",
+        "Exploit tigo_chile weakness: 5G Deployment: 20.0/100",
+        "Exploit tigo_chile weakness: Network Coverage: 30.0/100",
         "Exploit wom_cl weakness: Enterprise Solutions: 30.0/100"
       ],
       "acquire_skills": [
@@ -3289,7 +3376,7 @@
       "opportunities": [
         {
           "name": "SO-1",
-          "description": "Leverage '5G Deployment: score 80 (market avg 65)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+          "description": "Leverage '5G Deployment: score 80 (market avg 56)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -3303,7 +3390,7 @@
         },
         {
           "name": "SO-2",
-          "description": "Leverage 'Brand Strength: score 90 (market avg 72)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
+          "description": "Leverage 'Brand Strength: score 90 (market avg 69)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -3317,7 +3404,7 @@
         },
         {
           "name": "SO-3",
-          "description": "Leverage 'Customer Service: score 80 (market avg 65)' to capture the opportunity of 'SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl'.",
+          "description": "Leverage 'Customer Service: score 80 (market avg 62)' to capture the opportunity of 'SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -3331,7 +3418,7 @@
         },
         {
           "name": "SO-4",
-          "description": "Leverage 'Enterprise Solutions: score 80 (market avg 58)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
+          "description": "Leverage 'Digital Services: score 70 (market avg 66)' to capture the opportunity of 'SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl'.",
           "derived_from": [
             "swot_so_strategy"
           ],
@@ -3359,7 +3446,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU s",
+          "name": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
           "description": "Entel FY2025: total revenue +4.2% to CLP 2.1T, mobile ARPU stable",
           "derived_from": [
             "market_opportunity",
@@ -3374,7 +3461,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Chile telecom sector capex reaches $1.8B in 2025, highest ev",
+          "name": "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
           "description": "Chile telecom sector capex reaches $1.8B in 2025, highest ever",
           "derived_from": [
             "market_opportunity",
@@ -3434,7 +3521,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Chile central bank cuts rate to 5.0%, easing operator financ",
+          "name": "Chile central bank cuts rate to 5.0%, easing operator financing costs",
           "description": "Chile central bank cuts rate to 5.0%, easing operator financing costs",
           "derived_from": [
             "market_opportunity",
@@ -3449,7 +3536,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Chile ARPU stabilizes after 3-year decline, premium tier gro",
+          "name": "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
           "description": "Chile ARPU stabilizes after 3-year decline, premium tier grows 15%",
           "derived_from": [
             "market_opportunity",
@@ -3464,7 +3551,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Entel Chile wins SUBTEL network quality award for 5th consec",
+          "name": "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
           "description": "Entel Chile wins SUBTEL network quality award for 5th consecutive year",
           "derived_from": [
             "market_opportunity",
@@ -3479,7 +3566,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Chile 5G FWA subscribers reach 120K, filling rural broadband",
+          "name": "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
           "description": "Chile 5G FWA subscribers reach 120K, filling rural broadband gap",
           "derived_from": [
             "market_opportunity",
@@ -3494,7 +3581,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Chilean peso strengthens 8% against USD, easing equipment co",
+          "name": "Chilean peso strengthens 8% against USD, easing equipment costs",
           "description": "Chilean peso strengthens 8% against USD, easing equipment costs",
           "derived_from": [
             "market_opportunity",
@@ -3524,7 +3611,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Chile digital economy grows 12% YoY, telecom infra demand su",
+          "name": "Chile digital economy grows 12% YoY, telecom infra demand surges",
           "description": "Chile digital economy grows 12% YoY, telecom infra demand surges",
           "derived_from": [
             "market_opportunity",
@@ -3539,7 +3626,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Chile becomes first LATAM country with nationwide fiber back",
+          "name": "Chile becomes first LATAM country with nationwide fiber backbone",
           "description": "Chile becomes first LATAM country with nationwide fiber backbone",
           "derived_from": [
             "market_opportunity",
@@ -3554,7 +3641,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "SUBTEL mandates infrastructure sharing for 5G deployment in ",
+          "name": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
           "description": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas",
           "derived_from": [
             "market_opportunity",
@@ -3641,7 +3728,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Regulatory Environment: Compliance requirements and spectrum",
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
           "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl",
           "derived_from": [
             "trend_policy_opportunity"
@@ -3655,7 +3742,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
           "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require entel_cl investment but also enable subsidy access",
           "derived_from": [
             "trend_policy_opportunity"
@@ -3669,10 +3756,54 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "SUBTEL approves 700 MHz refarming for 5G rural broadband: Po",
+          "name": "SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl",
           "description": "Policy opportunity: SUBTEL approves 700 MHz refarming for 5G rural broadband: Potential impact on entel_cl",
           "derived_from": [
             "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl",
+          "description": "Policy opportunity: SUBTEL mandates infrastructure sharing for 5G deployment in rural areas: Potential impact on entel_cl",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit tigo_chile weakness: 5G Deployment: 20.0/100",
+          "description": "Competitor tigo_chile is weak in: 5G Deployment: 20.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "tigo_chile"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit tigo_chile weakness: Network Coverage: 30.0/100",
+          "description": "Competitor tigo_chile is weak in: Network Coverage: 30.0/100",
+          "derived_from": [
+            "competitor_weakness",
+            "tigo_chile"
           ],
           "addressable_market": "N/A",
           "addressable_market_source": "",
@@ -3699,7 +3830,7 @@
         },
         {
           "name": "WO-1",
-          "description": "Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
+          "description": "Address weakness 'Pricing Competitiveness: score 60 (market avg 69)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect entel_cl'.",
           "derived_from": [
             "swot_wo_strategy"
           ],
@@ -3726,7 +3857,7 @@
           "priority_rationale": "Quadrant: acquire_skills"
         }
       ],
-      "key_message": "SPAN matrix positions 30 opportunities: 28 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 28 grow/invest items for maximum strategic impact."
+      "key_message": "SPAN matrix positions 33 opportunities: 31 grow/invest, 2 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 31 grow/invest items for maximum strategic impact."
     }
   },
   "data_quality": {

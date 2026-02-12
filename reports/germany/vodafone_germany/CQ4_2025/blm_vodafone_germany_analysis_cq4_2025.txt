@@ -26,7 +26,7 @@
   Industry Lifecycle: mature
   Growth Rate: +0.3% YoY (CQ2_2025 -> CQ4_2025)
 
-  → Key Message: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished.. Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))
+  → Key Message: Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 02 MARKET/CUSTOMER ($APPEALS)                                               │
@@ -36,7 +36,7 @@
     total_revenue: 12327.0
     total_mobile_subscribers_k: 143100.0
     total_broadband_subscribers_k: 31420.0
-    market_shares: {'deutsche_telekom': 50.3, 'vodafone_germany': 25.1, 'telefonica_o2': 16.2, 'one_and_one': 8.4}
+    market_shares: {'Deutsche Telekom': 50.3, 'Vodafone Germany': 25.1, 'Telefonica O2 Germany': 16.2, '1&1 AG': 8.4}
   [Market Changes]
     ▲ Vodafone completes 1&1 customer migration: 12M users on network
     ◆ 1&1 completes OpenRAN migration, reaches 25% own network coverage
@@ -58,7 +58,7 @@
     Lifecycle Cost       [#######...] 3.6/5
     Social/Brand         [########..] 4.0/5
 
-  → Key Message: Germany telecom market totals EUR 12327.0M in quarterly revenue; vodafone_germany holds 25.1% market share; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
+  → Key Message: Germany telecom market totals EUR 12327.0M in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 03 COMPETITION (Porter's Five Forces)                                       │
@@ -104,7 +104,7 @@
     - Customer Service: score 70 (market avg 74)
     - Pricing Competitiveness: score 72 (market avg 78)
 
-  → Key Message: Ranked #2 of 4 operators in market; revenue EUR 3092.0M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现E
+  → Key Message: Ranked #2 of 4 operators in market; revenue EUR 3092.0M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ SWOT SYNTHESIS                                                              │
@@ -161,7 +161,7 @@
     SO-2                                 5.6        5.5     grow_invest
     SO-3                                 5.6        5.5     grow_invest
     SO-4                                 5.6        5.5     grow_invest
-    Vodafone completes 1&1 customer migration: 12M users on netw            5.5        5.0     grow_invest
+    Vodafone completes 1&1 customer migration: 12M users on network            5.5        5.0     grow_invest
     Vodafone completes Skaylink acquisition for €175M            5.5        5.0     grow_invest
     Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%            5.0        5.0     grow_invest
     Vodafone restructures cable TV frequencies nationwide            5.0        5.0     grow_invest
@@ -180,7 +180,7 @@
     [P0] SO-2 (Market: N/A)
     [P0] SO-3 (Market: N/A)
     [P0] SO-4 (Market: N/A)
-    [P0] Vodafone completes 1&1 customer migration: 12M users on netw (Market: N/A)
+    [P0] Vodafone completes 1&1 customer migration: 12M users on network (Market: N/A)
     [P0] Vodafone completes Skaylink acquisition for €175M (Market: N/A)
 
   → Key Message: SPAN matrix positions 22 opportunities: 18 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 18 grow/invest items for maximum strategic impact.

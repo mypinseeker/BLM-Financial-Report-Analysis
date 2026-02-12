@@ -68,7 +68,7 @@ class TestMarketSnapshot:
         assert "market_shares" in snapshot
         assert isinstance(snapshot["market_shares"], dict)
         assert len(snapshot["market_shares"]) > 0
-        assert "vodafone_germany" in snapshot["market_shares"]
+        assert "Vodafone Germany" in snapshot["market_shares"]
 
     def test_market_shares_sum_to_100(self, seeded_db):
         """Market shares should approximately sum to 100%."""

@@ -3,7 +3,7 @@
     "target_operator": "vodafone_germany",
     "market": "germany",
     "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-12T07:04:36.148416",
+    "generated_at": "2026-02-12T08:35:10.552631",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -292,7 +292,7 @@
         "B2B/ICT growing faster than consumer segment",
         "Fiber displacing copper and cable broadband"
       ],
-      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished.. Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))"
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Nebenkostenprivileg (MDU cable TV bundling) abolished Industry is mature. (+0.3% YoY (CQ2_2025 -> CQ4_2025))"
     },
     "market_customer": {
       "market_snapshot": {
@@ -301,10 +301,10 @@
         "total_mobile_subscribers_k": 143100.0,
         "total_broadband_subscribers_k": 31420.0,
         "market_shares": {
-          "deutsche_telekom": 50.3,
-          "vodafone_germany": 25.1,
-          "telefonica_o2": 16.2,
-          "one_and_one": 8.4
+          "Deutsche Telekom": 50.3,
+          "Vodafone Germany": 25.1,
+          "Telefonica O2 Germany": 16.2,
+          "1&1 AG": 8.4
         },
         "penetration_rates": {
           "mobile_penetration_pct": 170.4,
@@ -543,7 +543,7 @@
             "Premium device availability"
           ],
           "competitor_gaps": [
-            "DT dominates with Magenta brand premium positioning",
+            "Deutsche Telekom competes with premium brand positioning",
             "Opportunity in 5G-exclusive premium bundles"
           ],
           "opportunity": "Premium 5G and converged services for high-ARPU customers"
@@ -569,8 +569,8 @@
             "Contract flexibility"
           ],
           "competitor_gaps": [
-            "O2 aggressive on price but weaker on network quality",
-            "1&1 limited by network build-out"
+            "Telefonica O2 Germany aggressive on price but weaker on network quality",
+            "Deutsche Telekom competes on brand and convergence"
           ],
           "opportunity": "Value-for-money bundles combining mobile + broadband"
         },
@@ -594,7 +594,7 @@
             "No-contract options"
           ],
           "competitor_gaps": [
-            "1&1 and O2 sub-brands dominate this space"
+            "Low-cost brands and sub-brands (Telefonica O2 Germany, Deutsche Telekom) compete here"
           ],
           "opportunity": "Selective prepaid-to-postpaid migration campaigns"
         },
@@ -647,7 +647,7 @@
             "Dedicated account management"
           ],
           "competitor_gaps": [
-            "DT dominates with T-Systems for large enterprise ICT",
+            "Deutsche Telekom competes in large enterprise ICT",
             "Opportunity in cloud and security managed services"
           ],
           "opportunity": "Managed connectivity + cloud services for digital transformation"
@@ -804,7 +804,7 @@
       ],
       "customer_value_migration": "Value migration is mixed: some segments trending up while price-sensitive segments face pressure. Differentiated strategy by segment recommended.",
       "market_outlook": "favorable",
-      "key_message": "Germany telecom market totals EUR 12327.0M in quarterly revenue; vodafone_germany holds 25.1% market share; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats."
+      "key_message": "Germany telecom market totals EUR 12327.0M in quarterly revenue; competitive strengths in Availability, Assurances; Market outlook is favorable with more opportunities than threats."
     },
     "competition": {
       "five_forces": {
@@ -2177,7 +2177,7 @@
         }
       ],
       "health_rating": "stable",
-      "key_message": "Ranked #2 of 4 operators in market; revenue EUR 3092.0M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现E"
+      "key_message": "Ranked #2 of 4 operators in market; revenue EUR 3092.0M; EBITDA margin 36.2%; stable but facing challenges; key strength: Brand Strength; key challenge: Customer Service; Management outlook: 德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。"
     },
     "swot": {
       "strengths": [
@@ -2308,7 +2308,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Vodafone completes 1&1 customer migration: 12M users on netw",
+          "opportunity_name": "Vodafone completes 1&1 customer migration: 12M users on network",
           "market_size_score": 5.0,
           "market_growth_score": 7,
           "profit_potential_score": 5.0,
@@ -2468,7 +2468,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum",
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -2484,7 +2484,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy ac",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -2500,7 +2500,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent",
+          "opportunity_name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -2516,7 +2516,7 @@
           "bubble_size": 1.0
         },
         {
-          "opportunity_name": "German government launches €1.2B Gigabit Funding Programme 2",
+          "opportunity_name": "German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
           "profit_potential_score": 5.0,
@@ -2601,7 +2601,7 @@
         "SO-2",
         "SO-3",
         "SO-4",
-        "Vodafone completes 1&1 customer migration: 12M users on netw",
+        "Vodafone completes 1&1 customer migration: 12M users on network",
         "Vodafone completes Skaylink acquisition for €175M",
         "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
         "Vodafone restructures cable TV frequencies nationwide",
@@ -2611,10 +2611,10 @@
         "5G SA enabling network slicing and enterprise services",
         "AI/ML for network optimization and customer experience",
         "Open RAN for vendor diversification and cost reduction",
-        "Regulatory Environment: Compliance requirements and spectrum",
-        "National Digital Strategy: Fiber/5G coverage mandates may re",
-        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent",
-        "German government launches €1.2B Gigabit Funding Programme 2"
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
+        "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy ac",
+        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
+        "German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany"
       ],
       "acquire_skills": [
         "WO-1",
@@ -2683,7 +2683,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Vodafone completes 1&1 customer migration: 12M users on netw",
+          "name": "Vodafone completes 1&1 customer migration: 12M users on network",
           "description": "Vodafone completes 1&1 customer migration: 12M users on network",
           "derived_from": [
             "market_opportunity",
@@ -2830,7 +2830,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "Regulatory Environment: Compliance requirements and spectrum",
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
           "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
           "derived_from": [
             "trend_policy_opportunity"
@@ -2844,7 +2844,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "National Digital Strategy: Fiber/5G coverage mandates may re",
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy ac",
           "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy access",
           "derived_from": [
             "trend_policy_opportunity"
@@ -2858,7 +2858,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potent",
+          "name": "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
           "description": "Policy opportunity: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
           "derived_from": [
             "trend_policy_opportunity"
@@ -2872,7 +2872,7 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
-          "name": "German government launches €1.2B Gigabit Funding Programme 2",
+          "name": "German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany",
           "description": "Policy opportunity: German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany",
           "derived_from": [
             "trend_policy_opportunity"

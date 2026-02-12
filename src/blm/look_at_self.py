@@ -1375,7 +1375,19 @@ def analyze_self(
         # Find guidance highlight to supplement key message
         guidance = [c for c in management_commentary if c["type"] == "guidance"]
         if guidance:
-            key_message += f"; Management outlook: {guidance[0]['content'][:120]}"
+            outlook = guidance[0]['content']
+            # Truncate at sentence boundary within 250 chars
+            if len(outlook) > 250:
+                cut = outlook[:250]
+                # Try to cut at last period
+                last_period = cut.rfind(".")
+                if last_period > 100:
+                    outlook = cut[:last_period + 1]
+                else:
+                    # Cut at last space to avoid mid-word truncation
+                    last_space = cut.rfind(" ")
+                    outlook = cut[:last_space] + "..." if last_space > 0 else cut + "..."
+            key_message += f"; Management outlook: {outlook}"
 
     # ------------------------------------------------------------------
     # 13. Assemble SelfInsight

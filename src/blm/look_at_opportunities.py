@@ -171,7 +171,7 @@ def _extract_raw_opportunities(
     if market_customer and market_customer.opportunities:
         for mc in market_customer.opportunities:
             _add(
-                name=mc.description[:60] if mc.description else f"Market-{mc.change_type}",
+                name=mc.description[:120] if mc.description else f"Market-{mc.change_type}",
                 description=mc.description,
                 derived_from=["market_opportunity", mc.change_type],
                 source_scores={
@@ -183,7 +183,7 @@ def _extract_raw_opportunities(
     if trends and trends.technology_revolution:
         for tech in trends.technology_revolution:
             _add(
-                name=tech[:60],
+                name=tech[:120],
                 description=f"Technology trend: {tech}",
                 derived_from=["trend_technology"],
                 source_scores={
@@ -196,7 +196,7 @@ def _extract_raw_opportunities(
     if trends and trends.pest and trends.pest.policy_opportunities:
         for po in trends.pest.policy_opportunities:
             _add(
-                name=po[:60],
+                name=po[:120],
                 description=f"Policy opportunity: {po}",
                 derived_from=["trend_policy_opportunity"],
                 source_scores={
@@ -210,7 +210,7 @@ def _extract_raw_opportunities(
             if deep_dive.weaknesses:
                 for cw in deep_dive.weaknesses[:2]:
                     _add(
-                        name=f"Exploit {op_id} weakness: {cw[:40]}",
+                        name=f"Exploit {op_id} weakness: {cw[:80]}",
                         description=f"Competitor {op_id} is weak in: {cw}",
                         derived_from=["competitor_weakness", op_id],
                         source_scores={

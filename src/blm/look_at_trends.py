@@ -859,7 +859,8 @@ def _build_key_message(pest: PESTAnalysis, ind: dict, market: str) -> str:
     parts = []
 
     if pest.key_message:
-        parts.append(pest.key_message)
+        # Strip trailing period to avoid double-period when joining
+        parts.append(pest.key_message.rstrip("."))
 
     if ind.get("lifecycle_stage") and ind["lifecycle_stage"] != "N/A":
         stage_map = {
@@ -869,14 +870,15 @@ def _build_key_message(pest: PESTAnalysis, ind: dict, market: str) -> str:
             "decline": "in decline",
         }
         stage_label = stage_map.get(ind["lifecycle_stage"], ind["lifecycle_stage"])
-        parts.append(f"Industry is {stage_label}")
+        lifecycle_part = f"Industry is {stage_label}."
         if ind.get("growth_rate") and ind["growth_rate"] != "N/A":
-            parts.append(f"({ind['growth_rate']})")
+            lifecycle_part += f" ({ind['growth_rate']})"
+        parts.append(lifecycle_part)
 
     if not parts:
         return f"Trend analysis for {market} market completed with available data"
 
-    return ". ".join(parts) if len(parts) > 1 else parts[0]
+    return " ".join(parts)
 
 
 # ---------------------------------------------------------------------------
