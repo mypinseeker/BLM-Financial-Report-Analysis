@@ -187,6 +187,7 @@ ABSOLUTE_THRESHOLDS = {
     "span_positions": 20,
     "opportunity_items": 5,
     "unique_sources": 5,
+    "total_data_points": 20,
 }
 
 # Tables to audit with their key fields for completeness checking
@@ -734,7 +735,7 @@ class MarketAuditService:
 
         # 3. Data point coverage
         t_dp = target.total_data_points
-        r_dp = reference.total_data_points if has_reference else 50
+        r_dp = reference.total_data_points if has_reference else ABSOLUTE_THRESHOLDS.get("total_data_points", 20)
         if r_dp > 0:
             dp_pct = min(t_dp / r_dp, 1.0) * 100
         elif t_dp > 0:
