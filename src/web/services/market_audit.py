@@ -203,25 +203,25 @@ AUDIT_TABLES = {
     },
     "subscriber_quarterly": {
         "key_fields": [
-            "total_mobile_subs", "postpaid_subs", "prepaid_subs",
-            "fixed_broadband_subs", "tv_subs", "mobile_arpu",
-            "postpaid_arpu", "churn_rate_pct",
+            "mobile_total_k", "mobile_postpaid_k", "mobile_prepaid_k",
+            "broadband_total_k", "tv_total_k", "mobile_arpu",
+            "broadband_arpu", "mobile_churn_pct",
         ],
         "quarter_col": "calendar_quarter",
         "operator_col": "operator_id",
     },
     "network_infrastructure": {
         "key_fields": [
-            "coverage_4g_pct", "coverage_5g_pct", "fiber_homes_passed",
-            "fiber_homes_connected", "cable_homes_passed",
+            "four_g_coverage_pct", "five_g_coverage_pct", "fiber_homepass_k",
+            "fiber_connected_k", "cable_homepass_k",
         ],
         "quarter_col": "calendar_quarter",
         "operator_col": "operator_id",
     },
     "tariffs": {
         "key_fields": [
-            "plan_name", "plan_type", "monthly_price", "data_gb",
-            "speed_down_mbps",
+            "plan_name", "plan_type", "monthly_price", "data_allowance",
+            "speed_mbps",
         ],
         "quarter_col": "snapshot_period",
         "operator_col": "operator_id",
@@ -245,7 +245,7 @@ AUDIT_TABLES = {
     "macro_environment": {
         "key_fields": [
             "gdp_growth_pct", "inflation_pct", "unemployment_pct",
-            "population_millions", "internet_penetration_pct",
+            "telecom_market_size_eur_b", "fiber_penetration_pct",
         ],
         "quarter_col": "calendar_quarter",
         "operator_col": None,
@@ -253,7 +253,7 @@ AUDIT_TABLES = {
     },
     "earnings_call_highlights": {
         "key_fields": [
-            "topic", "speaker", "quote", "sentiment",
+            "segment", "speaker", "content", "highlight_type",
         ],
         "quarter_col": "calendar_quarter",
         "operator_col": "operator_id",
@@ -471,8 +471,8 @@ class MarketAuditService:
             conditions.append(f"{operator_col} = ?")
             params.append(operator_id)
         if market_col and market:
-            conditions.append(f"{market_col} = ?")
-            params.append(market)
+            conditions.append(f"LOWER({market_col}) = ?")
+            params.append(market.lower())
 
         where = f" WHERE {' AND '.join(conditions)}" if conditions else ""
         try:

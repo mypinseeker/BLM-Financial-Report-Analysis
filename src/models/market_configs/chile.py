@@ -100,6 +100,205 @@ CHILE_CONFIG = MarketConfig(
         },
     ],
 
+    operator_bmc_enrichments={
+        "entel_cl": {
+            "key_partners": [
+                "Nokia (5G SA core)", "Ericsson (RAN)",
+                "BHP/Codelco (enterprise private 5G)"
+            ],
+            "key_resources": [
+                "4,200 owned towers (largest in Chile)",
+                "First 5G SA network in Chile",
+                "Premium brand positioning"
+            ],
+            "key_activities": [
+                "5G SA deployment and enterprise private networks",
+                "Copper-to-fiber migration program",
+                "Digital services (cloud, cybersecurity)"
+            ],
+            "value_propositions": [
+                "Best network quality (Opensignal #1)",
+                "Convergent fiber+mobile bundles",
+                "Enterprise private 5G for mining"
+            ],
+        },
+        "movistar_cl": {
+            "key_partners": [
+                "Telefonica Group (global enterprise)", "Amazon (cloud partnership)"
+            ],
+            "key_resources": [
+                "Largest FTTH network: 3.5M homes passed",
+                "Telefonica global enterprise contracts"
+            ],
+            "key_activities": [
+                "FTTH expansion to 4.5M homes",
+                "Convergent (Fusión) bundle strategy"
+            ],
+            "value_propositions": [
+                "Best fiber broadband coverage",
+                "Movistar Fusión convergent bundles",
+                "Global enterprise solutions via Telefonica"
+            ],
+        },
+        "claro_cl": {
+            "key_partners": [
+                "América Móvil (group synergies)", "Claro TV+ (content)"
+            ],
+            "key_resources": [
+                "América Móvil financial backing",
+                "Largest retail distribution network in Chile"
+            ],
+            "key_activities": [
+                "$300M 5G+fiber investment plan (2025-2026)",
+                "Transition from mobile-only to convergent model"
+            ],
+            "value_propositions": [
+                "Aggressive pricing powered by América Móvil scale",
+                "Wide retail distribution and brand recognition"
+            ],
+        },
+        "wom_cl": {
+            "key_partners": [
+                "New investor consortium (post-restructuring)"
+            ],
+            "key_resources": [
+                "7.2M mobile subscribers",
+                "Strong brand among youth/price-sensitive segments",
+                "5G spectrum holdings"
+            ],
+            "key_activities": [
+                "Debt restructuring execution",
+                "5G deployment with reduced capex",
+                "Disruptive pricing strategy"
+            ],
+            "value_propositions": [
+                "Lowest-price mobile data plans in Chile",
+                "Digital-first customer experience",
+                "Youth-oriented brand positioning"
+            ],
+        },
+        "tigo_chile": {
+            "key_partners": [
+                "Entel (MVNO network access)"
+            ],
+            "key_resources": [
+                "Millicom group enterprise capabilities",
+                "LATAM regional presence"
+            ],
+            "key_activities": [
+                "MVNO model execution on Entel network",
+                "Enterprise B2B segment focus"
+            ],
+            "value_propositions": [
+                "Niche enterprise and digital services",
+                "Millicom group cross-border solutions"
+            ],
+        },
+    },
+
+    operator_exposures={
+        "entel_cl": [
+            {
+                "trigger_action": "5G SA investment competing with established players",
+                "attack_vector": "Movistar's fiber footprint advantage in broadband",
+                "side_effect": "Capex pressure during 5G build-out phase (17-19% capex/revenue)",
+                "severity": "medium",
+                "evidence": [
+                    "$120M 5G investment in 2025",
+                    "Movistar has 3.5M FTTH homes vs Entel 2.8M"
+                ],
+            },
+            {
+                "trigger_action": "WOM's post-restructuring competitive aggression",
+                "attack_vector": "WOM emerges with $800M less debt, renewed pricing war capability",
+                "side_effect": "ARPU pressure in price-sensitive segments",
+                "severity": "high",
+                "evidence": [
+                    "WOM historically triggered 30% ARPU erosion since 2015 entry",
+                    "Post-restructuring WOM has lower debt service costs"
+                ],
+            },
+            {
+                "trigger_action": "Mining sector cyclicality affecting enterprise revenue",
+                "attack_vector": "Copper price decline could reduce mining capex including telecom",
+                "side_effect": "Enterprise segment (28% of revenue) exposed to commodity cycles",
+                "severity": "medium",
+                "evidence": [
+                    "Enterprise revenue grew 8.5% driven by mining contracts",
+                    "Copper prices at cyclical highs"
+                ],
+            },
+        ],
+        "movistar_cl": [
+            {
+                "trigger_action": "Telefonica Group financial constraints",
+                "attack_vector": "Parent company debt and divestiture pressure could limit Chile investment",
+                "side_effect": "Potential underinvestment in 5G if Group prioritizes other markets",
+                "severity": "medium",
+                "evidence": [
+                    "Telefonica global debt >€30B",
+                    "Group has sold LATAM assets in past"
+                ],
+            },
+            {
+                "trigger_action": "Copper network sunset costs",
+                "attack_vector": "Legacy copper network maintenance costs while migrating to fiber",
+                "side_effect": "Dual-network operating costs during transition period",
+                "severity": "medium",
+                "evidence": [
+                    "Still operating copper DSL for legacy customers",
+                    "FTTH migration incomplete"
+                ],
+            },
+        ],
+        "claro_cl": [
+            {
+                "trigger_action": "Late entry to convergent market",
+                "attack_vector": "Entel and Movistar already have established fiber+mobile bundles",
+                "side_effect": "Difficult to win converged customers from established competitors",
+                "severity": "high",
+                "evidence": [
+                    "Claro historically mobile-focused with limited fixed",
+                    "$300M investment plan tries to close gap but competitors years ahead"
+                ],
+            },
+        ],
+        "wom_cl": [
+            {
+                "trigger_action": "Post-restructuring execution risk",
+                "attack_vector": "New investors may prioritize short-term returns over long-term network investment",
+                "side_effect": "Network quality deterioration if capex is cut",
+                "severity": "high",
+                "evidence": [
+                    "Just emerged from Chapter 11",
+                    "New investor consortium is financial, not strategic"
+                ],
+            },
+            {
+                "trigger_action": "No fixed broadband network",
+                "attack_vector": "Cannot offer convergent bundles that reduce churn",
+                "side_effect": "Higher mobile churn vs converged competitors",
+                "severity": "medium",
+                "evidence": [
+                    "WOM is mobile-only operator",
+                    "Convergent competitors show 40% lower churn"
+                ],
+            },
+        ],
+        "tigo_chile": [
+            {
+                "trigger_action": "Sub-3% market share in hyper-competitive market",
+                "attack_vector": "Too small to compete on price or network investment",
+                "side_effect": "Strategic review may lead to market exit",
+                "severity": "high",
+                "evidence": [
+                    "Pivoted to MVNO model",
+                    "Returned spectrum to SUBTEL"
+                ],
+            },
+        ],
+    },
+
     competitive_landscape_notes=[
         "5-player market: Entel, Movistar, Claro, WOM, Tigo (smallest)",
         "WOM disrupted market since 2015 with aggressive pricing",
