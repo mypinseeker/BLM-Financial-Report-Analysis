@@ -776,8 +776,14 @@ def _classify_segment_health(rev_change: float, sub_change: float) -> str:
 
 def _analyze_network(
     db: TelecomDatabase,
+    market: str,
     target_operator: str,
     financial_data: list,
+    subscriber_data: list,
+    management_commentary: list,
+    intelligence_events: list,
+    latest_cq: str,
+    market_config: MarketConfig = None,
 ) -> NetworkAnalysis:
     """Analyze network infrastructure for the target operator."""
     try:
@@ -809,22 +815,548 @@ def _analyze_network(
             elif capex_change < -3:
                 investment_direction = "decreasing"
 
-    # Compute homepass vs connect if data available
-    homepass_vs_connect = {}
-    fiber_homepass = net_data.get("fiber_homepass_k")
-    cable_homepass = net_data.get("cable_homepass_k")
-    if fiber_homepass is not None:
-        homepass_vs_connect["fiber_homepass_k"] = fiber_homepass
-    if cable_homepass is not None:
-        homepass_vs_connect["cable_homepass_k"] = cable_homepass
+    # --- Enhanced homepass_vs_connect (#1) ---
+    homepass_vs_connect = _build_homepass_vs_connect(net_data, subscriber_data)
+
+    # --- vs_competitors (#4) ---
+    vs_competitors = _build_vs_competitors(db, market, target_operator, latest_cq, net_data)
+
+    # --- cost_impact (#7) ---
+    cost_impact = _build_cost_impact(financial_data, net_data, market_config, target_operator)
+
+    # --- controlled_vs_resale (#2) ---
+    controlled_vs_resale = _build_controlled_vs_resale(net_data, market_config, target_operator)
+
+    # --- evolution_strategy (#3) ---
+    evolution_strategy = _build_evolution_strategy(
+        technology_mix, net_data, intelligence_events, market_config, target_operator,
+    )
+
+    # --- consumer_impact (#5) ---
+    consumer_impact = _build_consumer_impact(
+        coverage, net_data, subscriber_data, quality_scores, market_config, target_operator,
+    )
+
+    # --- b2b_impact (#6) ---
+    b2b_impact = _build_b2b_impact(
+        technology_mix, subscriber_data, financial_data, market_config, target_operator,
+    )
 
     return NetworkAnalysis(
         technology_mix=technology_mix,
+        controlled_vs_resale=controlled_vs_resale,
         coverage=coverage,
         quality_scores=quality_scores,
-        investment_direction=investment_direction,
         homepass_vs_connect=homepass_vs_connect,
+        evolution_strategy=evolution_strategy,
+        investment_direction=investment_direction,
+        vs_competitors=vs_competitors,
+        consumer_impact=consumer_impact,
+        b2b_impact=b2b_impact,
+        cost_impact=cost_impact,
     )
+
+
+def _build_homepass_vs_connect(net_data: dict, subscriber_data: list) -> dict:
+    """Enhanced homepass vs connect with penetration ratios (#1)."""
+    hvc = {}
+    fiber_homepass = net_data.get("fiber_homepass_k")
+    cable_homepass = net_data.get("cable_homepass_k")
+    if fiber_homepass is not None:
+        hvc["fiber_homepass_k"] = fiber_homepass
+    if cable_homepass is not None:
+        hvc["cable_homepass_k"] = cable_homepass
+
+    # Connected subscribers from network_infrastructure or subscriber_quarterly
+    latest_sub = subscriber_data[-1] if subscriber_data else {}
+    fiber_connected = net_data.get("fiber_connected_k") or _safe_get(latest_sub, "broadband_fiber_k")
+    cable_connected = _safe_get(latest_sub, "broadband_cable_k")
+
+    if fiber_connected is not None:
+        hvc["fiber_connected_k"] = fiber_connected
+    if cable_connected is not None:
+        hvc["cable_connected_k"] = cable_connected
+
+    # Penetration ratios
+    if fiber_homepass and fiber_connected:
+        hvc["fiber_penetration_pct"] = round((fiber_connected / fiber_homepass) * 100, 1)
+    if cable_homepass and cable_connected:
+        hvc["cable_penetration_pct"] = round((cable_connected / cable_homepass) * 100, 1)
+
+    return hvc
+
+
+def _build_vs_competitors(
+    db: TelecomDatabase, market: str, target_operator: str,
+    latest_cq: str, net_data: dict,
+) -> str:
+    """Compare network metrics vs competitors (#4)."""
+    if not latest_cq:
+        return ""
+
+    # Get network data for all operators in market
+    try:
+        operators = db.get_operators_in_market(market)
+    except Exception:
+        return ""
+
+    target_5g = net_data.get("five_g_coverage_pct")
+    target_fiber_hp = net_data.get("fiber_homepass_k")
+
+    comparisons = []
+    for op in operators:
+        op_id = op.get("operator_id")
+        if op_id == target_operator:
+            continue
+        try:
+            op_net = db.get_network_data(op_id)
+        except Exception:
+            continue
+        if not op_net:
+            continue
+
+        display = op.get("display_name", op_id)
+
+        # 5G coverage comparison
+        op_5g = op_net.get("five_g_coverage_pct")
+        if target_5g is not None and op_5g is not None:
+            gap = target_5g - op_5g
+            if abs(gap) > 3:
+                direction = "ahead of" if gap > 0 else "behind"
+                comparisons.append(f"5G: {direction} {display} by {abs(gap):.0f}pp")
+
+        # Fiber homepass comparison
+        op_fiber_hp = op_net.get("fiber_homepass_k")
+        if target_fiber_hp is not None and op_fiber_hp is not None and op_fiber_hp > 0:
+            ratio = target_fiber_hp / op_fiber_hp
+            if ratio > 1.5:
+                comparisons.append(f"Fiber: {ratio:.1f}x more homepass than {display}")
+            elif ratio < 0.67:
+                comparisons.append(f"Fiber: {1/ratio:.1f}x less homepass than {display}")
+
+    # Cap at 4 comparisons
+    return "; ".join(comparisons[:4])
+
+
+def _build_cost_impact(
+    financial_data: list, net_data: dict,
+    market_config: MarketConfig = None, target_operator: str = "",
+) -> str:
+    """Build cost impact assessment (#7)."""
+    parts = []
+
+    if financial_data:
+        latest_fin = financial_data[-1]
+        capex_ratio = _safe_get(latest_fin, "capex_to_revenue_pct")
+        if capex_ratio is not None:
+            if capex_ratio > 20:
+                parts.append(f"High capex intensity ({capex_ratio:.1f}%)")
+            elif capex_ratio > 15:
+                parts.append(f"Moderate capex intensity ({capex_ratio:.1f}%)")
+            else:
+                parts.append(f"Capex-light model ({capex_ratio:.1f}%)")
+
+        total_rev = _safe_get(latest_fin, "total_revenue")
+        opex = _safe_get(latest_fin, "opex")
+        if total_rev and opex and total_rev > 0:
+            opex_ratio = (opex / total_rev) * 100
+            if opex_ratio > 75:
+                parts.append(f"OPEX-heavy ({opex_ratio:.0f}% of revenue)")
+            elif opex_ratio < 60:
+                parts.append(f"Lean operating model ({opex_ratio:.0f}% of revenue)")
+
+        # Investment direction
+        if len(financial_data) >= 2:
+            latest_capex = _safe_get(latest_fin, "capex")
+            prev_capex = _safe_get(financial_data[-2], "capex")
+            if latest_capex is not None and prev_capex is not None:
+                capex_change = _safe_pct_change(latest_capex, prev_capex)
+                if capex_change > 5:
+                    parts.append(f"Capex increasing ({capex_change:+.1f}% QoQ)")
+                elif capex_change < -5:
+                    parts.append(f"Capex decreasing ({capex_change:+.1f}% QoQ)")
+
+    # Dual-network signal
+    has_fiber = (net_data.get("fiber_homepass_k") or 0) > 0
+    has_cable = (net_data.get("cable_homepass_k") or 0) > 0
+    if has_fiber and has_cable:
+        parts.append("Dual fixed-network cost (fiber + cable)")
+
+    # Config overlay
+    if market_config and target_operator in market_config.operator_network_enrichments:
+        enrichment = market_config.operator_network_enrichments[target_operator].get("cost_impact")
+        if enrichment and not parts:
+            return enrichment
+
+    return "; ".join(parts) if parts else ""
+
+
+def _build_controlled_vs_resale(
+    net_data: dict, market_config: MarketConfig = None, target_operator: str = "",
+) -> dict:
+    """Infer controlled vs resale infrastructure split (#2)."""
+    result = {}
+
+    # Data-driven: infer from infrastructure presence
+    own_infra = []
+    if net_data.get("cable_homepass_k"):
+        own_infra.append("cable")
+    if net_data.get("fiber_homepass_k"):
+        own_infra.append("fiber")
+    if net_data.get("five_g_coverage_pct") or net_data.get("four_g_coverage_pct"):
+        own_infra.append("mobile")
+
+    if own_infra:
+        result["own_infrastructure"] = own_infra
+
+    # Config overlay
+    if market_config and target_operator in market_config.operator_network_enrichments:
+        enrichment = market_config.operator_network_enrichments[target_operator].get("controlled_vs_resale")
+        if enrichment:
+            result["summary"] = enrichment
+
+    return result
+
+
+def _build_evolution_strategy(
+    technology_mix: dict, net_data: dict,
+    intelligence_events: list,
+    market_config: MarketConfig = None, target_operator: str = "",
+) -> dict:
+    """Build network evolution strategy (#3)."""
+    result = {}
+
+    # Data-driven signals
+    signals = []
+    sa_status = technology_mix.get("5g_sa_status") or technology_mix.get("five_g_sa_status")
+    if sa_status:
+        signals.append(f"5G SA: {sa_status}")
+
+    fiber_hp = net_data.get("fiber_homepass_k") or 0
+    cable_hp = net_data.get("cable_homepass_k") or 0
+    if fiber_hp > 0 and cable_hp > 0:
+        ratio = fiber_hp / (fiber_hp + cable_hp)
+        if ratio > 0.7:
+            signals.append("Fiber-dominant fixed footprint")
+        elif ratio < 0.3:
+            signals.append("Cable-dominant, fiber transition underway")
+        else:
+            signals.append("Mixed fiber/cable footprint")
+    elif fiber_hp > 0:
+        signals.append("Fiber-only fixed footprint")
+    elif cable_hp > 0:
+        signals.append("Cable-only fixed footprint")
+
+    docsis_pct = technology_mix.get("docsis_31_pct")
+    if docsis_pct is not None:
+        signals.append(f"DOCSIS 3.1 at {docsis_pct}%")
+
+    if signals:
+        result["data_signals"] = signals
+
+    # Recent tech intelligence events
+    tech_events = [
+        e for e in intelligence_events
+        if (e.get("category") or "").lower() == "technology"
+    ][:3]
+    if tech_events:
+        result["recent_tech_initiatives"] = [
+            e.get("title") or e.get("description", "")
+            for e in tech_events
+        ]
+
+    # Config overlay
+    if market_config and target_operator in market_config.operator_network_enrichments:
+        enrichment = market_config.operator_network_enrichments[target_operator].get("evolution_strategy")
+        if enrichment:
+            result["summary"] = enrichment
+
+    return result
+
+
+def _build_consumer_impact(
+    coverage: dict, net_data: dict, subscriber_data: list,
+    quality_scores: dict,
+    market_config: MarketConfig = None, target_operator: str = "",
+) -> str:
+    """Build consumer impact assessment (#5)."""
+    parts = []
+
+    # Coverage statement
+    five_g_cov = coverage.get("5g")
+    if five_g_cov is not None:
+        if five_g_cov >= 90:
+            parts.append(f"Strong 5G coverage ({five_g_cov}%)")
+        elif five_g_cov >= 70:
+            parts.append(f"Expanding 5G coverage ({five_g_cov}%)")
+        else:
+            parts.append(f"Early 5G coverage ({five_g_cov}%)")
+
+    # Broadband mix
+    latest_sub = subscriber_data[-1] if subscriber_data else {}
+    fiber_k = _safe_get(latest_sub, "broadband_fiber_k") or 0
+    cable_k = _safe_get(latest_sub, "broadband_cable_k") or 0
+    dsl_k = _safe_get(latest_sub, "broadband_dsl_k") or 0
+    total_bb = fiber_k + cable_k + dsl_k
+    if total_bb > 0:
+        if fiber_k / total_bb > 0.5:
+            parts.append("Fiber-dominant broadband mix")
+        elif cable_k / total_bb > 0.5:
+            parts.append("Cable-dominant broadband mix")
+        elif dsl_k / total_bb > 0.3:
+            parts.append("DSL-heavy broadband mix — speed perception risk")
+
+    # Quality scores
+    if quality_scores:
+        top_score_key = max(quality_scores, key=quality_scores.get) if quality_scores else None
+        if top_score_key:
+            parts.append(f"Network quality: {top_score_key} {quality_scores[top_score_key]}")
+
+    # Config overlay
+    if market_config and target_operator in market_config.operator_network_enrichments:
+        enrichment = market_config.operator_network_enrichments[target_operator].get("consumer_impact")
+        if enrichment and not parts:
+            return enrichment
+
+    return "; ".join(parts) if parts else ""
+
+
+def _build_b2b_impact(
+    technology_mix: dict, subscriber_data: list, financial_data: list,
+    market_config: MarketConfig = None, target_operator: str = "",
+) -> str:
+    """Build B2B/enterprise impact assessment (#6)."""
+    parts = []
+
+    # 5G SA status → network slicing
+    sa_status = technology_mix.get("5g_sa_status") or technology_mix.get("five_g_sa_status")
+    if sa_status:
+        if "live" in str(sa_status).lower() or "commercial" in str(sa_status).lower():
+            parts.append("5G SA live — network slicing capable")
+        elif "trial" in str(sa_status).lower() or "pilot" in str(sa_status).lower():
+            parts.append("5G SA in trial — slicing roadmap")
+
+    # Edge nodes
+    edge_nodes = technology_mix.get("edge_nodes")
+    if edge_nodes:
+        parts.append(f"Edge computing: {edge_nodes} nodes")
+
+    # Core virtualization
+    core_virt_pct = technology_mix.get("core_virtualization_pct")
+    if core_virt_pct is not None:
+        if core_virt_pct >= 80:
+            parts.append(f"Highly virtualized core ({core_virt_pct}%) — SD-WAN/NFV ready")
+        elif core_virt_pct >= 50:
+            parts.append(f"Partially virtualized core ({core_virt_pct}%)")
+
+    # IoT connections
+    latest_sub = subscriber_data[-1] if subscriber_data else {}
+    iot_k = _safe_get(latest_sub, "iot_connections_k")
+    if iot_k is not None:
+        parts.append(f"IoT connections: {iot_k:.0f}K")
+
+    # B2B revenue share
+    if financial_data:
+        latest_fin = financial_data[-1]
+        b2b_rev = _safe_get(latest_fin, "b2b_revenue")
+        total_rev = _safe_get(latest_fin, "total_revenue")
+        if b2b_rev and total_rev and total_rev > 0:
+            share = (b2b_rev / total_rev) * 100
+            parts.append(f"B2B revenue share: {share:.0f}%")
+
+    # Config overlay
+    if market_config and target_operator in market_config.operator_network_enrichments:
+        enrichment = market_config.operator_network_enrichments[target_operator].get("b2b_impact")
+        if enrichment and not parts:
+            return enrichment
+
+    return "; ".join(parts) if parts else ""
+
+
+# ============================================================================
+# Segment Action Required & Attributions
+# ============================================================================
+
+def _derive_action_required(health_status: str, changes: list) -> str:
+    """Derive action_required string from health_status + changes (#8)."""
+    if not changes:
+        return ""
+
+    # Count directions
+    improving = sum(1 for c in changes if c.direction == "improving")
+    declining = sum(1 for c in changes if c.direction == "declining")
+    significant_decline = any(
+        c.direction == "declining" and c.significance == "significant" for c in changes
+    )
+
+    if health_status == "critical" or significant_decline:
+        return "URGENT: Significant decline detected — immediate intervention required"
+    elif health_status == "weakening" or declining > improving:
+        return "MONITOR: Negative trends emerging — close tracking and corrective action needed"
+    elif health_status == "strong" and improving > 0:
+        return "GROW: Strong momentum — invest to accelerate growth"
+    elif health_status == "strong":
+        return "SUSTAIN: Healthy position — maintain current strategy"
+    elif improving > declining:
+        return "GROW: Improving trajectory — consider incremental investment"
+    else:
+        return "MAINTAIN: Stable performance — optimize current operations"
+
+
+def _derive_segment_attributions(
+    segment_id: str,
+    changes: list,
+    earnings_highlights: list,
+    intelligence_events: list,
+) -> list:
+    """Derive attributions for a segment from earnings + intelligence + changes (#11)."""
+    attributions = []
+
+    # Keyword mapping for segment matching
+    segment_keywords = {
+        "mobile": ["mobile", "wireless", "cellular", "5g", "prepaid", "postpaid"],
+        "fixed": ["broadband", "fixed", "fiber", "cable", "dsl", "ftth", "internet"],
+        "b2b": ["b2b", "enterprise", "business", "corporate", "ict", "cloud"],
+        "tv": ["tv", "television", "video", "iptv", "convergence", "content", "streaming"],
+        "wholesale": ["wholesale", "mvno", "resale", "interconnect"],
+    }
+    keywords = segment_keywords.get(segment_id, [])
+
+    # 1. Match earnings_call_highlights by segment keywords
+    for h in earnings_highlights:
+        content = (h.get("content") or "").lower()
+        segment_field = (h.get("segment") or "").lower()
+        if segment_id in segment_field or any(kw in content for kw in keywords):
+            attributions.append(ChangeAttribution(
+                attribution_type="management_explanation",
+                description=h.get("content", "")[:200],
+                confidence="high",
+                evidence=[f"Earnings call: {h.get('speaker', 'management')}"],
+                source="earnings_call",
+            ))
+            if len(attributions) >= 5:
+                return attributions
+
+    # 2. Match intelligence_events by keywords
+    for e in intelligence_events:
+        title = (e.get("title") or "").lower()
+        desc = (e.get("description") or "").lower()
+        if any(kw in title or kw in desc for kw in keywords):
+            attributions.append(ChangeAttribution(
+                attribution_type="market_change",
+                description=(e.get("title") or e.get("description", ""))[:200],
+                confidence="medium",
+                evidence=[f"Intelligence: {e.get('source', 'market data')}"],
+                source="intelligence_event",
+            ))
+            if len(attributions) >= 5:
+                return attributions
+
+    # 3. Auto-generate from significant metric changes
+    for c in changes:
+        if c.significance in ("significant", "moderate") and c.current_value is not None:
+            direction_word = "increased" if c.direction == "improving" else "decreased" if c.direction == "declining" else "changed"
+            attributions.append(ChangeAttribution(
+                attribution_type="product_change",
+                description=f"{c.metric} {direction_word} {abs(c.change_qoq):.1f}% QoQ",
+                confidence="high",
+                evidence=[f"Metric data: {c.metric} = {c.current_value}"],
+                source="metric_analysis",
+            ))
+            if len(attributions) >= 5:
+                return attributions
+
+    return attributions[:5]
+
+
+# ============================================================================
+# Org Culture
+# ============================================================================
+
+def _build_org_culture(
+    db: TelecomDatabase,
+    target_operator: str,
+    management_commentary: list,
+    intelligence_events: list,
+    financial_health: dict,
+    market_config: MarketConfig = None,
+) -> str:
+    """Build org_culture assessment (#10)."""
+    parts = []
+
+    # 1. Leadership stability from executives
+    try:
+        execs = db.get_executives(target_operator)
+    except Exception:
+        execs = []
+
+    current_execs = [e for e in execs if e.get("is_current")]
+    c_suite = [e for e in current_execs if any(
+        t in (e.get("title") or "").upper() for t in ("CEO", "CFO", "CTO", "COO", "CMO")
+    )]
+    if c_suite:
+        tenures = []
+        for e in c_suite:
+            start = e.get("start_date")
+            if start:
+                try:
+                    from datetime import date
+                    start_dt = date.fromisoformat(str(start)[:10])
+                    tenures.append((date.today() - start_dt).days / 365.25)
+                except Exception:
+                    pass
+        if tenures:
+            avg_tenure = sum(tenures) / len(tenures)
+            if avg_tenure >= 3:
+                parts.append("Stable leadership team (avg tenure >3 years)")
+            elif avg_tenure < 1.5:
+                parts.append("Leadership in transition (avg tenure <1.5 years)")
+
+    # 2. Strategic orientation from management guidance
+    guidance_texts = [
+        c["content"].lower() for c in management_commentary
+        if c.get("type") == "guidance" and c.get("content")
+    ]
+    if guidance_texts:
+        combined = " ".join(guidance_texts)
+        growth_words = sum(1 for w in ["growth", "invest", "expand", "accelerate", "innovation"] if w in combined)
+        efficiency_words = sum(1 for w in ["efficiency", "cost", "savings", "optimize", "restructur"] if w in combined)
+        transform_words = sum(1 for w in ["transform", "digital", "agile", "moderniz"] if w in combined)
+
+        if transform_words >= 2:
+            parts.append("Transformation-oriented strategic posture")
+        elif growth_words > efficiency_words:
+            parts.append("Growth-oriented strategic posture")
+        elif efficiency_words > growth_words:
+            parts.append("Efficiency-focused strategic posture")
+
+    # 3. Investment posture from capex ratio
+    capex_ratio = financial_health.get("capex_to_revenue_pct")
+    if capex_ratio is not None:
+        if capex_ratio > 20:
+            parts.append("High-investment posture")
+        elif capex_ratio < 12:
+            parts.append("Low-investment/harvesting posture")
+
+    # 4. Strategic initiative count from intelligence
+    strategic_events = [
+        e for e in intelligence_events
+        if (e.get("category") or "").lower() in ("strategy", "technology", "m_and_a", "partnership")
+    ]
+    if len(strategic_events) >= 5:
+        parts.append(f"Active strategic agenda ({len(strategic_events)} recent initiatives)")
+    elif len(strategic_events) >= 2:
+        parts.append(f"Moderate strategic activity ({len(strategic_events)} recent initiatives)")
+
+    # Config overlay
+    if market_config and target_operator in market_config.operator_network_enrichments:
+        enrichment = market_config.operator_network_enrichments[target_operator].get("org_culture")
+        if enrichment and not parts:
+            return enrichment
+        elif enrichment:
+            parts.append(enrichment)
+
+    return "; ".join(parts) if parts else ""
 
 
 # ============================================================================
@@ -1627,9 +2159,58 @@ def analyze_self(
     ]
 
     # ------------------------------------------------------------------
-    # 6. Network analysis
+    # 5b. Management commentary from earnings calls (needed before network)
     # ------------------------------------------------------------------
-    network = _analyze_network(db, target_operator, financial_data)
+    management_commentary = []
+    ec_highlights = []
+    try:
+        ec_highlights = db.get_earnings_highlights(target_operator, latest_cq)
+        seen_content: set[str] = set()
+        for h in ec_highlights:
+            content = h.get("content", "")
+            content_key = content.strip().lower()
+            if content_key in seen_content:
+                continue
+            seen_content.add(content_key)
+            management_commentary.append({
+                "segment": h.get("segment", "general"),
+                "type": h.get("highlight_type", "explanation"),
+                "content": content,
+                "speaker": h.get("speaker", ""),
+                "source_url": h.get("source_url", ""),
+            })
+    except Exception:
+        pass
+
+    # ------------------------------------------------------------------
+    # 5c. Intelligence events (needed for network + attributions + org_culture)
+    # ------------------------------------------------------------------
+    intelligence_events = []
+    try:
+        intelligence_events = db.get_intelligence_events(
+            market=market, operator_id=target_operator,
+        )
+    except Exception:
+        pass
+
+    # ------------------------------------------------------------------
+    # 6. Network analysis (expanded with new fields)
+    # ------------------------------------------------------------------
+    network = _analyze_network(
+        db, market, target_operator, financial_data, subscriber_data,
+        management_commentary, intelligence_events, latest_cq, market_config,
+    )
+
+    # ------------------------------------------------------------------
+    # 6b. Segment attributions + action_required
+    # ------------------------------------------------------------------
+    for seg in segment_analyses:
+        seg.action_required = _derive_action_required(seg.health_status, seg.changes)
+        seg.attributions = _derive_segment_attributions(
+            seg.segment_id, seg.changes,
+            ec_highlights,
+            intelligence_events,
+        )
 
     # ------------------------------------------------------------------
     # 7. BMC Canvas
@@ -1648,30 +2229,6 @@ def analyze_self(
         target_operator, financial_data, subscriber_data, net_data_raw, market_positions,
         market_config,
     )
-
-    # ------------------------------------------------------------------
-    # 8b. Management commentary from earnings calls
-    # ------------------------------------------------------------------
-    management_commentary = []
-    try:
-        ec_highlights = db.get_earnings_highlights(target_operator, latest_cq)
-        seen_content: set[str] = set()
-        for h in ec_highlights:
-            content = h.get("content", "")
-            # Dedup by normalised content (strip whitespace, lowercase)
-            content_key = content.strip().lower()
-            if content_key in seen_content:
-                continue
-            seen_content.add(content_key)
-            management_commentary.append({
-                "segment": h.get("segment", "general"),
-                "type": h.get("highlight_type", "explanation"),
-                "content": content,
-                "speaker": h.get("speaker", ""),
-                "source_url": h.get("source_url", ""),
-            })
-    except Exception:
-        pass
 
     # ------------------------------------------------------------------
     # 9. Strengths & weaknesses
@@ -1761,6 +2318,14 @@ def analyze_self(
     )
 
     # ------------------------------------------------------------------
+    # 12c. Org culture (#10)
+    # ------------------------------------------------------------------
+    org_culture = _build_org_culture(
+        db, target_operator, management_commentary,
+        intelligence_events, financial_health, market_config,
+    )
+
+    # ------------------------------------------------------------------
     # 13. Assemble SelfInsight
     # ------------------------------------------------------------------
     return SelfInsight(
@@ -1774,6 +2339,7 @@ def analyze_self(
         leadership_changes=leadership_changes,
         talent_assessment=talent_assessment,
         bmc=bmc,
+        org_culture=org_culture,
         exposure_points=exposure_points,
         strengths=strengths,
         weaknesses=weaknesses,

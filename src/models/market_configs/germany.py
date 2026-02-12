@@ -231,6 +231,44 @@ GERMANY_CONFIG = MarketConfig(
     },
 
     # =========================================================================
+    # Operator Network Enrichments (for NetworkAnalysis + org_culture)
+    # =========================================================================
+    operator_network_enrichments={
+        "vodafone_germany": {
+            "controlled_vs_resale": "Fully owned cable-HFC network (largest in Germany ~24M homes passed); fiber via JV with Altice (FibreConnect); mobile own-network. ~95% self-built infrastructure, ~5% wholesale/resale.",
+            "evolution_strategy": "DOCSIS 3.1→4.0 cable upgrade path for 1 Gbps+; parallel FTTH deployment via FibreConnect JV targeting 7M homes by 2028; 5G NSA rollout on 3.6 GHz.",
+            "consumer_impact": "Cable-dominant broadband delivers reliable high-speed (up to 1 Gbps GigaCable Max); strong urban coverage but fiber perception gap vs DT; 5G expanding but not yet market-leading.",
+            "b2b_impact": "Growing enterprise segment via Vodafone Business; SD-WAN and IoT solutions; 5G campus networks for manufacturing; limited edge computing footprint vs DT.",
+            "cost_impact": "Dual cable+fiber network investment pressure; cable maintenance costs but lower per-home cost than greenfield FTTH; tower monetization via Vantage Towers.",
+            "org_culture": "Transformation-oriented culture under Vodafone Group direction; customer-centricity push via NPS programs; agile transformation in digital operations; German engineering tradition meets UK group culture.",
+        },
+        "deutsche_telekom": {
+            "controlled_vs_resale": "Largest integrated network operator in Germany; owns copper/fiber/mobile infrastructure; largest FTTH footprint. ~98% self-built, minimal resale dependency.",
+            "evolution_strategy": "Aggressive FTTH rollout (10M+ homes target by 2027); copper sunset roadmap; 5G SA deployment leader; 3.6 GHz + 700 MHz spectrum for coverage and capacity.",
+            "consumer_impact": "Premium network quality perception; fastest fiber speeds; MagentaEINS convergent ecosystem; 5G coverage leader (>90% population).",
+            "b2b_impact": "T-Systems enterprise division — full IT/cloud/security stack; private 5G networks; edge computing partnerships; strongest enterprise capabilities in German market.",
+            "cost_impact": "Highest absolute capex but efficient per-home costs via scale; fiber investment partially offset by copper retirement savings; strong FCF generation supports investment.",
+            "org_culture": "Incumbent mindset evolving to digital-first; strong engineering culture; T-Systems drives innovation; MagentaEINS brand unification strategy; large workforce with union influence.",
+        },
+        "telefonica_o2": {
+            "controlled_vs_resale": "Own mobile network (3G/4G/5G); no owned fixed infrastructure — fixed broadband via wholesale (DT bitstream, cable resale). ~60% own-network, ~40% resale in fixed.",
+            "evolution_strategy": "5G rollout on 3.6 GHz (O2 5G); no fiber build plan — relies on wholesale access; focus on mobile network quality improvement and 5G coverage.",
+            "consumer_impact": "Value-for-money positioning; O2 my Tarif flexibility; improving network quality but still perception gap vs DT/Vodafone; fixed broadband limited to resale speeds.",
+            "b2b_impact": "Growing B2B segment but limited by fixed infrastructure dependency; IoT via O2 Business; M2M connections growing; no private 5G or edge computing portfolio.",
+            "cost_impact": "Asset-light fixed model keeps capex moderate; mobile network investment focused; wholesale access fees for fixed are ongoing opex; most efficient cost-per-subscriber.",
+            "org_culture": "Agile, digital-first culture; strong marketing and brand orientation; Telefonica Group drives efficiency programs; younger workforce profile; value-challenger positioning.",
+        },
+        "one_and_one": {
+            "controlled_vs_resale": "Building own Open RAN mobile network (new entrant); fixed broadband 100% resale via DT/Vodafone wholesale. Currently ~10% own-network, ~90% resale transitioning.",
+            "evolution_strategy": "Open RAN greenfield mobile network (target 50% pop coverage by 2026); national roaming on O2 during transition; no fixed network plans — resale model.",
+            "consumer_impact": "Disruptive pricing in mobile; limited own-network coverage currently; broadband speeds constrained by wholesale agreements; digital-only distribution model.",
+            "b2b_impact": "Minimal B2B presence; focused on consumer segment; no enterprise solutions portfolio; MVNO/resale model limits B2B network SLAs.",
+            "cost_impact": "Heavy upfront capex for Open RAN buildout; long-term cost advantage from disaggregated network; current period of high investment with national roaming fees.",
+            "org_culture": "Startup/challenger culture within United Internet group; technology-driven with Open RAN innovation bet; lean operations; digital-native DNA.",
+        },
+    },
+
+    # =========================================================================
     # Competitive Landscape
     # =========================================================================
     competitive_landscape_notes=[

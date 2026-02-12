@@ -44,6 +44,10 @@ class MarketConfig:
     # --- Competitive Landscape ---
     competitive_landscape_notes: list[str] = field(default_factory=list)
 
+    # --- Operator Network Enrichments ---
+    # operator_id → {controlled_vs_resale, evolution_strategy, consumer_impact, b2b_impact, cost_impact, org_culture}
+    operator_network_enrichments: dict[str, dict] = field(default_factory=dict)
+
     # --- PEST Context ---
     # {political: [...], economic: [...], social: [...], technological: [...]}
     pest_context: dict = field(default_factory=dict)
