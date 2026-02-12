@@ -16,6 +16,7 @@ from ..md_utils import (
     bold, bullet_list,
     safe_get, safe_list,
     operator_display_name,
+    collect_operator_ids, replace_operator_ids,
     empty_section_notice,
 )
 
@@ -37,7 +38,7 @@ def render_swot(result, diagnosis, config) -> str:
     parts.append("")
     parts.append("---")
 
-    target_op = result.target_operator or ""
+    op_map = collect_operator_ids(result)
 
     # 1. Overview
     parts.append(_render_overview(swot, diagnosis))
@@ -45,11 +46,11 @@ def render_swot(result, diagnosis, config) -> str:
     # 2-5. Individual quadrants
     parts.append(_render_strengths(swot))
     parts.append(_render_weaknesses(swot))
-    parts.append(_render_opportunities(swot, target_op))
-    parts.append(_render_threats(swot, target_op))
+    parts.append(_render_opportunities(swot, op_map))
+    parts.append(_render_threats(swot, op_map))
 
     # 6. Strategy Matrix
-    parts.append(_render_strategy_matrix(swot, target_op))
+    parts.append(_render_strategy_matrix(swot, op_map))
 
     # 7. Strategic Synthesis
     parts.append(_render_synthesis(swot, diagnosis))
@@ -138,17 +139,15 @@ def _render_weaknesses(swot) -> str:
     return "\n".join(lines)
 
 
-def _render_opportunities(swot, target_op: str = "") -> str:
+def _render_opportunities(swot, op_map: dict[str, str] = None) -> str:
     items = safe_list(swot, "opportunities")
     if not items:
         return ""
 
-    target_display = operator_display_name(target_op) if target_op else ""
     lines = [section_header("4. Opportunities", 2), ""]
 
     for i, item in enumerate(items, 1):
-        if target_op and target_op in item:
-            item = item.replace(target_op, target_display)
+        item = replace_operator_ids(item, op_map)
         lines.append(f"{i}. {item}")
 
     lines.append("")
@@ -157,17 +156,15 @@ def _render_opportunities(swot, target_op: str = "") -> str:
     return "\n".join(lines)
 
 
-def _render_threats(swot, target_op: str = "") -> str:
+def _render_threats(swot, op_map: dict[str, str] = None) -> str:
     items = safe_list(swot, "threats")
     if not items:
         return ""
 
-    target_display = operator_display_name(target_op) if target_op else ""
     lines = [section_header("5. Threats", 2), ""]
 
     for i, item in enumerate(items, 1):
-        if target_op and target_op in item:
-            item = item.replace(target_op, target_display)
+        item = replace_operator_ids(item, op_map)
         lines.append(f"{i}. {item}")
 
     # Compound effects
@@ -186,7 +183,7 @@ def _render_threats(swot, target_op: str = "") -> str:
     return "\n".join(lines)
 
 
-def _render_strategy_matrix(swot, target_op: str = "") -> str:
+def _render_strategy_matrix(swot, op_map: dict[str, str] = None) -> str:
     so = safe_list(swot, "so_strategies")
     wo = safe_list(swot, "wo_strategies")
     st = safe_list(swot, "st_strategies")
@@ -195,7 +192,6 @@ def _render_strategy_matrix(swot, target_op: str = "") -> str:
     if not any([so, wo, st, wt]):
         return ""
 
-    target_display = operator_display_name(target_op) if target_op else ""
     lines = [section_header("6. Strategy Matrix", 2), ""]
 
     quadrants = [
@@ -218,8 +214,7 @@ def _render_strategy_matrix(swot, target_op: str = "") -> str:
         lines.append("")
 
         for i, item in enumerate(items, 1):
-            if target_op and target_op in item:
-                item = item.replace(target_op, target_display)
+            item = replace_operator_ids(item, op_map)
             lines.append(f"{i}. {item}")
         lines.append("")
 

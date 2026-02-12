@@ -289,24 +289,66 @@ def operator_display_name(operator_id: str) -> str:
     """Convert operator_id to display name.
 
     'vodafone_germany' -> 'Vodafone Germany'
-    'movistar_cl' -> 'Movistar CL'
-    'dt_germany' -> 'DT Germany'
+    'telefonica_o2' -> 'Telefónica O2'
+    'one_and_one' -> '1&1 AG'
     """
     if not operator_id:
         return "Unknown Operator"
     special = {
+        # Germany
         "dt_germany": "Deutsche Telekom",
+        "deutsche_telekom": "Deutsche Telekom",
         "o2_germany": "Telefónica O2",
+        "telefonica_o2": "Telefónica O2",
+        "telefonica_o2_germany": "Telefónica O2",
         "1and1_germany": "1&1 AG",
+        "one_and_one": "1&1 AG",
+        # Chile
         "entel_cl": "Entel",
+        "entel": "Entel",
         "movistar_cl": "Movistar Chile",
         "claro_cl": "Claro Chile",
+        "claro": "Claro Chile",
         "wom_cl": "WOM Chile",
+        "wom": "WOM Chile",
         "tigo_cl": "Tigo Chile",
     }
     if operator_id in special:
         return special[operator_id]
     return operator_id.replace("_", " ").title()
+
+
+def collect_operator_ids(result) -> dict[str, str]:
+    """Collect all known operator_ids from a FiveLooksResult.
+
+    Returns:
+        Dict mapping operator_id -> display name for all operators
+        (target + competitors) found in the result.
+    """
+    ops: dict[str, str] = {}
+    target = getattr(result, 'target_operator', '') or ''
+    if target:
+        ops[target] = operator_display_name(target)
+    comp = getattr(result, 'competition', None)
+    if comp:
+        analyses = getattr(comp, 'competitor_analyses', None) or {}
+        if isinstance(analyses, dict):
+            for op_id in analyses:
+                ops[op_id] = operator_display_name(op_id)
+    return ops
+
+
+def replace_operator_ids(text: str, op_map: dict[str, str]) -> str:
+    """Replace all known operator_ids in text with their display names.
+
+    Replaces longest IDs first to avoid partial matches.
+    """
+    if not text or not op_map:
+        return text
+    for op_id in sorted(op_map.keys(), key=len, reverse=True):
+        if op_id in text:
+            text = text.replace(op_id, op_map[op_id])
+    return text
 
 
 def market_display_name(market_id: str) -> str:

@@ -332,7 +332,7 @@ Equally important — strategic traps to avoid:
 | :--- | :--- | :--- |
 | Market size | **CLP 1.4T (quarterly, CQ4_2025)** | Market scale |
 | YoY growth | **+7.2% YoY (CQ2_2025 -> CQ4_2025)** |  |
-| Profit trend | Improving (industry EBITDA margin 27.4%, up from 24.5%) |  |
+| Profit trend | Improving (industry EBITDA margin 27.4%, up from 25.7%) |  |
 | Concentration | **CR4 = 100% (Entel Chile: 58.3%, Movistar Chile: 17.6%, WOM Chile: 13.3%, Claro Chile: 10.8%)** | Market structure |
 | Lifecycle stage | **Late_Growth** |  |
 
@@ -464,7 +464,7 @@ Being in the **late_growth** phase means:
 | Factor | Detail |
 | :--- | :--- |
 | Severity | **High** |
-| Trend | Improving |
+| Trend | Stable |
 | Impact type | Both |
 | Time horizon | Medium Term |
 
@@ -1604,11 +1604,11 @@ This SWOT analysis reinforces the **"The Distant Second"** central diagnosis ide
 | Open RAN for vendor diversification and cost reduction | 5.2 | 4.7 | Acquire Skills | Build missing capabilities before committing major |
 | Regulatory Environment: Compliance requirements and spectrum policies directly affect Movistar Chile | 5.9 | 5.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | National Digital Strategy: Fiber/5G coverage mandates may require Movistar Chile investment but also enable subsidy access | 5.9 | 5.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg 58) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit wom_cl weakness: Network Coverage: score 50 (market avg 72) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit entel_cl weakness: Pricing Competitiveness: score 60 (market avg 70) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit Claro Chile weakness: 5G Deployment: score 50 (market avg 65) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit Claro Chile weakness: Brand Strength: score 60 (market avg 72) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit WOM Chile weakness: Enterprise Solutions: score 30 (market avg 58) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit WOM Chile weakness: Network Coverage: score 50 (market avg 72) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit Entel weakness: Pricing Competitiveness: score 60 (market avg 70) | 5.5 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | WO-1 | 5.7 | 3.0 | Acquire Skills | Build missing capabilities before committing major |
 | WO-2 | 5.7 | 3.0 | Acquire Skills | Build missing capabilities before committing major |
 | WO-3 | 5.7 | 3.0 | Acquire Skills | Build missing capabilities before committing major |
@@ -1692,60 +1692,60 @@ Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may re
 
 *Derived from: trend_policy_opportunity*
 
-### 7. Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65)
+### 7. Exploit Claro Chile weakness: 5G Deployment: score 50 (market avg 65)
 
-Competitor claro_cl is weak in: 5G Deployment: score 50 (market avg 65)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: competitor_weakness, claro_cl*
-
-### 8. Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72)
-
-Competitor claro_cl is weak in: Brand Strength: score 60 (market avg 72)
+Competitor Claro Chile is weak in: 5G Deployment: score 50 (market avg 65)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Priority | **P0** |
 | Rationale | Quadrant: grow_invest |
 
-*Derived from: competitor_weakness, claro_cl*
+*Derived from: competitor_weakness, Claro Chile*
 
-### 9. Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg...
+### 8. Exploit Claro Chile weakness: Brand Strength: score 60 (market avg 72)
 
-Competitor wom_cl is weak in: Enterprise Solutions: score 30 (market avg 58)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: competitor_weakness, wom_cl*
-
-### 10. Exploit wom_cl weakness: Network Coverage: score 50 (market avg 72)
-
-Competitor wom_cl is weak in: Network Coverage: score 50 (market avg 72)
+Competitor Claro Chile is weak in: Brand Strength: score 60 (market avg 72)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Priority | **P0** |
 | Rationale | Quadrant: grow_invest |
 
-*Derived from: competitor_weakness, wom_cl*
+*Derived from: competitor_weakness, Claro Chile*
 
-### 11. Exploit entel_cl weakness: Pricing Competitiveness: score 60 (marke...
+### 9. Exploit WOM Chile weakness: Enterprise Solutions: score 30 (market avg...
 
-Competitor entel_cl is weak in: Pricing Competitiveness: score 60 (market avg 70)
+Competitor WOM Chile is weak in: Enterprise Solutions: score 30 (market avg 58)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Priority | **P0** |
 | Rationale | Quadrant: grow_invest |
 
-*Derived from: competitor_weakness, entel_cl*
+*Derived from: competitor_weakness, WOM Chile*
+
+### 10. Exploit WOM Chile weakness: Network Coverage: score 50 (market avg 72)
+
+Competitor WOM Chile is weak in: Network Coverage: score 50 (market avg 72)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: competitor_weakness, WOM Chile*
+
+### 11. Exploit Entel weakness: Pricing Competitiveness: score 60 (marke...
+
+Competitor Entel is weak in: Pricing Competitiveness: score 60 (market avg 70)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: competitor_weakness, Entel*
 
 ---
 
@@ -1862,11 +1862,11 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 | AI/ML for network optimization and customer experience | N/A |  |  |
 | Open RAN for vendor diversification and cost reduction | N/A |  |  |
 | National Digital Strategy: Fiber/5G coverage mandates may require m... | N/A |  |  |
-| Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | N/A |  |  |
-| Exploit claro_cl weakness: Brand Strength: score 60 (market avg 72) | N/A |  |  |
-| Exploit wom_cl weakness: Enterprise Solutions: score 30 (market avg... | N/A |  |  |
-| Exploit wom_cl weakness: Network Coverage: score 50 (market avg 72) | N/A |  |  |
-| Exploit entel_cl weakness: Pricing Competitiveness: score 60 (marke... | N/A |  |  |
+| Exploit Claro Chile weakness: 5G Deployment: score 50 (market avg 65) | N/A |  |  |
+| Exploit Claro Chile weakness: Brand Strength: score 60 (market avg 72) | N/A |  |  |
+| Exploit WOM Chile weakness: Enterprise Solutions: score 30 (market avg... | N/A |  |  |
+| Exploit WOM Chile weakness: Network Coverage: score 50 (market avg 72) | N/A |  |  |
+| Exploit Entel weakness: Pricing Competitiveness: score 60 (marke... | N/A |  |  |
 | Address 5G Deployment → Regulatory Environment | N/A |  |  |
 | Address Customer Service → National Digital Strategy | N/A |  |  |
 | Address Pricing Competitiveness → Movistar Chile revenue growth 8.9% YoY | N/A |  |  |
@@ -1900,7 +1900,7 @@ Address weakness 'Pricing Competitiveness: score 60 (market avg 70)' to unlock t
 | Open RAN for vendor diversification and cost reduction | P1 | N/A |
 | Regulatory Environment: Compliance requirements and spectrum polici... | P1 | N/A |
 | National Digital Strategy: Fiber/5G coverage mandates may require m... | P1 | N/A |
-| Exploit claro_cl weakness: 5G Deployment: score 50 (market avg 65) | P1 | N/A |
+| Exploit Claro Chile weakness: 5G Deployment: score 50 (market avg 65) | P1 | N/A |
 
 **Bull case (full execution)**: +10-16% over 5 years
 **Bear case (no execution)**: -6-12% over 5 years

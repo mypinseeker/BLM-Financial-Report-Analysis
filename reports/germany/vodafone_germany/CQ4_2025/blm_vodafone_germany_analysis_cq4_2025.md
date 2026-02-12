@@ -166,7 +166,7 @@ This is not a temporary market condition — it is a structural competitive prob
 2. Leverage Enterprise Solutions for Digital Strategy Alignment
 3. Leverage Network Coverage for Spectrum Positioning
 
-| Dimension | Deutsche Telekom | One And One | Telefonica O2 | Vodafone Germany |
+| Dimension | Deutsche Telekom | 1&1 AG | Telefónica O2 | Vodafone Germany |
 | :--- | :--- | :--- | :--- | :--- |
 | Revenue | €6,200M | €1,035M | €2,000M | €3,092M |
 | Revenue Growth | +1.1% | +0.1% | -3.4% | +0.7% |
@@ -742,7 +742,7 @@ Being in the **mature** phase means:
 
 ## 4. $APPEALS Assessment
 
-| Dimension | Vodafone Germany | Deutsche Telekom | One And One | Telefonica O2 | Priority |
+| Dimension | Vodafone Germany | Deutsche Telekom | 1&1 AG | Telefónica O2 | Priority |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Price | 3.6 | 3.2 | 4.5 | 4.2 | Critical |
 | Availability | 4.0 | 4.8 | 2.2 | 4.2 | Critical |
@@ -951,7 +951,7 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 ## 3. Competitor Deep Dives
 
-### Telefonica O2
+### Telefónica O2
 
 #### Financial & Subscriber Profile
 
@@ -1107,7 +1107,7 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 - Deutsche Telekom with 97% 5G coverage is positioned to push 5G monetization through premium tiers and B2B use cases.
 
 
-### One And One
+### 1&1 AG
 
 #### Financial & Subscriber Profile
 
@@ -1193,7 +1193,7 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 ## 4. Cross-Operator Comparison Dashboard
 
-| Metric | Deutsche Telekom | One And One | Telefonica O2 | Vodafone Germany |
+| Metric | Deutsche Telekom | 1&1 AG | Telefónica O2 | Vodafone Germany |
 | :--- | :--- | :--- | :--- | :--- |
 | **Revenue** | €6,200M | €1,035M | €2,000M | €3,092M |
 | **Revenue Growth** | +1.1% | +0.1% | -3.4% | +0.7% |
@@ -1219,10 +1219,10 @@ The market comprises 4 active operators: Telefonica O2 Germany, Vodafone Germany
 
 | Source | Risk | Suggested Action |
 | :--- | :--- | :--- |
-| Telefonica O2 | Telefonica O2 Germany has 98% 5G coverage, creating potential network advantage. | Accelerate 5G deployment to close coverage gap. |
+| Telefónica O2 | Telefonica O2 Germany has 98% 5G coverage, creating potential network advantage. | Accelerate 5G deployment to close coverage gap. |
 | Deutsche Telekom | Deutsche Telekom's growing revenue indicates competitive pressure; they are capturing market value. | Monitor pricing and go-to-market strategies. |
 | Deutsche Telekom | Deutsche Telekom has 97% 5G coverage, creating potential network advantage. | Accelerate 5G deployment to close coverage gap. |
-| One And One | 1&1 AG's growing revenue indicates competitive pressure; they are capturing market value. | Monitor pricing and go-to-market strategies. |
+| 1&1 AG | 1&1 AG's growing revenue indicates competitive pressure; they are capturing market value. | Monitor pricing and go-to-market strategies. |
 
 ---
 
@@ -1741,11 +1741,11 @@ This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis id
 | National Digital Strategy: Fiber/5G coverage mandates may require Vodafone Germany investment but also enable subsidy ac | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extends 800/1800/2600 MHz spectrum by 5 years: may create n | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | German government launches €1.2B Gigabit Funding Programme 2025: German government launches €1.2B Gigabit Funding Progra | 6.6 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (market avg 74) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit telefonica_o2 weakness: Product Innovation: score 70 (market avg 76) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit deutsche_telekom weakness: Pricing Competitiveness: score 65 (market avg 78) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit one_and_one weakness: 5G Deployment: score 40 (market avg 75) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
-| Exploit one_and_one weakness: Brand Strength: score 65 (market avg 78) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit Telefónica O2 weakness: Enterprise Solutions: score 68 (market avg 74) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit Telefónica O2 weakness: Product Innovation: score 70 (market avg 76) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit Deutsche Telekom weakness: Pricing Competitiveness: score 65 (market avg 78) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit 1&1 AG weakness: 5G Deployment: score 40 (market avg 75) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
+| Exploit 1&1 AG weakness: Brand Strength: score 65 (market avg 78) | 6.2 | 6.2 | Grow Invest | Invest aggressively to grow market share and reven |
 | WO-1 | 6.4 | 3.0 | Acquire Skills | Build missing capabilities before committing major |
 | WO-2 | 6.4 | 3.0 | Acquire Skills | Build missing capabilities before committing major |
 | WO-3 | 6.4 | 3.0 | Acquire Skills | Build missing capabilities before committing major |
@@ -1962,60 +1962,60 @@ Policy opportunity: German government launches €1.2B Gigabit Funding Programme
 
 *Derived from: trend_policy_opportunity*
 
-### 19. Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (mar...
+### 19. Exploit Telefónica O2 weakness: Enterprise Solutions: score 68 (mar...
 
-Competitor telefonica_o2 is weak in: Enterprise Solutions: score 68 (market avg 74)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: competitor_weakness, telefonica_o2*
-
-### 20. Exploit telefonica_o2 weakness: Product Innovation: score 70 (marke...
-
-Competitor telefonica_o2 is weak in: Product Innovation: score 70 (market avg 76)
+Competitor Telefónica O2 is weak in: Enterprise Solutions: score 68 (market avg 74)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Priority | **P0** |
 | Rationale | Quadrant: grow_invest |
 
-*Derived from: competitor_weakness, telefonica_o2*
+*Derived from: competitor_weakness, Telefónica O2*
 
-### 21. Exploit deutsche_telekom weakness: Pricing Competitiveness: score 6...
+### 20. Exploit Telefónica O2 weakness: Product Innovation: score 70 (marke...
 
-Competitor deutsche_telekom is weak in: Pricing Competitiveness: score 65 (market avg 78)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Priority | **P0** |
-| Rationale | Quadrant: grow_invest |
-
-*Derived from: competitor_weakness, deutsche_telekom*
-
-### 22. Exploit one_and_one weakness: 5G Deployment: score 40 (market avg 75)
-
-Competitor one_and_one is weak in: 5G Deployment: score 40 (market avg 75)
+Competitor Telefónica O2 is weak in: Product Innovation: score 70 (market avg 76)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Priority | **P0** |
 | Rationale | Quadrant: grow_invest |
 
-*Derived from: competitor_weakness, one_and_one*
+*Derived from: competitor_weakness, Telefónica O2*
 
-### 23. Exploit one_and_one weakness: Brand Strength: score 65 (market avg 78)
+### 21. Exploit Deutsche Telekom weakness: Pricing Competitiveness: score 6...
 
-Competitor one_and_one is weak in: Brand Strength: score 65 (market avg 78)
+Competitor Deutsche Telekom is weak in: Pricing Competitiveness: score 65 (market avg 78)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Priority | **P0** |
 | Rationale | Quadrant: grow_invest |
 
-*Derived from: competitor_weakness, one_and_one*
+*Derived from: competitor_weakness, Deutsche Telekom*
+
+### 22. Exploit 1&1 AG weakness: 5G Deployment: score 40 (market avg 75)
+
+Competitor 1&1 AG is weak in: 5G Deployment: score 40 (market avg 75)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: competitor_weakness, 1&1 AG*
+
+### 23. Exploit 1&1 AG weakness: Brand Strength: score 65 (market avg 78)
+
+Competitor 1&1 AG is weak in: Brand Strength: score 65 (market avg 78)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: competitor_weakness, 1&1 AG*
 
 ---
 
@@ -2119,11 +2119,11 @@ Address weakness 'Technology perception gap as competitors lead fiber deployment
 | National Digital Strategy: Fiber/5G coverage mandates may require v... | N/A |  |  |
 | BNetzA extends 800/1800/2600 MHz spectrum by 5 years: BNetzA extend... | N/A |  |  |
 | German government launches €1.2B Gigabit Funding Programme 2025: Ge... | N/A |  |  |
-| Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (mar... | N/A |  |  |
-| Exploit telefonica_o2 weakness: Product Innovation: score 70 (marke... | N/A |  |  |
-| Exploit deutsche_telekom weakness: Pricing Competitiveness: score 6... | N/A |  |  |
-| Exploit one_and_one weakness: 5G Deployment: score 40 (market avg 75) | N/A |  |  |
-| Exploit one_and_one weakness: Brand Strength: score 65 (market avg 78) | N/A |  |  |
+| Exploit Telefónica O2 weakness: Enterprise Solutions: score 68 (mar... | N/A |  |  |
+| Exploit Telefónica O2 weakness: Product Innovation: score 70 (marke... | N/A |  |  |
+| Exploit Deutsche Telekom weakness: Pricing Competitiveness: score 6... | N/A |  |  |
+| Exploit 1&1 AG weakness: 5G Deployment: score 40 (market avg 75) | N/A |  |  |
+| Exploit 1&1 AG weakness: Brand Strength: score 65 (market avg 78) | N/A |  |  |
 | Address Customer Service → Regulatory Environment | N/A |  |  |
 | Address Pricing Competitiveness → National Digital Strategy | N/A |  |  |
 | Address Loss of wholesale revenue as 1&1 users migrate to own network → BNetzA extends 800/1800/2600 MHz spectru... | N/A |  |  |

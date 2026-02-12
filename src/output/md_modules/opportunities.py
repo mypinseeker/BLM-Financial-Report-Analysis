@@ -18,6 +18,7 @@ from ..md_utils import (
     bold, bullet_list, fmt_pct,
     safe_get, safe_list, safe_dict,
     operator_display_name,
+    collect_operator_ids, replace_operator_ids,
     empty_section_notice,
 )
 
@@ -59,6 +60,7 @@ def render_opportunities(result, diagnosis, config) -> str:
         return empty_section_notice("Opportunities (SPAN)")
 
     parts = []
+    op_map = collect_operator_ids(result)
     target_op = result.target_operator or ""
     target_name = operator_display_name(target_op)
     period = result.analysis_period or ""
@@ -72,24 +74,24 @@ def render_opportunities(result, diagnosis, config) -> str:
     parts.append("---")
 
     # 1. SPAN Matrix Overview
-    parts.append(_render_span_overview(opp, target_op))
+    parts.append(_render_span_overview(opp, op_map))
 
     # 2. Grow/Invest
     parts.append(_render_quadrant_detail(opp, "grow_invest", "Grow/Invest",
-                                          "Execute aggressively — highest priority", target_op))
+                                          "Execute aggressively — highest priority", op_map))
 
     # 3. Acquire Skills
     parts.append(_render_quadrant_detail(opp, "acquire_skills", "Acquire Skills",
-                                          "Build capability before competing", target_op))
+                                          "Build capability before competing", op_map))
 
     # 4. Harvest / Avoid
-    parts.append(_render_harvest_avoid(opp))
+    parts.append(_render_harvest_avoid(opp, op_map))
 
     # 5. Priority Ranking
-    parts.append(_render_priority_ranking(opp))
+    parts.append(_render_priority_ranking(opp, op_map))
 
     # 6. Financial Impact
-    parts.append(_render_financial_impact(opp, diagnosis))
+    parts.append(_render_financial_impact(opp, diagnosis, op_map))
 
     # 7. Strategic Recommendations
     parts.append(_render_recommendations(opp, diagnosis))
@@ -101,8 +103,7 @@ def render_opportunities(result, diagnosis, config) -> str:
 # Sub-renderers
 # ---------------------------------------------------------------------------
 
-def _render_span_overview(opp, target_op: str = "") -> str:
-    target_display = operator_display_name(target_op) if target_op else ""
+def _render_span_overview(opp, op_map: dict[str, str] = None) -> str:
     positions = safe_list(opp, "span_positions")
     gi = safe_list(opp, "grow_invest")
     ask = safe_list(opp, "acquire_skills")
@@ -141,8 +142,7 @@ def _render_span_overview(opp, target_op: str = "") -> str:
         pos_rows = []
         for p in positions:
             name = safe_get(p, "opportunity_name", "")
-            if target_op and target_op in name:
-                name = name.replace(target_op, target_display)
+            name = replace_operator_ids(name, op_map)
             ma = safe_get(p, "market_attractiveness", 0)
             cp = safe_get(p, "competitive_position", 0)
             quad = safe_get(p, "quadrant", "").replace("_", " ").title()
@@ -165,12 +165,10 @@ def _render_span_overview(opp, target_op: str = "") -> str:
 
 
 def _render_quadrant_detail(opp, attr: str, title: str, description: str,
-                            target_op: str = "") -> str:
+                            op_map: dict[str, str] = None) -> str:
     items = safe_list(opp, attr)
     if not items:
         return ""
-
-    target_display = operator_display_name(target_op) if target_op else ""
 
     # Section number depends on quadrant
     section_num = {"grow_invest": 2, "acquire_skills": 3}.get(attr, 2)
@@ -189,14 +187,13 @@ def _render_quadrant_detail(opp, attr: str, title: str, description: str,
     for i, item in enumerate(items, 1):
         # Try to find detailed record
         detail = opp_map.get(item.lower())
-        display_name = _descriptive_label(item, detail)
+        display_name = replace_operator_ids(_descriptive_label(item, detail), op_map)
         lines.append(f"### {i}. {display_name}")
         lines.append("")
         if detail:
             desc = safe_get(detail, "description", "")
             if desc:
-                if target_op and target_op in desc:
-                    desc = desc.replace(target_op, target_display)
+                desc = replace_operator_ids(desc, op_map)
                 lines.append(desc)
                 lines.append("")
 
@@ -226,7 +223,8 @@ def _render_quadrant_detail(opp, attr: str, title: str, description: str,
 
             derived = safe_list(detail, "derived_from")
             if derived:
-                lines.append(f"*Derived from: {', '.join(derived)}*")
+                derived_str = replace_operator_ids(', '.join(derived), op_map)
+                lines.append(f"*Derived from: {derived_str}*")
                 lines.append("")
 
     lines.append("---")
@@ -234,7 +232,7 @@ def _render_quadrant_detail(opp, attr: str, title: str, description: str,
     return "\n".join(lines)
 
 
-def _render_harvest_avoid(opp) -> str:
+def _render_harvest_avoid(opp, op_map: dict[str, str] = None) -> str:
     harvest = safe_list(opp, "harvest")
     avoid = safe_list(opp, "avoid_exit")
 
@@ -253,7 +251,8 @@ def _render_harvest_avoid(opp) -> str:
         lines.append("")
         for item in harvest:
             detail = opp_map.get(item.lower())
-            lines.append(f"- {_descriptive_label(item, detail)}")
+            label = replace_operator_ids(_descriptive_label(item, detail), op_map)
+            lines.append(f"- {label}")
         lines.append("")
 
     if avoid:
@@ -262,7 +261,8 @@ def _render_harvest_avoid(opp) -> str:
         lines.append("")
         for item in avoid:
             detail = opp_map.get(item.lower())
-            lines.append(f"- {_descriptive_label(item, detail)}")
+            label = replace_operator_ids(_descriptive_label(item, detail), op_map)
+            lines.append(f"- {label}")
 
     lines.append("")
     lines.append("---")
@@ -270,7 +270,7 @@ def _render_harvest_avoid(opp) -> str:
     return "\n".join(lines)
 
 
-def _render_priority_ranking(opp) -> str:
+def _render_priority_ranking(opp, op_map: dict[str, str] = None) -> str:
     opportunities = safe_list(opp, "opportunities")
     if not opportunities:
         return ""
@@ -309,7 +309,7 @@ def _render_priority_ranking(opp) -> str:
         rows = []
         for o in items:
             name = safe_get(o, "name", "")
-            display = _descriptive_label(name, o)
+            display = replace_operator_ids(_descriptive_label(name, o), op_map)
             market = safe_get(o, "addressable_market", "N/A")
             window = safe_get(o, "time_window", "")
             capability = safe_get(o, "our_capability", "")
@@ -335,7 +335,7 @@ def _render_priority_ranking(opp) -> str:
     return "\n".join(lines)
 
 
-def _render_financial_impact(opp, diagnosis) -> str:
+def _render_financial_impact(opp, diagnosis, op_map: dict[str, str] = None) -> str:
     opportunities = safe_list(opp, "opportunities")
     if not opportunities:
         return ""
@@ -347,7 +347,7 @@ def _render_financial_impact(opp, diagnosis) -> str:
     rows = []
     for i, o in enumerate(opportunities[:10]):
         name = safe_get(o, "name", "")
-        display = _descriptive_label(name, o)
+        display = replace_operator_ids(_descriptive_label(name, o), op_map)
         market = safe_get(o, "addressable_market", "N/A")
         # Smart priority based on quadrant position
         if name.lower() in gi_names:

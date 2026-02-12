@@ -15,6 +15,7 @@ from ..md_utils import (
     bold, bullet_list, fmt_smart_value, fmt_currency, fmt_pct,
     safe_get, safe_list, safe_dict,
     operator_display_name,
+    collect_operator_ids, replace_operator_ids,
     empty_section_notice,
 )
 
@@ -26,6 +27,7 @@ def render_competition(result, diagnosis, config) -> str:
         return empty_section_notice("Competition")
 
     parts = []
+    op_map = collect_operator_ids(result)
     target_name = operator_display_name(result.target_operator)
     period = result.analysis_period or ""
 
@@ -44,13 +46,13 @@ def render_competition(result, diagnosis, config) -> str:
     parts.append(_render_five_forces(comp))
 
     # 3. Competitor Deep Dives
-    parts.append(_render_deep_dives(comp, result.target_operator, config))
+    parts.append(_render_deep_dives(comp, result.target_operator, config, op_map))
 
     # 4. Comparison Dashboard
     parts.append(_render_comparison_dashboard(comp, config))
 
     # 5. Competitive Dynamics
-    parts.append(_render_dynamics(comp, diagnosis))
+    parts.append(_render_dynamics(comp, diagnosis, op_map))
 
     # 6. Risk Register
     parts.append(_render_risk_register(comp, result.target_operator))
@@ -164,7 +166,8 @@ def _render_five_forces(comp) -> str:
     return "\n".join(lines)
 
 
-def _render_deep_dives(comp, target_operator: str, config=None) -> str:
+def _render_deep_dives(comp, target_operator: str, config=None,
+                       op_map: dict[str, str] = None) -> str:
     analyses = safe_dict(comp, "competitor_analyses")
     if not analyses:
         return ""
@@ -291,8 +294,8 @@ def _render_deep_dives(comp, target_operator: str, config=None) -> str:
             lines.append("")
             for imp in implications:
                 imp_type = safe_get(imp, "implication_type", "").title()
-                desc = safe_get(imp, "description", "")
-                action = safe_get(imp, "suggested_action", "")
+                desc = replace_operator_ids(safe_get(imp, "description", ""), op_map)
+                action = replace_operator_ids(safe_get(imp, "suggested_action", ""), op_map)
                 if desc:
                     prefix = f"**{imp_type}**: " if imp_type else ""
                     lines.append(f"- {prefix}{desc}")
@@ -305,7 +308,7 @@ def _render_deep_dives(comp, target_operator: str, config=None) -> str:
         if future:
             lines.append("**Likely future actions**:")
             for f in future[:5]:
-                lines.append(f"- {f}")
+                lines.append(f"- {replace_operator_ids(f, op_map)}")
             lines.append("")
 
     lines.append("---")
@@ -351,7 +354,7 @@ def _render_comparison_dashboard(comp, config=None) -> str:
     return "\n".join(lines)
 
 
-def _render_dynamics(comp, diagnosis) -> str:
+def _render_dynamics(comp, diagnosis, op_map: dict[str, str] = None) -> str:
     landscape = safe_get(comp, "competitive_landscape", "")
     km = safe_get(comp, "key_message", "")
 
@@ -361,14 +364,14 @@ def _render_dynamics(comp, diagnosis) -> str:
     lines = [section_header("5. Competitive Dynamics", 2), ""]
 
     if landscape:
-        lines.append(landscape)
+        lines.append(replace_operator_ids(landscape, op_map))
         lines.append("")
 
     if km:
-        lines.append(f"**Key message**: {km}")
+        lines.append(f"**Key message**: {replace_operator_ids(km, op_map)}")
         lines.append("")
 
-    lines.append(f"**Net assessment**: {diagnosis.competition_net_assessment}")
+    lines.append(f"**Net assessment**: {replace_operator_ids(diagnosis.competition_net_assessment, op_map)}")
     lines.append("")
     lines.append("---")
 
