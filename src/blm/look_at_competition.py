@@ -28,6 +28,53 @@ from src.models.competition import (
 
 
 # ============================================================================
+# Dedup helpers
+# ============================================================================
+
+
+def _dedup_intel_events(events: list[dict]) -> list[dict]:
+    """Remove near-duplicate intelligence events by title similarity.
+
+    Two events are considered duplicates when their lowercased titles share
+    ≥80% of words. The first occurrence is kept.
+    """
+    if not events:
+        return events
+    result = []
+    seen_words: list[set[str]] = []
+    for ev in events:
+        title = ev.get("title", "")
+        words = set(title.lower().split())
+        if not words:
+            result.append(ev)
+            continue
+        is_dup = False
+        for sw in seen_words:
+            if not sw:
+                continue
+            overlap = len(words & sw) / max(len(words), len(sw))
+            if overlap >= 0.80:
+                is_dup = True
+                break
+        if not is_dup:
+            result.append(ev)
+            seen_words.append(words)
+    return result
+
+
+def _dedup_factors(factors: list[dict]) -> list[dict]:
+    """Remove duplicate key_factors by name (case-insensitive)."""
+    seen: set[str] = set()
+    result = []
+    for f in factors:
+        key = f.get("name", "").lower().strip()
+        if key not in seen:
+            seen.add(key)
+            result.append(f)
+    return result
+
+
+# ============================================================================
 # Public API
 # ============================================================================
 
@@ -79,6 +126,7 @@ def analyze_competition(
 
     # Gather intelligence events (use large window to capture available data)
     intel_events = _safe_intelligence_events(db, market=market, days_back=730)
+    intel_events = _dedup_intel_events(intel_events)
 
     # Build Porter's Five Forces
     five_forces = _build_five_forces(
@@ -97,6 +145,7 @@ def analyze_competition(
             target_period, n_quarters,
             scores_by_operator.get(comp_id, {}),
             intel_events,
+            all_scores_by_operator=scores_by_operator,
         )
         competitor_analyses[comp_id] = deep_dive
 
@@ -266,7 +315,7 @@ def _force_existing_competitors(
     return PorterForce(
         force_name="existing_competitors",
         force_level=force_level,
-        key_factors=factors,
+        key_factors=_dedup_factors(factors),
         implications=implications,
     )
 
@@ -339,7 +388,7 @@ def _force_new_entrants(all_operators, intel_events, market_snapshot):
     return PorterForce(
         force_name="new_entrants",
         force_level=force_level,
-        key_factors=factors,
+        key_factors=_dedup_factors(factors),
         implications=implications,
     )
 
@@ -423,7 +472,7 @@ def _force_substitutes(intel_events):
     return PorterForce(
         force_name="substitutes",
         force_level=force_level,
-        key_factors=factors,
+        key_factors=_dedup_factors(factors),
         implications=implications,
     )
 
@@ -501,7 +550,7 @@ def _force_supplier_power(intel_events):
     return PorterForce(
         force_name="supplier_power",
         force_level=force_level,
-        key_factors=factors,
+        key_factors=_dedup_factors(factors),
         implications=implications,
     )
 
@@ -624,7 +673,7 @@ def _force_buyer_power(
     return PorterForce(
         force_name="buyer_power",
         force_level=force_level,
-        key_factors=factors,
+        key_factors=_dedup_factors(factors),
         implications=implications,
     )
 
@@ -637,6 +686,7 @@ def _force_buyer_power(
 def _build_competitor_deep_dive(
     db, comp_id, comp_op, target_operator,
     target_period, n_quarters, comp_scores, intel_events,
+    all_scores_by_operator=None,
 ):
     """Build a CompetitorDeepDive for a single competitor."""
 
@@ -655,8 +705,10 @@ def _build_competitor_deep_dive(
     # Network status
     network_status = _assess_network_status(db, comp_id, target_period)
 
-    # Strengths and weaknesses from competitive scores
-    strengths, weaknesses = _derive_strengths_weaknesses(comp_scores, display_name)
+    # Strengths and weaknesses from competitive scores (relative to market)
+    strengths, weaknesses = _derive_strengths_weaknesses(
+        comp_scores, display_name, all_scores_by_operator,
+    )
 
     # Likely future actions (inferred from trends)
     likely_future_actions = _infer_future_actions(
@@ -819,23 +871,49 @@ def _assess_network_status(db, operator_id, target_period):
     }
 
 
-def _derive_strengths_weaknesses(comp_scores, display_name):
+def _derive_strengths_weaknesses(comp_scores, display_name,
+                                  all_scores_by_operator=None):
     """Derive strengths and weaknesses from competitive scores.
 
-    Scores are assumed to be on a 0-100 scale (normalised upstream by
-    _group_scores_by_operator). Dimensions > 70 → strength; < 40 → weakness.
+    Uses **relative scoring**: compares the operator's score per dimension
+    against the market average across all operators.
+      - Score ≥ market_avg + 5  → strength  (label includes market avg)
+      - Score ≤ market_avg − 5  → weakness  (label includes market avg)
+    Falls back to absolute thresholds (>70 / <40) when no market-wide
+    data is available.
     """
     strengths = []
     weaknesses = []
 
+    # Build per-dimension market averages from all operators
+    market_avgs: dict[str, float] = {}
+    if all_scores_by_operator:
+        dim_values: dict[str, list[float]] = {}
+        for op_scores in all_scores_by_operator.values():
+            for dim, val in op_scores.items():
+                if val is not None:
+                    dim_values.setdefault(dim, []).append(val)
+        for dim, vals in dim_values.items():
+            if vals:
+                market_avgs[dim] = sum(vals) / len(vals)
+
     for dimension, score in sorted(comp_scores.items()):
         if score is None:
             continue
-        label = f"{dimension}: {score:.1f}/100"
-        if score > 70:
-            strengths.append(label)
-        elif score < 40:
-            weaknesses.append(label)
+        avg = market_avgs.get(dimension)
+        if avg is not None:
+            label = f"{dimension}: score {score:.0f} (market avg {avg:.0f})"
+            if score >= avg + 5:
+                strengths.append(label)
+            elif score <= avg - 5:
+                weaknesses.append(label)
+        else:
+            # Fallback to absolute thresholds
+            label = f"{dimension}: {score:.1f}/100"
+            if score > 70:
+                strengths.append(label)
+            elif score < 40:
+                weaknesses.append(label)
 
     return strengths, weaknesses
 

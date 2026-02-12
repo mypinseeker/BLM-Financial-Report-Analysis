@@ -1324,11 +1324,18 @@ def analyze_self(
     management_commentary = []
     try:
         ec_highlights = db.get_earnings_highlights(target_operator, latest_cq)
+        seen_content: set[str] = set()
         for h in ec_highlights:
+            content = h.get("content", "")
+            # Dedup by normalised content (strip whitespace, lowercase)
+            content_key = content.strip().lower()
+            if content_key in seen_content:
+                continue
+            seen_content.add(content_key)
             management_commentary.append({
                 "segment": h.get("segment", "general"),
                 "type": h.get("highlight_type", "explanation"),
-                "content": h.get("content", ""),
+                "content": content,
                 "speaker": h.get("speaker", ""),
                 "source_url": h.get("source_url", ""),
             })

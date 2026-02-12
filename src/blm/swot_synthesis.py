@@ -27,6 +27,43 @@ from src.models.provenance import ProvenanceStore
 # Internal helpers
 # ---------------------------------------------------------------------------
 
+def _dedup_swot_items(items: list[str]) -> list[str]:
+    """Remove near-duplicate SWOT items.
+
+    Handles:
+    - Exact duplicates (case-insensitive)
+    - Synonym overlap: items whose dimension prefix (text before ':') shares
+      ≥80% of words with an earlier item (e.g. "Customer Service" vs
+      "Customer Experience", "Innovation" vs "Product Innovation")
+    """
+    if not items:
+        return items
+    result: list[str] = []
+    seen_keys: list[set[str]] = []  # normalised word-sets of dimension prefixes
+    seen_full: set[str] = set()
+    for item in items:
+        full_key = item.strip().lower()
+        if full_key in seen_full:
+            continue
+        seen_full.add(full_key)
+        # Extract dimension prefix (text before ':')
+        prefix = item.split(":")[0].strip().lower() if ":" in item else item.strip().lower()
+        words = set(prefix.split())
+        is_dup = False
+        if words:
+            for sw in seen_keys:
+                if not sw:
+                    continue
+                overlap = len(words & sw) / max(len(words), len(sw))
+                if overlap >= 0.80:
+                    is_dup = True
+                    break
+        if not is_dup:
+            result.append(item)
+            seen_keys.append(words)
+    return result
+
+
 def _extract_strengths(self_analysis: SelfInsight) -> list[str]:
     """Pull strengths directly from the self analysis."""
     return list(self_analysis.strengths) if self_analysis.strengths else []
@@ -247,10 +284,10 @@ def synthesize_swot(
         self_analysis = SelfInsight()
 
     # --- Step 1: Extract SWOT items ---
-    strengths = _extract_strengths(self_analysis)
-    weaknesses = _extract_weaknesses(self_analysis)
-    opportunities = _extract_opportunities(trends, market_customer)
-    threats = _extract_threats(trends, market_customer, competition)
+    strengths = _dedup_swot_items(_extract_strengths(self_analysis))
+    weaknesses = _dedup_swot_items(_extract_weaknesses(self_analysis))
+    opportunities = _dedup_swot_items(_extract_opportunities(trends, market_customer))
+    threats = _dedup_swot_items(_extract_threats(trends, market_customer, competition))
 
     # --- Step 2: Generate four-quadrant strategies ---
     so_strategies = _generate_so_strategies(strengths, opportunities)

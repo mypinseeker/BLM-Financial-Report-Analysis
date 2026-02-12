@@ -2,8 +2,8 @@
   "meta": {
     "target_operator": "vodafone_germany",
     "market": "germany",
-    "analysis_period": "CQ4_2025",
-    "generated_at": "2026-02-12T08:35:10.552631",
+    "analysis_period": "unknown",
+    "generated_at": "2026-02-12T08:45:42.746937",
     "format_version": "1.0"
   },
   "five_looks": {
@@ -145,7 +145,7 @@
             "dimension_name": "Society",
             "factor_name": "5G Adoption Rate",
             "current_status": "5G adoption at 56.0% of mobile subscribers",
-            "trend": "5G adoption trend: improving (28.0% -> 56.0%)",
+            "trend": "5G adoption trend: improving (44.0% -> 56.0%)",
             "trend_direction": "improving",
             "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
             "company_impact": "5G adoption growth supports premium pricing and new service revenue for vodafone_germany",
@@ -163,7 +163,7 @@
             "dimension_name": "Society",
             "factor_name": "Fiber Broadband Penetration",
             "current_status": "Fiber penetration at 26.0%",
-            "trend": "Fiber penetration trend: improving (12.0% -> 26.0%)",
+            "trend": "Fiber penetration trend: improving (20.0% -> 26.0%)",
             "trend_direction": "improving",
             "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
             "company_impact": "Fiber migration presents both investment challenge and growth opportunity for vodafone_germany",
@@ -858,18 +858,6 @@
               "trend": "increasing"
             },
             {
-              "name": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
-              "description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
-              "impact": "high",
-              "trend": "increasing"
-            },
-            {
-              "name": "1&1 completes OpenRAN migration, reaches 25% own network coverage",
-              "description": "1&1全部移动用户已迁移至自有OpenRAN 5G网络（欧洲首个）。自有基站约1,500个运营中，约4,500个在建。达到25%人口覆盖的监管截止日目标。Q3 2025移动净增+4万（H1因迁移影响基本持平）。9个月CAPEX €2.287亿主要用于建网。",
-              "impact": "high",
-              "trend": "increasing"
-            },
-            {
               "name": "Entry barriers",
               "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
               "impact": "high",
@@ -1060,15 +1048,14 @@
           "talent_culture": "",
           "ma_activity": [],
           "strengths": [
-            "5G Deployment: 88.0/100",
-            "Brand Strength: 75.0/100",
-            "Customer Service: 72.0/100",
-            "Network Coverage: 85.0/100",
-            "Network Quality: 78.0/100",
-            "Pricing Competitiveness: 85.0/100",
-            "Sustainability: 75.0/100"
+            "5G Deployment: score 88 (market avg 75)",
+            "Network Coverage: score 85 (market avg 76)",
+            "Pricing Competitiveness: score 85 (market avg 78)"
           ],
-          "weaknesses": [],
+          "weaknesses": [
+            "Enterprise Solutions: score 68 (market avg 74)",
+            "Product Innovation: score 70 (market avg 76)"
+          ],
           "problems": [],
           "likely_future_actions": [
             "Telefonica O2 Germany may pursue cost optimization or strategic pivot given declining revenue trend.",
@@ -1077,14 +1064,23 @@
           ],
           "implications": [
             {
-              "implication_type": "learning",
-              "description": "Telefonica O2 Germany excels in: 5G Deployment, Brand Strength, Customer Service. Study their approach for best practices.",
+              "implication_type": "opportunity",
+              "description": "Telefonica O2 Germany is weak in: Enterprise Solutions, Product Innovation. Target can differentiate in these dimensions.",
               "evidence": [
-                "5G Deployment: 88.0/100",
-                "Brand Strength: 75.0/100",
-                "Customer Service: 72.0/100"
+                "Enterprise Solutions: score 68 (market avg 74)",
+                "Product Innovation: score 70 (market avg 76)"
               ],
-              "suggested_action": "Benchmark Telefonica O2 Germany's practices in 5G Deployment, Brand Strength, Customer Service."
+              "suggested_action": "Invest in Enterprise Solutions, Product Innovation to capture customers dissatisfied with Telefonica O2 Germany."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Telefonica O2 Germany excels in: 5G Deployment, Network Coverage, Pricing Competitiveness. Study their approach for best practices.",
+              "evidence": [
+                "5G Deployment: score 88 (market avg 75)",
+                "Network Coverage: score 85 (market avg 76)",
+                "Pricing Competitiveness: score 85 (market avg 78)"
+              ],
+              "suggested_action": "Benchmark Telefonica O2 Germany's practices in 5G Deployment, Network Coverage, Pricing Competitiveness."
             },
             {
               "implication_type": "threat",
@@ -1165,17 +1161,18 @@
           "talent_culture": "",
           "ma_activity": [],
           "strengths": [
-            "5G Deployment: 95.0/100",
-            "Brand Strength: 90.0/100",
-            "Customer Service: 82.0/100",
-            "Digital Services: 85.0/100",
-            "Enterprise Solutions: 92.0/100",
-            "Network Coverage: 95.0/100",
-            "Network Quality: 92.0/100",
-            "Product Innovation: 88.0/100",
-            "Sustainability: 82.0/100"
+            "5G Deployment: score 95 (market avg 75)",
+            "Brand Strength: score 90 (market avg 78)",
+            "Customer Service: score 82 (market avg 74)",
+            "Digital Services: score 85 (market avg 74)",
+            "Enterprise Solutions: score 92 (market avg 74)",
+            "Network Coverage: score 95 (market avg 76)",
+            "Network Quality: score 92 (market avg 76)",
+            "Product Innovation: score 88 (market avg 76)"
           ],
-          "weaknesses": [],
+          "weaknesses": [
+            "Pricing Competitiveness: score 65 (market avg 78)"
+          ],
           "problems": [],
           "likely_future_actions": [
             "Deutsche Telekom is likely to continue aggressive network expansion (capex/revenue at 19% with growing revenue).",
@@ -1192,12 +1189,20 @@
               "suggested_action": "Monitor pricing and go-to-market strategies."
             },
             {
+              "implication_type": "opportunity",
+              "description": "Deutsche Telekom is weak in: Pricing Competitiveness. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Pricing Competitiveness: score 65 (market avg 78)"
+              ],
+              "suggested_action": "Invest in Pricing Competitiveness to capture customers dissatisfied with Deutsche Telekom."
+            },
+            {
               "implication_type": "learning",
               "description": "Deutsche Telekom excels in: 5G Deployment, Brand Strength, Customer Service. Study their approach for best practices.",
               "evidence": [
-                "5G Deployment: 95.0/100",
-                "Brand Strength: 90.0/100",
-                "Customer Service: 82.0/100"
+                "5G Deployment: score 95 (market avg 75)",
+                "Brand Strength: score 90 (market avg 78)",
+                "Customer Service: score 82 (market avg 74)"
               ],
               "suggested_action": "Benchmark Deutsche Telekom's practices in 5G Deployment, Brand Strength, Customer Service."
             },
@@ -1276,11 +1281,16 @@
           "talent_culture": "",
           "ma_activity": [],
           "strengths": [
-            "Pricing Competitiveness: 90.0/100",
-            "Product Innovation: 72.0/100",
-            "Sustainability: 80.0/100"
+            "Pricing Competitiveness: score 90 (market avg 78)"
           ],
-          "weaknesses": [],
+          "weaknesses": [
+            "5G Deployment: score 40 (market avg 75)",
+            "Brand Strength: score 65 (market avg 78)",
+            "Digital Services: score 68 (market avg 74)",
+            "Enterprise Solutions: score 55 (market avg 74)",
+            "Network Coverage: score 45 (market avg 76)",
+            "Network Quality: score 55 (market avg 76)"
+          ],
           "problems": [],
           "likely_future_actions": [
             "1&1 AG is likely to continue aggressive network expansion (capex/revenue at 39% with growing revenue).",
@@ -1299,14 +1309,22 @@
               "suggested_action": "Monitor pricing and go-to-market strategies."
             },
             {
-              "implication_type": "learning",
-              "description": "1&1 AG excels in: Pricing Competitiveness, Product Innovation, Sustainability. Study their approach for best practices.",
+              "implication_type": "opportunity",
+              "description": "1&1 AG is weak in: 5G Deployment, Brand Strength, Digital Services. Target can differentiate in these dimensions.",
               "evidence": [
-                "Pricing Competitiveness: 90.0/100",
-                "Product Innovation: 72.0/100",
-                "Sustainability: 80.0/100"
+                "5G Deployment: score 40 (market avg 75)",
+                "Brand Strength: score 65 (market avg 78)",
+                "Digital Services: score 68 (market avg 74)"
               ],
-              "suggested_action": "Benchmark 1&1 AG's practices in Pricing Competitiveness, Product Innovation, Sustainability."
+              "suggested_action": "Invest in 5G Deployment, Brand Strength, Digital Services to capture customers dissatisfied with 1&1 AG."
+            },
+            {
+              "implication_type": "learning",
+              "description": "1&1 AG excels in: Pricing Competitiveness. Study their approach for best practices.",
+              "evidence": [
+                "Pricing Competitiveness: score 90 (market avg 78)"
+              ],
+              "suggested_action": "Benchmark 1&1 AG's practices in Pricing Competitiveness."
             }
           ]
         }
@@ -2034,51 +2052,9 @@
           "source_url": "https://reports.investors.vodafone.com/view/412789358/"
         },
         {
-          "segment": "germany_b2b",
-          "type": "explanation",
-          "content": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
-          "speaker": "Management",
-          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
-        },
-        {
-          "segment": "germany_b2b",
-          "type": "explanation",
-          "content": "Vodafone Business德国服务收入Q3下降1.8%（Q2: -1.6%），降幅扩大。原因：移动合同续约时ARPU下压 + 核心连接业务持续承压。亮点：数字服务需求强劲。Skaylink收购（2025年12月完成）预计将加速云、安全和托管服务增长。新任B2B负责人Hagen Rickmann的5年€10亿增长目标是关键战略承诺。",
-          "speaker": "Management",
-          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
-        },
-        {
           "segment": "germany_broadband",
           "type": "explanation",
           "content": "宽带定价策略：2026年1月再次提价，采用'more-for-more'策略。固网消费者收入已企稳。新客宽带ARPU创三年新高（+21% YoY）。预计Q4总量趋势相似，但价值方程在发挥作用。2025年3月至10月间的零售定价行动正在支撑ARPU趋势。",
-          "speaker": "Management",
-          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
-        },
-        {
-          "segment": "germany_broadband",
-          "type": "explanation",
-          "content": "宽带定价策略：2026年1月再次提价，采用'more-for-more'策略。固网消费者收入已企稳。新客宽带ARPU创三年新高（+21% YoY）。预计Q4总量趋势相似，但价值方程在发挥作用。2025年3月至10月间的零售定价行动正在支撑ARPU趋势。",
-          "speaker": "Management",
-          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
-        },
-        {
-          "segment": "germany_broadband",
-          "type": "explanation",
-          "content": "宽带定价策略：2026年1月再次提价，采用'more-for-more'策略。固网消费者收入已企稳。新客宽带ARPU创三年新高（+21% YoY）。预计Q4总量趋势相似，但价值方程在发挥作用。2025年3月至10月间的零售定价行动正在支撑ARPU趋势。",
-          "speaker": "Management",
-          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
-        },
-        {
-          "segment": "germany_mobile",
-          "type": "explanation",
-          "content": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
-          "speaker": "Management",
-          "source_url": "https://reports.investors.vodafone.com/view/412789358/"
-        },
-        {
-          "segment": "germany_mobile",
-          "type": "explanation",
-          "content": "移动服务收入Q3增长2.8%（Q2: 3.8%），增速放缓。原因：批发收入增长被ARPU压力和服务提供商付款节奏部分抵消。1&1迁移完成后网络测试结果持续改善——1200万用户迁移是欧洲电信史上最大迁移之一。消费者合同客户净增42,000（Q2仅+1,000），消费者势头改善。",
           "speaker": "Management",
           "source_url": "https://reports.investors.vodafone.com/view/412789358/"
         },
@@ -2095,34 +2071,6 @@
           "content": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
           "speaker": "Management",
           "source_url": "https://fintool.com/app/research/companies/VOD/earnings/Q3%202026"
-        },
-        {
-          "segment": "germany",
-          "type": "guidance",
-          "content": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
-          "speaker": "Management",
-          "source_url": "https://fintool.com/app/research/companies/VOD/earnings/Q3%202026"
-        },
-        {
-          "segment": "germany",
-          "type": "guidance",
-          "content": "德国EBITDA：H2表现优于H1，但FY26不会回到正增长。关键顺风因素：(1) MDU同比基数效应Q3开始消退；(2) 1&1批发收入Q4达到完整运行率(full run-rate)；(3) MVNO基数效应。预计FY27才能真正实现EBITDA正增长。",
-          "speaker": "Management",
-          "source_url": "https://fintool.com/app/research/companies/VOD/earnings/Q3%202026"
-        },
-        {
-          "segment": "group",
-          "type": "guidance",
-          "content": "集团FY26指引重申上限：EBITDAaL €113-116亿，自由现金流€24-26亿。YTD EBITDAaL增长5.3%至€85亿，符合预期。集团服务收入Q3增长5.4%。2025年11月宣布FY26股息每股增长2.5%，反映中期自由现金流增长信心。",
-          "speaker": "Management",
-          "source_url": "https://www.stocktitan.net/sec-filings/VOD/6-k-vodafone-group-public-ltd-co-current-report-foreign-issuer-17b0d1c9489d.html"
-        },
-        {
-          "segment": "group",
-          "type": "guidance",
-          "content": "集团FY26指引重申上限：EBITDAaL €113-116亿，自由现金流€24-26亿。YTD EBITDAaL增长5.3%至€85亿，符合预期。集团服务收入Q3增长5.4%。2025年11月宣布FY26股息每股增长2.5%，反映中期自由现金流增长信心。",
-          "speaker": "Management",
-          "source_url": "https://www.stocktitan.net/sec-filings/VOD/6-k-vodafone-group-public-ltd-co-current-report-foreign-issuer-17b0d1c9489d.html"
         },
         {
           "segment": "group",
@@ -2206,8 +2154,7 @@
         "Deutsche Telekom Q3 2025: revenue +1.5%, net profit +14.3%",
         "Vodafone restructures cable TV frequencies nationwide",
         "DT reboots fibre tactics, targets Vodafone cable footprint",
-        "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years",
-        "BNetzA extends 800/1800/2600 MHz spectrum by 5 years"
+        "Vodafone-Altice FibreCo JV: FTTH to 7M homes in 6 years"
       ],
       "threats": [
         "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
@@ -2239,7 +2186,7 @@
         "Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High existing competitors pressure'.",
         "Mitigate weakness 'Technology perception gap as competitors lead fiber deployment' and defend against the threat of 'High substitutes pressure'."
       ],
-      "key_message": "SWOT analysis identifies 7 strengths, 5 weaknesses, 11 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant)."
+      "key_message": "SWOT analysis identifies 7 strengths, 5 weaknesses, 10 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant)."
     },
     "opportunities": {
       "span_positions": [
@@ -2532,6 +2479,86 @@
           "bubble_size": 1.0
         },
         {
+          "opportunity_name": "Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (market avg 74)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit telefonica_o2 weakness: Product Innovation: score 70 (market avg 76)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit deutsche_telekom weakness: Pricing Competitiveness: score 65 (market avg 78)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit one_and_one weakness: 5G Deployment: score 40 (market avg 75)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
+          "opportunity_name": "Exploit one_and_one weakness: Brand Strength: score 65 (market avg 78)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 5.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.0,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.0
+        },
+        {
           "opportunity_name": "WO-1",
           "market_size_score": 5.0,
           "market_growth_score": 5.0,
@@ -2614,7 +2641,12 @@
         "Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany",
         "National Digital Strategy: Fiber/5G coverage mandates may require vodafone_germany investment but also enable subsidy ac",
         "BNetzA extends 800/1800/2600 MHz spectrum by 5 years: Potential impact on vodafone_germany",
-        "German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany"
+        "German government launches €1.2B Gigabit Funding Programme 2025: Potential impact on vodafone_germany",
+        "Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (market avg 74)",
+        "Exploit telefonica_o2 weakness: Product Innovation: score 70 (market avg 76)",
+        "Exploit deutsche_telekom weakness: Pricing Competitiveness: score 65 (market avg 78)",
+        "Exploit one_and_one weakness: 5G Deployment: score 40 (market avg 75)",
+        "Exploit one_and_one weakness: Brand Strength: score 65 (market avg 78)"
       ],
       "acquire_skills": [
         "WO-1",
@@ -2886,6 +2918,81 @@
           "priority_rationale": "Quadrant: grow_invest"
         },
         {
+          "name": "Exploit telefonica_o2 weakness: Enterprise Solutions: score 68 (market avg 74)",
+          "description": "Competitor telefonica_o2 is weak in: Enterprise Solutions: score 68 (market avg 74)",
+          "derived_from": [
+            "competitor_weakness",
+            "telefonica_o2"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit telefonica_o2 weakness: Product Innovation: score 70 (market avg 76)",
+          "description": "Competitor telefonica_o2 is weak in: Product Innovation: score 70 (market avg 76)",
+          "derived_from": [
+            "competitor_weakness",
+            "telefonica_o2"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit deutsche_telekom weakness: Pricing Competitiveness: score 65 (market avg 78)",
+          "description": "Competitor deutsche_telekom is weak in: Pricing Competitiveness: score 65 (market avg 78)",
+          "derived_from": [
+            "competitor_weakness",
+            "deutsche_telekom"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit one_and_one weakness: 5G Deployment: score 40 (market avg 75)",
+          "description": "Competitor one_and_one is weak in: 5G Deployment: score 40 (market avg 75)",
+          "derived_from": [
+            "competitor_weakness",
+            "one_and_one"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit one_and_one weakness: Brand Strength: score 65 (market avg 78)",
+          "description": "Competitor one_and_one is weak in: Brand Strength: score 65 (market avg 78)",
+          "derived_from": [
+            "competitor_weakness",
+            "one_and_one"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
           "name": "WO-1",
           "description": "Address weakness 'Customer Service: score 70 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect vodafone_germany'.",
           "derived_from": [
@@ -2942,7 +3049,7 @@
           "priority_rationale": "Quadrant: acquire_skills"
         }
       ],
-      "key_message": "SPAN matrix positions 22 opportunities: 18 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 18 grow/invest items for maximum strategic impact."
+      "key_message": "SPAN matrix positions 27 opportunities: 23 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 23 grow/invest items for maximum strategic impact."
     }
   },
   "data_quality": {

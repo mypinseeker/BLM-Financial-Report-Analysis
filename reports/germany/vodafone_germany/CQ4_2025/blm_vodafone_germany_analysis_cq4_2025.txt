@@ -1,7 +1,7 @@
 ────────────────────────────────────────────────────────────────────────────────
                        BLM Five Looks Strategic Analysis                        
                             Target: vodafone_germany                            
-                       Market: germany | Period: CQ4_2025                       
+                       Market: germany | Period: unknown                        
 ────────────────────────────────────────────────────────────────────────────────
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
@@ -71,11 +71,14 @@
     buyer_power               [!!] medium
   Overall Intensity: MEDIUM
   [telefonica_o2]
-    Strengths: 5G Deployment: 88.0/100, Brand Strength: 75.0/100, Customer Service: 72.0/100
+    Strengths: 5G Deployment: score 88 (market avg 75), Network Coverage: score 85 (market avg 76), Pricing Competitiveness: score 85 (market avg 78)
+    Weaknesses: Enterprise Solutions: score 68 (market avg 74), Product Innovation: score 70 (market avg 76)
   [deutsche_telekom]
-    Strengths: 5G Deployment: 95.0/100, Brand Strength: 90.0/100, Customer Service: 82.0/100
+    Strengths: 5G Deployment: score 95 (market avg 75), Brand Strength: score 90 (market avg 78), Customer Service: score 82 (market avg 74)
+    Weaknesses: Pricing Competitiveness: score 65 (market avg 78)
   [one_and_one]
-    Strengths: Pricing Competitiveness: 90.0/100, Product Innovation: 72.0/100, Sustainability: 80.0/100
+    Strengths: Pricing Competitiveness: score 90 (market avg 78)
+    Weaknesses: 5G Deployment: score 40 (market avg 75), Brand Strength: score 65 (market avg 78), Digital Services: score 68 (market avg 74)
 
   → Key Message: In a 4-player market with medium competition intensity, Deutsche Telekom leads with 50% revenue share. Target operator holds 25% share. Strongest competitive force: Existing Competitors.
 
@@ -149,7 +152,7 @@
     → Mitigate weakness 'Pricing Competitiveness: score 72 (market avg 78)' and defend against the threat of 'Nebenkostenprivileg (MDU cable TV bundling) abolished: Potential impact on vodafone_germany'.
     → Mitigate weakness 'Loss of wholesale revenue as 1&1 users migrate to own network' and defend against the threat of 'High existing competitors pressure'.
 
-  → Key Message: SWOT analysis identifies 7 strengths, 5 weaknesses, 11 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant).
+  → Key Message: SWOT analysis identifies 7 strengths, 5 weaknesses, 10 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant).
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ 05 OPPORTUNITIES (SPAN Matrix)                                              │
@@ -183,7 +186,7 @@
     [P0] Vodafone completes 1&1 customer migration: 12M users on network (Market: N/A)
     [P0] Vodafone completes Skaylink acquisition for €175M (Market: N/A)
 
-  → Key Message: SPAN matrix positions 22 opportunities: 18 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 18 grow/invest items for maximum strategic impact.
+  → Key Message: SPAN matrix positions 27 opportunities: 23 grow/invest, 4 acquire skills, 0 harvest, 0 avoid/exit. Focus resources on the 23 grow/invest items for maximum strategic impact.
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ DATA PROVENANCE                                                             │

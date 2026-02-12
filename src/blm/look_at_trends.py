@@ -637,7 +637,11 @@ def _analyse_industry(
         total_rev = sum(r.get("total_revenue") or 0 for r in latest_rows)
         if total_rev > 0:
             currency = market_config.currency if market_config else "USD"
-            result["market_size"] = f"{currency} {total_rev / 1000:.1f}B (quarterly, {latest_q})"
+            rev_b = total_rev / 1000
+            if rev_b >= 1000:
+                result["market_size"] = f"{currency} {rev_b / 1000:.1f}T (quarterly, {latest_q})"
+            else:
+                result["market_size"] = f"{currency} {rev_b:.1f}B (quarterly, {latest_q})"
             _track_prov(provenance, total_rev, "industry_market_size", unit=f"{currency} M")
         else:
             result["market_size"] = "N/A"
