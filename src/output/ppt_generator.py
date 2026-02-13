@@ -171,6 +171,7 @@ class BLMPPTGenerator:
         # --- Look 4: Self ---
         self._add_section_divider("04 Look at Self", "BMC + Capability Assessment")
         self._add_health_check(result.self_analysis)
+        self._add_revenue_composition_trend(result.self_analysis)
         self._add_revenue_comparison(result.self_analysis, result.competition)
         self._add_segment_deep_dives(result.self_analysis)
         self._add_network_analysis(result.self_analysis)
@@ -1347,6 +1348,47 @@ class BLMPPTGenerator:
                             Inches(6.3), Inches(3.1))
 
         km = self_analysis.key_message or "Operating health check summary"
+        self._add_key_message_bar(slide, km)
+
+    def _add_revenue_composition_trend(self, self_analysis):
+        """Stacked bar chart showing revenue composition by segment over 8 quarters."""
+        if self_analysis is None:
+            return
+        segments = self_analysis.segment_analyses or []
+        # Need at least 2 segments with revenue trend data
+        seg_data = {}
+        for seg in segments:
+            rev = (seg.trend_data or {}).get('revenue', [])
+            if rev and len(rev) >= 4:
+                seg_data[seg.segment_name] = rev
+        if len(seg_data) < 2:
+            return
+
+        slide = self._new_slide("revenue_composition", "Revenue Composition Trend")
+        self._add_header(slide, "Revenue Composition Trend",
+                         "Segment Revenue Mix Over Time")
+
+        # Build quarter labels matching data length
+        n = len(next(iter(seg_data.values())))
+        x_labels = [f"Q{i+1}" for i in range(n)]
+
+        chart_path = self.chart_gen.create_stacked_bar(
+            x_labels, seg_data,
+            title="Revenue by Segment (€M)",
+            y_label="€M",
+            filename="revenue_composition_trend.png")
+        self._add_image(slide, chart_path, Inches(0.5), Inches(1.5),
+                        Inches(12), Inches(4.5))
+
+        # Key message: identify growing vs declining segments
+        growing = [n for n, v in seg_data.items() if v[-1] > v[0]]
+        declining = [n for n, v in seg_data.items() if v[-1] < v[0]]
+        parts = []
+        if growing:
+            parts.append(f"Growing: {', '.join(growing)}")
+        if declining:
+            parts.append(f"Declining: {', '.join(declining)}")
+        km = " | ".join(parts) if parts else "Revenue composition over time"
         self._add_key_message_bar(slide, km)
 
     def _add_revenue_comparison(self, self_analysis, competition):

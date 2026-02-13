@@ -428,7 +428,10 @@ def _score_opportunity(
         competitive_position=round(competitive_position, 2),
         quadrant=quadrant,
         recommended_strategy=recommended_strategy,
-        bubble_size=1.0,
+        bubble_size=round(
+            max(0.3, min(3.0,
+                0.3 + (market_attractiveness * competitive_position) / 100 * 2.7
+            )), 2),
     )
 
 

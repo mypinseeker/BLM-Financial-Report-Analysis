@@ -22,6 +22,7 @@ TP-5  Market Readiness Audit   ████████████████�
 TP-6  Fill Data Gaps (10 flds) ████████████████████  DONE  (2026-02-12)
 TP-7  MD Strategic Reports     ████████████████████  DONE  (2026-02-12)
 TP-8  Chile MD + Housekeeping  ████████████████████  DONE  (2026-02-13)
+TP-9  Tech Debt Cleanup        ████████████████████  DONE  (2026-02-13)
 ```
 
 ### Latest Reports: CQ4_2025
@@ -93,6 +94,12 @@ TP-8  Chile MD + Housekeeping  ████████████████�
 - ROADMAP.md updated: added TP-7/TP-8 docs, fixed P1-4 status, test count, audit scores, output format count
 - Confirmed P1-4 (seed data language) already complete (commit `9207312`)
 
+### TP-9: Tech Debt Cleanup (2026-02-13) — 4 sprints
+- **Sprint 1** (P2-2): Added 10 missing packages to requirements.txt (openpyxl, python-pptx, pandas, numpy, matplotlib, seaborn, click, pyyaml, pdfplumber, tabula-py)
+- **Sprint 2** (P2-3): SPAN bubble size differentiation — replaced hardcoded 1.0 with MA×CP formula (range 0.3–3.0, 9 unique sizes)
+- **Sprint 3** (P1-3): Integrated `create_stacked_bar` for Revenue Composition Trend slide; confirmed `create_timeline_chart` already used in deep PPT; deferred `create_heatmap` (needs churn data)
+- **Sprint 4** (P2-1): Deleted 12 root-level legacy duplicate files (434KB dead code); `src/blm/` reduced to 9 core files
+
 ---
 
 ## Version History
@@ -159,7 +166,7 @@ result = engine.run_five_looks()  # uses UK config automatically
 |----|------|--------|--------|
 | P1-1 | **Persist data_provenance** — ProvenanceStore only in-memory; add save_to_db/load_from_db | No audit trail across runs | Open |
 | P1-2 | ~~Fill NetworkAnalysis 7 fields~~ | ~~Network slide lacks strategic depth~~ | **DONE** TP-6 `cdce1e5` |
-| P1-3 | **Use remaining 3 chart types** — stacked_bar, heatmap, timeline_chart | 3 of 18 chart types still unused | Open |
+| P1-3 | ~~Use remaining chart types~~ — stacked_bar integrated, timeline already used, heatmap deferred | ~~Chart gap~~ | **DONE** TP-9 |
 | P1-4 | ~~Clean seed data language~~ — intelligence_events translated to English | ~~Mixed language outputs~~ | **DONE** `9207312` |
 | P1-5 | **Implement user_feedback persistence** — Add upsert_feedback() + CLI command | Draft→Final loop lacks persistence | Open |
 
@@ -167,9 +174,9 @@ result = engine.run_five_looks()  # uses UK config automatically
 
 | ID | Task | Impact | Status |
 |----|------|--------|--------|
-| P2-1 | **Remove 12 legacy file duplicates** — src/blm/ root vs src/blm/_legacy/ | Maintainability risk | Open |
-| P2-2 | **Add openpyxl to requirements.txt** | Test failures | Open |
-| P2-3 | **Differentiate SPAN bubble sizes** — addressable_market always "N/A", bubble_size always 2.0 | SPAN chart lacks visual hierarchy | Open |
+| P2-1 | ~~Remove 12 legacy file duplicates~~ — deleted root-level dead code (434KB) | ~~Maintainability risk~~ | **DONE** TP-9 |
+| P2-2 | ~~Add missing dependencies to requirements.txt~~ — added 10 packages | ~~Deploy failures~~ | **DONE** TP-9 |
+| P2-3 | ~~Differentiate SPAN bubble sizes~~ — MA×CP formula, range 0.3–3.0 | ~~No visual hierarchy~~ | **DONE** TP-9 |
 | P2-4 | **Add "Three Decisions" slides** — Strategy/Key Tasks/Execution (BLM Phase 2) | BLM framework incomplete | Open |
 | P2-5 | ~~Multi-market support~~ | **DONE** `9decb30` |
 
@@ -194,9 +201,9 @@ result = engine.run_five_looks()  # uses UK config automatically
 | `create_gap_analysis_chart` | Used | Gap Analysis (V3) |
 | `create_segment_comparison` | Used | PEST Factor Distribution (V3) |
 | `create_radar_chart` | Used | Competition radar (deep PPT) |
-| `create_stacked_bar` | **Unused** | Could show revenue composition over time |
-| `create_heatmap` | **Unused** | Could visualize operator-to-operator user flow |
-| `create_timeline_chart` | **Unused** | Could show opportunity action timeline |
+| `create_stacked_bar` | Used | Revenue Composition Trend (TP-9) |
+| `create_heatmap` | **Deferred** | Needs user churn data enrichment |
+| `create_timeline_chart` | Used | Opportunity Sequencing (deep PPT, M6) |
 
 ---
 
