@@ -1,10 +1,10 @@
 # ROADMAP.md — BLM Five Looks Analysis Engine
 
-## Current Status (2026-02-12)
+## Current Status (2026-02-13)
 
-Engine v1.0.0 complete. Six enhancement task packages (TP-1 through TP-6) delivered on top,
+Engine v1.0.0 complete. Eight enhancement task packages (TP-1 through TP-8) delivered on top,
 adding Supabase cloud pipeline, AI extraction, multi-market analysis, engine quality
-improvements, market readiness audit, and data gap remediation.
+improvements, market readiness audit, data gap remediation, MD strategic reports, and housekeeping.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -20,13 +20,15 @@ TP-3  Analysis Execution       ████████████████�
 TP-4  Engine Quality (18 items)████████████████████  DONE  (2026-02-11)
 TP-5  Market Readiness Audit   ████████████████████  DONE  (2026-02-12)
 TP-6  Fill Data Gaps (10 flds) ████████████████████  DONE  (2026-02-12)
+TP-7  MD Strategic Reports     ████████████████████  DONE  (2026-02-12)
+TP-8  Chile MD + Housekeeping  ████████████████████  DONE  (2026-02-13)
 ```
 
 ### Latest Reports: CQ4_2025
-- **Germany/Vodafone**: `reports/germany/vodafone_germany/CQ4_2025/` — JSON, TXT, HTML, PPTX
-- **Chile/Entel**: `reports/chile/entel_cl/CQ4_2025/` — JSON, TXT, HTML, PPTX
-- **Audit scores**: Germany 96/A, Chile 93/A
-- **Tests**: 609 passing
+- **Germany/Vodafone**: `reports/germany/vodafone_germany/CQ4_2025/` — JSON, TXT, HTML, PPTX, MD
+- **Chile/Entel**: `reports/chile/entel_cl/CQ4_2025/` — JSON, TXT, HTML, PPTX, MD
+- **Audit scores**: Germany 97/A, Chile 92/A
+- **Tests**: 671 passing
 
 ---
 
@@ -46,7 +48,7 @@ TP-6  Fill Data Gaps (10 flds) ████████████████�
 - extraction_jobs table SQL
 
 ### TP-3: Analysis Execution + Report Generation (2026-02-11)
-- AnalysisRunnerService: Pull-to-SQLite → BLMAnalysisEngine → 4 output formats → Supabase upload
+- AnalysisRunnerService: Pull-to-SQLite → BLMAnalysisEngine → 5 output formats → Supabase upload
 - GroupSummaryGenerator: cross-market comparison (revenue, subs, competitive position)
 - CLI: `python3 -m src.cli_analyze {single,group,list,status,audit}`
 - Web: `POST /api/analyze/{id}/execute` + auto-trigger via BackgroundTasks
@@ -72,6 +74,24 @@ TP-6  Fill Data Gaps (10 flds) ████████████████�
 - **SelfInsight** (1 field): org_culture (leadership stability + strategic orientation + config)
 - New MarketConfig field: `operator_network_enrichments` (Germany 4 ops, Chile 5 ops)
 - Commit: `cdce1e5`
+
+### TP-7: BLM Strategic Insight Report Generation — MD (2026-02-12)
+- BLMMdGenerator: orchestrator + 8 module renderers + StrategicDiagnosisComputer
+- Architecture: `md_generator.py` → `strategic_diagnosis.py` + `md_utils.py` + `md_modules/{8 files}`
+- StrategicDiagnosis: rule-based (no AI), produces central_diagnosis_label, verdict, priorities, traps, risk/reward, KPI dashboard
+- Labels: "The Squeezed Middle", "The Distant Second", "The Competitive Challenger", etc.
+- Modules: ES(exec summary), 01(trends/PEST), 02(market/$APPEALS), 02a(tariff), 03(competition/Porter), 04(self/BMC), SW(SWOT), 05(opportunities/SPAN)
+- Integrated into analysis_runner as 5th output format (JSON/TXT/HTML/PPT/MD)
+- Germany: 2,206 lines / 98KB, Chile: 1,968 lines / ~75KB
+- 671 tests pass (62 new + 609 existing), zero regressions
+- **Polishing Sprint 1** (`bcb0121`): 9 fixes — raw dicts, revenue formatting, priority labels, duplicate net_assessment, SO/WO labels, P0 tiering, source dedup
+- **Polishing Sprint 2** (`216a24d`): 10 fixes — period "unknown", SPAN tiering, PEST dedup, headline numbers, segment metrics, TV casing, escape routes, operator_id→display name
+- Commits: `6450b76` → `bcb0121` → `216a24d` → `b5c5b8c`
+
+### TP-8: Chile MD Regeneration + Comprehensive Housekeeping (2026-02-13)
+- Chile MD report regenerated from 287 lines (old format) to 1,968 lines (new BLMMdGenerator)
+- ROADMAP.md updated: added TP-7/TP-8 docs, fixed P1-4 status, test count, audit scores, output format count
+- Confirmed P1-4 (seed data language) already complete (commit `9207312`)
 
 ---
 
@@ -140,7 +160,7 @@ result = engine.run_five_looks()  # uses UK config automatically
 | P1-1 | **Persist data_provenance** — ProvenanceStore only in-memory; add save_to_db/load_from_db | No audit trail across runs | Open |
 | P1-2 | ~~Fill NetworkAnalysis 7 fields~~ | ~~Network slide lacks strategic depth~~ | **DONE** TP-6 `cdce1e5` |
 | P1-3 | **Use remaining 3 chart types** — stacked_bar, heatmap, timeline_chart | 3 of 18 chart types still unused | Open |
-| P1-4 | **Clean seed data language** — intelligence_events has mixed Chinese/English descriptions | JSON/HTML/TXT outputs show mixed language | Open |
+| P1-4 | ~~Clean seed data language~~ — intelligence_events translated to English | ~~Mixed language outputs~~ | **DONE** `9207312` |
 | P1-5 | **Implement user_feedback persistence** — Add upsert_feedback() + CLI command | Draft→Final loop lacks persistence | Open |
 
 ### P2 — Tech Debt
@@ -203,5 +223,5 @@ path = gen.generate(result, mode="draft",
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 609 passed
+python3 -m pytest tests/ --tb=short  # 671 passed
 ```
