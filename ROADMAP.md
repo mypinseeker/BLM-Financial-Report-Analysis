@@ -29,6 +29,7 @@ TP-10 Three Decisions (Phase 2)████████████████�
 TP-11 Millicom 11-Country Roll ████████████████████  DONE  (2026-02-14)
 TP-12 Group Report + Push + Prov████████████████████  DONE  (2026-02-14)
 TP-13 Draft→Final Feedback Loop ████████████████████  DONE  (2026-02-14)
+TP-14 Real Data Ingestion CLI   ████████████████████  DONE  (2026-02-14)
 ```
 
 ### Latest Reports: CQ4_2025
@@ -157,6 +158,21 @@ TP-13 Draft→Final Feedback Loop ███████████████�
 - **Modified files**: `md_generator.py`, `md_utils.py`, `ppt_generator.py`, `analysis_runner.py`, `app.py`, `pages.py`, `base.html`, 6 md_modules
 - **Tests**: 800 passed (33 new + 767 existing), zero regressions
 - **Routes**: 46 total (was 40)
+
+### TP-14: Theme B — Real Data Ingestion for LATAM Markets (2026-02-14)
+- **Goal**: CLI tool to batch-extract real financial/subscriber/network data from Millicom's consolidated PDF for all 11 Tigo operators
+- **Phase 1 — Prompt Enhancement**: Added `country` parameter to `get_financial_prompt`, `get_subscriber_prompt`, `get_network_prompt` for multi-country PDF context (CONSOLIDATED filter instruction)
+- **Phase 2 — Batch CLI**: `src/cli_extract.py` with 5 subcommands:
+  - `millicom --pdf-url URL --period CQ4_2025` — extract all 11 Tigo ops from one PDF
+  - `single --operator OP [--pdf-url URL]` — extract one operator (PDF or search)
+  - `review --operator OP / --all` — print extracted JSON for review
+  - `commit --operator OP / --all` — write reviewed JSON to SQLite
+  - `status` — show extraction progress
+- **Design**: Resumable (JSON checkpoint per operator×table), rate-limited, provenance-tagged, local-first (SQLite)
+- **Phase 3 — Wiring**: Threaded `country` kwarg through `ExtractionService.extract_table()`; added `get_non_group_operators()` to operator_directory
+- **Data flow**: PDF URL → Gemini upload → per-operator extraction → `data/extraction/{op_id}_{type}.json` → review → SQLite commit
+- **New files**: `src/cli_extract.py` (~250 lines), `tests/test_cli_extract.py` (~120 lines)
+- **Modified files**: `src/extraction/prompts.py` (+30), `src/web/services/extraction_service.py` (+3), `src/database/operator_directory.py` (+10)
 
 ---
 

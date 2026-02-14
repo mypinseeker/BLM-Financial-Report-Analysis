@@ -154,11 +154,13 @@ class ExtractionService:
         # Build the appropriate prompt
         if table_type == "financial":
             sys_inst, prompt = get_financial_prompt(
-                operator_id, operator_name, currency, target_quarter, n_quarters
+                operator_id, operator_name, currency, target_quarter, n_quarters,
+                country=country,
             )
         elif table_type == "subscriber":
             sys_inst, prompt = get_subscriber_prompt(
-                operator_id, operator_name, target_quarter, n_quarters
+                operator_id, operator_name, target_quarter, n_quarters,
+                country=country,
             )
         elif table_type == "tariff":
             sys_inst, prompt = get_tariff_prompt(
@@ -170,7 +172,8 @@ class ExtractionService:
             )
         elif table_type == "network":
             sys_inst, prompt = get_network_prompt(
-                operator_id, operator_name, target_quarter, n_quarters
+                operator_id, operator_name, target_quarter, n_quarters,
+                country=country,
             )
         else:
             raise ValueError(f"Unknown table type: {table_type}")

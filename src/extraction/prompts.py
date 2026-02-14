@@ -51,6 +51,7 @@ def get_financial_prompt(
     currency: str,
     target_quarter: str,
     n_quarters: int = 4,
+    country: str = "",
 ) -> tuple[str, str]:
     """Prompt for extracting financial_quarterly data from a report PDF."""
     system_instruction = (
@@ -59,7 +60,15 @@ def get_financial_prompt(
         "Be precise with numbers. All monetary values must be in MILLIONS of local currency. "
         "Return ONLY a JSON array of quarterly records."
     )
-    user_prompt = f"""Extract quarterly financial data for {operator_name} (ID: {operator_id}).
+    country_filter = ""
+    if country:
+        country_filter = (
+            f"\n\nCRITICAL: This PDF is a CONSOLIDATED multi-country earnings report. "
+            f"Extract data ONLY for the {country} operation of {operator_name}. "
+            f'Look for the section labeled "{country}" or "Tigo {country}". '
+            f"Do NOT include group-level totals or data from other countries.\n"
+        )
+    user_prompt = f"""{country_filter}Extract quarterly financial data for {operator_name} (ID: {operator_id}).
 Currency: {currency} (all amounts in MILLIONS of {currency}).
 Target: up to {n_quarters} most recent quarters, ideally including {target_quarter}.
 
@@ -117,6 +126,7 @@ def get_subscriber_prompt(
     operator_name: str,
     target_quarter: str,
     n_quarters: int = 4,
+    country: str = "",
 ) -> tuple[str, str]:
     """Prompt for extracting subscriber_quarterly data."""
     system_instruction = (
@@ -125,7 +135,15 @@ def get_subscriber_prompt(
         "in THOUSANDS (the _k suffix means thousands). "
         "Return ONLY a JSON array."
     )
-    user_prompt = f"""Extract quarterly subscriber data for {operator_name} (ID: {operator_id}).
+    country_filter = ""
+    if country:
+        country_filter = (
+            f"\n\nCRITICAL: This PDF is a CONSOLIDATED multi-country earnings report. "
+            f"Extract data ONLY for the {country} operation of {operator_name}. "
+            f'Look for the section labeled "{country}" or "Tigo {country}". '
+            f"Do NOT include group-level totals or data from other countries.\n"
+        )
+    user_prompt = f"""{country_filter}Extract quarterly subscriber data for {operator_name} (ID: {operator_id}).
 All subscriber/customer counts in THOUSANDS.
 Target: up to {n_quarters} most recent quarters, ideally including {target_quarter}.
 
@@ -258,6 +276,7 @@ def get_network_prompt(
     operator_name: str,
     target_quarter: str,
     n_quarters: int = 4,
+    country: str = "",
 ) -> tuple[str, str]:
     """Prompt for extracting network_infrastructure data."""
     system_instruction = (
@@ -265,7 +284,15 @@ def get_network_prompt(
         "and coverage metrics from operator reports. All homepass/connected "
         "counts in THOUSANDS. Return ONLY a JSON array."
     )
-    user_prompt = f"""Extract network infrastructure data for {operator_name} (ID: {operator_id}).
+    country_filter = ""
+    if country:
+        country_filter = (
+            f"\n\nCRITICAL: This PDF is a CONSOLIDATED multi-country earnings report. "
+            f"Extract data ONLY for the {country} operation of {operator_name}. "
+            f'Look for the section labeled "{country}" or "Tigo {country}". '
+            f"Do NOT include group-level totals or data from other countries.\n"
+        )
+    user_prompt = f"""{country_filter}Extract network infrastructure data for {operator_name} (ID: {operator_id}).
 Target: up to {n_quarters} most recent quarters, ideally including {target_quarter}.
 
 Extract a JSON array where each element has these exact fields:

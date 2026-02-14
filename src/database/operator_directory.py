@@ -651,3 +651,11 @@ def get_group_info(group_id: str) -> dict:
 def get_all_markets() -> list[str]:
     """Get all unique market IDs."""
     return sorted(set(info["market"] for info in OPERATOR_DIRECTORY.values()))
+
+
+def get_non_group_operators(market: str, group_id: str) -> list[str]:
+    """Get operator IDs in a market that do NOT belong to a given group."""
+    return [
+        op_id for op_id, info in OPERATOR_DIRECTORY.items()
+        if info["market"] == market and info.get("group_id") != group_id
+    ]
