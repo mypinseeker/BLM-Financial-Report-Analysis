@@ -17,6 +17,7 @@ from __future__ import annotations
 
 from typing import Optional
 
+from src.blm.trend_analyzer import compute_trend_metrics
 from src.database.db import TelecomDatabase
 from src.database.period_utils import PeriodConverter
 from src.models.competition import (
@@ -1181,6 +1182,12 @@ def _assess_financial_health(db, operator_id, target_period, n_quarters):
             health["margin_trend"] = "declining"
         else:
             health["margin_trend"] = "stable"
+
+    # Compute rich trend metrics from revenue/margin arrays
+    if len(revs) >= 2:
+        health["revenue_metrics"] = compute_trend_metrics(revs).to_dict()
+    if len(margins) >= 2:
+        health["margin_metrics"] = compute_trend_metrics(margins).to_dict()
 
     health["quarters_analyzed"] = len(ts)
     return health

@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from typing import Optional
 
+from src.blm.trend_analyzer import compute_trend_metrics
 from src.database.db import TelecomDatabase
 from src.models.market_config import MarketConfig
 from src.models.self_analysis import (
@@ -162,6 +163,13 @@ def _analyze_financial_health(financial_data: list) -> dict:
         health["revenue_trend"].append(_safe_get(q, "total_revenue"))
         health["ebitda_trend"].append(_safe_get(q, "ebitda"))
         health["margin_trend"].append(_safe_get(q, "ebitda_margin_pct"))
+
+    # Compute trend metrics for each trend array
+    for key in ("revenue", "ebitda", "margin"):
+        arr = health.get(f"{key}_trend", [])
+        valid = [v for v in arr if v is not None]
+        if len(valid) >= 2:
+            health[f"{key}_metrics"] = compute_trend_metrics(arr).to_dict()
 
     # Determine overall health assessment
     rev_growing = (health["revenue_qoq_pct"] > 0) or (health["revenue_yoy_pct"] > 0)
@@ -402,6 +410,8 @@ def _analyze_mobile_segment(
         "churn": [_safe_get(s, "mobile_churn_pct") for s in subscriber_data],
     }
 
+    _enrich_trend_data(trend_data)
+
     # Competitor comparison
     comp = {}
     for row in comparison:
@@ -499,6 +509,8 @@ def _analyze_fixed_segment(
         "cable": [_safe_get(s, "broadband_cable_k") for s in subscriber_data],
     }
 
+    _enrich_trend_data(trend_data)
+
     comp = {}
     for row in comparison:
         if row.get("operator_id") != target_operator:
@@ -581,6 +593,8 @@ def _analyze_b2b_segment(
         "revenue": [_safe_get(f, "b2b_revenue") for f in financial_data],
         "customers": [_safe_get(s, "b2b_customers_k") for s in subscriber_data],
     }
+
+    _enrich_trend_data(trend_data)
 
     comp = {}
     for row in comparison:
@@ -667,6 +681,8 @@ def _analyze_tv_segment(
         "fmc_penetration": [_safe_get(s, "fmc_penetration_pct") for s in subscriber_data],
     }
 
+    _enrich_trend_data(trend_data)
+
     comp = {}
     for row in comparison:
         if row.get("operator_id") != target_operator:
@@ -737,6 +753,8 @@ def _analyze_wholesale_segment(
         "revenue": [_safe_get(f, "wholesale_revenue") for f in financial_data],
     }
 
+    _enrich_trend_data(trend_data)
+
     rev_change = changes[0].change_qoq if changes else 0
     health = _classify_segment_health(rev_change, 0)
 
@@ -768,6 +786,14 @@ def _classify_segment_health(rev_change: float, sub_change: float) -> str:
             return "critical"
         return "weakening"
     return "stable"
+
+
+def _enrich_trend_data(trend_data: dict) -> None:
+    """Compute TrendMetrics for each series in a segment's trend_data dict."""
+    for key in list(trend_data.keys()):
+        series = trend_data[key]
+        if isinstance(series, list) and len([v for v in series if v is not None]) >= 2:
+            trend_data[f"{key}_metrics"] = compute_trend_metrics(series).to_dict()
 
 
 # ============================================================================

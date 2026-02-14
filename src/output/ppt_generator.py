@@ -178,6 +178,7 @@ class BLMPPTGenerator:
         # --- Look 4: Self ---
         self._add_section_divider("04 Look at Self", "BMC + Capability Assessment")
         self._add_health_check(result.self_analysis)
+        self._add_momentum_dashboard(result.self_analysis, result.competition)
         self._add_revenue_composition_trend(result.self_analysis)
         self._add_revenue_comparison(result.self_analysis, result.competition)
         self._add_segment_deep_dives(result.self_analysis)
@@ -1383,6 +1384,26 @@ class BLMPPTGenerator:
             self._add_image(slide, chart_path, Inches(0.3), Inches(2.9),
                             Inches(6), Inches(3.1))
 
+            # Overlay CAGR + momentum phase annotation
+            rev_metrics = fh.get('revenue_metrics', {})
+            if isinstance(rev_metrics, dict) and rev_metrics:
+                cagr = rev_metrics.get('cagr_pct')
+                phase = rev_metrics.get('momentum_phase', '')
+                phase_label = phase.replace('_', ' ').title() if phase else ''
+                parts = []
+                if cagr is not None:
+                    parts.append(f"CAGR: {cagr:+.1f}%")
+                if phase_label:
+                    parts.append(phase_label)
+                if parts:
+                    self._add_text_box(
+                        slide, Inches(0.4), Inches(2.5),
+                        Inches(5.5), Inches(0.35),
+                        " | ".join(parts),
+                        font_size=9,
+                        font_color=self.style.light_text_color,
+                    )
+
         # Revenue breakdown bar chart (right)
         rb = self_analysis.revenue_breakdown or {}
         rb_items = {k: v for k, v in rb.items()
@@ -1399,6 +1420,73 @@ class BLMPPTGenerator:
 
         km = self_analysis.key_message or "Operating health check summary"
         self._add_key_message_bar(slide, km)
+
+    def _add_momentum_dashboard(self, self_analysis, competition):
+        """Add a Momentum Dashboard slide with metric cards for key KPIs."""
+        if self_analysis is None:
+            return
+
+        fh = self_analysis.financial_health or {}
+
+        # Collect momentum cards: (label, value_str, phase_str)
+        cards = []
+        for label, key in [("Revenue", "revenue"), ("EBITDA", "ebitda"), ("Margin", "margin")]:
+            tm = fh.get(f"{key}_metrics")
+            if not isinstance(tm, dict) or not tm:
+                continue
+            cagr = tm.get("cagr_pct")
+            phase = tm.get("momentum_phase", "")
+            score = tm.get("momentum_score")
+            val_str = f"{cagr:+.1f}% CAGR" if cagr is not None else "N/A"
+            phase_str = phase.replace("_", " ").title() if phase else ""
+            if score is not None:
+                phase_str += f" ({score:.0f}/100)"
+            cards.append((label, val_str, phase_str))
+
+        if not cards:
+            return
+
+        slide = self._new_slide("momentum_dashboard", "Momentum Dashboard",
+                                section="04")
+        self._add_header(slide, "Momentum Dashboard",
+                         "Multi-Quarter Trend Analysis")
+
+        self._add_metric_cards(slide, cards[:4], top=1.5,
+                               card_width=3.0, card_height=1.4)
+
+        # Mini table: protagonist vs top 2 competitors' momentum scores
+        comp_rows = []
+        if competition is not None:
+            analyses = competition.competitor_analyses if hasattr(competition, 'competitor_analyses') else {}
+            if isinstance(analyses, dict):
+                for op_id, dd in list(analyses.items())[:2]:
+                    comp_fh = dd.get("financial_health", {}) if isinstance(dd, dict) else {}
+                    comp_rm = comp_fh.get("revenue_metrics", {}) if isinstance(comp_fh, dict) else {}
+                    if isinstance(comp_rm, dict) and comp_rm:
+                        op_name = op_id.replace("_", " ").title()
+                        c_cagr = comp_rm.get("cagr_pct")
+                        c_phase = comp_rm.get("momentum_phase", "")
+                        c_score = comp_rm.get("momentum_score")
+                        comp_rows.append(
+                            f"{op_name}: {c_cagr:+.1f}% CAGR"
+                            + (f", {c_phase.replace('_', ' ').title()}" if c_phase else "")
+                            + (f" ({c_score:.0f})" if c_score is not None else "")
+                        )
+
+        if comp_rows:
+            comp_text = "Competitor momentum: " + " | ".join(comp_rows)
+            self._add_text_box(slide, Inches(0.5), Inches(3.5),
+                               Inches(12), Inches(0.4),
+                               comp_text, font_size=10,
+                               font_color=self.style.light_text_color)
+
+        # Key message
+        phases = [c[2].split(" (")[0] for c in cards if c[2]]
+        dominant = phases[0] if phases else "Stable"
+        self._add_key_message_bar(
+            slide,
+            f"Dominant momentum: {dominant} — based on {len(cards)} KPI trend analyses"
+        )
 
     def _add_revenue_composition_trend(self, self_analysis):
         """Stacked bar chart showing revenue composition by segment over 8 quarters."""

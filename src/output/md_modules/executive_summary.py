@@ -46,6 +46,9 @@ def render_executive_summary(result, diagnosis, config) -> str:
     # 2. Situation at a Glance
     parts.append(_render_situation(result, diagnosis, config))
 
+    # 2.5. Momentum Dashboard
+    parts.append(_render_momentum_dashboard(result, config))
+
     # 3. Key Findings by BLM Look
     parts.append(_render_key_findings(result, diagnosis))
 
@@ -214,6 +217,83 @@ def _render_situation(result, diagnosis, config) -> str:
     lines.append("---")
 
     return "\n".join(lines)
+
+
+def _render_momentum_dashboard(result, config) -> str:
+    """Render 1.5 Momentum Dashboard from financial health and segment trend metrics."""
+    sa = result.self_analysis
+    if sa is None:
+        return ""
+
+    fh = safe_dict(sa, "financial_health") if sa else {}
+    if not fh:
+        return ""
+
+    # Collect rows: Metric | CAGR | Momentum Phase | Latest QoQ | Volatility
+    rows = []
+    for label, key in [("Revenue", "revenue"), ("EBITDA", "ebitda"), ("Margin", "margin")]:
+        metrics = safe_dict(fh, f"{key}_metrics")
+        if not metrics:
+            continue
+        cagr = metrics.get("cagr_pct")
+        phase = metrics.get("momentum_phase", "")
+        qoq = metrics.get("latest_qoq_pct")
+        vol = metrics.get("volatility")
+        rows.append([
+            bold(label),
+            fmt_pct(cagr) if cagr is not None else "—",
+            _phase_label(phase),
+            fmt_pct(qoq) if qoq is not None else "—",
+            f"{vol:.3f}" if vol is not None else "—",
+        ])
+
+    # Segment momentum rows
+    segments = safe_list(sa, "segment_analyses")
+    for seg in segments:
+        name = safe_get(seg, "segment_name", "")
+        trend = safe_dict(seg, "trend_data")
+        rev_metrics = trend.get("revenue_metrics") if isinstance(trend, dict) else None
+        if not isinstance(rev_metrics, dict) or not rev_metrics:
+            continue
+        cagr = rev_metrics.get("cagr_pct")
+        phase = rev_metrics.get("momentum_phase", "")
+        qoq = rev_metrics.get("latest_qoq_pct")
+        vol = rev_metrics.get("volatility")
+        rows.append([
+            name,
+            fmt_pct(cagr) if cagr is not None else "—",
+            _phase_label(phase),
+            fmt_pct(qoq) if qoq is not None else "—",
+            f"{vol:.3f}" if vol is not None else "—",
+        ])
+
+    if not rows:
+        return ""
+
+    lines = [
+        section_header("1.5 Momentum Dashboard", 2),
+        "",
+        md_table(
+            ["Metric", "CAGR", "Momentum Phase", "Latest QoQ", "Volatility"],
+            rows,
+        ),
+        "",
+        "---",
+    ]
+    return "\n".join(lines)
+
+
+def _phase_label(phase: str) -> str:
+    """Convert momentum_phase to a human-friendly label."""
+    labels = {
+        "accelerating_growth": "Accelerating Growth",
+        "decelerating_growth": "Decelerating Growth",
+        "stabilizing": "Stabilizing",
+        "accelerating_decline": "Accelerating Decline",
+        "recovery": "Recovery",
+        "flat": "Flat",
+    }
+    return labels.get(phase, phase.replace("_", " ").title() if phase else "—")
 
 
 def _render_key_findings(result, diagnosis) -> str:

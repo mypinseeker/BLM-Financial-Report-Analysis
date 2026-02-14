@@ -116,6 +116,33 @@ def _render_financial_health(sa, config) -> str:
         lines.append("")
         lines.append(code_block("\n".join(trend_lines)))
 
+    # Financial Trend Metrics table (from trend_analyzer enrichment)
+    metric_rows = []
+    for label, key in [("Revenue", "revenue"), ("EBITDA", "ebitda"), ("Margin", "margin")]:
+        tm = fh.get(f"{key}_metrics")
+        if not isinstance(tm, dict) or not tm:
+            continue
+        cagr = tm.get("cagr_pct")
+        phase = tm.get("momentum_phase", "")
+        slope = tm.get("trend_slope")
+        vol = tm.get("volatility")
+        metric_rows.append([
+            bold(label),
+            fmt_pct(cagr) if cagr is not None else "—",
+            _format_phase(phase),
+            f"{slope:+.1f}/Q" if slope is not None else "—",
+            f"{vol:.3f}" if vol is not None else "—",
+        ])
+
+    if metric_rows:
+        lines.append("")
+        lines.append(section_header("Financial Trend Metrics", 3))
+        lines.append("")
+        lines.append(md_table(
+            ["Metric", "CAGR", "Momentum Phase", "Slope (/Q)", "Volatility"],
+            metric_rows,
+        ))
+
     lines.append("")
     lines.append("---")
 
@@ -243,6 +270,35 @@ def _render_segments(sa, config, feedback=None) -> str:
                 desc = safe_get(attr, "description", "")
                 confidence = safe_get(attr, "confidence", "")
                 lines.append(f"- **{attr_type}** ({confidence}): {desc}")
+            lines.append("")
+
+        # Trend Analysis sub-table (from trend_analyzer enrichment)
+        trend = safe_dict(seg, "trend_data")
+        trend_rows = []
+        for t_key in sorted(k for k in trend if k.endswith("_metrics")):
+            tm = trend[t_key]
+            if not isinstance(tm, dict):
+                continue
+            series_name = t_key.replace("_metrics", "").replace("_", " ").title()
+            cagr = tm.get("cagr_pct")
+            phase = tm.get("momentum_phase", "")
+            vol = tm.get("volatility")
+            slope = tm.get("trend_slope")
+            trend_rows.append([
+                series_name,
+                fmt_pct(cagr) if cagr is not None else "—",
+                _format_phase(phase),
+                f"{vol:.3f}" if vol is not None else "—",
+                f"{slope:+.1f}/Q" if slope is not None else "—",
+            ])
+        if trend_rows:
+            lines.append("")
+            lines.append(section_header("Trend Analysis", 4))
+            lines.append("")
+            lines.append(md_table(
+                ["Series", "CAGR", "Momentum Phase", "Volatility", "Slope (/Q)"],
+                trend_rows,
+            ))
             lines.append("")
 
         # Key message & action
@@ -547,6 +603,19 @@ def _is_number(val) -> bool:
         return True
     except (TypeError, ValueError):
         return False
+
+
+def _format_phase(phase: str) -> str:
+    """Convert momentum_phase code to a human-friendly label."""
+    labels = {
+        "accelerating_growth": "Accelerating Growth",
+        "decelerating_growth": "Decelerating Growth",
+        "stabilizing": "Stabilizing",
+        "accelerating_decline": "Accelerating Decline",
+        "recovery": "Recovery",
+        "flat": "Flat",
+    }
+    return labels.get(phase, phase.replace("_", " ").title() if phase else "—")
 
 
 def _fix_metric_casing(text: str) -> str:

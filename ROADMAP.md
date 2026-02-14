@@ -2,11 +2,12 @@
 
 ## Current Status (2026-02-14)
 
-Engine v1.0.0 complete. Thirteen enhancement task packages (TP-1 through TP-13) delivered,
+Engine v1.0.0 complete. Fifteen enhancement task packages (TP-1 through TP-15) delivered,
 adding Supabase cloud pipeline, AI extraction, multi-market analysis, engine quality
 improvements, market readiness audit, data gap remediation, MD strategic reports, Three
 Decisions (BLM Phase 2), full Millicom group rollout, group cross-market report, Supabase
-bulk push, data provenance persistence, and Draft→Final feedback loop.
+bulk push, data provenance persistence, Draft→Final feedback loop, real data ingestion CLI,
+and multi-quarter trend analysis.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -30,6 +31,7 @@ TP-11 Millicom 11-Country Roll ████████████████�
 TP-12 Group Report + Push + Prov████████████████████  DONE  (2026-02-14)
 TP-13 Draft→Final Feedback Loop ████████████████████  DONE  (2026-02-14)
 TP-14 Real Data Ingestion CLI   ████████████████████  DONE  (2026-02-14)
+TP-15 Multi-Quarter Trend Anlys ████████████████████  DONE  (2026-02-14)
 ```
 
 ### Latest Reports: CQ4_2025
@@ -39,7 +41,7 @@ TP-14 Real Data Ingestion CLI   ████████████████
 - **Group report**: 10-market Millicom cross-market summary (JSON + TXT) with subscriber data
 - **Feedback loop**: Web UI for reviewing findings → persist feedback → regenerate final reports
 - **Audit scores**: Germany 97/A, Chile 92/A
-- **Tests**: 800 passing (as of TP-13)
+- **Tests**: 877 passing (as of TP-15)
 
 ---
 
@@ -173,6 +175,19 @@ TP-14 Real Data Ingestion CLI   ████████████████
 - **Data flow**: PDF URL → Gemini upload → per-operator extraction → `data/extraction/{op_id}_{type}.json` → review → SQLite commit
 - **New files**: `src/cli_extract.py` (~250 lines), `tests/test_cli_extract.py` (~120 lines)
 - **Modified files**: `src/extraction/prompts.py` (+30), `src/web/services/extraction_service.py` (+3), `src/database/operator_directory.py` (+10)
+
+### TP-15: Theme C — Multi-Quarter Trend Analysis (2026-02-14)
+- **Goal**: Rich trend metrics (CAGR, momentum, volatility, acceleration, seasonality) from existing 8Q timeseries data
+- **Phase 1 — Library**: `src/blm/trend_analyzer.py` — `TrendMetrics` dataclass, 9 pure functions + 1 orchestrator; stdlib `math` only, no numpy/scipy
+  - Functions: `compute_cagr`, `compute_momentum_score`, `compute_volatility`, `compute_trend_slope`, `compute_acceleration`, `classify_momentum_phase`, `compute_sequential_growth`, `compute_yoy_growth`, `detect_seasonality`, `compute_trend_metrics`
+  - 6 momentum phases: accelerating_growth, decelerating_growth, stabilizing, accelerating_decline, recovery, flat
+- **Phase 2 — Engine wiring**: `look_at_self.py` (financial health + 5 segment trend_data enriched), `look_at_competition.py` (competitor revenue/margin metrics)
+- **Phase 3 — MD outputs**: Executive Summary gains "1.5 Momentum Dashboard" table; Self Analysis gains "Financial Trend Metrics" + per-segment "Trend Analysis" tables; Competition gains per-competitor "Momentum Indicators" table
+- **Phase 4 — PPT output**: Health Check slide gains CAGR + phase annotation; new Momentum Dashboard slide with metric cards + competitor comparison
+- **Tests**: `tests/test_trend_analyzer.py` — 47 tests across 13 classes (edge cases, all-zeros, Nones, alternating, seasonality)
+- **Totals**: 877 tests pass (47 new + 830 existing), zero regressions
+- **New files**: `src/blm/trend_analyzer.py` (~250 lines), `tests/test_trend_analyzer.py` (~380 lines)
+- **Modified files**: `src/blm/look_at_self.py` (+25), `src/blm/look_at_competition.py` (+10), `src/output/md_modules/executive_summary.py` (+60), `src/output/md_modules/self_analysis.py` (+50), `src/output/md_modules/competition.py` (+30), `src/output/ppt_generator.py` (+70)
 
 ---
 

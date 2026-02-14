@@ -229,6 +229,30 @@ def _render_deep_dives(comp, target_operator: str, config=None,
                 lines.append(md_table(["Metric", "Value"], profile_rows))
             lines.append("")
 
+        # Momentum Indicators (from trend_analyzer enrichment)
+        _momentum_rows = []
+        for m_label, m_key in [("Revenue", "revenue_metrics"), ("Margin", "margin_metrics")]:
+            tm = fh.get(m_key) if fh else None
+            if not isinstance(tm, dict) or not tm:
+                continue
+            cagr = tm.get("cagr_pct")
+            phase = tm.get("momentum_phase", "")
+            score = tm.get("momentum_score")
+            _momentum_rows.append([
+                m_label,
+                f"{cagr:+.1f}%" if cagr is not None else "—",
+                _format_phase(phase),
+                f"{score:.0f}/100" if score is not None else "—",
+            ])
+        if _momentum_rows:
+            lines.append(section_header("Momentum Indicators", 4))
+            lines.append("")
+            lines.append(md_table(
+                ["Metric", "CAGR", "Phase", "Momentum Score"],
+                _momentum_rows,
+            ))
+            lines.append("")
+
         # Strategy
         strategy = safe_get(dd, "growth_strategy", "")
         if strategy:
@@ -434,3 +458,16 @@ def _render_risk_register(comp, target_operator: str) -> str:
     lines.append("---")
 
     return "\n".join(lines)
+
+
+def _format_phase(phase: str) -> str:
+    """Convert momentum_phase code to a human-friendly label."""
+    labels = {
+        "accelerating_growth": "Accelerating Growth",
+        "decelerating_growth": "Decelerating Growth",
+        "stabilizing": "Stabilizing",
+        "accelerating_decline": "Accelerating Decline",
+        "recovery": "Recovery",
+        "flat": "Flat",
+    }
+    return labels.get(phase, phase.replace("_", " ").title() if phase else "—")
