@@ -323,9 +323,10 @@ class BLMChartGenerator:
 
         bottom = np.zeros(len(x_labels))
         for i, (segment, values) in enumerate(segments.items()):
-            ax.bar(x, values, width, bottom=bottom, label=segment,
+            clean = [v if v is not None else 0 for v in values]
+            ax.bar(x, clean, width, bottom=bottom, label=segment,
                    color=self._palette_hex(i), edgecolor='white', linewidth=0.5)
-            bottom += np.array(values)
+            bottom += np.array(clean)
 
         ax.set_xticks(x)
         ax.set_xticklabels(x_labels, fontsize=10)

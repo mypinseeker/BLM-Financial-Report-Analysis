@@ -1384,8 +1384,8 @@ class BLMPPTGenerator:
                         Inches(12), Inches(4.5))
 
         # Key message: identify growing vs declining segments
-        growing = [n for n, v in seg_data.items() if v[-1] > v[0]]
-        declining = [n for n, v in seg_data.items() if v[-1] < v[0]]
+        growing = [n for n, v in seg_data.items() if (v[-1] or 0) > (v[0] or 0)]
+        declining = [n for n, v in seg_data.items() if (v[-1] or 0) < (v[0] or 0)]
         parts = []
         if growing:
             parts.append(f"Growing: {', '.join(growing)}")

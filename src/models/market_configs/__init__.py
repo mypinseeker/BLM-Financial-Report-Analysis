@@ -17,6 +17,8 @@ from src.models.market_configs.panama import PANAMA_CONFIG
 from src.models.market_configs.bolivia import BOLIVIA_CONFIG
 from src.models.market_configs.paraguay import PARAGUAY_CONFIG
 from src.models.market_configs.nicaragua import NICARAGUA_CONFIG
+from src.models.market_configs.ecuador import ECUADOR_CONFIG
+from src.models.market_configs.uruguay import URUGUAY_CONFIG
 from src.models.market_configs.chile import CHILE_CONFIG
 
 MARKET_REGISTRY: dict[str, MarketConfig] = {
@@ -29,6 +31,8 @@ MARKET_REGISTRY: dict[str, MarketConfig] = {
     "bolivia": BOLIVIA_CONFIG,
     "paraguay": PARAGUAY_CONFIG,
     "nicaragua": NICARAGUA_CONFIG,
+    "ecuador": ECUADOR_CONFIG,
+    "uruguay": URUGUAY_CONFIG,
     "chile": CHILE_CONFIG,
 }
 

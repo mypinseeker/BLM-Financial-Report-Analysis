@@ -16,7 +16,7 @@ OPERATOR_GROUPS = {
         "headquarters": "Luxembourg",
         "ir_url": "https://www.millicom.com/investors/",
         "stock_ticker": "TIGO (NASDAQ)",
-        "markets_count": 9,
+        "markets_count": 11,
         "notes": "Leading provider of mobile and cable services in Latin America",
     },
     "vodafone_group": {
@@ -426,6 +426,88 @@ OPERATOR_DIRECTORY = {
         "fiscal_year_start_month": 1,
         "quarter_naming": "calendar",
         "currency": "NIO",
+    },
+
+    # ========================================================================
+    # Ecuador
+    # ========================================================================
+    "tigo_ecuador": {
+        "display_name": "Tigo Ecuador",
+        "parent_company": "Millicom International Cellular",
+        "country": "Ecuador",
+        "region": "Latin America",
+        "market": "ecuador",
+        "operator_type": "challenger",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "USD",
+        "notes": "Acquired 2025. Formerly Telefonica Ecuador.",
+    },
+    "claro_ec": {
+        "display_name": "Claro Ecuador",
+        "parent_company": "America Movil",
+        "country": "Ecuador",
+        "region": "Latin America",
+        "market": "ecuador",
+        "operator_type": "incumbent",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "USD",
+    },
+    "cnt_ec": {
+        "display_name": "CNT Ecuador",
+        "parent_company": "Corporacion Nacional de Telecomunicaciones (State-owned)",
+        "country": "Ecuador",
+        "region": "Latin America",
+        "market": "ecuador",
+        "operator_type": "incumbent",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "USD",
+    },
+
+    # ========================================================================
+    # Uruguay
+    # ========================================================================
+    "tigo_uruguay": {
+        "display_name": "Tigo Uruguay",
+        "parent_company": "Millicom International Cellular",
+        "country": "Uruguay",
+        "region": "Latin America",
+        "market": "uruguay",
+        "operator_type": "challenger",
+        "group_id": "millicom",
+        "ir_url": "https://www.millicom.com/investors/",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "UYU",
+        "notes": "Acquired 2025. New market entry.",
+    },
+    "antel_uy": {
+        "display_name": "Antel Uruguay",
+        "parent_company": "Administracion Nacional de Telecomunicaciones (State-owned)",
+        "country": "Uruguay",
+        "region": "Latin America",
+        "market": "uruguay",
+        "operator_type": "incumbent",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "UYU",
+    },
+    "claro_uy": {
+        "display_name": "Claro Uruguay",
+        "parent_company": "America Movil",
+        "country": "Uruguay",
+        "region": "Latin America",
+        "market": "uruguay",
+        "operator_type": "challenger",
+        "group_id": "america_movil",
+        "fiscal_year_start_month": 1,
+        "quarter_naming": "calendar",
+        "currency": "UYU",
     },
 
     # ========================================================================

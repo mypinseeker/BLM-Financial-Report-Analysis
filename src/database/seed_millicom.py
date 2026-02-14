@@ -2,7 +2,7 @@
 
 Registers:
   - Millicom as an operator group
-  - 9 LATAM market operators (Tigo subsidiaries + competitors)
+  - 11 LATAM market operators (Tigo subsidiaries + competitors)
   - Group-subsidiary relationships
 
 This script works with both Supabase (via REST) and SQLite (via TelecomDatabase).
@@ -92,6 +92,22 @@ MILLICOM_SUBSIDIARIES = [
         "is_active": True,
     },
     {
+        "operator_id": "tigo_ecuador",
+        "market": "ecuador",
+        "ownership_pct": 100.0,
+        "ownership_type": "direct",
+        "local_brand": "Tigo Ecuador",
+        "is_active": True,
+    },
+    {
+        "operator_id": "tigo_uruguay",
+        "market": "uruguay",
+        "ownership_pct": 100.0,
+        "ownership_type": "direct",
+        "local_brand": "Tigo Uruguay",
+        "is_active": True,
+    },
+    {
         "operator_id": "tigo_chile",
         "market": "chile",
         "ownership_pct": 100.0,
@@ -104,7 +120,8 @@ MILLICOM_SUBSIDIARIES = [
 # Markets where Tigo operates and their competitors
 LATAM_MARKETS = [
     "guatemala", "honduras", "el_salvador", "colombia",
-    "panama", "bolivia", "paraguay", "nicaragua", "chile",
+    "panama", "bolivia", "paraguay", "nicaragua",
+    "ecuador", "uruguay", "chile",
 ]
 
 
@@ -171,7 +188,7 @@ def seed_subsidiaries(db):
 
 
 def seed_market_configs_to_db(db):
-    """Register market_configs rows for all 9 LATAM markets."""
+    """Register market_configs rows for all 11 LATAM markets."""
     from src.models.market_configs import MARKET_REGISTRY
 
     count = 0

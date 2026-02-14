@@ -1,10 +1,11 @@
 # ROADMAP.md — BLM Five Looks Analysis Engine
 
-## Current Status (2026-02-13)
+## Current Status (2026-02-14)
 
-Engine v1.0.0 complete. Eight enhancement task packages (TP-1 through TP-8) delivered on top,
+Engine v1.0.0 complete. Eleven enhancement task packages (TP-1 through TP-11) delivered,
 adding Supabase cloud pipeline, AI extraction, multi-market analysis, engine quality
-improvements, market readiness audit, data gap remediation, MD strategic reports, and housekeeping.
+improvements, market readiness audit, data gap remediation, MD strategic reports, Three
+Decisions (BLM Phase 2), and full Millicom group rollout across 11 LATAM countries.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -23,13 +24,16 @@ TP-6  Fill Data Gaps (10 flds) ████████████████�
 TP-7  MD Strategic Reports     ████████████████████  DONE  (2026-02-12)
 TP-8  Chile MD + Housekeeping  ████████████████████  DONE  (2026-02-13)
 TP-9  Tech Debt Cleanup        ████████████████████  DONE  (2026-02-13)
+TP-10 Three Decisions (Phase 2)████████████████████  DONE  (2026-02-13)
+TP-11 Millicom 11-Country Roll ████████████████████  DONE  (2026-02-14)
 ```
 
 ### Latest Reports: CQ4_2025
-- **Germany/Vodafone**: `reports/germany/vodafone_germany/CQ4_2025/` — JSON, TXT, HTML, PPTX, MD
-- **Chile/Entel**: `reports/chile/entel_cl/CQ4_2025/` — JSON, TXT, HTML, PPTX, MD
+- **12 markets analyzed**: Germany, Chile, Guatemala, Colombia, Honduras, Paraguay, Bolivia, El Salvador, Panama, Nicaragua, Ecuador, Uruguay
+- **38 operators** across all markets, **304 financial quarterly** + **subscriber quarterly** records
+- **Output formats**: JSON, TXT, HTML, PPTX, MD (Five Looks + Three Decisions)
 - **Audit scores**: Germany 97/A, Chile 92/A
-- **Tests**: 671 passing
+- **Tests**: 731 passing
 
 ---
 
@@ -99,6 +103,26 @@ TP-9  Tech Debt Cleanup        ████████████████�
 - **Sprint 2** (P2-3): SPAN bubble size differentiation — replaced hardcoded 1.0 with MA×CP formula (range 0.3–3.0, 9 unique sizes)
 - **Sprint 3** (P1-3): Integrated `create_stacked_bar` for Revenue Composition Trend slide; confirmed `create_timeline_chart` already used in deep PPT; deferred `create_heatmap` (needs churn data)
 - **Sprint 4** (P2-1): Deleted 12 root-level legacy duplicate files (434KB dead code); `src/blm/` reduced to 9 core files
+
+### TP-10: Three Decisions — BLM Phase 2 (2026-02-13)
+- Data model: `src/models/decisions.py` — 7 dataclasses (StrategicPillar, StrategyDecision, KeyTask, KeyTasksDecision, Milestone, GovernanceItem, ExecutionDecision, ThreeDecisions)
+- Engine: `src/blm/three_decisions_engine.py` — ThreeDecisionsComputer: rule-based, FiveLooksResult+Diagnosis → 3 decisions (Strategy 4 pillars, Key Tasks 8 max, Execution quarterly milestones)
+- PPT: 4 new slides (divider + strategy + key tasks + execution)
+- MD: `src/output/md_modules/decisions.py` — Module 06 renderer, wired into md_generator + TOC
+- Tests: `tests/test_three_decisions.py` — 60 tests (models, engine, rank variants, edge cases, MD renderer)
+- Total: 731 tests pass, zero regressions
+
+### TP-11: Millicom Group Full Market Rollout — 11 Countries (2026-02-14)
+- **Scope**: Seed data + enriched configs for all 11 Millicom/Tigo LATAM markets
+- **New infrastructure**: `src/database/seed_latam_helper.py` — shared seeding logic for all markets
+- **New markets added**: Ecuador (3 ops), Uruguay (3 ops) — operator_directory, market configs, seed data
+- **Seed data created** (10 markets × ~200-400 lines each):
+  - Guatemala (3 ops), Colombia (4 ops), Honduras (3 ops), Paraguay (3 ops), Bolivia (3 ops)
+  - El Salvador (3 ops), Panama (3 ops), Nicaragua (2 ops), Ecuador (3 ops), Uruguay (3 ops)
+- **Market configs enriched** (8 markets): Added operator_bmc_enrichments, operator_exposures, operator_network_enrichments to Guatemala, Colombia, Honduras, Paraguay, Bolivia, El Salvador, Panama, Nicaragua
+- **Totals**: 12 markets, 38 operators, 304 financial records, 10 MD reports (1,775–2,074 lines), 10 PPT reports (1.5–1.7 MB each)
+- **Bug fix**: PPT stacked bar chart None guard in `ppt_charts.py`
+- **Files**: 13 new files (~3,500 lines), 10 modified files (~2,000 lines enrichments)
 
 ---
 
@@ -177,7 +201,7 @@ result = engine.run_five_looks()  # uses UK config automatically
 | P2-1 | ~~Remove 12 legacy file duplicates~~ — deleted root-level dead code (434KB) | ~~Maintainability risk~~ | **DONE** TP-9 |
 | P2-2 | ~~Add missing dependencies to requirements.txt~~ — added 10 packages | ~~Deploy failures~~ | **DONE** TP-9 |
 | P2-3 | ~~Differentiate SPAN bubble sizes~~ — MA×CP formula, range 0.3–3.0 | ~~No visual hierarchy~~ | **DONE** TP-9 |
-| P2-4 | **Add "Three Decisions" slides** — Strategy/Key Tasks/Execution (BLM Phase 2) | BLM framework incomplete | Open |
+| P2-4 | ~~Add "Three Decisions" slides~~ — Strategy/Key Tasks/Execution (BLM Phase 2) | ~~BLM framework incomplete~~ | **DONE** TP-10 |
 | P2-5 | ~~Multi-market support~~ | **DONE** `9decb30` |
 
 ---
@@ -230,5 +254,5 @@ path = gen.generate(result, mode="draft",
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 671 passed
+python3 -m pytest tests/ --tb=short  # 731 passed
 ```
