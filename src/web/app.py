@@ -27,6 +27,7 @@ def create_app() -> FastAPI:
     # Register API routers
     from src.web.routers import markets, operators, outputs, cloud, pages
     from src.web.routers import groups, analyze, data_extract, audit, feedback
+    from src.web.routers import dashboard as dashboard_router
     app.include_router(markets.router)
     app.include_router(operators.router)
     app.include_router(outputs.router)
@@ -36,6 +37,7 @@ def create_app() -> FastAPI:
     app.include_router(data_extract.router)
     app.include_router(audit.router)
     app.include_router(feedback.router)
+    app.include_router(dashboard_router.router)
     app.include_router(pages.router)
 
     return app

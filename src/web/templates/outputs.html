@@ -176,7 +176,7 @@
     {% if ns.five_looks %}
     <table class="output-table">
         <thead><tr>
-            <th>File</th><th>Type</th><th>Market</th><th>Operator</th><th>Created</th><th>Download</th>
+            <th>File</th><th>Type</th><th>Market</th><th>Operator</th><th>Created</th><th>Actions</th>
         </tr></thead>
         <tbody>
         {% for o in ns.five_looks %}
@@ -191,7 +191,15 @@
             <td>{{ o.market_id | default('-') }}</td>
             <td>{{ o.operator_id | default('-') }}</td>
             <td>{{ o.created_at | default('-') }}</td>
-            <td>{% if o.id %}<a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>{% else %}-{% endif %}</td>
+            <td>
+                {% if o.id %}
+                    <a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>
+                    {% set fname = (o.file_name | default(o.storage_path | default(''))) | lower %}
+                    {% if fname.endswith('.json') %}
+                        &nbsp;|&nbsp; <a class="dl-link" href="/report/{{ o.id }}" style="color:var(--positive);">View</a>
+                    {% endif %}
+                {% else %}-{% endif %}
+            </td>
         </tr>
         {% endfor %}
         </tbody>

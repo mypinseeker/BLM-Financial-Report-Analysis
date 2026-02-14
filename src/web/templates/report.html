@@ -1,0 +1,682 @@
+{% extends "base.html" %}
+{% block title %}Report Viewer - BLM{% endblock %}
+
+{% block extra_head %}
+<style>
+/* Report layout */
+.report-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 24px;
+}
+.report-header h1 { font-size: 24px; margin-bottom: 6px; }
+.report-header .subtitle { opacity: .85; font-size: 14px; }
+.report-header .diagnosis-badge {
+    display: inline-block;
+    background: rgba(255,255,255,.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 12px;
+}
+/* TOC sidebar */
+.report-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+@media (max-width: 900px) {
+    .report-layout { grid-template-columns: 1fr; }
+    .toc { display: none; }
+}
+.toc {
+    position: sticky;
+    top: 72px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 16px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+}
+.toc h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .8px; color: var(--light-text); margin-bottom: 10px; }
+.toc a {
+    display: block;
+    padding: 5px 0;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+    transition: all .1s;
+}
+.toc a:hover, .toc a.active {
+    color: var(--primary);
+    border-left-color: var(--primary);
+    background: rgba(26,35,126,.04);
+}
+/* Report sections */
+.report-section {
+    background: var(--card-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin-bottom: 20px;
+}
+.report-section h2 {
+    font-size: 18px;
+    color: var(--primary);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
+}
+.report-section h3 { font-size: 15px; color: var(--text); margin: 16px 0 8px; }
+/* Metric panels */
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 12px 0;
+}
+.metric-panel {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 14px;
+    text-align: center;
+}
+.metric-panel .val { font-size: 22px; font-weight: 700; color: var(--primary); }
+.metric-panel .lbl { font-size: 11px; color: var(--light-text); text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
+/* PEST pills */
+.pest-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 2px;
+}
+.pest-P { background: #e3f2fd; color: #1565c0; }
+.pest-E { background: #e8f5e9; color: #2e7d32; }
+.pest-S { background: #fff3e0; color: #e65100; }
+.pest-T { background: #f3e5f5; color: #7b1fa2; }
+/* SWOT grid */
+.swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 12px 0;
+}
+.swot-box {
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 13px;
+}
+.swot-s { background: #e8f5e9; border: 1px solid #a5d6a7; }
+.swot-w { background: #ffebee; border: 1px solid #ef9a9a; }
+.swot-o { background: #e3f2fd; border: 1px solid #90caf9; }
+.swot-t { background: #fff3e0; border: 1px solid #ffcc80; }
+.swot-box h4 { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.swot-box ul { margin: 0; padding-left: 18px; }
+.swot-box li { margin-bottom: 4px; line-height: 1.4; }
+/* Finding cards */
+.finding {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--primary-light);
+    font-size: 13px;
+    line-height: 1.5;
+}
+.finding .severity {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+.severity-high { color: var(--negative); }
+.severity-medium { color: var(--warning); }
+.severity-low { color: var(--positive); }
+/* Chart containers */
+.report-chart {
+    height: 300px;
+    margin: 16px 0;
+}
+/* Loading state */
+.loading-overlay {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--light-text);
+}
+.loading-overlay .spinner {
+    display: inline-block;
+    width: 32px; height: 32px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+/* Competitor table */
+.comp-table { font-size: 13px; }
+.comp-table th { font-size: 11px; }
+.comp-table td { padding: 8px 10px; }
+.comp-rank { display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 50%; font-size: 11px; font-weight: 700; }
+.rank-1 { background: #ffd700; color: #333; }
+.rank-2 { background: #c0c0c0; color: #333; }
+.rank-3 { background: #cd7f32; color: #fff; }
+.rank-other { background: #e0e0e0; color: #666; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumb">
+    <a href="/">Dashboard</a> &rsaquo; <a href="/outputs">Outputs</a> &rsaquo; Report #{{ output_id }}
+</div>
+
+<!-- Loading state -->
+<div id="loading" class="loading-overlay">
+    <div class="spinner"></div>
+    <p style="margin-top: 12px;">Loading analysis report...</p>
+</div>
+
+<!-- Report content (hidden until loaded) -->
+<div id="report" style="display: none;">
+
+<div class="report-header" id="report-header">
+    <h1 id="report-title">BLM Five Looks Analysis</h1>
+    <div class="subtitle" id="report-subtitle">Loading...</div>
+    <div class="diagnosis-badge" id="diagnosis-badge" style="display:none;"></div>
+</div>
+
+<div class="report-layout">
+    <!-- TOC -->
+    <nav class="toc" id="toc">
+        <h3>Contents</h3>
+        <a href="#sec-summary">Executive Summary</a>
+        <a href="#sec-financial">Financial Health</a>
+        <a href="#sec-trends">Trends (PEST)</a>
+        <a href="#sec-market">Market &amp; Customer</a>
+        <a href="#sec-competition">Competition</a>
+        <a href="#sec-self">Self Analysis</a>
+        <a href="#sec-swot">SWOT</a>
+        <a href="#sec-opportunities">Opportunities</a>
+    </nav>
+
+    <!-- Main content -->
+    <div id="report-body">
+
+        <!-- Executive Summary -->
+        <div class="report-section" id="sec-summary">
+            <h2>Executive Summary</h2>
+            <div class="metric-grid" id="summary-metrics"></div>
+            <div id="summary-text"></div>
+        </div>
+
+        <!-- Financial Health -->
+        <div class="report-section" id="sec-financial">
+            <h2>Financial Health</h2>
+            <div class="metric-grid" id="financial-metrics"></div>
+            <div class="report-chart"><canvas id="revenueTrendChart"></canvas></div>
+        </div>
+
+        <!-- Trends / PEST -->
+        <div class="report-section" id="sec-trends">
+            <h2>Look 1: Trends (PEST Analysis)</h2>
+            <div id="pest-content"></div>
+        </div>
+
+        <!-- Market & Customer -->
+        <div class="report-section" id="sec-market">
+            <h2>Look 2: Market &amp; Customer ($APPEALS)</h2>
+            <div class="metric-grid" id="market-metrics"></div>
+            <div class="report-chart"><canvas id="appealsChart"></canvas></div>
+            <div id="market-segments"></div>
+        </div>
+
+        <!-- Competition -->
+        <div class="report-section" id="sec-competition">
+            <h2>Look 3: Competition (Porter Five Forces)</h2>
+            <div id="competition-content"></div>
+            <h3>Competitor Benchmarking</h3>
+            <div style="overflow-x:auto;"><table class="comp-table" id="comp-table">
+                <thead><tr><th>Operator</th><th class="num">Revenue</th><th class="num">EBITDA Margin</th><th>Competitive Position</th></tr></thead>
+                <tbody id="comp-body"></tbody>
+            </table></div>
+        </div>
+
+        <!-- Self Analysis -->
+        <div class="report-section" id="sec-self">
+            <h2>Look 4: Self Analysis (BMC)</h2>
+            <div class="metric-grid" id="self-metrics"></div>
+            <div id="self-segments"></div>
+        </div>
+
+        <!-- SWOT -->
+        <div class="report-section" id="sec-swot">
+            <h2>SWOT Synthesis</h2>
+            <div class="swot-grid" id="swot-grid"></div>
+        </div>
+
+        <!-- Opportunities -->
+        <div class="report-section" id="sec-opportunities">
+            <h2>Look 5: Opportunities (SPAN Matrix)</h2>
+            <div class="report-chart"><canvas id="spanChart"></canvas></div>
+            <div id="opportunities-list"></div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const OUTPUT_ID = {{ output_id }};
+
+fetch(`/api/dashboard/report-data/${OUTPUT_ID}`)
+    .then(r => r.json())
+    .then(data => {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('report').style.display = 'block';
+        if (data.error) {
+            document.getElementById('report-body').innerHTML =
+                `<div class="report-section"><p style="color:var(--negative);">${data.error}</p></div>`;
+            return;
+        }
+        renderReport(data);
+    })
+    .catch(err => {
+        document.getElementById('loading').innerHTML =
+            `<p style="color:var(--negative);">Failed to load report: ${err.message}</p>`;
+    });
+
+function fmtRev(v) {
+    if (v == null) return '-';
+    if (typeof v === 'string') v = parseFloat(v);
+    if (isNaN(v)) return '-';
+    if (Math.abs(v) >= 10000) return (v / 1000).toFixed(1) + 'B';
+    if (Math.abs(v) >= 1) return v.toFixed(0) + 'M';
+    return v.toFixed(2) + 'M';
+}
+
+function fmtPct(v) {
+    if (v == null) return '-';
+    return v.toFixed(1) + '%';
+}
+
+function fmtNum(v) {
+    if (v == null) return '-';
+    if (typeof v === 'string') v = parseFloat(v);
+    if (isNaN(v)) return '-';
+    if (v >= 1000) return (v / 1000).toFixed(1) + 'M';
+    return v.toFixed(0) + 'K';
+}
+
+function renderReport(data) {
+    const meta = data.meta || {};
+    const fl = data.five_looks || {};
+
+    // Header
+    const op = (meta.target_operator || '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const market = (meta.market || '').replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    document.getElementById('report-title').textContent = `BLM Five Looks: ${op}`;
+    document.getElementById('report-subtitle').textContent =
+        `${market} Market | Period: ${meta.analysis_period || 'N/A'} | Generated: ${(meta.generated_at || '').slice(0, 10)}`;
+
+    // Financial Health
+    const self = fl.self_analysis || {};
+    const fh = self.financial_health || {};
+    renderMetrics('financial-metrics', [
+        { val: fmtRev(fh.total_revenue), lbl: 'Revenue' },
+        { val: fmtRev(fh.ebitda), lbl: 'EBITDA' },
+        { val: fmtPct(fh.ebitda_margin_pct), lbl: 'EBITDA Margin' },
+        { val: fmtRev(fh.service_revenue), lbl: 'Service Revenue' },
+        { val: fmtRev(fh.capex), lbl: 'CapEx' },
+    ]);
+
+    // Summary metrics
+    const ms = fl.market_customer?.market_snapshot || {};
+    renderMetrics('summary-metrics', [
+        { val: fmtRev(fh.total_revenue), lbl: 'Operator Revenue' },
+        { val: fmtRev(ms.total_revenue), lbl: 'Market Revenue' },
+        { val: fmtPct(fh.ebitda_margin_pct), lbl: 'EBITDA Margin' },
+        { val: ms.total_operators || '-', lbl: 'Operators' },
+    ]);
+
+    // Revenue trend chart
+    renderRevenueTrend(fh);
+
+    // PEST
+    renderPEST(fl.trends?.pest || {});
+
+    // Market / $APPEALS
+    renderMarket(fl.market_customer || {});
+
+    // Competition
+    renderCompetition(fl.competition || {});
+
+    // Self
+    renderSelf(self);
+
+    // SWOT
+    renderSWOT(fl.swot || {});
+
+    // Opportunities
+    renderOpportunities(fl.opportunities || {});
+}
+
+function renderMetrics(containerId, items) {
+    const c = document.getElementById(containerId);
+    if (!c) return;
+    c.innerHTML = items.map(m =>
+        `<div class="metric-panel"><div class="val">${m.val}</div><div class="lbl">${m.lbl}</div></div>`
+    ).join('');
+}
+
+function renderRevenueTrend(fh) {
+    const ctx = document.getElementById('revenueTrendChart');
+    if (!ctx) return;
+    // Try to extract trend data
+    const trend = fh.revenue_trend || fh.quarterly_revenue || [];
+    if (trend.length < 2) {
+        ctx.parentElement.innerHTML = '<p style="color:var(--light-text);font-size:13px;text-align:center;">No trend data available</p>';
+        return;
+    }
+    const labels = trend.map((_, i) => `Q${i + 1}`);
+    const values = trend.map(v => typeof v === 'object' ? (v.value || v.total_revenue || 0) : v);
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                label: 'Revenue (M)',
+                data: values,
+                borderColor: '#1a237e',
+                backgroundColor: 'rgba(26,35,126,.08)',
+                fill: true,
+                tension: .3,
+                pointRadius: 4,
+                pointBackgroundColor: '#1a237e',
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: false, ticks: { callback: v => fmtRev(v) } },
+                x: { grid: { display: false } }
+            }
+        }
+    });
+}
+
+function renderPEST(pest) {
+    const c = document.getElementById('pest-content');
+    if (!c) return;
+    const dims = ['political_factors', 'economic_factors', 'social_factors', 'technological_factors'];
+    const labels = { political_factors: 'Political', economic_factors: 'Economic', social_factors: 'Social', technological_factors: 'Technological' };
+    const dimChar = { political_factors: 'P', economic_factors: 'E', social_factors: 'S', technological_factors: 'T' };
+
+    let html = '';
+    dims.forEach(dim => {
+        const factors = pest[dim] || [];
+        if (!factors.length) return;
+        const ch = dimChar[dim];
+        html += `<h3><span class="pest-pill pest-${ch}">${ch}</span> ${labels[dim]} (${factors.length} factors)</h3>`;
+        factors.slice(0, 5).forEach(f => {
+            const sev = f.severity || 'medium';
+            html += `<div class="finding">
+                <div class="severity severity-${sev}">${sev} | ${f.impact_type || 'both'} | ${f.time_horizon || ''}</div>
+                <strong>${f.factor_name || 'Factor'}</strong><br>
+                ${f.industry_impact || f.current_status || ''}
+            </div>`;
+        });
+        if (factors.length > 5) {
+            html += `<p style="font-size:12px;color:var(--light-text);margin:4px 0 12px;">+ ${factors.length - 5} more factors</p>`;
+        }
+    });
+    c.innerHTML = html || '<p style="color:var(--light-text);">No PEST data available.</p>';
+}
+
+function renderMarket(mc) {
+    const ms = mc.market_snapshot || {};
+    renderMetrics('market-metrics', [
+        { val: fmtRev(ms.total_revenue), lbl: 'Market Revenue' },
+        { val: ms.total_operators || '-', lbl: 'Operators' },
+        { val: fmtNum(ms.total_mobile_subs_k), lbl: 'Mobile Subs' },
+        { val: fmtNum(ms.total_broadband_subs_k), lbl: 'Broadband Subs' },
+    ]);
+
+    // $APPEALS radar
+    const appeals = mc.appeals_assessment || {};
+    const scores = appeals.dimension_scores || appeals;
+    const dimensions = ['Availability', 'Packaging', 'Performance', 'Ease_of_Use', 'Assurance', 'Lifecycle_Cost', 'Social_Influence'];
+    const dimLabels = dimensions.map(d => d.replace(/_/g, ' '));
+    const vals = dimensions.map(d => {
+        const v = scores[d] || scores[d.toLowerCase()] || scores[d.replace(/_/g, '')] || 0;
+        return typeof v === 'object' ? (v.score || v.value || 0) : v;
+    });
+
+    if (vals.some(v => v > 0)) {
+        const ctx = document.getElementById('appealsChart');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: dimLabels,
+                datasets: [{
+                    label: '$APPEALS',
+                    data: vals,
+                    backgroundColor: 'rgba(26,35,126,.15)',
+                    borderColor: '#1a237e',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#1a237e',
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: { r: { beginAtZero: true, max: 10, ticks: { stepSize: 2 } } },
+                plugins: { legend: { display: false } }
+            }
+        });
+    } else {
+        document.getElementById('appealsChart').parentElement.innerHTML =
+            '<p style="color:var(--light-text);font-size:13px;text-align:center;">No $APPEALS scores available</p>';
+    }
+
+    // Customer segments
+    const segs = mc.customer_segments || [];
+    if (segs.length) {
+        const el = document.getElementById('market-segments');
+        let html = '<h3>Customer Segments</h3>';
+        segs.slice(0, 8).forEach(s => {
+            html += `<div class="finding">
+                <strong>${s.segment_name || s.name || 'Segment'}</strong>
+                ${s.size_description ? ' &mdash; ' + s.size_description : ''}
+                ${s.growth_rate ? '<br>Growth: ' + s.growth_rate : ''}
+            </div>`;
+        });
+        el.innerHTML = html;
+    }
+}
+
+function renderCompetition(comp) {
+    const c = document.getElementById('competition-content');
+    const ff = comp.five_forces || {};
+
+    // Five Forces summary
+    const forces = ['existing_competitors', 'new_entrants', 'substitutes', 'buyer_power', 'supplier_power'];
+    const forceLabels = {
+        existing_competitors: 'Competitive Rivalry',
+        new_entrants: 'Threat of New Entrants',
+        substitutes: 'Threat of Substitutes',
+        buyer_power: 'Buyer Power',
+        supplier_power: 'Supplier Power'
+    };
+    let html = '<div class="metric-grid">';
+    forces.forEach(f => {
+        const force = ff[f] || {};
+        const intensity = force.intensity || force.level || 'medium';
+        const colors = { high: 'var(--negative)', medium: 'var(--warning)', low: 'var(--positive)' };
+        html += `<div class="metric-panel">
+            <div class="val" style="font-size:14px;color:${colors[intensity] || 'var(--text)'};">${intensity.toUpperCase()}</div>
+            <div class="lbl">${forceLabels[f] || f}</div>
+        </div>`;
+    });
+    html += '</div>';
+    c.innerHTML = html;
+
+    // Competitor table
+    const competitors = comp.competitor_deep_dives || comp.competitor_profiles || [];
+    const tbody = document.getElementById('comp-body');
+    if (competitors.length) {
+        tbody.innerHTML = competitors.map((cd, i) => {
+            const rank = i + 1;
+            const rankClass = rank <= 3 ? `rank-${rank}` : 'rank-other';
+            return `<tr>
+                <td><span class="comp-rank ${rankClass}">${rank}</span> ${cd.display_name || cd.operator_id || ''}</td>
+                <td class="num">${fmtRev(cd.revenue || cd.total_revenue)}</td>
+                <td class="num">${fmtPct(cd.ebitda_margin_pct || cd.ebitda_margin)}</td>
+                <td>${cd.competitive_position || cd.market_position || '-'}</td>
+            </tr>`;
+        }).join('');
+    } else {
+        tbody.innerHTML = '<tr><td colspan="4" style="color:var(--light-text);text-align:center;">No competitor data</td></tr>';
+    }
+}
+
+function renderSelf(self) {
+    const fh = self.financial_health || {};
+    const segs = self.segment_analyses || [];
+
+    renderMetrics('self-metrics', [
+        { val: fmtRev(fh.total_revenue), lbl: 'Total Revenue' },
+        { val: fmtPct(fh.ebitda_margin_pct), lbl: 'EBITDA Margin' },
+        { val: fmtPct(fh.revenue_growth_pct), lbl: 'Revenue Growth' },
+        { val: fmtRev(fh.capex), lbl: 'CapEx' },
+    ]);
+
+    if (segs.length) {
+        const el = document.getElementById('self-segments');
+        let html = '<h3>Business Segments</h3>';
+        segs.forEach(s => {
+            const km = s.key_metrics || {};
+            html += `<div class="finding">
+                <strong>${s.segment_name || 'Segment'}</strong>
+                ${km.revenue ? ' | Revenue: ' + fmtRev(km.revenue) : ''}
+                ${km.subscribers_k ? ' | Subs: ' + fmtNum(km.subscribers_k) : ''}
+                ${s.action_required ? '<br><span class="badge badge-warning" style="font-size:11px;">' + s.action_required + '</span>' : ''}
+            </div>`;
+        });
+        el.innerHTML = html;
+    }
+}
+
+function renderSWOT(swot) {
+    const grid = document.getElementById('swot-grid');
+    const sections = [
+        { key: 'strengths', label: 'Strengths', cls: 'swot-s' },
+        { key: 'weaknesses', label: 'Weaknesses', cls: 'swot-w' },
+        { key: 'opportunities', label: 'Opportunities', cls: 'swot-o' },
+        { key: 'threats', label: 'Threats', cls: 'swot-t' },
+    ];
+    grid.innerHTML = sections.map(s => {
+        const items = swot[s.key] || [];
+        const list = items.slice(0, 6).map(item => {
+            const text = typeof item === 'string' ? item : (item.description || item.name || JSON.stringify(item));
+            return `<li>${text.substring(0, 120)}${text.length > 120 ? '...' : ''}</li>`;
+        }).join('');
+        return `<div class="swot-box ${s.cls}">
+            <h4>${s.label} (${items.length})</h4>
+            <ul>${list || '<li>None identified</li>'}</ul>
+            ${items.length > 6 ? `<p style="font-size:11px;color:var(--light-text);margin-top:4px;">+ ${items.length - 6} more</p>` : ''}
+        </div>`;
+    }).join('');
+}
+
+function renderOpportunities(opps) {
+    const positions = opps.span_positions || [];
+    const insights = opps.opportunity_insights || opps.prioritized_opportunities || [];
+
+    // SPAN bubble chart
+    if (positions.length) {
+        const ctx = document.getElementById('spanChart');
+        const datasets = positions.map((p, i) => ({
+            label: p.opportunity_name || `Opp ${i + 1}`,
+            data: [{
+                x: p.market_size_score || p.market_attractiveness || 5,
+                y: p.competitive_position_score || p.competitive_position || 5,
+                r: Math.max(6, Math.min(20, (p.priority_score || 5) * 2))
+            }],
+            backgroundColor: `hsla(${(i * 37) % 360}, 65%, 55%, 0.6)`,
+            borderColor: `hsla(${(i * 37) % 360}, 65%, 45%, 1)`,
+            borderWidth: 1,
+        }));
+
+        new Chart(ctx, {
+            type: 'bubble',
+            data: { datasets },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => {
+                                const d = ctx.dataset;
+                                const p = ctx.raw;
+                                return `${d.label}: MA=${p.x}, CP=${p.y}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Market Attractiveness' }, min: 0, max: 10 },
+                    y: { title: { display: true, text: 'Competitive Position' }, min: 0, max: 10 }
+                }
+            }
+        });
+    } else {
+        document.getElementById('spanChart').parentElement.innerHTML =
+            '<p style="color:var(--light-text);font-size:13px;text-align:center;">No SPAN data available</p>';
+    }
+
+    // Opportunity list
+    const el = document.getElementById('opportunities-list');
+    const allOpps = positions.length ? positions : insights;
+    if (allOpps.length) {
+        let html = '<h3>Prioritized Opportunities</h3>';
+        allOpps.slice(0, 10).forEach((o, i) => {
+            const name = o.opportunity_name || o.name || `Opportunity ${i + 1}`;
+            const desc = o.description || o.rationale || '';
+            html += `<div class="finding">
+                <strong>${i + 1}. ${name}</strong>
+                ${desc ? '<br>' + desc.substring(0, 200) : ''}
+            </div>`;
+        });
+        el.innerHTML = html;
+    }
+}
+
+// TOC active state tracking
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            document.querySelectorAll('.toc a').forEach(a => a.classList.remove('active'));
+            const link = document.querySelector(`.toc a[href="#${e.target.id}"]`);
+            if (link) link.classList.add('active');
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.report-section').forEach(s => observer.observe(s));
+</script>
+{% endblock %}

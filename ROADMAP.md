@@ -33,6 +33,7 @@ TP-13 Draft→Final Feedback Loop ███████████████�
 TP-14 Real Data Ingestion CLI   ████████████████████  DONE  (2026-02-14)
 TP-15 Multi-Quarter Trend Anlys ████████████████████  DONE  (2026-02-14)
 TP-16 Market Share Trend Anlys  ████████████████████  DONE  (2026-02-14)
+TP-17 Interactive Web Dashboard ████████████████████  DONE  (2026-02-14)
 ```
 
 ### Latest Reports: CQ4_2025
@@ -42,6 +43,9 @@ TP-16 Market Share Trend Anlys  ████████████████
 - **Group report**: 10-market Millicom cross-market summary (JSON + TXT) with subscriber data
 - **Feedback loop**: Web UI for reviewing findings → persist feedback → regenerate final reports
 - **Audit scores**: Germany 97/A, Chile 92/A
+- **Web dashboard**: Interactive KPIs, cross-market comparison, revenue charts, sparklines
+- **Report viewer**: In-browser analysis report with Chart.js (PEST, $APPEALS radar, SPAN bubble, SWOT, competitor table)
+- **Audit page**: Web UI for 3-layer market readiness audit with score visualization
 - **Tests**: 916 passing (as of TP-16)
 
 ---
@@ -203,6 +207,18 @@ TP-16 Market Share Trend Anlys  ████████████████
 - **New files**: `src/blm/share_analyzer.py` (~280 lines), `tests/test_share_analyzer.py` (~300 lines)
 - **Modified files**: `src/blm/look_at_self.py` (+30), `src/output/md_modules/self_analysis.py` (+70), `src/output/md_modules/executive_summary.py` (+15), `src/output/md_modules/competition.py` (+25), `src/output/ppt_generator.py` (+55)
 
+### TP-17: Interactive Web Dashboard & Report Viewer (2026-02-14)
+- **Goal**: Transform the web app from a basic scaffold into an interactive strategic analysis platform
+- **Phase 1 — Executive Dashboard**: Rewrote `dashboard.html` (52→425 lines) with KPI hero cards (markets, operators, data rows, analyses), Chart.js revenue-by-market bar chart, cross-market comparison table with trend arrows, revenue sparklines per market, analysis pipeline status panel, quick action buttons
+- **Phase 2 — Dashboard API**: New `src/web/routers/dashboard.py` with 3 endpoints: `/api/dashboard/summary` (aggregate KPIs), `/api/dashboard/comparison` (cross-market financial data with operator-level detail and revenue trends), `/api/dashboard/report-data/{output_id}` (serve analysis JSON for report viewer)
+- **Phase 3 — Report Viewer**: New `/report/{output_id}` page with interactive analysis rendering from JSON output. Includes: executive summary metrics, financial health panel with revenue trend chart, PEST analysis with severity-colored finding cards, $APPEALS radar chart, Porter Five Forces intensity display, competitor benchmarking table with ranking badges, self-analysis with segment details, SWOT 2x2 colored grid, SPAN bubble chart, prioritized opportunities list. TOC sidebar with scroll-tracking active state. Loading spinner.
+- **Phase 4 — Audit Dashboard**: New `/audit` page with market/operator selector dropdowns (auto-populated), "Run Audit" button that calls existing API, visual score display (circular grade badge A-F), 3-layer breakdown with progress bars (data/analysis/provenance), per-table detail with completeness bars and missing field info, JSON export button
+- **Phase 5 — Integration**: Updated nav bar (added Audit link), added "View" links for JSON outputs in outputs page, registered dashboard router in app.py
+- **Routes**: 51 total (was 46): +3 API (`/api/dashboard/*`), +2 pages (`/report/{id}`, `/audit`)
+- **Tests**: 916 passed (no new tests needed — all changes are web/template layer), zero regressions
+- **New files**: `src/web/routers/dashboard.py` (~120 lines), `src/web/templates/report.html` (~450 lines), `src/web/templates/audit_page.html` (~280 lines)
+- **Modified files**: `src/web/templates/dashboard.html` (rewritten), `src/web/templates/base.html` (nav), `src/web/templates/outputs.html` (+View links), `src/web/routers/pages.py` (+2 routes), `src/web/app.py` (+dashboard router), `ROADMAP.md`
+
 ---
 
 ## Version History
@@ -334,5 +350,5 @@ path = gen.generate(result, mode="draft",
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 800 passed
+python3 -m pytest tests/ --tb=short  # 916 passed
 ```

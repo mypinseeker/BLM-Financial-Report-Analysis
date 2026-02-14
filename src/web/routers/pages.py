@@ -120,6 +120,47 @@ def feedback_page(request: Request, job_id: int):
     })
 
 
+@router.get("/report/{output_id}")
+def report_page(request: Request, output_id: int):
+    """Interactive report viewer for analysis JSON output."""
+    svc = get_data_service()
+    output = svc.get_analysis_outputs()
+    record = None
+    for o in output:
+        if o.get("id") == output_id:
+            record = o
+            break
+    if not record:
+        raise HTTPException(404, f"Output #{output_id} not found")
+    return templates.TemplateResponse("report.html", {
+        "request": request,
+        "output_id": output_id,
+        "record": record,
+    })
+
+
+@router.get("/audit")
+def audit_page(request: Request):
+    """Market readiness audit dashboard."""
+    svc = get_data_service()
+    markets = svc.get_available_markets()
+    # Build operator map for each market
+    market_operators = {}
+    for m in markets:
+        mid = m.get("market_id", "")
+        ops = svc.get_operators_in_market(mid)
+        market_operators[mid] = [
+            {"operator_id": o["operator_id"], "display_name": o.get("display_name", "")}
+            for o in ops
+        ]
+    import json as _json
+    return templates.TemplateResponse("audit_page.html", {
+        "request": request,
+        "markets": markets,
+        "market_operators_json": _json.dumps(market_operators),
+    })
+
+
 @router.get("/review")
 def review_list_page(request: Request):
     """List all extraction jobs for review."""
