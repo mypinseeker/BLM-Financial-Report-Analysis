@@ -1,0 +1,90 @@
+================================================================================
+  BLM Group Analysis Summary: MILLICOM (Tigo)
+  Period: CQ4_2025
+  Markets: 11
+================================================================================
+
+[Revenue Comparison]
+  Market                     Revenue    Growth   EBITDA Margin
+  --------------------  ------------  --------  --------------
+  bolivia                      1,890     +6.8%           42.6%
+  chile                          N/A       N/A             N/A
+  colombia                     2,420     +7.1%           35.1%
+  ecuador                        355     +6.0%           32.7%
+  el_salvador                    139     +6.1%           42.4%
+  guatemala                    4,350     +7.4%           45.1%
+  honduras                     4,760     +7.2%           45.0%
+  nicaragua                    2,410     +5.2%           45.0%
+  panama                         161     +8.1%           43.5%
+  paraguay                     2,060     +6.2%           45.1%
+  uruguay                      2,010     +6.3%           30.0%
+
+[Subscriber Comparison]
+  Market                  Mobile (K)      BB (K)      ARPU
+  --------------------  ------------  ----------  --------
+  bolivia                        N/A         N/A       N/A
+  chile                          N/A         N/A       N/A
+  colombia                       N/A         N/A       N/A
+  ecuador                        N/A         N/A       N/A
+  el_salvador                    N/A         N/A       N/A
+  guatemala                      N/A         N/A       N/A
+  honduras                       N/A         N/A       N/A
+  nicaragua                      N/A         N/A       N/A
+  panama                         N/A         N/A       N/A
+  paraguay                       N/A         N/A       N/A
+  uruguay                        N/A         N/A       N/A
+
+[Competitive Position]
+  bolivia               Rank: None  Intensity: medium
+  chile                 Rank: None  Intensity: medium
+  colombia              Rank: None  Intensity: high
+  ecuador               Rank: None  Intensity: medium
+  el_salvador           Rank: None  Intensity: medium
+  guatemala             Rank: None  Intensity: medium
+  honduras              Rank: None  Intensity: medium
+  nicaragua             Rank: None  Intensity: medium
+  panama                Rank: None  Intensity: medium
+  paraguay              Rank: None  Intensity: medium
+  uruguay               Rank: None  Intensity: medium
+
+[Common Opportunities (2+ markets)]
+  -> regulatory environment: compliance requirements and spectrum
+  -> national digital strategy: fiber/5g coverage mandates may re
+  -> so-1
+  -> so-2
+  -> 5g sa enabling network slicing and enterprise services
+  -> ai/ml for network optimization and customer experience
+  -> open ran for vendor diversification and cost reduction
+  -> wo-1
+  -> wo-2
+  -> st-1
+
+[Common Threats (2+ markets)]
+  !! regulatory environment: compliance requirements and spectrum
+  !! substitutes pressure
+  !! buyer power pressure
+  !! substitutes
+  !! buyer_power
+  !! existing competitors pressure
+  !! existing_competitors
+
+[Key Findings]
+  * Strongest revenue growth: panama (+8.1%)
+  * Weakest revenue growth: nicaragua (+5.2%)
+  * High competitive intensity in: colombia
+  * Total opportunities identified across all markets: 263
+
+[Market Health Ratings]
+  bolivia               stable
+  chile                 stable
+  colombia              stable
+  ecuador               stable
+  el_salvador           stable
+  guatemala             stable
+  honduras              stable
+  nicaragua             stable
+  panama                stable
+  paraguay              stable
+  uruguay               stable
+
+================================================================================

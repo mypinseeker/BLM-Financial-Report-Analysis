@@ -1,0 +1,312 @@
+{
+  "group_id": "millicom",
+  "group_name": "Millicom International Cellular S.A.",
+  "market_count": 11,
+  "markets": [
+    "guatemala",
+    "colombia",
+    "honduras",
+    "paraguay",
+    "bolivia",
+    "el_salvador",
+    "panama",
+    "nicaragua",
+    "ecuador",
+    "uruguay",
+    "chile"
+  ],
+  "revenue_comparison": {
+    "guatemala": {
+      "total_revenue": 4350.0,
+      "revenue_growth_pct": 7.41,
+      "ebitda_margin_pct": 45.1,
+      "ebitda": 1960.0
+    },
+    "colombia": {
+      "total_revenue": 2420.0,
+      "revenue_growth_pct": 7.08,
+      "ebitda_margin_pct": 35.1,
+      "ebitda": 850.0
+    },
+    "honduras": {
+      "total_revenue": 4760.0,
+      "revenue_growth_pct": 7.21,
+      "ebitda_margin_pct": 45.0,
+      "ebitda": 2140.0
+    },
+    "paraguay": {
+      "total_revenue": 2060.0,
+      "revenue_growth_pct": 6.19,
+      "ebitda_margin_pct": 45.1,
+      "ebitda": 930.0
+    },
+    "bolivia": {
+      "total_revenue": 1890.0,
+      "revenue_growth_pct": 6.78,
+      "ebitda_margin_pct": 42.6,
+      "ebitda": 805.0
+    },
+    "el_salvador": {
+      "total_revenue": 139.0,
+      "revenue_growth_pct": 6.11,
+      "ebitda_margin_pct": 42.4,
+      "ebitda": 59.0
+    },
+    "panama": {
+      "total_revenue": 161.0,
+      "revenue_growth_pct": 8.05,
+      "ebitda_margin_pct": 43.5,
+      "ebitda": 70.0
+    },
+    "nicaragua": {
+      "total_revenue": 2410.0,
+      "revenue_growth_pct": 5.24,
+      "ebitda_margin_pct": 45.0,
+      "ebitda": 1085.0
+    },
+    "ecuador": {
+      "total_revenue": 355.0,
+      "revenue_growth_pct": 5.97,
+      "ebitda_margin_pct": 32.7,
+      "ebitda": 116.0
+    },
+    "uruguay": {
+      "total_revenue": 2010.0,
+      "revenue_growth_pct": 6.35,
+      "ebitda_margin_pct": 30.0,
+      "ebitda": 603.0
+    },
+    "chile": {
+      "total_revenue": null,
+      "revenue_growth_pct": null,
+      "ebitda_margin_pct": null,
+      "ebitda": null
+    }
+  },
+  "subscriber_comparison": {
+    "guatemala": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "colombia": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "honduras": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "paraguay": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "bolivia": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "el_salvador": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "panama": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "nicaragua": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "ecuador": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "uruguay": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    },
+    "chile": {
+      "mobile_subs_k": null,
+      "broadband_subs_k": null,
+      "mobile_arpu": null
+    }
+  },
+  "competitive_position": {
+    "guatemala": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "colombia": {
+      "ranking": null,
+      "intensity": "high"
+    },
+    "honduras": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "paraguay": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "bolivia": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "el_salvador": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "panama": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "nicaragua": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "ecuador": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "uruguay": {
+      "ranking": null,
+      "intensity": "medium"
+    },
+    "chile": {
+      "ranking": null,
+      "intensity": "medium"
+    }
+  },
+  "common_opportunities": [
+    "regulatory environment: compliance requirements and spectrum",
+    "national digital strategy: fiber/5g coverage mandates may re",
+    "so-1",
+    "so-2",
+    "5g sa enabling network slicing and enterprise services",
+    "ai/ml for network optimization and customer experience",
+    "open ran for vendor diversification and cost reduction",
+    "wo-1",
+    "wo-2",
+    "st-1",
+    "st-2",
+    "wt-1",
+    "wt-2",
+    "so-3",
+    "wo-3",
+    "st-3",
+    "wt-3",
+    "so-4",
+    "st-4",
+    "wo-4",
+    "wt-4",
+    "tigo guatemala revenue growth 7.4% yoy",
+    "tigo launches tigo money mobile wallet expansion",
+    "tigo guatemala expands 4g lte coverage to 5 new departments",
+    "tigo colombia revenue growth 7.1% yoy",
+    "tigo-une launches 5g in bogota and medellin",
+    "wom reaches 4.6m subscribers in colombia",
+    "tigo honduras revenue growth 7.2% yoy",
+    "digicel honduras revenue decline 5.2% yoy",
+    "tigo honduras expands hfc network to secondary cities",
+    "tigo paraguay revenue growth 6.2% yoy",
+    "tigo paraguay expands 4g lte to rural departments",
+    "tigo bolivia revenue growth 6.8% yoy",
+    "tigo bolivia launches fiber broadband in santa cruz",
+    "tigo el salvador revenue growth 6.1% yoy",
+    "digicel el salvador revenue decline 9.5% yoy",
+    "digicel el salvador ebitda margin compression: 15.8% vs 17.9",
+    "tigo el salvador launches tigo money bitcoin integration",
+    "tigo panama revenue growth 8.1% yoy",
+    "digicel panama revenue decline 7.0% yoy",
+    "tigo panama expands fiber broadband to panama city suburbs",
+    "tigo nicaragua revenue growth 5.2% yoy",
+    "tigo nicaragua expands 4g to pacific coast cities",
+    "tigo ecuador revenue growth 6.0% yoy",
+    "millicom completes acquisition of telefonica ecuador",
+    "tigo uruguay revenue growth 6.3% yoy",
+    "millicom enters uruguay market via acquisition"
+  ],
+  "common_threats": [
+    "regulatory environment: compliance requirements and spectrum",
+    "substitutes pressure",
+    "buyer power pressure",
+    "substitutes",
+    "buyer_power",
+    "existing competitors pressure",
+    "existing_competitors"
+  ],
+  "capex_investment": {
+    "guatemala": {
+      "capex_to_revenue_pct": 15.4,
+      "capex": 670.0
+    },
+    "colombia": {
+      "capex_to_revenue_pct": 20.2,
+      "capex": 490.0
+    },
+    "honduras": {
+      "capex_to_revenue_pct": 15.0,
+      "capex": 715.0
+    },
+    "paraguay": {
+      "capex_to_revenue_pct": 15.8,
+      "capex": 325.0
+    },
+    "bolivia": {
+      "capex_to_revenue_pct": 15.6,
+      "capex": 295.0
+    },
+    "el_salvador": {
+      "capex_to_revenue_pct": 15.8,
+      "capex": 22.0
+    },
+    "panama": {
+      "capex_to_revenue_pct": 16.1,
+      "capex": 26.0
+    },
+    "nicaragua": {
+      "capex_to_revenue_pct": 15.1,
+      "capex": 365.0
+    },
+    "ecuador": {
+      "capex_to_revenue_pct": 18.0,
+      "capex": 64.0
+    },
+    "uruguay": {
+      "capex_to_revenue_pct": 19.2,
+      "capex": 385.0
+    },
+    "chile": {
+      "capex_to_revenue_pct": null,
+      "capex": null
+    }
+  },
+  "health_ratings": {
+    "guatemala": "stable",
+    "colombia": "stable",
+    "honduras": "stable",
+    "paraguay": "stable",
+    "bolivia": "stable",
+    "el_salvador": "stable",
+    "panama": "stable",
+    "nicaragua": "stable",
+    "ecuador": "stable",
+    "uruguay": "stable",
+    "chile": "stable"
+  },
+  "key_findings": [
+    "Strongest revenue growth: panama (+8.1%)",
+    "Weakest revenue growth: nicaragua (+5.2%)",
+    "High competitive intensity in: colombia",
+    "Total opportunities identified across all markets: 263"
+  ]
+}

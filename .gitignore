@@ -35,6 +35,7 @@ data/processed/*
 !data/processed/.gitkeep
 data/output/
 !data/output/.gitkeep
+!data/output/group/
 
 # Jupyter
 .ipynb_checkpoints/
