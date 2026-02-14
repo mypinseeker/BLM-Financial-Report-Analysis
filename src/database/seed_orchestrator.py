@@ -39,7 +39,6 @@ TIGO_OPERATORS = [
     ("tigo_nicaragua", "nicaragua"),
     ("tigo_ecuador", "ecuador"),
     ("tigo_uruguay", "uruguay"),
-    ("tigo_chile", "chile"),
 ]
 
 

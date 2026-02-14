@@ -1,7 +1,7 @@
 {
   "group_id": "millicom",
   "group_name": "Millicom International Cellular S.A.",
-  "market_count": 11,
+  "market_count": 10,
   "markets": [
     "guatemala",
     "colombia",
@@ -12,8 +12,7 @@
     "panama",
     "nicaragua",
     "ecuador",
-    "uruguay",
-    "chile"
+    "uruguay"
   ],
   "revenue_comparison": {
     "guatemala": {
@@ -75,69 +74,58 @@
       "revenue_growth_pct": 6.35,
       "ebitda_margin_pct": 30.0,
       "ebitda": 603.0
-    },
-    "chile": {
-      "total_revenue": null,
-      "revenue_growth_pct": null,
-      "ebitda_margin_pct": null,
-      "ebitda": null
     }
   },
   "subscriber_comparison": {
     "guatemala": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 11250.0,
+      "broadband_subs_k": 660.0,
+      "mobile_arpu": 25.8
     },
     "colombia": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 15900.0,
+      "broadband_subs_k": 1880.0,
+      "mobile_arpu": 7850.0
     },
     "honduras": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 6500.0,
+      "broadband_subs_k": 525.0,
+      "mobile_arpu": 46.9
     },
     "paraguay": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 4620.0,
+      "broadband_subs_k": 350.0,
+      "mobile_arpu": 29.0
     },
     "bolivia": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 5760.0,
+      "broadband_subs_k": 250.0,
+      "mobile_arpu": 23.3
     },
     "el_salvador": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 3480.0,
+      "broadband_subs_k": 256.0,
+      "mobile_arpu": 3.2
     },
     "panama": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 2310.0,
+      "broadband_subs_k": 222.0,
+      "mobile_arpu": 4.4
     },
     "nicaragua": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 4150.0,
+      "broadband_subs_k": 165.0,
+      "mobile_arpu": 44.3
     },
     "ecuador": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_subs_k": 5850.0,
+      "broadband_subs_k": 490.0,
+      "mobile_arpu": 4.0
     },
     "uruguay": {
-      "mobile_subs_k": null,
+      "mobile_subs_k": 840.0,
       "broadband_subs_k": null,
-      "mobile_arpu": null
-    },
-    "chile": {
-      "mobile_subs_k": null,
-      "broadband_subs_k": null,
-      "mobile_arpu": null
+      "mobile_arpu": 211.3
     }
   },
   "competitive_position": {
@@ -180,10 +168,6 @@
     "uruguay": {
       "ranking": null,
       "intensity": "medium"
-    },
-    "chile": {
-      "ranking": null,
-      "intensity": "medium"
     }
   },
   "common_opportunities": [
@@ -191,18 +175,18 @@
     "national digital strategy: fiber/5g coverage mandates may re",
     "so-1",
     "so-2",
+    "so-3",
     "5g sa enabling network slicing and enterprise services",
     "ai/ml for network optimization and customer experience",
     "open ran for vendor diversification and cost reduction",
     "wo-1",
     "wo-2",
+    "wo-3",
     "st-1",
     "st-2",
+    "st-3",
     "wt-1",
     "wt-2",
-    "so-3",
-    "wo-3",
-    "st-3",
     "wt-3",
     "so-4",
     "st-4",
@@ -284,10 +268,6 @@
     "uruguay": {
       "capex_to_revenue_pct": 19.2,
       "capex": 385.0
-    },
-    "chile": {
-      "capex_to_revenue_pct": null,
-      "capex": null
     }
   },
   "health_ratings": {
@@ -300,13 +280,12 @@
     "panama": "stable",
     "nicaragua": "stable",
     "ecuador": "stable",
-    "uruguay": "stable",
-    "chile": "stable"
+    "uruguay": "stable"
   },
   "key_findings": [
     "Strongest revenue growth: panama (+8.1%)",
     "Weakest revenue growth: nicaragua (+5.2%)",
     "High competitive intensity in: colombia",
-    "Total opportunities identified across all markets: 263"
+    "Total opportunities identified across all markets: 243"
   ]
 }

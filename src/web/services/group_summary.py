@@ -80,10 +80,26 @@ class GroupSummaryGenerator:
                 continue
 
             fh = sa.financial_health or {}
+
+            # Primary: financial_health; fallback: segment_analyses key_metrics
+            mobile_k = fh.get("mobile_total_k") or fh.get("mobile_subscribers_k")
+            bb_k = fh.get("broadband_total_k") or fh.get("broadband_subscribers_k")
+            arpu = fh.get("mobile_arpu") or fh.get("blended_arpu")
+
+            if (mobile_k is None or bb_k is None or arpu is None) and sa.segment_analyses:
+                for seg in sa.segment_analyses:
+                    km = seg.key_metrics or {}
+                    if mobile_k is None:
+                        mobile_k = km.get("mobile_total_k") or km.get("mobile_subscribers_k")
+                    if bb_k is None:
+                        bb_k = km.get("broadband_total_k") or km.get("broadband_subscribers_k")
+                    if arpu is None:
+                        arpu = km.get("mobile_arpu") or km.get("blended_arpu")
+
             comparison[market] = {
-                "mobile_subs_k": fh.get("mobile_total_k") or fh.get("mobile_subscribers_k"),
-                "broadband_subs_k": fh.get("broadband_total_k") or fh.get("broadband_subscribers_k"),
-                "mobile_arpu": fh.get("mobile_arpu") or fh.get("blended_arpu"),
+                "mobile_subs_k": mobile_k,
+                "broadband_subs_k": bb_k,
+                "mobile_arpu": arpu,
             }
         return comparison
 
