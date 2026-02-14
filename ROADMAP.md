@@ -34,9 +34,9 @@ TP-12 Group Report + Push + Prov████████████████
 - **12 markets analyzed**: Germany, Chile, Guatemala, Colombia, Honduras, Paraguay, Bolivia, El Salvador, Panama, Nicaragua, Ecuador, Uruguay
 - **38 operators** across all markets, **304 financial quarterly** + **subscriber quarterly** records
 - **Output formats**: JSON, TXT, HTML, PPTX, MD (Five Looks + Three Decisions)
-- **Group report**: 11-market Millicom cross-market summary (JSON + TXT)
+- **Group report**: 10-market Millicom cross-market summary (JSON + TXT) with subscriber data
 - **Audit scores**: Germany 97/A, Chile 92/A
-- **Tests**: 741 passing
+- **Tests**: 741 passing (as of TP-12)
 
 ---
 
@@ -141,6 +141,8 @@ TP-12 Group Report + Push + Prov████████████████
   - Wired into `analysis_runner._run_engine()` — auto-saves provenance after each engine run
   - 10 new tests: empty store, sources, tracked values, roundtrip, quality report, job isolation, idempotent, engine integration
 - **Bug fix**: `seed_millicom.py` `db.execute()` → `db.conn.execute()` (TelecomDatabase API mismatch)
+- **Bug fix**: Subscriber comparison nulls — `_compare_subscribers()` now falls back to `segment_analyses[].key_metrics` for mobile/BB/ARPU data (`d5de0db`)
+- **Bug fix**: Removed phantom `tigo_chile` from TIGO_OPERATORS (Millicom doesn't operate in Chile; no seed data existed) — group report now 10 markets (`55d3e4f`)
 - **Tests**: 741 passed (731 existing + 10 new), zero regressions
 
 ---
@@ -273,5 +275,5 @@ path = gen.generate(result, mode="draft",
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 731 passed
+python3 -m pytest tests/ --tb=short  # 741 passed
 ```
