@@ -9,7 +9,7 @@ NETHERLANDS_CONFIG = MarketConfig(
     currency="EUR",
     currency_symbol="\u20ac",
     regulatory_body="ACM (Autoriteit Consument & Markt)",
-    population_k=17800,
+    population_k=18131,
 
     customer_segments=[
         {

@@ -9,7 +9,7 @@ BELGIUM_CONFIG = MarketConfig(
     currency="EUR",
     currency_symbol="\u20ac",
     regulatory_body="BIPT/IBPT (Belgian Institute for Postal Services and Telecommunications)",
-    population_k=11700,
+    population_k=11759,
 
     customer_segments=[
         {
