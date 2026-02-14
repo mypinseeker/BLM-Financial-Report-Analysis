@@ -541,7 +541,7 @@ class TestBLMPPTGenerator:
         slide_count = len(prs.slides)
         # Expect 30+ slides with all sections populated
         assert slide_count >= 25, f"Expected >= 25 slides, got {slide_count}"
-        assert slide_count <= 50, f"Expected <= 50 slides, got {slide_count}"
+        assert slide_count <= 55, f"Expected <= 55 slides, got {slide_count}"
 
     def test_final_mode_filters_slides(self, ppt_gen, mock_result):
         # First generate draft to get slide count

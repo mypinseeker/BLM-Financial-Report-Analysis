@@ -18,6 +18,12 @@ from src.models.self_analysis import (
 from src.models.swot import SWOTAnalysis
 from src.models.opportunity import SPANPosition, OpportunityItem, OpportunityInsight
 from src.models.feedback import UserFeedback
+from src.models.decisions import (
+    StrategicPillar, StrategyDecision,
+    KeyTask, KeyTasksDecision,
+    Milestone, GovernanceItem, ExecutionDecision,
+    ThreeDecisions,
+)
 
 __all__ = [
     # Provenance
@@ -38,4 +44,9 @@ __all__ = [
     "SPANPosition", "OpportunityItem", "OpportunityInsight",
     # Feedback
     "UserFeedback",
+    # Decisions
+    "StrategicPillar", "StrategyDecision",
+    "KeyTask", "KeyTasksDecision",
+    "Milestone", "GovernanceItem", "ExecutionDecision",
+    "ThreeDecisions",
 ]

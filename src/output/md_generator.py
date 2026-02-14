@@ -68,6 +68,7 @@ class BLMMdGenerator:
             render_self_analysis,
             render_swot,
             render_opportunities,
+            render_decisions,
         )
 
         module_renderers = [
@@ -79,6 +80,7 @@ class BLMMdGenerator:
             ("04", "Look 4: Self — BMC + Capability", render_self_analysis),
             ("SW", "SWOT Synthesis", render_swot),
             ("05", "Look 5: Opportunities — SPAN Matrix", render_opportunities),
+            ("06", "Three Decisions — Strategy & Execution", render_decisions),
         ]
 
         for mod_id, mod_title, renderer in module_renderers:
@@ -161,6 +163,7 @@ class BLMMdGenerator:
             ("04", "Look 4: Self — BMC + Capability", "self-analysis-bmc"),
             ("SW", "SWOT Synthesis", "swot-synthesis"),
             ("05", "Look 5: Opportunities — SPAN Matrix", "opportunities-span-matrix"),
+            ("06", "Three Decisions — Strategy & Execution", "three-decisions-strategy-execution"),
         ]
 
         rows = []

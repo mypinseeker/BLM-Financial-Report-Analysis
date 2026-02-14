@@ -189,6 +189,9 @@ class BLMPPTGenerator:
         self._add_priority_table(result.opportunities)
         self._add_opportunity_deep_dive(result.opportunities)
 
+        # --- Three Decisions (BLM Phase 2) ---
+        self._add_three_decisions_slides(result)
+
         # --- Summary ---
         self._add_summary_slide(result)
         self._add_provenance_appendix(result)
@@ -1807,6 +1810,227 @@ class BLMPPTGenerator:
 
         km = opp.key_message or "Detailed opportunity analysis"
         self._add_key_message_bar(slide, km)
+
+    # =========================================================================
+    # Three Decisions slides (BLM Phase 2)
+    # =========================================================================
+
+    def _add_three_decisions_slides(self, result):
+        """Generate Three Decisions slides from FiveLooksResult."""
+        try:
+            from src.output.strategic_diagnosis import StrategicDiagnosisComputer
+            from src.blm.three_decisions_engine import ThreeDecisionsComputer
+            from src.models.market_configs import get_market_config
+
+            config = get_market_config(result.market) if result.market else None
+            diag = StrategicDiagnosisComputer(result, config).compute()
+            decisions = ThreeDecisionsComputer(result, diag, config).compute()
+        except Exception:
+            return  # Graceful fallback — skip if engine fails
+
+        self._add_section_divider("Three Decisions",
+                                  "Strategy — Key Tasks — Execution")
+        self._add_strategy_slide(decisions)
+        self._add_key_tasks_slide(decisions)
+        self._add_execution_slide(decisions)
+
+    def _add_strategy_slide(self, decisions):
+        """Decision 1: Strategic Direction with 4 pillars."""
+        slide = self._new_slide("strategy_decision", "Define Strategy")
+        self._add_header(slide, "Decision 1: Define Strategy",
+                         decisions.strategy.competitive_posture)
+
+        # Overall direction as subtitle
+        self._add_text_box(
+            slide, Inches(0.5), Inches(1.3), Inches(12), Inches(0.6),
+            decisions.strategy.overall_direction,
+            font_size=13, bold=True,
+            font_color=self.style.accent_color)
+
+        # 4 strategic pillars as colored cards
+        pillars = decisions.strategy.pillars
+        card_w = Inches(3.0)
+        card_h = Inches(3.5)
+        gap = Inches(0.15)
+        left_start = Inches(0.35)
+        top = Inches(2.1)
+
+        priority_colors = {"P0": (0xC0, 0x39, 0x2B),
+                           "P1": (0xE6, 0x7E, 0x22),
+                           "P2": (0x27, 0xAE, 0x60)}
+
+        for i, pillar in enumerate(pillars[:4]):
+            left = left_start + i * (card_w + gap)
+            # Card background
+            fill = (0xF8, 0xF9, 0xFA) if i % 2 == 0 else (0xEB, 0xF5, 0xFB)
+            self._add_shape(slide, left, top, card_w, card_h, fill_color=fill)
+
+            # Priority badge background
+            p_color = priority_colors.get(pillar.priority, (0x95, 0xA5, 0xA6))
+            self._add_shape(slide, left + Inches(0.08), top + Inches(0.08),
+                            Inches(0.45), Inches(0.28), fill_color=p_color)
+            self._add_text_box(slide, left + Inches(0.12), top + Inches(0.09),
+                               Inches(0.4), Inches(0.25), pillar.priority,
+                               font_size=9, bold=True, font_color=(0xFF, 0xFF, 0xFF))
+
+            # Pillar name
+            self._add_text_box(slide, left + Inches(0.1), top + Inches(0.45),
+                               card_w - Inches(0.2), Inches(0.35), pillar.name,
+                               font_size=12, bold=True,
+                               font_color=self.style.text_color)
+
+            # Direction text
+            self._add_text_box(slide, left + Inches(0.1), top + Inches(0.85),
+                               card_w - Inches(0.2), Inches(1.3), pillar.direction,
+                               font_size=10, font_color=(0x2C, 0x3E, 0x50))
+
+            # KPIs
+            kpi_text = "\n".join(f"- {k}" for k in pillar.kpis[:3])
+            self._add_text_box(slide, left + Inches(0.1), top + Inches(2.3),
+                               card_w - Inches(0.2), Inches(1.0), kpi_text,
+                               font_size=9, font_color=(0x7F, 0x8C, 0x8D))
+
+        self._add_key_message_bar(slide, decisions.narrative[:120])
+
+    def _add_key_tasks_slide(self, decisions):
+        """Decision 2: Key Tasks prioritized by domain."""
+        slide = self._new_slide("key_tasks_decision", "Define Key Tasks")
+        self._add_header(slide, "Decision 2: Define Key Tasks",
+                         decisions.key_tasks.resource_implication)
+
+        tasks = decisions.key_tasks.tasks
+        if not tasks:
+            return
+
+        domain_colors = {
+            "Network": (0x29, 0x80, 0xB9),
+            "Business": (0x27, 0xAE, 0x60),
+            "Customer": (0x8E, 0x44, 0xAD),
+            "Efficiency": (0xE6, 0x7E, 0x22),
+        }
+        priority_fills = {
+            "P0": (0xFD, 0xED, 0xEC),
+            "P1": (0xFE, 0xF5, 0xE7),
+            "P2": (0xEA, 0xFB, 0xF0),
+        }
+        priority_badge = {
+            "P0": (0xC0, 0x39, 0x2B),
+            "P1": (0xE6, 0x7E, 0x22),
+            "P2": (0x27, 0xAE, 0x60),
+        }
+
+        row_h = Inches(0.65)
+        top = Inches(1.5)
+
+        for i, task in enumerate(tasks[:8]):
+            y = top + i * row_h
+            fill = priority_fills.get(task.priority, (0xF5, 0xF5, 0xF5))
+            self._add_shape(slide, Inches(0.3), y, Inches(12.4),
+                            row_h - Inches(0.05), fill_color=fill)
+
+            # Priority badge
+            self._add_shape(slide, Inches(0.4), y + Inches(0.15),
+                            Inches(0.45), Inches(0.3),
+                            fill_color=priority_badge.get(task.priority, (0x95, 0xA5, 0xA6)))
+            self._add_text_box(slide, Inches(0.42), y + Inches(0.16),
+                               Inches(0.42), Inches(0.28), task.priority,
+                               font_size=9, bold=True, font_color=(0xFF, 0xFF, 0xFF))
+
+            # Domain tag
+            d_color = domain_colors.get(task.domain, (0x7F, 0x8C, 0x8D))
+            self._add_text_box(slide, Inches(1.0), y + Inches(0.16),
+                               Inches(1.2), Inches(0.3), task.domain,
+                               font_size=9, bold=True, font_color=d_color)
+
+            # Task name + description
+            self._add_text_box(slide, Inches(2.3), y + Inches(0.08),
+                               Inches(5.5), Inches(0.25), task.name,
+                               font_size=11, bold=True, font_color=(0x2C, 0x3E, 0x50))
+            self._add_text_box(slide, Inches(2.3), y + Inches(0.35),
+                               Inches(5.5), Inches(0.25), task.description[:80],
+                               font_size=8, font_color=(0x7F, 0x8C, 0x8D))
+
+            # KPIs on right
+            kpi_str = " | ".join(task.kpis[:2])
+            self._add_text_box(slide, Inches(8.0), y + Inches(0.15),
+                               Inches(4.5), Inches(0.35), kpi_str,
+                               font_size=8, font_color=(0x56, 0x6C, 0x73))
+
+        km = f"{len(tasks)} critical tasks: {decisions.key_tasks.resource_implication}"
+        self._add_key_message_bar(slide, km)
+
+    def _add_execution_slide(self, decisions):
+        """Decision 3: Execution timeline + governance."""
+        slide = self._new_slide("execution_decision", "Define Execution")
+        self._add_header(slide, "Decision 3: Define Execution",
+                         "Quarterly Roadmap & Governance")
+
+        # Use timeline chart for milestones
+        milestones_data = []
+        for ms in decisions.execution.milestones:
+            delivs = "\n".join(d[:40] for d in ms.deliverables[:2])
+            milestones_data.append({
+                "date": ms.quarter,
+                "name": f"{ms.name}\n{delivs}",
+                "priority": ms.priority,
+            })
+
+        if milestones_data:
+            chart_path = self.chart_gen.create_timeline_chart(
+                milestones_data,
+                title="Execution Roadmap",
+                filename="execution_timeline.png")
+            self._add_image(slide, chart_path, Inches(0.3), Inches(1.3),
+                            Inches(12.5), Inches(2.8))
+
+        # Governance section
+        gov = decisions.execution.governance
+        if gov:
+            gov_top = Inches(4.4)
+            self._add_text_box(slide, Inches(0.5), gov_top,
+                               Inches(4), Inches(0.3), "Governance",
+                               font_size=12, bold=True,
+                               font_color=self.style.text_color)
+            for j, g in enumerate(gov[:3]):
+                self._add_text_box(
+                    slide, Inches(0.5), gov_top + Inches(0.4) + j * Inches(0.4),
+                    Inches(5.5), Inches(0.35),
+                    f"- {g.mechanism} ({g.cadence})",
+                    font_size=9, font_color=(0x2C, 0x3E, 0x50))
+
+        # Traps to avoid section
+        traps = decisions.execution.traps_to_avoid
+        if traps:
+            trap_top = Inches(4.4)
+            self._add_text_box(slide, Inches(7.0), trap_top,
+                               Inches(5), Inches(0.3), "Strategic Traps to Avoid",
+                               font_size=12, bold=True,
+                               font_color=(0xC0, 0x39, 0x2B))
+            for j, trap in enumerate(traps[:3]):
+                trap_text = trap.get("trap", "") if isinstance(trap, dict) else str(trap)
+                self._add_text_box(
+                    slide, Inches(7.0), trap_top + Inches(0.4) + j * Inches(0.4),
+                    Inches(5.5), Inches(0.35),
+                    f"x {trap_text}",
+                    font_size=9, font_color=(0xC0, 0x39, 0x2B))
+
+        # Risks
+        risks = decisions.execution.risk_mitigation
+        if risks:
+            risk_top = Inches(5.8)
+            self._add_text_box(slide, Inches(0.5), risk_top,
+                               Inches(12), Inches(0.3), "Key Risks & Mitigation",
+                               font_size=11, bold=True,
+                               font_color=self.style.text_color)
+            for j, risk in enumerate(risks[:3]):
+                self._add_text_box(
+                    slide, Inches(0.5), risk_top + Inches(0.35) + j * Inches(0.3),
+                    Inches(12), Inches(0.28),
+                    f"! {risk.get('risk', '')} -- {risk.get('mitigation', '')}",
+                    font_size=8, font_color=(0x56, 0x6C, 0x73))
+
+        self._add_key_message_bar(slide,
+            "Execute with discipline: monthly reviews, quarterly checkpoints, annual refresh")
 
     # =========================================================================
     # Summary slides

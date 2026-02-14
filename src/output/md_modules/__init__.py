@@ -11,6 +11,7 @@ from .competition import render_competition
 from .self_analysis import render_self_analysis
 from .swot import render_swot
 from .opportunities import render_opportunities
+from .decisions import render_decisions
 
 __all__ = [
     "render_executive_summary",
@@ -21,4 +22,5 @@ __all__ = [
     "render_self_analysis",
     "render_swot",
     "render_opportunities",
+    "render_decisions",
 ]
