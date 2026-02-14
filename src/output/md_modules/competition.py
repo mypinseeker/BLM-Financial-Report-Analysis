@@ -211,6 +211,7 @@ def _render_deep_dives(comp, target_operator: str, config=None,
             'revenue_trend', 'ebitda_trend', 'margin_trend',
             'revenue_growing', 'margin_healthy',
             'quarters_analyzed', 'status', 'latest_quarter',
+            'revenue_metrics', 'margin_metrics',
         }
 
         if fh or sh:

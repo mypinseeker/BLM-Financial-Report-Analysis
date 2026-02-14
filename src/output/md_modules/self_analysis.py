@@ -85,6 +85,7 @@ def _render_financial_health(sa, config) -> str:
         'revenue_trend', 'ebitda_trend', 'margin_trend',
         'revenue_growing', 'margin_healthy',
         'quarters_analyzed', 'status', 'latest_quarter',
+        'revenue_metrics', 'ebitda_metrics', 'margin_metrics',
     }
 
     rows = []
