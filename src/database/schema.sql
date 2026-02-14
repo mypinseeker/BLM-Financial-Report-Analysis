@@ -241,13 +241,17 @@ CREATE TABLE IF NOT EXISTS data_provenance (
 
 CREATE TABLE IF NOT EXISTS user_feedback (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    look_category TEXT NOT NULL,  -- "trend" / "market" / "competition" / "self" / "opportunity"
+    analysis_job_id INTEGER,
+    operator_id TEXT,
+    period TEXT,
+    look_category TEXT NOT NULL,  -- "trends" / "market" / "competition" / "self" / "swot" / "opportunity"
     finding_ref TEXT,
-    feedback_type TEXT NOT NULL,  -- "agree" / "disagree" / "modify" / "add"
+    feedback_type TEXT NOT NULL,  -- "confirmed" / "disputed" / "modified" / "supplemented"
     original_value TEXT,
     user_comment TEXT,
     user_value TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(analysis_job_id, operator_id, look_category, finding_ref)
 );
 
 -- Indexes for common queries
@@ -263,3 +267,4 @@ CREATE INDEX IF NOT EXISTS idx_provenance_entity ON data_provenance(entity_type,
 CREATE INDEX IF NOT EXISTS idx_provenance_job ON data_provenance(analysis_job_id);
 CREATE INDEX IF NOT EXISTS idx_tariff_operator_period ON tariffs(operator_id, snapshot_period);
 CREATE INDEX IF NOT EXISTS idx_tariff_type_period ON tariffs(plan_type, snapshot_period);
+CREATE INDEX IF NOT EXISTS idx_feedback_job ON user_feedback(analysis_job_id, operator_id);

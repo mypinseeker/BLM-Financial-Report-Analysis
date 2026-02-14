@@ -24,7 +24,7 @@ from src.models.self_analysis import (
 )
 from src.models.swot import SWOTAnalysis
 from src.models.opportunity import SPANPosition, OpportunityItem, OpportunityInsight
-from src.models.feedback import UserFeedback
+from src.models.feedback import UserFeedback, FEEDBACK_TYPES
 
 
 # =====================================================================
@@ -862,11 +862,34 @@ class TestUserFeedback:
     def test_defaults(self):
         fb = UserFeedback(look_category="competition")
         assert fb.finding_ref == ""
-        assert fb.feedback_type == "comment"
+        assert fb.feedback_type == "confirmed"
         assert fb.original_value is None
         assert fb.user_comment == ""
         assert fb.user_value is None
+        assert fb.analysis_job_id == 0
+        assert fb.operator_id == ""
+        assert fb.period == ""
         assert isinstance(fb.created_at, datetime)
+
+    def test_to_dict(self):
+        fb = UserFeedback(
+            look_category="trends",
+            finding_ref="pest_eco",
+            analysis_job_id=5,
+            operator_id="vf_de",
+            period="CQ4_2025",
+        )
+        d = fb.to_dict()
+        assert d["look_category"] == "trends"
+        assert d["analysis_job_id"] == 5
+        assert isinstance(d["created_at"], str)
+
+    def test_feedback_types(self):
+        assert "confirmed" in FEEDBACK_TYPES
+        assert "disputed" in FEEDBACK_TYPES
+        assert "modified" in FEEDBACK_TYPES
+        assert "supplemented" in FEEDBACK_TYPES
+        assert len(FEEDBACK_TYPES) == 4
 
     def test_all_categories(self):
         categories = ["trends", "market", "competition", "self", "swot", "opportunity"]

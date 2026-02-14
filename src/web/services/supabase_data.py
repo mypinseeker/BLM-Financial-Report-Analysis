@@ -476,6 +476,46 @@ class SupabaseDataService:
         return resp.data[0] if resp.data else {}
 
     # ------------------------------------------------------------------
+    # User Feedback
+    # ------------------------------------------------------------------
+
+    def upsert_feedback(self, rows: list[dict]) -> list[dict]:
+        """Upsert user feedback rows. Conflict: analysis_job_id,operator_id,look_category,finding_ref."""
+        if not rows:
+            return []
+        resp = (
+            self._client.table("user_feedback")
+            .upsert(rows, on_conflict="analysis_job_id,operator_id,look_category,finding_ref")
+            .execute()
+        )
+        return resp.data or []
+
+    def get_feedback(self, analysis_job_id: int,
+                     operator_id: Optional[str] = None,
+                     look_category: Optional[str] = None) -> list[dict]:
+        """Query user feedback for a job, with optional operator/look filters."""
+        q = self._client.table("user_feedback").select("*").eq("analysis_job_id", analysis_job_id)
+        if operator_id:
+            q = q.eq("operator_id", operator_id)
+        if look_category:
+            q = q.eq("look_category", look_category)
+        q = q.order("created_at", desc=True)
+        resp = q.execute()
+        return resp.data or []
+
+    def clear_feedback(self, analysis_job_id: int,
+                       operator_id: str) -> int:
+        """Delete all feedback for a job + operator. Returns deleted count."""
+        resp = (
+            self._client.table("user_feedback")
+            .delete()
+            .eq("analysis_job_id", analysis_job_id)
+            .eq("operator_id", operator_id)
+            .execute()
+        )
+        return len(resp.data) if resp.data else 0
+
+    # ------------------------------------------------------------------
     # Cloud status
     # ------------------------------------------------------------------
 

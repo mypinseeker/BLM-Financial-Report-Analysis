@@ -309,6 +309,80 @@ def cmd_audit(args):
     return 0
 
 
+def cmd_feedback(args):
+    """Manage user feedback records."""
+    from src.database.db import TelecomDatabase
+    from src.models.feedback import FEEDBACK_TYPES
+
+    db = TelecomDatabase("data/telecom.db")
+    db.init()
+
+    action = args.action
+
+    if action == "add":
+        if not args.job_id or not args.operator or not args.look or not args.finding:
+            print("ERROR: --job-id, --operator, --look, and --finding are required for 'add'")
+            return 1
+        if args.type and args.type not in FEEDBACK_TYPES:
+            print(f"ERROR: --type must be one of {FEEDBACK_TYPES}")
+            return 1
+        data = {
+            "analysis_job_id": args.job_id,
+            "operator_id": args.operator,
+            "period": args.period or "",
+            "look_category": args.look,
+            "finding_ref": args.finding,
+            "feedback_type": args.type or "confirmed",
+            "user_comment": args.comment or "",
+            "original_value": args.value,
+            "user_value": args.value,
+        }
+        db.upsert_feedback(data)
+        print(f"Feedback upserted: job={args.job_id} op={args.operator} "
+              f"look={args.look} finding={args.finding} type={args.type or 'confirmed'}")
+        return 0
+
+    elif action == "list":
+        rows = db.get_feedback(
+            analysis_job_id=args.job_id,
+            operator_id=args.operator,
+            look_category=args.look,
+        )
+        if not rows:
+            print("No feedback records found.")
+            return 0
+        print(f"{'ID':>5}  {'Job':>5}  {'Operator':15}  {'Look':14}  {'Finding':20}  {'Type':12}  {'Comment'}")
+        print("-" * 100)
+        for r in rows:
+            print(f"{r.get('id', ''):>5}  {r.get('analysis_job_id', ''):>5}  "
+                  f"{r.get('operator_id', ''):15}  {r.get('look_category', ''):14}  "
+                  f"{r.get('finding_ref', ''):20}  {r.get('feedback_type', ''):12}  "
+                  f"{r.get('user_comment', '')}")
+        print(f"\n{len(rows)} record(s)")
+        return 0
+
+    elif action == "export":
+        rows = db.get_feedback(
+            analysis_job_id=args.job_id,
+            operator_id=args.operator,
+            look_category=args.look,
+        )
+        print(json.dumps(rows, indent=2, default=str))
+        return 0
+
+    elif action == "clear":
+        if not args.job_id or not args.operator:
+            print("ERROR: --job-id and --operator are required for 'clear'")
+            return 1
+        count = db.clear_feedback(args.job_id, args.operator)
+        print(f"Cleared {count} feedback record(s) for job={args.job_id} op={args.operator}")
+        return 0
+
+    else:
+        print(f"Unknown action: {action}. Use add/list/export/clear.")
+        return 1
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="BLM Analysis CLI — Execute analysis jobs"
@@ -345,6 +419,19 @@ def main():
     p_audit.add_argument("--n-quarters", type=int, default=8, help="Historical range in quarters (default: 8)")
     p_audit.add_argument("--output-json", default=None, help="Path to save JSON report")
 
+    # feedback
+    p_feedback = sub.add_parser("feedback", help="Manage user feedback")
+    p_feedback.add_argument("action", choices=["add", "list", "export", "clear"],
+                            help="Action: add/list/export/clear")
+    p_feedback.add_argument("--job-id", type=int, default=None, help="Analysis job ID")
+    p_feedback.add_argument("--operator", default=None, help="Operator ID")
+    p_feedback.add_argument("--look", default=None, help="Look category (trends/market/competition/self/swot/opportunity)")
+    p_feedback.add_argument("--finding", default=None, help="Finding reference")
+    p_feedback.add_argument("--type", default=None, help="Feedback type (confirmed/disputed/modified/supplemented)")
+    p_feedback.add_argument("--comment", default=None, help="User comment")
+    p_feedback.add_argument("--value", default=None, help="User value (override)")
+    p_feedback.add_argument("--period", default=None, help="Analysis period (e.g., CQ4_2025)")
+
     args = parser.parse_args()
 
     if not args.command:
@@ -357,6 +444,7 @@ def main():
         "list": cmd_list,
         "status": cmd_status,
         "audit": cmd_audit,
+        "feedback": cmd_feedback,
     }
 
     exit_code = commands[args.command](args)

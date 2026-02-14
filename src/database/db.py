@@ -429,6 +429,79 @@ class TelecomDatabase:
         self.conn.commit()
 
     # =========================================================================
+    # User Feedback
+    # =========================================================================
+
+    def upsert_feedback(self, feedback_data: dict):
+        """Insert or update a user feedback record.
+
+        Conflict on (analysis_job_id, operator_id, look_category, finding_ref).
+        """
+        fields = {
+            "analysis_job_id": feedback_data.get("analysis_job_id"),
+            "operator_id": feedback_data.get("operator_id", ""),
+            "period": feedback_data.get("period", ""),
+            "look_category": feedback_data["look_category"],
+            "finding_ref": feedback_data.get("finding_ref", ""),
+            "feedback_type": feedback_data.get("feedback_type", "confirmed"),
+            "original_value": feedback_data.get("original_value"),
+            "user_comment": feedback_data.get("user_comment", ""),
+            "user_value": feedback_data.get("user_value"),
+        }
+
+        columns = ", ".join(fields.keys())
+        placeholders = ", ".join(["?"] * len(fields))
+        updates = ", ".join([
+            f"{k} = excluded.{k}" for k in fields.keys()
+            if k not in ("analysis_job_id", "operator_id", "look_category", "finding_ref")
+        ])
+
+        sql = f"""
+            INSERT INTO user_feedback ({columns})
+            VALUES ({placeholders})
+            ON CONFLICT(analysis_job_id, operator_id, look_category, finding_ref)
+            DO UPDATE SET {updates}
+        """
+        self.conn.execute(sql, list(fields.values()))
+        self.conn.commit()
+
+    def get_feedback(self, analysis_job_id: Optional[int] = None,
+                     operator_id: Optional[str] = None,
+                     look_category: Optional[str] = None) -> list:
+        """Query user feedback with optional filters."""
+        conditions = []
+        params = []
+
+        if analysis_job_id is not None:
+            conditions.append("analysis_job_id = ?")
+            params.append(analysis_job_id)
+        if operator_id is not None:
+            conditions.append("operator_id = ?")
+            params.append(operator_id)
+        if look_category is not None:
+            conditions.append("look_category = ?")
+            params.append(look_category)
+
+        where_clause = (" WHERE " + " AND ".join(conditions)) if conditions else ""
+        sql = f"""
+            SELECT * FROM user_feedback
+            {where_clause}
+            ORDER BY created_at DESC
+        """
+        rows = self.conn.execute(sql, params).fetchall()
+        return self._rows_to_dicts(rows)
+
+    def clear_feedback(self, analysis_job_id: int,
+                       operator_id: str) -> int:
+        """Delete all feedback for a given job + operator. Returns deleted count."""
+        cursor = self.conn.execute(
+            "DELETE FROM user_feedback WHERE analysis_job_id = ? AND operator_id = ?",
+            [analysis_job_id, operator_id],
+        )
+        self.conn.commit()
+        return cursor.rowcount
+
+    # =========================================================================
     # Query Methods
     # =========================================================================
 

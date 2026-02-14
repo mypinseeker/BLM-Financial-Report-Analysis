@@ -36,7 +36,7 @@ TP-12 Group Report + Push + Prov████████████████
 - **Output formats**: JSON, TXT, HTML, PPTX, MD (Five Looks + Three Decisions)
 - **Group report**: 10-market Millicom cross-market summary (JSON + TXT) with subscriber data
 - **Audit scores**: Germany 97/A, Chile 92/A
-- **Tests**: 741 passing (as of TP-12)
+- **Tests**: 767 passing (as of P1-5)
 
 ---
 
@@ -213,7 +213,7 @@ result = engine.run_five_looks()  # uses UK config automatically
 | P1-2 | ~~Fill NetworkAnalysis 7 fields~~ | ~~Network slide lacks strategic depth~~ | **DONE** TP-6 `cdce1e5` |
 | P1-3 | ~~Use remaining chart types~~ — stacked_bar integrated, timeline already used, heatmap deferred | ~~Chart gap~~ | **DONE** TP-9 |
 | P1-4 | ~~Clean seed data language~~ — intelligence_events translated to English | ~~Mixed language outputs~~ | **DONE** `9207312` |
-| P1-5 | **Implement user_feedback persistence** — Add upsert_feedback() + CLI command | Draft→Final loop lacks persistence | Open |
+| P1-5 | ~~Implement user_feedback persistence~~ — upsert_feedback/get_feedback/clear_feedback + CLI `feedback` subcommand | ~~Draft→Final loop lacks persistence~~ | **DONE** P1-5 |
 
 ### P2 — Tech Debt
 
@@ -275,5 +275,5 @@ path = gen.generate(result, mode="draft",
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 741 passed
+python3 -m pytest tests/ --tb=short  # 767 passed
 ```
