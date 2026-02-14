@@ -95,6 +95,7 @@ class BLMPPTGenerator:
         result,
         mode: str = "draft",
         user_decisions: Optional[dict] = None,
+        key_message_overrides: Optional[dict] = None,
         filename: Optional[str] = None,
     ) -> str:
         """Generate the PPT deck.
@@ -103,6 +104,8 @@ class BLMPPTGenerator:
             result: FiveLooksResult from the analysis engine
             mode: "draft" (full ~38 slides) or "final" (filtered by user_decisions)
             user_decisions: dict mapping slide_id -> "keep"/"remove"/"merge"
+            key_message_overrides: dict mapping look_name -> new key_message text
+                                   (e.g. {"trends": "Updated message"})
             filename: Output filename (auto-generated if None)
 
         Returns:
@@ -120,6 +123,10 @@ class BLMPPTGenerator:
         # In final mode, remove slides the user declined
         if mode == "final" and user_decisions:
             self._apply_user_decisions(user_decisions)
+
+        # Apply key message overrides (final mode)
+        if key_message_overrides:
+            self._apply_key_message_overrides(key_message_overrides)
 
         # Save
         if filename is None:
@@ -211,6 +218,46 @@ class BLMPPTGenerator:
             slides_list = list(xml_slides)
             if idx < len(slides_list):
                 xml_slides.remove(slides_list[idx])
+
+    def _apply_key_message_overrides(self, overrides: dict):
+        """Override Key Message text on slides matching look_name.
+
+        The Key Message bar is always the bottom-most text box on a slide
+        (positioned at KM_TOP). We match slides by section name to look_name.
+        """
+        # Map look_name → section prefix for matching
+        look_to_section = {
+            "trends": "01",
+            "market": "02",
+            "competition": "03",
+            "self": "04",
+            "swot": "SW",
+            "opportunity": "05",
+        }
+
+        for look_name, new_text in overrides.items():
+            section_prefix = look_to_section.get(look_name, "")
+            if not section_prefix:
+                continue
+
+            for i, spec in enumerate(self._slide_specs):
+                if not spec.section.startswith(section_prefix):
+                    continue
+                # Find the Key Message text box on this slide
+                try:
+                    slide = self.prs.slides[i]
+                    for shape in slide.shapes:
+                        if shape.has_text_frame and hasattr(shape, 'top'):
+                            # KM bar is near bottom (top ≈ 6.3 inches = ~5715000 EMU)
+                            if shape.top and shape.top > Inches(6.0):
+                                for para in shape.text_frame.paragraphs:
+                                    if para.text.strip():
+                                        for run in para.runs:
+                                            run.text = new_text
+                                        break
+                                break
+                except (IndexError, AttributeError):
+                    continue
 
     # =========================================================================
     # Utility methods

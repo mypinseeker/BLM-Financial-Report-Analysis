@@ -223,6 +223,97 @@ class AnalysisRunnerService:
         }
 
     # ==================================================================
+    # Final-mode report generation
+    # ==================================================================
+
+    def generate_final_outputs(self, job_id: int, result,
+                                feedback: list[dict],
+                                tmp_dir: str) -> list[dict]:
+        """Generate final-mode PPT + MD outputs incorporating user feedback.
+
+        Args:
+            job_id: Analysis job ID
+            result: FiveLooksResult (or compatible attribute-access object)
+            feedback: List of user feedback dicts
+            tmp_dir: Temporary directory for output files
+
+        Returns:
+            List of output metadata dicts (same format as _generate_outputs).
+        """
+        from src.web.services.finding_extractor import (
+            feedback_to_ppt_decisions,
+            feedback_to_key_message_overrides,
+        )
+
+        job = self.svc.get_analysis_job(job_id)
+        if not job:
+            return []
+
+        market = job.get("market", "")
+        operator = job.get("target_operator", "")
+        period = job.get("analysis_period", "")
+        safe_op = operator.replace(" ", "_").lower()
+
+        outputs = []
+        output_dir = Path(tmp_dir) / "output_final"
+        output_dir.mkdir(exist_ok=True)
+
+        # Final PPT
+        try:
+            from src.output.ppt_generator import BLMPPTGenerator
+            from src.output.ppt_styles import get_style
+
+            ppt_decisions = feedback_to_ppt_decisions(feedback)
+            km_overrides = feedback_to_key_message_overrides(feedback)
+
+            style = get_style(operator)
+            ppt_gen = BLMPPTGenerator(
+                style=style, operator_id=operator,
+                output_dir=str(output_dir),
+            )
+            ppt_name = f"blm_{safe_op}_analysis_{period.lower()}_final.pptx"
+            ppt_path = ppt_gen.generate(
+                result, mode="final",
+                user_decisions=ppt_decisions,
+                key_message_overrides=km_overrides,
+                filename=ppt_name,
+            )
+            outputs.append({
+                "type": "pptx_final",
+                "file_name": ppt_name,
+                "file_path": ppt_path,
+                "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "size_bytes": Path(ppt_path).stat().st_size,
+            })
+            print(f"    Final PPT: {ppt_name}")
+        except ImportError:
+            print("    [i] Final PPT skipped (python-pptx not installed)")
+        except Exception as e:
+            print(f"    [!] Final PPT generation failed: {e}")
+
+        # Final MD
+        try:
+            from src.output.md_generator import BLMMdGenerator
+
+            md_gen = BLMMdGenerator()
+            md_name = f"blm_{safe_op}_analysis_{period.lower()}_final.md"
+            md_content = md_gen.generate(result, mode="final", feedback=feedback)
+            md_path = output_dir / md_name
+            md_path.write_text(md_content, encoding="utf-8")
+            outputs.append({
+                "type": "md_final",
+                "file_name": md_name,
+                "file_path": str(md_path),
+                "content_type": "text/markdown",
+                "size_bytes": md_path.stat().st_size,
+            })
+            print(f"    Final MD: {md_name}")
+        except Exception as e:
+            print(f"    [!] Final MD generation failed: {e}")
+
+        return outputs
+
+    # ==================================================================
     # Internal: data pull
     # ==================================================================
 

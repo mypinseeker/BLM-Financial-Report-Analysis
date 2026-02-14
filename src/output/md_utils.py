@@ -485,3 +485,76 @@ def numbered_list(items: list[str]) -> str:
 def empty_section_notice(section_name: str) -> str:
     """Return a notice that a section has insufficient data."""
     return f"\n*Insufficient data for {section_name} analysis.*\n"
+
+
+# ---------------------------------------------------------------------------
+# Feedback filtering (Final-mode support)
+# ---------------------------------------------------------------------------
+
+def filter_findings_by_feedback(items: list, finding_ref_prefix: str,
+                                feedback: list[dict] | None) -> list:
+    """Filter a list of findings based on user feedback.
+
+    - disputed  → removed from output
+    - modified  → replaced with user_value + [User Modified] annotation
+    - supplemented → original kept + user_comment annotation appended
+    - confirmed → unchanged
+
+    Args:
+        items: List of findings (dicts or strings).
+        finding_ref_prefix: Prefix used to match finding_ref (e.g. "strength_").
+                           Items are matched by index: prefix + str(index).
+        feedback: List of feedback dicts from user_feedback table.
+                  Each has finding_ref, feedback_type, user_value, user_comment.
+
+    Returns:
+        Filtered list (may be shorter if disputed items were removed).
+    """
+    if not feedback or not items:
+        return items
+
+    # Build lookup: finding_ref -> feedback dict
+    fb_map: dict[str, dict] = {}
+    for fb in feedback:
+        fb_map[fb.get("finding_ref", "")] = fb
+
+    result = []
+    for i, item in enumerate(items):
+        ref = f"{finding_ref_prefix}{i}"
+        fb = fb_map.get(ref)
+        if fb is None:
+            result.append(item)
+            continue
+
+        fb_type = fb.get("feedback_type", "confirmed")
+        if fb_type == "disputed":
+            continue  # Remove from output
+        elif fb_type == "modified":
+            user_val = fb.get("user_value", "")
+            if user_val:
+                if isinstance(item, str):
+                    result.append(f"{user_val} [User Modified]")
+                elif isinstance(item, dict):
+                    modified = dict(item)
+                    modified["_user_modified"] = True
+                    modified["_user_value"] = user_val
+                    result.append(modified)
+                else:
+                    result.append(item)
+            else:
+                result.append(item)
+        elif fb_type == "supplemented":
+            comment = fb.get("user_comment", "")
+            if isinstance(item, str) and comment:
+                result.append(f"{item} [Note: {comment}]")
+            elif isinstance(item, dict) and comment:
+                supplemented = dict(item)
+                supplemented["_user_note"] = comment
+                result.append(supplemented)
+            else:
+                result.append(item)
+        else:
+            # confirmed or unknown — keep unchanged
+            result.append(item)
+
+    return result

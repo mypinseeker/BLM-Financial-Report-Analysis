@@ -2,11 +2,11 @@
 
 ## Current Status (2026-02-14)
 
-Engine v1.0.0 complete. Twelve enhancement task packages (TP-1 through TP-12) delivered,
+Engine v1.0.0 complete. Thirteen enhancement task packages (TP-1 through TP-13) delivered,
 adding Supabase cloud pipeline, AI extraction, multi-market analysis, engine quality
 improvements, market readiness audit, data gap remediation, MD strategic reports, Three
 Decisions (BLM Phase 2), full Millicom group rollout, group cross-market report, Supabase
-bulk push, and data provenance persistence.
+bulk push, data provenance persistence, and Draft→Final feedback loop.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -28,15 +28,17 @@ TP-9  Tech Debt Cleanup        ████████████████�
 TP-10 Three Decisions (Phase 2)████████████████████  DONE  (2026-02-13)
 TP-11 Millicom 11-Country Roll ████████████████████  DONE  (2026-02-14)
 TP-12 Group Report + Push + Prov████████████████████  DONE  (2026-02-14)
+TP-13 Draft→Final Feedback Loop ████████████████████  DONE  (2026-02-14)
 ```
 
 ### Latest Reports: CQ4_2025
 - **12 markets analyzed**: Germany, Chile, Guatemala, Colombia, Honduras, Paraguay, Bolivia, El Salvador, Panama, Nicaragua, Ecuador, Uruguay
 - **38 operators** across all markets, **304 financial quarterly** + **subscriber quarterly** records
-- **Output formats**: JSON, TXT, HTML, PPTX, MD (Five Looks + Three Decisions)
+- **Output formats**: JSON, TXT, HTML, PPTX, MD (Five Looks + Three Decisions) + Final mode (PPTX/MD with feedback)
 - **Group report**: 10-market Millicom cross-market summary (JSON + TXT) with subscriber data
+- **Feedback loop**: Web UI for reviewing findings → persist feedback → regenerate final reports
 - **Audit scores**: Germany 97/A, Chile 92/A
-- **Tests**: 767 passing (as of P1-5)
+- **Tests**: 800 passing (as of TP-13)
 
 ---
 
@@ -145,6 +147,17 @@ TP-12 Group Report + Push + Prov████████████████
 - **Bug fix**: Removed phantom `tigo_chile` from TIGO_OPERATORS (Millicom doesn't operate in Chile; no seed data existed) — group report now 10 markets (`55d3e4f`)
 - **Tests**: 741 passed (731 existing + 10 new), zero regressions
 
+### TP-13: Theme A — Close the Draft→Final Loop (2026-02-14)
+- **Goal**: Wire feedback end-to-end — Web UI for reviewing findings → persist feedback → regenerate reports in final mode
+- **Phase 1 — Foundation**: `FindingExtractor` walks JSON output, extracts findings from all 6 look categories; `feedback_to_ppt_decisions()` maps all-disputed slides to removal; `feedback_to_key_message_overrides()` extracts modified key messages; `filter_findings_by_feedback()` in md_utils.py handles disputed/modified/supplemented/confirmed
+- **Phase 2 — Generators**: MD generator gains `mode`/`feedback` params; 6 module renderers (trends, market, competition, self, SWOT, opportunities) accept `feedback` kwarg and filter findings; PPT generator gains `key_message_overrides` param with `_apply_key_message_overrides()` method
+- **Phase 3 — Web Layer**: Feedback router with 3 endpoints (`GET /findings`, `POST /save`, `POST /finalize`); `feedback.html` template (6-tab finding review UI with type/comment/value per finding); feedback page route; `generate_final_outputs()` added to AnalysisRunnerService
+- **Data flow**: Completed analysis JSON → FindingExtractor → Tabbed feedback UI → user_feedback table → Final PPT (slide removal + key_message overrides) + Final MD (finding-level filtering)
+- **New files**: `finding_extractor.py`, `feedback.py` (router), `feedback.html`, `test_finding_extractor.py`, `test_md_final_mode.py`
+- **Modified files**: `md_generator.py`, `md_utils.py`, `ppt_generator.py`, `analysis_runner.py`, `app.py`, `pages.py`, `base.html`, 6 md_modules
+- **Tests**: 800 passed (33 new + 767 existing), zero regressions
+- **Routes**: 46 total (was 40)
+
 ---
 
 ## Version History
@@ -214,6 +227,7 @@ result = engine.run_five_looks()  # uses UK config automatically
 | P1-3 | ~~Use remaining chart types~~ — stacked_bar integrated, timeline already used, heatmap deferred | ~~Chart gap~~ | **DONE** TP-9 |
 | P1-4 | ~~Clean seed data language~~ — intelligence_events translated to English | ~~Mixed language outputs~~ | **DONE** `9207312` |
 | P1-5 | ~~Implement user_feedback persistence~~ — upsert_feedback/get_feedback/clear_feedback + CLI `feedback` subcommand | ~~Draft→Final loop lacks persistence~~ | **DONE** P1-5 |
+| P1-6 | ~~Wire Draft→Final loop end-to-end~~ — Web UI, feedback filtering in MD/PPT generators, final report generation | ~~No way to review findings or produce final reports~~ | **DONE** TP-13 |
 
 ### P2 — Tech Debt
 
@@ -275,5 +289,5 @@ path = gen.generate(result, mode="draft",
 ## Test
 
 ```bash
-python3 -m pytest tests/ --tb=short  # 767 passed
+python3 -m pytest tests/ --tb=short  # 800 passed
 ```

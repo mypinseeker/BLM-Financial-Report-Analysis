@@ -35,12 +35,26 @@ class BLMMdGenerator:
         """
         self._config = market_config
 
-    def generate(self, result, output_path: str | None = None) -> str:
+    # Module ID → look_category mapping for feedback routing
+    _MODULE_TO_LOOK = {
+        "01": "trends",
+        "02": "market",
+        "03": "competition",
+        "04": "self",
+        "SW": "swot",
+        "05": "opportunity",
+    }
+
+    def generate(self, result, output_path: str | None = None,
+                 mode: str = "draft", feedback: list[dict] | None = None) -> str:
         """Generate the complete MD report.
 
         Args:
             result: FiveLooksResult from the analysis engine.
             output_path: If provided, write the report to this file path.
+            mode: "draft" (default) or "final" (applies feedback filtering).
+            feedback: List of user feedback dicts (from user_feedback table).
+                      Only used when mode="final".
 
         Returns:
             The complete Markdown string (always). If output_path is given,
@@ -53,12 +67,19 @@ class BLMMdGenerator:
         computer = StrategicDiagnosisComputer(result, config)
         diagnosis = computer.compute()
 
-        # 3. Build document
+        # 3. Group feedback by look_category for module routing
+        fb_by_look: dict[str, list[dict]] = {}
+        if mode == "final" and feedback:
+            for fb in feedback:
+                cat = fb.get("look_category", "")
+                fb_by_look.setdefault(cat, []).append(fb)
+
+        # 4. Build document
         sections = []
         sections.append(self._build_document_header(result, config))
         sections.append(self._build_toc(result))
 
-        # 4. Render 8 modules
+        # 5. Render 9 modules
         from .md_modules import (
             render_executive_summary,
             render_trends,
@@ -86,19 +107,33 @@ class BLMMdGenerator:
         for mod_id, mod_title, renderer in module_renderers:
             sections.append(module_comment(mod_id, mod_title))
             try:
-                content = renderer(result, diagnosis, config)
+                # Pass feedback for the relevant look_category if in final mode
+                mod_feedback = fb_by_look.get(self._MODULE_TO_LOOK.get(mod_id, ""))
+                if mod_feedback:
+                    try:
+                        content = renderer(result, diagnosis, config,
+                                           feedback=mod_feedback)
+                    except TypeError:
+                        # Renderer doesn't accept feedback kwarg yet
+                        content = renderer(result, diagnosis, config)
+                else:
+                    content = renderer(result, diagnosis, config)
                 if content:
                     sections.append(content)
             except Exception as e:
                 sections.append(f"\n*Module {mod_id} ({mod_title}) generation failed: {e}*\n")
 
-        # 5. Provenance footer
+        # 6. Provenance footer
         sections.append(self._build_provenance_footer(result, config))
 
-        # 6. Assemble
+        # 7. Final mode footer
+        if mode == "final":
+            sections.append("\n*This is a **Final** report incorporating user feedback.*\n")
+
+        # 8. Assemble
         md_content = "\n\n".join(s for s in sections if s)
 
-        # 7. Write file or return string
+        # 9. Write file or return string
         if output_path:
             path = Path(output_path)
             path.parent.mkdir(parents=True, exist_ok=True)

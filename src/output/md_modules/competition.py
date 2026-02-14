@@ -17,10 +17,11 @@ from ..md_utils import (
     operator_display_name,
     collect_operator_ids, replace_operator_ids,
     empty_section_notice,
+    filter_findings_by_feedback,
 )
 
 
-def render_competition(result, diagnosis, config) -> str:
+def render_competition(result, diagnosis, config, feedback=None) -> str:
     """Render Module 03: Competition Analysis."""
     comp = result.competition
     if comp is None:
@@ -42,11 +43,12 @@ def render_competition(result, diagnosis, config) -> str:
     # 1. Market Structure
     parts.append(_render_market_structure(comp, diagnosis))
 
-    # 2. Five Forces
-    parts.append(_render_five_forces(comp))
+    # 2. Five Forces (with feedback filtering)
+    parts.append(_render_five_forces(comp, feedback=feedback))
 
-    # 3. Competitor Deep Dives
-    parts.append(_render_deep_dives(comp, result.target_operator, config, op_map))
+    # 3. Competitor Deep Dives (with feedback filtering)
+    parts.append(_render_deep_dives(comp, result.target_operator, config, op_map,
+                                     feedback=feedback))
 
     # 4. Comparison Dashboard
     parts.append(_render_comparison_dashboard(comp, config))
@@ -92,8 +94,19 @@ def _render_market_structure(comp, diagnosis) -> str:
     return "\n".join(lines)
 
 
-def _render_five_forces(comp) -> str:
+def _render_five_forces(comp, feedback=None) -> str:
     forces = safe_dict(comp, "five_forces")
+    # Filter forces via feedback: porter_{force_id} refs
+    if feedback and forces:
+        fb_map = {fb.get("finding_ref", ""): fb for fb in feedback}
+        filtered = {}
+        for force_id, force in forces.items():
+            ref = f"porter_{force_id}"
+            fb = fb_map.get(ref)
+            if fb and fb.get("feedback_type") == "disputed":
+                continue  # Remove this force
+            filtered[force_id] = force
+        forces = filtered
     if not forces:
         return ""
 
@@ -167,8 +180,19 @@ def _render_five_forces(comp) -> str:
 
 
 def _render_deep_dives(comp, target_operator: str, config=None,
-                       op_map: dict[str, str] = None) -> str:
+                       op_map: dict[str, str] = None, feedback=None) -> str:
     analyses = safe_dict(comp, "competitor_analyses")
+    # Filter competitor deep dives via feedback: competitor_{op_id} refs
+    if feedback and analyses:
+        fb_map = {fb.get("finding_ref", ""): fb for fb in feedback}
+        filtered = {}
+        for op_id, dd in analyses.items():
+            ref = f"competitor_{op_id}"
+            fb = fb_map.get(ref)
+            if fb and fb.get("feedback_type") == "disputed":
+                continue
+            filtered[op_id] = dd
+        analyses = filtered
     if not analyses:
         return ""
 

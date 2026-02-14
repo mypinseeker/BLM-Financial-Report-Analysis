@@ -1,0 +1,418 @@
+{% extends "base.html" %}
+{% block title %}Feedback — Job #{{ job_id }} — BLM{% endblock %}
+
+{% block extra_head %}
+<style>
+.feedback-header {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.feedback-header h2 { color: var(--primary); margin-bottom: 8px; }
+.feedback-meta { display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--light-text); }
+.feedback-meta .item { display: flex; align-items: center; gap: 6px; }
+.feedback-meta .label { font-weight: 600; color: var(--text); }
+
+/* Tabs */
+.tab-bar {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--border);
+    margin-bottom: 0;
+}
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-text);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all .15s;
+}
+.tab-btn:hover { color: var(--primary); }
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+.tab-btn .count {
+    font-size: 11px;
+    background: var(--border);
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+.tab-btn.active .count { background: var(--primary); color: #fff; }
+
+/* Tab content */
+.tab-content { display: none; }
+.tab-content.visible { display: block; }
+
+/* Findings table */
+.findings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.findings-table th {
+    background: #f0f0f0;
+    padding: 8px 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+}
+.findings-table td {
+    padding: 6px 12px;
+    border-top: 1px solid #f0f0f0;
+    vertical-align: top;
+}
+.findings-table td.label-cell { font-weight: 600; max-width: 200px; }
+.findings-table td.value-cell { max-width: 300px; word-wrap: break-word; }
+.findings-table select {
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 12px;
+}
+.findings-table textarea {
+    width: 100%;
+    min-height: 36px;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 12px;
+    resize: vertical;
+}
+.findings-table input[type=text] {
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 12px;
+}
+.user-value-row { display: none; }
+.user-value-row.show { display: table-row; }
+
+/* Feedback type badges */
+select.fb-confirmed { background: #e8f5e9; }
+select.fb-disputed { background: #ffebee; }
+select.fb-modified { background: #fff3e0; }
+select.fb-supplemented { background: #e3f2fd; }
+
+/* Action bar */
+.action-bar {
+    display: flex;
+    gap: 12px;
+    margin: 24px 0;
+    padding: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    align-items: center;
+}
+.action-bar .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s;
+}
+.btn-save { background: var(--primary); color: #fff; }
+.btn-save:hover { background: var(--primary-light); }
+.btn-final { background: var(--secondary); color: #fff; }
+.btn-final:hover { opacity: .9; }
+.btn-disabled { opacity: .5; cursor: not-allowed; }
+
+.status-msg {
+    font-size: 14px;
+    margin-left: 12px;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+.status-success { background: #e8f5e9; color: var(--positive); }
+.status-error { background: #ffebee; color: var(--negative); }
+.status-loading { background: #e3f2fd; color: var(--primary); }
+
+.loading-spinner {
+    display: none;
+    text-align: center;
+    padding: 60px;
+    color: var(--light-text);
+}
+.loading-spinner.visible { display: block; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="breadcrumb">
+    <a href="/">Dashboard</a> &gt; <a href="/analyze">Analyze</a> &gt; Feedback — Job #{{ job_id }}
+</div>
+
+<div class="feedback-header">
+    <h2>Finding Review & Feedback</h2>
+    <div class="feedback-meta">
+        <div class="item"><span class="label">Job:</span> #{{ job_id }}</div>
+        <div class="item"><span class="label">Market:</span> <span id="meta-market">{{ job.get('market', '') }}</span></div>
+        <div class="item"><span class="label">Operator:</span> <span id="meta-operator">{{ job.get('target_operator', '') }}</span></div>
+        <div class="item"><span class="label">Period:</span> <span id="meta-period">{{ job.get('analysis_period', '') }}</span></div>
+        <div class="item"><span class="label">Status:</span>
+            <span class="badge badge-primary">{{ job.get('status', '') }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="loading-spinner visible" id="loading">
+    Loading findings...
+</div>
+
+<div id="findings-container" style="display:none;">
+    <div class="tab-bar" id="tab-bar"></div>
+    <div id="tab-panels"></div>
+</div>
+
+<div class="action-bar" id="action-bar" style="display:none;">
+    <button class="btn btn-save" id="btn-save" onclick="saveFeedback()">Save Feedback</button>
+    <button class="btn btn-final" id="btn-final" onclick="generateFinal()">Generate Final Report</button>
+    <span class="status-msg" id="status-msg" style="display:none;"></span>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const JOB_ID = {{ job_id }};
+let findingsData = {};
+let existingFeedback = {};
+
+const CATEGORIES = [
+    {id: "trends", label: "Trends"},
+    {id: "market", label: "Market"},
+    {id: "competition", label: "Competition"},
+    {id: "self", label: "Self"},
+    {id: "swot", label: "SWOT"},
+    {id: "opportunity", label: "Opportunities"},
+];
+
+async function fetchFindings() {
+    try {
+        const resp = await fetch(`/api/feedback/${JOB_ID}/findings`);
+        if (!resp.ok) throw new Error(await resp.text());
+        const data = await resp.json();
+
+        findingsData = data.findings || {};
+        existingFeedback = {};
+        for (const fb of (data.existing_feedback || [])) {
+            existingFeedback[fb.finding_ref] = fb;
+        }
+
+        renderTabs();
+        document.getElementById("loading").classList.remove("visible");
+        document.getElementById("findings-container").style.display = "block";
+        document.getElementById("action-bar").style.display = "flex";
+    } catch (e) {
+        document.getElementById("loading").innerHTML = `<span style="color:var(--negative)">Error: ${e.message}</span>`;
+    }
+}
+
+function renderTabs() {
+    const bar = document.getElementById("tab-bar");
+    const panels = document.getElementById("tab-panels");
+    bar.innerHTML = "";
+    panels.innerHTML = "";
+
+    let firstTab = null;
+
+    for (const cat of CATEGORIES) {
+        const items = findingsData[cat.id] || [];
+        if (items.length === 0) continue;
+
+        // Tab button
+        const btn = document.createElement("button");
+        btn.className = "tab-btn";
+        btn.innerHTML = `${cat.label} <span class="count">${items.length}</span>`;
+        btn.onclick = () => switchTab(cat.id);
+        btn.id = `tab-${cat.id}`;
+        bar.appendChild(btn);
+
+        // Panel
+        const panel = document.createElement("div");
+        panel.className = "tab-content";
+        panel.id = `panel-${cat.id}`;
+        panel.innerHTML = renderTable(cat.id, items);
+        panels.appendChild(panel);
+
+        if (!firstTab) firstTab = cat.id;
+    }
+
+    if (firstTab) switchTab(firstTab);
+}
+
+function switchTab(tabId) {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(p => p.classList.remove("visible"));
+
+    const btn = document.getElementById(`tab-${tabId}`);
+    const panel = document.getElementById(`panel-${tabId}`);
+    if (btn) btn.classList.add("active");
+    if (panel) panel.classList.add("visible");
+}
+
+function renderTable(category, items) {
+    let html = `<table class="findings-table">
+        <thead><tr>
+            <th>Label</th>
+            <th>Current Value</th>
+            <th>Feedback</th>
+            <th>Comment</th>
+            <th>User Value</th>
+        </tr></thead><tbody>`;
+
+    for (const item of items) {
+        const ref = item.finding_ref;
+        const existing = existingFeedback[ref] || {};
+        const fbType = existing.feedback_type || "confirmed";
+        const comment = existing.user_comment || "";
+        const userVal = existing.user_value || "";
+
+        const label = (item.label || "").substring(0, 80);
+        const value = (item.value || "").substring(0, 200);
+
+        html += `<tr data-ref="${ref}" data-category="${category}">
+            <td class="label-cell" title="${escHtml(item.section)}">${escHtml(label)}</td>
+            <td class="value-cell">${escHtml(value)}</td>
+            <td>
+                <select class="fb-type fb-${fbType}" data-ref="${ref}" onchange="onTypeChange(this)">
+                    <option value="confirmed" ${fbType==="confirmed"?"selected":""}>Confirmed</option>
+                    <option value="disputed" ${fbType==="disputed"?"selected":""}>Disputed</option>
+                    <option value="modified" ${fbType==="modified"?"selected":""}>Modified</option>
+                    <option value="supplemented" ${fbType==="supplemented"?"selected":""}>Supplemented</option>
+                </select>
+            </td>
+            <td><textarea class="fb-comment" data-ref="${ref}" placeholder="Optional comment">${escHtml(comment)}</textarea></td>
+            <td><input type="text" class="fb-user-value" data-ref="${ref}"
+                 placeholder="${fbType==="modified"?"Enter new value":"Only for Modified"}"
+                 value="${escHtml(userVal)}"
+                 ${fbType==="modified"?"":"style=opacity:0.4"}></td>
+        </tr>`;
+    }
+
+    html += `</tbody></table>`;
+    return html;
+}
+
+function onTypeChange(el) {
+    const ref = el.dataset.ref;
+    const val = el.value;
+    el.className = `fb-type fb-${val}`;
+
+    // Show/hide user value field
+    const row = el.closest("tr");
+    const userInput = row.querySelector(".fb-user-value");
+    if (val === "modified") {
+        userInput.style.opacity = "1";
+        userInput.placeholder = "Enter new value";
+    } else {
+        userInput.style.opacity = "0.4";
+        userInput.placeholder = "Only for Modified";
+    }
+}
+
+function collectFeedback() {
+    const items = [];
+    document.querySelectorAll("tr[data-ref]").forEach(row => {
+        const ref = row.dataset.ref;
+        const category = row.dataset.category;
+        const typeEl = row.querySelector(".fb-type");
+        const commentEl = row.querySelector(".fb-comment");
+        const userValEl = row.querySelector(".fb-user-value");
+
+        const fbType = typeEl ? typeEl.value : "confirmed";
+        // Only include non-confirmed items or items with comments
+        if (fbType !== "confirmed" || (commentEl && commentEl.value.trim())) {
+            items.push({
+                look_category: category,
+                finding_ref: ref,
+                feedback_type: fbType,
+                user_comment: commentEl ? commentEl.value.trim() : "",
+                user_value: userValEl ? userValEl.value.trim() : "",
+                original_value: "",
+            });
+        }
+    });
+    return items;
+}
+
+async function saveFeedback() {
+    const items = collectFeedback();
+    showStatus("Saving...", "loading");
+
+    try {
+        const resp = await fetch(`/api/feedback/${JOB_ID}/save`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({items}),
+        });
+        if (!resp.ok) throw new Error(await resp.text());
+        const data = await resp.json();
+        showStatus(`Saved ${data.saved} feedback items`, "success");
+    } catch (e) {
+        showStatus(`Save failed: ${e.message}`, "error");
+    }
+}
+
+async function generateFinal() {
+    // Save first
+    const items = collectFeedback();
+    showStatus("Saving feedback & generating final report...", "loading");
+
+    try {
+        // Save feedback
+        await fetch(`/api/feedback/${JOB_ID}/save`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({items}),
+        });
+
+        // Trigger finalization
+        const resp = await fetch(`/api/feedback/${JOB_ID}/finalize`, {
+            method: "POST",
+        });
+        if (!resp.ok) throw new Error(await resp.text());
+        showStatus("Final report generation started. Check Outputs page for results.", "success");
+    } catch (e) {
+        showStatus(`Finalization failed: ${e.message}`, "error");
+    }
+}
+
+function showStatus(msg, type) {
+    const el = document.getElementById("status-msg");
+    el.textContent = msg;
+    el.className = `status-msg status-${type}`;
+    el.style.display = "inline-block";
+    if (type === "success") {
+        setTimeout(() => { el.style.display = "none"; }, 5000);
+    }
+}
+
+function escHtml(str) {
+    if (!str) return "";
+    return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+// Init
+fetchFindings();
+</script>
+{% endblock %}

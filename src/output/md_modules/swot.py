@@ -18,10 +18,11 @@ from ..md_utils import (
     operator_display_name,
     collect_operator_ids, replace_operator_ids,
     empty_section_notice,
+    filter_findings_by_feedback,
 )
 
 
-def render_swot(result, diagnosis, config) -> str:
+def render_swot(result, diagnosis, config, feedback=None) -> str:
     """Render Module SW: SWOT Synthesis."""
     swot = result.swot
     if swot is None:
@@ -40,14 +41,14 @@ def render_swot(result, diagnosis, config) -> str:
 
     op_map = collect_operator_ids(result)
 
-    # 1. Overview
-    parts.append(_render_overview(swot, diagnosis))
+    # 1. Overview (with feedback for accurate counts)
+    parts.append(_render_overview(swot, diagnosis, feedback=feedback))
 
-    # 2-5. Individual quadrants
-    parts.append(_render_strengths(swot))
-    parts.append(_render_weaknesses(swot))
-    parts.append(_render_opportunities(swot, op_map))
-    parts.append(_render_threats(swot, op_map))
+    # 2-5. Individual quadrants (with feedback filtering)
+    parts.append(_render_strengths(swot, feedback=feedback))
+    parts.append(_render_weaknesses(swot, feedback=feedback))
+    parts.append(_render_opportunities(swot, op_map, feedback=feedback))
+    parts.append(_render_threats(swot, op_map, feedback=feedback))
 
     # 6. Strategy Matrix
     parts.append(_render_strategy_matrix(swot, op_map))
@@ -62,11 +63,16 @@ def render_swot(result, diagnosis, config) -> str:
 # Sub-renderers
 # ---------------------------------------------------------------------------
 
-def _render_overview(swot, diagnosis) -> str:
+def _render_overview(swot, diagnosis, feedback=None) -> str:
     s = safe_list(swot, "strengths")
     w = safe_list(swot, "weaknesses")
     o = safe_list(swot, "opportunities")
     t = safe_list(swot, "threats")
+    # Apply feedback filtering so overview counts match the detail sections
+    s = filter_findings_by_feedback(s, "strength_", feedback)
+    w = filter_findings_by_feedback(w, "weakness_", feedback)
+    o = filter_findings_by_feedback(o, "swot_opportunity_", feedback)
+    t = filter_findings_by_feedback(t, "threat_", feedback)
 
     lines = [section_header("1. SWOT Overview", 2), ""]
 
@@ -98,8 +104,9 @@ def _render_overview(swot, diagnosis) -> str:
     return "\n".join(lines)
 
 
-def _render_strengths(swot) -> str:
+def _render_strengths(swot, feedback=None) -> str:
     items = safe_list(swot, "strengths")
+    items = filter_findings_by_feedback(items, "strength_", feedback)
     if not items:
         return ""
 
@@ -114,8 +121,9 @@ def _render_strengths(swot) -> str:
     return "\n".join(lines)
 
 
-def _render_weaknesses(swot) -> str:
+def _render_weaknesses(swot, feedback=None) -> str:
     items = safe_list(swot, "weaknesses")
+    items = filter_findings_by_feedback(items, "weakness_", feedback)
     if not items:
         return ""
 
@@ -139,8 +147,9 @@ def _render_weaknesses(swot) -> str:
     return "\n".join(lines)
 
 
-def _render_opportunities(swot, op_map: dict[str, str] = None) -> str:
+def _render_opportunities(swot, op_map: dict[str, str] = None, feedback=None) -> str:
     items = safe_list(swot, "opportunities")
+    items = filter_findings_by_feedback(items, "swot_opportunity_", feedback)
     if not items:
         return ""
 
@@ -156,8 +165,9 @@ def _render_opportunities(swot, op_map: dict[str, str] = None) -> str:
     return "\n".join(lines)
 
 
-def _render_threats(swot, op_map: dict[str, str] = None) -> str:
+def _render_threats(swot, op_map: dict[str, str] = None, feedback=None) -> str:
     items = safe_list(swot, "threats")
+    items = filter_findings_by_feedback(items, "threat_", feedback)
     if not items:
         return ""
 

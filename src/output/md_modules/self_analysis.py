@@ -19,10 +19,11 @@ from ..md_utils import (
     safe_get, safe_list, safe_dict,
     operator_display_name,
     empty_section_notice,
+    filter_findings_by_feedback,
 )
 
 
-def render_self_analysis(result, diagnosis, config) -> str:
+def render_self_analysis(result, diagnosis, config, feedback=None) -> str:
     """Render Module 04: Self Analysis."""
     sa = result.self_analysis
     if sa is None:
@@ -46,8 +47,8 @@ def render_self_analysis(result, diagnosis, config) -> str:
     # 2. Revenue Breakdown
     parts.append(_render_revenue_breakdown(sa, config))
 
-    # 3. Segment Deep Dives
-    parts.append(_render_segments(sa, config))
+    # 3. Segment Deep Dives (with feedback filtering)
+    parts.append(_render_segments(sa, config, feedback=feedback))
 
     # 4. Network Assessment
     parts.append(_render_network(sa))
@@ -55,8 +56,9 @@ def render_self_analysis(result, diagnosis, config) -> str:
     # 5. BMC
     parts.append(_render_bmc(sa))
 
-    # 6. Strengths/Weaknesses/Exposures
-    parts.append(_render_strengths_weaknesses(sa, result.target_operator))
+    # 6. Strengths/Weaknesses/Exposures (with feedback filtering)
+    parts.append(_render_strengths_weaknesses(sa, result.target_operator,
+                                               feedback=feedback))
 
     # 7. Management Outlook
     parts.append(_render_management(sa))
@@ -172,8 +174,9 @@ def _render_revenue_breakdown(sa, config) -> str:
     return "\n".join(lines)
 
 
-def _render_segments(sa, config) -> str:
+def _render_segments(sa, config, feedback=None) -> str:
     segments = safe_list(sa, "segment_analyses")
+    segments = filter_findings_by_feedback(segments, "self_segment_", feedback)
     if not segments:
         return ""
 
@@ -396,10 +399,11 @@ def _render_bmc(sa) -> str:
     return "\n".join(lines)
 
 
-def _render_strengths_weaknesses(sa, target_operator: str) -> str:
+def _render_strengths_weaknesses(sa, target_operator: str, feedback=None) -> str:
     strengths = safe_list(sa, "strengths")
     weaknesses = safe_list(sa, "weaknesses")
     exposures = safe_list(sa, "exposure_points")
+    exposures = filter_findings_by_feedback(exposures, "exposure_", feedback)
 
     if not strengths and not weaknesses and not exposures:
         return ""

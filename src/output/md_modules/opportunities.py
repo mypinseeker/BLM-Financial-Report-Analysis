@@ -20,6 +20,7 @@ from ..md_utils import (
     operator_display_name,
     collect_operator_ids, replace_operator_ids,
     empty_section_notice,
+    filter_findings_by_feedback,
 )
 
 
@@ -53,7 +54,7 @@ def _descriptive_label(name: str, detail: dict = None) -> str:
     return name
 
 
-def render_opportunities(result, diagnosis, config) -> str:
+def render_opportunities(result, diagnosis, config, feedback=None) -> str:
     """Render Module 05: Opportunities (SPAN Matrix) Analysis."""
     opp = result.opportunities
     if opp is None:
@@ -73,8 +74,8 @@ def render_opportunities(result, diagnosis, config) -> str:
     parts.append("")
     parts.append("---")
 
-    # 1. SPAN Matrix Overview
-    parts.append(_render_span_overview(opp, op_map))
+    # 1. SPAN Matrix Overview (with feedback filtering on span_positions)
+    parts.append(_render_span_overview(opp, op_map, feedback=feedback))
 
     # 2. Grow/Invest
     parts.append(_render_quadrant_detail(opp, "grow_invest", "Grow/Invest",
@@ -103,8 +104,9 @@ def render_opportunities(result, diagnosis, config) -> str:
 # Sub-renderers
 # ---------------------------------------------------------------------------
 
-def _render_span_overview(opp, op_map: dict[str, str] = None) -> str:
+def _render_span_overview(opp, op_map: dict[str, str] = None, feedback=None) -> str:
     positions = safe_list(opp, "span_positions")
+    positions = filter_findings_by_feedback(positions, "span_", feedback)
     gi = safe_list(opp, "grow_invest")
     ask = safe_list(opp, "acquire_skills")
     harvest = safe_list(opp, "harvest")

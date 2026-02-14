@@ -15,10 +15,11 @@ from ..md_utils import (
     safe_get, safe_list, safe_dict,
     operator_display_name, market_display_name,
     empty_section_notice,
+    filter_findings_by_feedback,
 )
 
 
-def render_trends(result, diagnosis, config) -> str:
+def render_trends(result, diagnosis, config, feedback=None) -> str:
     """Render Module 01: Trends/PEST Analysis."""
     trends = result.trends
     if trends is None:
@@ -43,8 +44,8 @@ def render_trends(result, diagnosis, config) -> str:
     # 2. PEST Weather Summary
     parts.append(_render_pest_weather(trends))
 
-    # 3-6. Detailed PEST factors
-    parts.append(_render_pest_details(trends, target_op))
+    # 3-6. Detailed PEST factors (with feedback filtering)
+    parts.append(_render_pest_details(trends, target_op, feedback=feedback))
 
     # 7. Value Transfer
     parts.append(_render_value_transfer(trends))
@@ -174,7 +175,7 @@ def _render_pest_weather(trends) -> str:
     return "\n".join(lines)
 
 
-def _render_pest_details(trends, target_op: str = "") -> str:
+def _render_pest_details(trends, target_op: str = "", feedback=None) -> str:
     pest = safe_get(trends, "pest")
     if pest is None:
         return ""
@@ -184,14 +185,15 @@ def _render_pest_details(trends, target_op: str = "") -> str:
     sections = []
     section_num = 3
     dimension_map = [
-        ("Political", "political_factors", "Regulatory & Policy"),
-        ("Economic", "economic_factors", "Macro Headwinds"),
-        ("Social", "society_factors", "Consumer Behavior Shifts"),
-        ("Technology", "technology_factors", "The Transformation Agenda"),
+        ("Political", "political_factors", "Regulatory & Policy", "pest_political_"),
+        ("Economic", "economic_factors", "Macro Headwinds", "pest_economic_"),
+        ("Social", "society_factors", "Consumer Behavior Shifts", "pest_social_"),
+        ("Technology", "technology_factors", "The Transformation Agenda", "pest_technology_"),
     ]
 
-    for dim_name, attr, subtitle in dimension_map:
+    for dim_name, attr, subtitle, fb_prefix in dimension_map:
         factors = safe_list(pest, attr)
+        factors = filter_findings_by_feedback(factors, fb_prefix, feedback)
         if not factors:
             section_num += 1
             continue

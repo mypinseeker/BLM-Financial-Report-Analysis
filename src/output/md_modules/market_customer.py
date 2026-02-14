@@ -16,10 +16,11 @@ from ..md_utils import (
     safe_get, safe_list, safe_dict,
     operator_display_name,
     empty_section_notice,
+    filter_findings_by_feedback,
 )
 
 
-def render_market_customer(result, diagnosis, config) -> str:
+def render_market_customer(result, diagnosis, config, feedback=None) -> str:
     """Render Module 02: Market & Customer ($APPEALS) Analysis."""
     mci = result.market_customer
     if mci is None:
@@ -41,11 +42,11 @@ def render_market_customer(result, diagnosis, config) -> str:
     # 1. Market Snapshot
     parts.append(_render_market_snapshot(mci, config))
 
-    # 2. Market Events
-    parts.append(_render_market_events(mci))
+    # 2. Market Events (with feedback filtering)
+    parts.append(_render_market_events(mci, feedback=feedback))
 
-    # 3. Customer Segmentation
-    parts.append(_render_segments(mci, config))
+    # 3. Customer Segmentation (with feedback filtering)
+    parts.append(_render_segments(mci, config, feedback=feedback))
 
     # 4. $APPEALS
     parts.append(_render_appeals(mci, result))
@@ -93,8 +94,9 @@ def _render_market_snapshot(mci, config) -> str:
     return "\n".join(lines)
 
 
-def _render_market_events(mci) -> str:
+def _render_market_events(mci, feedback=None) -> str:
     changes = safe_list(mci, "changes")
+    changes = filter_findings_by_feedback(changes, "market_change_", feedback)
     if not changes:
         return ""
 
@@ -120,8 +122,9 @@ def _render_market_events(mci) -> str:
     return "\n".join(lines)
 
 
-def _render_segments(mci, config) -> str:
+def _render_segments(mci, config, feedback=None) -> str:
     segments = safe_list(mci, "customer_segments")
+    segments = filter_findings_by_feedback(segments, "segment_", feedback)
     # Also try from config
     if not segments and config:
         config_segs = safe_list(config, "customer_segments")

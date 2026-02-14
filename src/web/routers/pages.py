@@ -106,6 +106,20 @@ def data_status_api(market_id: str):
 # Review pages
 # ------------------------------------------------------------------
 
+@router.get("/feedback/{job_id}")
+def feedback_page(request: Request, job_id: int):
+    """Feedback review page for an analysis job."""
+    svc = get_data_service()
+    job = svc.get_analysis_job(job_id)
+    if not job:
+        raise HTTPException(404, f"Analysis job #{job_id} not found")
+    return templates.TemplateResponse("feedback.html", {
+        "request": request,
+        "job": job,
+        "job_id": job_id,
+    })
+
+
 @router.get("/review")
 def review_list_page(request: Request):
     """List all extraction jobs for review."""
