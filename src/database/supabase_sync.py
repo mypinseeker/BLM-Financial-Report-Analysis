@@ -75,6 +75,14 @@ TABLE_CONFIG = {
         "conflict": None,
         "market_col": None,
     },
+    "operator_groups": {
+        "conflict": "group_id",
+        "market_col": None,
+    },
+    "group_subsidiaries": {
+        "conflict": "group_id,operator_id",
+        "market_col": "market",
+    },
 }
 
 # MD outputs and their module names
@@ -160,11 +168,25 @@ class BLMCloudSync:
             op_ids = self._get_market_operators(market)
             return [r for r in rows if r.get("operator_id") in op_ids]
         elif market_col == "country":
-            # Map market_id to country name
-            country = market.capitalize()  # "germany" → "Germany"
-            return [r for r in rows if r.get("country") == country]
+            # Map market_id to country name via operator directory
+            country = self._market_to_country(market)
+            return [r for r in rows
+                    if r.get("country", "").lower() == country.lower()]
         else:
             return [r for r in rows if r.get(market_col) == market]
+
+    @staticmethod
+    def _market_to_country(market: str) -> str:
+        """Convert market_id to country display name via operator directory.
+
+        Handles multi-word countries like 'el_salvador' → 'El Salvador'.
+        """
+        from src.database.operator_directory import OPERATOR_DIRECTORY
+        for info in OPERATOR_DIRECTORY.values():
+            if info.get("market") == market:
+                return info["country"]
+        # Fallback: title case with underscore → space
+        return market.replace("_", " ").title()
 
     def _clean_row_for_push(self, row: dict, table: str) -> dict:
         """Clean a row dict for Supabase upsert (remove auto-id, convert types)."""
@@ -440,7 +462,7 @@ class BLMCloudSync:
         filters = {}
         if market and market_col and market_col != "_operator":
             if market_col == "country":
-                filters["country"] = market.capitalize()
+                filters["country"] = self._market_to_country(market)
             else:
                 filters[market_col] = market
 

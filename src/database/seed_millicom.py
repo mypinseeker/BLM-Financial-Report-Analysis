@@ -132,7 +132,7 @@ def seed_millicom_group(db):
         db: TelecomDatabase instance (SQLite)
     """
     group = OPERATOR_GROUPS["millicom"]
-    db.execute(
+    db.conn.execute(
         """INSERT OR REPLACE INTO operator_groups
            (group_id, group_name, brand_name, headquarters, ir_url,
             stock_ticker, markets_count, notes)
@@ -148,6 +148,7 @@ def seed_millicom_group(db):
             group.get("notes", ""),
         ),
     )
+    db.conn.commit()
     print(f"  Registered group: {group['group_name']}")
 
 
@@ -167,7 +168,7 @@ def seed_subsidiaries(db):
     """Register Millicom group-subsidiary relationships."""
     count = 0
     for sub in MILLICOM_SUBSIDIARIES:
-        db.execute(
+        db.conn.execute(
             """INSERT OR REPLACE INTO group_subsidiaries
                (group_id, operator_id, market, ownership_pct,
                 ownership_type, local_brand, is_active)
@@ -184,6 +185,7 @@ def seed_subsidiaries(db):
         )
         count += 1
 
+    db.conn.commit()
     print(f"  Registered {count} Millicom subsidiaries")
 
 
@@ -198,7 +200,7 @@ def seed_market_configs_to_db(db):
             print(f"  WARNING: No MarketConfig for '{market_id}'")
             continue
 
-        db.execute(
+        db.conn.execute(
             """INSERT OR REPLACE INTO market_configs
                (market_id, market_name, country, currency, regulatory_body)
                VALUES (?, ?, ?, ?, ?)""",
@@ -212,6 +214,7 @@ def seed_market_configs_to_db(db):
         )
         count += 1
 
+    db.conn.commit()
     print(f"  Registered {count} LATAM market configs")
 
 
@@ -261,7 +264,7 @@ if __name__ == "__main__":
             stmt = statement.strip()
             if stmt and not stmt.startswith("--"):
                 try:
-                    db.execute(stmt)
+                    db.conn.execute(stmt)
                 except Exception as e:
                     # Ignore "duplicate column" etc.
                     if "duplicate" not in str(e).lower():

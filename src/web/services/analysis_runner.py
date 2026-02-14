@@ -63,7 +63,8 @@ class AnalysisRunnerService:
             self._update_job(job_id, {
                 "progress": json.dumps({market: "running_engine"}),
             })
-            result = self._run_engine(db, operator, market, period, n_quarters)
+            result = self._run_engine(db, operator, market, period, n_quarters,
+                                      job_id=job_id)
 
             # 3. Generate output files
             self._update_job(job_id, {
@@ -159,7 +160,8 @@ class AnalysisRunnerService:
                 progress[market] = "running_engine"
                 self._update_job(job_id, {"progress": json.dumps(progress)})
 
-                result = self._run_engine(db, operator, market, period, n_quarters)
+                result = self._run_engine(db, operator, market, period, n_quarters,
+                                          job_id=job_id)
                 market_results[market] = result
 
                 progress[market] = "running_output"
@@ -251,7 +253,8 @@ class AnalysisRunnerService:
     # ==================================================================
 
     def _run_engine(self, db, operator: str, market: str,
-                    period: str, n_quarters: int):
+                    period: str, n_quarters: int,
+                    job_id: int = None):
         """Instantiate and run BLMAnalysisEngine. Returns FiveLooksResult."""
         from src.blm.engine import BLMAnalysisEngine
 
@@ -265,6 +268,16 @@ class AnalysisRunnerService:
         )
         result = engine.run_five_looks()
         print(f"  Engine complete: {result.analysis_period}")
+
+        # Persist provenance data if available
+        if result.provenance and job_id is not None:
+            try:
+                stats = result.provenance.save_to_db(db, analysis_job_id=job_id)
+                print(f"  Provenance saved: {stats['sources_saved']} sources, "
+                      f"{stats['values_saved']} values")
+            except Exception as e:
+                print(f"  [!] Provenance save failed: {e}")
+
         return result
 
     # ==================================================================

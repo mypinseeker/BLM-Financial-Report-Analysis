@@ -2,10 +2,11 @@
 
 ## Current Status (2026-02-14)
 
-Engine v1.0.0 complete. Eleven enhancement task packages (TP-1 through TP-11) delivered,
+Engine v1.0.0 complete. Twelve enhancement task packages (TP-1 through TP-12) delivered,
 adding Supabase cloud pipeline, AI extraction, multi-market analysis, engine quality
 improvements, market readiness audit, data gap remediation, MD strategic reports, Three
-Decisions (BLM Phase 2), and full Millicom group rollout across 11 LATAM countries.
+Decisions (BLM Phase 2), full Millicom group rollout, group cross-market report, Supabase
+bulk push, and data provenance persistence.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -26,14 +27,16 @@ TP-8  Chile MD + Housekeeping  ████████████████�
 TP-9  Tech Debt Cleanup        ████████████████████  DONE  (2026-02-13)
 TP-10 Three Decisions (Phase 2)████████████████████  DONE  (2026-02-13)
 TP-11 Millicom 11-Country Roll ████████████████████  DONE  (2026-02-14)
+TP-12 Group Report + Push + Prov████████████████████  DONE  (2026-02-14)
 ```
 
 ### Latest Reports: CQ4_2025
 - **12 markets analyzed**: Germany, Chile, Guatemala, Colombia, Honduras, Paraguay, Bolivia, El Salvador, Panama, Nicaragua, Ecuador, Uruguay
 - **38 operators** across all markets, **304 financial quarterly** + **subscriber quarterly** records
 - **Output formats**: JSON, TXT, HTML, PPTX, MD (Five Looks + Three Decisions)
+- **Group report**: 11-market Millicom cross-market summary (JSON + TXT)
 - **Audit scores**: Germany 97/A, Chile 92/A
-- **Tests**: 731 passing
+- **Tests**: 741 passing
 
 ---
 
@@ -124,6 +127,22 @@ TP-11 Millicom 11-Country Roll ████████████████�
 - **Bug fix**: PPT stacked bar chart None guard in `ppt_charts.py`
 - **Files**: 13 new files (~3,500 lines), 10 modified files (~2,000 lines enrichments)
 
+### TP-12: Group Report + Supabase Push + Provenance Persistence (2026-02-14)
+- **Phase 1 — Group Report**: `seed_orchestrator.py` seeds all 12 markets into single SQLite; `cli_group_local.py` runs Five Looks for 11 Tigo operators, generates GroupSummary JSON+TXT
+  - Group summary: revenue/subscriber/competitive comparison, common opportunities (47) and threats (7), key findings
+  - CLI: `python3 -m src.cli_group_local [--markets X,Y] [--output-dir DIR] [--with-md]`
+- **Phase 2 — Supabase Push**: `cli_push_all.py` seeds locally then pushes all 12 markets to Supabase via BLMCloudSync
+  - Added `operator_groups` + `group_subsidiaries` to TABLE_CONFIG in `supabase_sync.py`
+  - Fixed country capitalization bug: `market.capitalize()` → operator directory lookup (fixes "el_salvador" → "El Salvador")
+  - CLI: `python3 -m src.cli_push_all [--markets X] [--dry-run] [--status]`
+  - Local totals: 39 operators, 304 financial, 304 subscriber, 350 competitive scores, 706 tariffs, 1 group, 11 subsidiaries
+- **Phase 3 — Provenance Persistence**: `ProvenanceStore.save_to_db()` / `load_from_db()` for audit trail across runs
+  - Added `analysis_job_id`, `operator_id`, `period`, `value_text`, `unit` columns to `data_provenance` table
+  - Wired into `analysis_runner._run_engine()` — auto-saves provenance after each engine run
+  - 10 new tests: empty store, sources, tracked values, roundtrip, quality report, job isolation, idempotent, engine integration
+- **Bug fix**: `seed_millicom.py` `db.execute()` → `db.conn.execute()` (TelecomDatabase API mismatch)
+- **Tests**: 741 passed (731 existing + 10 new), zero regressions
+
 ---
 
 ## Version History
@@ -188,7 +207,7 @@ result = engine.run_five_looks()  # uses UK config automatically
 
 | ID | Task | Impact | Status |
 |----|------|--------|--------|
-| P1-1 | **Persist data_provenance** — ProvenanceStore only in-memory; add save_to_db/load_from_db | No audit trail across runs | Open |
+| P1-1 | ~~Persist data_provenance~~ — ProvenanceStore save_to_db/load_from_db + wired into analysis_runner | ~~No audit trail across runs~~ | **DONE** TP-12 |
 | P1-2 | ~~Fill NetworkAnalysis 7 fields~~ | ~~Network slide lacks strategic depth~~ | **DONE** TP-6 `cdce1e5` |
 | P1-3 | ~~Use remaining chart types~~ — stacked_bar integrated, timeline already used, heatmap deferred | ~~Chart gap~~ | **DONE** TP-9 |
 | P1-4 | ~~Clean seed data language~~ — intelligence_events translated to English | ~~Mixed language outputs~~ | **DONE** `9207312` |

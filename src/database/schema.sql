@@ -231,6 +231,11 @@ CREATE TABLE IF NOT EXISTS data_provenance (
     confidence REAL CHECK(confidence >= 0 AND confidence <= 1),
     extraction_method TEXT,  -- "manual" / "api" / "scrape" / "calculated"
     raw_text TEXT,
+    analysis_job_id INTEGER,
+    operator_id TEXT,
+    period TEXT,
+    value_text TEXT,
+    unit TEXT,
     collected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -255,5 +260,6 @@ CREATE INDEX IF NOT EXISTS idx_intelligence_operator ON intelligence_events(oper
 CREATE INDEX IF NOT EXISTS idx_macro_country_cq ON macro_environment(country, calendar_quarter);
 CREATE INDEX IF NOT EXISTS idx_earnings_operator_cq ON earnings_call_highlights(operator_id, calendar_quarter);
 CREATE INDEX IF NOT EXISTS idx_provenance_entity ON data_provenance(entity_type, entity_id);
+CREATE INDEX IF NOT EXISTS idx_provenance_job ON data_provenance(analysis_job_id);
 CREATE INDEX IF NOT EXISTS idx_tariff_operator_period ON tariffs(operator_id, snapshot_period);
 CREATE INDEX IF NOT EXISTS idx_tariff_type_period ON tariffs(plan_type, snapshot_period);
