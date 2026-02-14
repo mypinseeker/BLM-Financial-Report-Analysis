@@ -170,6 +170,24 @@ def _render_situation(result, diagnosis, config) -> str:
             val_key = keys[0]  # use the first matching key name for formatting
             position_rows.append([metric, fmt_smart_value(val_key, val, config), rank_str, ""])
 
+    # Append share trend rows from multi-quarter analysis
+    share_trends = safe_dict(sa, "share_trends") if sa else {}
+    for metric_key, label in [
+        ("revenue", "Revenue Share"),
+        ("mobile_subscribers", "Mobile Share"),
+        ("broadband_subscribers", "Broadband Share"),
+    ]:
+        sa_obj = share_trends.get(metric_key)
+        if sa_obj is not None and hasattr(sa_obj, "target_series") and sa_obj.target_series:
+            ts = sa_obj.target_series
+            val_str = f"{ts.latest_share_pct:.1f}%" if ts.latest_share_pct is not None else "—"
+            rank_str = f"#{ts.rank_latest}" if ts.rank_latest is not None else ""
+            change_str = ""
+            if ts.share_change_pp is not None:
+                change_str = f"{ts.share_change_pp:+.1f}pp {ts.direction}"
+            position_rows.append([label, f"{val_str} ({rank_str})" if rank_str else val_str,
+                                  rank_str, change_str])
+
     if position_rows:
         lines.append(md_table(["Metric", "Value", "Rank", "Assessment"], position_rows))
     else:

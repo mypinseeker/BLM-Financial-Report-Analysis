@@ -2,12 +2,12 @@
 
 ## Current Status (2026-02-14)
 
-Engine v1.0.0 complete. Fifteen enhancement task packages (TP-1 through TP-15) delivered,
+Engine v1.0.0 complete. Sixteen enhancement task packages (TP-1 through TP-16) delivered,
 adding Supabase cloud pipeline, AI extraction, multi-market analysis, engine quality
 improvements, market readiness audit, data gap remediation, MD strategic reports, Three
 Decisions (BLM Phase 2), full Millicom group rollout, group cross-market report, Supabase
 bulk push, data provenance persistence, Draft→Final feedback loop, real data ingestion CLI,
-and multi-quarter trend analysis.
+multi-quarter trend analysis, and multi-quarter market share trend analysis.
 
 ```
 M0  Project Infrastructure     ████████████████████  DONE
@@ -32,6 +32,7 @@ TP-12 Group Report + Push + Prov████████████████
 TP-13 Draft→Final Feedback Loop ████████████████████  DONE  (2026-02-14)
 TP-14 Real Data Ingestion CLI   ████████████████████  DONE  (2026-02-14)
 TP-15 Multi-Quarter Trend Anlys ████████████████████  DONE  (2026-02-14)
+TP-16 Market Share Trend Anlys  ████████████████████  DONE  (2026-02-14)
 ```
 
 ### Latest Reports: CQ4_2025
@@ -41,7 +42,7 @@ TP-15 Multi-Quarter Trend Anlys ████████████████
 - **Group report**: 10-market Millicom cross-market summary (JSON + TXT) with subscriber data
 - **Feedback loop**: Web UI for reviewing findings → persist feedback → regenerate final reports
 - **Audit scores**: Germany 97/A, Chile 92/A
-- **Tests**: 877 passing (as of TP-15)
+- **Tests**: 916 passing (as of TP-16)
 
 ---
 
@@ -188,6 +189,19 @@ TP-15 Multi-Quarter Trend Anlys ████████████████
 - **Totals**: 877 tests pass (47 new + 830 existing), zero regressions
 - **New files**: `src/blm/trend_analyzer.py` (~250 lines), `tests/test_trend_analyzer.py` (~380 lines)
 - **Modified files**: `src/blm/look_at_self.py` (+25), `src/blm/look_at_competition.py` (+10), `src/output/md_modules/executive_summary.py` (+60), `src/output/md_modules/self_analysis.py` (+50), `src/output/md_modules/competition.py` (+30), `src/output/ppt_generator.py` (+70)
+
+### TP-16: Multi-Quarter Market Share Trend Analysis (2026-02-14)
+- **Goal**: Compute multi-quarter share history for all operators, derive share movement metrics (gain/loss velocity, HHI concentration trend), surface in MD/PPT
+- **Phase 1 — Library**: `src/blm/share_analyzer.py` — 3 dataclasses (`OperatorShareSeries`, `MarketConcentration`, `ShareAnalysis`), 9 pure functions + 1 orchestrator; stdlib `math` only
+  - Functions: `_extract_revenue_shares`, `_extract_subscriber_shares`, `_build_operator_series`, `_compute_hhi`, `_classify_hhi`, `_compute_ranks`, `_identify_share_movements`, `_generate_key_message`, `_classify_direction`, `compute_share_analysis`
+  - Metrics: per-operator share %, pp change, direction (gaining/losing/stable), rank + rank change, HHI + CR3, concentration label + trend
+- **Phase 2 — Engine wiring**: `look_at_self.py` — replaced flat share_trends with multi-quarter `compute_share_analysis()` for revenue, mobile, broadband; backward-compat flat keys preserved
+- **Phase 3 — MD outputs**: Self Analysis gains "Market Share Evolution" section (trend tables, movement summary, HHI concentration); Executive Summary gains share rows in "Operator Position"; Competition gains "Revenue Share %" and "Mobile Share %" rows with trend arrows in comparison dashboard
+- **Phase 4 — PPT output**: New "Market Share Evolution" slide with operator metric cards, HHI annotation, subscriber share summary, key message bar
+- **Tests**: `tests/test_share_analyzer.py` — 39 tests across 10 classes (edge cases, zero revenue, mid-series entry, single op, empty data)
+- **Totals**: 916 tests pass (39 new + 877 existing), zero regressions
+- **New files**: `src/blm/share_analyzer.py` (~280 lines), `tests/test_share_analyzer.py` (~300 lines)
+- **Modified files**: `src/blm/look_at_self.py` (+30), `src/output/md_modules/self_analysis.py` (+70), `src/output/md_modules/executive_summary.py` (+15), `src/output/md_modules/competition.py` (+25), `src/output/ppt_generator.py` (+55)
 
 ---
 

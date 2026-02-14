@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from typing import Optional
 
+from src.blm.share_analyzer import compute_share_analysis
 from src.blm.trend_analyzer import compute_trend_metrics
 from src.database.db import TelecomDatabase
 from src.models.market_config import MarketConfig
@@ -2279,9 +2280,48 @@ def analyze_self(
     )
 
     # ------------------------------------------------------------------
-    # 11. Share trends
+    # 11. Share trends (multi-quarter)
     # ------------------------------------------------------------------
     share_trends = {}
+    try:
+        market_ts = db.get_market_timeseries(market, n_quarters=n_quarters, end_cq=end_cq)
+    except Exception:
+        market_ts = []
+
+    # Build subscriber data for all operators in the market
+    all_ops = []
+    try:
+        all_ops = db.get_operators_in_market(market)
+    except Exception:
+        pass
+    display_names = {op["operator_id"]: op.get("display_name", op["operator_id"])
+                     for op in all_ops}
+    sub_data_by_op: dict[str, list] = {}
+    for op in all_ops:
+        op_id = op["operator_id"]
+        try:
+            sub_data_by_op[op_id] = db.get_subscriber_timeseries(
+                op_id, n_quarters=n_quarters, end_cq=end_cq,
+            )
+        except Exception:
+            sub_data_by_op[op_id] = []
+
+    # Derive quarter list from market timeseries
+    share_quarters = sorted({r.get("calendar_quarter", "") for r in market_ts} - {""})
+
+    for metric in ("revenue", "mobile_subscribers", "broadband_subscribers"):
+        sa = compute_share_analysis(
+            market_ts=market_ts,
+            sub_data_by_op=sub_data_by_op,
+            quarters=share_quarters,
+            target_operator_id=target_operator,
+            metric_type=metric,
+            display_names=display_names,
+        )
+        if sa.operator_series:
+            share_trends[metric] = sa
+
+    # Backward-compat: flat keys for consumers that read simple values
     if market_positions.get("revenue_market_share_pct") is not None:
         share_trends["revenue_share_latest"] = market_positions["revenue_market_share_pct"]
     if market_positions.get("mobile_subscriber_share_pct") is not None:

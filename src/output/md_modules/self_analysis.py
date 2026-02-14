@@ -44,6 +44,9 @@ def render_self_analysis(result, diagnosis, config, feedback=None) -> str:
     # 1. Financial Health
     parts.append(_render_financial_health(sa, config))
 
+    # 1b. Market Share Evolution
+    parts.append(_render_share_evolution(sa, config))
+
     # 2. Revenue Breakdown
     parts.append(_render_revenue_breakdown(sa, config))
 
@@ -145,6 +148,89 @@ def _render_financial_health(sa, config) -> str:
         ))
 
     lines.append("")
+    lines.append("---")
+
+    return "\n".join(lines)
+
+
+def _render_share_evolution(sa, config) -> str:
+    """Render market share evolution tables from multi-quarter ShareAnalysis data."""
+    st = safe_dict(sa, "share_trends")
+    if not st:
+        return ""
+
+    # Check for at least one ShareAnalysis object (not just flat keys)
+    has_analysis = False
+    for key in ("revenue", "mobile_subscribers", "broadband_subscribers"):
+        val = st.get(key)
+        if val is not None and hasattr(val, "operator_series"):
+            has_analysis = True
+            break
+
+    if not has_analysis:
+        return ""
+
+    metric_labels = {
+        "revenue": "Revenue",
+        "mobile_subscribers": "Mobile Subscriber",
+        "broadband_subscribers": "Broadband Subscriber",
+    }
+
+    lines = [section_header("Market Share Evolution", 2), ""]
+
+    for metric_key in ("revenue", "mobile_subscribers", "broadband_subscribers"):
+        analysis = st.get(metric_key)
+        if analysis is None or not hasattr(analysis, "operator_series"):
+            continue
+        if not analysis.operator_series:
+            continue
+
+        label = metric_labels.get(metric_key, metric_key.replace("_", " ").title())
+        quarters = analysis.quarters or []
+
+        lines.append(section_header(f"{label} Share Trend ({len(quarters)} Quarters)", 3))
+        lines.append("")
+
+        # Share trend table: Quarter × Operator
+        if quarters and analysis.operator_series:
+            headers = ["Quarter"] + [s.display_name for s in analysis.operator_series]
+            rows = []
+            for i, cq in enumerate(quarters):
+                row = [cq]
+                for s in analysis.operator_series:
+                    val = s.share_pct[i] if i < len(s.share_pct) else 0.0
+                    row.append(f"{val:.1f}%")
+                rows.append(row)
+            lines.append(md_table(headers, rows))
+            lines.append("")
+
+        # Share movement summary
+        lines.append(bold("Share Movement Summary"))
+        lines.append("")
+        move_headers = ["Operator", "Latest", "Change (pp)", "Direction", "Rank"]
+        move_rows = []
+        for s in analysis.operator_series:
+            latest = f"{s.latest_share_pct:.1f}%" if s.latest_share_pct is not None else "—"
+            change = f"{s.share_change_pp:+.1f}" if s.share_change_pp is not None else "—"
+            direction = s.direction.title()
+            rank = f"#{s.rank_latest}" if s.rank_latest is not None else "—"
+            if s.rank_change is not None and s.rank_change != 0:
+                rank += f" ({s.rank_change:+d})"
+            move_rows.append([s.display_name, latest, change, bold(direction), rank])
+        lines.append(md_table(move_headers, move_rows))
+        lines.append("")
+
+        # Concentration
+        conc = analysis.concentration
+        if conc:
+            hhi_label = conc.hhi_label.replace("_", " ").title()
+            hhi_dir = conc.hhi_direction.title()
+            lines.append(
+                f"**Market Concentration**: HHI {conc.hhi:,.0f} ({hhi_label}), "
+                f"CR3 {conc.cr3:.1f}%, trend: {hhi_dir}"
+            )
+            lines.append("")
+
     lines.append("---")
 
     return "\n".join(lines)

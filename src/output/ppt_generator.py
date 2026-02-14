@@ -178,6 +178,7 @@ class BLMPPTGenerator:
         # --- Look 4: Self ---
         self._add_section_divider("04 Look at Self", "BMC + Capability Assessment")
         self._add_health_check(result.self_analysis)
+        self._add_share_evolution(result.self_analysis)
         self._add_momentum_dashboard(result.self_analysis, result.competition)
         self._add_revenue_composition_trend(result.self_analysis)
         self._add_revenue_comparison(result.self_analysis, result.competition)
@@ -1487,6 +1488,77 @@ class BLMPPTGenerator:
             slide,
             f"Dominant momentum: {dominant} — based on {len(cards)} KPI trend analyses"
         )
+
+    def _add_share_evolution(self, self_analysis):
+        """Add a Market Share Evolution slide with share summary and HHI."""
+        if self_analysis is None:
+            return
+
+        st = self_analysis.share_trends or {}
+
+        # Find the first valid ShareAnalysis (prefer revenue)
+        share_obj = None
+        for key in ("revenue", "mobile_subscribers", "broadband_subscribers"):
+            obj = st.get(key)
+            if obj is not None and hasattr(obj, "operator_series") and obj.operator_series:
+                share_obj = obj
+                break
+
+        if share_obj is None:
+            return
+
+        slide = self._new_slide("share_evolution", "Market Share Evolution",
+                                section="04")
+        self._add_header(slide, "Market Share Evolution",
+                         f"{share_obj.metric_type.replace('_', ' ').title()} Share Trend")
+
+        # Metric cards for top operators
+        cards = []
+        for s in share_obj.operator_series[:4]:
+            val_str = f"{s.latest_share_pct:.1f}%" if s.latest_share_pct is not None else "N/A"
+            change_str = ""
+            if s.share_change_pp is not None:
+                change_str = f"{s.share_change_pp:+.1f}pp {s.direction}"
+            rank_str = f"#{s.rank_latest}" if s.rank_latest else ""
+            cards.append((s.display_name, f"{val_str} {rank_str}", change_str))
+
+        if cards:
+            self._add_metric_cards(slide, cards[:4], top=1.5,
+                                   card_width=3.0, card_height=1.2)
+
+        # HHI annotation
+        conc = share_obj.concentration
+        if conc:
+            hhi_label = conc.hhi_label.replace("_", " ").title()
+            hhi_text = (
+                f"Market Concentration: HHI {conc.hhi:,.0f} ({hhi_label})"
+                f" | CR3: {conc.cr3:.1f}%"
+                f" | Trend: {conc.hhi_direction.title()}"
+            )
+            self._add_text_box(slide, Inches(0.5), Inches(3.2),
+                               Inches(12), Inches(0.4),
+                               hhi_text, font_size=10,
+                               font_color=self.style.light_text_color)
+
+        # Additional share summaries for other metrics
+        other_lines = []
+        for key, label in [("mobile_subscribers", "Mobile"), ("broadband_subscribers", "Broadband")]:
+            obj = st.get(key)
+            if obj is not None and hasattr(obj, "target_series") and obj.target_series:
+                ts = obj.target_series
+                if ts.latest_share_pct is not None:
+                    pp = f" ({ts.share_change_pp:+.1f}pp)" if ts.share_change_pp is not None else ""
+                    other_lines.append(f"{label}: {ts.latest_share_pct:.1f}%{pp}")
+
+        if other_lines:
+            self._add_text_box(slide, Inches(0.5), Inches(3.8),
+                               Inches(12), Inches(0.4),
+                               "Subscriber share: " + " | ".join(other_lines),
+                               font_size=10,
+                               font_color=self.style.light_text_color)
+
+        # Key message
+        self._add_key_message_bar(slide, share_obj.key_message or "Market share evolution")
 
     def _add_revenue_composition_trend(self, self_analysis):
         """Stacked bar chart showing revenue composition by segment over 8 quarters."""

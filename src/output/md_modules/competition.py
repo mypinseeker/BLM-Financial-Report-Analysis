@@ -51,7 +51,7 @@ def render_competition(result, diagnosis, config, feedback=None) -> str:
                                      feedback=feedback))
 
     # 4. Comparison Dashboard
-    parts.append(_render_comparison_dashboard(comp, config))
+    parts.append(_render_comparison_dashboard(comp, config, result=result))
 
     # 5. Competitive Dynamics
     parts.append(_render_dynamics(comp, diagnosis, op_map))
@@ -365,7 +365,7 @@ def _render_deep_dives(comp, target_operator: str, config=None,
     return "\n".join(lines)
 
 
-def _render_comparison_dashboard(comp, config=None) -> str:
+def _render_comparison_dashboard(comp, config=None, result=None) -> str:
     ct = safe_dict(comp, "comparison_table")
     if not ct:
         return ""
@@ -393,6 +393,33 @@ def _render_comparison_dashboard(comp, config=None) -> str:
             val = values.get(op, "—")
             row.append(fmt_smart_value(metric, val, config))
         rows.append(row)
+
+    # Add share trend rows from self_analysis if available
+    if result is not None:
+        sa = getattr(result, "self_analysis", None)
+        share_trends = safe_dict(sa, "share_trends") if sa else {}
+        for metric_key, label in [
+            ("revenue", "Revenue Share %"),
+            ("mobile_subscribers", "Mobile Share %"),
+        ]:
+            sa_obj = share_trends.get(metric_key)
+            if sa_obj is not None and hasattr(sa_obj, "operator_series"):
+                share_row = [bold(label)]
+                # Build a lookup from operator_id → series
+                share_lookup = {s.operator_id: s for s in sa_obj.operator_series}
+                for op in all_ops:
+                    s = share_lookup.get(op)
+                    if s and s.latest_share_pct is not None:
+                        trend_arrow = ""
+                        if s.share_change_pp is not None:
+                            if s.share_change_pp > 0.5:
+                                trend_arrow = " ▲"
+                            elif s.share_change_pp < -0.5:
+                                trend_arrow = " ▼"
+                        share_row.append(f"{s.latest_share_pct:.1f}%{trend_arrow}")
+                    else:
+                        share_row.append("—")
+                rows.append(share_row)
 
     if rows:
         lines.append(md_table(headers, rows))
