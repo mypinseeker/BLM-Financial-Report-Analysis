@@ -955,11 +955,14 @@ def _build_vs_competitors(
         # Fiber homepass comparison
         op_fiber_hp = op_net.get("fiber_homepass_k")
         if target_fiber_hp is not None and op_fiber_hp is not None and op_fiber_hp > 0:
-            ratio = target_fiber_hp / op_fiber_hp
-            if ratio > 1.5:
-                comparisons.append(f"Fiber: {ratio:.1f}x more homepass than {display}")
-            elif ratio < 0.67:
-                comparisons.append(f"Fiber: {1/ratio:.1f}x less homepass than {display}")
+            if target_fiber_hp == 0:
+                comparisons.append(f"Fiber: No fiber homepass vs {display} ({op_fiber_hp:,.0f}K)")
+            else:
+                ratio = target_fiber_hp / op_fiber_hp
+                if ratio > 1.5:
+                    comparisons.append(f"Fiber: {ratio:.1f}x more homepass than {display}")
+                elif ratio < 0.67:
+                    comparisons.append(f"Fiber: {1/ratio:.1f}x less homepass than {display}")
 
     # Cap at 4 comparisons
     return "; ".join(comparisons[:4])
