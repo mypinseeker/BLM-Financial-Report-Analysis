@@ -33,9 +33,27 @@ data/raw/*.xlsx
 !data/raw/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
-data/output/
+data/output/*
 !data/output/.gitkeep
+!data/output/germany/
+!data/output/chile/
+!data/output/guatemala/
+!data/output/colombia/
+!data/output/honduras/
+!data/output/paraguay/
+!data/output/bolivia/
+!data/output/el_salvador/
+!data/output/panama/
+!data/output/nicaragua/
+!data/output/ecuador/
+!data/output/uruguay/
+!data/output/netherlands/
+!data/output/belgium/
+!data/output/france/
+!data/output/italy/
+!data/output/poland/
 !data/output/group/
+!data/output/_legacy/
 
 # Jupyter
 .ipynb_checkpoints/

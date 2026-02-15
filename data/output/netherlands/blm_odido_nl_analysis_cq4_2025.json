@@ -1,0 +1,3501 @@
+{
+  "meta": {
+    "target_operator": "odido_nl",
+    "market": "netherlands",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-14T22:12:46.423618",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "ACM pro-competition regulation; joint SMP finding for KPN+VodafoneZiggo in wholesale fixed access; 3.5 GHz auction completed Jul 2024 (EUR 174.4M, 100 MHz each to KPN/Odido/VZ); 2G/3G sunset research published Dec 2024",
+            "trend": "Regulatory stance: ACM pro-competition regulation; joint SMP finding for KPN+VodafoneZiggo in wholesale fixed access; 3.5 GHz auction completed Jul 2024 (EUR 174.4M, 100 MHz each to KPN/Odido/VZ); 2G/3G sunset research published Dec 2024",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect odido_nl",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: ACM pro-competition regulation; joint SMP finding for KPN+VodafoneZiggo in wholesale fixed access; 3.5 GHz auction completed Jul 2024 (EUR 174.4M, 100 MHz each to KPN/Odido/VZ); 2G/3G sunset research published Dec 2024"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "Dutch Gigabit Strategy: 100% gigabit coverage by 2030; all populated areas 5G; 98.3% VHCN coverage already achieved (above EU avg 78.8%); majority of households now using fiber (ACM Q1 2025)",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: Dutch Gigabit Strategy: 100% gigabit coverage by 2030; all populated areas 5G; 98.3% VHCN coverage already achieved (above EU avg 78.8%); majority of households now using fiber (ACM Q1 2025)"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "3.5 GHz spectrum auction completes — EUR 174.4M total",
+            "current_status": "KPN, Odido, and VodafoneZiggo each acquire 100 MHz in the 3.5 GHz band. Total raised EUR 174.4M. Licenses valid until 2040. Enables 5G SA deployment.",
+            "trend": "KPN, Odido, and VodafoneZiggo each acquire 100 MHz in the 3.5 GHz band. Total raised EUR 174.4M. Licenses valid until 2040. Enables 5G SA deployment.",
+            "trend_direction": "uncertain",
+            "industry_impact": "KPN, Odido, and VodafoneZiggo each acquire 100 MHz in the 3.5 GHz band. Total raised EUR 174.4M. Licenses valid until 2040. Enables 5G SA deployment.",
+            "company_impact": "3.5 GHz spectrum auction completes — EUR 174.4M total: requires odido_nl to monitor and adapt strategy",
+            "impact_type": "neutral",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [],
+            "data_source": "intelligence_events"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 1.5%",
+            "trend": "GDP growth trend: stable (latest 1.5%)",
+            "trend_direction": "stable",
+            "industry_impact": "Moderate GDP growth supports steady telecom demand",
+            "company_impact": "Supported revenue growth for odido_nl",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 1.5%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 2.3%",
+            "trend": "Inflation trend: stable (latest 2.3%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "Manageable cost environment for odido_nl",
+            "impact_type": "neutral",
+            "severity": "low",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 2.3%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Unemployment",
+            "current_status": "Unemployment at 3.7%",
+            "trend": "Unemployment trend: stable",
+            "trend_direction": "stable",
+            "industry_impact": "Unemployment affects consumer spending power and enterprise IT budgets",
+            "company_impact": "Consumer segment sensitivity for odido_nl",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Unemployment: 3.7%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 48.0% of mobile subscribers",
+            "trend": "5G adoption trend: stable (48.0% -> 48.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for odido_nl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 48.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 77.7%",
+            "trend": "Fiber penetration trend: stable (77.7% -> 77.7%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for odido_nl",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 77.7%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in acceleration phase (48.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for odido_nl",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 48.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 77.7%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for odido_nl",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 77.7%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "overall_weather": "mixed",
+        "weather_explanation": "Mixed outlook: 6 opportunities vs 3 threats out of 10 factors",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl",
+          "National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment",
+        "key_message": "Macro environment: Mixed. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "EUR 3.1B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+1.3% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Stable (industry EBITDA margin ~44.1%)",
+      "industry_concentration": "CR4 = 100% (KPN: 48.0%, VodafoneZiggo: 32.2%, Odido: 19.8%)",
+      "industry_lifecycle_stage": "mature",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Mixed. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is mature. (+1.3% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 3055.0,
+        "total_mobile_subscribers_k": 17280.0,
+        "total_broadband_subscribers_k": 7010.0,
+        "market_shares": {
+          "KPN": 48.0,
+          "VodafoneZiggo": 32.2,
+          "Odido": 19.8
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 95.3,
+          "broadband_penetration_pct": 38.7
+        },
+        "operator_count": 3
+      },
+      "changes": [
+        {
+          "change_type": "merger",
+          "description": "Odido postpones EUR 1B Amsterdam IPO",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Apax/Warburg Pincus planned EUR 1.1B IPO at ~EUR 7B valuation postponed due to muted investor response and market volatility. No firm timeline for revival.",
+          "severity": "high",
+          "evidence": []
+        },
+        {
+          "change_type": "merger",
+          "description": "VodafoneZiggo cuts 400 jobs due to disappointing revenue",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "VodafoneZiggo announces 400 position cuts citing disappointing turnover results and broadband subscriber losses. Revenue declining -3.9% YoY by Q3 2025.",
+          "severity": "high",
+          "evidence": []
+        },
+        {
+          "change_type": "technology",
+          "description": "KPN fiber homepass exceeds 5.5M — majority of NL now on fiber",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "KPN + Glaspoort JV reach 5.58M fiber homepass by Q3 2025. ACM Telecom Monitor confirms majority of Dutch households using fiber for first time (Q1 2025).",
+          "severity": "high",
+          "evidence": []
+        }
+      ],
+      "opportunities": [
+        {
+          "change_type": "merger",
+          "description": "VodafoneZiggo cuts 400 jobs due to disappointing revenue",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "VodafoneZiggo announces 400 position cuts citing disappointing turnover results and broadband subscriber losses. Revenue declining -3.9% YoY by Q3 2025.",
+          "severity": "high",
+          "evidence": []
+        }
+      ],
+      "threats": [
+        {
+          "change_type": "merger",
+          "description": "Odido postpones EUR 1B Amsterdam IPO",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Apax/Warburg Pincus planned EUR 1.1B IPO at ~EUR 7B valuation postponed due to muted investor response and market volatility. No firm timeline for revival.",
+          "severity": "high",
+          "evidence": []
+        },
+        {
+          "change_type": "technology",
+          "description": "KPN fiber homepass exceeds 5.5M — majority of NL now on fiber",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "KPN + Glaspoort JV reach 5.58M fiber homepass by Q3 2025. ACM Telecom Monitor confirms majority of Dutch households using fiber for first time (Q1 2025).",
+          "severity": "high",
+          "evidence": []
+        }
+      ],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Premium",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Seamless converged fixed-mobile bundles",
+            "Ultra-reliable 5G standalone connectivity"
+          ],
+          "pain_points": [
+            "Complex multi-provider setups for home + mobile",
+            "Limited 5G standalone use cases"
+          ],
+          "purchase_decision_factors": [
+            "Network quality",
+            "Bundle integration",
+            "5G availability",
+            "Brand trust"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Mainstream",
+          "segment_type": "consumer",
+          "size_estimate": "~8.3M subscribers",
+          "growth_trend": "stable",
+          "our_share": "~38% of postpaid",
+          "unmet_needs": [
+            "Better value-for-money unlimited data plans",
+            "Transparent pricing without hidden costs"
+          ],
+          "pain_points": [
+            "Price increases during contract period",
+            "Difficulty comparing plans across operators"
+          ],
+          "purchase_decision_factors": [
+            "Monthly cost",
+            "Data allowance",
+            "Network coverage",
+            "Contract flexibility"
+          ],
+          "competitor_gaps": [
+            "VodafoneZiggo aggressive on price but weaker on network quality",
+            "KPN competes on brand and convergence"
+          ],
+          "opportunity": "Value-for-money bundles combining mobile + broadband"
+        },
+        {
+          "segment_name": "Consumer Price-Sensitive",
+          "segment_type": "consumer",
+          "size_estimate": "~1.5M subscribers",
+          "growth_trend": "shrinking",
+          "our_share": "~86% of prepaid",
+          "unmet_needs": [
+            "Affordable SIM-only plans",
+            "No-frills connectivity"
+          ],
+          "pain_points": [
+            "Annual price indexation clauses",
+            "Limited MVNO network quality"
+          ],
+          "purchase_decision_factors": [
+            "Lowest monthly price",
+            "No contract lock-in",
+            "Adequate data"
+          ],
+          "competitor_gaps": [
+            "Low-cost brands and sub-brands (VodafoneZiggo, KPN) compete here"
+          ],
+          "opportunity": "Selective prepaid-to-postpaid migration campaigns"
+        },
+        {
+          "segment_name": "Enterprise & SME",
+          "segment_type": "enterprise",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Private 5G network solutions",
+            "SD-WAN and cloud connectivity",
+            "IoT platform integration"
+          ],
+          "pain_points": [
+            "Complexity of multi-site connectivity",
+            "Vendor lock-in concerns"
+          ],
+          "purchase_decision_factors": [
+            "Reliability and SLAs",
+            "Managed services capability",
+            "Local support",
+            "Price competitiveness"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "critical",
+          "gap_analysis": "No competitor data available for Price"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 4.4,
+          "competitor_scores": {
+            "kpn_nl": 4.6,
+            "vodafoneziggo_nl": 4.5
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Availability by 0.1 points. Leader: kpn_nl (4.6/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Packaging"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 4.4,
+          "competitor_scores": {
+            "kpn_nl": 4.2,
+            "vodafoneziggo_nl": 3.9
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Market leader in Performance (score 4.4/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.6,
+          "competitor_scores": {
+            "kpn_nl": 4.0,
+            "vodafoneziggo_nl": 3.4
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Ease of Use by 0.1 points. Leader: kpn_nl (4.0/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 2.8,
+          "competitor_scores": {
+            "kpn_nl": 4.6,
+            "vodafoneziggo_nl": 3.8
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Assurances by 1.4 points. Leader: kpn_nl (4.6/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Lifecycle Cost"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 3.2,
+          "competitor_scores": {
+            "kpn_nl": 4.5,
+            "vodafoneziggo_nl": 4.1
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Below market average in Social/Brand by 1.1 points. Leader: kpn_nl (4.5/5.0)"
+        }
+      ],
+      "customer_value_migration": "Limited data to assess value migration trends",
+      "market_outlook": "mixed",
+      "key_message": "Netherlands telecom market totals EUR 3,055M in quarterly revenue; competitive strengths in Availability, Performance; gaps in Assurances; Market presents a balanced mix of opportunities and challenges."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "3 active operators in the market",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 48% of market revenue (total: EUR 3,055M)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from -1.7% to +4.0% (spread: 5.7pp)",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 43.3%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 48% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.00%/month. Highest: 1.10% indicating moderate willingness to switch.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 90%. High contract lock-in reduces buyer mobility.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "vodafoneziggo_nl": {
+          "operator": "VodafoneZiggo",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 985.0,
+            "service_revenue": 865.0,
+            "service_revenue_growth_pct": -1.7,
+            "ebitda": 440.0,
+            "ebitda_margin_pct": 44.7,
+            "ebitda_growth_pct": 0.0,
+            "capex": 205.0,
+            "capex_to_revenue_pct": 20.8,
+            "revenue_trend": "declining",
+            "margin_trend": "declining",
+            "revenue_metrics": {
+              "cagr_pct": -2.3,
+              "momentum_score": 48.71,
+              "momentum_phase": "accelerating_decline",
+              "volatility": 0.02,
+              "trend_slope": -7.26,
+              "acceleration": -1.4,
+              "sequential_growth": [
+                0.88,
+                -0.58,
+                -1.85,
+                -0.5,
+                -0.7,
+                -0.8,
+                -0.51
+              ],
+              "yoy_growth": [
+                -2.05,
+                -3.57,
+                -3.79,
+                -2.48
+              ],
+              "latest_qoq_pct": -0.51,
+              "latest_yoy_pct": -2.48,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "margin_metrics": {
+              "cagr_pct": -2.35,
+              "momentum_score": 72.02,
+              "momentum_phase": "recovery",
+              "volatility": 0.03,
+              "trend_slope": -0.32,
+              "acceleration": 1.13,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                -6.44,
+                1.61,
+                -0.45,
+                2.49,
+                -1.11
+              ],
+              "yoy_growth": [
+                -4.94,
+                -5.36,
+                -3.0,
+                2.52
+              ],
+              "latest_qoq_pct": -1.11,
+              "latest_yoy_pct": 2.52,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 5680.0,
+            "mobile_postpaid_k": 5375.0,
+            "mobile_net_adds_k": 18.0,
+            "mobile_churn_pct": 1.0,
+            "mobile_arpu": 14.0,
+            "broadband_total_k": 2990.0,
+            "broadband_fiber_k": 85.0,
+            "broadband_net_adds_k": -20.0,
+            "tv_total_k": 3320.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "declining",
+            "arpu_trend": "flat",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 98.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 200.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Ericsson/Nokia",
+              "spectrum_mhz": 380,
+              "core_vendor": "Ericsson",
+              "cable_docsis": "3.1",
+              "cable_homepass_k": 7000
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Defensive cost restructuring; subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Ericsson/Nokia; Core: Ericsson",
+          "ecosystem_partners": [
+            "Network vendor: Ericsson/Nokia"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Distribution",
+            "Market leadership in Brand Strength",
+            "Own fiber infrastructure (200k homes)"
+          ],
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; high-margin profile",
+          "org_structure": "CEO: Stephen van Rooyen (Ex-Sky UK CEO; replaced Jeroen Hoencamp; Ritchy Drost served as interim CEO May-Sep 2024); CFO: Ritchy Drost (Also served as interim CEO May-Sep 2024; managing JV financial structure)",
+          "incentive_system": "Restructuring mode — cost discipline focus",
+          "talent_culture": "2 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [],
+          "weaknesses": [
+            "Customer Service: score 68 (market avg 73)",
+            "Digital Experience: score 72 (market avg 78)",
+            "Innovation: score 70 (market avg 77)",
+            "Network Quality: score 78 (market avg 84)"
+          ],
+          "problems": [
+            "Competitive gap in Customer Service",
+            "Competitive gap in Digital Experience",
+            "Competitive gap in Innovation",
+            "Competitive gap in Network Quality",
+            "Revenue under pressure (declining trend)",
+            "Margin erosion",
+            "Broadband subscriber losses"
+          ],
+          "likely_future_actions": [
+            "VodafoneZiggo may pursue cost optimization or strategic pivot given declining revenue trend.",
+            "VodafoneZiggo is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "VodafoneZiggo may accelerate fiber migration or FWA push to counter broadband subscriber losses.",
+            "VodafoneZiggo with 98% 5G coverage is positioned to push 5G monetization through premium tiers and B2B use cases."
+          ],
+          "implications": [
+            {
+              "implication_type": "opportunity",
+              "description": "VodafoneZiggo is weak in: Customer Service, Digital Experience, Innovation. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Customer Service: score 68 (market avg 73)",
+                "Digital Experience: score 72 (market avg 78)",
+                "Innovation: score 70 (market avg 77)"
+              ],
+              "suggested_action": "Invest in Customer Service, Digital Experience, Innovation to capture customers dissatisfied with VodafoneZiggo."
+            },
+            {
+              "implication_type": "threat",
+              "description": "VodafoneZiggo has 98% 5G coverage, creating potential network advantage.",
+              "evidence": [
+                "5G coverage: 98%"
+              ],
+              "suggested_action": "Accelerate 5G deployment to close coverage gap."
+            }
+          ]
+        },
+        "kpn_nl": {
+          "operator": "KPN",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 1465.0,
+            "service_revenue": 1370.0,
+            "service_revenue_growth_pct": 3.0,
+            "ebitda": 666.0,
+            "ebitda_margin_pct": 45.4,
+            "ebitda_growth_pct": 5.2,
+            "capex": 305.0,
+            "capex_to_revenue_pct": 20.8,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 3.91,
+              "momentum_score": 51.92,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 10.6,
+              "acceleration": 3.0,
+              "sequential_growth": [
+                1.82,
+                0.72,
+                1.78,
+                -2.45,
+                2.15,
+                0.7,
+                2.09
+              ],
+              "yoy_growth": [
+                1.82,
+                2.15,
+                2.14,
+                2.45
+              ],
+              "latest_qoq_pct": 2.09,
+              "latest_yoy_pct": 2.45,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q4=high"
+            },
+            "margin_metrics": {
+              "cagr_pct": 1.54,
+              "momentum_score": 46.05,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.02,
+              "trend_slope": 0.2,
+              "acceleration": -0.17,
+              "sequential_growth": [
+                3.85,
+                -2.4,
+                -1.12,
+                3.61,
+                2.4,
+                -2.13,
+                -1.3
+              ],
+              "yoy_growth": [
+                3.85,
+                2.4,
+                2.68,
+                2.48
+              ],
+              "latest_qoq_pct": -1.3,
+              "latest_yoy_pct": 2.48,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q2=high"
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 4050.0,
+            "mobile_postpaid_k": 4050.0,
+            "mobile_net_adds_k": 40.0,
+            "mobile_churn_pct": 0.9,
+            "mobile_arpu": 16.5,
+            "broadband_total_k": 2900.0,
+            "broadband_fiber_k": 2230.0,
+            "broadband_net_adds_k": 14.0,
+            "tv_total_k": 1465.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "declining",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 99.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 5580.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Nokia",
+              "spectrum_mhz": 420,
+              "core_vendor": "Nokia",
+              "fiber_technology": "GPON/XGS-PON"
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push",
+          "supply_chain_status": "Primary vendor: Nokia; Core: Nokia",
+          "ecosystem_partners": [
+            "Network vendor: Nokia"
+          ],
+          "core_control_points": [
+            "Market leadership in Enterprise Solutions",
+            "Market leadership in Network Coverage",
+            "Market leadership in Brand Strength",
+            "Market leadership in Distribution",
+            "Market leadership in Network Quality"
+          ],
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; high-margin profile",
+          "org_structure": "CFO: Chris Figee (Ex-Aegon; driving financial efficiency and shareholder returns); CEO: Joost Farwerck (KPN veteran; led fiber acceleration strategy; reappointed 2024)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "2 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Brand Strength: score 90 (market avg 79)",
+            "Customer Service: score 80 (market avg 73)",
+            "Distribution: score 88 (market avg 82)",
+            "Enterprise Solutions: score 92 (market avg 74)"
+          ],
+          "weaknesses": [
+            "Price Competitiveness: score 62 (market avg 71)"
+          ],
+          "problems": [
+            "Competitive gap in Price Competitiveness"
+          ],
+          "likely_future_actions": [
+            "KPN is likely to continue aggressive network expansion (capex/revenue at 21% with growing revenue).",
+            "KPN is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "KPN with 99% 5G coverage is positioned to push 5G monetization through premium tiers and B2B use cases."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "KPN's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "KPN is weak in: Price Competitiveness. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Price Competitiveness: score 62 (market avg 71)"
+              ],
+              "suggested_action": "Invest in Price Competitiveness to capture customers dissatisfied with KPN."
+            },
+            {
+              "implication_type": "learning",
+              "description": "KPN excels in: Brand Strength, Customer Service, Distribution. Study their approach for best practices.",
+              "evidence": [
+                "Brand Strength: score 90 (market avg 79)",
+                "Customer Service: score 80 (market avg 73)",
+                "Distribution: score 88 (market avg 82)"
+              ],
+              "suggested_action": "Benchmark KPN's practices in Brand Strength, Customer Service, Distribution."
+            },
+            {
+              "implication_type": "threat",
+              "description": "KPN has 99% 5G coverage, creating potential network advantage.",
+              "evidence": [
+                "5G coverage: 99%"
+              ],
+              "suggested_action": "Accelerate 5G deployment to close coverage gap."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "odido_nl": 605.0,
+          "vodafoneziggo_nl": 985.0,
+          "kpn_nl": 1465.0
+        },
+        "revenue_growth": {
+          "odido_nl": 4.0,
+          "vodafoneziggo_nl": -1.7,
+          "kpn_nl": 3.0
+        },
+        "ebitda_margin": {
+          "odido_nl": 39.7,
+          "vodafoneziggo_nl": 44.7,
+          "kpn_nl": 45.4
+        },
+        "subscribers": {
+          "odido_nl": 7550.0,
+          "vodafoneziggo_nl": 5680.0,
+          "kpn_nl": 4050.0
+        },
+        "arpu": {
+          "odido_nl": 15.1,
+          "vodafoneziggo_nl": 14.0,
+          "kpn_nl": 16.5
+        },
+        "churn": {
+          "odido_nl": 1.1,
+          "vodafoneziggo_nl": 1.0,
+          "kpn_nl": 0.9
+        },
+        "5g_coverage": {
+          "odido_nl": 99.0,
+          "vodafoneziggo_nl": 98.0,
+          "kpn_nl": 99.0
+        }
+      },
+      "competitive_landscape": "The market comprises 3 active operators: Odido, VodafoneZiggo, KPN. Overall competition intensity is assessed as medium. Revenue ranking: KPN (1,465M), VodafoneZiggo (985.0M), Odido (605.0M). Five Forces: Existing Competitors: high; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "key_message": "In a 3-player market with medium competition intensity, KPN leads with 48% revenue share. Target operator holds 20% share. Strongest competitive force: Existing Competitors."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 605.0,
+        "service_revenue": 565.0,
+        "ebitda": 240.0,
+        "ebitda_margin_pct": 39.7,
+        "net_income": null,
+        "capex": 120.0,
+        "capex_to_revenue_pct": 19.8,
+        "opex": null,
+        "employees": 2200,
+        "revenue_qoq_pct": 1.17,
+        "revenue_yoy_pct": 3.95,
+        "ebitda_qoq_pct": 2.13,
+        "ebitda_growth_pct": 5.3,
+        "service_revenue_growth_pct": 4.0,
+        "revenue_trend": [
+          560.0,
+          568.0,
+          575.0,
+          582.0,
+          585.0,
+          592.0,
+          598.0,
+          605.0
+        ],
+        "ebitda_trend": [
+          213.0,
+          218.0,
+          222.0,
+          228.0,
+          225.0,
+          230.0,
+          235.0,
+          240.0
+        ],
+        "margin_trend": [
+          38.0,
+          38.4,
+          38.6,
+          39.2,
+          38.5,
+          38.9,
+          39.3,
+          39.7
+        ],
+        "revenue_metrics": {
+          "cagr_pct": 4.52,
+          "momentum_score": 48.47,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.02,
+          "trend_slope": 6.18,
+          "acceleration": -0.7,
+          "sequential_growth": [
+            1.43,
+            1.23,
+            1.22,
+            0.52,
+            1.2,
+            1.01,
+            1.17
+          ],
+          "yoy_growth": [
+            4.46,
+            4.23,
+            4.0,
+            3.95
+          ],
+          "latest_qoq_pct": 1.17,
+          "latest_yoy_pct": 3.95,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "ebitda_metrics": {
+          "cagr_pct": 7.06,
+          "momentum_score": 48.87,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.04,
+          "trend_slope": 3.51,
+          "acceleration": 0.1,
+          "sequential_growth": [
+            2.35,
+            1.83,
+            2.7,
+            -1.32,
+            2.22,
+            2.17,
+            2.13
+          ],
+          "yoy_growth": [
+            5.63,
+            5.5,
+            5.86,
+            5.26
+          ],
+          "latest_qoq_pct": 2.13,
+          "latest_yoy_pct": 5.26,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "margin_metrics": {
+          "cagr_pct": 2.53,
+          "momentum_score": 49.88,
+          "momentum_phase": "stabilizing",
+          "volatility": 0.01,
+          "trend_slope": 0.2,
+          "acceleration": 0.02,
+          "sequential_growth": [
+            1.05,
+            0.52,
+            1.55,
+            -1.79,
+            1.04,
+            1.03,
+            1.02
+          ],
+          "yoy_growth": [
+            1.32,
+            1.3,
+            1.81,
+            1.28
+          ],
+          "latest_qoq_pct": 1.02,
+          "latest_yoy_pct": 1.28,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q1=low; Q4=high"
+        },
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 415.0,
+          "share_pct": 68.6
+        },
+        "fixed_service_revenue": {
+          "value": 112.0,
+          "share_pct": 18.5
+        },
+        "b2b_revenue": {
+          "value": 38.0,
+          "share_pct": 6.3
+        },
+        "other_revenue": {
+          "value": 40.0,
+          "share_pct": 6.6
+        },
+        "total_revenue": 605.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 3,
+        "revenue_rank": 3,
+        "total_revenue": 605.0,
+        "revenue_market_share_pct": 19.8,
+        "subscriber_rank": 1,
+        "mobile_subscriber_share_pct": 43.7,
+        "broadband_subscriber_share_pct": 16.0,
+        "competitors": {
+          "kpn_nl": {
+            "display_name": "KPN",
+            "total_revenue": 1465.0,
+            "mobile_total_k": 4050.0,
+            "broadband_total_k": 2900.0
+          },
+          "vodafoneziggo_nl": {
+            "display_name": "VodafoneZiggo",
+            "total_revenue": 985.0,
+            "mobile_total_k": 5680.0,
+            "broadband_total_k": 2990.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue": {
+          "metric_type": "revenue",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "kpn_nl",
+              "display_name": "KPN",
+              "share_pct": [
+                46.34641407307172,
+                46.733668341708544,
+                46.531020680453636,
+                47.2636815920398,
+                46.69325357261549,
+                47.46940125702944,
+                47.31965585704832,
+                47.95417348608838
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 47.95,
+              "share_change_pp": 1.61,
+              "avg_quarterly_change_pp": 0.23,
+              "direction": "gaining",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafoneziggo_nl",
+              "display_name": "VodafoneZiggo",
+              "share_pct": [
+                34.70906630581867,
+                33.66834170854271,
+                34.52301534356238,
+                33.101160862354895,
+                34.19740777666999,
+                32.74892490903076,
+                33.42157511581733,
+                32.242225859247135
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 32.24,
+              "share_change_pp": -2.47,
+              "avg_quarterly_change_pp": -0.35,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "odido_nl",
+              "display_name": "Odido",
+              "share_pct": [
+                18.944519621109606,
+                19.597989949748744,
+                18.94596397598399,
+                19.635157545605306,
+                19.109338650714523,
+                19.781673833939795,
+                19.25876902713435,
+                19.803600654664486
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 19.8,
+              "share_change_pp": 0.86,
+              "avg_quarterly_change_pp": 0.12,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3731.35,
+            "hhi_label": "highly_concentrated",
+            "cr3": 99.99,
+            "hhi_trend": [
+              3711.6,
+              3701.67,
+              3715.92,
+              3715.08,
+              3714.89,
+              3717.15,
+              3727.05,
+              3731.35
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "odido_nl",
+          "target_series": {
+            "operator_id": "odido_nl",
+            "display_name": "Odido",
+            "share_pct": [
+              18.944519621109606,
+              19.597989949748744,
+              18.94596397598399,
+              19.635157545605306,
+              19.109338650714523,
+              19.781673833939795,
+              19.25876902713435,
+              19.803600654664486
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 19.8,
+            "share_change_pp": 0.86,
+            "avg_quarterly_change_pp": 0.12,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "kpn_nl",
+          "biggest_gainer_id": "kpn_nl",
+          "biggest_loser_id": "vodafoneziggo_nl",
+          "key_message": "Revenue share: 19.8% (#3); gaining (+0.9pp); market is highly concentrated (HHI 3,731)."
+        },
+        "mobile_subscribers": {
+          "metric_type": "mobile_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "odido_nl",
+              "display_name": "Odido",
+              "share_pct": [
+                42.331288343558285,
+                43.154761904761905,
+                42.42979242979243,
+                43.3372641509434,
+                42.65746959520784,
+                43.51635514018692,
+                42.94294294294294,
+                43.692129629629626
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 43.69,
+              "share_change_pp": 1.36,
+              "avg_quarterly_change_pp": 0.19,
+              "direction": "gaining",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafoneziggo_nl",
+              "display_name": "VodafoneZiggo",
+              "share_pct": [
+                34.355828220858896,
+                33.45238095238095,
+                34.18803418803419,
+                33.25471698113208,
+                33.88394747988141,
+                33.0607476635514,
+                33.633633633633636,
+                32.870370370370374
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 32.87,
+              "share_change_pp": -1.49,
+              "avg_quarterly_change_pp": -0.21,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "kpn_nl",
+              "display_name": "KPN",
+              "share_pct": [
+                23.31288343558282,
+                23.392857142857142,
+                23.38217338217338,
+                23.40801886792453,
+                23.45858292491075,
+                23.422897196261683,
+                23.423423423423422,
+                23.4375
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 23.44,
+              "share_change_pp": 0.12,
+              "avg_quarterly_change_pp": 0.02,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3538.78,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3515.75,
+              3528.62,
+              3515.83,
+              3531.93,
+              3518.09,
+              3535.32,
+              3523.97,
+              3538.78
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "odido_nl",
+          "target_series": {
+            "operator_id": "odido_nl",
+            "display_name": "Odido",
+            "share_pct": [
+              42.331288343558285,
+              43.154761904761905,
+              42.42979242979243,
+              43.3372641509434,
+              42.65746959520784,
+              43.51635514018692,
+              42.94294294294294,
+              43.692129629629626
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 43.69,
+            "share_change_pp": 1.36,
+            "avg_quarterly_change_pp": 0.19,
+            "direction": "gaining",
+            "rank_latest": 1,
+            "rank_change": 0
+          },
+          "share_leader_id": "odido_nl",
+          "biggest_gainer_id": "odido_nl",
+          "biggest_loser_id": "vodafoneziggo_nl",
+          "key_message": "Mobile Subscribers share: 43.7% (#1); gaining (+1.4pp); market is highly concentrated (HHI 3,539)."
+        },
+        "broadband_subscribers": {
+          "metric_type": "broadband_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "vodafoneziggo_nl",
+              "display_name": "VodafoneZiggo",
+              "share_pct": [
+                46.85212298682284,
+                44.17932031814895,
+                46.075581395348834,
+                43.612271352441304,
+                45.63923958786823,
+                43.147935779816514,
+                44.898850240139716,
+                42.65335235378031
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 42.65,
+              "share_change_pp": -4.2,
+              "avg_quarterly_change_pp": -0.6,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "kpn_nl",
+              "display_name": "KPN",
+              "share_pct": [
+                40.702781844802345,
+                41.35936370209689,
+                41.133720930232556,
+                41.40861299150223,
+                41.155129879553044,
+                41.3704128440367,
+                41.42046281472857,
+                41.36947218259629
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 41.37,
+              "share_change_pp": 0.67,
+              "avg_quarterly_change_pp": 0.1,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "odido_nl",
+              "display_name": "Odido",
+              "share_pct": [
+                12.445095168374817,
+                14.461315979754158,
+                12.790697674418606,
+                14.979115656056461,
+                13.205630532578727,
+                15.481651376146788,
+                13.680686945131711,
+                15.977175463623395
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 15.98,
+              "share_change_pp": 3.53,
+              "avg_quarterly_change_pp": 0.5,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3786.01,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              4006.72,
+              3871.54,
+              3978.54,
+              3841.08,
+              3951.07,
+              3812.94,
+              3918.72,
+              3786.01
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "odido_nl",
+          "target_series": {
+            "operator_id": "odido_nl",
+            "display_name": "Odido",
+            "share_pct": [
+              12.445095168374817,
+              14.461315979754158,
+              12.790697674418606,
+              14.979115656056461,
+              13.205630532578727,
+              15.481651376146788,
+              13.680686945131711,
+              15.977175463623395
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 15.98,
+            "share_change_pp": 3.53,
+            "avg_quarterly_change_pp": 0.5,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "vodafoneziggo_nl",
+          "biggest_gainer_id": "odido_nl",
+          "biggest_loser_id": "vodafoneziggo_nl",
+          "key_message": "Broadband Subscribers share: 16.0% (#3); gaining (+3.5pp); market is highly concentrated (HHI 3,786); fragmenting."
+        },
+        "revenue_share_latest": 19.8,
+        "mobile_share_latest": 43.7,
+        "broadband_share_latest": 16.0
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 415.0,
+            "mobile_service_growth_pct": 3.8,
+            "mobile_total_k": 7550.0,
+            "mobile_postpaid_k": 5720.0,
+            "mobile_prepaid_k": 1830.0,
+            "mobile_net_adds_k": 100.0,
+            "mobile_churn_pct": 1.1,
+            "mobile_arpu": 15.1,
+            "iot_connections_k": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 415.0,
+              "previous_value": 410.0,
+              "yoy_value": 400.0,
+              "change_qoq": 1.22,
+              "change_yoy": 3.75,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 7550.0,
+              "previous_value": 7450.0,
+              "yoy_value": 7150.0,
+              "change_qoq": 1.34,
+              "change_yoy": 5.59,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 15.1,
+              "previous_value": 15.0,
+              "yoy_value": 14.8,
+              "change_qoq": 0.67,
+              "change_yoy": 2.03,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              385.0,
+              390.0,
+              395.0,
+              400.0,
+              400.0,
+              405.0,
+              410.0,
+              415.0
+            ],
+            "subscribers": [
+              6900.0,
+              6950.0,
+              7050.0,
+              7150.0,
+              7250.0,
+              7350.0,
+              7450.0,
+              7550.0
+            ],
+            "arpu": [
+              14.5,
+              14.6,
+              14.7,
+              14.8,
+              14.8,
+              14.9,
+              15.0,
+              15.1
+            ],
+            "churn": [
+              1.3,
+              1.3,
+              1.2,
+              1.2,
+              1.2,
+              1.1,
+              1.1,
+              1.1
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 4.38,
+              "momentum_score": 49.56,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 4.05,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                1.3,
+                1.28,
+                1.27,
+                0.0,
+                1.25,
+                1.23,
+                1.22
+              ],
+              "yoy_growth": [
+                3.9,
+                3.85,
+                3.8,
+                3.75
+              ],
+              "latest_qoq_pct": 1.22,
+              "latest_yoy_pct": 3.75,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 5.28,
+              "momentum_score": 51.54,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 95.83,
+              "acceleration": 15.0,
+              "sequential_growth": [
+                0.72,
+                1.44,
+                1.42,
+                1.4,
+                1.38,
+                1.36,
+                1.34
+              ],
+              "yoy_growth": [
+                5.07,
+                5.76,
+                5.67,
+                5.59
+              ],
+              "latest_qoq_pct": 1.34,
+              "latest_yoy_pct": 5.59,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "arpu_metrics": {
+              "cagr_pct": 2.34,
+              "momentum_score": 49.87,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.01,
+              "trend_slope": 0.08,
+              "acceleration": -0.0,
+              "sequential_growth": [
+                0.69,
+                0.68,
+                0.68,
+                0.0,
+                0.68,
+                0.67,
+                0.67
+              ],
+              "yoy_growth": [
+                2.07,
+                2.05,
+                2.04,
+                2.03
+              ],
+              "latest_qoq_pct": 0.67,
+              "latest_yoy_pct": 2.03,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "churn_metrics": {
+              "cagr_pct": -9.1,
+              "momentum_score": 48.08,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.07,
+              "trend_slope": -0.03,
+              "acceleration": 0.01,
+              "sequential_growth": [
+                0.0,
+                -7.69,
+                0.0,
+                0.0,
+                -8.33,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                -7.69,
+                -15.38,
+                -8.33,
+                -8.33
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": -8.33,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "KPN": {
+              "mobile_service_revenue": 435.0,
+              "mobile_total_k": 4050.0,
+              "mobile_arpu": 16.5,
+              "mobile_churn_pct": 0.9
+            },
+            "VodafoneZiggo": {
+              "mobile_service_revenue": 278.0,
+              "mobile_total_k": 5680.0,
+              "mobile_arpu": 14.0,
+              "mobile_churn_pct": 1.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FY2024 revenue EUR 2.3B (+1.6%), EBITDA EUR 881M (+2.9%, margin 38.1%). Mobile service revenue growing above market rate driven by 5G upsell and postpaid migration.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "Broadband customer base crossed 1 million in Q1 2025 via FWA and wholesale fiber. Growing fixed revenue stream diversifying mobile-centric business.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Mobile service revenue at 415.0M; up 3.8% YoY; ARPU 15.1",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 112.0,
+            "fixed_service_growth_pct": 9.8,
+            "broadband_total_k": 1120.0,
+            "broadband_net_adds_k": 40.0,
+            "broadband_cable_k": null,
+            "broadband_fiber_k": 390.0,
+            "broadband_dsl_k": null,
+            "broadband_arpu": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 112.0,
+              "previous_value": 110.0,
+              "yoy_value": 102.0,
+              "change_qoq": 1.82,
+              "change_yoy": 9.8,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 1120.0,
+              "previous_value": 1080.0,
+              "yoy_value": 940.0,
+              "change_qoq": 3.7,
+              "change_yoy": 19.15,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "arpu",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              95.0,
+              98.0,
+              100.0,
+              102.0,
+              105.0,
+              108.0,
+              110.0,
+              112.0
+            ],
+            "subscribers": [
+              850.0,
+              880.0,
+              910.0,
+              940.0,
+              1000.0,
+              1040.0,
+              1080.0,
+              1120.0
+            ],
+            "arpu": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fiber": [
+              200.0,
+              220.0,
+              240.0,
+              260.0,
+              300.0,
+              330.0,
+              360.0,
+              390.0
+            ],
+            "cable": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 9.86,
+              "momentum_score": 47.89,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.05,
+              "trend_slope": 2.45,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                3.16,
+                2.04,
+                2.0,
+                2.94,
+                2.86,
+                1.85,
+                1.82
+              ],
+              "yoy_growth": [
+                10.53,
+                10.2,
+                10.0,
+                9.8
+              ],
+              "latest_qoq_pct": 1.82,
+              "latest_yoy_pct": 9.8,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 17.07,
+              "momentum_score": 54.24,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.09,
+              "trend_slope": 39.76,
+              "acceleration": 10.0,
+              "sequential_growth": [
+                3.53,
+                3.41,
+                3.3,
+                6.38,
+                4.0,
+                3.85,
+                3.7
+              ],
+              "yoy_growth": [
+                17.65,
+                18.18,
+                18.68,
+                19.15
+              ],
+              "latest_qoq_pct": 3.7,
+              "latest_yoy_pct": 19.15,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "fiber_metrics": {
+              "cagr_pct": 46.47,
+              "momentum_score": 50.0,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.22,
+              "trend_slope": 27.86,
+              "acceleration": 10.0,
+              "sequential_growth": [
+                10.0,
+                9.09,
+                8.33,
+                15.38,
+                10.0,
+                9.09,
+                8.33
+              ],
+              "yoy_growth": [
+                50.0,
+                50.0,
+                50.0,
+                50.0
+              ],
+              "latest_qoq_pct": 8.33,
+              "latest_yoy_pct": 50.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "KPN": {
+              "fixed_service_revenue": 610.0,
+              "broadband_total_k": 2900.0,
+              "broadband_fiber_k": 2230.0
+            },
+            "VodafoneZiggo": {
+              "fixed_service_revenue": 460.0,
+              "broadband_total_k": 2990.0,
+              "broadband_fiber_k": 85.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Broadband customer base crossed 1 million in Q1 2025 via FWA and wholesale fiber. Growing fixed revenue stream diversifying mobile-centric business.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "subscribers increased 3.7% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: subscribers = 1120.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Fixed service revenue 112.0M; growth +9.8% YoY; Fiber subs 390K",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 38.0,
+            "b2b_growth_pct": null,
+            "b2b_customers_k": 92.0,
+            "b2b_share_of_revenue_pct": 6.3
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 38.0,
+              "previous_value": 40.0,
+              "yoy_value": 40.0,
+              "change_qoq": -5.0,
+              "change_yoy": -5.0,
+              "direction": "declining",
+              "significance": "significant"
+            },
+            {
+              "metric": "customers",
+              "current_value": 92.0,
+              "previous_value": 91.0,
+              "yoy_value": 88.0,
+              "change_qoq": 1.1,
+              "change_yoy": 4.55,
+              "direction": "improving",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              40.0,
+              40.0,
+              40.0,
+              40.0,
+              40.0,
+              39.0,
+              40.0,
+              38.0
+            ],
+            "customers": [
+              85.0,
+              86.0,
+              87.0,
+              88.0,
+              89.0,
+              90.0,
+              91.0,
+              92.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": -2.89,
+              "momentum_score": 35.0,
+              "momentum_phase": "accelerating_decline",
+              "volatility": 0.02,
+              "trend_slope": -0.2,
+              "acceleration": -0.5,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.5,
+                2.56,
+                -5.0
+              ],
+              "yoy_growth": [
+                0.0,
+                -2.5,
+                0.0,
+                -5.0
+              ],
+              "latest_qoq_pct": -5.0,
+              "latest_yoy_pct": -5.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "customers_metrics": {
+              "cagr_pct": 4.63,
+              "momentum_score": 49.52,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 1.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                1.18,
+                1.16,
+                1.15,
+                1.14,
+                1.12,
+                1.11,
+                1.1
+              ],
+              "yoy_growth": [
+                4.71,
+                4.65,
+                4.6,
+                4.55
+              ],
+              "latest_qoq_pct": 1.1,
+              "latest_yoy_pct": 4.55,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "KPN": {
+              "b2b_revenue": 415.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 384.0
+            },
+            "VodafoneZiggo": {
+              "b2b_revenue": 127.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 117.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Broadband customer base crossed 1 million in Q1 2025 via FWA and wholesale fiber. Growing fixed revenue stream diversifying mobile-centric business.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue decreased 5.0% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 38.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "weakening",
+          "key_message": "B2B revenue 38.0M; 6.3% of total revenue",
+          "action_required": "URGENT: Significant decline detected — immediate intervention required"
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": null,
+            "tv_total_k": 0.0,
+            "tv_net_adds_k": null,
+            "fmc_total_k": null,
+            "fmc_penetration_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 0.0,
+              "previous_value": 0.0,
+              "yoy_value": 0.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fmc_subscribers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fmc_penetration": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers_metrics": {
+              "cagr_pct": null,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": null,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "KPN": {
+              "tv_total_k": 1465.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            },
+            "VodafoneZiggo": {
+              "tv_total_k": 3320.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "TV subscribers 0K",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": null,
+            "wholesale_share_of_revenue_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Broadband customer base crossed 1 million in Q1 2025 via FWA and wholesale fiber. Growing fixed revenue stream diversifying mobile-centric business.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Insufficient data for wholesale assessment",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "mobile_vendor": "Ericsson",
+          "spectrum_mhz": 400,
+          "core_vendor": "Nokia",
+          "5g_sa_status": "Deploying"
+        },
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "mobile"
+          ],
+          "summary": "Fully owned mobile network with nationwide 5G/4G coverage. No owned fixed infrastructure; uses fixed-wireless access (FWA) and wholesale fiber via Open Dutch Fiber for broadband. ~100% mobile own-network."
+        },
+        "coverage": {
+          "5g": 99.0,
+          "4g": 99.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 0.0,
+          "fiber_connected_k": 390.0
+        },
+        "evolution_strategy": {
+          "data_signals": [
+            "5G SA: Deploying"
+          ],
+          "summary": "5G standalone deployment; densification with 3.5 GHz small cells; FWA as fixed broadband alternative; exploring fiber wholesale partnerships. Target: #1 mobile network quality."
+        },
+        "investment_direction": "stable",
+        "vs_competitors": "Fiber: No fiber homepass vs VodafoneZiggo (200K); Fiber: No fiber homepass vs KPN (5,580K)",
+        "consumer_impact": "Strong 5G coverage (99.0%); Fiber-dominant broadband mix",
+        "b2b_impact": "B2B revenue share: 6%",
+        "cost_impact": "Moderate capex intensity (19.8%)"
+      },
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 72.0,
+            "market_avg": 73.3,
+            "gap_pp": -1.3,
+            "verdict": "at average"
+          },
+          "Brand Strength": {
+            "score": 65.0,
+            "market_avg": 79.0,
+            "gap_pp": -14.0,
+            "verdict": "below average"
+          }
+        },
+        "overall_verdict": "negative",
+        "summary": "Customer Service -1pp vs market; Brand Strength -14pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Soren Abildgaard",
+          "title": "CEO",
+          "is_current": true,
+          "start_date": "2023-09-01",
+          "background": "Led T-Mobile NL rebrand to Odido; ex-TDC Denmark; PE-backed transformation leader",
+          "tenure_years": 2.5
+        },
+        {
+          "name": "Gero Niemeyer",
+          "title": "CFO",
+          "is_current": true,
+          "start_date": "2023-01-01",
+          "background": "Finance executive; managing PE-backed capital structure",
+          "tenure_years": 3.1
+        }
+      ],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners",
+          "Ericsson (RAN vendor)",
+          "Open Dutch Fiber (fiber access)",
+          "Apax Partners / Warburg Pincus (ownership)"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery",
+          "5G network densification and standalone migration",
+          "Brand building post-rebrand from T-Mobile",
+          "Fixed-wireless access expansion",
+          "Enterprise solutions growth"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Comprehensive 5G mobile network (nationwide coverage)",
+          "Spectrum portfolio: 700/800/900/1800/2100/2600/3500 MHz",
+          "Strong digital-first brand repositioned in 2023"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "Leading 5G network quality and coverage",
+          "Digital-first customer experience",
+          "Flexible contract-free plans",
+          "Growing fixed-wireless access portfolio"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "Entrepreneurial post-rebrand culture; digital-first and agile; PE-backed focus on performance and profitability.",
+      "talent_assessment": {
+        "c_suite_count": 2,
+        "avg_tenure_years": 2.8,
+        "key_leaders": [
+          "Soren Abildgaard (CEO)",
+          "Gero Niemeyer (CFO)"
+        ],
+        "capability_alignment": [
+          "Customer Service: strong",
+          "Enterprise Solutions: adequate"
+        ],
+        "assessment": "Adequate leadership coverage"
+      },
+      "performance_gap": "Top performance gaps: EBITDA margin gap: -5.7pp vs leader (KPN at 45.4%); Revenue share gap: -28.2pp vs leader (48.0%); Enterprise Solutions: -37pp vs leader",
+      "opportunity_gap": "Top opportunity gaps: B2B segment recovery (currently weakening); B2B revenue gap (91% below market leader)",
+      "strategic_review": "Management outlook: FY2024 revenue EUR 2.3B (+1.6%), EBITDA EUR 881M (+2.9%, margin 38.1%). Mobile service revenue growing above market rate driven by 5G upsell and postpaid migration.. Revenue trajectory growing, margins strong (39.7%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Brand Strength: score 65 (market avg 79)",
+      "management_commentary": [
+        {
+          "segment": "Mobile",
+          "type": "guidance",
+          "content": "FY2024 revenue EUR 2.3B (+1.6%), EBITDA EUR 881M (+2.9%, margin 38.1%). Mobile service revenue growing above market rate driven by 5G upsell and postpaid migration.",
+          "speaker": "CEO",
+          "source_url": null
+        },
+        {
+          "segment": "Broadband",
+          "type": "outlook",
+          "content": "Broadband customer base crossed 1 million in Q1 2025 via FWA and wholesale fiber. Growing fixed revenue stream diversifying mobile-centric business.",
+          "speaker": "CFO",
+          "source_url": null
+        }
+      ],
+      "strengths": [
+        "Digital Experience: score 85 (market avg 78)",
+        "Innovation: score 82 (market avg 77)",
+        "Network Quality: score 88 (market avg 84)",
+        "Price Competitiveness: score 78 (market avg 71)",
+        "Strong EBITDA margin at 39.7%",
+        "Revenue on growth trajectory",
+        "Extensive 5G coverage at 99.0%"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 65 (market avg 79)",
+        "Distribution: score 72 (market avg 82)",
+        "Enterprise Solutions: score 55 (market avg 74)"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Brand rebrand from established T-Mobile to new Odido brand",
+          "side_effect": "Customer confusion and potential churn during brand transition",
+          "attack_vector": "KPN and VodafoneZiggo target Odido switchers with competitive offers",
+          "severity": "medium",
+          "evidence": [
+            "Rebranded September 2023, still building brand awareness"
+          ]
+        },
+        {
+          "trigger_action": "No owned fixed broadband infrastructure",
+          "side_effect": "Cannot offer true converged bundles without wholesale access",
+          "attack_vector": "KPN and VodafoneZiggo leverage convergence advantage",
+          "severity": "high",
+          "evidence": [
+            "Relies on fixed-wireless access and wholesale fiber for broadband"
+          ]
+        },
+        {
+          "trigger_action": "Ownership transition from Deutsche Telekom to PE consortium",
+          "side_effect": "Potential underinvestment risk under PE ownership model",
+          "attack_vector": "Competitors invest aggressively in network while PE focuses on returns",
+          "severity": "medium",
+          "evidence": [
+            "Apax/Warburg Pincus acquisition completed 2024"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #3 of 3 operators in market; revenue EUR 605.0M; EBITDA margin 39.7%; stable but facing challenges; key strength: Digital Experience; key challenge: Brand Strength; Management outlook: FY2024 revenue EUR 2.3B (+1.6%), EBITDA EUR 881M (+2.9%, margin 38.1%). Mobile service revenue growing above market rate driven by 5G upsell and postpaid migration."
+    },
+    "swot": {
+      "strengths": [
+        "Digital Experience: score 85 (market avg 78)",
+        "Innovation: score 82 (market avg 77)",
+        "Network Quality: score 88 (market avg 84)",
+        "Price Competitiveness: score 78 (market avg 71)",
+        "Strong EBITDA margin at 39.7%",
+        "Revenue on growth trajectory",
+        "Extensive 5G coverage at 99.0%"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 65 (market avg 79)",
+        "Distribution: score 72 (market avg 82)",
+        "Enterprise Solutions: score 55 (market avg 74)",
+        "Customer confusion and potential churn during brand transition",
+        "Cannot offer true converged bundles without wholesale access",
+        "Potential underinvestment risk under PE ownership model"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl",
+        "National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access",
+        "VodafoneZiggo cuts 400 jobs due to disappointing revenue"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl",
+        "Odido postpones EUR 1B Amsterdam IPO",
+        "KPN fiber homepass exceeds 5.5M — majority of NL now on fiber",
+        "High existing competitors pressure",
+        "High substitutes pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Digital Experience: score 85 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+        "Leverage 'Innovation: score 82 (market avg 77)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access'.",
+        "Leverage 'Network Quality: score 88 (market avg 84)' to capture the opportunity of 'VodafoneZiggo cuts 400 jobs due to disappointing revenue'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Brand Strength: score 65 (market avg 79)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+        "Address weakness 'Distribution: score 72 (market avg 82)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access'.",
+        "Address weakness 'Enterprise Solutions: score 55 (market avg 74)' to unlock the opportunity of 'VodafoneZiggo cuts 400 jobs due to disappointing revenue'."
+      ],
+      "st_strategies": [
+        "Use strength 'Digital Experience: score 85 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+        "Use strength 'Innovation: score 82 (market avg 77)' to counter the threat of 'Odido postpones EUR 1B Amsterdam IPO'.",
+        "Use strength 'Network Quality: score 88 (market avg 84)' to counter the threat of 'KPN fiber homepass exceeds 5.5M — majority of NL now on fiber'.",
+        "Use strength 'Price Competitiveness: score 78 (market avg 71)' to counter the threat of 'High existing competitors pressure'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Brand Strength: score 65 (market avg 79)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+        "Mitigate weakness 'Distribution: score 72 (market avg 82)' and defend against the threat of 'Odido postpones EUR 1B Amsterdam IPO'.",
+        "Mitigate weakness 'Enterprise Solutions: score 55 (market avg 74)' and defend against the threat of 'KPN fiber homepass exceeds 5.5M — majority of NL now on fiber'.",
+        "Mitigate weakness 'Customer confusion and potential churn during brand transition' and defend against the threat of 'High existing competitors pressure'."
+      ],
+      "key_message": "SWOT analysis identifies 7 strengths, 6 weaknesses, 3 opportunities, and 5 threats. The recommended strategic posture is defensive (ST-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.35,
+          "market_share_score": 2.98,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 8.8,
+          "competitive_position": 5.95,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.32
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.35,
+          "market_share_score": 2.98,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 8.8,
+          "competitive_position": 5.95,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.32
+        },
+        {
+          "opportunity_name": "SO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.35,
+          "market_share_score": 2.98,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 8.8,
+          "competitive_position": 5.95,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.32
+        },
+        {
+          "opportunity_name": "VodafoneZiggo cuts 400 jobs due to disappointing revenue",
+          "market_size_score": 5.0,
+          "market_growth_score": 8,
+          "profit_potential_score": 7,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.25,
+          "market_share_score": 2.98,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 8.8,
+          "competitive_position": 5.45,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.22
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 2.98,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 2.98,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 2.98,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.15,
+          "market_share_score": 2.98,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 8.8,
+          "competitive_position": 5.45,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.2
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.15,
+          "market_share_score": 2.98,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 8.8,
+          "competitive_position": 5.45,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.2
+        },
+        {
+          "opportunity_name": "Exploit vodafoneziggo_nl weakness: Customer Service: score 68 (market avg 73)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.75,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 8.8,
+          "competitive_position": 6.45,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.3
+        },
+        {
+          "opportunity_name": "Exploit vodafoneziggo_nl weakness: Digital Experience: score 72 (market avg 78)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.75,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 8.8,
+          "competitive_position": 6.45,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.3
+        },
+        {
+          "opportunity_name": "Exploit kpn_nl weakness: Price Competitiveness: score 62 (market avg 71)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.75,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 8.8,
+          "competitive_position": 6.45,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.3
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.95,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.78
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.95,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.78
+        },
+        {
+          "opportunity_name": "WO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.95,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.78
+        },
+        {
+          "opportunity_name": "ST-1",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-2",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-3",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-4",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "WT-1",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-2",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-3",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-4",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        }
+      ],
+      "grow_invest": [
+        "SO-1",
+        "SO-2",
+        "SO-3",
+        "VodafoneZiggo cuts 400 jobs due to disappointing revenue",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl",
+        "National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access",
+        "Exploit vodafoneziggo_nl weakness: Customer Service: score 68 (market avg 73)",
+        "Exploit vodafoneziggo_nl weakness: Digital Experience: score 72 (market avg 78)",
+        "Exploit kpn_nl weakness: Price Competitiveness: score 62 (market avg 71)"
+      ],
+      "acquire_skills": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "WO-1",
+        "WO-2",
+        "WO-3"
+      ],
+      "harvest": [
+        "ST-1",
+        "ST-2",
+        "ST-3",
+        "ST-4"
+      ],
+      "avoid_exit": [
+        "WT-1",
+        "WT-2",
+        "WT-3",
+        "WT-4"
+      ],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Digital Experience: score 85 (market avg 78)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Innovation: score 82 (market avg 77)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-3",
+          "description": "Leverage 'Network Quality: score 88 (market avg 84)' to capture the opportunity of 'VodafoneZiggo cuts 400 jobs due to disappointing revenue'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "VodafoneZiggo cuts 400 jobs due to disappointing revenue",
+          "description": "VodafoneZiggo cuts 400 jobs due to disappointing revenue",
+          "derived_from": [
+            "market_opportunity",
+            "merger"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit vodafoneziggo_nl weakness: Customer Service: score 68 (market avg 73)",
+          "description": "Competitor vodafoneziggo_nl is weak in: Customer Service: score 68 (market avg 73)",
+          "derived_from": [
+            "competitor_weakness",
+            "vodafoneziggo_nl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit vodafoneziggo_nl weakness: Digital Experience: score 72 (market avg 78)",
+          "description": "Competitor vodafoneziggo_nl is weak in: Digital Experience: score 72 (market avg 78)",
+          "derived_from": [
+            "competitor_weakness",
+            "vodafoneziggo_nl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit kpn_nl weakness: Price Competitiveness: score 62 (market avg 71)",
+          "description": "Competitor kpn_nl is weak in: Price Competitiveness: score 62 (market avg 71)",
+          "derived_from": [
+            "competitor_weakness",
+            "kpn_nl"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Brand Strength: score 65 (market avg 79)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Distribution: score 72 (market avg 82)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require odido_nl investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-3",
+          "description": "Address weakness 'Enterprise Solutions: score 55 (market avg 74)' to unlock the opportunity of 'VodafoneZiggo cuts 400 jobs due to disappointing revenue'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "ST-1",
+          "description": "Use strength 'Digital Experience: score 85 (market avg 78)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-2",
+          "description": "Use strength 'Innovation: score 82 (market avg 77)' to counter the threat of 'Odido postpones EUR 1B Amsterdam IPO'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-3",
+          "description": "Use strength 'Network Quality: score 88 (market avg 84)' to counter the threat of 'KPN fiber homepass exceeds 5.5M — majority of NL now on fiber'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-4",
+          "description": "Use strength 'Price Competitiveness: score 78 (market avg 71)' to counter the threat of 'High existing competitors pressure'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "WT-1",
+          "description": "Mitigate weakness 'Brand Strength: score 65 (market avg 79)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect odido_nl'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-2",
+          "description": "Mitigate weakness 'Distribution: score 72 (market avg 82)' and defend against the threat of 'Odido postpones EUR 1B Amsterdam IPO'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-3",
+          "description": "Mitigate weakness 'Enterprise Solutions: score 55 (market avg 74)' and defend against the threat of 'KPN fiber homepass exceeds 5.5M — majority of NL now on fiber'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-4",
+          "description": "Mitigate weakness 'Customer confusion and potential churn during brand transition' and defend against the threat of 'High existing competitors pressure'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        }
+      ],
+      "key_message": "SPAN matrix positions 23 opportunities: 9 grow/invest, 6 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 9 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 20,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 20,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 20
+  }
+}

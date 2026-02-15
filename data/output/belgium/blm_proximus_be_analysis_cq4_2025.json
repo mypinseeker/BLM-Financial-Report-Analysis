@@ -1,0 +1,3329 @@
+{
+  "meta": {
+    "target_operator": "proximus_be",
+    "market": "belgium",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-14T22:13:09.336528",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "BIPT pro-competition regulation; completed EUR 1.2B multi-band 5G spectrum auction (2022, 700/900/1800/2100/3600 MHz); 4th operator DIGI Belgium launched Dec 2024 (EUR 5/month 15GB mobile); wholesale fiber access obligations; automatic wage indexation impacts cost bases; Belgian state 53.5% ownership of Proximus",
+            "trend": "Regulatory stance: BIPT pro-competition regulation; completed EUR 1.2B multi-band 5G spectrum auction (2022, 700/900/1800/2100/3600 MHz); 4th operator DIGI Belgium launched Dec 2024 (EUR 5/month 15GB mobile); wholesale fiber access obligations; automatic wage indexation impacts cost bases; Belgian state 53.5% ownership of Proximus",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect proximus_be",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: BIPT pro-competition regulation; completed EUR 1.2B multi-band 5G spectrum auction (2022, 700/900/1800/2100/3600 MHz); 4th operator DIGI Belgium launched Dec 2024 (EUR 5/month 15GB mobile); wholesale fiber access obligations; automatic wage indexation impacts cost bases; Belgian state 53.5% ownership of Proximus"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "EU Digital Decade: 100% 5G coverage by 2030, gigabit broadband for all; Belgium fiber target 50% coverage by 2025; Proximus targeting 95% fiber by 2032; federal broadband subsidies for Wallonia; smart city initiatives Brussels/Antwerp/Ghent",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: EU Digital Decade: 100% 5G coverage by 2030, gigabit broadband for all; Belgium fiber target 50% coverage by 2025; Proximus targeting 95% fiber by 2032; federal broadband subsidies for Wallonia; smart city initiatives Brussels/Antwerp/Ghent"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 1.2%",
+            "trend": "GDP growth trend: stable (latest 1.2%)",
+            "trend_direction": "stable",
+            "industry_impact": "Moderate GDP growth supports steady telecom demand",
+            "company_impact": "Supported revenue growth for proximus_be",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 1.2%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 2.5%",
+            "trend": "Inflation trend: stable (latest 2.5%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "Manageable cost environment for proximus_be",
+            "impact_type": "neutral",
+            "severity": "low",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 2.5%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Unemployment",
+            "current_status": "Unemployment at 5.6%",
+            "trend": "Unemployment trend: stable",
+            "trend_direction": "stable",
+            "industry_impact": "Unemployment affects consumer spending power and enterprise IT budgets",
+            "company_impact": "Consumer segment sensitivity for proximus_be",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Unemployment: 5.6%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 35.0% of mobile subscribers",
+            "trend": "5G adoption trend: stable (35.0% -> 35.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for proximus_be",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 35.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 30.7%",
+            "trend": "Fiber penetration trend: stable (30.7% -> 30.7%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for proximus_be",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 30.7%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in acceleration phase (35.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for proximus_be",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 35.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 30.7%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for proximus_be",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 30.7%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 6/9 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be",
+          "National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "EUR 2.5B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+3.2% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Stable (industry EBITDA margin ~36.1%)",
+      "industry_concentration": "CR4 = 100% (Proximus: 50.0%, Telenet: 29.6%, Orange Belgium: 20.3%)",
+      "industry_lifecycle_stage": "late_growth",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+3.2% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 2479.0,
+        "total_mobile_subscribers_k": 12108.0,
+        "total_broadband_subscribers_k": 5124.0,
+        "market_shares": {
+          "Proximus": 50.0,
+          "Telenet": 29.6,
+          "Orange Belgium": 20.3
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 103.0,
+          "broadband_penetration_pct": 43.6
+        },
+        "operator_count": 3
+      },
+      "changes": [
+        {
+          "change_type": "pricing",
+          "description": "Proximus EBITDA margin compression: 32.3% vs 36.7% (-4.4pp)",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Margin compression indicates cost pressure or investment phase",
+          "severity": "medium",
+          "evidence": [
+            "Margin change: -4.4pp"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Telenet launches TADAAM unlimited mobile at EUR 25/month",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "TADAAM mobile services with unlimited data, 5G access, eSIM. Competitive response to DIGI Belgium entry targeting data-intensive users.",
+          "severity": "medium",
+          "evidence": []
+        },
+        {
+          "change_type": "technology",
+          "description": "Proximus increases mobile data volumes — defensive response to DIGI",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "Mobile Smart expanded to 50GB (from 35GB), Mobile Maxi to 100GB (from 70GB). No price increase. Defensive move against DIGI Belgium pricing pressure.",
+          "severity": "medium",
+          "evidence": []
+        }
+      ],
+      "opportunities": [],
+      "threats": [
+        {
+          "change_type": "pricing",
+          "description": "Proximus EBITDA margin compression: 32.3% vs 36.7% (-4.4pp)",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Margin compression indicates cost pressure or investment phase",
+          "severity": "medium",
+          "evidence": [
+            "Margin change: -4.4pp"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Telenet launches TADAAM unlimited mobile at EUR 25/month",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "TADAAM mobile services with unlimited data, 5G access, eSIM. Competitive response to DIGI Belgium entry targeting data-intensive users.",
+          "severity": "medium",
+          "evidence": []
+        }
+      ],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Premium Convergent",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Seamless multi-screen entertainment experience",
+            "Ultra-fast symmetric broadband for remote work"
+          ],
+          "pain_points": [
+            "High telecom prices compared to EU average",
+            "Complex bundle structures across operators"
+          ],
+          "purchase_decision_factors": [
+            "Bundle value (quad-play)",
+            "Network speed and reliability",
+            "TV content offering",
+            "Brand reputation"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Mainstream",
+          "segment_type": "consumer",
+          "size_estimate": "~6.3M subscribers",
+          "growth_trend": "stable",
+          "our_share": "~45% of postpaid",
+          "unmet_needs": [
+            "Affordable convergent bundles",
+            "Better mobile data allowances at reasonable prices"
+          ],
+          "pain_points": [
+            "Belgium among most expensive EU markets for telecom",
+            "Limited choice due to concentrated market"
+          ],
+          "purchase_decision_factors": [
+            "Price-performance ratio",
+            "Data volume",
+            "Network coverage",
+            "Contract flexibility"
+          ],
+          "competitor_gaps": [
+            "Orange Belgium aggressive on price but weaker on network quality",
+            "Telenet competes on brand and convergence"
+          ],
+          "opportunity": "Value-for-money bundles combining mobile + broadband"
+        },
+        {
+          "segment_name": "Consumer Price-Sensitive / MVNO",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Low-cost mobile-only plans",
+            "Prepaid flexibility without premium pricing"
+          ],
+          "pain_points": [
+            "Limited MVNO competition compared to neighboring countries",
+            "High entry-level pricing"
+          ],
+          "purchase_decision_factors": [
+            "Lowest price",
+            "No contract commitment",
+            "Basic data included"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Enterprise & Government",
+          "segment_type": "enterprise",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Private 5G networks for industrial sites",
+            "Multi-cloud connectivity and cybersecurity",
+            "IoT solutions for smart cities and logistics"
+          ],
+          "pain_points": [
+            "Limited choice for large enterprise contracts",
+            "Cross-border complexity (Belgium + Luxembourg)"
+          ],
+          "purchase_decision_factors": [
+            "Reliability and SLAs",
+            "Managed services capability",
+            "National coverage (Flanders + Wallonia)",
+            "International connectivity"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "critical",
+          "gap_analysis": "No competitor data available for Price"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 4.6,
+          "competitor_scores": {
+            "orange_be": 3.9,
+            "telenet_be": 4.2
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Market leader in Availability (score 4.6/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Packaging"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 4.4,
+          "competitor_scores": {
+            "orange_be": 4.1,
+            "telenet_be": 4.2
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Market leader in Performance (score 4.4/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.9,
+          "competitor_scores": {
+            "orange_be": 3.6,
+            "telenet_be": 3.8
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Market leader in Ease of Use (score 3.9/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 4.6,
+          "competitor_scores": {
+            "orange_be": 3.2,
+            "telenet_be": 3.0
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Market leader in Assurances (score 4.6/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Lifecycle Cost"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 4.5,
+          "competitor_scores": {
+            "orange_be": 3.8,
+            "telenet_be": 4.1
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Market leader in Social/Brand (score 4.5/5.0)"
+        }
+      ],
+      "customer_value_migration": "Value migration is mixed: some segments trending up while price-sensitive segments face pressure. Differentiated strategy by segment recommended.",
+      "market_outlook": "challenging",
+      "key_message": "Belgium telecom market totals EUR 2,479M in quarterly revenue; competitive strengths in Availability, Performance; Market faces significant competitive headwinds."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "3 active operators in the market",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 50% of market revenue (total: EUR 2,479M)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from -3.2% to +0.9% (spread: 4.1pp)",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 36.4%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 50% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.37%/month. Highest: 1.50% indicating moderate willingness to switch.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 95%. High contract lock-in reduces buyer mobility.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "orange_be": {
+          "operator": "Orange Belgium",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 504.0,
+            "service_revenue": 397.0,
+            "service_revenue_growth_pct": -3.2,
+            "ebitda": 154.0,
+            "ebitda_margin_pct": 30.6,
+            "ebitda_growth_pct": 10.0,
+            "capex": 97.0,
+            "capex_to_revenue_pct": 19.2,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 2.46,
+              "momentum_score": 52.65,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 1.08,
+              "acceleration": 2.1,
+              "sequential_growth": [
+                2.48,
+                0.61,
+                1.41,
+                -5.35,
+                1.46,
+                2.47,
+                1.41
+              ],
+              "yoy_growth": [
+                -1.04,
+                -2.02,
+                -0.2,
+                -0.2
+              ],
+              "latest_qoq_pct": 1.41,
+              "latest_yoy_pct": -0.2,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q4=high"
+            },
+            "margin_metrics": {
+              "cagr_pct": 11.48,
+              "momentum_score": 66.65,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.06,
+              "trend_slope": 0.66,
+              "acceleration": 0.53,
+              "sequential_growth": [
+                4.74,
+                2.26,
+                2.21,
+                -3.97,
+                7.14,
+                3.86,
+                3.38
+              ],
+              "yoy_growth": [
+                5.14,
+                7.55,
+                9.23,
+                10.47
+              ],
+              "latest_qoq_pct": 3.38,
+              "latest_yoy_pct": 10.47,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low"
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 3553.0,
+            "mobile_postpaid_k": 3553.0,
+            "mobile_net_adds_k": 13.0,
+            "mobile_churn_pct": 1.5,
+            "mobile_arpu": 14.6,
+            "broadband_total_k": 1039.0,
+            "broadband_fiber_k": 40.0,
+            "broadband_net_adds_k": 2.0,
+            "tv_total_k": 805.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 70.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 80.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Ericsson/Nokia",
+              "spectrum_mhz": 220,
+              "core_vendor": "Ericsson",
+              "cable_docsis": "3.1",
+              "cable_homepass_k": 1500
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Ericsson/Nokia; Core: Ericsson",
+          "ecosystem_partners": [
+            "Network vendor: Ericsson/Nokia"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Quality",
+            "Own fiber infrastructure (80k homes)"
+          ],
+          "business_model": "Mobile-centric with fixed complement; balanced service + equipment revenue; moderate-margin profile",
+          "org_structure": "CEO: Xavier Pichon (Orange Group veteran; led EUR 1.8B VOO acquisition and integration; building national convergent platform)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Price Competitiveness: score 72 (market avg 64)"
+          ],
+          "weaknesses": [
+            "Brand Strength: score 75 (market avg 82)",
+            "Distribution: score 70 (market avg 80)",
+            "Enterprise Solutions: score 65 (market avg 72)",
+            "Network Coverage: score 78 (market avg 85)"
+          ],
+          "problems": [
+            "Competitive gap in Brand Strength",
+            "Competitive gap in Distribution",
+            "Competitive gap in Enterprise Solutions",
+            "Competitive gap in Network Coverage"
+          ],
+          "likely_future_actions": [
+            "Orange Belgium is likely to continue aggressive network expansion (capex/revenue at 19% with growing revenue).",
+            "Orange Belgium is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Orange Belgium's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Orange Belgium is weak in: Brand Strength, Distribution, Enterprise Solutions. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Brand Strength: score 75 (market avg 82)",
+                "Distribution: score 70 (market avg 80)",
+                "Enterprise Solutions: score 65 (market avg 72)"
+              ],
+              "suggested_action": "Invest in Brand Strength, Distribution, Enterprise Solutions to capture customers dissatisfied with Orange Belgium."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Orange Belgium excels in: Price Competitiveness. Study their approach for best practices.",
+              "evidence": [
+                "Price Competitiveness: score 72 (market avg 64)"
+              ],
+              "suggested_action": "Benchmark Orange Belgium's practices in Price Competitiveness."
+            }
+          ]
+        },
+        "telenet_be": {
+          "operator": "Telenet",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 735.0,
+            "service_revenue": 662.0,
+            "service_revenue_growth_pct": 0.3,
+            "ebitda": 340.0,
+            "ebitda_margin_pct": 46.3,
+            "ebitda_growth_pct": -2.0,
+            "capex": 280.0,
+            "capex_to_revenue_pct": 38.1,
+            "revenue_trend": "growing",
+            "margin_trend": "declining",
+            "revenue_metrics": {
+              "cagr_pct": 3.25,
+              "momentum_score": 48.6,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 2.71,
+              "acceleration": -1.0,
+              "sequential_growth": [
+                2.01,
+                0.71,
+                2.66,
+                -4.5,
+                0.86,
+                0.57,
+                3.52
+              ],
+              "yoy_growth": [
+                0.72,
+                -0.42,
+                -0.56,
+                0.27
+              ],
+              "latest_qoq_pct": 3.52,
+              "latest_yoy_pct": 0.27,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q4=high"
+            },
+            "margin_metrics": {
+              "cagr_pct": -2.27,
+              "momentum_score": 50.51,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.01,
+              "trend_slope": -0.24,
+              "acceleration": 0.03,
+              "sequential_growth": [
+                -1.04,
+                -1.05,
+                0.21,
+                -0.42,
+                -0.21,
+                -1.06,
+                -0.43
+              ],
+              "yoy_growth": [
+                -2.28,
+                -1.47,
+                -1.48,
+                -2.11
+              ],
+              "latest_qoq_pct": -0.43,
+              "latest_yoy_pct": -2.11,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 2925.0,
+            "mobile_postpaid_k": 2730.0,
+            "mobile_net_adds_k": 15.0,
+            "mobile_churn_pct": 1.4,
+            "mobile_arpu": 17.0,
+            "broadband_total_k": 1735.0,
+            "broadband_fiber_k": 23.0,
+            "broadband_net_adds_k": 5.0,
+            "tv_total_k": 1575.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 72.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 50.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Nokia",
+              "spectrum_mhz": 200,
+              "core_vendor": "Nokia",
+              "cable_docsis": "3.1",
+              "cable_homepass_k": 4900
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [
+            "Telenet launches TADAAM unlimited mobile at EUR 25/month",
+            "Telenet launches nationwide BASE FMC proposition"
+          ],
+          "growth_strategy": "Market share expansion (investing for growth); subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Nokia; Core: Nokia",
+          "ecosystem_partners": [
+            "Network vendor: Nokia"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Network Quality",
+            "Market leadership in Brand Strength",
+            "Market leadership in Distribution",
+            "Market leadership in Digital Experience"
+          ],
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; high-margin profile",
+          "org_structure": "CFO: Erik Van den Enden (Former Proximus executive; managing cable investment and JV financial structure); CEO: John Porter (Former Austar CEO (Australia); longest-serving major operator CEO in Belgium; Liberty Global board member)",
+          "incentive_system": "Growth and market share targets",
+          "talent_culture": "2 C-suite leaders",
+          "ma_activity": [
+            "Liberty Global evaluates strategic options for Telenet stake"
+          ],
+          "strengths": [],
+          "weaknesses": [
+            "Enterprise Solutions: score 60 (market avg 72)"
+          ],
+          "problems": [
+            "Competitive gap in Enterprise Solutions",
+            "Margin erosion"
+          ],
+          "likely_future_actions": [
+            "Telenet is likely to continue aggressive network expansion (capex/revenue at 38% with growing revenue).",
+            "Telenet is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Telenet's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Telenet is weak in: Enterprise Solutions. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Enterprise Solutions: score 60 (market avg 72)"
+              ],
+              "suggested_action": "Invest in Enterprise Solutions to capture customers dissatisfied with Telenet."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "orange_be": 504.0,
+          "telenet_be": 735.0,
+          "proximus_be": 1240.0
+        },
+        "revenue_growth": {
+          "orange_be": -3.2,
+          "telenet_be": 0.3,
+          "proximus_be": 0.9
+        },
+        "ebitda_margin": {
+          "orange_be": 30.6,
+          "telenet_be": 46.3,
+          "proximus_be": 32.3
+        },
+        "subscribers": {
+          "orange_be": 3553.0,
+          "telenet_be": 2925.0,
+          "proximus_be": 5630.0
+        },
+        "arpu": {
+          "orange_be": 14.6,
+          "telenet_be": 17.0,
+          "proximus_be": 19.5
+        },
+        "churn": {
+          "orange_be": 1.5,
+          "telenet_be": 1.4,
+          "proximus_be": 1.2
+        },
+        "5g_coverage": {
+          "orange_be": 70.0,
+          "telenet_be": 72.0,
+          "proximus_be": 75.0
+        }
+      },
+      "competitive_landscape": "The market comprises 3 active operators: Orange Belgium, Telenet, Proximus. Overall competition intensity is assessed as medium. Revenue ranking: Proximus (1,240M), Telenet (735.0M), Orange Belgium (504.0M). Five Forces: Existing Competitors: medium; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "key_message": "In a 3-player market with medium competition intensity, Proximus leads with 50% revenue share. Target operator holds 50% share. Strongest competitive force: Substitutes."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 1240.0,
+        "service_revenue": 1095.0,
+        "ebitda": 400.0,
+        "ebitda_margin_pct": 32.3,
+        "net_income": null,
+        "capex": 474.0,
+        "capex_to_revenue_pct": 38.2,
+        "opex": null,
+        "employees": 12500,
+        "revenue_qoq_pct": 4.11,
+        "revenue_yoy_pct": 0.49,
+        "ebitda_qoq_pct": -8.47,
+        "ebitda_growth_pct": 2.0,
+        "service_revenue_growth_pct": 0.9,
+        "revenue_trend": [
+          1201.0,
+          1200.0,
+          1191.0,
+          1234.0,
+          1216.0,
+          1210.0,
+          1191.0,
+          1240.0
+        ],
+        "ebitda_trend": [
+          424.0,
+          437.0,
+          429.0,
+          392.0,
+          430.0,
+          446.0,
+          437.0,
+          400.0
+        ],
+        "margin_trend": [
+          35.3,
+          36.4,
+          36.0,
+          31.8,
+          35.4,
+          36.9,
+          36.7,
+          32.3
+        ],
+        "revenue_metrics": {
+          "cagr_pct": 1.84,
+          "momentum_score": 47.68,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.01,
+          "trend_slope": 3.18,
+          "acceleration": -3.7,
+          "sequential_growth": [
+            -0.08,
+            -0.75,
+            3.61,
+            -1.46,
+            -0.49,
+            -1.57,
+            4.11
+          ],
+          "yoy_growth": [
+            1.25,
+            0.83,
+            0.0,
+            0.49
+          ],
+          "latest_qoq_pct": 4.11,
+          "latest_yoy_pct": 0.49,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q3=low; Q4=high"
+        },
+        "ebitda_metrics": {
+          "cagr_pct": -3.27,
+          "momentum_score": 51.71,
+          "momentum_phase": "recovery",
+          "volatility": 0.04,
+          "trend_slope": -0.94,
+          "acceleration": 0.5,
+          "sequential_growth": [
+            3.07,
+            -1.83,
+            -8.62,
+            9.69,
+            3.72,
+            -2.02,
+            -8.47
+          ],
+          "yoy_growth": [
+            1.42,
+            2.06,
+            1.86,
+            2.04
+          ],
+          "latest_qoq_pct": -8.47,
+          "latest_yoy_pct": 2.04,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q4=low"
+        },
+        "margin_metrics": {
+          "cagr_pct": -4.95,
+          "momentum_score": 53.47,
+          "momentum_phase": "flat",
+          "volatility": 0.05,
+          "trend_slope": -0.16,
+          "acceleration": 0.14,
+          "sequential_growth": [
+            3.12,
+            -1.1,
+            -11.67,
+            11.32,
+            4.24,
+            -0.54,
+            -11.99
+          ],
+          "yoy_growth": [
+            0.28,
+            1.37,
+            1.94,
+            1.57
+          ],
+          "latest_qoq_pct": -11.99,
+          "latest_yoy_pct": 1.57,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q4=low"
+        },
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 392.0,
+          "share_pct": 31.6
+        },
+        "fixed_service_revenue": {
+          "value": 540.0,
+          "share_pct": 43.5
+        },
+        "b2b_revenue": {
+          "value": 320.0,
+          "share_pct": 25.8
+        },
+        "total_revenue": 1240.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 3,
+        "revenue_rank": 1,
+        "total_revenue": 1240.0,
+        "revenue_market_share_pct": 50.0,
+        "subscriber_rank": 1,
+        "mobile_subscriber_share_pct": 46.5,
+        "broadband_subscriber_share_pct": 45.9,
+        "competitors": {
+          "telenet_be": {
+            "display_name": "Telenet",
+            "total_revenue": 735.0,
+            "mobile_total_k": 2925.0,
+            "broadband_total_k": 1735.0
+          },
+          "orange_be": {
+            "display_name": "Orange Belgium",
+            "total_revenue": 504.0,
+            "mobile_total_k": 3553.0,
+            "broadband_total_k": 1039.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue": {
+          "metric_type": "revenue",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "proximus_be",
+              "display_name": "Proximus",
+              "share_pct": [
+                50.483396385035725,
+                50.79365079365079,
+                49.91680532445923,
+                50.39566847147022,
+                49.56304619225968,
+                49.66638865721434,
+                49.919093851132686,
+                50.02016942315449
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 50.02,
+              "share_change_pp": -0.46,
+              "avg_quarterly_change_pp": -0.07,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "telenet_be",
+              "display_name": "Telenet",
+              "share_pct": [
+                29.21395544346364,
+                29.239766081871345,
+                29.492512479201334,
+                29.40441482715535,
+                29.712858926342072,
+                29.608006672226857,
+                29.65210355987055,
+                29.64905203711174
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 29.65,
+              "share_change_pp": 0.44,
+              "avg_quarterly_change_pp": 0.06,
+              "direction": "stable",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "orange_be",
+              "display_name": "Orange Belgium",
+              "share_pct": [
+                20.302648171500632,
+                19.96658312447786,
+                20.590682196339436,
+                20.199916701374427,
+                20.72409488139825,
+                20.7256046705588,
+                20.428802588996763,
+                20.330778539733764
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 20.33,
+              "share_change_pp": 0.03,
+              "avg_quarterly_change_pp": 0.0,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3794.42,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3814.23,
+              3833.62,
+              3785.47,
+              3812.38,
+              3768.84,
+              3772.93,
+              3788.5,
+              3794.42
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "proximus_be",
+          "target_series": {
+            "operator_id": "proximus_be",
+            "display_name": "Proximus",
+            "share_pct": [
+              50.483396385035725,
+              50.79365079365079,
+              49.91680532445923,
+              50.39566847147022,
+              49.56304619225968,
+              49.66638865721434,
+              49.919093851132686,
+              50.02016942315449
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 50.02,
+            "share_change_pp": -0.46,
+            "avg_quarterly_change_pp": -0.07,
+            "direction": "stable",
+            "rank_latest": 1,
+            "rank_change": 0
+          },
+          "share_leader_id": "proximus_be",
+          "biggest_gainer_id": "telenet_be",
+          "biggest_loser_id": "proximus_be",
+          "key_message": "Revenue share: 50.0% (#1); stable (-0.5pp); market is highly concentrated (HHI 3,794)."
+        },
+        "mobile_subscribers": {
+          "metric_type": "mobile_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "proximus_be",
+              "display_name": "Proximus",
+              "share_pct": [
+                46.85189905684425,
+                46.554621848739494,
+                46.574534423190364,
+                46.47476011681268,
+                46.68515250819259,
+                46.47302904564315,
+                46.72131147540984,
+                46.49818301949124
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 46.5,
+              "share_change_pp": -0.35,
+              "avg_quarterly_change_pp": -0.05,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "orange_be",
+              "display_name": "Orange Belgium",
+              "share_pct": [
+                28.464610417197722,
+                29.2436974789916,
+                28.90368248082919,
+                29.370045890696705,
+                28.989160574741618,
+                29.377593360995853,
+                29.274004683840747,
+                29.34423521638586
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 29.34,
+              "share_change_pp": 0.88,
+              "avg_quarterly_change_pp": 0.13,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "telenet_be",
+              "display_name": "Telenet",
+              "share_pct": [
+                24.683490525958025,
+                24.201680672268907,
+                24.52178309598045,
+                24.155193992490613,
+                24.32568691706579,
+                24.149377593360995,
+                24.004683840749415,
+                24.15758176412289
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 24.16,
+              "share_change_pp": -0.53,
+              "avg_quarterly_change_pp": -0.08,
+              "direction": "losing",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3606.75,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3614.61,
+              3608.25,
+              3605.93,
+              3605.98,
+              3611.61,
+              3605.98,
+              3616.07,
+              3606.75
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "proximus_be",
+          "target_series": {
+            "operator_id": "proximus_be",
+            "display_name": "Proximus",
+            "share_pct": [
+              46.85189905684425,
+              46.554621848739494,
+              46.574534423190364,
+              46.47476011681268,
+              46.68515250819259,
+              46.47302904564315,
+              46.72131147540984,
+              46.49818301949124
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 46.5,
+            "share_change_pp": -0.35,
+            "avg_quarterly_change_pp": -0.05,
+            "direction": "stable",
+            "rank_latest": 1,
+            "rank_change": 0
+          },
+          "share_leader_id": "proximus_be",
+          "biggest_gainer_id": "orange_be",
+          "biggest_loser_id": "telenet_be",
+          "key_message": "Mobile Subscribers share: 46.5% (#1); stable (-0.3pp); market is highly concentrated (HHI 3,607)."
+        },
+        "broadband_subscribers": {
+          "metric_type": "broadband_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "proximus_be",
+              "display_name": "Proximus",
+              "share_pct": [
+                45.79063692987744,
+                45.71992110453649,
+                45.728542914171655,
+                45.73338576484467,
+                45.71655734446432,
+                45.79823702252693,
+                45.65732333201737,
+                45.86260733801718
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 45.86,
+              "share_change_pp": 0.07,
+              "avg_quarterly_change_pp": 0.01,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "telenet_be",
+              "display_name": "Telenet",
+              "share_pct": [
+                34.3982318665863,
+                33.96449704142012,
+                34.231536926147704,
+                33.93629571372394,
+                34.10852713178294,
+                33.88834476003918,
+                33.932096328464276,
+                33.860265417642466
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 33.86,
+              "share_change_pp": -0.54,
+              "avg_quarterly_change_pp": -0.08,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "orange_be",
+              "display_name": "Orange Belgium",
+              "share_pct": [
+                19.811131203536267,
+                20.315581854043394,
+                20.039920159680637,
+                20.33031852143138,
+                20.17491552375273,
+                20.313418217433888,
+                20.410580339518358,
+                20.27712724434036
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 20.28,
+              "share_change_pp": 0.47,
+              "avg_quarterly_change_pp": 0.07,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3661.06,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3672.5,
+              3656.62,
+              3664.5,
+              3656.54,
+              3660.42,
+              3658.53,
+              3652.57,
+              3661.06
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "proximus_be",
+          "target_series": {
+            "operator_id": "proximus_be",
+            "display_name": "Proximus",
+            "share_pct": [
+              45.79063692987744,
+              45.71992110453649,
+              45.728542914171655,
+              45.73338576484467,
+              45.71655734446432,
+              45.79823702252693,
+              45.65732333201737,
+              45.86260733801718
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 45.86,
+            "share_change_pp": 0.07,
+            "avg_quarterly_change_pp": 0.01,
+            "direction": "stable",
+            "rank_latest": 1,
+            "rank_change": 0
+          },
+          "share_leader_id": "proximus_be",
+          "biggest_gainer_id": "orange_be",
+          "biggest_loser_id": "telenet_be",
+          "key_message": "Broadband Subscribers share: 45.9% (#1); stable (+0.1pp); market is highly concentrated (HHI 3,661)."
+        },
+        "revenue_share_latest": 50.0,
+        "mobile_share_latest": 46.5,
+        "broadband_share_latest": 45.9
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 392.0,
+            "mobile_service_growth_pct": 1.8,
+            "mobile_total_k": 5630.0,
+            "mobile_postpaid_k": 5210.0,
+            "mobile_prepaid_k": 420.0,
+            "mobile_net_adds_k": 30.0,
+            "mobile_churn_pct": 1.2,
+            "mobile_arpu": 19.5,
+            "iot_connections_k": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 392.0,
+              "previous_value": 386.0,
+              "yoy_value": 385.0,
+              "change_qoq": 1.55,
+              "change_yoy": 1.82,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 5630.0,
+              "previous_value": 5600.0,
+              "yoy_value": 5586.0,
+              "change_qoq": 0.54,
+              "change_yoy": 0.79,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 19.5,
+              "previous_value": 19.5,
+              "yoy_value": 19.4,
+              "change_qoq": 0.0,
+              "change_yoy": 0.52,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              370.0,
+              375.0,
+              378.0,
+              385.0,
+              380.0,
+              383.0,
+              386.0,
+              392.0
+            ],
+            "subscribers": [
+              5514.0,
+              5527.0,
+              5556.0,
+              5586.0,
+              5540.0,
+              5570.0,
+              5600.0,
+              5630.0
+            ],
+            "arpu": [
+              19.5,
+              19.8,
+              19.6,
+              19.4,
+              19.3,
+              19.5,
+              19.5,
+              19.5
+            ],
+            "churn": [
+              1.3,
+              1.2,
+              1.2,
+              1.2,
+              1.3,
+              1.2,
+              1.2,
+              1.2
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 3.36,
+              "momentum_score": 47.31,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 2.61,
+              "acceleration": -0.9,
+              "sequential_growth": [
+                1.35,
+                0.8,
+                1.85,
+                -1.3,
+                0.79,
+                0.78,
+                1.55
+              ],
+              "yoy_growth": [
+                2.7,
+                2.13,
+                2.12,
+                1.82
+              ],
+              "latest_qoq_pct": 1.55,
+              "latest_yoy_pct": 1.82,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q4=high"
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 1.2,
+              "momentum_score": 50.96,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 13.96,
+              "acceleration": 5.5,
+              "sequential_growth": [
+                0.24,
+                0.52,
+                0.54,
+                -0.82,
+                0.54,
+                0.54,
+                0.54
+              ],
+              "yoy_growth": [
+                0.47,
+                0.78,
+                0.79,
+                0.79
+              ],
+              "latest_qoq_pct": 0.54,
+              "latest_yoy_pct": 0.79,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q4=high"
+            },
+            "arpu_metrics": {
+              "cagr_pct": 0.0,
+              "momentum_score": 54.65,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.01,
+              "trend_slope": -0.02,
+              "acceleration": 0.11,
+              "sequential_growth": [
+                1.54,
+                -1.01,
+                -1.02,
+                -0.52,
+                1.04,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                -1.03,
+                -1.52,
+                -0.51,
+                0.52
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.52,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q2=high"
+            },
+            "churn_metrics": {
+              "cagr_pct": -4.47,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.04,
+              "trend_slope": -0.01,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                -7.69,
+                0.0,
+                0.0,
+                8.33,
+                -7.69,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=high"
+            }
+          },
+          "competitor_comparison": {
+            "Telenet": {
+              "mobile_service_revenue": 185.0,
+              "mobile_total_k": 2925.0,
+              "mobile_arpu": 17.0,
+              "mobile_churn_pct": 1.4
+            },
+            "Orange Belgium": {
+              "mobile_service_revenue": 230.0,
+              "mobile_total_k": 3553.0,
+              "mobile_arpu": 14.6,
+              "mobile_churn_pct": 1.5
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Residential mobile postpaid +122K net adds in 2024. Prepaid declining structurally. Responding to DIGI Belgium entry with data volume upgrades without price increases.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "Proximus NXT cloud and cybersecurity services driving enterprise growth. Business mobile ARPU under pressure (-3.8% in Q4 2024).",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Mobile service revenue at 392.0M; up 1.8% YoY; ARPU 19.5",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 540.0,
+            "fixed_service_growth_pct": 0.9,
+            "broadband_total_k": 2350.0,
+            "broadband_net_adds_k": 12.0,
+            "broadband_cable_k": null,
+            "broadband_fiber_k": 720.0,
+            "broadband_dsl_k": null,
+            "broadband_arpu": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 540.0,
+              "previous_value": 522.0,
+              "yoy_value": 535.0,
+              "change_qoq": 3.45,
+              "change_yoy": 0.93,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 2350.0,
+              "previous_value": 2338.0,
+              "yoy_value": 2313.0,
+              "change_qoq": 0.51,
+              "change_yoy": 1.6,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              520.0,
+              525.0,
+              518.0,
+              535.0,
+              528.0,
+              530.0,
+              522.0,
+              540.0
+            ],
+            "subscribers": [
+              2279.0,
+              2291.0,
+              2300.0,
+              2313.0,
+              2318.0,
+              2326.0,
+              2338.0,
+              2350.0
+            ],
+            "arpu": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fiber": [
+              441.0,
+              481.0,
+              519.0,
+              564.0,
+              607.0,
+              646.0,
+              684.0,
+              720.0
+            ],
+            "cable": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 2.18,
+              "momentum_score": 48.16,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 1.83,
+              "acceleration": -1.0,
+              "sequential_growth": [
+                0.96,
+                -1.33,
+                3.28,
+                -1.31,
+                0.38,
+                -1.51,
+                3.45
+              ],
+              "yoy_growth": [
+                1.54,
+                0.95,
+                0.77,
+                0.93
+              ],
+              "latest_qoq_pct": 3.45,
+              "latest_yoy_pct": 0.93,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q3=low; Q4=high"
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 1.77,
+              "momentum_score": 49.67,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 9.7,
+              "acceleration": -0.3,
+              "sequential_growth": [
+                0.53,
+                0.39,
+                0.57,
+                0.22,
+                0.35,
+                0.52,
+                0.51
+              ],
+              "yoy_growth": [
+                1.71,
+                1.53,
+                1.65,
+                1.6
+              ],
+              "latest_qoq_pct": 0.51,
+              "latest_yoy_pct": 1.6,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "fiber_metrics": {
+              "cagr_pct": 32.33,
+              "momentum_score": 22.17,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.16,
+              "trend_slope": 40.38,
+              "acceleration": -3.0,
+              "sequential_growth": [
+                9.07,
+                7.9,
+                8.67,
+                7.62,
+                6.43,
+                5.88,
+                5.26
+              ],
+              "yoy_growth": [
+                37.64,
+                34.3,
+                31.79,
+                27.66
+              ],
+              "latest_qoq_pct": 5.26,
+              "latest_yoy_pct": 27.66,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Telenet": {
+              "fixed_service_revenue": 425.0,
+              "broadband_total_k": 1735.0,
+              "broadband_fiber_k": 23.0
+            },
+            "Orange Belgium": {
+              "fixed_service_revenue": 135.0,
+              "broadband_total_k": 1039.0,
+              "broadband_fiber_k": 40.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FY2024 Domestic revenue EUR 4,826M, EBITDA EUR 1,682M. 2025 guidance: broadly stable. Fiber take-up exceeding 50% in newly connected areas within 12 months. Convergent customer base growing 5%+ annual",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 3.5% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 540.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "Fixed service revenue 540.0M; growth +0.9% YoY; Fiber subs 720K",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 320.0,
+            "b2b_growth_pct": null,
+            "b2b_customers_k": 234.0,
+            "b2b_share_of_revenue_pct": 25.8
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 320.0,
+              "previous_value": 310.0,
+              "yoy_value": 318.0,
+              "change_qoq": 3.23,
+              "change_yoy": 0.63,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "customers",
+              "current_value": 234.0,
+              "previous_value": 232.0,
+              "yoy_value": 226.0,
+              "change_qoq": 0.86,
+              "change_yoy": 3.54,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              310.0,
+              312.0,
+              310.0,
+              318.0,
+              315.0,
+              313.0,
+              310.0,
+              320.0
+            ],
+            "customers": [
+              220.0,
+              222.0,
+              224.0,
+              226.0,
+              228.0,
+              230.0,
+              232.0,
+              234.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 1.83,
+              "momentum_score": 47.02,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 0.79,
+              "acceleration": -1.0,
+              "sequential_growth": [
+                0.65,
+                -0.64,
+                2.58,
+                -0.94,
+                -0.63,
+                -0.96,
+                3.23
+              ],
+              "yoy_growth": [
+                1.61,
+                0.32,
+                0.0,
+                0.63
+              ],
+              "latest_qoq_pct": 3.23,
+              "latest_yoy_pct": 0.63,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q4=high"
+            },
+            "customers_metrics": {
+              "cagr_pct": 3.59,
+              "momentum_score": 49.71,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 2.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.91,
+                0.9,
+                0.89,
+                0.88,
+                0.88,
+                0.87,
+                0.86
+              ],
+              "yoy_growth": [
+                3.64,
+                3.6,
+                3.57,
+                3.54
+              ],
+              "latest_qoq_pct": 0.86,
+              "latest_yoy_pct": 3.54,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Telenet": {
+              "b2b_revenue": 52.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 102.0
+            },
+            "Orange Belgium": {
+              "b2b_revenue": 32.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 52.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Proximus NXT cloud and cybersecurity services driving enterprise growth. Business mobile ARPU under pressure (-3.8% in Q4 2024).",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 3.2% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 320.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "B2B revenue 320.0M; 25.8% of total revenue",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": null,
+            "tv_total_k": 1585.0,
+            "tv_net_adds_k": null,
+            "fmc_total_k": null,
+            "fmc_penetration_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 1585.0,
+              "previous_value": 1594.0,
+              "yoy_value": 1630.0,
+              "change_qoq": -0.56,
+              "change_yoy": -2.76,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers": [
+              1659.0,
+              1650.0,
+              1637.0,
+              1630.0,
+              1614.0,
+              1604.0,
+              1594.0,
+              1585.0
+            ],
+            "fmc_subscribers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fmc_penetration": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers_metrics": {
+              "cagr_pct": -2.57,
+              "momentum_score": 49.85,
+              "momentum_phase": "recovery",
+              "volatility": 0.02,
+              "trend_slope": -10.87,
+              "acceleration": 0.3,
+              "sequential_growth": [
+                -0.54,
+                -0.79,
+                -0.43,
+                -0.98,
+                -0.62,
+                -0.62,
+                -0.56
+              ],
+              "yoy_growth": [
+                -2.71,
+                -2.79,
+                -2.63,
+                -2.76
+              ],
+              "latest_qoq_pct": -0.56,
+              "latest_yoy_pct": -2.76,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Telenet": {
+              "tv_total_k": 1575.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            },
+            "Orange Belgium": {
+              "tv_total_k": 805.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "TV subscribers 1585K",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": null,
+            "wholesale_share_of_revenue_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Insufficient data for wholesale assessment",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "mobile_vendor": "Nokia/Ericsson",
+          "spectrum_mhz": 310,
+          "core_vendor": "Nokia",
+          "5g_sa_status": "Deploying SA",
+          "fiber_technology": "GPON/XGS-PON"
+        },
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "fiber",
+            "mobile"
+          ],
+          "summary": "Fully owned mobile + fixed network. Largest fiber network (2M+ homepass, targeting 4.2M). Legacy copper being retired. ~98% own-network."
+        },
+        "coverage": {
+          "5g": 75.0,
+          "4g": 99.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 2491.0,
+          "fiber_connected_k": 720.0,
+          "fiber_penetration_pct": 28.9
+        },
+        "evolution_strategy": {
+          "data_signals": [
+            "5G SA: Deploying SA",
+            "Fiber-only fixed footprint"
+          ],
+          "summary": "Accelerated FTTH rollout partnering with Nokia; 5G standalone deployment; copper retirement; converged core network modernization; open fiber access where mandated."
+        },
+        "investment_direction": "increasing",
+        "vs_competitors": "5G: ahead of Orange Belgium by 5pp; Fiber: 31.1x more homepass than Orange Belgium; Fiber: 49.8x more homepass than Telenet",
+        "consumer_impact": "Expanding 5G coverage (75.0%); Fiber-dominant broadband mix",
+        "b2b_impact": "B2B revenue share: 26%",
+        "cost_impact": "High capex intensity (38.2%); Capex increasing (+66.9% QoQ)"
+      },
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 78.0,
+            "market_avg": 75.0,
+            "gap_pp": 3.0,
+            "verdict": "at average"
+          },
+          "Brand Strength": {
+            "score": 90.0,
+            "market_avg": 82.3,
+            "gap_pp": 7.7,
+            "verdict": "above average"
+          }
+        },
+        "overall_verdict": "positive",
+        "summary": "Customer Service +3pp vs market; Brand Strength +8pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Guillaume Boutin",
+          "title": "CEO",
+          "is_current": true,
+          "start_date": "2019-12-01",
+          "background": "Former Orange Group executive; driving Bold2025 digital transformation and fiber acceleration",
+          "tenure_years": 6.2
+        },
+        {
+          "name": "Mark Reid",
+          "title": "CFO",
+          "is_current": true,
+          "start_date": "2022-04-01",
+          "background": "Ex-British Telecom CFO; managing fiber investment program and shareholder returns",
+          "tenure_years": 3.9
+        },
+        {
+          "name": "Geert Standaert",
+          "title": "CTO",
+          "is_current": true,
+          "start_date": "2013-01-01",
+          "background": "Long-tenured technology leader overseeing fiber and 5G rollout",
+          "tenure_years": 13.1
+        }
+      ],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners",
+          "Nokia (fiber and 5G deployment)",
+          "Microsoft Azure (cloud partnership)",
+          "BICS (international wholesale subsidiary)"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery",
+          "Accelerated FTTH rollout (target 70% by 2028)",
+          "5G standalone deployment and use case development",
+          "Digital transformation under Bold2025 strategy",
+          "Enterprise cloud and cybersecurity services growth"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Largest fiber network in Belgium (2M+ homepass, accelerating)",
+          "Comprehensive 5G mobile network (nationwide 3.5GHz rollout)",
+          "Premium brand and largest enterprise customer base",
+          "International presence via BICS (wholesale) and Telesur"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "Belgium's most extensive fiber broadband network",
+          "Premium quad-play convergent bundles (Proximus Flex)",
+          "Leading enterprise ICT and cloud solutions (Proximus NXT)",
+          "5G innovation and private network capabilities"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture; High-investment posture; Incumbent evolving under Bold2025 digital transformation; engineering excellence; strong social responsibility; complex stakeholder management (state ownership).",
+      "talent_assessment": {
+        "c_suite_count": 3,
+        "avg_tenure_years": 7.7,
+        "key_leaders": [
+          "Guillaume Boutin (CEO)",
+          "Mark Reid (CFO)",
+          "Geert Standaert (CTO)"
+        ],
+        "capability_alignment": [
+          "Customer Service: strong",
+          "Enterprise Solutions: strong"
+        ],
+        "assessment": "Stable, experienced leadership team"
+      },
+      "performance_gap": "No significant performance gaps identified from available data",
+      "opportunity_gap": "No significant opportunity gaps identified from available data",
+      "strategic_review": "Management outlook: Proximus NXT cloud and cybersecurity services driving enterprise growth. Business mobile ARPU under pressure (-3.8% in Q4 2024).. Revenue trajectory growing, margins healthy (32.3%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Price Competitiveness: score 55 (market avg 64)",
+      "management_commentary": [
+        {
+          "segment": "Mobile",
+          "type": "explanation",
+          "content": "Residential mobile postpaid +122K net adds in 2024. Prepaid declining structurally. Responding to DIGI Belgium entry with data volume upgrades without price increases.",
+          "speaker": "CEO",
+          "source_url": null
+        },
+        {
+          "segment": "Enterprise",
+          "type": "guidance",
+          "content": "Proximus NXT cloud and cybersecurity services driving enterprise growth. Business mobile ARPU under pressure (-3.8% in Q4 2024).",
+          "speaker": "CFO",
+          "source_url": null
+        },
+        {
+          "segment": "Residential",
+          "type": "guidance",
+          "content": "FY2024 Domestic revenue EUR 4,826M, EBITDA EUR 1,682M. 2025 guidance: broadly stable. Fiber take-up exceeding 50% in newly connected areas within 12 months. Convergent customer base growing 5%+ annually.",
+          "speaker": "CEO",
+          "source_url": null
+        }
+      ],
+      "strengths": [
+        "Brand Strength: score 90 (market avg 82)",
+        "Distribution: score 88 (market avg 80)",
+        "Enterprise Solutions: score 92 (market avg 72)",
+        "Innovation: score 85 (market avg 79)",
+        "Network Coverage: score 92 (market avg 85)",
+        "Strong EBITDA margin at 32.3%",
+        "Revenue on growth trajectory",
+        "Dominant market share at 50.0%",
+        "Top 1 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "Price Competitiveness: score 55 (market avg 64)"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Massive fiber investment program (multi-billion EUR over decade)",
+          "side_effect": "Elevated capex constraining free cash flow and dividend capacity",
+          "attack_vector": "Telenet already has nationwide cable broadband without comparable investment",
+          "severity": "medium",
+          "evidence": [
+            "Fiber rollout accelerating but costly; target 70% coverage by 2028"
+          ]
+        },
+        {
+          "trigger_action": "State ownership (53.5% Belgian government) limits strategic flexibility",
+          "side_effect": "Political interference in strategic decisions and pricing",
+          "attack_vector": "Private competitors can be more agile and commercially aggressive",
+          "severity": "medium",
+          "evidence": [
+            "Belgian state majority shareholder; dividend expectations"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #1 of 3 operators in market; revenue EUR 1,240M; EBITDA margin 32.3%; stable but facing challenges; key strength: Brand Strength; key challenge: Price Competitiveness; Management outlook: Proximus NXT cloud and cybersecurity services driving enterprise growth. Business mobile ARPU under pressure (-3.8% in Q4 2024)."
+    },
+    "swot": {
+      "strengths": [
+        "Brand Strength: score 90 (market avg 82)",
+        "Distribution: score 88 (market avg 80)",
+        "Enterprise Solutions: score 92 (market avg 72)",
+        "Innovation: score 85 (market avg 79)",
+        "Network Coverage: score 92 (market avg 85)",
+        "Strong EBITDA margin at 32.3%",
+        "Revenue on growth trajectory",
+        "Dominant market share at 50.0%",
+        "Top 1 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "Price Competitiveness: score 55 (market avg 64)",
+        "Elevated capex constraining free cash flow and dividend capacity",
+        "Political interference in strategic decisions and pricing"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be",
+        "National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be",
+        "Proximus EBITDA margin compression: 32.3% vs 36.7% (-4.4pp)",
+        "Telenet launches TADAAM unlimited mobile at EUR 25/month",
+        "High substitutes pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Brand Strength: score 90 (market avg 82)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+        "Leverage 'Distribution: score 88 (market avg 80)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Price Competitiveness: score 55 (market avg 64)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+        "Address weakness 'Elevated capex constraining free cash flow and dividend capacity' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access'."
+      ],
+      "st_strategies": [
+        "Use strength 'Brand Strength: score 90 (market avg 82)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+        "Use strength 'Distribution: score 88 (market avg 80)' to counter the threat of 'Proximus EBITDA margin compression: 32.3% vs 36.7% (-4.4pp)'.",
+        "Use strength 'Enterprise Solutions: score 92 (market avg 72)' to counter the threat of 'Telenet launches TADAAM unlimited mobile at EUR 25/month'.",
+        "Use strength 'Innovation: score 85 (market avg 79)' to counter the threat of 'High substitutes pressure'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Price Competitiveness: score 55 (market avg 64)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+        "Mitigate weakness 'Elevated capex constraining free cash flow and dividend capacity' and defend against the threat of 'Proximus EBITDA margin compression: 32.3% vs 36.7% (-4.4pp)'.",
+        "Mitigate weakness 'Political interference in strategic decisions and pricing' and defend against the threat of 'Telenet launches TADAAM unlimited mobile at EUR 25/month'."
+      ],
+      "key_message": "SWOT analysis identifies 9 strengths, 3 weaknesses, 2 opportunities, and 4 threats. The recommended strategic posture is offensive (SO-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.88,
+          "market_share_score": 6.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 9.0,
+          "tech_capability_score": 9.2,
+          "competitive_position": 7.8,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.75
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.88,
+          "market_share_score": 6.0,
+          "product_fit_score": 7,
+          "brand_channel_score": 9.0,
+          "tech_capability_score": 9.2,
+          "competitive_position": 7.8,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.75
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 8.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.53,
+          "market_share_score": 6.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 9.0,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.45
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 8.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.53,
+          "market_share_score": 6.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 9.0,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.45
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 8.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.53,
+          "market_share_score": 6.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 9.0,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.45
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.68,
+          "market_share_score": 6.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 9.0,
+          "tech_capability_score": 9.2,
+          "competitive_position": 7.3,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.62
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.68,
+          "market_share_score": 6.0,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 9.0,
+          "tech_capability_score": 9.2,
+          "competitive_position": 7.3,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.62
+        },
+        {
+          "opportunity_name": "Exploit orange_be weakness: Brand Strength: score 75 (market avg 82)",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.28,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.2,
+          "competitive_position": 6.55,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.41
+        },
+        {
+          "opportunity_name": "Exploit orange_be weakness: Distribution: score 70 (market avg 80)",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.28,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.2,
+          "competitive_position": 6.55,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.41
+        },
+        {
+          "opportunity_name": "Exploit telenet_be weakness: Enterprise Solutions: score 60 (market avg 72)",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.28,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.2,
+          "competitive_position": 6.55,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.41
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.48,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.82
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.48,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.82
+        },
+        {
+          "opportunity_name": "ST-1",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-2",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-3",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-4",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "WT-1",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-2",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-3",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        }
+      ],
+      "grow_invest": [
+        "SO-1",
+        "SO-2",
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be",
+        "National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access",
+        "Exploit orange_be weakness: Brand Strength: score 75 (market avg 82)",
+        "Exploit orange_be weakness: Distribution: score 70 (market avg 80)",
+        "Exploit telenet_be weakness: Enterprise Solutions: score 60 (market avg 72)"
+      ],
+      "acquire_skills": [
+        "WO-1",
+        "WO-2"
+      ],
+      "harvest": [
+        "ST-1",
+        "ST-2",
+        "ST-3",
+        "ST-4"
+      ],
+      "avoid_exit": [
+        "WT-1",
+        "WT-2",
+        "WT-3"
+      ],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Brand Strength: score 90 (market avg 82)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Distribution: score 88 (market avg 80)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit orange_be weakness: Brand Strength: score 75 (market avg 82)",
+          "description": "Competitor orange_be is weak in: Brand Strength: score 75 (market avg 82)",
+          "derived_from": [
+            "competitor_weakness",
+            "orange_be"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit orange_be weakness: Distribution: score 70 (market avg 80)",
+          "description": "Competitor orange_be is weak in: Distribution: score 70 (market avg 80)",
+          "derived_from": [
+            "competitor_weakness",
+            "orange_be"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit telenet_be weakness: Enterprise Solutions: score 60 (market avg 72)",
+          "description": "Competitor telenet_be is weak in: Enterprise Solutions: score 60 (market avg 72)",
+          "derived_from": [
+            "competitor_weakness",
+            "telenet_be"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Price Competitiveness: score 55 (market avg 64)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Elevated capex constraining free cash flow and dividend capacity' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require proximus_be investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "ST-1",
+          "description": "Use strength 'Brand Strength: score 90 (market avg 82)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-2",
+          "description": "Use strength 'Distribution: score 88 (market avg 80)' to counter the threat of 'Proximus EBITDA margin compression: 32.3% vs 36.7% (-4.4pp)'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-3",
+          "description": "Use strength 'Enterprise Solutions: score 92 (market avg 72)' to counter the threat of 'Telenet launches TADAAM unlimited mobile at EUR 25/month'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-4",
+          "description": "Use strength 'Innovation: score 85 (market avg 79)' to counter the threat of 'High substitutes pressure'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "WT-1",
+          "description": "Mitigate weakness 'Price Competitiveness: score 55 (market avg 64)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect proximus_be'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-2",
+          "description": "Mitigate weakness 'Elevated capex constraining free cash flow and dividend capacity' and defend against the threat of 'Proximus EBITDA margin compression: 32.3% vs 36.7% (-4.4pp)'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-3",
+          "description": "Mitigate weakness 'Political interference in strategic decisions and pricing' and defend against the threat of 'Telenet launches TADAAM unlimited mobile at EUR 25/month'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        }
+      ],
+      "key_message": "SPAN matrix positions 19 opportunities: 10 grow/invest, 2 acquire skills, 4 harvest, 3 avoid/exit. Focus resources on the 10 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 20,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 20,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 20
+  }
+}
