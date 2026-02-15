@@ -1,0 +1,3274 @@
+{
+  "meta": {
+    "target_operator": "salt_ch",
+    "market": "switzerland",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-15T09:30:13.625782",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "COMCOM/BAKOM regulation; lighter touch than EU. Swisscom 51% state-owned. Switzerland not EU member; separate framework. Strong data protection (nDSG 2023). 5G spectrum allocated.",
+            "trend": "Regulatory stance: COMCOM/BAKOM regulation; lighter touch than EU. Swisscom 51% state-owned. Switzerland not EU member; separate framework. Strong data protection (nDSG 2023). 5G spectrum allocated.",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect salt_ch",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: COMCOM/BAKOM regulation; lighter touch than EU. Swisscom 51% state-owned. Switzerland not EU member; separate framework. Strong data protection (nDSG 2023). 5G spectrum allocated."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "Swisscom targeting near-universal fiber by 2030. All three MNOs have 5G. Among most expensive telecom markets in Europe. CHF/EUR ~0.95.",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: Swisscom targeting near-universal fiber by 2030. All three MNOs have 5G. Among most expensive telecom markets in Europe. CHF/EUR ~0.95."
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 1.3%",
+            "trend": "GDP growth trend: stable (latest 1.3%)",
+            "trend_direction": "stable",
+            "industry_impact": "Moderate GDP growth supports steady telecom demand",
+            "company_impact": "Supported revenue growth for salt_ch",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 1.3%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 1.1%",
+            "trend": "Inflation trend: stable (latest 1.1%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "Manageable cost environment for salt_ch",
+            "impact_type": "neutral",
+            "severity": "low",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 1.1%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Unemployment",
+            "current_status": "Unemployment at 2.8%",
+            "trend": "Unemployment trend: stable",
+            "trend_direction": "stable",
+            "industry_impact": "Unemployment affects consumer spending power and enterprise IT budgets",
+            "company_impact": "Consumer segment sensitivity for salt_ch",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Unemployment: 2.8%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 35.0% of mobile subscribers",
+            "trend": "5G adoption trend: stable (35.0% -> 35.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for salt_ch",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 35.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 55.0%",
+            "trend": "Fiber penetration trend: stable (55.0% -> 55.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for salt_ch",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 55.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in acceleration phase (35.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for salt_ch",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 35.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 55.0%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for salt_ch",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 55.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 6/9 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch",
+          "National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "CHF 3.1B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+2.0% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Stable (industry EBITDA margin ~43.2%)",
+      "industry_concentration": "CR4 = 100% (Swisscom: 66.9%, Sunrise: 25.2%, Salt Mobile: 7.9%)",
+      "industry_lifecycle_stage": "late_growth",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+2.0% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 3110.0,
+        "total_mobile_subscribers_k": 11580.0,
+        "total_broadband_subscribers_k": 3530.0,
+        "market_shares": {
+          "Swisscom": 66.9,
+          "Sunrise": 25.2,
+          "Salt Mobile": 7.9
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 130.8,
+          "broadband_penetration_pct": 39.9
+        },
+        "operator_count": 3
+      },
+      "changes": [
+        {
+          "change_type": "merger",
+          "description": "Sunrise announces ~190 job cuts post-spin-off",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Sunrise plans to cut up to 190 jobs (~7% of workforce) as part of post-spin-off restructuring to improve efficiency. Part of CHF 325M annual synergy target from UPC merger.",
+          "severity": "medium",
+          "evidence": []
+        }
+      ],
+      "opportunities": [
+        {
+          "change_type": "merger",
+          "description": "Sunrise announces ~190 job cuts post-spin-off",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Sunrise plans to cut up to 190 jobs (~7% of workforce) as part of post-spin-off restructuring to improve efficiency. Part of CHF 325M annual synergy target from UPC merger.",
+          "severity": "medium",
+          "evidence": []
+        }
+      ],
+      "threats": [],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Premium Convergent",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Seamless quad-play convergence at competitive prices",
+            "True 10 Gbps fiber speeds delivered consistently"
+          ],
+          "pain_points": [
+            "Very high telecom prices compared to EU neighbors",
+            "Swisscom near-monopoly in fixed broadband limits choice"
+          ],
+          "purchase_decision_factors": [
+            "Network quality and reliability",
+            "Bundle value (fixed + mobile + TV)",
+            "Brand trust and Swiss quality perception",
+            "Customer service quality"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Value-Seeking",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "More affordable unlimited mobile plans",
+            "Better price-to-quality ratio vs EU benchmarks"
+          ],
+          "pain_points": [
+            "Swiss telecom prices among highest in Europe",
+            "Limited competitive pressure on pricing"
+          ],
+          "purchase_decision_factors": [
+            "Monthly cost",
+            "Data volume and speed",
+            "Network coverage (especially in mountains)",
+            "Contract flexibility"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Digital-First / Young",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "eSIM and fully digital onboarding",
+            "Flexible SIM-only plans with no contract"
+          ],
+          "pain_points": [
+            "Traditional operators still require in-store visits",
+            "Limited MVNO competition vs EU markets"
+          ],
+          "purchase_decision_factors": [
+            "Price per GB",
+            "Digital experience (app, eSIM)",
+            "No contract lock-in",
+            "5G access"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Enterprise & SME",
+          "segment_type": "enterprise",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Private 5G networks for pharmaceutical and financial sectors",
+            "Cloud and cybersecurity managed services",
+            "Multi-site SD-WAN connectivity"
+          ],
+          "pain_points": [
+            "Swisscom dominates enterprise; limited alternatives",
+            "High cost of dedicated circuits in Switzerland"
+          ],
+          "purchase_decision_factors": [
+            "Reliability and SLAs",
+            "Swiss data sovereignty (data stays in Switzerland)",
+            "Managed services capability",
+            "Price competitiveness"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "critical",
+          "gap_analysis": "No competitor data available for Price"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 4.0,
+          "competitor_scores": {
+            "sunrise_ch": 4.4,
+            "swisscom_ch": 4.9
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Availability by 0.7 points. Leader: swisscom_ch (4.9/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Packaging"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 4.6,
+          "competitor_scores": {
+            "sunrise_ch": 4.1,
+            "swisscom_ch": 4.8
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Above average in Performance but 0.2 points behind leader (swisscom_ch: 4.8/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.6,
+          "competitor_scores": {
+            "sunrise_ch": 3.8,
+            "swisscom_ch": 4.2
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Ease of Use by 0.4 points. Leader: swisscom_ch (4.2/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 2.2,
+          "competitor_scores": {
+            "sunrise_ch": 3.6,
+            "swisscom_ch": 4.8
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Assurances by 2.0 points. Leader: swisscom_ch (4.8/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Lifecycle Cost"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 3.2,
+          "competitor_scores": {
+            "sunrise_ch": 3.9,
+            "swisscom_ch": 4.8
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Below market average in Social/Brand by 1.1 points. Leader: swisscom_ch (4.8/5.0)"
+        }
+      ],
+      "customer_value_migration": "Limited data to assess value migration trends",
+      "market_outlook": "favorable",
+      "key_message": "Switzerland telecom market totals CHF 3,110M in quarterly revenue; competitive strengths in Availability, Performance; gaps in Assurances; Market outlook is favorable with more opportunities than threats."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "3 active operators in the market",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 67% of market revenue (total: CHF 3,110M)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from -1.0% to +3.4% (spread: 4.4pp)",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 45.9%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 67% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.07%/month. Highest: 1.30% indicating moderate willingness to switch.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 87%. High contract lock-in reduces buyer mobility.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "sunrise_ch": {
+          "operator": "Sunrise",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 785.0,
+            "service_revenue": 710.0,
+            "service_revenue_growth_pct": 2.9,
+            "ebitda": 265.0,
+            "ebitda_margin_pct": 33.8,
+            "ebitda_growth_pct": 1.9,
+            "capex": 127.0,
+            "capex_to_revenue_pct": 16.2,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 2.41,
+              "momentum_score": 62.07,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 1.75,
+              "acceleration": 10.7,
+              "sequential_growth": [
+                0.27,
+                -0.79,
+                1.6,
+                -1.84,
+                -1.2,
+                1.49,
+                4.81
+              ],
+              "yoy_growth": [
+                -0.8,
+                -2.25,
+                0.0,
+                3.15
+              ],
+              "latest_qoq_pct": 4.81,
+              "latest_yoy_pct": 3.15,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q4=high"
+            },
+            "margin_metrics": {
+              "cagr_pct": 0.17,
+              "momentum_score": 48.24,
+              "momentum_phase": "flat",
+              "volatility": 0.01,
+              "trend_slope": 0.03,
+              "acceleration": -0.03,
+              "sequential_growth": [
+                2.08,
+                -0.58,
+                0.0,
+                -2.05,
+                3.28,
+                0.29,
+                -2.59
+              ],
+              "yoy_growth": [
+                -0.59,
+                0.58,
+                1.46,
+                -1.17
+              ],
+              "latest_qoq_pct": -2.59,
+              "latest_yoy_pct": -1.17,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low"
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 3130.0,
+            "mobile_postpaid_k": 2920.0,
+            "mobile_net_adds_k": 59.0,
+            "mobile_churn_pct": 1.0,
+            "mobile_arpu": 28.0,
+            "broadband_total_k": 1320.0,
+            "broadband_fiber_k": 220.0,
+            "broadband_net_adds_k": 10.0,
+            "tv_total_k": 990.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "flat",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 80.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 500.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Huawei/Nokia",
+              "spectrum_mhz": 340,
+              "cable_docsis": "3.1",
+              "cable_homepass_k": 2500
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Huawei/Nokia",
+          "ecosystem_partners": [
+            "Network vendor: Huawei/Nokia"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Distribution",
+            "Market leadership in Network Quality",
+            "Own fiber infrastructure (500k homes)"
+          ],
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; moderate-margin profile",
+          "org_structure": "CFO: Jany Fruytier (Finance executive; managing post-spin-off capital structure); CEO: Andre Krause (Led Sunrise+UPC merger and Liberty Global spin-off. First CEO of independent Sunrise.)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "2 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [],
+          "weaknesses": [
+            "Digital Experience: score 75 (market avg 80)",
+            "Innovation: score 75 (market avg 80)",
+            "Network Quality: score 82 (market avg 90)"
+          ],
+          "problems": [
+            "Competitive gap in Digital Experience",
+            "Competitive gap in Innovation",
+            "Competitive gap in Network Quality"
+          ],
+          "likely_future_actions": [
+            "Sunrise is likely to continue aggressive network expansion (capex/revenue at 16% with growing revenue).",
+            "Sunrise is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Sunrise's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Sunrise is weak in: Digital Experience, Innovation, Network Quality. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Digital Experience: score 75 (market avg 80)",
+                "Innovation: score 75 (market avg 80)",
+                "Network Quality: score 82 (market avg 90)"
+              ],
+              "suggested_action": "Invest in Digital Experience, Innovation, Network Quality to capture customers dissatisfied with Sunrise."
+            }
+          ]
+        },
+        "swisscom_ch": {
+          "operator": "Swisscom",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 2080.0,
+            "service_revenue": 1940.0,
+            "service_revenue_growth_pct": -1.0,
+            "ebitda": 935.0,
+            "ebitda_margin_pct": 45.0,
+            "ebitda_growth_pct": 1.2,
+            "capex": 430.0,
+            "capex_to_revenue_pct": 20.7,
+            "revenue_trend": "growing",
+            "margin_trend": "declining",
+            "revenue_metrics": {
+              "cagr_pct": 2.47,
+              "momentum_score": 47.32,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 14.05,
+              "acceleration": -4.4,
+              "sequential_growth": [
+                0.1,
+                -0.85,
+                3.13,
+                0.49,
+                0.73,
+                -0.48,
+                1.22
+              ],
+              "yoy_growth": [
+                2.86,
+                3.51,
+                3.89,
+                1.96
+              ],
+              "latest_qoq_pct": 1.22,
+              "latest_yoy_pct": 1.96,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "margin_metrics": {
+              "cagr_pct": -1.13,
+              "momentum_score": 54.59,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.01,
+              "trend_slope": -0.19,
+              "acceleration": 0.22,
+              "sequential_growth": [
+                1.53,
+                -1.29,
+                -1.52,
+                -0.88,
+                1.34,
+                -1.1,
+                0.0
+              ],
+              "yoy_growth": [
+                -2.18,
+                -2.36,
+                -2.17,
+                -0.66
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": -0.66,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 6400.0,
+            "mobile_postpaid_k": 5360.0,
+            "mobile_net_adds_k": 20.0,
+            "mobile_churn_pct": 0.9,
+            "mobile_arpu": 46.0,
+            "broadband_total_k": 1945.0,
+            "broadband_fiber_k": 1850.0,
+            "broadband_net_adds_k": -5.0,
+            "tv_total_k": 1470.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "declining",
+            "arpu_trend": "declining",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 85.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 3500.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Ericsson",
+              "spectrum_mhz": 380,
+              "fiber_technology": "GPON/XGS-PON",
+              "5g_sa_status": "Deploying"
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Market share expansion (investing for growth); subscriber acquisition focus; strong B2B/enterprise push",
+          "supply_chain_status": "Primary vendor: Ericsson; 5G SA: Deploying",
+          "ecosystem_partners": [
+            "Network vendor: Ericsson"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Brand Strength",
+            "Market leadership in Distribution",
+            "Market leadership in Enterprise Solutions",
+            "Market leadership in Network Quality"
+          ],
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; high-margin profile",
+          "org_structure": "CEO: Christoph Aeschlimann (Internal promotion; overseeing fiber expansion and Fastweb+Vodafone Italia integration); CFO: Eugen Stermetz (Managing EUR 8B Vodafone Italia acquisition financing)",
+          "incentive_system": "Growth and market share targets",
+          "talent_culture": "2 C-suite leaders",
+          "ma_activity": [
+            "Swisscom completes EUR 8B acquisition of Vodafone Italia"
+          ],
+          "strengths": [
+            "Brand Strength: score 95 (market avg 79)",
+            "Customer Service: score 85 (market avg 77)",
+            "Distribution: score 95 (market avg 81)",
+            "Enterprise Solutions: score 95 (market avg 71)",
+            "Network Coverage: score 98 (market avg 89)",
+            "Network Quality: score 95 (market avg 90)"
+          ],
+          "weaknesses": [
+            "Price Competitiveness: score 45 (market avg 69)"
+          ],
+          "problems": [
+            "Competitive gap in Price Competitiveness",
+            "Margin erosion",
+            "Broadband subscriber losses"
+          ],
+          "likely_future_actions": [
+            "Swisscom is likely to continue aggressive network expansion (capex/revenue at 21% with growing revenue).",
+            "Swisscom is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "Swisscom may accelerate fiber migration or FWA push to counter broadband subscriber losses."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Swisscom's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Swisscom is weak in: Price Competitiveness. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Price Competitiveness: score 45 (market avg 69)"
+              ],
+              "suggested_action": "Invest in Price Competitiveness to capture customers dissatisfied with Swisscom."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Swisscom excels in: Brand Strength, Customer Service, Distribution. Study their approach for best practices.",
+              "evidence": [
+                "Brand Strength: score 95 (market avg 79)",
+                "Customer Service: score 85 (market avg 77)",
+                "Distribution: score 95 (market avg 81)"
+              ],
+              "suggested_action": "Benchmark Swisscom's practices in Brand Strength, Customer Service, Distribution."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "salt_ch": 245.0,
+          "sunrise_ch": 785.0,
+          "swisscom_ch": 2080.0
+        },
+        "revenue_growth": {
+          "salt_ch": 3.4,
+          "sunrise_ch": 2.9,
+          "swisscom_ch": -1.0
+        },
+        "ebitda_margin": {
+          "salt_ch": 58.8,
+          "sunrise_ch": 33.8,
+          "swisscom_ch": 45.0
+        },
+        "subscribers": {
+          "salt_ch": 2050.0,
+          "sunrise_ch": 3130.0,
+          "swisscom_ch": 6400.0
+        },
+        "arpu": {
+          "salt_ch": 38.5,
+          "sunrise_ch": 28.0,
+          "swisscom_ch": 46.0
+        },
+        "churn": {
+          "salt_ch": 1.3,
+          "sunrise_ch": 1.0,
+          "swisscom_ch": 0.9
+        },
+        "5g_coverage": {
+          "salt_ch": 75.0,
+          "sunrise_ch": 80.0,
+          "swisscom_ch": 85.0
+        }
+      },
+      "competitive_landscape": "The market comprises 3 active operators: Salt Mobile, Sunrise, Swisscom. Overall competition intensity is assessed as medium. Revenue ranking: Swisscom (2,080M), Sunrise (785.0M), Salt Mobile (245.0M). Five Forces: Existing Competitors: medium; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "key_message": "In a 3-player market with medium competition intensity, Swisscom leads with 67% revenue share. Target operator holds 8% share. Strongest competitive force: Substitutes."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 245.0,
+        "service_revenue": 230.0,
+        "ebitda": 144.0,
+        "ebitda_margin_pct": 58.8,
+        "net_income": null,
+        "capex": 44.0,
+        "capex_to_revenue_pct": 18.0,
+        "opex": null,
+        "employees": 1150,
+        "revenue_qoq_pct": 0.0,
+        "revenue_yoy_pct": 3.38,
+        "ebitda_qoq_pct": -2.7,
+        "ebitda_growth_pct": -2.7,
+        "service_revenue_growth_pct": 3.4,
+        "revenue_trend": [
+          225.0,
+          230.0,
+          233.0,
+          237.0,
+          237.0,
+          246.0,
+          245.0,
+          245.0
+        ],
+        "ebitda_trend": [
+          138.0,
+          142.0,
+          144.0,
+          148.0,
+          144.0,
+          150.0,
+          148.0,
+          144.0
+        ],
+        "margin_trend": [
+          61.3,
+          61.7,
+          61.8,
+          62.4,
+          60.8,
+          61.0,
+          60.4,
+          58.8
+        ],
+        "revenue_metrics": {
+          "cagr_pct": 4.99,
+          "momentum_score": 44.13,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.03,
+          "trend_slope": 3.02,
+          "acceleration": -1.6,
+          "sequential_growth": [
+            2.22,
+            1.3,
+            1.72,
+            0.0,
+            3.8,
+            -0.41,
+            0.0
+          ],
+          "yoy_growth": [
+            5.33,
+            6.96,
+            5.15,
+            3.38
+          ],
+          "latest_qoq_pct": 0.0,
+          "latest_yoy_pct": 3.38,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "ebitda_metrics": {
+          "cagr_pct": 2.46,
+          "momentum_score": 28.26,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.02,
+          "trend_slope": 1.02,
+          "acceleration": -3.4,
+          "sequential_growth": [
+            2.9,
+            1.41,
+            2.78,
+            -2.7,
+            4.17,
+            -1.33,
+            -2.7
+          ],
+          "yoy_growth": [
+            4.35,
+            5.63,
+            2.78,
+            -2.7
+          ],
+          "latest_qoq_pct": -2.7,
+          "latest_yoy_pct": -2.7,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q1=low"
+        },
+        "margin_metrics": {
+          "cagr_pct": -2.35,
+          "momentum_score": 34.75,
+          "momentum_phase": "accelerating_decline",
+          "volatility": 0.02,
+          "trend_slope": -0.33,
+          "acceleration": -1.0,
+          "sequential_growth": [
+            0.65,
+            0.16,
+            0.97,
+            -2.56,
+            0.33,
+            -0.98,
+            -2.65
+          ],
+          "yoy_growth": [
+            -0.82,
+            -1.13,
+            -2.27,
+            -5.77
+          ],
+          "latest_qoq_pct": -2.65,
+          "latest_yoy_pct": -5.77,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 183.0,
+          "share_pct": 74.7
+        },
+        "fixed_service_revenue": {
+          "value": 38.0,
+          "share_pct": 15.5
+        },
+        "b2b_revenue": {
+          "value": 9.0,
+          "share_pct": 3.7
+        },
+        "other_revenue": {
+          "value": 15.0,
+          "share_pct": 6.1
+        },
+        "total_revenue": 245.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 3,
+        "revenue_rank": 3,
+        "total_revenue": 245.0,
+        "revenue_market_share_pct": 7.9,
+        "subscriber_rank": 3,
+        "mobile_subscriber_share_pct": 17.7,
+        "broadband_subscriber_share_pct": 7.5,
+        "competitors": {
+          "swisscom_ch": {
+            "display_name": "Swisscom",
+            "total_revenue": 2080.0,
+            "mobile_total_k": 6400.0,
+            "broadband_total_k": 1945.0
+          },
+          "sunrise_ch": {
+            "display_name": "Sunrise",
+            "total_revenue": 785.0,
+            "mobile_total_k": 3130.0,
+            "broadband_total_k": 1320.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue": {
+          "metric_type": "revenue",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "swisscom_ch",
+              "display_name": "Swisscom",
+              "share_pct": [
+                67.08179064288119,
+                67.56756756756756,
+                66.94630872483222,
+                67.72712364709741,
+                66.82432432432432,
+                67.39914726139718,
+                67.14944042132981,
+                66.88102893890675
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 66.88,
+              "share_change_pp": -0.2,
+              "avg_quarterly_change_pp": -0.03,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "sunrise_ch",
+              "display_name": "Sunrise",
+              "share_pct": [
+                25.345001682935038,
+                24.620962425840474,
+                25.335570469798657,
+                24.204657264676943,
+                25.304054054054053,
+                24.565431288947195,
+                25.0493745885451,
+                25.241157556270092
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 25.24,
+              "share_change_pp": -0.1,
+              "avg_quarterly_change_pp": -0.01,
+              "direction": "stable",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "salt_ch",
+              "display_name": "Salt Mobile",
+              "share_pct": [
+                7.573207674183776,
+                7.811470006591959,
+                7.718120805369128,
+                8.068219088225648,
+                7.871621621621622,
+                8.035421449655624,
+                7.801184990125082,
+                7.877813504823152
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 7.88,
+              "share_change_pp": 0.3,
+              "avg_quarterly_change_pp": 0.04,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 5172.25,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              5199.69,
+              5232.59,
+              5183.27,
+              5237.92,
+              5167.75,
+              5210.67,
+              5197.38,
+              5172.25
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "salt_ch",
+          "target_series": {
+            "operator_id": "salt_ch",
+            "display_name": "Salt Mobile",
+            "share_pct": [
+              7.573207674183776,
+              7.811470006591959,
+              7.718120805369128,
+              8.068219088225648,
+              7.871621621621622,
+              8.035421449655624,
+              7.801184990125082,
+              7.877813504823152
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 7.88,
+            "share_change_pp": 0.3,
+            "avg_quarterly_change_pp": 0.04,
+            "direction": "stable",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "swisscom_ch",
+          "biggest_gainer_id": "salt_ch",
+          "biggest_loser_id": "swisscom_ch",
+          "key_message": "Revenue share: 7.9% (#3); stable (+0.3pp); market is highly concentrated (HHI 5,172)."
+        },
+        "mobile_subscribers": {
+          "metric_type": "mobile_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "swisscom_ch",
+              "display_name": "Swisscom",
+              "share_pct": [
+                56.66696759050285,
+                56.00706713780919,
+                56.51392632524708,
+                55.83845478489904,
+                56.339285714285715,
+                55.58459661962014,
+                56.215592257147925,
+                55.26770293609672
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 55.27,
+              "share_change_pp": -1.4,
+              "avg_quarterly_change_pp": -0.2,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "sunrise_ch",
+              "display_name": "Sunrise",
+              "share_pct": [
+                26.180373747404534,
+                26.501766784452297,
+                26.23539982030548,
+                26.602282704126427,
+                26.339285714285715,
+                26.816518557239938,
+                26.380749422837862,
+                27.0293609671848
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 27.03,
+              "share_change_pp": 0.85,
+              "avg_quarterly_change_pp": 0.12,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "salt_ch",
+              "display_name": "Salt Mobile",
+              "share_pct": [
+                17.152658662092623,
+                17.491166077738516,
+                17.25067385444744,
+                17.559262510974538,
+                17.32142857142857,
+                17.598884823139922,
+                17.403658320014205,
+                17.70293609671848
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 17.7,
+              "share_change_pp": 0.55,
+              "avg_quarterly_change_pp": 0.08,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 4098.5,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              4190.77,
+              4145.08,
+              4179.71,
+              4133.94,
+              4167.9,
+              4118.49,
+              4159.02,
+              4098.5
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "salt_ch",
+          "target_series": {
+            "operator_id": "salt_ch",
+            "display_name": "Salt Mobile",
+            "share_pct": [
+              17.152658662092623,
+              17.491166077738516,
+              17.25067385444744,
+              17.559262510974538,
+              17.32142857142857,
+              17.598884823139922,
+              17.403658320014205,
+              17.70293609671848
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 17.7,
+            "share_change_pp": 0.55,
+            "avg_quarterly_change_pp": 0.08,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "swisscom_ch",
+          "biggest_gainer_id": "sunrise_ch",
+          "biggest_loser_id": "swisscom_ch",
+          "key_message": "Mobile Subscribers share: 17.7% (#3); gaining (+0.6pp); market is highly concentrated (HHI 4,098); fragmenting."
+        },
+        "broadband_subscribers": {
+          "metric_type": "broadband_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "swisscom_ch",
+              "display_name": "Swisscom",
+              "share_pct": [
+                57.96012713088703,
+                56.241032998565274,
+                57.55395683453237,
+                55.93705293276109,
+                57.10186513629842,
+                55.63480741797432,
+                56.58803222094362,
+                55.09915014164306
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 55.1,
+              "share_change_pp": -2.86,
+              "avg_quarterly_change_pp": -0.41,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "sunrise_ch",
+              "display_name": "Sunrise",
+              "share_pct": [
+                36.55013002022537,
+                37.15925394548063,
+                36.69064748201439,
+                37.19599427753934,
+                36.872309899569586,
+                37.23252496433666,
+                37.08285385500575,
+                37.39376770538244
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 37.39,
+              "share_change_pp": 0.84,
+              "avg_quarterly_change_pp": 0.12,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "salt_ch",
+              "display_name": "Salt Mobile",
+              "share_pct": [
+                5.489742848887605,
+                6.599713055954089,
+                5.755395683453238,
+                6.866952789699571,
+                6.025824964131994,
+                7.132667617689016,
+                6.329113924050633,
+                7.507082152974505
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 7.51,
+              "share_change_pp": 2.02,
+              "avg_quarterly_change_pp": 0.29,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 4490.57,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              4725.43,
+              4587.42,
+              4691.79,
+              4559.65,
+              4656.5,
+              4532.37,
+              4617.4,
+              4490.57
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "salt_ch",
+          "target_series": {
+            "operator_id": "salt_ch",
+            "display_name": "Salt Mobile",
+            "share_pct": [
+              5.489742848887605,
+              6.599713055954089,
+              5.755395683453238,
+              6.866952789699571,
+              6.025824964131994,
+              7.132667617689016,
+              6.329113924050633,
+              7.507082152974505
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 7.51,
+            "share_change_pp": 2.02,
+            "avg_quarterly_change_pp": 0.29,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "swisscom_ch",
+          "biggest_gainer_id": "salt_ch",
+          "biggest_loser_id": "swisscom_ch",
+          "key_message": "Broadband Subscribers share: 7.5% (#3); gaining (+2.0pp); market is highly concentrated (HHI 4,491); fragmenting."
+        },
+        "revenue_share_latest": 7.9,
+        "mobile_share_latest": 17.7,
+        "broadband_share_latest": 7.5
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 183.0,
+            "mobile_service_growth_pct": 0.0,
+            "mobile_total_k": 2050.0,
+            "mobile_postpaid_k": 1720.0,
+            "mobile_prepaid_k": 330.0,
+            "mobile_net_adds_k": 30.0,
+            "mobile_churn_pct": 1.3,
+            "mobile_arpu": 38.5,
+            "iot_connections_k": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 183.0,
+              "previous_value": 184.0,
+              "yoy_value": 183.0,
+              "change_qoq": -0.54,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 2050.0,
+              "previous_value": 2020.0,
+              "yoy_value": 1960.0,
+              "change_qoq": 1.49,
+              "change_yoy": 4.59,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 38.5,
+              "previous_value": 39.0,
+              "yoy_value": 39.5,
+              "change_qoq": -1.28,
+              "change_yoy": -2.53,
+              "direction": "declining",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              175.0,
+              178.0,
+              180.0,
+              183.0,
+              180.0,
+              186.0,
+              184.0,
+              183.0
+            ],
+            "subscribers": [
+              1900.0,
+              1920.0,
+              1940.0,
+              1960.0,
+              1980.0,
+              2000.0,
+              2020.0,
+              2050.0
+            ],
+            "arpu": [
+              38.0,
+              38.5,
+              39.0,
+              39.5,
+              39.0,
+              39.5,
+              39.0,
+              38.5
+            ],
+            "churn": [
+              1.5,
+              1.5,
+              1.4,
+              1.4,
+              1.4,
+              1.3,
+              1.3,
+              1.3
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 2.59,
+              "momentum_score": 41.29,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 1.2,
+              "acceleration": -1.9,
+              "sequential_growth": [
+                1.71,
+                1.12,
+                1.67,
+                -1.64,
+                3.33,
+                -1.08,
+                -0.54
+              ],
+              "yoy_growth": [
+                2.86,
+                4.49,
+                2.22,
+                0.0
+              ],
+              "latest_qoq_pct": -0.54,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low"
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 4.44,
+              "momentum_score": 51.13,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 20.83,
+              "acceleration": 3.0,
+              "sequential_growth": [
+                1.05,
+                1.04,
+                1.03,
+                1.02,
+                1.01,
+                1.0,
+                1.49
+              ],
+              "yoy_growth": [
+                4.21,
+                4.17,
+                4.12,
+                4.59
+              ],
+              "latest_qoq_pct": 1.49,
+              "latest_yoy_pct": 4.59,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "arpu_metrics": {
+              "cagr_pct": 0.75,
+              "momentum_score": 34.31,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 0.08,
+              "acceleration": -0.7,
+              "sequential_growth": [
+                1.32,
+                1.3,
+                1.28,
+                -1.27,
+                1.28,
+                -1.27,
+                -1.28
+              ],
+              "yoy_growth": [
+                2.63,
+                2.6,
+                0.0,
+                -2.53
+              ],
+              "latest_qoq_pct": -1.28,
+              "latest_yoy_pct": -2.53,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "churn_metrics": {
+              "cagr_pct": -7.85,
+              "momentum_score": 48.57,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.06,
+              "trend_slope": -0.03,
+              "acceleration": 0.01,
+              "sequential_growth": [
+                0.0,
+                -6.67,
+                0.0,
+                0.0,
+                -7.14,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                -6.67,
+                -13.33,
+                -7.14,
+                -7.14
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": -7.14,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Swisscom": {
+              "mobile_service_revenue": 545.0,
+              "mobile_total_k": 6400.0,
+              "mobile_arpu": 46.0,
+              "mobile_churn_pct": 0.9
+            },
+            "Sunrise": {
+              "mobile_service_revenue": 255.0,
+              "mobile_total_k": 3130.0,
+              "mobile_arpu": 28.0,
+              "mobile_churn_pct": 1.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FY2024 revenue CHF 973.2M (+4.4%), operating EBITDA margin ~60%, among highest in Europe. Mobile postpaid base exceeds 1.7M. Salt Connect magazine network score 952/1000 ('outstanding').",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Mobile service revenue at 183.0M; down 0.0% YoY; ARPU 38.5",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 38.0,
+            "fixed_service_growth_pct": 26.7,
+            "broadband_total_k": 265.0,
+            "broadband_net_adds_k": 15.0,
+            "broadband_cable_k": null,
+            "broadband_fiber_k": 265.0,
+            "broadband_dsl_k": null,
+            "broadband_arpu": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 38.0,
+              "previous_value": 37.0,
+              "yoy_value": 30.0,
+              "change_qoq": 2.7,
+              "change_yoy": 26.67,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 265.0,
+              "previous_value": 250.0,
+              "yoy_value": 220.0,
+              "change_qoq": 6.0,
+              "change_yoy": 20.45,
+              "direction": "improving",
+              "significance": "significant"
+            },
+            {
+              "metric": "arpu",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              25.0,
+              27.0,
+              28.0,
+              30.0,
+              32.0,
+              35.0,
+              37.0,
+              38.0
+            ],
+            "subscribers": [
+              190.0,
+              200.0,
+              210.0,
+              220.0,
+              230.0,
+              240.0,
+              250.0,
+              265.0
+            ],
+            "arpu": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fiber": [
+              190.0,
+              200.0,
+              210.0,
+              220.0,
+              230.0,
+              240.0,
+              250.0,
+              265.0
+            ],
+            "cable": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 27.03,
+              "momentum_score": 46.25,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.14,
+              "trend_slope": 1.95,
+              "acceleration": 0.4,
+              "sequential_growth": [
+                8.0,
+                3.7,
+                7.14,
+                6.67,
+                9.38,
+                5.71,
+                2.7
+              ],
+              "yoy_growth": [
+                28.0,
+                29.63,
+                32.14,
+                26.67
+              ],
+              "latest_qoq_pct": 2.7,
+              "latest_yoy_pct": 26.67,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 20.94,
+              "momentum_score": 48.28,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.11,
+              "trend_slope": 10.42,
+              "acceleration": 1.5,
+              "sequential_growth": [
+                5.26,
+                5.0,
+                4.76,
+                4.55,
+                4.35,
+                4.17,
+                6.0
+              ],
+              "yoy_growth": [
+                21.05,
+                20.0,
+                19.05,
+                20.45
+              ],
+              "latest_qoq_pct": 6.0,
+              "latest_yoy_pct": 20.45,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "fiber_metrics": {
+              "cagr_pct": 20.94,
+              "momentum_score": 48.28,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.11,
+              "trend_slope": 10.42,
+              "acceleration": 1.5,
+              "sequential_growth": [
+                5.26,
+                5.0,
+                4.76,
+                4.55,
+                4.35,
+                4.17,
+                6.0
+              ],
+              "yoy_growth": [
+                21.05,
+                20.0,
+                19.05,
+                20.45
+              ],
+              "latest_qoq_pct": 6.0,
+              "latest_yoy_pct": 20.45,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Swisscom": {
+              "fixed_service_revenue": 885.0,
+              "broadband_total_k": 1945.0,
+              "broadband_fiber_k": 1850.0
+            },
+            "Sunrise": {
+              "fixed_service_revenue": 325.0,
+              "broadband_total_k": 1320.0,
+              "broadband_fiber_k": 220.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Salt Home broadband passed 250K subscribers in Q4 2024. Fixed service revenue growing 25%+ YoY. FTTH accessible to ~2.5M households via own-build + wholesale; targeting 3M by end 2025.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 2.7% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 38.0"
+              ],
+              "source": "metric_analysis"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "subscribers increased 6.0% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: subscribers = 265.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "Fixed service revenue 38.0M; growth +26.7% YoY; Fiber subs 265K",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 9.0,
+            "b2b_growth_pct": null,
+            "b2b_customers_k": 23.0,
+            "b2b_share_of_revenue_pct": 3.7
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 9.0,
+              "previous_value": 9.0,
+              "yoy_value": 9.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "customers",
+              "current_value": 23.0,
+              "previous_value": 23.0,
+              "yoy_value": 21.0,
+              "change_qoq": 0.0,
+              "change_yoy": 9.52,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              10.0,
+              10.0,
+              10.0,
+              9.0,
+              10.0,
+              10.0,
+              9.0,
+              9.0
+            ],
+            "customers": [
+              20.0,
+              20.0,
+              21.0,
+              21.0,
+              22.0,
+              22.0,
+              23.0,
+              23.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": -5.84,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.05,
+              "trend_slope": -0.13,
+              "acceleration": -0.1,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                -10.0,
+                11.11,
+                0.0,
+                -10.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                -10.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q4=low"
+            },
+            "customers_metrics": {
+              "cagr_pct": 8.31,
+              "momentum_score": 48.64,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.05,
+              "trend_slope": 0.48,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                5.0,
+                0.0,
+                4.76,
+                0.0,
+                4.55,
+                0.0
+              ],
+              "yoy_growth": [
+                10.0,
+                10.0,
+                9.52,
+                9.52
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 9.52,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Swisscom": {
+              "b2b_revenue": 320.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 187.0
+            },
+            "Sunrise": {
+              "b2b_revenue": 215.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 57.0
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "B2B revenue 9.0M; 3.7% of total revenue",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": null,
+            "tv_total_k": 0.0,
+            "tv_net_adds_k": null,
+            "fmc_total_k": null,
+            "fmc_penetration_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 0.0,
+              "previous_value": 0.0,
+              "yoy_value": 0.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fmc_subscribers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fmc_penetration": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers_metrics": {
+              "cagr_pct": null,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": null,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Swisscom": {
+              "tv_total_k": 1470.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            },
+            "Sunrise": {
+              "tv_total_k": 990.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "TV subscribers 0K",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": null,
+            "wholesale_share_of_revenue_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Salt Home broadband passed 250K subscribers in Q4 2024. Fixed service revenue growing 25%+ YoY. FTTH accessible to ~2.5M households via own-build + wholesale; targeting 3M by end 2025.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Insufficient data for wholesale assessment",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "mobile_vendor": "Nokia/Ericsson",
+          "spectrum_mhz": 280,
+          "fiber_access": "Own-build + Swiss Fibre Net wholesale",
+          "5g_band": "3500 MHz"
+        },
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "fiber",
+            "mobile"
+          ],
+          "summary": "Fully owned mobile network with 4G/5G nationwide coverage. Growing FTTH fiber via own-build + Swiss Fibre Net wholesale. ~100% mobile own-network, ~40% fixed via own fiber, 60% wholesale."
+        },
+        "coverage": {
+          "5g": 75.0,
+          "4g": 99.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 2500.0,
+          "fiber_connected_k": 265.0,
+          "fiber_penetration_pct": 10.6
+        },
+        "evolution_strategy": {
+          "data_signals": [
+            "Fiber-only fixed footprint"
+          ],
+          "summary": "5G densification on 3.5 GHz. Aggressive FTTH build targeting major cities. 10 Gbps fiber services. Mobile-first evolving toward full convergence. Iliad Group technology sharing."
+        },
+        "investment_direction": "decreasing",
+        "vs_competitors": "5G: behind Sunrise by 5pp; Fiber: 5.0x more homepass than Sunrise; 5G: behind Swisscom by 10pp",
+        "consumer_impact": "Expanding 5G coverage (75.0%); Fiber-dominant broadband mix",
+        "b2b_impact": "B2B revenue share: 4%",
+        "cost_impact": "Moderate capex intensity (18.0%); Capex decreasing (-25.4% QoQ)"
+      },
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 72.0,
+            "market_avg": 77.3,
+            "gap_pp": -5.3,
+            "verdict": "below average"
+          },
+          "Brand Strength": {
+            "score": 65.0,
+            "market_avg": 79.3,
+            "gap_pp": -14.3,
+            "verdict": "below average"
+          }
+        },
+        "overall_verdict": "negative",
+        "summary": "Customer Service -5pp vs market; Brand Strength -14pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Max Nunziata",
+          "title": "CEO",
+          "is_current": true,
+          "start_date": "2024-01-01",
+          "background": "Appointed ~2024; Iliad Group executive; overseeing Salt convergence strategy",
+          "tenure_years": 2.1
+        },
+        {
+          "name": "Franck Bernard",
+          "title": "CFO",
+          "is_current": true,
+          "start_date": "2020-01-01",
+          "background": "Finance executive managing Matterhorn Telecom/Salt debt structure",
+          "tenure_years": 6.1
+        }
+      ],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners",
+          "NJJ Holding / Xavier Niel (sole owner)",
+          "Nokia and Ericsson (RAN vendors)",
+          "Swiss Fibre Net (fiber wholesale access)",
+          "Scaleway (cloud infrastructure, Iliad Group)"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery",
+          "5G network expansion and densification",
+          "FTTH fiber rollout (own-build + wholesale access)",
+          "Convergent bundle growth (Salt Home + Salt Mobile)",
+          "Enterprise segment development"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Owned 4G/5G mobile network with nationwide coverage",
+          "Growing FTTH fiber network (own-build + wholesale)",
+          "Strong value-challenger brand positioning",
+          "NJJ/Xavier Niel ownership — Iliad Group DNA and procurement synergies"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "Best price-to-quality ratio in Swiss telecom",
+          "10 Gbps fiber broadband (among first in Europe)",
+          "Transparent pricing with no hidden fees",
+          "Growing convergent fixed-mobile offering"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "Stable leadership team (avg tenure >3 years); Challenger culture reinforced by NJJ/Niel ownership. Agile, commercially aggressive. Engineering-focused. Digital-first operations.",
+      "talent_assessment": {
+        "c_suite_count": 2,
+        "avg_tenure_years": 4.1,
+        "key_leaders": [
+          "Max Nunziata (CEO)",
+          "Franck Bernard (CFO)"
+        ],
+        "capability_alignment": [
+          "Customer Service: strong",
+          "Enterprise Solutions: developing"
+        ],
+        "assessment": "Adequate leadership coverage"
+      },
+      "performance_gap": "Top performance gaps: EBITDA margin gap: +13.8pp vs leader (Swisscom at 45.0%); Revenue share gap: -59.0pp vs leader (66.9%); Enterprise Solutions: -50pp vs leader",
+      "opportunity_gap": "Top opportunity gaps: B2B revenue gap (97% below market leader)",
+      "strategic_review": "Management outlook: FY2024 revenue CHF 973.2M (+4.4%), operating EBITDA margin ~60%, among highest in Europe. Mobile postpaid base exceeds 1.7M. Salt Connect magazine network score 952/1000 ('outstanding').. Revenue trajectory growing, margins strong (58.8%). Execution balanced — strengths and weaknesses roughly even. Primary risk: Brand Strength: score 65 (market avg 79)",
+      "management_commentary": [
+        {
+          "segment": "Mobile",
+          "type": "guidance",
+          "content": "FY2024 revenue CHF 973.2M (+4.4%), operating EBITDA margin ~60%, among highest in Europe. Mobile postpaid base exceeds 1.7M. Salt Connect magazine network score 952/1000 ('outstanding').",
+          "speaker": "CEO",
+          "source_url": null
+        },
+        {
+          "segment": "Broadband",
+          "type": "outlook",
+          "content": "Salt Home broadband passed 250K subscribers in Q4 2024. Fixed service revenue growing 25%+ YoY. FTTH accessible to ~2.5M households via own-build + wholesale; targeting 3M by end 2025.",
+          "speaker": "CFO",
+          "source_url": null
+        }
+      ],
+      "strengths": [
+        "Digital Experience: score 85 (market avg 80)",
+        "Innovation: score 88 (market avg 80)",
+        "Price Competitiveness: score 92 (market avg 69)",
+        "Strong EBITDA margin at 58.8%",
+        "Revenue on growth trajectory"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 65 (market avg 79)",
+        "Customer Service: score 72 (market avg 77)",
+        "Distribution: score 65 (market avg 81)",
+        "Enterprise Solutions: score 45 (market avg 71)",
+        "Network Coverage: score 80 (market avg 89)"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Limited owned fixed broadband infrastructure vs Swisscom",
+          "side_effect": "Cannot compete on equal terms in fiber broadband",
+          "attack_vector": "Swisscom and Sunrise leverage convergent advantage",
+          "severity": "high",
+          "evidence": [
+            "Salt fiber footprint still much smaller than Swisscom's 3.5M+ FTTH homepass"
+          ]
+        },
+        {
+          "trigger_action": "Smallest mobile operator in a 3-player market",
+          "side_effect": "Scale disadvantage in procurement and content deals",
+          "attack_vector": "Swisscom and Sunrise can outspend on network and marketing",
+          "severity": "medium",
+          "evidence": [
+            "Salt ~16% mobile market share vs Swisscom ~55% and Sunrise ~25%"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #3 of 3 operators in market; revenue CHF 245.0M; EBITDA margin 58.8%; stable but facing challenges; key strength: Digital Experience; key challenge: Brand Strength; Management outlook: FY2024 revenue CHF 973.2M (+4.4%), operating EBITDA margin ~60%, among highest in Europe. Mobile postpaid base exceeds 1.7M. Salt Connect magazine network score 952/1000 ('outstanding')."
+    },
+    "swot": {
+      "strengths": [
+        "Digital Experience: score 85 (market avg 80)",
+        "Innovation: score 88 (market avg 80)",
+        "Price Competitiveness: score 92 (market avg 69)",
+        "Strong EBITDA margin at 58.8%",
+        "Revenue on growth trajectory"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 65 (market avg 79)",
+        "Customer Service: score 72 (market avg 77)",
+        "Distribution: score 65 (market avg 81)",
+        "Enterprise Solutions: score 45 (market avg 71)",
+        "Network Coverage: score 80 (market avg 89)",
+        "Cannot compete on equal terms in fiber broadband",
+        "Scale disadvantage in procurement and content deals"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch",
+        "National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access",
+        "Sunrise announces ~190 job cuts post-spin-off"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch",
+        "High substitutes pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Digital Experience: score 85 (market avg 80)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+        "Leverage 'Innovation: score 88 (market avg 80)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access'.",
+        "Leverage 'Price Competitiveness: score 92 (market avg 69)' to capture the opportunity of 'Sunrise announces ~190 job cuts post-spin-off'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Brand Strength: score 65 (market avg 79)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+        "Address weakness 'Customer Service: score 72 (market avg 77)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access'.",
+        "Address weakness 'Distribution: score 65 (market avg 81)' to unlock the opportunity of 'Sunrise announces ~190 job cuts post-spin-off'."
+      ],
+      "st_strategies": [
+        "Use strength 'Digital Experience: score 85 (market avg 80)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+        "Use strength 'Innovation: score 88 (market avg 80)' to counter the threat of 'High substitutes pressure'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Brand Strength: score 65 (market avg 79)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+        "Mitigate weakness 'Customer Service: score 72 (market avg 77)' and defend against the threat of 'High substitutes pressure'."
+      ],
+      "key_message": "SWOT analysis identifies 5 strengths, 7 weaknesses, 3 opportunities, and 2 threats. The recommended strategic posture is improvement-focused (WO-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.9,
+          "market_share_score": 1.79,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.7,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.05
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.9,
+          "market_share_score": 1.79,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.7,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.05
+        },
+        {
+          "opportunity_name": "SO-3",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 5.9,
+          "market_share_score": 1.79,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.7,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.05
+        },
+        {
+          "opportunity_name": "Sunrise announces ~190 job cuts post-spin-off",
+          "market_size_score": 3.5,
+          "market_growth_score": 6,
+          "profit_potential_score": 5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 4.8,
+          "market_share_score": 1.79,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.2,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.84
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 3.5,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.55,
+          "market_share_score": 1.79,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.45,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.97
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 3.5,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.55,
+          "market_share_score": 1.79,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.45,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.97
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 3.5,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.55,
+          "market_share_score": 1.79,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.45,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.97
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.7,
+          "market_share_score": 1.79,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.2,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.95
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.7,
+          "market_share_score": 1.79,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.2,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.95
+        },
+        {
+          "opportunity_name": "Exploit sunrise_ch weakness: Digital Experience: score 75 (market avg 80)",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.3,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.09
+        },
+        {
+          "opportunity_name": "Exploit sunrise_ch weakness: Innovation: score 75 (market avg 80)",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.3,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.09
+        },
+        {
+          "opportunity_name": "Exploit swisscom_ch weakness: Price Competitiveness: score 45 (market avg 69)",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.3,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.09
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.5,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.75
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.5,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.75
+        },
+        {
+          "opportunity_name": "WO-3",
+          "market_size_score": 3.5,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.5,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.75
+        },
+        {
+          "opportunity_name": "ST-1",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-2",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "WT-1",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-2",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        }
+      ],
+      "grow_invest": [
+        "Exploit sunrise_ch weakness: Digital Experience: score 75 (market avg 80)",
+        "Exploit sunrise_ch weakness: Innovation: score 75 (market avg 80)",
+        "Exploit swisscom_ch weakness: Price Competitiveness: score 45 (market avg 69)"
+      ],
+      "acquire_skills": [
+        "SO-1",
+        "SO-2",
+        "SO-3",
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch",
+        "National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access",
+        "WO-1",
+        "WO-2",
+        "WO-3"
+      ],
+      "harvest": [
+        "ST-1",
+        "ST-2"
+      ],
+      "avoid_exit": [
+        "Sunrise announces ~190 job cuts post-spin-off",
+        "WT-1",
+        "WT-2"
+      ],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Digital Experience: score 85 (market avg 80)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Innovation: score 88 (market avg 80)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "SO-3",
+          "description": "Leverage 'Price Competitiveness: score 92 (market avg 69)' to capture the opportunity of 'Sunrise announces ~190 job cuts post-spin-off'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Sunrise announces ~190 job cuts post-spin-off",
+          "description": "Sunrise announces ~190 job cuts post-spin-off",
+          "derived_from": [
+            "market_opportunity",
+            "merger"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Exploit sunrise_ch weakness: Digital Experience: score 75 (market avg 80)",
+          "description": "Competitor sunrise_ch is weak in: Digital Experience: score 75 (market avg 80)",
+          "derived_from": [
+            "competitor_weakness",
+            "sunrise_ch"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit sunrise_ch weakness: Innovation: score 75 (market avg 80)",
+          "description": "Competitor sunrise_ch is weak in: Innovation: score 75 (market avg 80)",
+          "derived_from": [
+            "competitor_weakness",
+            "sunrise_ch"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit swisscom_ch weakness: Price Competitiveness: score 45 (market avg 69)",
+          "description": "Competitor swisscom_ch is weak in: Price Competitiveness: score 45 (market avg 69)",
+          "derived_from": [
+            "competitor_weakness",
+            "swisscom_ch"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Brand Strength: score 65 (market avg 79)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Customer Service: score 72 (market avg 77)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require salt_ch investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-3",
+          "description": "Address weakness 'Distribution: score 65 (market avg 81)' to unlock the opportunity of 'Sunrise announces ~190 job cuts post-spin-off'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "ST-1",
+          "description": "Use strength 'Digital Experience: score 85 (market avg 80)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-2",
+          "description": "Use strength 'Innovation: score 88 (market avg 80)' to counter the threat of 'High substitutes pressure'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "WT-1",
+          "description": "Mitigate weakness 'Brand Strength: score 65 (market avg 79)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect salt_ch'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-2",
+          "description": "Mitigate weakness 'Customer Service: score 72 (market avg 77)' and defend against the threat of 'High substitutes pressure'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        }
+      ],
+      "key_message": "SPAN matrix positions 19 opportunities: 3 grow/invest, 11 acquire skills, 2 harvest, 3 avoid/exit. Focus resources on the 3 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 20,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 20,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 20
+  }
+}

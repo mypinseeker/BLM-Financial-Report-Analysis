@@ -25,6 +25,11 @@ from src.models.market_configs.belgium import BELGIUM_CONFIG
 from src.models.market_configs.france import FRANCE_CONFIG
 from src.models.market_configs.italy import ITALY_CONFIG
 from src.models.market_configs.poland import POLAND_CONFIG
+from src.models.market_configs.switzerland import SWITZERLAND_CONFIG
+from src.models.market_configs.ireland import IRELAND_CONFIG
+from src.models.market_configs.ukraine import UKRAINE_CONFIG
+from src.models.market_configs.cyprus import CYPRUS_CONFIG
+from src.models.market_configs.malta import MALTA_CONFIG
 
 MARKET_REGISTRY: dict[str, MarketConfig] = {
     "germany": GERMANY_CONFIG,
@@ -44,6 +49,11 @@ MARKET_REGISTRY: dict[str, MarketConfig] = {
     "france": FRANCE_CONFIG,
     "italy": ITALY_CONFIG,
     "poland": POLAND_CONFIG,
+    "switzerland": SWITZERLAND_CONFIG,
+    "ireland": IRELAND_CONFIG,
+    "ukraine": UKRAINE_CONFIG,
+    "cyprus": CYPRUS_CONFIG,
+    "malta": MALTA_CONFIG,
 }
 
 

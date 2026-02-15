@@ -1,0 +1,3345 @@
+{
+  "meta": {
+    "target_operator": "epic_mt",
+    "market": "malta",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-15T09:30:44.909946",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "MCA (Malta Communications Authority) regulation; EU framework. 5G deployed by all three operators. GO wholesale access mandated. iGaming regulation drives enterprise demand.",
+            "trend": "Regulatory stance: MCA (Malta Communications Authority) regulation; EU framework. 5G deployed by all three operators. GO wholesale access mandated. iGaming regulation drives enterprise demand.",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect epic_mt",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: MCA (Malta Communications Authority) regulation; EU framework. 5G deployed by all three operators. GO wholesale access mandated. iGaming regulation drives enterprise demand."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "Dense geography enables efficient network deployment. Malta as EU iGaming hub. 3M+ tourists for 540K pop. Growing fintech and digital services. Smart city initiatives.",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: Dense geography enables efficient network deployment. Malta as EU iGaming hub. 3M+ tourists for 540K pop. Growing fintech and digital services. Smart city initiatives."
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 5.0%",
+            "trend": "GDP growth trend: stable (latest 5.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Strong GDP growth boosts both consumer and enterprise spending",
+            "company_impact": "Supported revenue growth for epic_mt",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 5.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 3.0%",
+            "trend": "Inflation trend: stable (latest 3.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "Manageable cost environment for epic_mt",
+            "impact_type": "both",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 3.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Unemployment",
+            "current_status": "Unemployment at 3.5%",
+            "trend": "Unemployment trend: stable",
+            "trend_direction": "stable",
+            "industry_impact": "Unemployment affects consumer spending power and enterprise IT budgets",
+            "company_impact": "Consumer segment sensitivity for epic_mt",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Unemployment: 3.5%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 12.0% of mobile subscribers",
+            "trend": "5G adoption trend: stable (12.0% -> 12.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for epic_mt",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 12.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 45.0%",
+            "trend": "Fiber penetration trend: stable (45.0% -> 45.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for epic_mt",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 45.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in early adoption phase (12.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for epic_mt",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 12.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 45.0%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for epic_mt",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 45.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 8/9 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt",
+          "National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "EUR 0.1B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+6.3% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Stable (industry EBITDA margin ~28.7%)",
+      "industry_concentration": "CR4 = 100% (GO plc: 63.4%, Melita: 26.7%, Epic Malta: 9.9%)",
+      "industry_lifecycle_stage": "late_growth",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+6.3% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 101.0,
+        "total_mobile_subscribers_k": 408.0,
+        "total_broadband_subscribers_k": 172.0,
+        "market_shares": {
+          "GO plc": 63.4,
+          "Melita": 26.7,
+          "Epic Malta": 9.9
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 75.6,
+          "broadband_penetration_pct": 31.9
+        },
+        "operator_count": 3
+      },
+      "changes": [
+        {
+          "change_type": "pricing",
+          "description": "GO plc revenue growth 6.7% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +6.7%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Melita EBITDA margin improvement: 40.7% vs 38.5% (+2.2pp)",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Margin improvement indicates operational efficiency gains",
+          "severity": "medium",
+          "evidence": [
+            "Margin change: +2.2pp"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Epic Malta revenue growth 11.1% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "high",
+          "evidence": [
+            "YoY revenue change: +11.1%"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "GO plc FTTH fiber rollout accelerating across Malta",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "GO plc investing in nationwide FTTH fiber replacement of legacy copper network. Key to maintaining broadband leadership (46.8% share) against Melita cable and emerging competitors.",
+          "severity": "medium",
+          "evidence": []
+        }
+      ],
+      "opportunities": [
+        {
+          "change_type": "pricing",
+          "description": "Epic Malta revenue growth 11.1% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "high",
+          "evidence": [
+            "YoY revenue change: +11.1%"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "change_type": "pricing",
+          "description": "GO plc revenue growth 6.7% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +6.7%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Melita EBITDA margin improvement: 40.7% vs 38.5% (+2.2pp)",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Margin improvement indicates operational efficiency gains",
+          "severity": "medium",
+          "evidence": [
+            "Margin change: +2.2pp"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "GO plc FTTH fiber rollout accelerating across Malta",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "GO plc investing in nationwide FTTH fiber replacement of legacy copper network. Key to maintaining broadband leadership (46.8% share) against Melita cable and emerging competitors.",
+          "severity": "medium",
+          "evidence": []
+        }
+      ],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Urban Connected",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Faster and more reliable broadband speeds",
+            "Seamless converged fixed-mobile bundles"
+          ],
+          "pain_points": [
+            "Small market with limited competition keeps prices moderate to high",
+            "Cable/fiber transition creating service disruptions"
+          ],
+          "purchase_decision_factors": [
+            "Network quality and speed",
+            "Bundle value (fixed + mobile + TV)",
+            "Brand trust and local reputation",
+            "Coverage across Malta and Gozo"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Digital-First / Young",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Affordable unlimited mobile data plans",
+            "eSIM and digital-first onboarding"
+          ],
+          "pain_points": [
+            "Limited mobile data allowances vs EU peers",
+            "Slow eSIM adoption by local operators"
+          ],
+          "purchase_decision_factors": [
+            "Price per GB",
+            "5G access",
+            "Digital experience",
+            "No contract lock-in"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Tourist / Seasonal",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Easy tourist SIM and eSIM access",
+            "Short-term data plans for visitors"
+          ],
+          "pain_points": [
+            "Malta hosts 3M+ tourists annually for 540K population",
+            "Roaming complexity for non-EU visitors"
+          ],
+          "purchase_decision_factors": [
+            "Ease of purchase",
+            "Coverage in tourist areas",
+            "Short-term plan availability"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Enterprise & iGaming",
+          "segment_type": "enterprise",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Low-latency connectivity for iGaming industry (Malta is EU iGaming hub)",
+            "Cloud and cybersecurity managed services",
+            "Reliable enterprise broadband"
+          ],
+          "pain_points": [
+            "Limited choice for enterprise-grade connectivity",
+            "Malta's small size limits data center scale"
+          ],
+          "purchase_decision_factors": [
+            "Reliability and SLAs",
+            "Price competitiveness",
+            "Managed services capability",
+            "Low latency for iGaming operations"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "critical",
+          "gap_analysis": "No competitor data available for Price"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 3.4,
+          "competitor_scores": {
+            "go_mt": 4.8,
+            "melita_mt": 4.1
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Availability by 1.0 points. Leader: go_mt (4.8/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Packaging"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 3.8,
+          "competitor_scores": {
+            "go_mt": 4.1,
+            "melita_mt": 4.0
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Performance by 0.2 points. Leader: go_mt (4.1/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.4,
+          "competitor_scores": {
+            "go_mt": 3.9,
+            "melita_mt": 3.8
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Ease of Use by 0.4 points. Leader: go_mt (3.9/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 2.0,
+          "competitor_scores": {
+            "go_mt": 4.4,
+            "melita_mt": 3.2
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Assurances by 1.8 points. Leader: go_mt (4.4/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Lifecycle Cost"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 2.8,
+          "competitor_scores": {
+            "go_mt": 4.5,
+            "melita_mt": 3.9
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Below market average in Social/Brand by 1.4 points. Leader: go_mt (4.5/5.0)"
+        }
+      ],
+      "customer_value_migration": "Value migration trending upward: customers willing to pay more for premium connectivity and convergent bundles. Focus on upselling and cross-selling opportunities.",
+      "market_outlook": "challenging",
+      "key_message": "Malta telecom market totals EUR 101.0M in quarterly revenue; gaps in Assurances, Social/Brand; Market faces significant competitive headwinds."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "3 active operators in the market",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 63% of market revenue (total: EUR 101.0M)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from +4.2% to +12.5% (spread: 8.3pp)",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 31.4%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 63% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.20%/month. Highest: 1.50% indicating moderate willingness to switch.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 66%. Moderate contract lock-in moderately constrains buyer mobility.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "melita_mt": {
+          "operator": "Melita",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 27.0,
+            "service_revenue": 25.0,
+            "service_revenue_growth_pct": 4.2,
+            "ebitda": 11.0,
+            "ebitda_margin_pct": 40.7,
+            "ebitda_growth_pct": 10.0,
+            "capex": 6.0,
+            "capex_to_revenue_pct": 22.2,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 6.96,
+              "momentum_score": 49.0,
+              "momentum_phase": "flat",
+              "volatility": 0.03,
+              "trend_slope": 0.33,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                4.17,
+                0.0,
+                4.0,
+                -3.85,
+                4.0,
+                0.0,
+                3.85
+              ],
+              "yoy_growth": [
+                4.17,
+                4.0,
+                4.0,
+                3.85
+              ],
+              "latest_qoq_pct": 3.85,
+              "latest_yoy_pct": 3.85,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q4=high"
+            },
+            "margin_metrics": {
+              "cagr_pct": 4.79,
+              "momentum_score": 47.25,
+              "momentum_phase": "flat",
+              "volatility": 0.03,
+              "trend_slope": 0.14,
+              "acceleration": -0.09,
+              "sequential_growth": [
+                6.67,
+                0.0,
+                -3.75,
+                3.9,
+                -3.75,
+                0.0,
+                5.71
+              ],
+              "yoy_growth": [
+                6.67,
+                -3.75,
+                -3.75,
+                5.71
+              ],
+              "latest_qoq_pct": 5.71,
+              "latest_yoy_pct": 5.71,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 142.0,
+            "mobile_postpaid_k": 92.0,
+            "mobile_net_adds_k": 1.0,
+            "mobile_churn_pct": 1.1,
+            "mobile_arpu": 21.8,
+            "broadband_total_k": 66.0,
+            "broadband_fiber_k": 24.0,
+            "broadband_net_adds_k": 1.0,
+            "tv_total_k": 57.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 55.0,
+            "four_g_coverage_pct": 95.0,
+            "fiber_homepass_k": 50.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Mixed",
+              "spectrum_mhz": 140,
+              "cable_docsis": "3.1",
+              "cable_homepass_k": 180
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [
+            "Melita accelerates DOCSIS 3.1 rollout and selective FTTH",
+            "Melita maintains strong #2 position in Malta with cable + mobile convergence. EQT PE ownership since 2019. DOCSIS 3.1 up"
+          ],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Mixed",
+          "ecosystem_partners": [
+            "Network vendor: Mixed"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Network Quality",
+            "Own fiber infrastructure (50k homes)"
+          ],
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; high-margin profile",
+          "org_structure": "CEO: Harald Roesch (EQT appointee; managing cable-to-fiber transition and convergent strategy)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [],
+          "weaknesses": [],
+          "problems": [],
+          "likely_future_actions": [
+            "Melita is likely to continue aggressive network expansion (capex/revenue at 22% with growing revenue).",
+            "Melita is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Melita's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            }
+          ]
+        },
+        "go_mt": {
+          "operator": "GO plc",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 64.0,
+            "service_revenue": 59.0,
+            "service_revenue_growth_pct": 7.3,
+            "ebitda": 15.0,
+            "ebitda_margin_pct": 23.4,
+            "ebitda_growth_pct": -6.3,
+            "capex": 13.0,
+            "capex_to_revenue_pct": 20.3,
+            "revenue_trend": "growing",
+            "margin_trend": "declining",
+            "revenue_metrics": {
+              "cagr_pct": 6.84,
+              "momentum_score": 59.63,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 0.85,
+              "acceleration": 0.7,
+              "sequential_growth": [
+                1.75,
+                1.72,
+                1.69,
+                -1.67,
+                1.69,
+                3.33,
+                3.23
+              ],
+              "yoy_growth": [
+                3.51,
+                3.45,
+                5.08,
+                6.67
+              ],
+              "latest_qoq_pct": 3.23,
+              "latest_yoy_pct": 6.67,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q4=high"
+            },
+            "margin_metrics": {
+              "cagr_pct": -2.82,
+              "momentum_score": 43.48,
+              "momentum_phase": "flat",
+              "volatility": 0.07,
+              "trend_slope": -0.48,
+              "acceleration": -0.07,
+              "sequential_growth": [
+                5.28,
+                -1.93,
+                5.12,
+                -17.6,
+                -1.36,
+                4.15,
+                3.54
+              ],
+              "yoy_growth": [
+                -10.57,
+                -16.22,
+                -11.02,
+                -12.36
+              ],
+              "latest_qoq_pct": 3.54,
+              "latest_yoy_pct": -12.36,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 186.0,
+            "mobile_postpaid_k": 126.0,
+            "mobile_net_adds_k": 3.0,
+            "mobile_churn_pct": 1.0,
+            "mobile_arpu": 29.8,
+            "broadband_total_k": 95.0,
+            "broadband_fiber_k": 65.0,
+            "broadband_net_adds_k": 1.0,
+            "tv_total_k": 56.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 65.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 200.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Nokia",
+              "spectrum_mhz": 180,
+              "fiber_technology": "GPON",
+              "fixed_incumbent": true
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [
+            "GO plc FTTH fiber rollout accelerating across Malta"
+          ],
+          "growth_strategy": "Market share expansion (investing for growth); subscriber acquisition focus; strong B2B/enterprise push",
+          "supply_chain_status": "Primary vendor: Nokia",
+          "ecosystem_partners": [
+            "Network vendor: Nokia"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Brand Strength",
+            "Market leadership in Distribution",
+            "Market leadership in Enterprise Solutions",
+            "Market leadership in Network Quality"
+          ],
+          "business_model": "Convergent (mobile + fixed); service-revenue dominant; low-margin / scale-focused",
+          "org_structure": "CEO: Nikhil Patil (Led GO plc through fiber expansion and Cablenet Cyprus acquisition)",
+          "incentive_system": "Growth and market share targets",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Brand Strength: score 90 (market avg 74)",
+            "Distribution: score 90 (market avg 74)",
+            "Enterprise Solutions: score 88 (market avg 64)",
+            "Network Coverage: score 95 (market avg 82)"
+          ],
+          "weaknesses": [
+            "Price Competitiveness: score 60 (market avg 71)"
+          ],
+          "problems": [
+            "Competitive gap in Price Competitiveness",
+            "Margin erosion",
+            "EBITDA contraction (-6.3%)"
+          ],
+          "likely_future_actions": [
+            "GO plc is likely to continue aggressive network expansion (capex/revenue at 20% with growing revenue).",
+            "GO plc is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "GO plc's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "GO plc is weak in: Price Competitiveness. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Price Competitiveness: score 60 (market avg 71)"
+              ],
+              "suggested_action": "Invest in Price Competitiveness to capture customers dissatisfied with GO plc."
+            },
+            {
+              "implication_type": "learning",
+              "description": "GO plc excels in: Brand Strength, Distribution, Enterprise Solutions. Study their approach for best practices.",
+              "evidence": [
+                "Brand Strength: score 90 (market avg 74)",
+                "Distribution: score 90 (market avg 74)",
+                "Enterprise Solutions: score 88 (market avg 64)"
+              ],
+              "suggested_action": "Benchmark GO plc's practices in Brand Strength, Distribution, Enterprise Solutions."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "epic_mt": 10.0,
+          "melita_mt": 27.0,
+          "go_mt": 64.0
+        },
+        "revenue_growth": {
+          "epic_mt": 12.5,
+          "melita_mt": 4.2,
+          "go_mt": 7.3
+        },
+        "ebitda_margin": {
+          "epic_mt": 30.0,
+          "melita_mt": 40.7,
+          "go_mt": 23.4
+        },
+        "subscribers": {
+          "epic_mt": 80.0,
+          "melita_mt": 142.0,
+          "go_mt": 186.0
+        },
+        "arpu": {
+          "epic_mt": 23.8,
+          "melita_mt": 21.8,
+          "go_mt": 29.8
+        },
+        "churn": {
+          "epic_mt": 1.5,
+          "melita_mt": 1.1,
+          "go_mt": 1.0
+        },
+        "5g_coverage": {
+          "epic_mt": 50.0,
+          "melita_mt": 55.0,
+          "go_mt": 65.0
+        }
+      },
+      "competitive_landscape": "The market comprises 3 active operators: Epic Malta, Melita, GO plc. Overall competition intensity is assessed as medium. Revenue ranking: GO plc (64.0M), Melita (27.0M), Epic Malta (10.0M). Five Forces: Existing Competitors: high; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "key_message": "In a 3-player market with medium competition intensity, GO plc leads with 63% revenue share. Target operator holds 10% share. Strongest competitive force: Existing Competitors."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 10.0,
+        "service_revenue": 9.0,
+        "ebitda": 3.0,
+        "ebitda_margin_pct": 30.0,
+        "net_income": null,
+        "capex": 3.0,
+        "capex_to_revenue_pct": 30.0,
+        "opex": null,
+        "employees": 195,
+        "revenue_qoq_pct": 0.0,
+        "revenue_yoy_pct": 11.11,
+        "ebitda_qoq_pct": 0.0,
+        "ebitda_growth_pct": 0.0,
+        "service_revenue_growth_pct": 12.5,
+        "revenue_trend": [
+          8.0,
+          8.0,
+          9.0,
+          9.0,
+          9.0,
+          9.0,
+          10.0,
+          10.0
+        ],
+        "ebitda_trend": [
+          2.0,
+          2.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0,
+          3.0
+        ],
+        "margin_trend": [
+          25.0,
+          25.0,
+          33.3,
+          33.3,
+          33.3,
+          33.3,
+          30.0,
+          30.0
+        ],
+        "revenue_metrics": {
+          "cagr_pct": 13.6,
+          "momentum_score": 45.83,
+          "momentum_phase": "stabilizing",
+          "volatility": 0.08,
+          "trend_slope": 0.29,
+          "acceleration": 0.0,
+          "sequential_growth": [
+            0.0,
+            12.5,
+            0.0,
+            0.0,
+            0.0,
+            11.11,
+            0.0
+          ],
+          "yoy_growth": [
+            12.5,
+            12.5,
+            11.11,
+            11.11
+          ],
+          "latest_qoq_pct": 0.0,
+          "latest_yoy_pct": 11.11,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "ebitda_metrics": {
+          "cagr_pct": 26.07,
+          "momentum_score": 0.0,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.16,
+          "trend_slope": 0.14,
+          "acceleration": -0.4,
+          "sequential_growth": [
+            0.0,
+            50.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "yoy_growth": [
+            50.0,
+            50.0,
+            0.0,
+            0.0
+          ],
+          "latest_qoq_pct": 0.0,
+          "latest_yoy_pct": 0.0,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "margin_metrics": {
+          "cagr_pct": 10.98,
+          "momentum_score": 0.0,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.11,
+          "trend_slope": 0.71,
+          "acceleration": -4.64,
+          "sequential_growth": [
+            0.0,
+            33.2,
+            0.0,
+            0.0,
+            0.0,
+            -9.91,
+            0.0
+          ],
+          "yoy_growth": [
+            33.2,
+            33.2,
+            -9.91,
+            -9.91
+          ],
+          "latest_qoq_pct": 0.0,
+          "latest_yoy_pct": -9.91,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 7.0,
+          "share_pct": 70.0
+        },
+        "fixed_service_revenue": {
+          "value": 1.0,
+          "share_pct": 10.0
+        },
+        "b2b_revenue": {
+          "value": 1.0,
+          "share_pct": 10.0
+        },
+        "other_revenue": {
+          "value": 1.0,
+          "share_pct": 10.0
+        },
+        "total_revenue": 10.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 3,
+        "revenue_rank": 3,
+        "total_revenue": 10.0,
+        "revenue_market_share_pct": 9.9,
+        "subscriber_rank": 3,
+        "mobile_subscriber_share_pct": 19.6,
+        "broadband_subscriber_share_pct": 6.4,
+        "competitors": {
+          "go_mt": {
+            "display_name": "GO plc",
+            "total_revenue": 64.0,
+            "mobile_total_k": 186.0,
+            "broadband_total_k": 95.0
+          },
+          "melita_mt": {
+            "display_name": "Melita",
+            "total_revenue": 27.0,
+            "mobile_total_k": 142.0,
+            "broadband_total_k": 66.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue": {
+          "metric_type": "revenue",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "go_mt",
+              "display_name": "GO plc",
+              "share_pct": [
+                64.04494382022472,
+                63.44086021505376,
+                63.73626373626373,
+                63.1578947368421,
+                63.44086021505376,
+                63.26530612244898,
+                63.1578947368421,
+                63.366336633663366
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 63.37,
+              "share_change_pp": -0.68,
+              "avg_quarterly_change_pp": -0.1,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "melita_mt",
+              "display_name": "Melita",
+              "share_pct": [
+                26.96629213483146,
+                26.881720430107524,
+                27.472527472527474,
+                27.368421052631582,
+                26.881720430107524,
+                26.53061224489796,
+                27.368421052631582,
+                26.732673267326735
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 26.73,
+              "share_change_pp": -0.23,
+              "avg_quarterly_change_pp": -0.03,
+              "direction": "stable",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "epic_mt",
+              "display_name": "Epic Malta",
+              "share_pct": [
+                8.98876404494382,
+                9.67741935483871,
+                8.791208791208792,
+                9.473684210526317,
+                9.67741935483871,
+                10.204081632653061,
+                9.473684210526317,
+                9.900990099009901
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 9.9,
+              "share_change_pp": 0.91,
+              "avg_quarterly_change_pp": 0.13,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 4827.96,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              4909.73,
+              4841.02,
+              4894.34,
+              4827.7,
+              4841.02,
+              4810.5,
+              4827.7,
+              4827.96
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "epic_mt",
+          "target_series": {
+            "operator_id": "epic_mt",
+            "display_name": "Epic Malta",
+            "share_pct": [
+              8.98876404494382,
+              9.67741935483871,
+              8.791208791208792,
+              9.473684210526317,
+              9.67741935483871,
+              10.204081632653061,
+              9.473684210526317,
+              9.900990099009901
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 9.9,
+            "share_change_pp": 0.91,
+            "avg_quarterly_change_pp": 0.13,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "go_mt",
+          "biggest_gainer_id": "epic_mt",
+          "biggest_loser_id": "go_mt",
+          "key_message": "Revenue share: 9.9% (#3); gaining (+0.9pp); market is highly concentrated (HHI 4,828); fragmenting."
+        },
+        "mobile_subscribers": {
+          "metric_type": "mobile_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "go_mt",
+              "display_name": "GO plc",
+              "share_pct": [
+                45.09283819628647,
+                45.29262086513995,
+                45.14435695538058,
+                45.34005037783375,
+                45.19480519480519,
+                45.52238805970149,
+                45.24421593830334,
+                45.588235294117645
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 45.59,
+              "share_change_pp": 0.5,
+              "avg_quarterly_change_pp": 0.07,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "melita_mt",
+              "display_name": "Melita",
+              "share_pct": [
+                35.80901856763926,
+                35.36895674300254,
+                35.69553805774278,
+                35.26448362720403,
+                35.58441558441559,
+                35.07462686567165,
+                35.47557840616967,
+                34.80392156862745
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 34.8,
+              "share_change_pp": -1.01,
+              "avg_quarterly_change_pp": -0.14,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "epic_mt",
+              "display_name": "Epic Malta",
+              "share_pct": [
+                19.098143236074268,
+                19.338422391857506,
+                19.160104986876643,
+                19.395465994962215,
+                19.22077922077922,
+                19.402985074626866,
+                19.28020565552699,
+                19.607843137254903
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 19.61,
+              "share_change_pp": 0.51,
+              "avg_quarterly_change_pp": 0.07,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3674.07,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3680.39,
+              3676.36,
+              3679.29,
+              3675.49,
+              3678.26,
+              3678.99,
+              3677.28,
+              3674.07
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "epic_mt",
+          "target_series": {
+            "operator_id": "epic_mt",
+            "display_name": "Epic Malta",
+            "share_pct": [
+              19.098143236074268,
+              19.338422391857506,
+              19.160104986876643,
+              19.395465994962215,
+              19.22077922077922,
+              19.402985074626866,
+              19.28020565552699,
+              19.607843137254903
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 19.61,
+            "share_change_pp": 0.51,
+            "avg_quarterly_change_pp": 0.07,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "go_mt",
+          "biggest_gainer_id": "epic_mt",
+          "biggest_loser_id": "melita_mt",
+          "key_message": "Mobile Subscribers share: 19.6% (#3); gaining (+0.5pp); market is highly concentrated (HHI 3,674)."
+        },
+        "broadband_subscribers": {
+          "metric_type": "broadband_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "go_mt",
+              "display_name": "GO plc",
+              "share_pct": [
+                55.69620253164557,
+                55.42168674698795,
+                55.625,
+                55.35714285714286,
+                55.55555555555556,
+                55.294117647058826,
+                55.487804878048784,
+                55.23255813953488
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 55.23,
+              "share_change_pp": -0.46,
+              "avg_quarterly_change_pp": -0.07,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "melita_mt",
+              "display_name": "Melita",
+              "share_pct": [
+                39.24050632911392,
+                38.55421686746988,
+                39.375,
+                38.69047619047619,
+                38.88888888888889,
+                38.23529411764706,
+                39.02439024390244,
+                38.372093023255815
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 38.37,
+              "share_change_pp": -0.87,
+              "avg_quarterly_change_pp": -0.12,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "epic_mt",
+              "display_name": "Epic Malta",
+              "share_pct": [
+                5.063291139240507,
+                6.024096385542169,
+                5.0,
+                5.952380952380952,
+                5.555555555555555,
+                6.470588235294119,
+                5.487804878048781,
+                6.395348837209303
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 6.4,
+              "share_change_pp": 1.33,
+              "avg_quarterly_change_pp": 0.19,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 4563.95,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              4667.52,
+              4594.28,
+              4669.53,
+              4596.8,
+              4629.63,
+              4561.25,
+              4631.92,
+              4563.95
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "epic_mt",
+          "target_series": {
+            "operator_id": "epic_mt",
+            "display_name": "Epic Malta",
+            "share_pct": [
+              5.063291139240507,
+              6.024096385542169,
+              5.0,
+              5.952380952380952,
+              5.555555555555555,
+              6.470588235294119,
+              5.487804878048781,
+              6.395348837209303
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 6.4,
+            "share_change_pp": 1.33,
+            "avg_quarterly_change_pp": 0.19,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "go_mt",
+          "biggest_gainer_id": "epic_mt",
+          "biggest_loser_id": "melita_mt",
+          "key_message": "Broadband Subscribers share: 6.4% (#3); gaining (+1.3pp); market is highly concentrated (HHI 4,564); fragmenting."
+        },
+        "revenue_share_latest": 9.9,
+        "mobile_share_latest": 19.6,
+        "broadband_share_latest": 6.4
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 7.0,
+            "mobile_service_growth_pct": 16.7,
+            "mobile_total_k": 80.0,
+            "mobile_postpaid_k": 52.0,
+            "mobile_prepaid_k": 28.0,
+            "mobile_net_adds_k": 2.0,
+            "mobile_churn_pct": 1.5,
+            "mobile_arpu": 23.8,
+            "iot_connections_k": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 7.0,
+              "previous_value": 7.0,
+              "yoy_value": 6.0,
+              "change_qoq": 0.0,
+              "change_yoy": 16.67,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 80.0,
+              "previous_value": 78.0,
+              "yoy_value": 75.0,
+              "change_qoq": 2.56,
+              "change_yoy": 6.67,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 23.8,
+              "previous_value": 23.5,
+              "yoy_value": 22.8,
+              "change_qoq": 1.28,
+              "change_yoy": 4.39,
+              "direction": "improving",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              5.0,
+              5.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
+              7.0,
+              7.0
+            ],
+            "subscribers": [
+              72.0,
+              73.0,
+              74.0,
+              75.0,
+              76.0,
+              77.0,
+              78.0,
+              80.0
+            ],
+            "arpu": [
+              22.0,
+              22.2,
+              22.5,
+              22.8,
+              23.0,
+              23.3,
+              23.5,
+              23.8
+            ],
+            "churn": [
+              1.8,
+              1.8,
+              1.7,
+              1.7,
+              1.7,
+              1.6,
+              1.6,
+              1.5
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 21.2,
+              "momentum_score": 40.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.12,
+              "trend_slope": 0.29,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                20.0,
+                0.0,
+                0.0,
+                0.0,
+                16.67,
+                0.0
+              ],
+              "yoy_growth": [
+                20.0,
+                20.0,
+                16.67,
+                16.67
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 16.67,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 6.21,
+              "momentum_score": 53.29,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 1.08,
+              "acceleration": 0.3,
+              "sequential_growth": [
+                1.39,
+                1.37,
+                1.35,
+                1.33,
+                1.32,
+                1.3,
+                2.56
+              ],
+              "yoy_growth": [
+                5.56,
+                5.48,
+                5.41,
+                6.67
+              ],
+              "latest_qoq_pct": 2.56,
+              "latest_yoy_pct": 6.67,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "arpu_metrics": {
+              "cagr_pct": 4.6,
+              "momentum_score": 49.53,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.03,
+              "trend_slope": 0.26,
+              "acceleration": -0.01,
+              "sequential_growth": [
+                0.91,
+                1.35,
+                1.33,
+                0.88,
+                1.3,
+                0.86,
+                1.28
+              ],
+              "yoy_growth": [
+                4.55,
+                4.95,
+                4.44,
+                4.39
+              ],
+              "latest_qoq_pct": 1.28,
+              "latest_yoy_pct": 4.39,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "churn_metrics": {
+              "cagr_pct": -9.89,
+              "momentum_score": 31.37,
+              "momentum_phase": "flat",
+              "volatility": 0.06,
+              "trend_slope": -0.04,
+              "acceleration": -0.02,
+              "sequential_growth": [
+                0.0,
+                -5.56,
+                0.0,
+                0.0,
+                -5.88,
+                0.0,
+                -6.25
+              ],
+              "yoy_growth": [
+                -5.56,
+                -11.11,
+                -5.88,
+                -11.76
+              ],
+              "latest_qoq_pct": -6.25,
+              "latest_yoy_pct": -11.76,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "GO plc": {
+              "mobile_service_revenue": 17.0,
+              "mobile_total_k": 186.0,
+              "mobile_arpu": 29.8,
+              "mobile_churn_pct": 1.0
+            },
+            "Melita": {
+              "mobile_service_revenue": 9.0,
+              "mobile_total_k": 142.0,
+              "mobile_arpu": 21.8,
+              "mobile_churn_pct": 1.1
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Epic Malta growing mobile subscriber base as third operator. NJJ/Monaco Telecom investment commitment. 5G network expanding. Competitive pricing challenging GO and Melita.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "subscribers increased 2.6% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: subscribers = 80.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Mobile service revenue at 7.0M; up 16.7% YoY; ARPU 23.8",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 1.0,
+            "fixed_service_growth_pct": 0.0,
+            "broadband_total_k": 11.0,
+            "broadband_net_adds_k": 0.0,
+            "broadband_cable_k": null,
+            "broadband_fiber_k": 11.0,
+            "broadband_dsl_k": null,
+            "broadband_arpu": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 1.0,
+              "previous_value": 1.0,
+              "yoy_value": 1.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 11.0,
+              "previous_value": 11.0,
+              "yoy_value": 9.0,
+              "change_qoq": 0.0,
+              "change_yoy": 22.22,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "subscribers": [
+              8.0,
+              8.0,
+              9.0,
+              9.0,
+              10.0,
+              10.0,
+              11.0,
+              11.0
+            ],
+            "arpu": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fiber": [
+              8.0,
+              8.0,
+              9.0,
+              9.0,
+              10.0,
+              10.0,
+              11.0,
+              11.0
+            ],
+            "cable": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 0.0,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.0,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 19.96,
+              "momentum_score": 42.5,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.12,
+              "trend_slope": 0.48,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                12.5,
+                0.0,
+                11.11,
+                0.0,
+                10.0,
+                0.0
+              ],
+              "yoy_growth": [
+                25.0,
+                25.0,
+                22.22,
+                22.22
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 22.22,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "fiber_metrics": {
+              "cagr_pct": 19.96,
+              "momentum_score": 42.5,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.12,
+              "trend_slope": 0.48,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                12.5,
+                0.0,
+                11.11,
+                0.0,
+                10.0,
+                0.0
+              ],
+              "yoy_growth": [
+                25.0,
+                25.0,
+                22.22,
+                22.22
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 22.22,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "GO plc": {
+              "fixed_service_revenue": 34.0,
+              "broadband_total_k": 95.0,
+              "broadband_fiber_k": 65.0
+            },
+            "Melita": {
+              "fixed_service_revenue": 14.0,
+              "broadband_total_k": 66.0,
+              "broadband_fiber_k": 24.0
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Fixed service revenue 1.0M; growth +0.0% YoY; Fiber subs 11K",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 1.0,
+            "b2b_growth_pct": null,
+            "b2b_customers_k": 2.0,
+            "b2b_share_of_revenue_pct": 10.0
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 1.0,
+              "previous_value": 1.0,
+              "yoy_value": 1.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "customers",
+              "current_value": 2.0,
+              "previous_value": 2.0,
+              "yoy_value": 2.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "customers": [
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 0.0,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.0,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "customers_metrics": {
+              "cagr_pct": 0.0,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.0,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "GO plc": {
+              "b2b_revenue": 8.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 9.0
+            },
+            "Melita": {
+              "b2b_revenue": 2.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 6.0
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "B2B revenue 1.0M; 10.0% of total revenue",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": null,
+            "tv_total_k": 0.0,
+            "tv_net_adds_k": null,
+            "fmc_total_k": null,
+            "fmc_penetration_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 0.0,
+              "previous_value": 0.0,
+              "yoy_value": 0.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fmc_subscribers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fmc_penetration": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers_metrics": {
+              "cagr_pct": null,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": null,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "GO plc": {
+              "tv_total_k": 56.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            },
+            "Melita": {
+              "tv_total_k": 57.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "TV subscribers 0K",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": null,
+            "wholesale_share_of_revenue_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Insufficient data for wholesale assessment",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "mobile_vendor": "Huawei",
+          "spectrum_mhz": 120,
+          "fixed_access": "GO wholesale"
+        },
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "mobile"
+          ],
+          "summary": "Fully owned mobile network. No owned fixed infrastructure; wholesale access via GO. ~100% mobile own-network, 0% fixed own-network."
+        },
+        "coverage": {
+          "5g": 50.0,
+          "4g": 90.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 0.0,
+          "fiber_connected_k": 11.0
+        },
+        "evolution_strategy": {
+          "summary": "5G mobile expansion. Mobile-first strategy. Fixed broadband via wholesale. Brand growth in Malta."
+        },
+        "investment_direction": "stable",
+        "vs_competitors": "5G: behind Melita by 5pp; Fiber: No fiber homepass vs Melita (50K); 5G: behind GO plc by 15pp; Fiber: No fiber homepass vs GO plc (200K)",
+        "consumer_impact": "Early 5G coverage (50.0%); Fiber-dominant broadband mix",
+        "b2b_impact": "B2B revenue share: 10%",
+        "cost_impact": "High capex intensity (30.0%)"
+      },
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 68.0,
+            "market_avg": 73.7,
+            "gap_pp": -5.7,
+            "verdict": "below average"
+          },
+          "Brand Strength": {
+            "score": 55.0,
+            "market_avg": 74.3,
+            "gap_pp": -19.3,
+            "verdict": "below average"
+          }
+        },
+        "overall_verdict": "negative",
+        "summary": "Customer Service -6pp vs market; Brand Strength -19pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Paul Fenech",
+          "title": "CEO",
+          "is_current": true,
+          "start_date": "2021-01-01",
+          "background": "Monaco Telecom appointee; leading Epic Malta market growth",
+          "tenure_years": 5.1
+        }
+      ],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners",
+          "Monaco Telecom / NJJ Holding (parent company)",
+          "Network equipment vendors (Huawei)",
+          "GO plc (wholesale fixed access)"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery",
+          "5G network expansion",
+          "Mobile subscriber acquisition and growth",
+          "Fixed broadband growth via wholesale",
+          "Brand building in Malta market"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Owned mobile network with 4G/5G coverage",
+          "Growing brand presence in Malta market",
+          "Monaco Telecom/NJJ ownership — Xavier Niel telecom expertise",
+          "Fiber broadband via wholesale access"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "Competitive mobile plans challenging GO and Melita",
+          "Growing 5G network coverage",
+          "Digital-first mobile experience",
+          "NJJ-backed investment commitment"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture; High-investment posture; Monaco Telecom management. Private-sector agility. Challenger mindset.",
+      "talent_assessment": {
+        "c_suite_count": 1,
+        "avg_tenure_years": 5.1,
+        "key_leaders": [
+          "Paul Fenech (CEO)"
+        ],
+        "capability_alignment": [
+          "Customer Service: adequate",
+          "Enterprise Solutions: developing"
+        ],
+        "assessment": "Limited executive visibility from available data"
+      },
+      "performance_gap": "Top performance gaps: EBITDA margin gap: +6.6pp vs leader (GO plc at 23.4%); Revenue share gap: -53.5pp vs leader (63.4%); Enterprise Solutions: -48pp vs leader",
+      "opportunity_gap": "Top opportunity gaps: B2B revenue gap (88% below market leader)",
+      "strategic_review": "Management outlook: Epic Malta growing mobile subscriber base as third operator. NJJ/Monaco Telecom investment commitment. 5G network expanding. Competitive pricing challenging GO and Melita.. Revenue trajectory growing, margins healthy (30.0%). Execution under pressure — weaknesses outnumber strengths. Primary risk: Brand Strength: score 55 (market avg 74)",
+      "management_commentary": [
+        {
+          "segment": "Mobile",
+          "type": "guidance",
+          "content": "Epic Malta growing mobile subscriber base as third operator. NJJ/Monaco Telecom investment commitment. 5G network expanding. Competitive pricing challenging GO and Melita.",
+          "speaker": "CEO",
+          "source_url": null
+        }
+      ],
+      "strengths": [
+        "Digital Experience: score 78 (market avg 73)",
+        "Price Competitiveness: score 80 (market avg 71)",
+        "Strong EBITDA margin at 30.0%",
+        "Revenue on growth trajectory"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 55 (market avg 74)",
+        "Customer Service: score 68 (market avg 74)",
+        "Distribution: score 55 (market avg 74)",
+        "Enterprise Solutions: score 40 (market avg 64)",
+        "Network Coverage: score 68 (market avg 82)",
+        "Network Quality: score 75 (market avg 79)",
+        "5G coverage gap at only 50.0%"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Smallest operator in Malta's 3-player market",
+          "side_effect": "Scale disadvantage in a tiny market (540K population)",
+          "attack_vector": "GO and Melita have established fixed broadband bases",
+          "severity": "high",
+          "evidence": [
+            "Epic Malta estimated ~15-20% mobile share; no owned fixed network"
+          ]
+        },
+        {
+          "trigger_action": "No owned fixed broadband infrastructure",
+          "side_effect": "Cannot offer competitive converged bundles independently",
+          "attack_vector": "GO leverages fixed-mobile convergence; Melita has cable network",
+          "severity": "high",
+          "evidence": [
+            "Epic relies on GO wholesale for any fixed broadband"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #3 of 3 operators in market; revenue EUR 10.0M; EBITDA margin 30.0%; stable but facing challenges; key strength: Digital Experience; key challenge: Brand Strength; Management outlook: Epic Malta growing mobile subscriber base as third operator. NJJ/Monaco Telecom investment commitment. 5G network expanding. Competitive pricing challenging GO and Melita."
+    },
+    "swot": {
+      "strengths": [
+        "Digital Experience: score 78 (market avg 73)",
+        "Price Competitiveness: score 80 (market avg 71)",
+        "Strong EBITDA margin at 30.0%",
+        "Revenue on growth trajectory"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 55 (market avg 74)",
+        "Customer Service: score 68 (market avg 74)",
+        "Distribution: score 55 (market avg 74)",
+        "Enterprise Solutions: score 40 (market avg 64)",
+        "Network Coverage: score 68 (market avg 82)",
+        "Network Quality: score 75 (market avg 79)",
+        "5G coverage gap at only 50.0%",
+        "Scale disadvantage in a tiny market (540K population)",
+        "Cannot offer competitive converged bundles independently"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt",
+        "National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access",
+        "Epic Malta revenue growth 11.1% YoY"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt",
+        "GO plc revenue growth 6.7% YoY",
+        "Melita EBITDA margin improvement: 40.7% vs 38.5% (+2.2pp)",
+        "GO plc FTTH fiber rollout accelerating across Malta",
+        "High existing competitors pressure",
+        "High substitutes pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Digital Experience: score 78 (market avg 73)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+        "Leverage 'Price Competitiveness: score 80 (market avg 71)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access'.",
+        "Leverage 'Strong EBITDA margin at 30.0%' to capture the opportunity of 'Epic Malta revenue growth 11.1% YoY'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Brand Strength: score 55 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+        "Address weakness 'Customer Service: score 68 (market avg 74)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access'.",
+        "Address weakness 'Distribution: score 55 (market avg 74)' to unlock the opportunity of 'Epic Malta revenue growth 11.1% YoY'."
+      ],
+      "st_strategies": [
+        "Use strength 'Digital Experience: score 78 (market avg 73)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+        "Use strength 'Price Competitiveness: score 80 (market avg 71)' to counter the threat of 'GO plc revenue growth 6.7% YoY'.",
+        "Use strength 'Strong EBITDA margin at 30.0%' to counter the threat of 'Melita EBITDA margin improvement: 40.7% vs 38.5% (+2.2pp)'.",
+        "Use strength 'Revenue on growth trajectory' to counter the threat of 'GO plc FTTH fiber rollout accelerating across Malta'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Brand Strength: score 55 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+        "Mitigate weakness 'Customer Service: score 68 (market avg 74)' and defend against the threat of 'GO plc revenue growth 6.7% YoY'.",
+        "Mitigate weakness 'Distribution: score 55 (market avg 74)' and defend against the threat of 'Melita EBITDA margin improvement: 40.7% vs 38.5% (+2.2pp)'.",
+        "Mitigate weakness 'Enterprise Solutions: score 40 (market avg 64)' and defend against the threat of 'GO plc FTTH fiber rollout accelerating across Malta'."
+      ],
+      "key_message": "SWOT analysis identifies 4 strengths, 9 weaknesses, 3 opportunities, and 6 threats. The recommended strategic posture is cautious (WT-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.03,
+          "market_share_score": 1.99,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.03,
+          "market_share_score": 1.99,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "SO-3",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.03,
+          "market_share_score": 1.99,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.75,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "Epic Malta revenue growth 11.1% YoY",
+          "market_size_score": 3.5,
+          "market_growth_score": 8,
+          "profit_potential_score": 7,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.8,
+          "market_share_score": 1.99,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.25,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.97
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 3.5,
+          "market_growth_score": 6,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.17,
+          "market_share_score": 1.99,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.5,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.93
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 3.5,
+          "market_growth_score": 6,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.17,
+          "market_share_score": 1.99,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.5,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.93
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 3.5,
+          "market_growth_score": 6,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.17,
+          "market_share_score": 1.99,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.5,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.93
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.83,
+          "market_share_score": 1.99,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.25,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.97
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 7,
+          "market_attractiveness": 5.83,
+          "market_share_score": 1.99,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.25,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.97
+        },
+        {
+          "opportunity_name": "Exploit go_mt weakness: Price Competitiveness: score 60 (market avg 71)",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.42,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.11
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.62,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.76
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.62,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.76
+        },
+        {
+          "opportunity_name": "WO-3",
+          "market_size_score": 3.5,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 6.5,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.62,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.76
+        },
+        {
+          "opportunity_name": "ST-1",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-2",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-3",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-4",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "WT-1",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-2",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-3",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-4",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        }
+      ],
+      "grow_invest": [
+        "Exploit go_mt weakness: Price Competitiveness: score 60 (market avg 71)"
+      ],
+      "acquire_skills": [
+        "SO-1",
+        "SO-2",
+        "SO-3",
+        "Epic Malta revenue growth 11.1% YoY",
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt",
+        "National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access",
+        "WO-1",
+        "WO-2",
+        "WO-3"
+      ],
+      "harvest": [
+        "ST-1",
+        "ST-2",
+        "ST-3",
+        "ST-4"
+      ],
+      "avoid_exit": [
+        "WT-1",
+        "WT-2",
+        "WT-3",
+        "WT-4"
+      ],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Digital Experience: score 78 (market avg 73)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Price Competitiveness: score 80 (market avg 71)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "SO-3",
+          "description": "Leverage 'Strong EBITDA margin at 30.0%' to capture the opportunity of 'Epic Malta revenue growth 11.1% YoY'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Epic Malta revenue growth 11.1% YoY",
+          "description": "Epic Malta revenue growth 11.1% YoY",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Exploit go_mt weakness: Price Competitiveness: score 60 (market avg 71)",
+          "description": "Competitor go_mt is weak in: Price Competitiveness: score 60 (market avg 71)",
+          "derived_from": [
+            "competitor_weakness",
+            "go_mt"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Brand Strength: score 55 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Customer Service: score 68 (market avg 74)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_mt investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-3",
+          "description": "Address weakness 'Distribution: score 55 (market avg 74)' to unlock the opportunity of 'Epic Malta revenue growth 11.1% YoY'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "ST-1",
+          "description": "Use strength 'Digital Experience: score 78 (market avg 73)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-2",
+          "description": "Use strength 'Price Competitiveness: score 80 (market avg 71)' to counter the threat of 'GO plc revenue growth 6.7% YoY'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-3",
+          "description": "Use strength 'Strong EBITDA margin at 30.0%' to counter the threat of 'Melita EBITDA margin improvement: 40.7% vs 38.5% (+2.2pp)'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-4",
+          "description": "Use strength 'Revenue on growth trajectory' to counter the threat of 'GO plc FTTH fiber rollout accelerating across Malta'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "WT-1",
+          "description": "Mitigate weakness 'Brand Strength: score 55 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_mt'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-2",
+          "description": "Mitigate weakness 'Customer Service: score 68 (market avg 74)' and defend against the threat of 'GO plc revenue growth 6.7% YoY'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-3",
+          "description": "Mitigate weakness 'Distribution: score 55 (market avg 74)' and defend against the threat of 'Melita EBITDA margin improvement: 40.7% vs 38.5% (+2.2pp)'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-4",
+          "description": "Mitigate weakness 'Enterprise Solutions: score 40 (market avg 64)' and defend against the threat of 'GO plc FTTH fiber rollout accelerating across Malta'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        }
+      ],
+      "key_message": "SPAN matrix positions 21 opportunities: 1 grow/invest, 12 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 1 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 20,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 20,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 20
+  }
+}

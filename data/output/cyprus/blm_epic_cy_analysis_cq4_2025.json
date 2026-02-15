@@ -1,0 +1,3480 @@
+{
+  "meta": {
+    "target_operator": "epic_cy",
+    "market": "cyprus",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-15T09:30:37.069155",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "OCECPR regulation; EU Digital Single Market. Cyta 100% state-owned. 5G spectrum allocated; Epic launched Jul 2021. Cyprus division: Republic controls south.",
+            "trend": "Regulatory stance: OCECPR regulation; EU Digital Single Market. Cyta 100% state-owned. 5G spectrum allocated; Epic launched Jul 2021. Cyprus division: Republic controls south.",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect epic_cy",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: OCECPR regulation; EU Digital Single Market. Cyta 100% state-owned. 5G spectrum allocated; Epic launched Jul 2021. Cyprus division: Republic controls south."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "FTTP 77% premises coverage. 5G by Epic and Cyta. Tourism drives seasonal demand (4M+ visitors/yr). Growing financial services and shipping sectors. Population ~1.2M.",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: FTTP 77% premises coverage. 5G by Epic and Cyta. Tourism drives seasonal demand (4M+ visitors/yr). Growing financial services and shipping sectors. Population ~1.2M."
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 3.0%",
+            "trend": "GDP growth trend: stable (latest 3.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Strong GDP growth boosts both consumer and enterprise spending",
+            "company_impact": "Supported revenue growth for epic_cy",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 3.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 2.5%",
+            "trend": "Inflation trend: stable (latest 2.5%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "Manageable cost environment for epic_cy",
+            "impact_type": "neutral",
+            "severity": "low",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 2.5%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Unemployment",
+            "current_status": "Unemployment at 6.5%",
+            "trend": "Unemployment trend: stable",
+            "trend_direction": "stable",
+            "industry_impact": "Unemployment affects consumer spending power and enterprise IT budgets",
+            "company_impact": "Consumer segment sensitivity for epic_cy",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Unemployment: 6.5%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 15.0% of mobile subscribers",
+            "trend": "5G adoption trend: stable (15.0% -> 15.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for epic_cy",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 15.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 50.0%",
+            "trend": "Fiber penetration trend: stable (50.0% -> 50.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for epic_cy",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 50.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in early adoption phase (15.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for epic_cy",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 15.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 50.0%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for epic_cy",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 50.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 7/9 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy",
+          "National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "EUR 0.2B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+4.8% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Improving (industry EBITDA margin 25.5%, up from 22.8%)",
+      "industry_concentration": "CR4 = 100% (Cyta: 69.3%, Epic Cyprus: 21.6%, PrimeTel: 9.2%)",
+      "industry_lifecycle_stage": "late_growth",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+4.8% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 153.0,
+        "total_mobile_subscribers_k": 1442.0,
+        "total_broadband_subscribers_k": 302.0,
+        "market_shares": {
+          "Cyta": 69.3,
+          "Epic Cyprus": 21.6,
+          "PrimeTel": 9.2
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 120.2,
+          "broadband_penetration_pct": 25.2
+        },
+        "operator_count": 3
+      },
+      "changes": [
+        {
+          "change_type": "pricing",
+          "description": "Epic Cyprus revenue growth 10.0% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +10.0%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "PrimeTel revenue growth 7.7% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +7.7%"
+          ]
+        }
+      ],
+      "opportunities": [
+        {
+          "change_type": "pricing",
+          "description": "Epic Cyprus revenue growth 10.0% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +10.0%"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "change_type": "pricing",
+          "description": "PrimeTel revenue growth 7.7% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +7.7%"
+          ]
+        }
+      ],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Urban Connected",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Faster and more affordable fiber broadband",
+            "Seamless converged fixed-mobile bundles"
+          ],
+          "pain_points": [
+            "Limited competition keeps prices high for a small market",
+            "Cyta dominance in fixed broadband limits choice"
+          ],
+          "purchase_decision_factors": [
+            "Network quality and speed",
+            "Bundle value (fixed + mobile + TV)",
+            "Brand trust",
+            "Coverage across the island"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Price-Sensitive",
+          "segment_type": "consumer",
+          "size_estimate": "~0.4M subscribers",
+          "growth_trend": "shrinking",
+          "our_share": "~33% of prepaid",
+          "unmet_needs": [
+            "More affordable unlimited mobile data plans",
+            "Transparent pricing without hidden fees"
+          ],
+          "pain_points": [
+            "Small market means less competitive pressure on pricing",
+            "Limited MVNO options"
+          ],
+          "purchase_decision_factors": [
+            "Monthly cost",
+            "Data allowance",
+            "Contract flexibility",
+            "Prepaid options"
+          ],
+          "competitor_gaps": [
+            "Low-cost brands and sub-brands (PrimeTel, Cyta) compete here"
+          ],
+          "opportunity": "Selective prepaid-to-postpaid migration campaigns"
+        },
+        {
+          "segment_name": "Tourist / Seasonal",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Easy tourist SIM activation and eSIM support",
+            "Short-term data-heavy plans for visitors"
+          ],
+          "pain_points": [
+            "Cyprus hosts 4M+ tourists annually; seasonal demand spikes",
+            "Roaming complexity for non-EU visitors"
+          ],
+          "purchase_decision_factors": [
+            "Ease of purchase",
+            "Short-term plan availability",
+            "Coverage in tourist areas"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Enterprise & Government",
+          "segment_type": "enterprise",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Managed ICT services for growing Cyprus business sector",
+            "Cloud and cybersecurity solutions",
+            "Private 5G for shipping/logistics industry"
+          ],
+          "pain_points": [
+            "Cyta dominates enterprise fixed connectivity",
+            "Limited scale for advanced managed services"
+          ],
+          "purchase_decision_factors": [
+            "Reliability and SLAs",
+            "Price competitiveness",
+            "Managed services capability",
+            "EU data sovereignty"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "critical",
+          "gap_analysis": "No competitor data available for Price"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 3.9,
+          "competitor_scores": {
+            "cyta_cy": 4.9,
+            "primetel_cy": 3.5
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Availability by 0.3 points. Leader: cyta_cy (4.9/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Packaging"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 4.5,
+          "competitor_scores": {
+            "cyta_cy": 4.0,
+            "primetel_cy": 3.6
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Market leader in Performance (score 4.5/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.6,
+          "competitor_scores": {
+            "cyta_cy": 3.4,
+            "primetel_cy": 3.5
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Market leader in Ease of Use (score 3.6/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 2.8,
+          "competitor_scores": {
+            "cyta_cy": 4.4,
+            "primetel_cy": 2.2
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Assurances by 0.5 points. Leader: cyta_cy (4.4/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Lifecycle Cost"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 3.6,
+          "competitor_scores": {
+            "cyta_cy": 4.4,
+            "primetel_cy": 2.8
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Above average in Social/Brand but 0.8 points behind leader (cyta_cy: 4.4/5.0)"
+        }
+      ],
+      "customer_value_migration": "Value migration trending upward: customers willing to pay more for premium connectivity and convergent bundles. Focus on upselling and cross-selling opportunities.",
+      "market_outlook": "mixed",
+      "key_message": "Cyprus telecom market totals EUR 153.0M in quarterly revenue; competitive strengths in Performance; gaps in Assurances; Market presents a balanced mix of opportunities and challenges."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "3 active operators in the market",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 69% of market revenue (total: EUR 153.0M)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from +4.2% to +10.7% (spread: 6.5pp)",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 29.6%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 69% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.27%/month. Highest: 1.60% indicating moderate willingness to switch.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 63%. Moderate contract lock-in moderately constrains buyer mobility.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "primetel_cy": {
+          "operator": "PrimeTel",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 14.0,
+            "service_revenue": 13.0,
+            "service_revenue_growth_pct": 8.3,
+            "ebitda": 4.0,
+            "ebitda_margin_pct": 28.6,
+            "ebitda_growth_pct": 33.3,
+            "capex": 3.0,
+            "capex_to_revenue_pct": 21.4,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 9.21,
+              "momentum_score": 48.08,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.05,
+              "trend_slope": 0.29,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                8.33,
+                0.0,
+                0.0,
+                0.0,
+                7.69,
+                0.0
+              ],
+              "yoy_growth": [
+                8.33,
+                8.33,
+                7.69,
+                7.69
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 7.69,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "margin_metrics": {
+              "cagr_pct": 7.99,
+              "momentum_score": 100.0,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.09,
+              "trend_slope": 0.51,
+              "acceleration": 2.96,
+              "sequential_growth": [
+                0.0,
+                -7.6,
+                0.0,
+                0.0,
+                0.0,
+                23.81,
+                0.0
+              ],
+              "yoy_growth": [
+                -7.6,
+                -7.6,
+                23.81,
+                23.81
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 23.81,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 182.0,
+            "mobile_postpaid_k": 107.0,
+            "mobile_net_adds_k": 1.0,
+            "mobile_churn_pct": 1.6,
+            "mobile_arpu": 13.0,
+            "broadband_total_k": 52.0,
+            "broadband_fiber_k": 34.0,
+            "broadband_net_adds_k": 1.0,
+            "tv_total_k": 33.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 20.0,
+            "four_g_coverage_pct": 85.0,
+            "fiber_homepass_k": 80.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Mixed",
+              "spectrum_mhz": 100,
+              "smallest_mno": true
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Mixed",
+          "ecosystem_partners": [
+            "Network vendor: Mixed"
+          ],
+          "core_control_points": [
+            "Own fiber infrastructure (80k homes)"
+          ],
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile",
+          "org_structure": "CEO: Panicos Papadopoulos (Long-standing CEO of PrimeTel; managing competitive positioning as smallest MNO)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Price Competitiveness: score 78 (market avg 72)"
+          ],
+          "weaknesses": [
+            "Brand Strength: score 55 (market avg 72)",
+            "Distribution: score 55 (market avg 72)",
+            "Enterprise Solutions: score 45 (market avg 63)",
+            "Innovation: score 60 (market avg 70)",
+            "Network Coverage: score 70 (market avg 82)",
+            "Network Quality: score 72 (market avg 81)"
+          ],
+          "problems": [
+            "Competitive gap in Brand Strength",
+            "Competitive gap in Distribution",
+            "Competitive gap in Enterprise Solutions",
+            "Competitive gap in Innovation",
+            "Competitive gap in Network Coverage",
+            "Competitive gap in Network Quality"
+          ],
+          "likely_future_actions": [
+            "PrimeTel is likely to continue aggressive network expansion (capex/revenue at 21% with growing revenue).",
+            "PrimeTel is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "PrimeTel's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "PrimeTel is weak in: Brand Strength, Distribution, Enterprise Solutions. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Brand Strength: score 55 (market avg 72)",
+                "Distribution: score 55 (market avg 72)",
+                "Enterprise Solutions: score 45 (market avg 63)"
+              ],
+              "suggested_action": "Invest in Brand Strength, Distribution, Enterprise Solutions to capture customers dissatisfied with PrimeTel."
+            },
+            {
+              "implication_type": "learning",
+              "description": "PrimeTel excels in: Price Competitiveness. Study their approach for best practices.",
+              "evidence": [
+                "Price Competitiveness: score 78 (market avg 72)"
+              ],
+              "suggested_action": "Benchmark PrimeTel's practices in Price Competitiveness."
+            }
+          ]
+        },
+        "cyta_cy": {
+          "operator": "Cyta",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 106.0,
+            "service_revenue": 100.0,
+            "service_revenue_growth_pct": 4.2,
+            "ebitda": 22.0,
+            "ebitda_margin_pct": 20.8,
+            "ebitda_growth_pct": 4.8,
+            "capex": 27.0,
+            "capex_to_revenue_pct": 25.5,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 5.83,
+              "momentum_score": 49.25,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 1.24,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                2.08,
+                2.04,
+                2.0,
+                -1.96,
+                2.0,
+                1.96,
+                1.92
+              ],
+              "yoy_growth": [
+                4.17,
+                4.08,
+                4.0,
+                3.92
+              ],
+              "latest_qoq_pct": 1.92,
+              "latest_yoy_pct": 3.92,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "margin_metrics": {
+              "cagr_pct": 5.95,
+              "momentum_score": 33.28,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.04,
+              "trend_slope": 0.29,
+              "acceleration": -0.3,
+              "sequential_growth": [
+                3.19,
+                3.09,
+                3.0,
+                -2.91,
+                3.0,
+                2.91,
+                -1.89
+              ],
+              "yoy_growth": [
+                6.38,
+                6.19,
+                6.0,
+                0.97
+              ],
+              "latest_qoq_pct": -1.89,
+              "latest_yoy_pct": 0.97,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low"
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 755.0,
+            "mobile_postpaid_k": 485.0,
+            "mobile_net_adds_k": 5.0,
+            "mobile_churn_pct": 0.9,
+            "mobile_arpu": 18.0,
+            "broadband_total_k": 195.0,
+            "broadband_fiber_k": 155.0,
+            "broadband_net_adds_k": 3.0,
+            "tv_total_k": 63.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 55.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 350.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Nokia/Ericsson",
+              "spectrum_mhz": 250,
+              "fttp_coverage_pct": 77,
+              "fixed_incumbent": true
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [
+            "EUR 108M strategic investments planned for 2025. Focusing on fiber expansion, 5G deployment, and enterprise ICT growth. "
+          ],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push",
+          "supply_chain_status": "Primary vendor: Nokia/Ericsson",
+          "ecosystem_partners": [
+            "Network vendor: Nokia/Ericsson"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Distribution",
+            "Market leadership in Brand Strength",
+            "Market leadership in Enterprise Solutions",
+            "Market leadership in Network Quality"
+          ],
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; low-margin / scale-focused",
+          "org_structure": "CEO: Andreas Neocleous (Leading Cyta digital transformation and FTTP rollout; managing state-owned efficiency challenges)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Brand Strength: score 88 (market avg 72)",
+            "Distribution: score 92 (market avg 72)",
+            "Enterprise Solutions: score 88 (market avg 63)",
+            "Network Coverage: score 98 (market avg 82)"
+          ],
+          "weaknesses": [
+            "Digital Experience: score 65 (market avg 73)",
+            "Innovation: score 62 (market avg 70)",
+            "Price Competitiveness: score 55 (market avg 72)"
+          ],
+          "problems": [
+            "Competitive gap in Digital Experience",
+            "Competitive gap in Innovation",
+            "Competitive gap in Price Competitiveness"
+          ],
+          "likely_future_actions": [
+            "Cyta is likely to continue aggressive network expansion (capex/revenue at 26% with growing revenue).",
+            "Cyta is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Cyta's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Cyta is weak in: Digital Experience, Innovation, Price Competitiveness. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Digital Experience: score 65 (market avg 73)",
+                "Innovation: score 62 (market avg 70)",
+                "Price Competitiveness: score 55 (market avg 72)"
+              ],
+              "suggested_action": "Invest in Digital Experience, Innovation, Price Competitiveness to capture customers dissatisfied with Cyta."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Cyta excels in: Brand Strength, Distribution, Enterprise Solutions. Study their approach for best practices.",
+              "evidence": [
+                "Brand Strength: score 88 (market avg 72)",
+                "Distribution: score 92 (market avg 72)",
+                "Enterprise Solutions: score 88 (market avg 63)"
+              ],
+              "suggested_action": "Benchmark Cyta's practices in Brand Strength, Distribution, Enterprise Solutions."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "epic_cy": 33.0,
+          "primetel_cy": 14.0,
+          "cyta_cy": 106.0
+        },
+        "revenue_growth": {
+          "epic_cy": 10.7,
+          "primetel_cy": 8.3,
+          "cyta_cy": 4.2
+        },
+        "ebitda_margin": {
+          "epic_cy": 39.4,
+          "primetel_cy": 28.6,
+          "cyta_cy": 20.8
+        },
+        "subscribers": {
+          "epic_cy": 505.0,
+          "primetel_cy": 182.0,
+          "cyta_cy": 755.0
+        },
+        "arpu": {
+          "epic_cy": 16.5,
+          "primetel_cy": 13.0,
+          "cyta_cy": 18.0
+        },
+        "churn": {
+          "epic_cy": 1.3,
+          "primetel_cy": 1.6,
+          "cyta_cy": 0.9
+        },
+        "5g_coverage": {
+          "epic_cy": 60.0,
+          "primetel_cy": 20.0,
+          "cyta_cy": 55.0
+        }
+      },
+      "competitive_landscape": "The market comprises 3 active operators: Epic Cyprus, PrimeTel, Cyta. Overall competition intensity is assessed as medium. Revenue ranking: Cyta (106.0M), Epic Cyprus (33.0M), PrimeTel (14.0M). Five Forces: Existing Competitors: high; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "key_message": "In a 3-player market with medium competition intensity, Cyta leads with 69% revenue share. Target operator holds 22% share. Strongest competitive force: Existing Competitors."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 33.0,
+        "service_revenue": 31.0,
+        "ebitda": 13.0,
+        "ebitda_margin_pct": 39.4,
+        "net_income": null,
+        "capex": 8.0,
+        "capex_to_revenue_pct": 24.2,
+        "opex": null,
+        "employees": 585,
+        "revenue_qoq_pct": 3.12,
+        "revenue_yoy_pct": 10.0,
+        "ebitda_qoq_pct": 0.0,
+        "ebitda_growth_pct": 8.3,
+        "service_revenue_growth_pct": 10.7,
+        "revenue_trend": [
+          28.0,
+          29.0,
+          29.0,
+          30.0,
+          30.0,
+          31.0,
+          32.0,
+          33.0
+        ],
+        "ebitda_trend": [
+          10.0,
+          11.0,
+          11.0,
+          12.0,
+          12.0,
+          12.0,
+          13.0,
+          13.0
+        ],
+        "margin_trend": [
+          35.7,
+          37.9,
+          37.9,
+          40.0,
+          40.0,
+          38.7,
+          40.6,
+          39.4
+        ],
+        "revenue_metrics": {
+          "cagr_pct": 9.84,
+          "momentum_score": 58.57,
+          "momentum_phase": "accelerating_growth",
+          "volatility": 0.05,
+          "trend_slope": 0.67,
+          "acceleration": 0.4,
+          "sequential_growth": [
+            3.57,
+            0.0,
+            3.45,
+            0.0,
+            3.33,
+            3.23,
+            3.12
+          ],
+          "yoy_growth": [
+            7.14,
+            6.9,
+            10.34,
+            10.0
+          ],
+          "latest_qoq_pct": 3.12,
+          "latest_yoy_pct": 10.0,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "ebitda_metrics": {
+          "cagr_pct": 16.17,
+          "momentum_score": 15.0,
+          "momentum_phase": "stabilizing",
+          "volatility": 0.08,
+          "trend_slope": 0.4,
+          "acceleration": -0.2,
+          "sequential_growth": [
+            10.0,
+            0.0,
+            9.09,
+            0.0,
+            0.0,
+            8.33,
+            0.0
+          ],
+          "yoy_growth": [
+            20.0,
+            9.09,
+            18.18,
+            8.33
+          ],
+          "latest_qoq_pct": 0.0,
+          "latest_yoy_pct": 8.33,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "margin_metrics": {
+          "cagr_pct": 5.8,
+          "momentum_score": 9.37,
+          "momentum_phase": "decelerating_growth",
+          "volatility": 0.04,
+          "trend_slope": 0.5,
+          "acceleration": -1.28,
+          "sequential_growth": [
+            6.16,
+            0.0,
+            5.54,
+            0.0,
+            -3.25,
+            4.91,
+            -2.96
+          ],
+          "yoy_growth": [
+            12.04,
+            2.11,
+            7.12,
+            -1.5
+          ],
+          "latest_qoq_pct": -2.96,
+          "latest_yoy_pct": -1.5,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 24.0,
+          "share_pct": 72.7
+        },
+        "fixed_service_revenue": {
+          "value": 5.0,
+          "share_pct": 15.2
+        },
+        "b2b_revenue": {
+          "value": 2.0,
+          "share_pct": 6.1
+        },
+        "other_revenue": {
+          "value": 2.0,
+          "share_pct": 6.1
+        },
+        "total_revenue": 33.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 3,
+        "revenue_rank": 2,
+        "total_revenue": 33.0,
+        "revenue_market_share_pct": 21.6,
+        "subscriber_rank": 2,
+        "mobile_subscriber_share_pct": 35.0,
+        "broadband_subscriber_share_pct": 18.2,
+        "competitors": {
+          "cyta_cy": {
+            "display_name": "Cyta",
+            "total_revenue": 106.0,
+            "mobile_total_k": 755.0,
+            "broadband_total_k": 195.0
+          },
+          "primetel_cy": {
+            "display_name": "PrimeTel",
+            "total_revenue": 14.0,
+            "mobile_total_k": 182.0,
+            "broadband_total_k": 52.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue": {
+          "metric_type": "revenue",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "cyta_cy",
+              "display_name": "Cyta",
+              "share_pct": [
+                70.58823529411765,
+                69.93006993006993,
+                70.50359712230215,
+                69.86301369863014,
+                70.4225352112676,
+                69.33333333333334,
+                70.34482758620689,
+                69.28104575163398
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 69.28,
+              "share_change_pp": -1.31,
+              "avg_quarterly_change_pp": -0.19,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "epic_cy",
+              "display_name": "Epic Cyprus",
+              "share_pct": [
+                20.588235294117645,
+                20.97902097902098,
+                20.863309352517987,
+                21.232876712328768,
+                20.422535211267608,
+                21.333333333333336,
+                20.689655172413794,
+                21.568627450980394
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 21.57,
+              "share_change_pp": 0.98,
+              "avg_quarterly_change_pp": 0.14,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "primetel_cy",
+              "display_name": "PrimeTel",
+              "share_pct": [
+                8.823529411764707,
+                9.090909090909092,
+                8.633093525179856,
+                8.904109589041095,
+                9.15492957746479,
+                9.333333333333334,
+                8.96551724137931,
+                9.15032679738562
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 9.15,
+              "share_change_pp": 0.33,
+              "avg_quarterly_change_pp": 0.05,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 5348.8,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              5484.43,
+              5412.98,
+              5480.57,
+              5410.96,
+              5460.23,
+              5349.33,
+              5456.84,
+              5348.8
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "epic_cy",
+          "target_series": {
+            "operator_id": "epic_cy",
+            "display_name": "Epic Cyprus",
+            "share_pct": [
+              20.588235294117645,
+              20.97902097902098,
+              20.863309352517987,
+              21.232876712328768,
+              20.422535211267608,
+              21.333333333333336,
+              20.689655172413794,
+              21.568627450980394
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 21.57,
+            "share_change_pp": 0.98,
+            "avg_quarterly_change_pp": 0.14,
+            "direction": "gaining",
+            "rank_latest": 2,
+            "rank_change": 0
+          },
+          "share_leader_id": "cyta_cy",
+          "biggest_gainer_id": "epic_cy",
+          "biggest_loser_id": "cyta_cy",
+          "key_message": "Revenue share: 21.6% (#2); gaining (+1.0pp); market is highly concentrated (HHI 5,349); fragmenting."
+        },
+        "mobile_subscribers": {
+          "metric_type": "mobile_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "cyta_cy",
+              "display_name": "Cyta",
+              "share_pct": [
+                52.74725274725275,
+                52.519517388218595,
+                52.68895348837209,
+                52.46478873239436,
+                52.63157894736842,
+                52.41090146750524,
+                52.57510729613733,
+                52.35783633841886
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 52.36,
+              "share_change_pp": -0.39,
+              "avg_quarterly_change_pp": -0.06,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "epic_cy",
+              "display_name": "Epic Cyprus",
+              "share_pct": [
+                34.43223443223443,
+                34.77643718949609,
+                34.520348837209305,
+                34.859154929577464,
+                34.60706560922855,
+                34.940600978336825,
+                34.69241773962804,
+                35.020804438280166
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 35.02,
+              "share_change_pp": 0.59,
+              "avg_quarterly_change_pp": 0.08,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "primetel_cy",
+              "display_name": "PrimeTel",
+              "share_pct": [
+                12.82051282051282,
+                12.70404542228531,
+                12.790697674418606,
+                12.676056338028168,
+                12.761355443403028,
+                12.648497554157931,
+                12.732474964234623,
+                12.62135922330097
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 12.62,
+              "share_change_pp": -0.2,
+              "avg_quarterly_change_pp": -0.03,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 4127.1,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              4132.22,
+              4129.09,
+              4131.38,
+              4128.4,
+              4130.58,
+              4127.73,
+              4129.82,
+              4127.1
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "epic_cy",
+          "target_series": {
+            "operator_id": "epic_cy",
+            "display_name": "Epic Cyprus",
+            "share_pct": [
+              34.43223443223443,
+              34.77643718949609,
+              34.520348837209305,
+              34.859154929577464,
+              34.60706560922855,
+              34.940600978336825,
+              34.69241773962804,
+              35.020804438280166
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 35.02,
+            "share_change_pp": 0.59,
+            "avg_quarterly_change_pp": 0.08,
+            "direction": "gaining",
+            "rank_latest": 2,
+            "rank_change": 0
+          },
+          "share_leader_id": "cyta_cy",
+          "biggest_gainer_id": "epic_cy",
+          "biggest_loser_id": "cyta_cy",
+          "key_message": "Mobile Subscribers share: 35.0% (#2); gaining (+0.6pp); market is highly concentrated (HHI 4,127)."
+        },
+        "broadband_subscribers": {
+          "metric_type": "broadband_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "cyta_cy",
+              "display_name": "Cyta",
+              "share_pct": [
+                67.9245283018868,
+                65.96491228070175,
+                67.4074074074074,
+                65.51724137931035,
+                66.9090909090909,
+                65.08474576271186,
+                66.42857142857143,
+                64.56953642384106
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 64.57,
+              "share_change_pp": -3.35,
+              "avg_quarterly_change_pp": -0.48,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "epic_cy",
+              "display_name": "Epic Cyprus",
+              "share_pct": [
+                15.09433962264151,
+                16.842105263157894,
+                15.555555555555555,
+                17.24137931034483,
+                16.0,
+                17.627118644067796,
+                16.428571428571427,
+                18.211920529801322
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 18.21,
+              "share_change_pp": 3.12,
+              "avg_quarterly_change_pp": 0.45,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 1
+            },
+            {
+              "operator_id": "primetel_cy",
+              "display_name": "PrimeTel",
+              "share_pct": [
+                16.9811320754717,
+                17.192982456140353,
+                17.037037037037038,
+                17.24137931034483,
+                17.09090909090909,
+                17.28813559322034,
+                17.142857142857142,
+                17.218543046357617
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 17.22,
+              "share_change_pp": 0.24,
+              "avg_quarterly_change_pp": 0.03,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": -1
+            }
+          ],
+          "concentration": {
+            "hhi": 4797.38,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              5129.94,
+              4930.62,
+              5075.99,
+              4887.04,
+              5024.93,
+              4845.62,
+              4976.53,
+              4797.38
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "epic_cy",
+          "target_series": {
+            "operator_id": "epic_cy",
+            "display_name": "Epic Cyprus",
+            "share_pct": [
+              15.09433962264151,
+              16.842105263157894,
+              15.555555555555555,
+              17.24137931034483,
+              16.0,
+              17.627118644067796,
+              16.428571428571427,
+              18.211920529801322
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 18.21,
+            "share_change_pp": 3.12,
+            "avg_quarterly_change_pp": 0.45,
+            "direction": "gaining",
+            "rank_latest": 2,
+            "rank_change": 1
+          },
+          "share_leader_id": "cyta_cy",
+          "biggest_gainer_id": "epic_cy",
+          "biggest_loser_id": "cyta_cy",
+          "key_message": "Broadband Subscribers share: 18.2% (#2); gaining (+3.1pp); market is highly concentrated (HHI 4,797); fragmenting."
+        },
+        "revenue_share_latest": 21.6,
+        "mobile_share_latest": 35.0,
+        "broadband_share_latest": 18.2
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 24.0,
+            "mobile_service_growth_pct": 9.1,
+            "mobile_total_k": 505.0,
+            "mobile_postpaid_k": 335.0,
+            "mobile_prepaid_k": 170.0,
+            "mobile_net_adds_k": 5.0,
+            "mobile_churn_pct": 1.3,
+            "mobile_arpu": 16.5,
+            "iot_connections_k": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 24.0,
+              "previous_value": 23.0,
+              "yoy_value": 22.0,
+              "change_qoq": 4.35,
+              "change_yoy": 9.09,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 505.0,
+              "previous_value": 500.0,
+              "yoy_value": 485.0,
+              "change_qoq": 1.0,
+              "change_yoy": 4.12,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 16.5,
+              "previous_value": 16.2,
+              "yoy_value": 15.6,
+              "change_qoq": 1.85,
+              "change_yoy": 5.77,
+              "direction": "improving",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              20.0,
+              21.0,
+              21.0,
+              22.0,
+              22.0,
+              23.0,
+              23.0,
+              24.0
+            ],
+            "subscribers": [
+              470.0,
+              475.0,
+              480.0,
+              485.0,
+              490.0,
+              495.0,
+              500.0,
+              505.0
+            ],
+            "arpu": [
+              15.0,
+              15.2,
+              15.4,
+              15.6,
+              15.8,
+              16.0,
+              16.2,
+              16.5
+            ],
+            "churn": [
+              1.5,
+              1.5,
+              1.4,
+              1.4,
+              1.4,
+              1.3,
+              1.3,
+              1.3
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 10.98,
+              "momentum_score": 47.27,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.06,
+              "trend_slope": 0.52,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                5.0,
+                0.0,
+                4.76,
+                0.0,
+                4.55,
+                0.0,
+                4.35
+              ],
+              "yoy_growth": [
+                10.0,
+                9.52,
+                9.52,
+                9.09
+              ],
+              "latest_qoq_pct": 4.35,
+              "latest_yoy_pct": 9.09,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 4.19,
+              "momentum_score": 49.61,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 5.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                1.06,
+                1.05,
+                1.04,
+                1.03,
+                1.02,
+                1.01,
+                1.0
+              ],
+              "yoy_growth": [
+                4.26,
+                4.21,
+                4.17,
+                4.12
+              ],
+              "latest_qoq_pct": 1.0,
+              "latest_yoy_pct": 4.12,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "arpu_metrics": {
+              "cagr_pct": 5.6,
+              "momentum_score": 51.29,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.03,
+              "trend_slope": 0.21,
+              "acceleration": 0.03,
+              "sequential_growth": [
+                1.33,
+                1.32,
+                1.3,
+                1.28,
+                1.27,
+                1.25,
+                1.85
+              ],
+              "yoy_growth": [
+                5.33,
+                5.26,
+                5.19,
+                5.77
+              ],
+              "latest_qoq_pct": 1.85,
+              "latest_yoy_pct": 5.77,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "churn_metrics": {
+              "cagr_pct": -7.85,
+              "momentum_score": 48.57,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.06,
+              "trend_slope": -0.03,
+              "acceleration": 0.01,
+              "sequential_growth": [
+                0.0,
+                -6.67,
+                0.0,
+                0.0,
+                -7.14,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                -6.67,
+                -13.33,
+                -7.14,
+                -7.14
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": -7.14,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Cyta": {
+              "mobile_service_revenue": 43.0,
+              "mobile_total_k": 755.0,
+              "mobile_arpu": 18.0,
+              "mobile_churn_pct": 0.9
+            },
+            "PrimeTel": {
+              "mobile_service_revenue": 6.0,
+              "mobile_total_k": 182.0,
+              "mobile_arpu": 13.0,
+              "mobile_churn_pct": 1.6
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "Epic is #1 mobile network in speed tests (Ookla). 5G pioneer since Jul 2021. Growing subscriber base challenging Cyta's dominance. NJJ/Monaco Telecom ownership providing investment commitment.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "FTTH rollout funded by EIB EUR 19M. Growing broadband subscriber base. Mobile-first evolving toward convergence to compete with Cyta's fixed-mobile bundles.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 4.3% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 24.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "Mobile service revenue at 24.0M; up 9.1% YoY; ARPU 16.5",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 5.0,
+            "fixed_service_growth_pct": 25.0,
+            "broadband_total_k": 55.0,
+            "broadband_net_adds_k": 3.0,
+            "broadband_cable_k": null,
+            "broadband_fiber_k": 40.0,
+            "broadband_dsl_k": null,
+            "broadband_arpu": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 5.0,
+              "previous_value": 5.0,
+              "yoy_value": 4.0,
+              "change_qoq": 0.0,
+              "change_yoy": 25.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 55.0,
+              "previous_value": 52.0,
+              "yoy_value": 46.0,
+              "change_qoq": 5.77,
+              "change_yoy": 19.57,
+              "direction": "improving",
+              "significance": "significant"
+            },
+            {
+              "metric": "arpu",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              5.0,
+              5.0
+            ],
+            "subscribers": [
+              40.0,
+              42.0,
+              44.0,
+              46.0,
+              48.0,
+              50.0,
+              52.0,
+              55.0
+            ],
+            "arpu": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fiber": [
+              25.0,
+              27.0,
+              29.0,
+              31.0,
+              33.0,
+              35.0,
+              37.0,
+              40.0
+            ],
+            "cable": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 13.6,
+              "momentum_score": 100.0,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.1,
+              "trend_slope": 0.14,
+              "acceleration": 0.4,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                25.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                25.0,
+                25.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 25.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 19.96,
+              "momentum_score": 48.75,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.1,
+              "trend_slope": 2.08,
+              "acceleration": 0.3,
+              "sequential_growth": [
+                5.0,
+                4.76,
+                4.55,
+                4.35,
+                4.17,
+                4.0,
+                5.77
+              ],
+              "yoy_growth": [
+                20.0,
+                19.05,
+                18.18,
+                19.57
+              ],
+              "latest_qoq_pct": 5.77,
+              "latest_yoy_pct": 19.57,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "fiber_metrics": {
+              "cagr_pct": 30.81,
+              "momentum_score": 41.64,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.15,
+              "trend_slope": 2.08,
+              "acceleration": 0.3,
+              "sequential_growth": [
+                8.0,
+                7.41,
+                6.9,
+                6.45,
+                6.06,
+                5.71,
+                8.11
+              ],
+              "yoy_growth": [
+                32.0,
+                29.63,
+                27.59,
+                29.03
+              ],
+              "latest_qoq_pct": 8.11,
+              "latest_yoy_pct": 29.03,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Cyta": {
+              "fixed_service_revenue": 47.0,
+              "broadband_total_k": 195.0,
+              "broadband_fiber_k": 155.0
+            },
+            "PrimeTel": {
+              "fixed_service_revenue": 6.0,
+              "broadband_total_k": 52.0,
+              "broadband_fiber_k": 34.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FTTH rollout funded by EIB EUR 19M. Growing broadband subscriber base. Mobile-first evolving toward convergence to compete with Cyta's fixed-mobile bundles.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "subscribers increased 5.8% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: subscribers = 55.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Fixed service revenue 5.0M; growth +25.0% YoY; Fiber subs 40K",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 2.0,
+            "b2b_growth_pct": null,
+            "b2b_customers_k": 6.0,
+            "b2b_share_of_revenue_pct": 6.1
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 2.0,
+              "previous_value": 2.0,
+              "yoy_value": 2.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "customers",
+              "current_value": 6.0,
+              "previous_value": 6.0,
+              "yoy_value": 5.0,
+              "change_qoq": 0.0,
+              "change_yoy": 20.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0
+            ],
+            "customers": [
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              6.0,
+              6.0,
+              6.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 0.0,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.0,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "customers_metrics": {
+              "cagr_pct": 10.98,
+              "momentum_score": 100.0,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.09,
+              "trend_slope": 0.18,
+              "acceleration": 0.3,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                20.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                20.0,
+                20.0,
+                20.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 20.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Cyta": {
+              "b2b_revenue": 10.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 17.0
+            },
+            "PrimeTel": {
+              "b2b_revenue": 1.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 3.0
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "B2B revenue 2.0M; 6.1% of total revenue",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": null,
+            "tv_total_k": 0.0,
+            "tv_net_adds_k": null,
+            "fmc_total_k": null,
+            "fmc_penetration_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 0.0,
+              "previous_value": 0.0,
+              "yoy_value": 0.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fmc_subscribers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fmc_penetration": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers_metrics": {
+              "cagr_pct": null,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": null,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Cyta": {
+              "tv_total_k": 63.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            },
+            "PrimeTel": {
+              "tv_total_k": 33.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FTTH rollout funded by EIB EUR 19M. Growing broadband subscriber base. Mobile-first evolving toward convergence to compete with Cyta's fixed-mobile bundles.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "TV subscribers 0K",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": null,
+            "wholesale_share_of_revenue_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Insufficient data for wholesale assessment",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "mobile_vendor": "Huawei",
+          "spectrum_mhz": 200,
+          "5g_launched": "Jul 2021",
+          "fiber_status": "EIB EUR 19M FTTH financing"
+        },
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "fiber",
+            "mobile"
+          ],
+          "summary": "Fully owned mobile network with 4G/5G coverage. Growing FTTH network (EIB EUR 19M financing). ~95% mobile own-network, ~30% fixed via own fiber, rest wholesale."
+        },
+        "coverage": {
+          "5g": 60.0,
+          "4g": 95.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 120.0,
+          "fiber_connected_k": 40.0,
+          "fiber_penetration_pct": 33.3
+        },
+        "evolution_strategy": {
+          "data_signals": [
+            "Fiber-only fixed footprint"
+          ],
+          "summary": "5G nationwide expansion. FTTH fiber rollout to challenge Cyta in broadband. Mobile-first evolving toward convergence. NJJ/Monaco Telecom technology sharing."
+        },
+        "investment_direction": "stable",
+        "vs_competitors": "5G: ahead of PrimeTel by 40pp; 5G: ahead of Cyta by 5pp; Fiber: 2.9x less homepass than Cyta",
+        "consumer_impact": "Early 5G coverage (60.0%); Fiber-dominant broadband mix",
+        "b2b_impact": "B2B revenue share: 6%",
+        "cost_impact": "High capex intensity (24.2%)"
+      },
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 72.0,
+            "market_avg": 70.0,
+            "gap_pp": 2.0,
+            "verdict": "at average"
+          },
+          "Brand Strength": {
+            "score": 72.0,
+            "market_avg": 71.7,
+            "gap_pp": 0.3,
+            "verdict": "at average"
+          }
+        },
+        "overall_verdict": "mixed",
+        "summary": "Customer Service +2pp vs market; Brand Strength +0pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Marios Kalochoritis",
+          "title": "CEO",
+          "is_current": true,
+          "start_date": "2020-01-01",
+          "background": "Monaco Telecom appointee; leading Epic's 5G and fiber strategy in Cyprus",
+          "tenure_years": 6.1
+        }
+      ],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners",
+          "Monaco Telecom / NJJ Holding (parent company)",
+          "Huawei (network equipment and 5G)",
+          "umlaut (network quality assessment)",
+          "EIB (FTTH financing)"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery",
+          "5G network expansion toward nationwide coverage",
+          "FTTH fiber rollout to compete with Cyta in broadband",
+          "Mobile subscriber growth and ARPU improvement",
+          "Enterprise segment development"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Owned 4G/5G mobile network (launched 5G July 2021)",
+          "Growing FTTH fiber network (EIB EUR 19M financing)",
+          "Monaco Telecom/NJJ ownership — Xavier Niel telecom expertise",
+          "Strong brand in digital-first and young demographics"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "Fastest mobile network in Cyprus (Ookla Speedtest Awards)",
+          "Competitive mobile pricing challenging Cyta",
+          "5G pioneer in Cyprus market",
+          "Growing fiber broadband offering"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture; High-investment posture; Private-sector agility. Monaco Telecom management. Innovation-focused. Digital-first approach.",
+      "talent_assessment": {
+        "c_suite_count": 1,
+        "avg_tenure_years": 6.1,
+        "key_leaders": [
+          "Marios Kalochoritis (CEO)"
+        ],
+        "capability_alignment": [
+          "Customer Service: strong",
+          "Enterprise Solutions: adequate"
+        ],
+        "assessment": "Limited executive visibility from available data"
+      },
+      "performance_gap": "Top performance gaps: EBITDA margin gap: +18.6pp vs leader (Cyta at 20.8%); Revenue share gap: -47.7pp vs leader (69.3%); Enterprise Solutions: -33pp vs leader",
+      "opportunity_gap": "Top opportunity gaps: B2B revenue gap (80% below market leader)",
+      "strategic_review": "Management outlook: Epic is #1 mobile network in speed tests (Ookla). 5G pioneer since Jul 2021. Growing subscriber base challenging Cyta's dominance. NJJ/Monaco Telecom ownership providing investment commitment.. Revenue trajectory growing, margins strong (39.4%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Distribution: score 68 (market avg 72)",
+      "management_commentary": [
+        {
+          "segment": "Mobile",
+          "type": "guidance",
+          "content": "Epic is #1 mobile network in speed tests (Ookla). 5G pioneer since Jul 2021. Growing subscriber base challenging Cyta's dominance. NJJ/Monaco Telecom ownership providing investment commitment.",
+          "speaker": "CEO",
+          "source_url": null
+        },
+        {
+          "segment": "Broadband",
+          "type": "outlook",
+          "content": "FTTH rollout funded by EIB EUR 19M. Growing broadband subscriber base. Mobile-first evolving toward convergence to compete with Cyta's fixed-mobile bundles.",
+          "speaker": "CEO",
+          "source_url": null
+        }
+      ],
+      "strengths": [
+        "Digital Experience: score 85 (market avg 73)",
+        "Innovation: score 88 (market avg 70)",
+        "Network Quality: score 90 (market avg 81)",
+        "Price Competitiveness: score 82 (market avg 72)",
+        "Strong EBITDA margin at 39.4%",
+        "Revenue on growth trajectory",
+        "Top 2 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "Distribution: score 68 (market avg 72)",
+        "Enterprise Solutions: score 55 (market avg 63)",
+        "Network Coverage: score 78 (market avg 82)",
+        "5G coverage gap at only 60.0%"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Limited fixed broadband infrastructure vs Cyta's national network",
+          "side_effect": "Cannot offer full convergent bundles across Cyprus",
+          "attack_vector": "Cyta leverages fixed-mobile convergence advantage",
+          "severity": "high",
+          "evidence": [
+            "Epic FTTH rollout ongoing but much smaller than Cyta's national copper/fiber network"
+          ]
+        },
+        {
+          "trigger_action": "Second-largest mobile operator competing against state-backed Cyta",
+          "side_effect": "Scale disadvantage in a small market",
+          "attack_vector": "Cyta uses incumbent advantages and state backing",
+          "severity": "medium",
+          "evidence": [
+            "Epic ~35% mobile share vs Cyta ~52%; small market limits growth"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #2 of 3 operators in market; revenue EUR 33.0M; EBITDA margin 39.4%; stable but facing challenges; key strength: Digital Experience; key challenge: Distribution; Management outlook: Epic is #1 mobile network in speed tests (Ookla). 5G pioneer since Jul 2021. Growing subscriber base challenging Cyta's dominance. NJJ/Monaco Telecom ownership providing investment commitment."
+    },
+    "swot": {
+      "strengths": [
+        "Digital Experience: score 85 (market avg 73)",
+        "Innovation: score 88 (market avg 70)",
+        "Network Quality: score 90 (market avg 81)",
+        "Price Competitiveness: score 82 (market avg 72)",
+        "Strong EBITDA margin at 39.4%",
+        "Revenue on growth trajectory",
+        "Top 2 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "Distribution: score 68 (market avg 72)",
+        "Enterprise Solutions: score 55 (market avg 63)",
+        "Network Coverage: score 78 (market avg 82)",
+        "5G coverage gap at only 60.0%",
+        "Cannot offer full convergent bundles across Cyprus",
+        "Scale disadvantage in a small market"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy",
+        "National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access",
+        "Epic Cyprus revenue growth 10.0% YoY"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy",
+        "PrimeTel revenue growth 7.7% YoY",
+        "High existing competitors pressure",
+        "High substitutes pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Digital Experience: score 85 (market avg 73)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+        "Leverage 'Innovation: score 88 (market avg 70)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access'.",
+        "Leverage 'Network Quality: score 90 (market avg 81)' to capture the opportunity of 'Epic Cyprus revenue growth 10.0% YoY'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Distribution: score 68 (market avg 72)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+        "Address weakness 'Enterprise Solutions: score 55 (market avg 63)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access'.",
+        "Address weakness 'Network Coverage: score 78 (market avg 82)' to unlock the opportunity of 'Epic Cyprus revenue growth 10.0% YoY'."
+      ],
+      "st_strategies": [
+        "Use strength 'Digital Experience: score 85 (market avg 73)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+        "Use strength 'Innovation: score 88 (market avg 70)' to counter the threat of 'PrimeTel revenue growth 7.7% YoY'.",
+        "Use strength 'Network Quality: score 90 (market avg 81)' to counter the threat of 'High existing competitors pressure'.",
+        "Use strength 'Price Competitiveness: score 82 (market avg 72)' to counter the threat of 'High substitutes pressure'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Distribution: score 68 (market avg 72)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+        "Mitigate weakness 'Enterprise Solutions: score 55 (market avg 63)' and defend against the threat of 'PrimeTel revenue growth 7.7% YoY'.",
+        "Mitigate weakness 'Network Coverage: score 78 (market avg 82)' and defend against the threat of 'High existing competitors pressure'.",
+        "Mitigate weakness '5G coverage gap at only 60.0%' and defend against the threat of 'High substitutes pressure'."
+      ],
+      "key_message": "SWOT analysis identifies 7 strengths, 6 weaknesses, 3 opportunities, and 4 threats. The recommended strategic posture is defensive (ST-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.35,
+          "market_share_score": 3.16,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.0,
+          "competitive_position": 6.04,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.34
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.35,
+          "market_share_score": 3.16,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.0,
+          "competitive_position": 6.04,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.34
+        },
+        {
+          "opportunity_name": "SO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.35,
+          "market_share_score": 3.16,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.0,
+          "competitive_position": 6.04,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.34
+        },
+        {
+          "opportunity_name": "Epic Cyprus revenue growth 10.0% YoY",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 3.16,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.0,
+          "competitive_position": 5.54,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.09
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 3.16,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.79,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.08
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 3.16,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.79,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.08
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 3.16,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.79,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.08
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.15,
+          "market_share_score": 3.16,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.0,
+          "competitive_position": 5.54,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.22
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.15,
+          "market_share_score": 3.16,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.0,
+          "competitive_position": 5.54,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.22
+        },
+        {
+          "opportunity_name": "Exploit primetel_cy weakness: Brand Strength: score 55 (market avg 72)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.75,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.0,
+          "competitive_position": 6.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.31
+        },
+        {
+          "opportunity_name": "Exploit primetel_cy weakness: Distribution: score 55 (market avg 72)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.75,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.0,
+          "competitive_position": 6.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.31
+        },
+        {
+          "opportunity_name": "Exploit cyta_cy weakness: Digital Experience: score 65 (market avg 73)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.75,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.0,
+          "competitive_position": 6.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.31
+        },
+        {
+          "opportunity_name": "Exploit cyta_cy weakness: Innovation: score 62 (market avg 70)",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.75,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.0,
+          "competitive_position": 6.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.31
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.95,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.78
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.95,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.78
+        },
+        {
+          "opportunity_name": "WO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 5.95,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.78
+        },
+        {
+          "opportunity_name": "ST-1",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-2",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-3",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-4",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "WT-1",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-2",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-3",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-4",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        }
+      ],
+      "grow_invest": [
+        "SO-1",
+        "SO-2",
+        "SO-3",
+        "Epic Cyprus revenue growth 10.0% YoY",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy",
+        "National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access",
+        "Exploit primetel_cy weakness: Brand Strength: score 55 (market avg 72)",
+        "Exploit primetel_cy weakness: Distribution: score 55 (market avg 72)",
+        "Exploit cyta_cy weakness: Digital Experience: score 65 (market avg 73)",
+        "Exploit cyta_cy weakness: Innovation: score 62 (market avg 70)"
+      ],
+      "acquire_skills": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "WO-1",
+        "WO-2",
+        "WO-3"
+      ],
+      "harvest": [
+        "ST-1",
+        "ST-2",
+        "ST-3",
+        "ST-4"
+      ],
+      "avoid_exit": [
+        "WT-1",
+        "WT-2",
+        "WT-3",
+        "WT-4"
+      ],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Digital Experience: score 85 (market avg 73)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Innovation: score 88 (market avg 70)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-3",
+          "description": "Leverage 'Network Quality: score 90 (market avg 81)' to capture the opportunity of 'Epic Cyprus revenue growth 10.0% YoY'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Epic Cyprus revenue growth 10.0% YoY",
+          "description": "Epic Cyprus revenue growth 10.0% YoY",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit primetel_cy weakness: Brand Strength: score 55 (market avg 72)",
+          "description": "Competitor primetel_cy is weak in: Brand Strength: score 55 (market avg 72)",
+          "derived_from": [
+            "competitor_weakness",
+            "primetel_cy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit primetel_cy weakness: Distribution: score 55 (market avg 72)",
+          "description": "Competitor primetel_cy is weak in: Distribution: score 55 (market avg 72)",
+          "derived_from": [
+            "competitor_weakness",
+            "primetel_cy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit cyta_cy weakness: Digital Experience: score 65 (market avg 73)",
+          "description": "Competitor cyta_cy is weak in: Digital Experience: score 65 (market avg 73)",
+          "derived_from": [
+            "competitor_weakness",
+            "cyta_cy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit cyta_cy weakness: Innovation: score 62 (market avg 70)",
+          "description": "Competitor cyta_cy is weak in: Innovation: score 62 (market avg 70)",
+          "derived_from": [
+            "competitor_weakness",
+            "cyta_cy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Distribution: score 68 (market avg 72)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Enterprise Solutions: score 55 (market avg 63)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require epic_cy investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-3",
+          "description": "Address weakness 'Network Coverage: score 78 (market avg 82)' to unlock the opportunity of 'Epic Cyprus revenue growth 10.0% YoY'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "ST-1",
+          "description": "Use strength 'Digital Experience: score 85 (market avg 73)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-2",
+          "description": "Use strength 'Innovation: score 88 (market avg 70)' to counter the threat of 'PrimeTel revenue growth 7.7% YoY'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-3",
+          "description": "Use strength 'Network Quality: score 90 (market avg 81)' to counter the threat of 'High existing competitors pressure'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-4",
+          "description": "Use strength 'Price Competitiveness: score 82 (market avg 72)' to counter the threat of 'High substitutes pressure'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "WT-1",
+          "description": "Mitigate weakness 'Distribution: score 68 (market avg 72)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect epic_cy'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-2",
+          "description": "Mitigate weakness 'Enterprise Solutions: score 55 (market avg 63)' and defend against the threat of 'PrimeTel revenue growth 7.7% YoY'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-3",
+          "description": "Mitigate weakness 'Network Coverage: score 78 (market avg 82)' and defend against the threat of 'High existing competitors pressure'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-4",
+          "description": "Mitigate weakness '5G coverage gap at only 60.0%' and defend against the threat of 'High substitutes pressure'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        }
+      ],
+      "key_message": "SPAN matrix positions 24 opportunities: 10 grow/invest, 6 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 10 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 20,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 20,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 20
+  }
+}

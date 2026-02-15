@@ -1,8 +1,9 @@
-"""Seed orchestrator — seeds all 17 markets into a single SQLite DB.
+"""Seed orchestrator — seeds all 22 markets into a single SQLite DB.
 
 Used by cli_group_local.py and cli_push_all.py to prepare a complete
 local database with Germany, Chile, 10 LATAM Millicom markets,
-Netherlands, Belgium, France, Italy, and Poland.
+Netherlands, Belgium, France, Italy, Poland, Switzerland, Ireland,
+Ukraine, Cyprus, and Malta.
 """
 
 import sys
@@ -15,16 +16,20 @@ if str(_project_root) not in sys.path:
 from src.database.db import TelecomDatabase
 from src.database.seed_latam_helper import seed_market
 
-# All 17 markets in the system
+# All 22 markets in the system
 ALL_MARKETS = [
     "germany", "chile",
     "guatemala", "colombia", "honduras", "paraguay", "bolivia",
     "el_salvador", "panama", "nicaragua", "ecuador", "uruguay",
     "netherlands", "belgium", "france", "italy", "poland",
+    "switzerland", "ireland", "ukraine", "cyprus", "malta",
 ]
 
 # European markets with shared get_seed_data() pattern
-EUROPE_MARKETS = ["netherlands", "belgium", "france", "italy", "poland"]
+EUROPE_MARKETS = [
+    "netherlands", "belgium", "france", "italy", "poland",
+    "switzerland", "ireland", "ukraine", "cyprus", "malta",
+]
 
 # 10 LATAM markets with shared seed_market() pattern
 LATAM_MARKETS = [
@@ -48,7 +53,7 @@ TIGO_OPERATORS = [
 
 
 def seed_all_markets(db_path: str = ":memory:") -> TelecomDatabase:
-    """Seed all 17 markets into a single SQLite database.
+    """Seed all 22 markets into a single SQLite database.
 
     Args:
         db_path: Path to SQLite database. Use ":memory:" for in-memory.
@@ -63,33 +68,33 @@ def seed_all_markets(db_path: str = ":memory:") -> TelecomDatabase:
     _apply_v3_schema(db)
 
     # 1. Seed Germany (uses its own seed_all pattern)
-    print("\n[1/18] Seeding Germany...")
+    print("\n[1/23] Seeding Germany...")
     from src.database.seed_germany import seed_all as seed_germany
     # seed_germany creates its own db, but we can call the individual steps
     # Instead, we re-use the db by calling the step functions directly
     _seed_germany_into(db)
 
     # 2. Seed Chile (uses its own seed_all pattern)
-    print("\n[2/18] Seeding Chile...")
+    print("\n[2/23] Seeding Chile...")
     _seed_chile_into(db)
 
     # 3-12. Seed 10 LATAM markets via shared helper
     for i, market_id in enumerate(LATAM_MARKETS, 3):
-        print(f"\n[{i}/18] Seeding {market_id}...")
+        print(f"\n[{i}/23] Seeding {market_id}...")
         _seed_latam_market(db, market_id)
 
     # 13. Seed Millicom group structure
-    print("\n[13/18] Seeding Millicom group structure...")
+    print("\n[13/23] Seeding Millicom group structure...")
     from src.database.seed_millicom import seed_all_millicom
     seed_all_millicom(db)
 
-    # 14-18. Seed European markets (Netherlands, Belgium, France, Italy, Poland)
+    # 14-23. Seed European markets
     for i, market_id in enumerate(EUROPE_MARKETS, 14):
-        print(f"\n[{i}/18] Seeding {market_id}...")
+        print(f"\n[{i}/23] Seeding {market_id}...")
         _seed_europe_market(db, market_id)
 
     print(f"\n{'='*60}")
-    print(f"  All 17 markets seeded successfully")
+    print(f"  All 22 markets seeded successfully")
     print(f"{'='*60}")
 
     return db

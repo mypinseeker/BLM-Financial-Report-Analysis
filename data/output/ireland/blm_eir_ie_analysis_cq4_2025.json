@@ -1,0 +1,3232 @@
+{
+  "meta": {
+    "target_operator": "eir_ie",
+    "market": "ireland",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-15T09:30:21.869055",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "ComReg pro-competition; MBSA2 spectrum auction Dec 2022 (EUR 448M total). Wholesale access mandated on eir. 5G deployed by all three MNOs. National Broadband Plan (EUR 2.7B) via NBI.",
+            "trend": "Regulatory stance: ComReg pro-competition; MBSA2 spectrum auction Dec 2022 (EUR 448M total). Wholesale access mandated on eir. 5G deployed by all three MNOs. National Broadband Plan (EUR 2.7B) via NBI.",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect eir_ie",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: ComReg pro-competition; MBSA2 spectrum auction Dec 2022 (EUR 448M total). Wholesale access mandated on eir. 5G deployed by all three MNOs. National Broadband Plan (EUR 2.7B) via NBI."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "NBP targeting 100% broadband by 2027. FTTP 74% premises availability (Q4 2024). Gigabit 85% availability. Ireland as EU tech hub (Apple, Google, Meta HQs). Population 5.4M (CSO Apr 2024).",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: NBP targeting 100% broadband by 2027. FTTP 74% premises availability (Q4 2024). Gigabit 85% availability. Ireland as EU tech hub (Apple, Google, Meta HQs). Population 5.4M (CSO Apr 2024)."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "NBP exceeds 2024 target — 300K+ premises passed by NBI",
+            "current_status": "National Broadband Ireland surpassed 300K premises passed target. On track for 420K+ by end 2025. EUR 2.7B state-funded rural broadband program targeting 100% coverage by end 2026.",
+            "trend": "National Broadband Ireland surpassed 300K premises passed target. On track for 420K+ by end 2025. EUR 2.7B state-funded rural broadband program targeting 100% coverage by end 2026.",
+            "trend_direction": "uncertain",
+            "industry_impact": "National Broadband Ireland surpassed 300K premises passed target. On track for 420K+ by end 2025. EUR 2.7B state-funded rural broadband program targeting 100% coverage by end 2026.",
+            "company_impact": "NBP exceeds 2024 target — 300K+ premises passed by NBI: requires eir_ie to monitor and adapt strategy",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [],
+            "data_source": "intelligence_events"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 2.6%",
+            "trend": "GDP growth trend: stable (latest 2.6%)",
+            "trend_direction": "stable",
+            "industry_impact": "Strong GDP growth boosts both consumer and enterprise spending",
+            "company_impact": "Supported revenue growth for eir_ie",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 2.6%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 1.0%",
+            "trend": "Inflation trend: stable (latest 1.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "Manageable cost environment for eir_ie",
+            "impact_type": "neutral",
+            "severity": "low",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 1.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Unemployment",
+            "current_status": "Unemployment at 4.2%",
+            "trend": "Unemployment trend: stable",
+            "trend_direction": "stable",
+            "industry_impact": "Unemployment affects consumer spending power and enterprise IT budgets",
+            "company_impact": "Consumer segment sensitivity for eir_ie",
+            "impact_type": "neutral",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Unemployment: 4.2%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 25.0% of mobile subscribers",
+            "trend": "5G adoption trend: stable (25.0% -> 25.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for eir_ie",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 25.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 51.0%",
+            "trend": "Fiber penetration trend: stable (51.0% -> 51.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for eir_ie",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 51.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in early adoption phase (25.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "improving",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for eir_ie",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 25.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 51.0%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for eir_ie",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 51.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 7/10 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie",
+          "National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration."
+      },
+      "industry_market_size": "EUR 0.8B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+3.4% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Improving (industry EBITDA margin 32.2%, up from 30.9%)",
+      "industry_concentration": "CR4 = 100% (eir: 45.2%, Vodafone Ireland: 34.0%, Three Ireland: 20.8%)",
+      "industry_lifecycle_stage": "late_growth",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, Fiber Broadband Penetration Industry is in late growth phase. (+3.4% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 764.0,
+        "total_mobile_subscribers_k": 6039.0,
+        "total_broadband_subscribers_k": 887.0,
+        "market_shares": {
+          "eir": 45.2,
+          "Vodafone Ireland": 34.0,
+          "Three Ireland": 20.8
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 117.3,
+          "broadband_penetration_pct": 17.2
+        },
+        "operator_count": 3
+      },
+      "changes": [
+        {
+          "change_type": "merger",
+          "description": "Liberty Global in talks to acquire Three Ireland for EUR 1.5B",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "both",
+          "impact_description": "CK Hutchison in advanced discussions to sell Three Ireland to Liberty Global (Virgin Media Ireland parent) for up to EUR 1.5B. Would create converged fixed-mobile operator.",
+          "severity": "high",
+          "evidence": []
+        }
+      ],
+      "opportunities": [],
+      "threats": [],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Premium Convergent",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Reliable high-speed fiber across all of Ireland (rural gap)",
+            "Seamless fixed-mobile convergent bundles"
+          ],
+          "pain_points": [
+            "Rural broadband still patchy despite National Broadband Plan",
+            "Limited convergent offerings vs UK/continental markets"
+          ],
+          "purchase_decision_factors": [
+            "Network reliability and speed",
+            "Bundle value (fixed + mobile + TV)",
+            "Brand trust",
+            "Local availability of fiber"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Value-Seeking",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Affordable unlimited mobile data plans",
+            "Transparent pricing without bill shock"
+          ],
+          "pain_points": [
+            "Three's dominance limits pricing competition",
+            "Confusing tariff structures across operators"
+          ],
+          "purchase_decision_factors": [
+            "Monthly cost",
+            "Data allowance",
+            "Network coverage (especially rural Ireland)",
+            "Contract flexibility"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Digital-First / Young",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "eSIM and digital-first onboarding",
+            "Flexible SIM-only plans"
+          ],
+          "pain_points": [
+            "Limited 5G coverage outside Dublin/Cork",
+            "Slow eSIM adoption by Irish operators"
+          ],
+          "purchase_decision_factors": [
+            "Price per GB",
+            "5G access",
+            "Digital experience",
+            "No contract lock-in"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Enterprise & Public Sector",
+          "segment_type": "enterprise",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Reliable connectivity for multinational HQs (Ireland is EU tech hub)",
+            "Private 5G for pharmaceutical manufacturing",
+            "Cloud and cybersecurity managed services"
+          ],
+          "pain_points": [
+            "Enterprise fiber limited outside Dublin business districts",
+            "Lack of scale in managed services vs UK/EU providers"
+          ],
+          "purchase_decision_factors": [
+            "Reliability and SLAs",
+            "National coverage",
+            "Managed services capability",
+            "Data sovereignty (EU/Irish data residency)"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "critical",
+          "gap_analysis": "No competitor data available for Price"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 4.8,
+          "competitor_scores": {
+            "three_ie": 4.5,
+            "vodafone_ie": 4.2
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Market leader in Availability (score 4.8/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Packaging"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 4.1,
+          "competitor_scores": {
+            "three_ie": 4.4,
+            "vodafone_ie": 4.1
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Performance by 0.2 points. Leader: three_ie (4.4/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.5,
+          "competitor_scores": {
+            "three_ie": 3.2,
+            "vodafone_ie": 3.9
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Ease of Use by 0.0 points. Leader: vodafone_ie (3.9/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 4.2,
+          "competitor_scores": {
+            "three_ie": 2.8,
+            "vodafone_ie": 4.1
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Market leader in Assurances (score 4.2/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Lifecycle Cost"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 4.1,
+          "competitor_scores": {
+            "three_ie": 4.0,
+            "vodafone_ie": 4.2
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Above average in Social/Brand but 0.1 points behind leader (vodafone_ie: 4.2/5.0)"
+        }
+      ],
+      "customer_value_migration": "Limited data to assess value migration trends",
+      "market_outlook": "mixed",
+      "key_message": "Ireland telecom market totals EUR 764.0M in quarterly revenue; competitive strengths in Availability, Performance; Market presents a balanced mix of opportunities and challenges."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "3 active operators in the market",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 45% of market revenue (total: EUR 764.0M)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from +2.1% to +4.9% (spread: 2.8pp)",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 29.9%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 45% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.17%/month. Highest: 1.30% indicating moderate willingness to switch.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 69%. Moderate contract lock-in moderately constrains buyer mobility.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "vodafone_ie": {
+          "operator": "Vodafone Ireland",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 260.0,
+            "service_revenue": 230.0,
+            "service_revenue_growth_pct": 3.6,
+            "ebitda": 45.0,
+            "ebitda_margin_pct": 17.3,
+            "ebitda_growth_pct": 7.1,
+            "capex": 34.0,
+            "capex_to_revenue_pct": 13.1,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 3.45,
+              "momentum_score": 50.95,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 2.02,
+              "acceleration": 0.4,
+              "sequential_growth": [
+                1.22,
+                0.81,
+                0.8,
+                0.0,
+                1.19,
+                1.18,
+                0.78
+              ],
+              "yoy_growth": [
+                2.86,
+                2.82,
+                3.2,
+                3.17
+              ],
+              "latest_qoq_pct": 0.78,
+              "latest_yoy_pct": 3.17,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "margin_metrics": {
+              "cagr_pct": 6.48,
+              "momentum_score": 37.55,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.03,
+              "trend_slope": 0.23,
+              "acceleration": -0.27,
+              "sequential_growth": [
+                3.87,
+                4.35,
+                -0.6,
+                0.0,
+                3.59,
+                -1.16,
+                1.17
+              ],
+              "yoy_growth": [
+                7.74,
+                7.45,
+                1.79,
+                3.59
+              ],
+              "latest_qoq_pct": 1.17,
+              "latest_yoy_pct": 3.59,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low"
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 2130.0,
+            "mobile_postpaid_k": 1436.0,
+            "mobile_net_adds_k": 10.0,
+            "mobile_churn_pct": 1.1,
+            "mobile_arpu": 27.0,
+            "broadband_total_k": 346.0,
+            "broadband_fiber_k": 170.0,
+            "broadband_net_adds_k": 0.0,
+            "tv_total_k": 138.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 65.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 620.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Ericsson/Nokia",
+              "spectrum_mhz": 360,
+              "siro_jv_homepass_k": 620,
+              "3g_shutdown": "Nov 2024"
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "TV/Video",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus; strong B2B/enterprise push",
+          "supply_chain_status": "Primary vendor: Ericsson/Nokia",
+          "ecosystem_partners": [
+            "Network vendor: Ericsson/Nokia"
+          ],
+          "core_control_points": [
+            "Market leadership in Brand Strength",
+            "Market leadership in Network Coverage",
+            "Market leadership in Distribution",
+            "Market leadership in Enterprise Solutions",
+            "Market leadership in Network Quality"
+          ],
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; low-margin / scale-focused",
+          "org_structure": "CEO: Sabrina Casalta (Replaced Amanda Nelson (2022-2025); Vodafone Group appointment)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Customer Service: score 78 (market avg 71)",
+            "Enterprise Solutions: score 82 (market avg 74)"
+          ],
+          "weaknesses": [
+            "Network Coverage: score 85 (market avg 90)",
+            "Price Competitiveness: score 68 (market avg 74)"
+          ],
+          "problems": [
+            "Competitive gap in Network Coverage",
+            "Competitive gap in Price Competitiveness"
+          ],
+          "likely_future_actions": [
+            "Vodafone Ireland is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Vodafone Ireland's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Vodafone Ireland is weak in: Network Coverage, Price Competitiveness. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Network Coverage: score 85 (market avg 90)",
+                "Price Competitiveness: score 68 (market avg 74)"
+              ],
+              "suggested_action": "Invest in Network Coverage, Price Competitiveness to capture customers dissatisfied with Vodafone Ireland."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Vodafone Ireland excels in: Customer Service, Enterprise Solutions. Study their approach for best practices.",
+              "evidence": [
+                "Customer Service: score 78 (market avg 71)",
+                "Enterprise Solutions: score 82 (market avg 74)"
+              ],
+              "suggested_action": "Benchmark Vodafone Ireland's practices in Customer Service, Enterprise Solutions."
+            }
+          ]
+        },
+        "three_ie": {
+          "operator": "Three Ireland",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 159.0,
+            "service_revenue": 147.0,
+            "service_revenue_growth_pct": 2.1,
+            "ebitda": 42.0,
+            "ebitda_margin_pct": 26.4,
+            "ebitda_growth_pct": 5.0,
+            "capex": 28.0,
+            "capex_to_revenue_pct": 17.6,
+            "revenue_trend": "growing",
+            "margin_trend": "improving",
+            "revenue_metrics": {
+              "cagr_pct": 2.22,
+              "momentum_score": 49.9,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 0.71,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                1.31,
+                1.29,
+                0.0,
+                -1.27,
+                1.29,
+                1.27,
+                0.0
+              ],
+              "yoy_growth": [
+                1.31,
+                1.29,
+                1.27,
+                1.27
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 1.27,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low"
+            },
+            "margin_metrics": {
+              "cagr_pct": 3.64,
+              "momentum_score": 48.51,
+              "momentum_phase": "flat",
+              "volatility": 0.03,
+              "trend_slope": 0.21,
+              "acceleration": -0.11,
+              "sequential_growth": [
+                4.03,
+                3.88,
+                -4.85,
+                1.18,
+                3.88,
+                0.75,
+                -2.22
+              ],
+              "yoy_growth": [
+                4.03,
+                3.88,
+                0.75,
+                3.53
+              ],
+              "latest_qoq_pct": -2.22,
+              "latest_yoy_pct": 3.53,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q3=high"
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 2400.0,
+            "mobile_postpaid_k": 1440.0,
+            "mobile_net_adds_k": 10.0,
+            "mobile_churn_pct": 1.3,
+            "mobile_arpu": 18.5,
+            "broadband_total_k": 68.0,
+            "broadband_fiber_k": 68.0,
+            "broadband_net_adds_k": 3.0,
+            "tv_total_k": 0.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 90.0,
+            "four_g_coverage_pct": 99.0,
+            "fiber_homepass_k": 0.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Ericsson",
+              "spectrum_mhz": 350,
+              "5g_sites": 1497,
+              "5g_sa_status": "Deployed"
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)"
+          ],
+          "new_product_pipeline": [
+            "FY2024 revenue EUR 630.4M (+2.5%). Operating profit EUR 36M (+50%). Net loss narrowed to EUR 31.2M. 5G sites upgraded to"
+          ],
+          "growth_strategy": "Revenue-led profitable growth; subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Ericsson; 5G SA: Deployed",
+          "ecosystem_partners": [
+            "Network vendor: Ericsson"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Network Quality",
+            "Market leadership in Price Competitiveness",
+            "Market leadership in Brand Strength",
+            "Market leadership in Distribution"
+          ],
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile",
+          "org_structure": "CEO: Elaine Carey (Replaced Robert Finnegan Q2 2024; new leadership under CK Hutchison review)",
+          "incentive_system": "Efficiency/profitability-focused incentive alignment",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [
+            "Liberty Global in talks to acquire Three Ireland for EUR 1.5B"
+          ],
+          "strengths": [
+            "Price Competitiveness: score 85 (market avg 74)"
+          ],
+          "weaknesses": [
+            "Customer Service: score 65 (market avg 71)",
+            "Enterprise Solutions: score 55 (market avg 74)"
+          ],
+          "problems": [
+            "Competitive gap in Customer Service",
+            "Competitive gap in Enterprise Solutions"
+          ],
+          "likely_future_actions": [
+            "Three Ireland is likely to continue aggressive network expansion (capex/revenue at 18% with growing revenue).",
+            "Three Ireland is likely to continue market share expansion in mobile, leveraging positive subscriber momentum.",
+            "Three Ireland with 90% 5G coverage is positioned to push 5G monetization through premium tiers and B2B use cases."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Three Ireland's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Three Ireland is weak in: Customer Service, Enterprise Solutions. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Customer Service: score 65 (market avg 71)",
+                "Enterprise Solutions: score 55 (market avg 74)"
+              ],
+              "suggested_action": "Invest in Customer Service, Enterprise Solutions to capture customers dissatisfied with Three Ireland."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Three Ireland excels in: Price Competitiveness. Study their approach for best practices.",
+              "evidence": [
+                "Price Competitiveness: score 85 (market avg 74)"
+              ],
+              "suggested_action": "Benchmark Three Ireland's practices in Price Competitiveness."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "vodafone_ie": 260.0,
+          "eir_ie": 345.0,
+          "three_ie": 159.0
+        },
+        "revenue_growth": {
+          "vodafone_ie": 3.6,
+          "eir_ie": 4.9,
+          "three_ie": 2.1
+        },
+        "ebitda_margin": {
+          "vodafone_ie": 17.3,
+          "eir_ie": 46.1,
+          "three_ie": 26.4
+        },
+        "subscribers": {
+          "vodafone_ie": 2130.0,
+          "eir_ie": 1509.0,
+          "three_ie": 2400.0
+        },
+        "arpu": {
+          "vodafone_ie": 27.0,
+          "eir_ie": 26.0,
+          "three_ie": 18.5
+        },
+        "churn": {
+          "vodafone_ie": 1.1,
+          "eir_ie": 1.1,
+          "three_ie": 1.3
+        },
+        "5g_coverage": {
+          "vodafone_ie": 65.0,
+          "eir_ie": 74.0,
+          "three_ie": 90.0
+        }
+      },
+      "competitive_landscape": "The market comprises 3 active operators: Vodafone Ireland, eir, Three Ireland. Overall competition intensity is assessed as medium. Revenue ranking: eir (345.0M), Vodafone Ireland (260.0M), Three Ireland (159.0M). Five Forces: Existing Competitors: medium; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: medium.",
+      "key_message": "In a 3-player market with medium competition intensity, eir leads with 45% revenue share. Target operator holds 45% share. Strongest competitive force: Substitutes."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 345.0,
+        "service_revenue": 322.0,
+        "ebitda": 159.0,
+        "ebitda_margin_pct": 46.1,
+        "net_income": null,
+        "capex": 76.0,
+        "capex_to_revenue_pct": 22.0,
+        "opex": null,
+        "employees": 3170,
+        "revenue_qoq_pct": 3.92,
+        "revenue_yoy_pct": 4.55,
+        "ebitda_qoq_pct": 2.58,
+        "ebitda_growth_pct": 4.6,
+        "service_revenue_growth_pct": 4.9,
+        "revenue_trend": [
+          318.0,
+          322.0,
+          325.0,
+          330.0,
+          322.0,
+          327.0,
+          332.0,
+          345.0
+        ],
+        "ebitda_trend": [
+          145.0,
+          148.0,
+          150.0,
+          152.0,
+          148.0,
+          152.0,
+          155.0,
+          159.0
+        ],
+        "margin_trend": [
+          45.6,
+          46.0,
+          46.2,
+          46.1,
+          46.0,
+          46.5,
+          46.7,
+          46.1
+        ],
+        "revenue_metrics": {
+          "cagr_pct": 4.77,
+          "momentum_score": 60.11,
+          "momentum_phase": "accelerating_growth",
+          "volatility": 0.02,
+          "trend_slope": 2.82,
+          "acceleration": 3.5,
+          "sequential_growth": [
+            1.26,
+            0.93,
+            1.54,
+            -2.42,
+            1.55,
+            1.53,
+            3.92
+          ],
+          "yoy_growth": [
+            1.26,
+            1.55,
+            2.15,
+            4.55
+          ],
+          "latest_qoq_pct": 3.92,
+          "latest_yoy_pct": 4.55,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q4=high"
+        },
+        "ebitda_metrics": {
+          "cagr_pct": 5.41,
+          "momentum_score": 57.81,
+          "momentum_phase": "accelerating_growth",
+          "volatility": 0.03,
+          "trend_slope": 1.61,
+          "acceleration": 1.3,
+          "sequential_growth": [
+            2.07,
+            1.35,
+            1.33,
+            -2.63,
+            2.7,
+            1.97,
+            2.58
+          ],
+          "yoy_growth": [
+            2.07,
+            2.7,
+            3.33,
+            4.61
+          ],
+          "latest_qoq_pct": 2.58,
+          "latest_yoy_pct": 4.61,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q1=low; Q4=high"
+        },
+        "margin_metrics": {
+          "cagr_pct": 0.63,
+          "momentum_score": 47.36,
+          "momentum_phase": "stabilizing",
+          "volatility": 0.01,
+          "trend_slope": 0.09,
+          "acceleration": -0.12,
+          "sequential_growth": [
+            0.88,
+            0.43,
+            -0.22,
+            -0.22,
+            1.09,
+            0.43,
+            -1.28
+          ],
+          "yoy_growth": [
+            0.88,
+            1.09,
+            1.08,
+            0.0
+          ],
+          "latest_qoq_pct": -1.28,
+          "latest_yoy_pct": 0.0,
+          "seasonality_detected": true,
+          "seasonality_pattern": "Q1=low"
+        },
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 96.0,
+          "share_pct": 27.8
+        },
+        "fixed_service_revenue": {
+          "value": 178.0,
+          "share_pct": 51.6
+        },
+        "b2b_revenue": {
+          "value": 48.0,
+          "share_pct": 13.9
+        },
+        "other_revenue": {
+          "value": 23.0,
+          "share_pct": 6.7
+        },
+        "total_revenue": 345.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 3,
+        "revenue_rank": 1,
+        "total_revenue": 345.0,
+        "revenue_market_share_pct": 45.2,
+        "subscriber_rank": 3,
+        "mobile_subscriber_share_pct": 25.0,
+        "broadband_subscriber_share_pct": 53.3,
+        "competitors": {
+          "vodafone_ie": {
+            "display_name": "Vodafone Ireland",
+            "total_revenue": 260.0,
+            "mobile_total_k": 2130.0,
+            "broadband_total_k": 346.0
+          },
+          "three_ie": {
+            "display_name": "Three Ireland",
+            "total_revenue": 159.0,
+            "mobile_total_k": 2400.0,
+            "broadband_total_k": 68.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue": {
+          "metric_type": "revenue",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "eir_ie",
+              "display_name": "eir",
+              "share_pct": [
+                44.41340782122905,
+                44.17009602194788,
+                44.41379310344827,
+                44.2489851150203,
+                44.39890710382514,
+                44.32576769025367,
+                44.65493910690122,
+                45.15706806282723
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 45.16,
+              "share_change_pp": 0.74,
+              "avg_quarterly_change_pp": 0.11,
+              "direction": "gaining",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafone_ie",
+              "display_name": "Vodafone Ireland",
+              "share_pct": [
+                34.21787709497207,
+                34.5679012345679,
+                34.206896551724135,
+                34.50608930987821,
+                34.15300546448087,
+                34.445927903871834,
+                34.10013531799729,
+                34.031413612565444
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 34.03,
+              "share_change_pp": -0.19,
+              "avg_quarterly_change_pp": -0.03,
+              "direction": "stable",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "three_ie",
+              "display_name": "Three Ireland",
+              "share_pct": [
+                21.368715083798882,
+                21.262002743484228,
+                21.379310344827587,
+                21.24492557510149,
+                21.44808743169399,
+                21.2283044058745,
+                21.24492557510149,
+                20.81151832460733
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 20.81,
+              "share_change_pp": -0.56,
+              "avg_quarterly_change_pp": -0.08,
+              "direction": "losing",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3630.42,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3600.04,
+              3598.01,
+              3599.77,
+              3599.99,
+              3597.71,
+              3601.94,
+              3608.23,
+              3630.42
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "eir_ie",
+          "target_series": {
+            "operator_id": "eir_ie",
+            "display_name": "eir",
+            "share_pct": [
+              44.41340782122905,
+              44.17009602194788,
+              44.41379310344827,
+              44.2489851150203,
+              44.39890710382514,
+              44.32576769025367,
+              44.65493910690122,
+              45.15706806282723
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 45.16,
+            "share_change_pp": 0.74,
+            "avg_quarterly_change_pp": 0.11,
+            "direction": "gaining",
+            "rank_latest": 1,
+            "rank_change": 0
+          },
+          "share_leader_id": "eir_ie",
+          "biggest_gainer_id": "eir_ie",
+          "biggest_loser_id": "three_ie",
+          "key_message": "Revenue share: 45.2% (#1); gaining (+0.7pp); market is highly concentrated (HHI 3,630)."
+        },
+        "mobile_subscribers": {
+          "metric_type": "mobile_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "three_ie",
+              "display_name": "Three Ireland",
+              "share_pct": [
+                40.139616055846425,
+                40.10152284263959,
+                40.13840830449827,
+                40.0,
+                40.06849315068493,
+                39.89983305509182,
+                40.10876954452753,
+                39.741679085941385
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 39.74,
+              "share_change_pp": -0.4,
+              "avg_quarterly_change_pp": -0.06,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafone_ie",
+              "display_name": "Vodafone Ireland",
+              "share_pct": [
+                35.776614310645726,
+                35.53299492385787,
+                35.6401384083045,
+                35.46218487394958,
+                35.61643835616438,
+                35.39232053422371,
+                35.69000679809653,
+                35.270740188772976
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 35.27,
+              "share_change_pp": -0.51,
+              "avg_quarterly_change_pp": -0.07,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "eir_ie",
+              "display_name": "eir",
+              "share_pct": [
+                24.083769633507853,
+                24.36548223350254,
+                24.22145328719723,
+                24.53781512605042,
+                24.315068493150687,
+                24.707846410684475,
+                24.201223657375934,
+                24.987580725285643
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 24.99,
+              "share_change_pp": 0.9,
+              "avg_quarterly_change_pp": 0.13,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3447.81,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3471.18,
+              3464.4,
+              3467.99,
+              3459.67,
+              3465.24,
+              3455.09,
+              3468.19,
+              3447.81
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "eir_ie",
+          "target_series": {
+            "operator_id": "eir_ie",
+            "display_name": "eir",
+            "share_pct": [
+              24.083769633507853,
+              24.36548223350254,
+              24.22145328719723,
+              24.53781512605042,
+              24.315068493150687,
+              24.707846410684475,
+              24.201223657375934,
+              24.987580725285643
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 24.99,
+            "share_change_pp": 0.9,
+            "avg_quarterly_change_pp": 0.13,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "three_ie",
+          "biggest_gainer_id": "eir_ie",
+          "biggest_loser_id": "vodafone_ie",
+          "key_message": "Mobile Subscribers share: 25.0% (#3); gaining (+0.9pp); market is highly concentrated (HHI 3,448)."
+        },
+        "broadband_subscribers": {
+          "metric_type": "broadband_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "eir_ie",
+              "display_name": "eir",
+              "share_pct": [
+                54.761904761904766,
+                53.899082568807344,
+                54.54545454545454,
+                53.75854214123007,
+                54.322429906542055,
+                53.6117381489842,
+                54.04157043879908,
+                53.325817361894025
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 53.33,
+              "share_change_pp": -1.44,
+              "avg_quarterly_change_pp": -0.21,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafone_ie",
+              "display_name": "Vodafone Ireland",
+              "share_pct": [
+                39.285714285714285,
+                39.22018348623853,
+                39.315230224321134,
+                39.17995444191344,
+                39.25233644859813,
+                39.05191873589165,
+                39.260969976905315,
+                39.00789177001127
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 39.01,
+              "share_change_pp": -0.28,
+              "avg_quarterly_change_pp": -0.04,
+              "direction": "stable",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "three_ie",
+              "display_name": "Three Ireland",
+              "share_pct": [
+                5.952380952380952,
+                6.8807339449541285,
+                6.139315230224321,
+                7.061503416856492,
+                6.425233644859812,
+                7.336343115124154,
+                6.697459584295612,
+                7.666290868094701
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 7.67,
+              "share_change_pp": 1.71,
+              "avg_quarterly_change_pp": 0.24,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 4424.03,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.01,
+            "hhi_trend": [
+              4577.66,
+              4490.68,
+              4558.59,
+              4474.91,
+              4532.96,
+              4453.09,
+              4506.77,
+              4424.03
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "eir_ie",
+          "target_series": {
+            "operator_id": "eir_ie",
+            "display_name": "eir",
+            "share_pct": [
+              54.761904761904766,
+              53.899082568807344,
+              54.54545454545454,
+              53.75854214123007,
+              54.322429906542055,
+              53.6117381489842,
+              54.04157043879908,
+              53.325817361894025
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 53.33,
+            "share_change_pp": -1.44,
+            "avg_quarterly_change_pp": -0.21,
+            "direction": "losing",
+            "rank_latest": 1,
+            "rank_change": 0
+          },
+          "share_leader_id": "eir_ie",
+          "biggest_gainer_id": "three_ie",
+          "biggest_loser_id": "eir_ie",
+          "key_message": "Broadband Subscribers share: 53.3% (#1); losing (-1.4pp); market is highly concentrated (HHI 4,424); fragmenting."
+        },
+        "revenue_share_latest": 45.2,
+        "mobile_share_latest": 25.0,
+        "broadband_share_latest": 53.3
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 96.0,
+            "mobile_service_growth_pct": 6.7,
+            "mobile_total_k": 1509.0,
+            "mobile_postpaid_k": 1203.0,
+            "mobile_prepaid_k": 306.0,
+            "mobile_net_adds_k": 29.0,
+            "mobile_churn_pct": 1.1,
+            "mobile_arpu": 26.0,
+            "iot_connections_k": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 96.0,
+              "previous_value": 92.0,
+              "yoy_value": 90.0,
+              "change_qoq": 4.35,
+              "change_yoy": 6.67,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 1509.0,
+              "previous_value": 1480.0,
+              "yoy_value": 1424.0,
+              "change_qoq": 1.96,
+              "change_yoy": 5.97,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 26.0,
+              "previous_value": 25.5,
+              "yoy_value": 25.0,
+              "change_qoq": 1.96,
+              "change_yoy": 4.0,
+              "direction": "improving",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              85.0,
+              87.0,
+              88.0,
+              90.0,
+              88.0,
+              90.0,
+              92.0,
+              96.0
+            ],
+            "subscribers": [
+              1380.0,
+              1400.0,
+              1420.0,
+              1424.0,
+              1440.0,
+              1460.0,
+              1480.0,
+              1509.0
+            ],
+            "arpu": [
+              24.0,
+              24.5,
+              25.0,
+              25.0,
+              25.0,
+              25.5,
+              25.5,
+              26.0
+            ],
+            "churn": [
+              1.3,
+              1.2,
+              1.2,
+              1.2,
+              1.2,
+              1.1,
+              1.1,
+              1.1
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 7.2,
+              "momentum_score": 59.63,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.04,
+              "trend_slope": 1.26,
+              "acceleration": 1.0,
+              "sequential_growth": [
+                2.35,
+                1.15,
+                2.27,
+                -2.22,
+                2.27,
+                2.22,
+                4.35
+              ],
+              "yoy_growth": [
+                3.53,
+                3.45,
+                4.55,
+                6.67
+              ],
+              "latest_qoq_pct": 4.35,
+              "latest_yoy_pct": 6.67,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q4=high"
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 5.24,
+              "momentum_score": 54.81,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 17.13,
+              "acceleration": 7.5,
+              "sequential_growth": [
+                1.45,
+                1.43,
+                0.28,
+                1.12,
+                1.39,
+                1.37,
+                1.96
+              ],
+              "yoy_growth": [
+                4.35,
+                4.29,
+                4.23,
+                5.97
+              ],
+              "latest_qoq_pct": 1.96,
+              "latest_yoy_pct": 5.97,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "arpu_metrics": {
+              "cagr_pct": 4.68,
+              "momentum_score": 49.5,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.02,
+              "trend_slope": 0.24,
+              "acceleration": -0.05,
+              "sequential_growth": [
+                2.08,
+                2.04,
+                0.0,
+                0.0,
+                2.0,
+                0.0,
+                1.96
+              ],
+              "yoy_growth": [
+                4.17,
+                4.08,
+                2.0,
+                4.0
+              ],
+              "latest_qoq_pct": 1.96,
+              "latest_yoy_pct": 4.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "churn_metrics": {
+              "cagr_pct": -9.1,
+              "momentum_score": 48.08,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.06,
+              "trend_slope": -0.03,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                -7.69,
+                0.0,
+                0.0,
+                0.0,
+                -8.33,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                -7.69,
+                -8.33,
+                -8.33,
+                -8.33
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": -8.33,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=high"
+            }
+          },
+          "competitor_comparison": {
+            "Vodafone Ireland": {
+              "mobile_service_revenue": 154.0,
+              "mobile_total_k": 2130.0,
+              "mobile_arpu": 27.0,
+              "mobile_churn_pct": 1.1
+            },
+            "Three Ireland": {
+              "mobile_service_revenue": 142.0,
+              "mobile_total_k": 2400.0,
+              "mobile_arpu": 18.5,
+              "mobile_churn_pct": 1.3
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FY2024 revenue EUR 1,326M (+2%), EBITDA EUR 614M (+4%), margin 46.3%. Mobile subs 1,509K (+6% YoY). Fiber BB connections 886K (94% on fiber). NJJ ownership consolidated to >70%.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 4.3% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 96.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "Mobile service revenue at 96.0M; up 6.7% YoY; ARPU 26.0",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 178.0,
+            "fixed_service_growth_pct": 4.7,
+            "broadband_total_k": 473.0,
+            "broadband_net_adds_k": -2.0,
+            "broadband_cable_k": null,
+            "broadband_fiber_k": 455.0,
+            "broadband_dsl_k": null,
+            "broadband_arpu": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 178.0,
+              "previous_value": 172.0,
+              "yoy_value": 170.0,
+              "change_qoq": 3.49,
+              "change_yoy": 4.71,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 473.0,
+              "previous_value": 475.0,
+              "yoy_value": 468.0,
+              "change_qoq": -0.42,
+              "change_yoy": 1.07,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              165.0,
+              167.0,
+              168.0,
+              170.0,
+              168.0,
+              170.0,
+              172.0,
+              178.0
+            ],
+            "subscribers": [
+              460.0,
+              462.0,
+              465.0,
+              468.0,
+              470.0,
+              472.0,
+              475.0,
+              473.0
+            ],
+            "arpu": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fiber": [
+              420.0,
+              425.0,
+              430.0,
+              435.0,
+              440.0,
+              445.0,
+              450.0,
+              455.0
+            ],
+            "cable": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 4.43,
+              "momentum_score": 58.77,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 1.43,
+              "acceleration": 1.6,
+              "sequential_growth": [
+                1.21,
+                0.6,
+                1.19,
+                -1.18,
+                1.19,
+                1.18,
+                3.49
+              ],
+              "yoy_growth": [
+                1.82,
+                1.8,
+                2.38,
+                4.71
+              ],
+              "latest_qoq_pct": 3.49,
+              "latest_yoy_pct": 4.71,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q4=high"
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 1.61,
+              "momentum_score": 46.7,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 2.13,
+              "acceleration": -1.5,
+              "sequential_growth": [
+                0.43,
+                0.65,
+                0.65,
+                0.43,
+                0.43,
+                0.64,
+                -0.42
+              ],
+              "yoy_growth": [
+                2.17,
+                2.16,
+                2.15,
+                1.07
+              ],
+              "latest_qoq_pct": -0.42,
+              "latest_yoy_pct": 1.07,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "fiber_metrics": {
+              "cagr_pct": 4.68,
+              "momentum_score": 49.51,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 5.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                1.19,
+                1.18,
+                1.16,
+                1.15,
+                1.14,
+                1.12,
+                1.11
+              ],
+              "yoy_growth": [
+                4.76,
+                4.71,
+                4.65,
+                4.6
+              ],
+              "latest_qoq_pct": 1.11,
+              "latest_yoy_pct": 4.6,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Vodafone Ireland": {
+              "fixed_service_revenue": 52.0,
+              "broadband_total_k": 346.0,
+              "broadband_fiber_k": 170.0
+            },
+            "Three Ireland": {
+              "fixed_service_revenue": 5.0,
+              "broadband_total_k": 68.0,
+              "broadband_fiber_k": 68.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FY2024 revenue EUR 1,326M (+2%), EBITDA EUR 614M (+4%), margin 46.3%. Mobile subs 1,509K (+6% YoY). Fiber BB connections 886K (94% on fiber). NJJ ownership consolidated to >70%.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "management_explanation",
+              "description": "EUR 1.7B invested since 2018. FTTH passing 1.3M premises (+17% YoY), targeting 1.9M by 2026 via InfraVia JV. Combined FTTH/FTTC 2.2M premises (95% of Ireland). TV +11% to 112K.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 3.5% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 178.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "Fixed service revenue 178.0M; growth +4.7% YoY; Fiber subs 455K",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 48.0,
+            "b2b_growth_pct": null,
+            "b2b_customers_k": 38.0,
+            "b2b_share_of_revenue_pct": 13.9
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 48.0,
+              "previous_value": 46.0,
+              "yoy_value": 47.0,
+              "change_qoq": 4.35,
+              "change_yoy": 2.13,
+              "direction": "improving",
+              "significance": "moderate"
+            },
+            {
+              "metric": "customers",
+              "current_value": 38.0,
+              "previous_value": 38.0,
+              "yoy_value": 36.0,
+              "change_qoq": 0.0,
+              "change_yoy": 5.56,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              45.0,
+              45.0,
+              46.0,
+              47.0,
+              44.0,
+              45.0,
+              46.0,
+              48.0
+            ],
+            "customers": [
+              35.0,
+              35.0,
+              36.0,
+              36.0,
+              37.0,
+              37.0,
+              38.0,
+              38.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 3.76,
+              "momentum_score": 63.94,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.03,
+              "trend_slope": 0.24,
+              "acceleration": 0.6,
+              "sequential_growth": [
+                0.0,
+                2.22,
+                2.17,
+                -6.38,
+                2.27,
+                2.22,
+                4.35
+              ],
+              "yoy_growth": [
+                -2.22,
+                0.0,
+                0.0,
+                2.13
+              ],
+              "latest_qoq_pct": 4.35,
+              "latest_yoy_pct": 2.13,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q4=high"
+            },
+            "customers_metrics": {
+              "cagr_pct": 4.81,
+              "momentum_score": 49.54,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.03,
+              "trend_slope": 0.48,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                2.86,
+                0.0,
+                2.78,
+                0.0,
+                2.7,
+                0.0
+              ],
+              "yoy_growth": [
+                5.71,
+                5.71,
+                5.56,
+                5.56
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 5.56,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Vodafone Ireland": {
+              "b2b_revenue": 24.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 43.0
+            },
+            "Three Ireland": {
+              "b2b_revenue": 21.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 28.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 4.3% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 48.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "B2B revenue 48.0M; 13.9% of total revenue",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": null,
+            "tv_total_k": 112.0,
+            "tv_net_adds_k": null,
+            "fmc_total_k": null,
+            "fmc_penetration_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 112.0,
+              "previous_value": 110.0,
+              "yoy_value": 104.0,
+              "change_qoq": 1.82,
+              "change_yoy": 7.69,
+              "direction": "improving",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers": [
+              98.0,
+              100.0,
+              102.0,
+              104.0,
+              106.0,
+              108.0,
+              110.0,
+              112.0
+            ],
+            "fmc_subscribers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fmc_penetration": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers_metrics": {
+              "cagr_pct": 7.93,
+              "momentum_score": 48.61,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.04,
+              "trend_slope": 2.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                2.04,
+                2.0,
+                1.96,
+                1.92,
+                1.89,
+                1.85,
+                1.82
+              ],
+              "yoy_growth": [
+                8.16,
+                8.0,
+                7.84,
+                7.69
+              ],
+              "latest_qoq_pct": 1.82,
+              "latest_yoy_pct": 7.69,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Vodafone Ireland": {
+              "tv_total_k": 138.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            },
+            "Three Ireland": {
+              "tv_total_k": 0.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "EUR 1.7B invested since 2018. FTTH passing 1.3M premises (+17% YoY), targeting 1.9M by 2026 via InfraVia JV. Combined FTTH/FTTC 2.2M premises (95% of Ireland). TV +11% to 112K.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CFO"
+              ],
+              "source": "earnings_call"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "TV subscribers 112K",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": null,
+            "wholesale_share_of_revenue_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Insufficient data for wholesale assessment",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "mobile_vendor": "Nokia",
+          "spectrum_mhz": 350,
+          "fiber_technology": "GPON/XGS-PON",
+          "ftth_premises_k": 1300
+        },
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "fiber",
+            "mobile"
+          ],
+          "summary": "Fully owned mobile + fixed network. Ireland's national fixed-line incumbent. 2.2M premises passed with FTTH/FTTC (95% of Ireland). ~100% own-network across mobile and fixed."
+        },
+        "coverage": {
+          "5g": 74.0,
+          "4g": 99.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 2200.0,
+          "fiber_connected_k": 455.0,
+          "fiber_penetration_pct": 20.7
+        },
+        "evolution_strategy": {
+          "data_signals": [
+            "Fiber-only fixed footprint"
+          ],
+          "summary": "FTTH expansion to near-universal coverage. 5G standalone rollout. Legacy copper retirement. Wholesale revenue growth as competitors use open eir. NJJ operational efficiency."
+        },
+        "investment_direction": "stable",
+        "vs_competitors": "5G: ahead of Vodafone Ireland by 9pp; Fiber: 3.5x more homepass than Vodafone Ireland; 5G: behind Three Ireland by 16pp",
+        "consumer_impact": "Expanding 5G coverage (74.0%); Fiber-dominant broadband mix",
+        "b2b_impact": "B2B revenue share: 14%",
+        "cost_impact": "High capex intensity (22.0%)"
+      },
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 70.0,
+            "market_avg": 71.0,
+            "gap_pp": -1.0,
+            "verdict": "at average"
+          },
+          "Brand Strength": {
+            "score": 82.0,
+            "market_avg": 82.3,
+            "gap_pp": -0.3,
+            "verdict": "at average"
+          }
+        },
+        "overall_verdict": "mixed",
+        "summary": "Customer Service -1pp vs market; Brand Strength -0pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Oliver Loomes",
+          "title": "CEO",
+          "is_current": true,
+          "start_date": "2022-02-01",
+          "background": "Ex-Vodafone Ireland CEO; now leading eir under NJJ ownership; FTTH expansion strategy",
+          "tenure_years": 4.0
+        },
+        {
+          "name": "Stephen Tighe",
+          "title": "CFO",
+          "is_current": true,
+          "start_date": "2020-01-01",
+          "background": "Finance executive; managing NJJ ownership transition and capex investment",
+          "tenure_years": 6.1
+        }
+      ],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners",
+          "NJJ Holding / Xavier Niel (>70% owner)",
+          "Nokia (RAN and fiber equipment)",
+          "National Broadband Ireland (NBP contract partner)",
+          "Apple, Samsung (device partnerships)"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery",
+          "FTTH network expansion (targeting 95%+ coverage)",
+          "5G mobile network rollout",
+          "Wholesale services to competitors (open eir)",
+          "Enterprise digital transformation services"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Ireland's fixed-line network owner (2.2M premises FTTH/FTTC)",
+          "Comprehensive mobile + fixed infrastructure",
+          "Wholesale revenue from all competitors using eir network",
+          "NJJ/Xavier Niel ownership (>70%) — Iliad Group operational DNA"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "Ireland's only truly converged fixed+mobile operator with own infrastructure",
+          "Fastest fiber speeds via own FTTH network",
+          "Premium brand backed by nationwide infrastructure",
+          "Growing enterprise ICT solutions"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "Stable leadership team (avg tenure >3 years); High-investment posture; Incumbent transforming under NJJ ownership. More agile since Niel took control. Investment-focused. Customer satisfaction improving.",
+      "talent_assessment": {
+        "c_suite_count": 2,
+        "avg_tenure_years": 5.0,
+        "key_leaders": [
+          "Oliver Loomes (CEO)",
+          "Stephen Tighe (CFO)"
+        ],
+        "capability_alignment": [
+          "Customer Service: strong",
+          "Enterprise Solutions: strong"
+        ],
+        "assessment": "Adequate leadership coverage"
+      },
+      "performance_gap": "No significant performance gaps identified from available data",
+      "opportunity_gap": "No significant opportunity gaps identified from available data",
+      "strategic_review": "Management outlook: FY2024 revenue EUR 1,326M (+2%), EBITDA EUR 614M (+4%), margin 46.3%. Mobile subs 1,509K (+6% YoY). Fiber BB connections 886K (94% on fiber). NJJ ownership consolidated to >70%.. Revenue trajectory growing, margins strong (46.1%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Price Competitiveness: score 68 (market avg 74)",
+      "management_commentary": [
+        {
+          "segment": "Overall",
+          "type": "guidance",
+          "content": "FY2024 revenue EUR 1,326M (+2%), EBITDA EUR 614M (+4%), margin 46.3%. Mobile subs 1,509K (+6% YoY). Fiber BB connections 886K (94% on fiber). NJJ ownership consolidated to >70%.",
+          "speaker": "CEO",
+          "source_url": null
+        },
+        {
+          "segment": "Infrastructure",
+          "type": "outlook",
+          "content": "EUR 1.7B invested since 2018. FTTH passing 1.3M premises (+17% YoY), targeting 1.9M by 2026 via InfraVia JV. Combined FTTH/FTTC 2.2M premises (95% of Ireland). TV +11% to 112K.",
+          "speaker": "CFO",
+          "source_url": null
+        }
+      ],
+      "strengths": [
+        "Distribution: score 88 (market avg 83)",
+        "Enterprise Solutions: score 85 (market avg 74)",
+        "Network Coverage: score 95 (market avg 90)",
+        "Strong EBITDA margin at 46.1%",
+        "Revenue on growth trajectory",
+        "Dominant market share at 45.2%",
+        "Top 1 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "Price Competitiveness: score 68 (market avg 74)"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Heavy capex burden from FTTH network rollout",
+          "side_effect": "Elevated investment constraining free cash flow",
+          "attack_vector": "Three and Vodafone compete with lower capital intensity using eir wholesale",
+          "severity": "medium",
+          "evidence": [
+            "eir investing heavily in FTTH targeting 95%+ of Ireland"
+          ]
+        },
+        {
+          "trigger_action": "Wholesale obligation means competitors benefit from eir's fiber investment",
+          "side_effect": "eir builds the network but competitors can resell at regulated prices",
+          "attack_vector": "Three and Vodafone offer fiber broadband without network build costs",
+          "severity": "high",
+          "evidence": [
+            "open eir wholesale provides regulated access to all operators"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #1 of 3 operators in market; revenue EUR 345.0M; EBITDA margin 46.1%; stable but facing challenges; key strength: Distribution; key challenge: Price Competitiveness; Management outlook: FY2024 revenue EUR 1,326M (+2%), EBITDA EUR 614M (+4%), margin 46.3%. Mobile subs 1,509K (+6% YoY). Fiber BB connections 886K (94% on fiber). NJJ ownership consolidated to >70%."
+    },
+    "swot": {
+      "strengths": [
+        "Distribution: score 88 (market avg 83)",
+        "Enterprise Solutions: score 85 (market avg 74)",
+        "Network Coverage: score 95 (market avg 90)",
+        "Strong EBITDA margin at 46.1%",
+        "Revenue on growth trajectory",
+        "Dominant market share at 45.2%",
+        "Top 1 in revenue market ranking"
+      ],
+      "weaknesses": [
+        "Price Competitiveness: score 68 (market avg 74)",
+        "Elevated investment constraining free cash flow",
+        "eir builds the network but competitors can resell at regulated prices"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie",
+        "National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie",
+        "High substitutes pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Distribution: score 88 (market avg 83)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+        "Leverage 'Enterprise Solutions: score 85 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Price Competitiveness: score 68 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+        "Address weakness 'Elevated investment constraining free cash flow' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access'."
+      ],
+      "st_strategies": [
+        "Use strength 'Distribution: score 88 (market avg 83)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+        "Use strength 'Enterprise Solutions: score 85 (market avg 74)' to counter the threat of 'High substitutes pressure'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Price Competitiveness: score 68 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+        "Mitigate weakness 'Elevated investment constraining free cash flow' and defend against the threat of 'High substitutes pressure'."
+      ],
+      "key_message": "SWOT analysis identifies 7 strengths, 3 weaknesses, 2 opportunities, and 2 threats. The recommended strategic posture is offensive (SO-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 7.25,
+          "market_share_score": 5.5200000000000005,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.75,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.62
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 7.25,
+          "market_share_score": 5.5200000000000005,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.75,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.62
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 8.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.9,
+          "market_share_score": 5.5200000000000005,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.38,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.3
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 8.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.9,
+          "market_share_score": 5.5200000000000005,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.38,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.3
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 8.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.9,
+          "market_share_score": 5.5200000000000005,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 5.38,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.3
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 7.05,
+          "market_share_score": 5.5200000000000005,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.49
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 7.05,
+          "market_share_score": 5.5200000000000005,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.25,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.49
+        },
+        {
+          "opportunity_name": "Exploit vodafone_ie weakness: Network Coverage: score 85 (market avg 90)",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.65,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.62,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.49
+        },
+        {
+          "opportunity_name": "Exploit vodafone_ie weakness: Price Competitiveness: score 68 (market avg 74)",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.65,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.62,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.49
+        },
+        {
+          "opportunity_name": "Exploit three_ie weakness: Customer Service: score 65 (market avg 71)",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.65,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.62,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.49
+        },
+        {
+          "opportunity_name": "Exploit three_ie weakness: Enterprise Solutions: score 55 (market avg 74)",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.65,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 9.5,
+          "competitive_position": 6.62,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.49
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.85,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.85
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 8.0,
+          "market_growth_score": 5.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.85,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.85
+        },
+        {
+          "opportunity_name": "ST-1",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-2",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "WT-1",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-2",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        }
+      ],
+      "grow_invest": [
+        "SO-1",
+        "SO-2",
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie",
+        "National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access",
+        "Exploit vodafone_ie weakness: Network Coverage: score 85 (market avg 90)",
+        "Exploit vodafone_ie weakness: Price Competitiveness: score 68 (market avg 74)",
+        "Exploit three_ie weakness: Customer Service: score 65 (market avg 71)",
+        "Exploit three_ie weakness: Enterprise Solutions: score 55 (market avg 74)"
+      ],
+      "acquire_skills": [
+        "WO-1",
+        "WO-2"
+      ],
+      "harvest": [
+        "ST-1",
+        "ST-2"
+      ],
+      "avoid_exit": [
+        "WT-1",
+        "WT-2"
+      ],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Distribution: score 88 (market avg 83)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Enterprise Solutions: score 85 (market avg 74)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit vodafone_ie weakness: Network Coverage: score 85 (market avg 90)",
+          "description": "Competitor vodafone_ie is weak in: Network Coverage: score 85 (market avg 90)",
+          "derived_from": [
+            "competitor_weakness",
+            "vodafone_ie"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit vodafone_ie weakness: Price Competitiveness: score 68 (market avg 74)",
+          "description": "Competitor vodafone_ie is weak in: Price Competitiveness: score 68 (market avg 74)",
+          "derived_from": [
+            "competitor_weakness",
+            "vodafone_ie"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit three_ie weakness: Customer Service: score 65 (market avg 71)",
+          "description": "Competitor three_ie is weak in: Customer Service: score 65 (market avg 71)",
+          "derived_from": [
+            "competitor_weakness",
+            "three_ie"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit three_ie weakness: Enterprise Solutions: score 55 (market avg 74)",
+          "description": "Competitor three_ie is weak in: Enterprise Solutions: score 55 (market avg 74)",
+          "derived_from": [
+            "competitor_weakness",
+            "three_ie"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Price Competitiveness: score 68 (market avg 74)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Elevated investment constraining free cash flow' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require eir_ie investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "ST-1",
+          "description": "Use strength 'Distribution: score 88 (market avg 83)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-2",
+          "description": "Use strength 'Enterprise Solutions: score 85 (market avg 74)' to counter the threat of 'High substitutes pressure'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "WT-1",
+          "description": "Mitigate weakness 'Price Competitiveness: score 68 (market avg 74)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect eir_ie'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-2",
+          "description": "Mitigate weakness 'Elevated investment constraining free cash flow' and defend against the threat of 'High substitutes pressure'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        }
+      ],
+      "key_message": "SPAN matrix positions 17 opportunities: 11 grow/invest, 2 acquire skills, 2 harvest, 2 avoid/exit. Focus resources on the 11 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 20,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 20,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 20
+  }
+}

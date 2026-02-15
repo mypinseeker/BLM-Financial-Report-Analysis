@@ -1,0 +1,3539 @@
+{
+  "meta": {
+    "target_operator": "lifecell_ua",
+    "market": "ukraine",
+    "analysis_period": "CQ4_2025",
+    "generated_at": "2026-02-15T09:30:29.361423",
+    "format_version": "1.0"
+  },
+  "five_looks": {
+    "trends": {
+      "pest": {
+        "political_factors": [
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "Regulatory Environment",
+            "current_status": "NCEC regulation. Active armed conflict since Feb 2022. Martial law. EU candidate status (Jun 2022). 5G spectrum allocated Nov 2024 but commercial launch pending military clearance. Spectrum auction raised UAH 2.895B.",
+            "trend": "Regulatory stance: NCEC regulation. Active armed conflict since Feb 2022. Martial law. EU candidate status (Jun 2022). 5G spectrum allocated Nov 2024 but commercial launch pending military clearance. Spectrum auction raised UAH 2.895B.",
+            "trend_direction": "stable",
+            "industry_impact": "Regulatory framework shapes competitive dynamics and investment requirements",
+            "company_impact": "Compliance requirements and spectrum policies directly affect lifecell_ua",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Macro data: NCEC regulation. Active armed conflict since Feb 2022. Martial law. EU candidate status (Jun 2022). 5G spectrum allocated Nov 2024 but commercial launch pending military clearance. Spectrum auction raised UAH 2.895B."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "National Digital Strategy",
+            "current_status": "Recovery and resilience focus. Population ~37M in government-controlled territory (pre-war 44M). GDP $190.7B (2024). UAH/USD avg 40.18 (2024). International aid supporting economic stability. Diia digital government platform.",
+            "trend": "Government fiber and 5G coverage targets driving infrastructure investment",
+            "trend_direction": "improving",
+            "industry_impact": "Policy targets create both mandate and subsidy opportunities for network operators",
+            "company_impact": "Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Digital strategy: Recovery and resilience focus. Population ~37M in government-controlled territory (pre-war 44M). GDP $190.7B (2024). UAH/USD avg 40.18 (2024). International aid supporting economic stability. Diia digital government platform."
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "War infrastructure damage: 4,300+ base stations destroyed since 2022",
+            "current_status": "Total telecom infrastructure damage: $1.2B as of Nov 2024. 4,300+ mobile base stations destroyed, 30,000+ km fiber damaged. 389 infrastructure incidents in 2024 alone. Estimated 10-year repair cost: $4.67B.",
+            "trend": "Total telecom infrastructure damage: $1.2B as of Nov 2024. 4,300+ mobile base stations destroyed, 30,000+ km fiber damaged. 389 infrastructure incidents in 2024 alone. Estimated 10-year repair cost: $4.67B.",
+            "trend_direction": "uncertain",
+            "industry_impact": "Total telecom infrastructure damage: $1.2B as of Nov 2024. 4,300+ mobile base stations destroyed, 30,000+ km fiber damaged. 389 infrastructure incidents in 2024 alone. Estimated 10-year repair cost: $4.67B.",
+            "company_impact": "War infrastructure damage: 4,300+ base stations destroyed since 2022: may increase compliance costs or restrict lifecell_ua operations",
+            "impact_type": "threat",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [],
+            "data_source": "intelligence_events"
+          },
+          {
+            "dimension": "P",
+            "dimension_name": "Political",
+            "factor_name": "NCEC spectrum auction — UAH 2.895B for 2100/2300/2600 MHz bands",
+            "current_status": "All three operators acquired new spectrum. Kyivstar: UAH 1.43B (2100+2300 MHz, total 202 MHz). Vodafone: 2100+2600 MHz. lifecell: 2100 MHz. 15-year licenses; technology-neutral (can be used for 5G). Mandate: 1,500 new base stations in 2 years.",
+            "trend": "All three operators acquired new spectrum. Kyivstar: UAH 1.43B (2100+2300 MHz, total 202 MHz). Vodafone: 2100+2600 MHz. lifecell: 2100 MHz. 15-year licenses; technology-neutral (can be used for 5G). Mandate: 1,500 new base stations in 2 years.",
+            "trend_direction": "uncertain",
+            "industry_impact": "All three operators acquired new spectrum. Kyivstar: UAH 1.43B (2100+2300 MHz, total 202 MHz). Vodafone: 2100+2600 MHz. lifecell: 2100 MHz. 15-year licenses; technology-neutral (can be used for 5G). Mandate: 1,500 new base stations in 2 years.",
+            "company_impact": "NCEC spectrum auction — UAH 2.895B for 2100/2300/2600 MHz bands: requires lifecell_ua to monitor and adapt strategy",
+            "impact_type": "neutral",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "uncertain",
+            "evidence": [],
+            "data_source": "intelligence_events"
+          }
+        ],
+        "economic_factors": [
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "GDP Growth",
+            "current_status": "GDP growth at 5.3%",
+            "trend": "GDP growth trend: stable (latest 5.3%)",
+            "trend_direction": "stable",
+            "industry_impact": "Strong GDP growth boosts both consumer and enterprise spending",
+            "company_impact": "Supported revenue growth for lifecell_ua",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "GDP growth: 5.3%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Inflation",
+            "current_status": "Inflation at 12.0%",
+            "trend": "Inflation trend: stable (latest 12.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Inflation affects both OPEX (energy, wages) and consumer willingness to pay",
+            "company_impact": "OPEX pressure for lifecell_ua",
+            "impact_type": "threat",
+            "severity": "high",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Inflation: 12.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "E",
+            "dimension_name": "Economic",
+            "factor_name": "Unemployment",
+            "current_status": "Unemployment at 15.0%",
+            "trend": "Unemployment trend: stable",
+            "trend_direction": "stable",
+            "industry_impact": "Unemployment affects consumer spending power and enterprise IT budgets",
+            "company_impact": "Consumer segment sensitivity for lifecell_ua",
+            "impact_type": "threat",
+            "severity": "medium",
+            "time_horizon": "short_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Unemployment: 15.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "society_factors": [
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "5G Adoption Rate",
+            "current_status": "5G adoption at 0.0% of mobile subscribers",
+            "trend": "5G adoption trend: stable (0.0% -> 0.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing 5G adoption validates network investment and enables new use cases",
+            "company_impact": "5G adoption growth supports premium pricing and new service revenue for lifecell_ua",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 0.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "S",
+            "dimension_name": "Society",
+            "factor_name": "Fiber Broadband Penetration",
+            "current_status": "Fiber penetration at 50.0%",
+            "trend": "Fiber penetration trend: stable (50.0% -> 50.0%)",
+            "trend_direction": "stable",
+            "industry_impact": "Growing fiber adoption accelerates fixed broadband technology transition from copper/cable",
+            "company_impact": "Fiber migration presents both investment challenge and growth opportunity for lifecell_ua",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 50.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "technology_factors": [
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "5G Network Evolution",
+            "current_status": "5G in early deployment phase (0.0% adoption)",
+            "trend": "5G transitioning from coverage race to monetization phase",
+            "trend_direction": "stable",
+            "industry_impact": "5G enables network slicing, enterprise services, and FWA -- new revenue streams",
+            "company_impact": "5G network capabilities are key competitive differentiator for lifecell_ua",
+            "impact_type": "opportunity",
+            "severity": "high",
+            "time_horizon": "medium_term",
+            "predictability": "predictable",
+            "evidence": [
+              "5G adoption: 0.0%"
+            ],
+            "data_source": "macro_environment"
+          },
+          {
+            "dimension": "T",
+            "dimension_name": "Technology",
+            "factor_name": "Fiber/FTTH Deployment",
+            "current_status": "Fiber penetration at 50.0%, indicating ongoing network modernization",
+            "trend": "Fiber deployment accelerating as DSL/copper nears end of life",
+            "trend_direction": "improving",
+            "industry_impact": "Fiber replaces copper/cable as the fixed broadband standard, requiring massive CAPEX",
+            "company_impact": "Fiber strategy (build vs buy vs partner) is a critical decision for lifecell_ua",
+            "impact_type": "both",
+            "severity": "high",
+            "time_horizon": "long_term",
+            "predictability": "predictable",
+            "evidence": [
+              "Fiber penetration: 50.0%"
+            ],
+            "data_source": "macro_environment"
+          }
+        ],
+        "overall_weather": "sunny",
+        "weather_explanation": "Mostly favorable: 7/11 factors present opportunities",
+        "policy_opportunities": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+          "National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access"
+        ],
+        "policy_threats": [
+          "Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+          "War infrastructure damage: 4,300+ base stations destroyed since 2022: War infrastructure damage: 4,300+ base stations destroyed since 2022: may increase compliance costs or restrict lifecell_ua operations"
+        ],
+        "tech_addressable_market": "5G Network Evolution; Fiber/FTTH Deployment",
+        "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, War infrastructure damage: 4,300+ base stations destroyed since 2022."
+      },
+      "industry_market_size": "UAH 19.9B (quarterly, CQ4_2025)",
+      "industry_growth_rate": "+6.5% YoY (CQ2_2025 -> CQ4_2025)",
+      "industry_profit_trend": "Declining (industry EBITDA margin 55.7%, down from 60.1%)",
+      "industry_concentration": "CR4 = 100% (Kyivstar: 49.1%, Vodafone Ukraine: 31.8%, lifecell (DVL Group): 19.1%)",
+      "industry_lifecycle_stage": "late_growth",
+      "new_business_models": [
+        "FWA (Fixed Wireless Access) as fiber alternative",
+        "Network-as-a-Service for enterprise verticals",
+        "Wholesale/MVNO partnerships for coverage monetization"
+      ],
+      "technology_revolution": [
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction"
+      ],
+      "key_success_factors": [
+        "Network quality and coverage breadth",
+        "Convergent (FMC) bundling strategy",
+        "B2B/ICT capabilities for enterprise growth",
+        "Operational efficiency (OPEX/revenue ratio)"
+      ],
+      "value_transfer_trends": [
+        "Value shifting from voice/SMS to data and digital services",
+        "B2B/ICT growing faster than consumer segment",
+        "Fiber displacing copper and cable broadband"
+      ],
+      "key_message": "Macro environment: Favorable. Key opportunities: Regulatory Environment, National Digital Strategy. Key risks: Regulatory Environment, War infrastructure damage: 4,300+ base stations destroyed since 2022 Industry is in late growth phase. (+6.5% YoY (CQ2_2025 -> CQ4_2025))"
+    },
+    "market_customer": {
+      "market_snapshot": {
+        "calendar_quarter": "CQ4_2025",
+        "total_revenue": 19910.0,
+        "total_mobile_subscribers_k": 50100.0,
+        "total_broadband_subscribers_k": 5200.0,
+        "market_shares": {
+          "Kyivstar": 49.1,
+          "Vodafone Ukraine": 31.8,
+          "lifecell (DVL Group)": 19.1
+        },
+        "penetration_rates": {
+          "mobile_penetration_pct": 135.4,
+          "broadband_penetration_pct": 14.1
+        },
+        "operator_count": 3
+      },
+      "changes": [
+        {
+          "change_type": "pricing",
+          "description": "Kyivstar EBITDA margin improvement: 60.4% vs 57.3% (+3.1pp)",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Margin improvement indicates operational efficiency gains",
+          "severity": "medium",
+          "evidence": [
+            "Margin change: +3.1pp"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Vodafone Ukraine revenue growth 9.3% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +9.3%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)",
+          "source": "peer_driven",
+          "time_horizon": "short_term",
+          "impact_type": "opportunity",
+          "impact_description": "Significant revenue increase signals positive momentum",
+          "severity": "medium",
+          "evidence": [
+            "QoQ revenue change: +5.6%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "lifecell (DVL Group) revenue growth 24.6% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "high",
+          "evidence": [
+            "YoY revenue change: +24.6%"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Kyivstar lists on NASDAQ as KYIV — first Ukrainian company on US exchange",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "VEON spun off Kyivstar as independently listed entity on NASDAQ (ticker: KYIV). First Ukrainian company to list on US stock exchange. Capital raise via secondary offering.",
+          "severity": "high",
+          "evidence": []
+        }
+      ],
+      "opportunities": [
+        {
+          "change_type": "pricing",
+          "description": "lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)",
+          "source": "peer_driven",
+          "time_horizon": "short_term",
+          "impact_type": "opportunity",
+          "impact_description": "Significant revenue increase signals positive momentum",
+          "severity": "medium",
+          "evidence": [
+            "QoQ revenue change: +5.6%"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "lifecell (DVL Group) revenue growth 24.6% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "opportunity",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "high",
+          "evidence": [
+            "YoY revenue change: +24.6%"
+          ]
+        }
+      ],
+      "threats": [
+        {
+          "change_type": "pricing",
+          "description": "Kyivstar EBITDA margin improvement: 60.4% vs 57.3% (+3.1pp)",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Margin improvement indicates operational efficiency gains",
+          "severity": "medium",
+          "evidence": [
+            "Margin change: +3.1pp"
+          ]
+        },
+        {
+          "change_type": "pricing",
+          "description": "Vodafone Ukraine revenue growth 9.3% YoY",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "Year-over-year growth indicates sustained growth trajectory",
+          "severity": "medium",
+          "evidence": [
+            "YoY revenue change: +9.3%"
+          ]
+        },
+        {
+          "change_type": "technology",
+          "description": "Kyivstar lists on NASDAQ as KYIV — first Ukrainian company on US exchange",
+          "source": "peer_driven",
+          "time_horizon": "medium_term",
+          "impact_type": "threat",
+          "impact_description": "VEON spun off Kyivstar as independently listed entity on NASDAQ (ticker: KYIV). First Ukrainian company to list on US stock exchange. Capital raise via secondary offering.",
+          "severity": "high",
+          "evidence": []
+        }
+      ],
+      "customer_segments": [
+        {
+          "segment_name": "Consumer Urban Connected",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Reliable connectivity despite wartime infrastructure damage",
+            "Affordable converged fixed-mobile bundles"
+          ],
+          "pain_points": [
+            "Network outages from power grid attacks and conflict damage",
+            "Limited fiber availability outside major cities"
+          ],
+          "purchase_decision_factors": [
+            "Network reliability (critical in wartime)",
+            "Price (cost-of-living pressures)",
+            "Coverage breadth",
+            "Customer service responsiveness"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Price-Sensitive / Prepaid",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Ultra-affordable prepaid data connectivity",
+            "Resilient connectivity during power outages"
+          ],
+          "pain_points": [
+            "Wartime economic pressure on household budgets",
+            "Frequent network disruptions in eastern/southern regions"
+          ],
+          "purchase_decision_factors": [
+            "Lowest price",
+            "Prepaid flexibility",
+            "Network availability during emergencies",
+            "Coverage in conflict-affected areas"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Consumer Displaced / Refugee",
+          "segment_type": "consumer",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Easy number portability and activation in new locations",
+            "Affordable roaming for those displaced abroad"
+          ],
+          "pain_points": [
+            "Millions internally displaced; need connectivity in temporary locations",
+            "Cross-border roaming costs for refugees in EU"
+          ],
+          "purchase_decision_factors": [
+            "Activation ease",
+            "Roaming affordability",
+            "Coverage in western Ukraine (displacement hubs)"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        },
+        {
+          "segment_name": "Enterprise & Government",
+          "segment_type": "enterprise",
+          "size_estimate": "",
+          "growth_trend": "stable",
+          "our_share": "",
+          "unmet_needs": [
+            "Resilient communications infrastructure for businesses",
+            "Cloud and cybersecurity services (heightened need)",
+            "IoT for defense and critical infrastructure monitoring"
+          ],
+          "pain_points": [
+            "Infrastructure damage affecting business connectivity",
+            "Cybersecurity threats (state-sponsored attacks)"
+          ],
+          "purchase_decision_factors": [
+            "Network resilience and redundancy",
+            "Cybersecurity capability",
+            "Service continuity guarantees",
+            "Price competitiveness"
+          ],
+          "competitor_gaps": [],
+          "opportunity": ""
+        }
+      ],
+      "appeals_assessment": [
+        {
+          "dimension": "$",
+          "dimension_name": "Price",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "critical",
+          "gap_analysis": "No competitor data available for Price"
+        },
+        {
+          "dimension": "A1",
+          "dimension_name": "Availability",
+          "our_score": 3.2,
+          "competitor_scores": {
+            "kyivstar_ua": 4.8,
+            "vodafone_ua": 4.1
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Availability by 1.2 points. Leader: kyivstar_ua (4.8/5.0)"
+        },
+        {
+          "dimension": "P1",
+          "dimension_name": "Packaging",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Packaging"
+        },
+        {
+          "dimension": "P2",
+          "dimension_name": "Performance",
+          "our_score": 3.4,
+          "competitor_scores": {
+            "kyivstar_ua": 4.2,
+            "vodafone_ua": 3.9
+          },
+          "customer_priority": "critical",
+          "gap_analysis": "Below market average in Performance by 0.6 points. Leader: kyivstar_ua (4.2/5.0)"
+        },
+        {
+          "dimension": "E",
+          "dimension_name": "Ease of Use",
+          "our_score": 3.2,
+          "competitor_scores": {
+            "kyivstar_ua": 4.0,
+            "vodafone_ua": 3.6
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Ease of Use by 0.6 points. Leader: kyivstar_ua (4.0/5.0)"
+        },
+        {
+          "dimension": "A2",
+          "dimension_name": "Assurances",
+          "our_score": 3.8,
+          "competitor_scores": {
+            "kyivstar_ua": 4.2,
+            "vodafone_ua": 3.5
+          },
+          "customer_priority": "important",
+          "gap_analysis": "Below market average in Assurances by 0.1 points. Leader: kyivstar_ua (4.2/5.0)"
+        },
+        {
+          "dimension": "L",
+          "dimension_name": "Lifecycle Cost",
+          "our_score": 0.0,
+          "competitor_scores": {},
+          "customer_priority": "important",
+          "gap_analysis": "No competitor data available for Lifecycle Cost"
+        },
+        {
+          "dimension": "S",
+          "dimension_name": "Social/Brand",
+          "our_score": 2.8,
+          "competitor_scores": {
+            "kyivstar_ua": 4.5,
+            "vodafone_ua": 4.0
+          },
+          "customer_priority": "nice_to_have",
+          "gap_analysis": "Below market average in Social/Brand by 1.5 points. Leader: kyivstar_ua (4.5/5.0)"
+        }
+      ],
+      "customer_value_migration": "Value migration trending upward: customers willing to pay more for premium connectivity and convergent bundles. Focus on upselling and cross-selling opportunities.",
+      "market_outlook": "mixed",
+      "key_message": "Ukraine telecom market totals UAH 19.9B in quarterly revenue; gaps in Social/Brand; Market presents a balanced mix of opportunities and challenges."
+    },
+    "competition": {
+      "five_forces": {
+        "existing_competitors": {
+          "force_name": "existing_competitors",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Number of competitors",
+              "description": "3 active operators in the market",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Market concentration",
+              "description": "Top operator holds 49% of market revenue (total: UAH 19.9B)",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Growth rate disparity",
+              "description": "Service revenue growth ranges from +9.8% to +24.6% (spread: 14.8pp)",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Margin pressure",
+              "description": "Average EBITDA margin: 54.9%",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Market is concentrated with top player at 49% revenue share."
+          ]
+        },
+        "new_entrants": {
+          "force_name": "new_entrants",
+          "force_level": "low",
+          "key_factors": [
+            {
+              "name": "Entry barriers",
+              "description": "High barriers: spectrum licensing, massive capex for network build, regulatory approvals, established brand loyalty",
+              "impact": "high",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "High entry barriers (spectrum, capex, regulation) limit new competitors, but determined entrants with deep pockets can still disrupt."
+          ]
+        },
+        "substitutes": {
+          "force_name": "substitutes",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "OTT messaging replaces SMS/voice",
+              "description": "WhatsApp, Signal, Teams replacing traditional voice/SMS revenue. OTT messaging penetration continues to grow.",
+              "impact": "high",
+              "trend": "increasing"
+            },
+            {
+              "name": "Streaming replaces linear TV/IPTV",
+              "description": "Netflix, Disney+, YouTube Premium substituting traditional TV/cable TV subscriptions.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Wi-Fi offload reduces cellular dependency",
+              "description": "Public and private Wi-Fi networks reduce reliance on mobile data, especially in urban areas.",
+              "impact": "low",
+              "trend": "stable"
+            },
+            {
+              "name": "Cloud services substitute enterprise ICT",
+              "description": "AWS, Azure, GCP offering direct enterprise connectivity, reducing operator B2B ICT revenue opportunity.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "OTT services continue to erode traditional voice/SMS revenue; operators must pivot toward data, connectivity, and digital services.",
+            "Streaming substitution pressures TV/IPTV bundling strategies; operators should focus on aggregation and super-bundling."
+          ]
+        },
+        "supplier_power": {
+          "force_name": "supplier_power",
+          "force_level": "medium",
+          "key_factors": [
+            {
+              "name": "Network equipment vendor concentration",
+              "description": "Oligopoly of 3 major vendors (Huawei, Ericsson, Nokia). Limited alternatives increase supplier leverage on pricing and technology roadmaps.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Semiconductor supply chain",
+              "description": "Chip supply constraints can create bottlenecks for both network equipment and consumer devices.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Tower infrastructure",
+              "description": "Independent tower companies (e.g., Vantage Towers, GD Towers) have pricing power for site rentals and co-location.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Fiber infrastructure suppliers",
+              "description": "Fiber cable and deployment contractors influence capex for FTTH rollout programs.",
+              "impact": "medium",
+              "trend": "stable"
+            }
+          ],
+          "implications": [
+            "Vendor oligopoly limits negotiation leverage; multi-vendor strategies and Open RAN initiatives can help diversify supply.",
+            "Tower company independence increases site rental costs; operators should evaluate infrastructure-sharing arrangements."
+          ]
+        },
+        "buyer_power": {
+          "force_name": "buyer_power",
+          "force_level": "high",
+          "key_factors": [
+            {
+              "name": "Consumer churn rates",
+              "description": "Average mobile churn: 1.90%/month. Highest: 2.00% indicating high willingness to switch.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Postpaid contract mix",
+              "description": "Average postpaid ratio: 28%. Moderate contract lock-in moderately constrains buyer mobility.",
+              "impact": "medium",
+              "trend": "stable"
+            },
+            {
+              "name": "Individual consumer bargaining power",
+              "description": "Individual consumers have low bargaining power, but low switching costs (number portability, short contracts) mean they vote with their feet.",
+              "impact": "medium",
+              "trend": "increasing"
+            },
+            {
+              "name": "Enterprise customer concentration",
+              "description": "Large enterprise customers have significant bargaining power through multi-vendor strategies and competitive tenders.",
+              "impact": "high",
+              "trend": "stable"
+            },
+            {
+              "name": "Regulatory protection for buyers",
+              "description": "EU regulations support number portability, contract transparency, and maximum contract lengths, enhancing consumer switching ability.",
+              "impact": "medium",
+              "trend": "increasing"
+            }
+          ],
+          "implications": [
+            "Enterprise customers can leverage multi-vendor strategies; differentiation through service quality and SLAs is critical.",
+            "Low switching costs and regulatory support for portability mean operators must compete on value, not lock-in."
+          ]
+        }
+      },
+      "overall_competition_intensity": "medium",
+      "competitor_analyses": {
+        "vodafone_ua": {
+          "operator": "Vodafone Ukraine",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 6340.0,
+            "service_revenue": 6040.0,
+            "service_revenue_growth_pct": 9.8,
+            "ebitda": 3070.0,
+            "ebitda_margin_pct": 48.4,
+            "ebitda_growth_pct": -8.4,
+            "capex": 1600.0,
+            "capex_to_revenue_pct": 25.2,
+            "revenue_trend": "growing",
+            "margin_trend": "declining",
+            "revenue_metrics": {
+              "cagr_pct": 11.99,
+              "momentum_score": 43.32,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.06,
+              "trend_slope": 150.95,
+              "acceleration": -28.0,
+              "sequential_growth": [
+                5.77,
+                3.64,
+                1.75,
+                0.0,
+                5.17,
+                1.64,
+                2.26
+              ],
+              "yoy_growth": [
+                11.54,
+                10.91,
+                8.77,
+                9.31
+              ],
+              "latest_qoq_pct": 2.26,
+              "latest_yoy_pct": 9.31,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "margin_metrics": {
+              "cagr_pct": -10.44,
+              "momentum_score": 35.45,
+              "momentum_phase": "accelerating_decline",
+              "volatility": 0.08,
+              "trend_slope": -1.72,
+              "acceleration": -0.85,
+              "sequential_growth": [
+                -0.85,
+                -0.52,
+                -0.17,
+                -10.55,
+                -1.74,
+                -3.15,
+                -1.63
+              ],
+              "yoy_growth": [
+                -11.93,
+                -12.71,
+                -15.03,
+                -16.26
+              ],
+              "latest_qoq_pct": -1.63,
+              "latest_yoy_pct": -16.26,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 15800.0,
+            "mobile_postpaid_k": 4550.0,
+            "mobile_net_adds_k": 0.0,
+            "mobile_churn_pct": 2.0,
+            "mobile_arpu": 118.0,
+            "broadband_total_k": 100.0,
+            "broadband_fiber_k": 100.0,
+            "broadband_net_adds_k": 10.0,
+            "tv_total_k": 0.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 0.0,
+            "four_g_coverage_pct": 90.0,
+            "fiber_homepass_k": 1300.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Huawei/Ericsson",
+              "spectrum_mhz": 145,
+              "gpon_homepass_k": 1300,
+              "sites_destroyed_pct": 10
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Market share expansion (investing for growth); subscriber acquisition focus",
+          "supply_chain_status": "Primary vendor: Huawei/Ericsson",
+          "ecosystem_partners": [
+            "Network vendor: Huawei/Ericsson"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Brand Strength",
+            "Own fiber infrastructure (1300k homes)",
+            "Scale advantage (15.8m mobile subs)"
+          ],
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; high-margin profile",
+          "org_structure": "CEO: Olga Ustinova (NEQSOL Holding appointee; managing wartime operations and GPON fiber expansion)",
+          "incentive_system": "Growth and market share targets",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Brand Strength: score 80 (market avg 75)"
+          ],
+          "weaknesses": [
+            "Enterprise Solutions: score 70 (market avg 77)"
+          ],
+          "problems": [
+            "Competitive gap in Enterprise Solutions",
+            "Margin erosion",
+            "EBITDA contraction (-8.4%)"
+          ],
+          "likely_future_actions": [
+            "Vodafone Ukraine is likely to continue aggressive network expansion (capex/revenue at 25% with growing revenue).",
+            "Vodafone Ukraine is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Vodafone Ukraine's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Vodafone Ukraine is weak in: Enterprise Solutions. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Enterprise Solutions: score 70 (market avg 77)"
+              ],
+              "suggested_action": "Invest in Enterprise Solutions to capture customers dissatisfied with Vodafone Ukraine."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Vodafone Ukraine excels in: Brand Strength. Study their approach for best practices.",
+              "evidence": [
+                "Brand Strength: score 80 (market avg 75)"
+              ],
+              "suggested_action": "Benchmark Vodafone Ukraine's practices in Brand Strength."
+            }
+          ]
+        },
+        "kyivstar_ua": {
+          "operator": "Kyivstar",
+          "financial_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "revenue": 9770.0,
+            "service_revenue": 9470.0,
+            "service_revenue_growth_pct": 11.8,
+            "ebitda": 5900.0,
+            "ebitda_margin_pct": 60.4,
+            "ebitda_growth_pct": 3.5,
+            "capex": 2720.0,
+            "capex_to_revenue_pct": 27.8,
+            "revenue_trend": "growing",
+            "margin_trend": "declining",
+            "revenue_metrics": {
+              "cagr_pct": 13.73,
+              "momentum_score": 17.67,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.07,
+              "trend_slope": 212.98,
+              "acceleration": -239.0,
+              "sequential_growth": [
+                10.26,
+                6.98,
+                4.35,
+                -9.38,
+                5.75,
+                4.35,
+                1.77
+              ],
+              "yoy_growth": [
+                11.54,
+                6.98,
+                4.35,
+                1.77
+              ],
+              "latest_qoq_pct": 1.77,
+              "latest_yoy_pct": 1.77,
+              "seasonality_detected": true,
+              "seasonality_pattern": "Q1=low; Q4=high"
+            },
+            "margin_metrics": {
+              "cagr_pct": -1.03,
+              "momentum_score": 88.5,
+              "momentum_phase": "recovery",
+              "volatility": 0.04,
+              "trend_slope": -0.45,
+              "acceleration": 2.34,
+              "sequential_growth": [
+                -1.63,
+                -1.16,
+                -0.67,
+                -7.07,
+                2.36,
+                1.42,
+                5.41
+              ],
+              "yoy_growth": [
+                -10.24,
+                -6.61,
+                -4.18,
+                1.68
+              ],
+              "latest_qoq_pct": 5.41,
+              "latest_yoy_pct": 1.68,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "quarters_analyzed": 8
+          },
+          "subscriber_health": {
+            "status": "data_available",
+            "latest_quarter": "CQ4_2025",
+            "mobile_total_k": 24300.0,
+            "mobile_postpaid_k": 6700.0,
+            "mobile_net_adds_k": 100.0,
+            "mobile_churn_pct": 1.7,
+            "mobile_arpu": 136.0,
+            "broadband_total_k": 1100.0,
+            "broadband_fiber_k": 620.0,
+            "broadband_net_adds_k": 20.0,
+            "tv_total_k": 0.0,
+            "mobile_trend": "growing",
+            "broadband_trend": "growing",
+            "arpu_trend": "growing",
+            "quarters_analyzed": 8
+          },
+          "network_status": {
+            "status": "data_available",
+            "five_g_coverage_pct": 0.0,
+            "four_g_coverage_pct": 96.0,
+            "fiber_homepass_k": 2000.0,
+            "cable_homepass_k": null,
+            "cable_docsis31_pct": null,
+            "technology_mix": {
+              "mobile_vendor": "Ericsson",
+              "spectrum_mhz": 202,
+              "base_stations": 66000,
+              "own_fiber_km": 44000
+            }
+          },
+          "product_portfolio": [
+            "Mobile (postpaid + prepaid)",
+            "Fixed broadband (incl. fiber/FTTH)",
+            "Enterprise/B2B solutions"
+          ],
+          "new_product_pipeline": [],
+          "growth_strategy": "Market share expansion (investing for growth); subscriber acquisition focus; strong B2B/enterprise push",
+          "supply_chain_status": "Primary vendor: Ericsson",
+          "ecosystem_partners": [
+            "Network vendor: Ericsson"
+          ],
+          "core_control_points": [
+            "Market leadership in Network Coverage",
+            "Market leadership in Distribution",
+            "Market leadership in Brand Strength",
+            "Market leadership in Enterprise Solutions",
+            "Market leadership in Network Quality"
+          ],
+          "business_model": "Mobile-centric with fixed complement; service-revenue dominant; high-margin profile",
+          "org_structure": "CEO: Oleksandr Komarov (VEON appointee; managing post-cyberattack recovery and NASDAQ listing process)",
+          "incentive_system": "Growth and market share targets",
+          "talent_culture": "1 C-suite leaders",
+          "ma_activity": [],
+          "strengths": [
+            "Brand Strength: score 90 (market avg 75)",
+            "Customer Service: score 80 (market avg 72)",
+            "Digital Experience: score 82 (market avg 76)",
+            "Distribution: score 92 (market avg 77)",
+            "Enterprise Solutions: score 85 (market avg 77)",
+            "Network Coverage: score 95 (market avg 81)",
+            "Network Quality: score 85 (market avg 77)"
+          ],
+          "weaknesses": [
+            "Price Competitiveness: score 65 (market avg 73)"
+          ],
+          "problems": [
+            "Competitive gap in Price Competitiveness",
+            "Margin erosion"
+          ],
+          "likely_future_actions": [
+            "Kyivstar is likely to continue aggressive network expansion (capex/revenue at 28% with growing revenue).",
+            "Kyivstar is likely to continue market share expansion in mobile, leveraging positive subscriber momentum."
+          ],
+          "implications": [
+            {
+              "implication_type": "threat",
+              "description": "Kyivstar's growing revenue indicates competitive pressure; they are capturing market value.",
+              "evidence": [
+                "Revenue trend: growing"
+              ],
+              "suggested_action": "Monitor pricing and go-to-market strategies."
+            },
+            {
+              "implication_type": "opportunity",
+              "description": "Kyivstar is weak in: Price Competitiveness. Target can differentiate in these dimensions.",
+              "evidence": [
+                "Price Competitiveness: score 65 (market avg 73)"
+              ],
+              "suggested_action": "Invest in Price Competitiveness to capture customers dissatisfied with Kyivstar."
+            },
+            {
+              "implication_type": "learning",
+              "description": "Kyivstar excels in: Brand Strength, Customer Service, Digital Experience. Study their approach for best practices.",
+              "evidence": [
+                "Brand Strength: score 90 (market avg 75)",
+                "Customer Service: score 80 (market avg 72)",
+                "Digital Experience: score 82 (market avg 76)"
+              ],
+              "suggested_action": "Benchmark Kyivstar's practices in Brand Strength, Customer Service, Digital Experience."
+            }
+          ]
+        }
+      },
+      "comparison_table": {
+        "revenue": {
+          "vodafone_ua": 6340.0,
+          "lifecell_ua": 3800.0,
+          "kyivstar_ua": 9770.0
+        },
+        "revenue_growth": {
+          "vodafone_ua": 9.8,
+          "lifecell_ua": 24.6,
+          "kyivstar_ua": 11.8
+        },
+        "ebitda_margin": {
+          "vodafone_ua": 48.4,
+          "lifecell_ua": 55.8,
+          "kyivstar_ua": 60.4
+        },
+        "subscribers": {
+          "vodafone_ua": 15800.0,
+          "lifecell_ua": 10000.0,
+          "kyivstar_ua": 24300.0
+        },
+        "arpu": {
+          "vodafone_ua": 118.0,
+          "lifecell_ua": 130.0,
+          "kyivstar_ua": 136.0
+        },
+        "churn": {
+          "vodafone_ua": 2.0,
+          "lifecell_ua": 2.0,
+          "kyivstar_ua": 1.7
+        },
+        "5g_coverage": {
+          "vodafone_ua": 0.0,
+          "lifecell_ua": 0.0,
+          "kyivstar_ua": 0.0
+        }
+      },
+      "competitive_landscape": "The market comprises 3 active operators: Vodafone Ukraine, lifecell (DVL Group), Kyivstar. Overall competition intensity is assessed as medium. Revenue ranking: Kyivstar (9,770M), Vodafone Ukraine (6,340M), lifecell (DVL Group) (3,800M). Five Forces: Existing Competitors: high; New Entrants: low; Substitutes: high; Supplier Power: medium; Buyer Power: high.",
+      "key_message": "In a 3-player market with medium competition intensity, Kyivstar leads with 49% revenue share. Target operator holds 19% share. Strongest competitive force: Existing Competitors."
+    },
+    "self_analysis": {
+      "financial_health": {
+        "total_revenue": 3800.0,
+        "service_revenue": 3700.0,
+        "ebitda": 2120.0,
+        "ebitda_margin_pct": 55.8,
+        "net_income": null,
+        "capex": 750.0,
+        "capex_to_revenue_pct": 19.7,
+        "opex": null,
+        "employees": 5100,
+        "revenue_qoq_pct": 5.56,
+        "revenue_yoy_pct": 24.59,
+        "ebitda_qoq_pct": 2.42,
+        "ebitda_growth_pct": 18.4,
+        "service_revenue_growth_pct": 24.6,
+        "revenue_trend": [
+          2600.0,
+          2750.0,
+          2900.0,
+          3050.0,
+          3200.0,
+          3400.0,
+          3600.0,
+          3800.0
+        ],
+        "ebitda_trend": [
+          1520.0,
+          1610.0,
+          1700.0,
+          1790.0,
+          1850.0,
+          1960.0,
+          2070.0,
+          2120.0
+        ],
+        "margin_trend": [
+          58.5,
+          58.5,
+          58.6,
+          58.7,
+          57.8,
+          57.6,
+          57.5,
+          55.8
+        ],
+        "revenue_metrics": {
+          "cagr_pct": 24.22,
+          "momentum_score": 54.33,
+          "momentum_phase": "accelerating_growth",
+          "volatility": 0.12,
+          "trend_slope": 170.24,
+          "acceleration": 50.0,
+          "sequential_growth": [
+            5.77,
+            5.45,
+            5.17,
+            4.92,
+            6.25,
+            5.88,
+            5.56
+          ],
+          "yoy_growth": [
+            23.08,
+            23.64,
+            24.14,
+            24.59
+          ],
+          "latest_qoq_pct": 5.56,
+          "latest_yoy_pct": 24.59,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "ebitda_metrics": {
+          "cagr_pct": 20.94,
+          "momentum_score": 40.49,
+          "momentum_phase": "accelerating_growth",
+          "volatility": 0.11,
+          "trend_slope": 87.38,
+          "acceleration": 2.0,
+          "sequential_growth": [
+            5.92,
+            5.59,
+            5.29,
+            3.35,
+            5.95,
+            5.61,
+            2.42
+          ],
+          "yoy_growth": [
+            21.71,
+            21.74,
+            21.76,
+            18.44
+          ],
+          "latest_qoq_pct": 2.42,
+          "latest_yoy_pct": 18.44,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "margin_metrics": {
+          "cagr_pct": -2.66,
+          "momentum_score": 38.59,
+          "momentum_phase": "accelerating_decline",
+          "volatility": 0.02,
+          "trend_slope": -0.33,
+          "acceleration": -0.68,
+          "sequential_growth": [
+            0.0,
+            0.17,
+            0.17,
+            -1.53,
+            -0.35,
+            -0.17,
+            -2.96
+          ],
+          "yoy_growth": [
+            -1.2,
+            -1.54,
+            -1.88,
+            -4.94
+          ],
+          "latest_qoq_pct": -2.96,
+          "latest_yoy_pct": -4.94,
+          "seasonality_detected": false,
+          "seasonality_pattern": null
+        },
+        "revenue_growing": true,
+        "margin_healthy": true
+      },
+      "revenue_breakdown": {
+        "mobile_service_revenue": {
+          "value": 3210.0,
+          "share_pct": 84.5
+        },
+        "fixed_service_revenue": {
+          "value": 390.0,
+          "share_pct": 10.3
+        },
+        "b2b_revenue": {
+          "value": 100.0,
+          "share_pct": 2.6
+        },
+        "other_revenue": {
+          "value": 100.0,
+          "share_pct": 2.6
+        },
+        "total_revenue": 3800.0
+      },
+      "market_positions": {
+        "calendar_quarter": "CQ4_2025",
+        "operators_count": 3,
+        "revenue_rank": 3,
+        "total_revenue": 3800.0,
+        "revenue_market_share_pct": 19.1,
+        "subscriber_rank": 3,
+        "mobile_subscriber_share_pct": 20.0,
+        "broadband_subscriber_share_pct": 76.9,
+        "competitors": {
+          "kyivstar_ua": {
+            "display_name": "Kyivstar",
+            "total_revenue": 9770.0,
+            "mobile_total_k": 24300.0,
+            "broadband_total_k": 1100.0
+          },
+          "vodafone_ua": {
+            "display_name": "Vodafone Ukraine",
+            "total_revenue": 6340.0,
+            "mobile_total_k": 15800.0,
+            "broadband_total_k": 100.0
+          }
+        }
+      },
+      "share_trends": {
+        "revenue": {
+          "metric_type": "revenue",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "kyivstar_ua",
+              "display_name": "Kyivstar",
+              "share_pct": [
+                50.0,
+                49.152542372881356,
+                51.038575667655785,
+                49.19786096256685,
+                51.68539325842697,
+                49.48453608247423,
+                52.03252032520326,
+                49.070818684078354
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 49.07,
+              "share_change_pp": -0.93,
+              "avg_quarterly_change_pp": -0.13,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafone_ua",
+              "display_name": "Vodafone Ukraine",
+              "share_pct": [
+                33.33333333333333,
+                32.7683615819209,
+                32.640949554896146,
+                32.62032085561498,
+                32.02247191011236,
+                31.958762886597935,
+                31.43631436314363,
+                31.843294826720243
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 31.84,
+              "share_change_pp": -1.49,
+              "avg_quarterly_change_pp": -0.21,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "lifecell_ua",
+              "display_name": "lifecell (DVL Group)",
+              "share_pct": [
+                16.666666666666664,
+                18.07909604519774,
+                16.320474777448073,
+                18.181818181818183,
+                16.292134831460675,
+                18.556701030927837,
+                16.53116531165312,
+                19.085886489201407
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 19.09,
+              "share_change_pp": 2.42,
+              "avg_quarterly_change_pp": 0.35,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3786.21,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3888.89,
+              3816.59,
+              3936.73,
+              3815.09,
+              3962.25,
+              3814.43,
+              3968.9,
+              3786.21
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "lifecell_ua",
+          "target_series": {
+            "operator_id": "lifecell_ua",
+            "display_name": "lifecell (DVL Group)",
+            "share_pct": [
+              16.666666666666664,
+              18.07909604519774,
+              16.320474777448073,
+              18.181818181818183,
+              16.292134831460675,
+              18.556701030927837,
+              16.53116531165312,
+              19.085886489201407
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 19.09,
+            "share_change_pp": 2.42,
+            "avg_quarterly_change_pp": 0.35,
+            "direction": "gaining",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "kyivstar_ua",
+          "biggest_gainer_id": "lifecell_ua",
+          "biggest_loser_id": "vodafone_ua",
+          "key_message": "Revenue share: 19.1% (#3); gaining (+2.4pp); market is highly concentrated (HHI 3,786); fragmenting."
+        },
+        "mobile_subscribers": {
+          "metric_type": "mobile_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "kyivstar_ua",
+              "display_name": "Kyivstar",
+              "share_pct": [
+                48.25462012320328,
+                48.19277108433735,
+                48.318042813455655,
+                48.296593186372746,
+                48.38056680161944,
+                48.4,
+                48.19277108433735,
+                48.50299401197605
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 48.5,
+              "share_change_pp": 0.25,
+              "avg_quarterly_change_pp": 0.04,
+              "direction": "stable",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafone_ua",
+              "display_name": "Vodafone Ukraine",
+              "share_pct": [
+                32.238193018480494,
+                31.92771084337349,
+                32.11009174311927,
+                31.763527054108216,
+                31.983805668016196,
+                31.6,
+                31.92771084337349,
+                31.53692614770459
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 31.54,
+              "share_change_pp": -0.7,
+              "avg_quarterly_change_pp": -0.1,
+              "direction": "losing",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "lifecell_ua",
+              "display_name": "lifecell (DVL Group)",
+              "share_pct": [
+                19.50718685831622,
+                19.879518072289155,
+                19.571865443425075,
+                19.939879759519037,
+                19.63562753036437,
+                20.0,
+                19.879518072289155,
+                19.960079840319363
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 19.96,
+              "share_change_pp": 0.45,
+              "avg_quarterly_change_pp": 0.06,
+              "direction": "stable",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 3745.52,
+            "hhi_label": "highly_concentrated",
+            "cr3": 100.0,
+            "hhi_trend": [
+              3748.34,
+              3737.12,
+              3748.75,
+              3739.08,
+              3749.2,
+              3741.12,
+              3737.12,
+              3745.52
+            ],
+            "hhi_direction": "stable"
+          },
+          "target_operator_id": "lifecell_ua",
+          "target_series": {
+            "operator_id": "lifecell_ua",
+            "display_name": "lifecell (DVL Group)",
+            "share_pct": [
+              19.50718685831622,
+              19.879518072289155,
+              19.571865443425075,
+              19.939879759519037,
+              19.63562753036437,
+              20.0,
+              19.879518072289155,
+              19.960079840319363
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 19.96,
+            "share_change_pp": 0.45,
+            "avg_quarterly_change_pp": 0.06,
+            "direction": "stable",
+            "rank_latest": 3,
+            "rank_change": 0
+          },
+          "share_leader_id": "kyivstar_ua",
+          "biggest_gainer_id": "lifecell_ua",
+          "biggest_loser_id": "vodafone_ua",
+          "key_message": "Mobile Subscribers share: 20.0% (#3); stable (+0.5pp); market is highly concentrated (HHI 3,746)."
+        },
+        "broadband_subscribers": {
+          "metric_type": "broadband_subscribers",
+          "quarters": [
+            "CQ1_2024",
+            "CQ1_2025",
+            "CQ2_2024",
+            "CQ2_2025",
+            "CQ3_2024",
+            "CQ3_2025",
+            "CQ4_2024",
+            "CQ4_2025"
+          ],
+          "operator_series": [
+            {
+              "operator_id": "lifecell_ua",
+              "display_name": "lifecell (DVL Group)",
+              "share_pct": [
+                80.33826638477801,
+                78.37301587301587,
+                79.87551867219918,
+                77.79960707269156,
+                79.42973523421588,
+                77.23735408560312,
+                78.84231536926147,
+                76.92307692307693
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 76.92,
+              "share_change_pp": -3.42,
+              "avg_quarterly_change_pp": -0.49,
+              "direction": "losing",
+              "rank_latest": 1,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "kyivstar_ua",
+              "display_name": "Kyivstar",
+              "share_pct": [
+                19.027484143763214,
+                20.238095238095237,
+                19.294605809128633,
+                20.6286836935167,
+                19.551934826883908,
+                21.011673151750973,
+                19.960079840319363,
+                21.153846153846153
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 21.15,
+              "share_change_pp": 2.13,
+              "avg_quarterly_change_pp": 0.3,
+              "direction": "gaining",
+              "rank_latest": 2,
+              "rank_change": 0
+            },
+            {
+              "operator_id": "vodafone_ua",
+              "display_name": "Vodafone Ukraine",
+              "share_pct": [
+                0.6342494714587738,
+                1.3888888888888888,
+                0.8298755186721992,
+                1.5717092337917484,
+                1.0183299389002036,
+                1.7509727626459144,
+                1.1976047904191618,
+                1.9230769230769231
+              ],
+              "quarters": [
+                "CQ1_2024",
+                "CQ1_2025",
+                "CQ2_2024",
+                "CQ2_2025",
+                "CQ3_2024",
+                "CQ3_2025",
+                "CQ4_2024",
+                "CQ4_2025"
+              ],
+              "latest_share_pct": 1.92,
+              "share_change_pp": 1.29,
+              "avg_quarterly_change_pp": 0.18,
+              "direction": "gaining",
+              "rank_latest": 3,
+              "rank_change": 0
+            }
+          ],
+          "concentration": {
+            "hhi": 6368.34,
+            "hhi_label": "highly_concentrated",
+            "cr3": 99.99,
+            "hhi_trend": [
+              6816.68,
+              6553.84,
+              6753.07,
+              6480.79,
+              6692.4,
+              6410.17,
+              6615.95,
+              6368.34
+            ],
+            "hhi_direction": "fragmenting"
+          },
+          "target_operator_id": "lifecell_ua",
+          "target_series": {
+            "operator_id": "lifecell_ua",
+            "display_name": "lifecell (DVL Group)",
+            "share_pct": [
+              80.33826638477801,
+              78.37301587301587,
+              79.87551867219918,
+              77.79960707269156,
+              79.42973523421588,
+              77.23735408560312,
+              78.84231536926147,
+              76.92307692307693
+            ],
+            "quarters": [
+              "CQ1_2024",
+              "CQ1_2025",
+              "CQ2_2024",
+              "CQ2_2025",
+              "CQ3_2024",
+              "CQ3_2025",
+              "CQ4_2024",
+              "CQ4_2025"
+            ],
+            "latest_share_pct": 76.92,
+            "share_change_pp": -3.42,
+            "avg_quarterly_change_pp": -0.49,
+            "direction": "losing",
+            "rank_latest": 1,
+            "rank_change": 0
+          },
+          "share_leader_id": "lifecell_ua",
+          "biggest_gainer_id": "kyivstar_ua",
+          "biggest_loser_id": "lifecell_ua",
+          "key_message": "Broadband Subscribers share: 76.9% (#1); losing (-3.4pp); market is highly concentrated (HHI 6,368); fragmenting."
+        },
+        "revenue_share_latest": 19.1,
+        "mobile_share_latest": 20.0,
+        "broadband_share_latest": 76.9
+      },
+      "segment_analyses": [
+        {
+          "segment_name": "Mobile",
+          "segment_id": "mobile",
+          "key_metrics": {
+            "mobile_service_revenue": 3210.0,
+            "mobile_service_growth_pct": 23.9,
+            "mobile_total_k": 10000.0,
+            "mobile_postpaid_k": 2850.0,
+            "mobile_prepaid_k": 7150.0,
+            "mobile_net_adds_k": 0.0,
+            "mobile_churn_pct": 2.0,
+            "mobile_arpu": 130.0,
+            "iot_connections_k": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 3210.0,
+              "previous_value": 3040.0,
+              "yoy_value": 2590.0,
+              "change_qoq": 5.59,
+              "change_yoy": 23.94,
+              "direction": "improving",
+              "significance": "significant"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 10000.0,
+              "previous_value": 10000.0,
+              "yoy_value": 9900.0,
+              "change_qoq": 0.0,
+              "change_yoy": 1.01,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": 130.0,
+              "previous_value": 125.0,
+              "yoy_value": 111.0,
+              "change_qoq": 4.0,
+              "change_yoy": 17.12,
+              "direction": "improving",
+              "significance": "moderate"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              2200.0,
+              2330.0,
+              2460.0,
+              2590.0,
+              2700.0,
+              2870.0,
+              3040.0,
+              3210.0
+            ],
+            "subscribers": [
+              9500.0,
+              9600.0,
+              9700.0,
+              9900.0,
+              9900.0,
+              9950.0,
+              10000.0,
+              10000.0
+            ],
+            "arpu": [
+              98.0,
+              102.0,
+              106.0,
+              111.0,
+              115.0,
+              120.0,
+              125.0,
+              130.0
+            ],
+            "churn": [
+              2.5,
+              2.4,
+              2.3,
+              2.2,
+              2.2,
+              2.1,
+              2.1,
+              2.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 24.1,
+              "momentum_score": 53.48,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.12,
+              "trend_slope": 142.38,
+              "acceleration": 40.0,
+              "sequential_growth": [
+                5.91,
+                5.58,
+                5.28,
+                4.25,
+                6.3,
+                5.92,
+                5.59
+              ],
+              "yoy_growth": [
+                22.73,
+                23.18,
+                23.58,
+                23.94
+              ],
+              "latest_qoq_pct": 5.59,
+              "latest_yoy_pct": 23.94,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 2.97,
+              "momentum_score": 40.4,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 74.4,
+              "acceleration": -95.0,
+              "sequential_growth": [
+                1.05,
+                1.04,
+                2.06,
+                0.0,
+                0.51,
+                0.5,
+                0.0
+              ],
+              "yoy_growth": [
+                4.21,
+                3.65,
+                3.09,
+                1.01
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 1.01,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "arpu_metrics": {
+              "cagr_pct": 17.52,
+              "momentum_score": 49.33,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.09,
+              "trend_slope": 4.58,
+              "acceleration": 0.7,
+              "sequential_growth": [
+                4.08,
+                3.92,
+                4.72,
+                3.6,
+                4.35,
+                4.17,
+                4.0
+              ],
+              "yoy_growth": [
+                17.35,
+                17.65,
+                17.92,
+                17.12
+              ],
+              "latest_qoq_pct": 4.0,
+              "latest_yoy_pct": 17.12,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "churn_metrics": {
+              "cagr_pct": -11.97,
+              "momentum_score": 58.73,
+              "momentum_phase": "flat",
+              "volatility": 0.07,
+              "trend_slope": -0.07,
+              "acceleration": 0.04,
+              "sequential_growth": [
+                -4.0,
+                -4.17,
+                -4.35,
+                0.0,
+                -4.55,
+                0.0,
+                -4.76
+              ],
+              "yoy_growth": [
+                -12.0,
+                -12.5,
+                -8.7,
+                -9.09
+              ],
+              "latest_qoq_pct": -4.76,
+              "latest_yoy_pct": -9.09,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Kyivstar": {
+              "mobile_service_revenue": 8570.0,
+              "mobile_total_k": 24300.0,
+              "mobile_arpu": 136.0,
+              "mobile_churn_pct": 1.7
+            },
+            "Vodafone Ukraine": {
+              "mobile_service_revenue": 4900.0,
+              "mobile_total_k": 15800.0,
+              "mobile_arpu": 118.0,
+              "mobile_churn_pct": 2.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "FY2023 revenue UAH 11.7B (+24.4%), EBITDA UAH 6.81B (margin 58.2%), net profit UAH 2.57B. Mobile subs 9.9M (3-month active). ARPU UAH 110.9 (+21.2% YoY). FY2024 estimated ~UAH 14B.",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 5.6% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 3210.0"
+              ],
+              "source": "metric_analysis"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "arpu increased 4.0% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: arpu = 130.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "Mobile service revenue at 3,210M; up 23.9% YoY; ARPU 130.0",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "Fixed Broadband",
+          "segment_id": "fixed",
+          "key_metrics": {
+            "fixed_service_revenue": 390.0,
+            "fixed_service_growth_pct": 50.0,
+            "broadband_total_k": 4000.0,
+            "broadband_net_adds_k": 30.0,
+            "broadband_cable_k": null,
+            "broadband_fiber_k": 1850.0,
+            "broadband_dsl_k": null,
+            "broadband_arpu": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 390.0,
+              "previous_value": 360.0,
+              "yoy_value": 260.0,
+              "change_qoq": 8.33,
+              "change_yoy": 50.0,
+              "direction": "improving",
+              "significance": "significant"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 4000.0,
+              "previous_value": 3970.0,
+              "yoy_value": 3950.0,
+              "change_qoq": 0.76,
+              "change_yoy": 1.27,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "arpu",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              200.0,
+              220.0,
+              240.0,
+              260.0,
+              300.0,
+              330.0,
+              360.0,
+              390.0
+            ],
+            "subscribers": [
+              3800.0,
+              3850.0,
+              3900.0,
+              3950.0,
+              3950.0,
+              3960.0,
+              3970.0,
+              4000.0
+            ],
+            "arpu": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fiber": [
+              1500.0,
+              1550.0,
+              1600.0,
+              1650.0,
+              1700.0,
+              1750.0,
+              1800.0,
+              1850.0
+            ],
+            "cable": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 46.47,
+              "momentum_score": 50.0,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.22,
+              "trend_slope": 27.86,
+              "acceleration": 10.0,
+              "sequential_growth": [
+                10.0,
+                9.09,
+                8.33,
+                15.38,
+                10.0,
+                9.09,
+                8.33
+              ],
+              "yoy_growth": [
+                50.0,
+                50.0,
+                50.0,
+                50.0
+              ],
+              "latest_qoq_pct": 8.33,
+              "latest_yoy_pct": 50.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "subscribers_metrics": {
+              "cagr_pct": 2.97,
+              "momentum_score": 41.96,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.02,
+              "trend_slope": 25.95,
+              "acceleration": -34.0,
+              "sequential_growth": [
+                1.32,
+                1.3,
+                1.28,
+                0.0,
+                0.25,
+                0.25,
+                0.76
+              ],
+              "yoy_growth": [
+                3.95,
+                2.86,
+                1.79,
+                1.27
+              ],
+              "latest_qoq_pct": 0.76,
+              "latest_yoy_pct": 1.27,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "fiber_metrics": {
+              "cagr_pct": 12.73,
+              "momentum_score": 46.47,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.07,
+              "trend_slope": 50.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                3.33,
+                3.23,
+                3.12,
+                3.03,
+                2.94,
+                2.86,
+                2.78
+              ],
+              "yoy_growth": [
+                13.33,
+                12.9,
+                12.5,
+                12.12
+              ],
+              "latest_qoq_pct": 2.78,
+              "latest_yoy_pct": 12.12,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Kyivstar": {
+              "fixed_service_revenue": 700.0,
+              "broadband_total_k": 1100.0,
+              "broadband_fiber_k": 620.0
+            },
+            "Vodafone Ukraine": {
+              "fixed_service_revenue": 290.0,
+              "broadband_total_k": 100.0,
+              "broadband_fiber_k": 100.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "management_explanation",
+              "description": "NJJ acquisition completed Sep 2024 for $524M. Merging with Datagroup-Volia (#1 fixed ISP, 4M HH). EBRD/IFC $435M financing secured. Plans: 10,000+ km fiber, 1,000+ new base stations. Creating Ukraine'",
+              "confidence": "high",
+              "evidence": [
+                "Earnings call: CEO"
+              ],
+              "source": "earnings_call"
+            },
+            {
+              "attribution_type": "product_change",
+              "description": "revenue increased 8.3% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: revenue = 390.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "strong",
+          "key_message": "Fixed service revenue 390.0M; growth +50.0% YoY; Fiber subs 1850K",
+          "action_required": "GROW: Strong momentum — invest to accelerate growth"
+        },
+        {
+          "segment_name": "B2B",
+          "segment_id": "b2b",
+          "key_metrics": {
+            "b2b_revenue": 100.0,
+            "b2b_growth_pct": null,
+            "b2b_customers_k": 86.0,
+            "b2b_share_of_revenue_pct": 2.6
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": 100.0,
+              "previous_value": 100.0,
+              "yoy_value": 100.0,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "customers",
+              "current_value": 86.0,
+              "previous_value": 84.0,
+              "yoy_value": 53.0,
+              "change_qoq": 2.38,
+              "change_yoy": 62.26,
+              "direction": "improving",
+              "significance": "moderate"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0,
+              100.0
+            ],
+            "customers": [
+              50.0,
+              51.0,
+              52.0,
+              53.0,
+              80.0,
+              82.0,
+              84.0,
+              86.0
+            ],
+            "revenue_metrics": {
+              "cagr_pct": 0.0,
+              "momentum_score": 50.0,
+              "momentum_phase": "stabilizing",
+              "volatility": 0.0,
+              "trend_slope": 0.0,
+              "acceleration": 0.0,
+              "sequential_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "yoy_growth": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "latest_qoq_pct": 0.0,
+              "latest_yoy_pct": 0.0,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            },
+            "customers_metrics": {
+              "cagr_pct": 36.33,
+              "momentum_score": 54.5,
+              "momentum_phase": "accelerating_growth",
+              "volatility": 0.24,
+              "trend_slope": 6.36,
+              "acceleration": 1.0,
+              "sequential_growth": [
+                2.0,
+                1.96,
+                1.92,
+                50.94,
+                2.5,
+                2.44,
+                2.38
+              ],
+              "yoy_growth": [
+                60.0,
+                60.78,
+                61.54,
+                62.26
+              ],
+              "latest_qoq_pct": 2.38,
+              "latest_yoy_pct": 62.26,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Kyivstar": {
+              "b2b_revenue": 200.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 114.0
+            },
+            "Vodafone Ukraine": {
+              "b2b_revenue": 550.0,
+              "b2b_growth_pct": null,
+              "b2b_customers_k": 74.0
+            }
+          },
+          "attributions": [
+            {
+              "attribution_type": "product_change",
+              "description": "customers increased 2.4% QoQ",
+              "confidence": "high",
+              "evidence": [
+                "Metric data: customers = 86.0"
+              ],
+              "source": "metric_analysis"
+            }
+          ],
+          "health_status": "stable",
+          "key_message": "B2B revenue 100.0M; 2.6% of total revenue",
+          "action_required": "GROW: Improving trajectory — consider incremental investment"
+        },
+        {
+          "segment_name": "TV/Convergence",
+          "segment_id": "tv",
+          "key_metrics": {
+            "tv_revenue": null,
+            "tv_total_k": 1250.0,
+            "tv_net_adds_k": null,
+            "fmc_total_k": null,
+            "fmc_penetration_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "subscribers",
+              "current_value": 1250.0,
+              "previous_value": 1240.0,
+              "yoy_value": 1230.0,
+              "change_qoq": 0.81,
+              "change_yoy": 1.63,
+              "direction": "stable",
+              "significance": "minor"
+            },
+            {
+              "metric": "fmc_subscribers",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers": [
+              1200.0,
+              1210.0,
+              1220.0,
+              1230.0,
+              1230.0,
+              1235.0,
+              1240.0,
+              1250.0
+            ],
+            "fmc_subscribers": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "fmc_penetration": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "tv_subscribers_metrics": {
+              "cagr_pct": 2.36,
+              "momentum_score": 47.38,
+              "momentum_phase": "decelerating_growth",
+              "volatility": 0.01,
+              "trend_slope": 6.49,
+              "acceleration": -3.5,
+              "sequential_growth": [
+                0.83,
+                0.83,
+                0.82,
+                0.0,
+                0.41,
+                0.4,
+                0.81
+              ],
+              "yoy_growth": [
+                2.5,
+                2.07,
+                1.64,
+                1.63
+              ],
+              "latest_qoq_pct": 0.81,
+              "latest_yoy_pct": 1.63,
+              "seasonality_detected": false,
+              "seasonality_pattern": null
+            }
+          },
+          "competitor_comparison": {
+            "Kyivstar": {
+              "tv_total_k": 0.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            },
+            "Vodafone Ukraine": {
+              "tv_total_k": 0.0,
+              "fmc_total_k": null,
+              "fmc_penetration_pct": null
+            }
+          },
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "TV subscribers 1250K",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        },
+        {
+          "segment_name": "Wholesale",
+          "segment_id": "wholesale",
+          "key_metrics": {
+            "wholesale_revenue": null,
+            "wholesale_share_of_revenue_pct": null
+          },
+          "changes": [
+            {
+              "metric": "revenue",
+              "current_value": null,
+              "previous_value": null,
+              "yoy_value": null,
+              "change_qoq": 0.0,
+              "change_yoy": 0.0,
+              "direction": "stable",
+              "significance": "minor"
+            }
+          ],
+          "trend_data": {
+            "revenue": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          "competitor_comparison": {},
+          "attributions": [],
+          "health_status": "stable",
+          "key_message": "Insufficient data for wholesale assessment",
+          "action_required": "MAINTAIN: Stable performance — optimize current operations"
+        }
+      ],
+      "network": {
+        "technology_mix": {
+          "mobile_vendor": "Mixed",
+          "spectrum_mhz": 110,
+          "fixed_network": "Datagroup-Volia fiber/cable ~4M HH",
+          "base_stations_on_fiber": 350
+        },
+        "controlled_vs_resale": {
+          "own_infrastructure": [
+            "fiber",
+            "mobile"
+          ],
+          "summary": "Owned mobile network covering major cities. Datagroup-Volia fixed broadband: #1 ISP with ~4M HH subscribers, own fiber/cable network. Combined ~85% own-network."
+        },
+        "coverage": {
+          "5g": 0.0,
+          "4g": 85.0
+        },
+        "quality_scores": {},
+        "homepass_vs_connect": {
+          "fiber_homepass_k": 4000.0,
+          "fiber_connected_k": 1850.0,
+          "fiber_penetration_pct": 46.2
+        },
+        "evolution_strategy": {
+          "data_signals": [
+            "Fiber-only fixed footprint"
+          ],
+          "summary": "Converge lifecell mobile + Datagroup-Volia fixed into Ukraine's first integrated telco. EBRD/IFC $435M for network modernization. 4G densification. Fiber upgrade of Volia cable network."
+        },
+        "investment_direction": "increasing",
+        "vs_competitors": "Fiber: 3.1x more homepass than Vodafone Ukraine; Fiber: 2.0x more homepass than Kyivstar",
+        "consumer_impact": "Early 5G coverage (0.0%); Fiber-dominant broadband mix",
+        "b2b_impact": "B2B revenue share: 3%",
+        "cost_impact": "Moderate capex intensity (19.7%); Capex increasing (+7.1% QoQ)"
+      },
+      "customer_perception": {
+        "breakdown": {
+          "Customer Service": {
+            "score": 65.0,
+            "market_avg": 72.3,
+            "gap_pp": -7.3,
+            "verdict": "below average"
+          },
+          "Brand Strength": {
+            "score": 55.0,
+            "market_avg": 75.0,
+            "gap_pp": -20.0,
+            "verdict": "below average"
+          }
+        },
+        "overall_verdict": "negative",
+        "summary": "Customer Service -7pp vs market; Brand Strength -20pp vs market"
+      },
+      "leadership_changes": [
+        {
+          "name": "Mykhailo Shelemba",
+          "title": "CEO (DVL Group)",
+          "is_current": true,
+          "start_date": "2024-09-01",
+          "background": "CEO of merged DVL Group; previously CEO of Datagroup; 5% shareholder in NJJ acquisition",
+          "tenure_years": 1.5
+        }
+      ],
+      "bmc": {
+        "key_partners": [
+          "Network equipment vendors (Ericsson, Nokia)",
+          "Content providers (Netflix, Disney+)",
+          "Device manufacturers (Apple, Samsung)",
+          "Tower companies (Vantage Towers)",
+          "MVNO partners",
+          "NJJ Holding / Xavier Niel (majority owner)",
+          "Horizon Capital (co-investor)",
+          "EBRD and IFC (development financing)",
+          "Nokia (network equipment)"
+        ],
+        "key_activities": [
+          "Network operations and maintenance",
+          "Customer service and support",
+          "Product development and bundling",
+          "Network expansion and modernization",
+          "B2B solution delivery",
+          "lifecell + Datagroup-Volia convergence and integration",
+          "Network modernization and wartime resilience investment",
+          "4G coverage expansion and densification",
+          "Fixed broadband upgrade to fiber where possible"
+        ],
+        "key_resources": [
+          "Spectrum licenses",
+          "Network infrastructure (mobile, cable, fiber)",
+          "Brand and customer base",
+          "IT/BSS systems",
+          "Skilled workforce",
+          "Mobile network covering major Ukrainian cities",
+          "Datagroup-Volia fixed broadband network (#1 fixed ISP, ~4M HH)",
+          "NJJ/Xavier Niel ownership — Western investment and technology access",
+          "EBRD/IFC $435M financing for network modernization"
+        ],
+        "value_propositions": [
+          "Reliable mobile and fixed connectivity",
+          "Converged bundles (mobile + broadband + TV)",
+          "Enterprise digital transformation solutions",
+          "Nationwide 5G coverage",
+          "Cable broadband with high speeds",
+          "Ukraine's first converged telecom operator (mobile + fixed + TV)",
+          "Western-backed operator with long-term investment commitment",
+          "Competitive mobile plans targeting younger demographics",
+          "Nationwide fixed broadband via Datagroup-Volia network"
+        ],
+        "customer_relationships": [
+          "Retail stores",
+          "Online self-service (app, website)",
+          "Call center support",
+          "Dedicated enterprise account managers",
+          "Partner/reseller channels"
+        ],
+        "channels": [
+          "Physical retail stores",
+          "Online shop",
+          "Wholesale/partner distribution",
+          "Enterprise direct sales",
+          "Telesales"
+        ],
+        "customer_segments": [
+          "Consumer mobile (postpaid and prepaid)",
+          "Consumer broadband and TV",
+          "Small and medium enterprises",
+          "Large enterprises and public sector",
+          "Wholesale (MVNO, ISP)"
+        ],
+        "cost_structure": [
+          "Network OPEX (maintenance, energy, leases)",
+          "Spectrum acquisition costs",
+          "Personnel costs",
+          "Content and device subsidies",
+          "IT and digital transformation"
+        ],
+        "revenue_streams": [
+          "Mobile service revenue (voice, data)",
+          "Fixed broadband subscriptions",
+          "TV and content subscriptions",
+          "B2B/enterprise solutions",
+          "Wholesale and MVNO fees",
+          "Device sales and financing"
+        ]
+      },
+      "org_culture": "Leadership in transition (avg tenure <1.5 years); Transforming under Western ownership. Investment-focused despite wartime. Convergence-oriented. NJJ bringing Iliad Group operational know-how.",
+      "talent_assessment": {
+        "c_suite_count": 1,
+        "avg_tenure_years": 1.5,
+        "key_leaders": [
+          "Mykhailo Shelemba (CEO (DVL Group))"
+        ],
+        "capability_alignment": [
+          "Customer Service: adequate",
+          "Enterprise Solutions: strong"
+        ],
+        "assessment": "Limited executive visibility from available data"
+      },
+      "performance_gap": "Top performance gaps: EBITDA margin gap: -4.6pp vs leader (Kyivstar at 60.4%); Revenue share gap: -30.0pp vs leader (49.1%); Brand Strength: -35pp vs leader",
+      "opportunity_gap": "Top opportunity gaps: B2B revenue gap (50% below market leader)",
+      "strategic_review": "Management outlook: FY2023 revenue UAH 11.7B (+24.4%), EBITDA UAH 6.81B (margin 58.2%), net profit UAH 2.57B. Mobile subs 9.9M (3-month active). ARPU UAH 110.9 (+21.2% YoY). FY2024 estimated ~UAH 14B.. Revenue trajectory growing, margins strong (55.8%). Execution under pressure — weaknesses outnumber strengths. Primary risk: Brand Strength: score 55 (market avg 75)",
+      "management_commentary": [
+        {
+          "segment": "Mobile",
+          "type": "guidance",
+          "content": "FY2023 revenue UAH 11.7B (+24.4%), EBITDA UAH 6.81B (margin 58.2%), net profit UAH 2.57B. Mobile subs 9.9M (3-month active). ARPU UAH 110.9 (+21.2% YoY). FY2024 estimated ~UAH 14B.",
+          "speaker": "CEO",
+          "source_url": null
+        },
+        {
+          "segment": "Convergence",
+          "type": "outlook",
+          "content": "NJJ acquisition completed Sep 2024 for $524M. Merging with Datagroup-Volia (#1 fixed ISP, 4M HH). EBRD/IFC $435M financing secured. Plans: 10,000+ km fiber, 1,000+ new base stations. Creating Ukraine's first converged telco.",
+          "speaker": "CEO",
+          "source_url": null
+        }
+      ],
+      "strengths": [
+        "Price Competitiveness: score 82 (market avg 73)",
+        "Strong EBITDA margin at 55.8%",
+        "Revenue on growth trajectory"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 55 (market avg 75)",
+        "Customer Service: score 65 (market avg 72)",
+        "Digital Experience: score 70 (market avg 76)",
+        "Distribution: score 60 (market avg 77)",
+        "Network Coverage: score 65 (market avg 81)",
+        "Network Quality: score 68 (market avg 77)",
+        "5G coverage gap at only 0.0%"
+      ],
+      "exposure_points": [
+        {
+          "trigger_action": "Active wartime environment with ongoing infrastructure damage",
+          "side_effect": "Network outages, tower destruction, power grid attacks",
+          "attack_vector": "Kyivstar and Vodafone have more redundant networks",
+          "severity": "high",
+          "evidence": [
+            "Russia targeting Ukrainian energy and communications infrastructure"
+          ]
+        },
+        {
+          "trigger_action": "Smallest mobile operator integrating newly acquired Datagroup-Volia",
+          "side_effect": "Complex integration during wartime conditions",
+          "attack_vector": "Kyivstar maintains scale advantage while lifecell is distracted",
+          "severity": "medium",
+          "evidence": [
+            "NJJ completed lifecell+Datagroup-Volia acquisition Sep 2024; integration ongoing"
+          ]
+        }
+      ],
+      "health_rating": "stable",
+      "key_message": "Ranked #3 of 3 operators in market; revenue UAH 3,800M; EBITDA margin 55.8%; stable but facing challenges; key strength: Price Competitiveness; key challenge: Brand Strength; Management outlook: FY2023 revenue UAH 11.7B (+24.4%), EBITDA UAH 6.81B (margin 58.2%), net profit UAH 2.57B. Mobile subs 9.9M (3-month active). ARPU UAH 110.9 (+21.2% YoY). FY2024 estimated ~UAH 14B."
+    },
+    "swot": {
+      "strengths": [
+        "Price Competitiveness: score 82 (market avg 73)",
+        "Strong EBITDA margin at 55.8%",
+        "Revenue on growth trajectory"
+      ],
+      "weaknesses": [
+        "Brand Strength: score 55 (market avg 75)",
+        "Customer Service: score 65 (market avg 72)",
+        "Digital Experience: score 70 (market avg 76)",
+        "Distribution: score 60 (market avg 77)",
+        "Network Coverage: score 65 (market avg 81)",
+        "Network Quality: score 68 (market avg 77)",
+        "5G coverage gap at only 0.0%",
+        "Network outages, tower destruction, power grid attacks",
+        "Complex integration during wartime conditions"
+      ],
+      "opportunities": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+        "National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access",
+        "lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)",
+        "lifecell (DVL Group) revenue growth 24.6% YoY"
+      ],
+      "threats": [
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+        "War infrastructure damage: 4,300+ base stations destroyed since 2022: War infrastructure damage: 4,300+ base stations destroyed since 2022: may increase compliance costs or restrict lifecell_ua operations",
+        "Kyivstar EBITDA margin improvement: 60.4% vs 57.3% (+3.1pp)",
+        "Vodafone Ukraine revenue growth 9.3% YoY",
+        "Kyivstar lists on NASDAQ as KYIV — first Ukrainian company on US exchange",
+        "High existing competitors pressure",
+        "High substitutes pressure",
+        "High buyer power pressure"
+      ],
+      "so_strategies": [
+        "Leverage 'Price Competitiveness: score 82 (market avg 73)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+        "Leverage 'Strong EBITDA margin at 55.8%' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access'.",
+        "Leverage 'Revenue on growth trajectory' to capture the opportunity of 'lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)'."
+      ],
+      "wo_strategies": [
+        "Address weakness 'Brand Strength: score 55 (market avg 75)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+        "Address weakness 'Customer Service: score 65 (market avg 72)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access'.",
+        "Address weakness 'Digital Experience: score 70 (market avg 76)' to unlock the opportunity of 'lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)'.",
+        "Address weakness 'Distribution: score 60 (market avg 77)' to unlock the opportunity of 'lifecell (DVL Group) revenue growth 24.6% YoY'."
+      ],
+      "st_strategies": [
+        "Use strength 'Price Competitiveness: score 82 (market avg 73)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+        "Use strength 'Strong EBITDA margin at 55.8%' to counter the threat of 'War infrastructure damage: 4,300+ base stations destroyed since 2022: War infrastructure damage: 4,300+ base stations destroyed since 2022: may increase compliance costs or restrict lifecell_ua operations'.",
+        "Use strength 'Revenue on growth trajectory' to counter the threat of 'Kyivstar EBITDA margin improvement: 60.4% vs 57.3% (+3.1pp)'."
+      ],
+      "wt_strategies": [
+        "Mitigate weakness 'Brand Strength: score 55 (market avg 75)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+        "Mitigate weakness 'Customer Service: score 65 (market avg 72)' and defend against the threat of 'War infrastructure damage: 4,300+ base stations destroyed since 2022: War infrastructure damage: 4,300+ base stations destroyed since 2022: may increase compliance costs or restrict lifecell_ua operations'.",
+        "Mitigate weakness 'Digital Experience: score 70 (market avg 76)' and defend against the threat of 'Kyivstar EBITDA margin improvement: 60.4% vs 57.3% (+3.1pp)'.",
+        "Mitigate weakness 'Distribution: score 60 (market avg 77)' and defend against the threat of 'Vodafone Ukraine revenue growth 9.3% YoY'."
+      ],
+      "key_message": "SWOT analysis identifies 3 strengths, 9 weaknesses, 4 opportunities, and 8 threats. The recommended strategic posture is cautious (WT-dominant)."
+    },
+    "opportunities": {
+      "span_positions": [
+        {
+          "opportunity_name": "SO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.85,
+          "market_share_score": 2.91,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.98,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.22
+        },
+        {
+          "opportunity_name": "SO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.85,
+          "market_share_score": 2.91,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.98,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.22
+        },
+        {
+          "opportunity_name": "SO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 8,
+          "market_attractiveness": 6.85,
+          "market_share_score": 2.91,
+          "product_fit_score": 7,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.98,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.22
+        },
+        {
+          "opportunity_name": "lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 5,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 5.25,
+          "market_share_score": 2.91,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.48,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.93
+        },
+        {
+          "opportunity_name": "lifecell (DVL Group) revenue growth 24.6% YoY",
+          "market_size_score": 5.0,
+          "market_growth_score": 8,
+          "profit_potential_score": 7,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.25,
+          "market_share_score": 2.91,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.48,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.06
+        },
+        {
+          "opportunity_name": "5G SA enabling network slicing and enterprise services",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 2.91,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.73,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "AI/ML for network optimization and customer experience",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 2.91,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.73,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "Open RAN for vendor diversification and cost reduction",
+          "market_size_score": 5.0,
+          "market_growth_score": 6,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.0,
+          "market_share_score": 2.91,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 6,
+          "competitive_position": 4.73,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.07
+        },
+        {
+          "opportunity_name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.65,
+          "market_share_score": 2.91,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.48,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.1
+        },
+        {
+          "opportunity_name": "National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 7,
+          "market_attractiveness": 6.65,
+          "market_share_score": 2.91,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 5.0,
+          "tech_capability_score": 5.0,
+          "competitive_position": 4.48,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 1.1
+        },
+        {
+          "opportunity_name": "Exploit vodafone_ua weakness: Enterprise Solutions: score 70 (market avg 77)",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.25,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.23
+        },
+        {
+          "opportunity_name": "Exploit kyivstar_ua weakness: Price Competitiveness: score 65 (market avg 73)",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 5.0,
+          "market_attractiveness": 6.25,
+          "market_share_score": 6,
+          "product_fit_score": 5.0,
+          "brand_channel_score": 6,
+          "tech_capability_score": 5.0,
+          "competitive_position": 5.5,
+          "quadrant": "grow_invest",
+          "recommended_strategy": "Invest aggressively to grow market share and revenue.",
+          "bubble_size": 1.23
+        },
+        {
+          "opportunity_name": "WO-1",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.45,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.82
+        },
+        {
+          "opportunity_name": "WO-2",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.45,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.82
+        },
+        {
+          "opportunity_name": "WO-3",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.45,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.82
+        },
+        {
+          "opportunity_name": "WO-4",
+          "market_size_score": 5.0,
+          "market_growth_score": 7.0,
+          "profit_potential_score": 8.0,
+          "strategic_value_score": 6,
+          "market_attractiveness": 6.45,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "acquire_skills",
+          "recommended_strategy": "Build missing capabilities before committing major resources.",
+          "bubble_size": 0.82
+        },
+        {
+          "opportunity_name": "ST-1",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-2",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "ST-3",
+          "market_size_score": 4,
+          "market_growth_score": 3,
+          "profit_potential_score": 4,
+          "strategic_value_score": 3,
+          "market_attractiveness": 3.55,
+          "market_share_score": 6,
+          "product_fit_score": 7,
+          "brand_channel_score": 7,
+          "tech_capability_score": 6,
+          "competitive_position": 6.5,
+          "quadrant": "harvest",
+          "recommended_strategy": "Maximize short-term returns while maintaining competitive advantages.",
+          "bubble_size": 0.92
+        },
+        {
+          "opportunity_name": "WT-1",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-2",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-3",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        },
+        {
+          "opportunity_name": "WT-4",
+          "market_size_score": 3,
+          "market_growth_score": 2,
+          "profit_potential_score": 3,
+          "strategic_value_score": 2,
+          "market_attractiveness": 2.55,
+          "market_share_score": 3,
+          "product_fit_score": 3,
+          "brand_channel_score": 3,
+          "tech_capability_score": 3,
+          "competitive_position": 3.0,
+          "quadrant": "avoid_exit",
+          "recommended_strategy": "Consider exit or minimal maintenance investment.",
+          "bubble_size": 0.51
+        }
+      ],
+      "grow_invest": [
+        "Exploit vodafone_ua weakness: Enterprise Solutions: score 70 (market avg 77)",
+        "Exploit kyivstar_ua weakness: Price Competitiveness: score 65 (market avg 73)"
+      ],
+      "acquire_skills": [
+        "SO-1",
+        "SO-2",
+        "SO-3",
+        "lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)",
+        "lifecell (DVL Group) revenue growth 24.6% YoY",
+        "5G SA enabling network slicing and enterprise services",
+        "AI/ML for network optimization and customer experience",
+        "Open RAN for vendor diversification and cost reduction",
+        "Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+        "National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access",
+        "WO-1",
+        "WO-2",
+        "WO-3",
+        "WO-4"
+      ],
+      "harvest": [
+        "ST-1",
+        "ST-2",
+        "ST-3"
+      ],
+      "avoid_exit": [
+        "WT-1",
+        "WT-2",
+        "WT-3",
+        "WT-4"
+      ],
+      "window_opportunities": [],
+      "opportunities": [
+        {
+          "name": "SO-1",
+          "description": "Leverage 'Price Competitiveness: score 82 (market avg 73)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "SO-2",
+          "description": "Leverage 'Strong EBITDA margin at 55.8%' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "SO-3",
+          "description": "Leverage 'Revenue on growth trajectory' to capture the opportunity of 'lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)'.",
+          "derived_from": [
+            "swot_so_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)",
+          "description": "lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "lifecell (DVL Group) revenue growth 24.6% YoY",
+          "description": "lifecell (DVL Group) revenue growth 24.6% YoY",
+          "derived_from": [
+            "market_opportunity",
+            "pricing"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "5G SA enabling network slicing and enterprise services",
+          "description": "Technology trend: 5G SA enabling network slicing and enterprise services",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "AI/ML for network optimization and customer experience",
+          "description": "Technology trend: AI/ML for network optimization and customer experience",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Open RAN for vendor diversification and cost reduction",
+          "description": "Technology trend: Open RAN for vendor diversification and cost reduction",
+          "derived_from": [
+            "trend_technology"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+          "description": "Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access",
+          "description": "Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access",
+          "derived_from": [
+            "trend_policy_opportunity"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "Exploit vodafone_ua weakness: Enterprise Solutions: score 70 (market avg 77)",
+          "description": "Competitor vodafone_ua is weak in: Enterprise Solutions: score 70 (market avg 77)",
+          "derived_from": [
+            "competitor_weakness",
+            "vodafone_ua"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "Exploit kyivstar_ua weakness: Price Competitiveness: score 65 (market avg 73)",
+          "description": "Competitor kyivstar_ua is weak in: Price Competitiveness: score 65 (market avg 73)",
+          "derived_from": [
+            "competitor_weakness",
+            "kyivstar_ua"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P0",
+          "priority_rationale": "Quadrant: grow_invest"
+        },
+        {
+          "name": "WO-1",
+          "description": "Address weakness 'Brand Strength: score 55 (market avg 75)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-2",
+          "description": "Address weakness 'Customer Service: score 65 (market avg 72)' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require lifecell_ua investment but also enable subsidy access'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-3",
+          "description": "Address weakness 'Digital Experience: score 70 (market avg 76)' to unlock the opportunity of 'lifecell (DVL Group) revenue increase 5.6% QoQ (UAH 3,800M vs UAH 3,600M)'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "WO-4",
+          "description": "Address weakness 'Distribution: score 60 (market avg 77)' to unlock the opportunity of 'lifecell (DVL Group) revenue growth 24.6% YoY'.",
+          "derived_from": [
+            "swot_wo_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: acquire_skills"
+        },
+        {
+          "name": "ST-1",
+          "description": "Use strength 'Price Competitiveness: score 82 (market avg 73)' to counter the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-2",
+          "description": "Use strength 'Strong EBITDA margin at 55.8%' to counter the threat of 'War infrastructure damage: 4,300+ base stations destroyed since 2022: War infrastructure damage: 4,300+ base stations destroyed since 2022: may increase compliance costs or restrict lifecell_ua operations'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "ST-3",
+          "description": "Use strength 'Revenue on growth trajectory' to counter the threat of 'Kyivstar EBITDA margin improvement: 60.4% vs 57.3% (+3.1pp)'.",
+          "derived_from": [
+            "swot_st_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P1",
+          "priority_rationale": "Quadrant: harvest"
+        },
+        {
+          "name": "WT-1",
+          "description": "Mitigate weakness 'Brand Strength: score 55 (market avg 75)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect lifecell_ua'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-2",
+          "description": "Mitigate weakness 'Customer Service: score 65 (market avg 72)' and defend against the threat of 'War infrastructure damage: 4,300+ base stations destroyed since 2022: War infrastructure damage: 4,300+ base stations destroyed since 2022: may increase compliance costs or restrict lifecell_ua operations'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-3",
+          "description": "Mitigate weakness 'Digital Experience: score 70 (market avg 76)' and defend against the threat of 'Kyivstar EBITDA margin improvement: 60.4% vs 57.3% (+3.1pp)'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        },
+        {
+          "name": "WT-4",
+          "description": "Mitigate weakness 'Distribution: score 60 (market avg 77)' and defend against the threat of 'Vodafone Ukraine revenue growth 9.3% YoY'.",
+          "derived_from": [
+            "swot_wt_strategy"
+          ],
+          "addressable_market": "N/A",
+          "addressable_market_source": "",
+          "our_capability": "",
+          "competition_intensity": "",
+          "time_window": "",
+          "priority": "P2",
+          "priority_rationale": "Quadrant: avoid_exit"
+        }
+      ],
+      "key_message": "SPAN matrix positions 23 opportunities: 2 grow/invest, 14 acquire skills, 3 harvest, 4 avoid/exit. Focus resources on the 2 grow/invest items for maximum strategic impact."
+    }
+  },
+  "data_quality": {
+    "total_data_points": 20,
+    "high_confidence": 0,
+    "medium_confidence": 0,
+    "low_confidence": 0,
+    "estimated": 20,
+    "with_conflicts": 0,
+    "unique_sources": 0
+  },
+  "provenance": {
+    "footnotes": [],
+    "source_count": 0,
+    "value_count": 20
+  }
+}

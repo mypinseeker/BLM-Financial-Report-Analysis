@@ -52,6 +52,11 @@ data/output/*
 !data/output/france/
 !data/output/italy/
 !data/output/poland/
+!data/output/switzerland/
+!data/output/ireland/
+!data/output/ukraine/
+!data/output/cyprus/
+!data/output/malta/
 !data/output/group/
 !data/output/_legacy/
 
