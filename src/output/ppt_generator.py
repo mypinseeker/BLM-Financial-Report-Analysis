@@ -31,7 +31,17 @@ except ImportError:
     PPTX_AVAILABLE = False
 
 from src.output.ppt_styles import PPTStyle, get_style, DEFAULT_STYLE
-from src.output.ppt_charts import BLMChartGenerator
+
+# Lazy import: BLMChartGenerator depends on numpy/matplotlib
+# which may not be available in slim deployments (Vercel Lambda)
+BLMChartGenerator = None
+
+def _get_chart_generator():
+    global BLMChartGenerator
+    if BLMChartGenerator is None:
+        from src.output.ppt_charts import BLMChartGenerator as _cls
+        BLMChartGenerator = _cls
+    return BLMChartGenerator
 
 
 @dataclass
@@ -79,7 +89,8 @@ class BLMPPTGenerator:
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
         self._chart_dir = Path(tempfile.mkdtemp())
-        self.chart_gen = BLMChartGenerator(
+        ChartGen = _get_chart_generator()
+        self.chart_gen = ChartGen(
             style=self.style, output_dir=str(self._chart_dir), dpi=chart_dpi)
 
         self.prs = None

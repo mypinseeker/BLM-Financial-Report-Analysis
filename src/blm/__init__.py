@@ -18,63 +18,31 @@ Usage (legacy, backward-compatible):
     from src.blm._legacy import generate_blm_strategy, generate_sample_data
 """
 
-# Legacy backward compatibility — import from _legacy for old code paths
-from src.blm._legacy import (
-    GLOBAL_OPERATORS,
-    BUSINESS_SEGMENTS,
-    COMPETITIVE_DIMENSIONS,
-    OperatorProfile,
-    MarketContext,
-    TelecomDataGenerator,
-    generate_sample_data,
-    InsightResult,
-    FiveLooksAnalyzer,
-    StrategyItem,
-    StrategyResult,
-    ThreeDecisionsEngine,
-    generate_blm_strategy,
-    BLMReportGenerator,
-    blm_cli,
-)
+# Legacy imports are lazy-loaded to avoid pulling in numpy/matplotlib
+# in slim deployments (Vercel Lambda). Access legacy symbols via
+# src.blm._legacy directly, or they'll be resolved on first access here.
 
-try:
-    from src.blm._legacy import (
-        BLMPPTGenerator,
-        PPTStyle,
-        HUAWEI_STYLE,
-        VODAFONE_STYLE,
-        generate_blm_ppt,
-        BLMPPTGeneratorEnhanced,
-        generate_enhanced_blm_ppt,
-        PPTChartGenerator,
-        PPT_AVAILABLE,
-    )
-except (ImportError, AttributeError):
-    PPT_AVAILABLE = False
+_LEGACY_NAMES = {
+    "GLOBAL_OPERATORS", "BUSINESS_SEGMENTS", "COMPETITIVE_DIMENSIONS",
+    "OperatorProfile", "MarketContext", "TelecomDataGenerator",
+    "generate_sample_data", "InsightResult", "FiveLooksAnalyzer",
+    "StrategyItem", "StrategyResult", "ThreeDecisionsEngine",
+    "generate_blm_strategy", "BLMReportGenerator", "blm_cli",
+    "BLMPPTGenerator", "PPTStyle", "HUAWEI_STYLE", "VODAFONE_STYLE",
+    "generate_blm_ppt", "BLMPPTGeneratorEnhanced",
+    "generate_enhanced_blm_ppt", "PPTChartGenerator", "PPT_AVAILABLE",
+    "CanvaBLMExporter", "check_canva_credentials",
+}
 
-from src.blm._legacy import (
-    CanvaBLMExporter,
-    check_canva_credentials,
-)
 
-__all__ = [
-    # Legacy exports
-    "GLOBAL_OPERATORS",
-    "BUSINESS_SEGMENTS",
-    "COMPETITIVE_DIMENSIONS",
-    "OperatorProfile",
-    "MarketContext",
-    "TelecomDataGenerator",
-    "generate_sample_data",
-    "InsightResult",
-    "FiveLooksAnalyzer",
-    "StrategyItem",
-    "StrategyResult",
-    "ThreeDecisionsEngine",
-    "generate_blm_strategy",
-    "BLMReportGenerator",
-    "blm_cli",
-    "PPT_AVAILABLE",
-    "CanvaBLMExporter",
-    "check_canva_credentials",
-]
+def __getattr__(name):
+    if name in _LEGACY_NAMES:
+        import src.blm._legacy as _legacy
+        try:
+            return getattr(_legacy, name)
+        except AttributeError:
+            pass
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
+
+__all__ = list(_LEGACY_NAMES)
