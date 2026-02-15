@@ -22,6 +22,9 @@ from src.models.market_configs.uruguay import URUGUAY_CONFIG
 from src.models.market_configs.chile import CHILE_CONFIG
 from src.models.market_configs.netherlands import NETHERLANDS_CONFIG
 from src.models.market_configs.belgium import BELGIUM_CONFIG
+from src.models.market_configs.france import FRANCE_CONFIG
+from src.models.market_configs.italy import ITALY_CONFIG
+from src.models.market_configs.poland import POLAND_CONFIG
 
 MARKET_REGISTRY: dict[str, MarketConfig] = {
     "germany": GERMANY_CONFIG,
@@ -38,6 +41,9 @@ MARKET_REGISTRY: dict[str, MarketConfig] = {
     "chile": CHILE_CONFIG,
     "netherlands": NETHERLANDS_CONFIG,
     "belgium": BELGIUM_CONFIG,
+    "france": FRANCE_CONFIG,
+    "italy": ITALY_CONFIG,
+    "poland": POLAND_CONFIG,
 }
 
 
