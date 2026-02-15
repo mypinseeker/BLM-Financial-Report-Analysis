@@ -151,8 +151,10 @@ def _fmt(val, suffix="", prefix="", decimals=1):
         return "N/A"
     try:
         n = float(val)
+        if suffix == "%" and prefix == "+":
+            return f"{n:+.{decimals}f}%"
         if suffix == "%":
-            return f"{prefix}{n:+.{decimals}f}%" if prefix == "+" else f"{n:.{decimals}f}%"
+            return f"{n:.{decimals}f}%"
         if abs(n) >= 1000:
             return f"{prefix}{n:,.0f}{suffix}"
         return f"{prefix}{n:,.{decimals}f}{suffix}"
