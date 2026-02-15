@@ -72,3 +72,4 @@ reports/*.png
 # SQLite database (regenerable via seed)
 data/telecom.db
 .vercel
+supabase/.temp/
