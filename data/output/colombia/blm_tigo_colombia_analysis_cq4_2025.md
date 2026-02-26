@@ -4,7 +4,7 @@
 > **Framework**: Business Leadership Model (BLM) — Five Looks + SWOT + SPAN
 > **Protagonist**: Tigo Colombia
 > **Market**: Colombian Telecommunications
-> **Generated**: 2026-02-14
+> **Generated**: 2026-02-26
 > **Population**: 52.0M
 
 ---
@@ -72,6 +72,9 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 | Metric | Value | Rank | Assessment |
 | :--- | :--- | :--- | :--- |
 | Revenue | $2,420M | #2 |  |
+| Revenue Share | 25.9% (#2) | #2 | +0.4pp stable |
+| Mobile Share | 23.3% (#2) | #2 | +0.3pp stable |
+| Broadband Share | 31.0% (#2) | #2 | +1.9pp gaining |
 
 ### 1.3 The Headline Numbers
 
@@ -79,6 +82,19 @@ This document consolidates all deep analysis modules from the BLM strategic asse
 Revenue             $2,420M/q
 EBITDA                $850M/q
 ```
+
+---
+
+## 1.5 Momentum Dashboard
+
+| Metric | CAGR | Momentum Phase | Latest QoQ | Volatility |
+| :--- | :--- | :--- | :--- | :--- |
+| **Revenue** | +7.0% | Accelerating Growth | +1.7% | 0.040 |
+| **EBITDA** | +7.4% | Decelerating Growth | +1.8% | 0.040 |
+| **Margin** | +0.3% | Stabilizing | 0.0% | 0.000 |
+| Mobile | +7.1% | Decelerating Growth | +1.6% | 0.040 |
+| Fixed Broadband | +9.6% | Accelerating Growth | +2.3% | 0.050 |
+| B2B | 0.0% | Stabilizing | 0.0% | 0.000 |
 
 ---
 
@@ -136,22 +152,22 @@ EBITDA                $850M/q
 
 ### SWOT Synthesis
 
-**Net assessment: S:9/W:5/O:5/T:7 — Defensive (ST-dominant). Strengths outweigh weaknesses, threats dominate opportunities.**
+**Net assessment: S:9/W:5/O:6/T:7 — Defensive (ST-dominant). Strengths outweigh weaknesses, threats dominate opportunities.**
 
 | Finding | Impact |
 | :--- | :--- |
-| SWOT analysis identifies 9 strengths, 5 weaknesses, 5 opportunities, and 7 threats. The recommended strategic posture is defensive (ST-dominant). |  |
-| S:9 W:5 O:5 T:7 | Balance: S>W, T>O |
+| SWOT analysis identifies 9 strengths, 5 weaknesses, 6 opportunities, and 7 threats. The recommended strategic posture is defensive (ST-dominant). |  |
+| S:9 W:5 O:6 T:7 | Balance: S>W, T>O |
 
 
 ### Look 5: Opportunities (SPAN)
 
-**Net assessment: 29 opportunities mapped: 14 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 14 grow/invest items.**
+**Net assessment: 30 opportunities mapped: 15 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 15 grow/invest items.**
 
 | Finding | Impact |
 | :--- | :--- |
-| SPAN matrix positions 29 opportunities: 14 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 14 grow/invest items for maximum strategic impact. |  |
-| 14/29 (48%) in Grow/Invest | Favorable opportunity landscape |
+| SPAN matrix positions 30 opportunities: 15 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 15 grow/invest items for maximum strategic impact. |  |
+| 15/30 (50%) in Grow/Invest | Favorable opportunity landscape |
 
 ---
 
@@ -175,7 +191,7 @@ This is not a temporary market condition — it is a structural competitive prob
 | Subscribers | 32,400K | 15,350K | 15,900K | 4,600K |
 | Arpu | $8400.00 | $8200.00 | $7850.00 | $10870.00 |
 | Churn | 1.9% | 2.5% | 2.1% | 3.0% |
-| 5G Coverage | 10.0% | 3.0% | 5.0% | 0.0% |
+| 5G Coverage | 10.0% | 0.0% | 12.0% | 0.0% |
 
 ---
 
@@ -204,7 +220,7 @@ Across all analyses, 7 strategic priorities emerge consistently:
 
 | Aspect | Detail |
 | :--- | :--- |
-| Current capability | 5G coverage gap at only 5.0% |
+| Current capability | 5G coverage gap at only 12.0% |
 | Time window | 1-2 years |
 | Approach | Targeted investment to close gap in 5G Coverage |
 
@@ -215,26 +231,26 @@ Across all analyses, 7 strategic priorities emerge consistently:
 | Addressable market | N/A |
 | Approach | Tigo Colombia revenue growth 7.1% YoY |
 
-### Priority 5: Tigo-UNE launches 5G in Bogota and Medellin (STRATEGIC)
+### Priority 5: Integrate Strategic Acquisitions (STRATEGIC)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Addressable market | N/A |
+| Approach | Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia) |
+
+### Priority 6: Tigo-UNE launches 5G in Bogota and Medellin (STRATEGIC)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Addressable market | N/A |
 | Approach | Tigo-UNE launches 5G in Bogota and Medellin |
 
-### Priority 6: WOM reaches 4.6M subscribers in Colombia (STRATEGIC)
+### Priority 7: WOM reaches 4.6M subscribers in Colombia (IMPORTANT)
 
 | Aspect | Detail |
 | :--- | :--- |
 | Addressable market | N/A |
 | Approach | WOM reaches 4.6M subscribers in Colombia |
-
-### Priority 7: Capitalize on Spectrum Renewal (IMPORTANT)
-
-| Aspect | Detail |
-| :--- | :--- |
-| Addressable market | N/A |
-| Approach | Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect tigo_colombia |
 
 ---
 
@@ -261,9 +277,9 @@ Equally important — strategic traps to avoid:
 
 **MEDIUM-TERM (2-3 years)**
   - Tigo Colombia revenue growth 7.1% YoY
+  - Integrate Strategic Acquisitions
   - Tigo-UNE launches 5G in Bogota and Medellin
   - WOM reaches 4.6M subscribers in Colombia
-  - Capitalize on Spectrum Renewal
 
 
 ---
@@ -634,6 +650,7 @@ Being in the **late_growth** phase means:
 | Pricing | WOM Colombia mobile ARPU increase 8.7% QoQ (COP 10870.0) | Both | Medium | Peer Driven |
 | Pricing | WOM Colombia EBITDA margin improvement: -2.0% vs -4.3% (+2.3pp) | Threat | Medium | Peer Driven |
 | Pricing | CRC announces 5G spectrum auction timeline | Both | High | External Player Driven |
+| Technology | Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia) | Opportunity | Critical | Peer Driven |
 | Technology | Tigo-UNE launches 5G in Bogota and Medellin | Opportunity | High | External Player Driven |
 | Merger | WOM reaches 4.6M subscribers in Colombia | Opportunity | Medium | Peer Driven |
 
@@ -715,6 +732,7 @@ Value migration trending upward: customers willing to pay more for premium conne
 | Opportunity | Impact | Severity |
 | :--- | :--- | :--- |
 | Tigo Colombia revenue growth 7.1% YoY | Year-over-year growth indicates sustained growth trajectory | Medium |
+| Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia) | Millicom acquires Colombia Telecomunicaciones (Coltel) from Telefonica. The deal consolidates the market from 4 to 3 players. Tigo inherits Coltel's 15.3M mobile subscribers, 120 MHz of spectrum, 3.5M fiber homepasses, and the Movistar Colombia brand. The combined entity becomes Colombia's largest operator by spectrum holdings (265 MHz total) and second by subscribers, significantly narrowing the gap with Claro. | Critical |
 | Tigo-UNE launches 5G in Bogota and Medellin | Initial 5G deployment covering central business districts | High |
 | WOM reaches 4.6M subscribers in Colombia | Rapid subscriber growth continues with aggressive pricing strategy | Medium |
 
@@ -873,6 +891,13 @@ The market comprises 4 active operators: Movistar Colombia, Tigo Colombia, Claro
 | Broadband Trend | growing |
 | Arpu Trend | growing |
 
+#### Momentum Indicators
+
+| Metric | CAGR | Phase | Momentum Score |
+| :--- | :--- | :--- | :--- |
+| Revenue | +2.2% | Decelerating Growth | 50/100 |
+| Margin | +1.6% | Stabilizing | 51/100 |
+
 **Growth strategy**: Revenue-led profitable growth; subscriber acquisition focus
 
 **Business model**: Mobile-centric with fixed complement; service-revenue dominant; moderate-margin profile
@@ -880,18 +905,18 @@ The market comprises 4 active operators: Movistar Colombia, Tigo Colombia, Claro
 #### Network Status
 
 - **Status**: data_available
-- **Five G Coverage Pct**: 3.0%
-- **Four G Coverage Pct**: 75.0%
-- **Fiber Homepass K**: 3,500K
+- **Five G Coverage Pct**: 0.0%
+- **Four G Coverage Pct**: 0.0%
+- **Fiber Homepass K**: 0K
 - **Cable Homepass K**: N/A
 - **Cable Docsis31 Pct**: N/A
-- **Technology Mix**: Mobile Vendor: Huawei/Nokia; Spectrum Mhz: 120
+- **Technology Mix**: Mobile Vendor: N/A — acquired by Tigo; Spectrum Mhz: 0; Status: acquired; Acquired By: tigo_colombia; Acquisition Date: 2025-09-01; Spectrum Bands: {}
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband (incl. fiber/FTTH); TV/Video; Enterprise/B2B solutions
 
-**Core control points**: Own fiber infrastructure (3500k homes); Scale advantage (15.3m mobile subs)
+**Core control points**: Scale advantage (15.3m mobile subs)
 
-**Ecosystem partners**: Network vendor: Huawei/Nokia
+**Ecosystem partners**: Network vendor: N/A — acquired by Tigo
 
 **Organization**: CEO: Fabián Hernández (Telefonica Group veteran)
 
@@ -947,6 +972,13 @@ The market comprises 4 active operators: Movistar Colombia, Tigo Colombia, Claro
 | Broadband Trend | growing |
 | Arpu Trend | growing |
 
+#### Momentum Indicators
+
+| Metric | CAGR | Phase | Momentum Score |
+| :--- | :--- | :--- | :--- |
+| Revenue | +4.7% | Decelerating Growth | 50/100 |
+| Margin | +0.0% | Stabilizing | 50/100 |
+
 **Growth strategy**: Steady growth trajectory; subscriber acquisition focus; strong B2B/enterprise push
 
 **Business model**: Mobile-centric with fixed complement; service-revenue dominant; high-margin profile
@@ -959,7 +991,7 @@ The market comprises 4 active operators: Movistar Colombia, Tigo Colombia, Claro
 - **Fiber Homepass K**: 8,000K
 - **Cable Homepass K**: 3,000K
 - **Cable Docsis31 Pct**: N/A
-- **Technology Mix**: Mobile Vendor: Ericsson; Spectrum Mhz: 200; Core Vendor: Ericsson
+- **Technology Mix**: Mobile Vendor: Ericsson; Spectrum Mhz: 200; Core Vendor: Ericsson; Spectrum Bands: {'700 MHz': {'mhz': 20, 'use': '4G/5G FDD coverage'}, '850 MHz': {'mhz': 30, 'use': '3G/4G FDD rural'}, '1900 MHz': {'mhz': 50, 'use': '3G/4G FDD'}, 'AWS (1700/2100)': {'mhz': 40, 'use': '4G FDD capacity'}, '2500 MHz': {'mhz': 60, 'use': '4G TDD capacity'}}
 
 **Product portfolio**: Mobile (postpaid + prepaid); Fixed broadband (incl. fiber/FTTH); TV/Video; Enterprise/B2B solutions
 
@@ -1022,6 +1054,13 @@ The market comprises 4 active operators: Movistar Colombia, Tigo Colombia, Claro
 | Mobile Trend | growing |
 | Arpu Trend | growing |
 
+#### Momentum Indicators
+
+| Metric | CAGR | Phase | Momentum Score |
+| :--- | :--- | :--- | :--- |
+| Revenue | +39.3% | Accelerating Growth | 29/100 |
+| Margin | — | Decelerating Growth | 0/100 |
+
 **Growth strategy**: Revenue-led profitable growth; subscriber acquisition focus
 
 **Business model**: Mobile-only operator; service-revenue dominant; low-margin / scale-focused
@@ -1030,11 +1069,11 @@ The market comprises 4 active operators: Movistar Colombia, Tigo Colombia, Claro
 
 - **Status**: data_available
 - **Five G Coverage Pct**: 0.0%
-- **Four G Coverage Pct**: 45.0%
+- **Four G Coverage Pct**: 50.0%
 - **Fiber Homepass K**: N/A
 - **Cable Homepass K**: N/A
 - **Cable Docsis31 Pct**: N/A
-- **Technology Mix**: Mobile Vendor: Samsung/Nokia; Spectrum Mhz: 60
+- **Technology Mix**: Mobile Vendor: Samsung/Nokia; Spectrum Mhz: 60; Spectrum Bands: {'700 MHz': {'mhz': 10, 'use': '4G FDD coverage'}, 'AWS (1700/2100)': {'mhz': 30, 'use': '4G FDD capacity'}, '1900 MHz': {'mhz': 20, 'use': '3G/4G FDD'}}
 
 **Product portfolio**: Mobile (postpaid + prepaid)
 
@@ -1088,7 +1127,9 @@ The market comprises 4 active operators: Movistar Colombia, Tigo Colombia, Claro
 | **Subscribers** | 32,400K | 15,350K | 15,900K | 4,600K |
 | **Arpu** | $8400.00 | $8200.00 | $7850.00 | $10870.00 |
 | **Churn** | 1.9% | 2.5% | 2.1% | 3.0% |
-| **5G Coverage** | 10.0% | 3.0% | 5.0% | 0.0% |
+| **5G Coverage** | 10.0% | 0.0% | 12.0% | 0.0% |
+| **Revenue Share %** | 48.7% ▼ | 20.0% ▼ | 25.9% | 5.3% ▲ |
+| **Mobile Share %** | 47.5% ▼ | 22.5% ▼ | 23.3% | 6.7% ▲ |
 
 ---
 
@@ -1155,6 +1196,90 @@ TV/Convergence  None → None → None → None
 Wholesale       None → None → None → None
 ```
 
+### Financial Trend Metrics
+
+| Metric | CAGR | Momentum Phase | Slope (/Q) | Volatility |
+| :--- | :--- | :--- | :--- | :--- |
+| **Revenue** | +7.0% | Accelerating Growth | +39.2/Q | 0.040 |
+| **EBITDA** | +7.4% | Decelerating Growth | +14.5/Q | 0.040 |
+| **Margin** | +0.3% | Stabilizing | +0.0/Q | 0.000 |
+
+---
+
+## Market Share Evolution
+
+### Revenue Share Trend (8 Quarters)
+
+| Quarter | Claro Colombia | Tigo Colombia | Movistar Colombia | WOM Colombia |
+| :--- | :--- | :--- | :--- | :--- |
+| CQ1_2024 | 49.8% | 25.5% | 21.4% | 3.3% |
+| CQ1_2025 | 49.2% | 25.7% | 20.6% | 4.5% |
+| CQ2_2024 | 49.7% | 25.5% | 21.2% | 3.6% |
+| CQ2_2025 | 49.1% | 25.8% | 20.4% | 4.7% |
+| CQ3_2024 | 49.5% | 25.6% | 21.0% | 3.9% |
+| CQ3_2025 | 48.9% | 25.9% | 20.2% | 5.0% |
+| CQ4_2024 | 49.4% | 25.7% | 20.8% | 4.2% |
+| CQ4_2025 | 48.7% | 25.9% | 20.0% | 5.4% |
+
+**Share Movement Summary**
+
+| Operator | Latest | Change (pp) | Direction | Rank |
+| :--- | :--- | :--- | :--- | :--- |
+| Claro Colombia | 48.7% | -1.1 | **Losing** | #1 |
+| Tigo Colombia | 25.9% | +0.4 | **Stable** | #2 |
+| Movistar Colombia | 20.0% | -1.3 | **Losing** | #3 |
+| WOM Colombia | 5.3% | +2.0 | **Gaining** | #4 |
+
+**Market Concentration**: HHI 3,474 (Highly Concentrated), CR3 94.7%, trend: Fragmenting
+
+### Mobile Subscriber Share Trend (8 Quarters)
+
+| Quarter | Claro Colombia | Tigo Colombia | Movistar Colombia | WOM Colombia |
+| :--- | :--- | :--- | :--- | :--- |
+| CQ1_2024 | 49.2% | 23.0% | 23.8% | 4.0% |
+| CQ1_2025 | 48.2% | 23.2% | 23.0% | 5.6% |
+| CQ2_2024 | 48.9% | 23.1% | 23.6% | 4.4% |
+| CQ2_2025 | 47.9% | 23.2% | 22.8% | 6.0% |
+| CQ3_2024 | 48.7% | 23.1% | 23.4% | 4.8% |
+| CQ3_2025 | 47.7% | 23.3% | 22.7% | 6.4% |
+| CQ4_2024 | 48.4% | 23.1% | 23.2% | 5.2% |
+| CQ4_2025 | 47.5% | 23.3% | 22.5% | 6.7% |
+
+**Share Movement Summary**
+
+| Operator | Latest | Change (pp) | Direction | Rank |
+| :--- | :--- | :--- | :--- | :--- |
+| Claro Colombia | 47.5% | -1.7 | **Losing** | #1 |
+| Tigo Colombia | 23.3% | +0.3 | **Stable** | #2 (+1) |
+| Movistar Colombia | 22.5% | -1.3 | **Losing** | #3 (-1) |
+| WOM Colombia | 6.7% | +2.8 | **Gaining** | #4 |
+
+**Market Concentration**: HHI 3,348 (Highly Concentrated), CR3 93.3%, trend: Fragmenting
+
+### Broadband Subscriber Share Trend (8 Quarters)
+
+| Quarter | Claro Colombia | Tigo Colombia | Movistar Colombia | WOM Colombia |
+| :--- | :--- | :--- | :--- | :--- |
+| CQ1_2024 | 50.9% | 29.1% | 20.0% | 0.0% |
+| CQ1_2025 | 50.2% | 30.2% | 19.6% | 0.0% |
+| CQ2_2024 | 50.7% | 29.4% | 19.9% | 0.0% |
+| CQ2_2025 | 50.0% | 30.5% | 19.5% | 0.0% |
+| CQ3_2024 | 50.5% | 29.7% | 19.8% | 0.0% |
+| CQ3_2025 | 49.8% | 30.8% | 19.4% | 0.0% |
+| CQ4_2024 | 50.3% | 30.0% | 19.7% | 0.0% |
+| CQ4_2025 | 49.7% | 31.0% | 19.3% | 0.0% |
+
+**Share Movement Summary**
+
+| Operator | Latest | Change (pp) | Direction | Rank |
+| :--- | :--- | :--- | :--- | :--- |
+| Claro Colombia | 49.7% | -1.2 | **Losing** | #1 |
+| Tigo Colombia | 31.0% | +1.9 | **Gaining** | #2 |
+| Movistar Colombia | 19.3% | -0.7 | **Losing** | #3 |
+| WOM Colombia | — | — | **Stable** | #4 |
+
+**Market Concentration**: HHI 3,802 (Highly Concentrated), CR3 100.0%, trend: Stable
+
 ---
 
 ## 2. Revenue Breakdown
@@ -1204,6 +1329,17 @@ Wholesale       None → None → None → None
 #### Why — Attribution Analysis
 
 - **Management Explanation** (high): Mobile service revenue growth accelerating with data monetization and postpaid migration
+- **Market Change** (medium): Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)
+
+
+#### Trend Analysis
+
+| Series | CAGR | Momentum Phase | Volatility | Slope (/Q) |
+| :--- | :--- | :--- | :--- | :--- |
+| Arpu | +1.9% | Decelerating Growth | 0.010 | +33.9/Q |
+| Churn | -9.5% | Flat | 0.050 | -0.1/Q |
+| Revenue | +7.1% | Decelerating Growth | 0.040 | +20.0/Q |
+| Subscribers | +5.4% | Decelerating Growth | 0.030 | +200.0/Q |
 
 **Key message**: Mobile service revenue at 1,240M; up 6.9% YoY; ARPU 7850.0
 **Action required**: GROW: Improving trajectory — consider incremental investment
@@ -1233,8 +1369,19 @@ Wholesale       None → None → None → None
 #### Why — Attribution Analysis
 
 - **Management Explanation** (high): Fixed broadband growth driven by fiber expansion, targeting 550K fiber subs by end of 2025
+- **Market Change** (medium): Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)
 - **Product Change** (high): revenue increased 2.3% QoQ
 - **Product Change** (high): subscribers increased 2.2% QoQ
+
+
+#### Trend Analysis
+
+| Series | CAGR | Momentum Phase | Volatility | Slope (/Q) |
+| :--- | :--- | :--- | :--- | :--- |
+| Cable | +3.6% | Decelerating Growth | 0.020 | +10.0/Q |
+| Fiber | +29.5% | Accelerating Growth | 0.150 | +29.2/Q |
+| Revenue | +9.6% | Accelerating Growth | 0.050 | +19.2/Q |
+| Subscribers | +9.7% | Decelerating Growth | 0.050 | +40.0/Q |
 
 **Key message**: Fixed service revenue 880.0M; growth +7.5% YoY; Fiber subs 550K
 **Action required**: GROW: Strong momentum — invest to accelerate growth
@@ -1261,6 +1408,14 @@ Wholesale       None → None → None → None
 - **Management Explanation** (high): Colombia B2B segment benefiting from enterprise cloud connectivity solutions
 - **Product Change** (high): customers increased 2.1% QoQ
 
+
+#### Trend Analysis
+
+| Series | CAGR | Momentum Phase | Volatility | Slope (/Q) |
+| :--- | :--- | :--- | :--- | :--- |
+| Customers | +9.1% | Decelerating Growth | 0.050 | +2.0/Q |
+| Revenue | 0.0% | Stabilizing | 0.000 | +0.0/Q |
+
 **Key message**: B2B revenue 170.0M; 7.0% of total revenue
 **Action required**: GROW: Improving trajectory — consider incremental investment
 
@@ -1286,6 +1441,15 @@ Wholesale       None → None → None → None
 #### Why — Attribution Analysis
 
 - **Product Change** (high): fmc_subscribers increased 3.9% QoQ
+
+
+#### Trend Analysis
+
+| Series | CAGR | Momentum Phase | Volatility | Slope (/Q) |
+| :--- | :--- | :--- | :--- | :--- |
+| Fmc Penetration | +8.2% | Decelerating Growth | 0.050 | +0.5/Q |
+| Fmc Subscribers | +18.7% | Decelerating Growth | 0.100 | +20.0/Q |
+| Tv Subscribers | +3.3% | Decelerating Growth | 0.020 | +10.0/Q |
 
 **Key message**: TV subscribers 1270K; FMC 540K; FMC penetration 28.7%
 **Action required**: GROW: Improving trajectory — consider incremental investment
@@ -1315,16 +1479,18 @@ Wholesale       None → None → None → None
 
 | Technology | Detail |
 | :--- | :--- |
-| Mobile Vendor | Nokia/Ericsson |
-| Spectrum Mhz | 145 |
+| Mobile Vendor | Nokia/Ericsson/Huawei |
+| Spectrum Mhz | 265 |
 | Core Vendor | Nokia |
+| Notes | Includes former Coltel (Movistar) spectrum post-acquisition Q3 2025 |
+| Spectrum Bands | 700 MHz: {'mhz': 40, 'use': '4G/5G FDD coverage', 'notes': '20 own + 20 ex-Coltel'}; 850 MHz: {'mhz': 10, 'use': '4G FDD rural', 'notes': 'ex-Coltel'}; 1900 MHz: {'mhz': 75, 'use': '3G/4G FDD', 'notes': '25 own + 50 ex-Coltel'}; AWS (1700/2100): {'mhz': 80, 'use': '4G FDD capacity', 'notes': '40 own + 40 ex-Coltel'}; 2500 MHz: {'mhz': 60, 'use': '4G TDD capacity'} |
 
 ### Coverage
 
 | Technology | Coverage |
 | :--- | :--- |
-| 5G | 5.0% |
-| 4G | 82.0% |
+| 5G | 12.0% |
+| 4G | 92.0% |
 
 ### Controlled vs. Resale
 
@@ -1337,11 +1503,11 @@ Wholesale       None → None → None → None
 
 | Metric | Value |
 | :--- | :--- |
-| Fiber Homepass K | 4,500K |
+| Fiber Homepass K | 8,000K |
 | Cable Homepass K | 5,200K |
 | Fiber Connected K | 550K |
 | Cable Connected K | 1,170K |
-| Fiber Penetration Pct | 12.2% |
+| Fiber Penetration Pct | 6.9% |
 | Cable Penetration Pct | 22.5% |
 
 ### Evolution Strategy
@@ -1351,9 +1517,9 @@ Wholesale       None → None → None → None
 
 **Investment direction**: stable
 
-**Vs. competitors**: 5G: behind Claro Colombia by 5pp; Fiber: 1.8x less homepass than Claro Colombia; 5G: ahead of WOM Colombia by 5pp
+**Vs. competitors**: 5G: ahead of Movistar Colombia by 12pp; 5G: ahead of WOM Colombia by 12pp
 
-**Consumer impact**: Early 5G coverage (5.0%); Cable-dominant broadband mix
+**Consumer impact**: Early 5G coverage (12.0%); Cable-dominant broadband mix
 
 **B2B impact**: B2B revenue share: 7%
 
@@ -1394,7 +1560,7 @@ Wholesale       None → None → None → None
 ### Weaknesses
 
 - Price Competitiveness: score 70 (market avg 73)
-- 5G coverage gap at only 5.0%
+- 5G coverage gap at only 12.0%
 
 ### Exposure Points
 
@@ -1423,7 +1589,7 @@ Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture;
 
 
 **Performance gap**: Top performance gaps: EBITDA margin gap: -4.9pp vs leader (Claro Colombia at 40.0%); Revenue share gap: -22.8pp vs leader (48.7%); Brand Strength: -16pp vs leader
-**Opportunity gap**: Top opportunity gaps: FTTH migration upside (fiber only 46% of homepass footprint); B2B revenue gap (51% below market leader)
+**Opportunity gap**: Top opportunity gaps: B2B revenue gap (51% below market leader)
 **Strategic review**: Management outlook: Mobile service revenue growth accelerating with data monetization and postpaid migration. Revenue trajectory growing, margins strong (35.1%). Execution momentum positive — strengths outweigh weaknesses. Primary risk: Price Competitiveness: score 70 (market avg 73)
 
 ---
@@ -1453,14 +1619,14 @@ Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture;
 | Quadrant | Count | Key Items |
 | :--- | :--- | :--- |
 | **Strengths** | 9 | Customer Service: score 68 (market avg 64), Digital Experience: score 72 (market avg 68), Distribution: score 75 (market avg 70) |
-| **Weaknesses** | 5 | Price Competitiveness: score 70 (market avg 73), 5G coverage gap at only 5.0%, ARPU pressure as WOM grows from 2.5M to 4.6M su... |
-| **Opportunities** | 5 | Regulatory Environment: Compliance requirements..., National Digital Strategy: Fiber/5G coverage ma..., Tigo Colombia revenue growth 7.1% YoY |
+| **Weaknesses** | 5 | Price Competitiveness: score 70 (market avg 73), 5G coverage gap at only 12.0%, ARPU pressure as WOM grows from 2.5M to 4.6M su... |
+| **Opportunities** | 6 | Regulatory Environment: Compliance requirements..., National Digital Strategy: Fiber/5G coverage ma..., Tigo Colombia revenue growth 7.1% YoY |
 | **Threats** | 7 | Regulatory Environment: Compliance requirements..., WOM Colombia revenue increase 8.7% QoQ (COP 500..., WOM Colombia revenue growth 35.1% YoY |
 
 **Balance**: S > W and T > O
 **Competitive stance**: Defensive (ST-dominant)
 
-**Critical insight**: SWOT analysis identifies 9 strengths, 5 weaknesses, 5 opportunities, and 7 threats. The recommended strategic posture is defensive (ST-dominant).
+**Critical insight**: SWOT analysis identifies 9 strengths, 5 weaknesses, 6 opportunities, and 7 threats. The recommended strategic posture is defensive (ST-dominant).
 
 ---
 
@@ -1481,14 +1647,14 @@ Stable leadership team (avg tenure >3 years); Growth-oriented strategic posture;
 ## 3. Weaknesses
 
 1. Price Competitiveness: score 70 (market avg 73)
-2. 5G coverage gap at only 5.0%
+2. 5G coverage gap at only 12.0%
 3. ARPU pressure as WOM grows from 2.5M to 4.6M subscribers
 4. Slower decision-making and capex allocation vs fully-owned subsidiaries
 5. Speed and perception gap vs Claro fiber offerings
 
 ### Weakness Interactions
 
-Note: Weaknesses often compound. For example, 'Price Competitiveness: score 70 (market avg 73)' may exacerbate '5G coverage gap at only 5.0%', creating a negative feedback loop.
+Note: Weaknesses often compound. For example, 'Price Competitiveness: score 70 (market avg 73)' may exacerbate '5G coverage gap at only 12.0%', creating a negative feedback loop.
 
 ---
 
@@ -1497,8 +1663,9 @@ Note: Weaknesses often compound. For example, 'Price Competitiveness: score 70 (
 1. Regulatory Environment: Compliance requirements and spectrum policies directly affect Tigo Colombia
 2. National Digital Strategy: Fiber/5G coverage mandates may require Tigo Colombia investment but also enable subsidy access
 3. Tigo Colombia revenue growth 7.1% YoY
-4. Tigo-UNE launches 5G in Bogota and Medellin
-5. WOM reaches 4.6M subscribers in Colombia
+4. Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)
+5. Tigo-UNE launches 5G in Bogota and Medellin
+6. WOM reaches 4.6M subscribers in Colombia
 
 ---
 
@@ -1526,15 +1693,15 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 1. Leverage 'Customer Service: score 68 (market avg 64)' to capture the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Tigo Colombia'.
 2. Leverage 'Digital Experience: score 72 (market avg 68)' to capture the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Tigo Colombia investment but also enable subsidy access'.
 3. Leverage 'Distribution: score 75 (market avg 70)' to capture the opportunity of 'Tigo Colombia revenue growth 7.1% YoY'.
-4. Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Tigo-UNE launches 5G in Bogota and Medellin'.
+4. Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)'.
 
 ### WO Strategies (Weaknesses × Opportunities)
 *Fix weaknesses to capture opportunities* — Posture: Developmental
 
 1. Address weakness 'Price Competitiveness: score 70 (market avg 73)' to unlock the opportunity of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Tigo Colombia'.
-2. Address weakness '5G coverage gap at only 5.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Tigo Colombia investment but also enable subsidy access'.
+2. Address weakness '5G coverage gap at only 12.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Tigo Colombia investment but also enable subsidy access'.
 3. Address weakness 'ARPU pressure as WOM grows from 2.5M to 4.6M subscribers' to unlock the opportunity of 'Tigo Colombia revenue growth 7.1% YoY'.
-4. Address weakness 'Slower decision-making and capex allocation vs fully-owned subsidiaries' to unlock the opportunity of 'Tigo-UNE launches 5G in Bogota and Medellin'.
+4. Address weakness 'Slower decision-making and capex allocation vs fully-owned subsidiaries' to unlock the opportunity of 'Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)'.
 
 ### ST Strategies (Strengths × Threats)
 *Use strengths to counter threats* — Posture: Defensive
@@ -1548,7 +1715,7 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 *Minimize weaknesses and avoid threats* — Posture: Survival
 
 1. Mitigate weakness 'Price Competitiveness: score 70 (market avg 73)' and defend against the threat of 'Regulatory Environment: Compliance requirements and spectrum policies directly affect Tigo Colombia'.
-2. Mitigate weakness '5G coverage gap at only 5.0%' and defend against the threat of 'WOM Colombia revenue increase 8.7% QoQ (COP 500.0M vs COP 460.0M)'.
+2. Mitigate weakness '5G coverage gap at only 12.0%' and defend against the threat of 'WOM Colombia revenue increase 8.7% QoQ (COP 500.0M vs COP 460.0M)'.
 3. Mitigate weakness 'ARPU pressure as WOM grows from 2.5M to 4.6M subscribers' and defend against the threat of 'WOM Colombia revenue growth 35.1% YoY'.
 4. Mitigate weakness 'Slower decision-making and capex allocation vs fully-owned subsidiaries' and defend against the threat of 'WOM Colombia EBITDA margin improvement: -2.0% vs -4.3% (+2.3pp)'.
 
@@ -1556,13 +1723,13 @@ Multiple threats occurring simultaneously amplify impact. If 'Regulatory Environ
 
 ## 7. Strategic Synthesis
 
-**Key message**: SWOT analysis identifies 9 strengths, 5 weaknesses, 5 opportunities, and 7 threats. The recommended strategic posture is defensive (ST-dominant).
+**Key message**: SWOT analysis identifies 9 strengths, 5 weaknesses, 6 opportunities, and 7 threats. The recommended strategic posture is defensive (ST-dominant).
 
 **Competitive stance**: Defensive (ST-dominant)
 
 This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis identified across all Five Looks.
 
-**Net assessment**: S:9/W:5/O:5/T:7 — Defensive (ST-dominant). Strengths outweigh weaknesses, threats dominate opportunities.
+**Net assessment**: S:9/W:5/O:6/T:7 — Defensive (ST-dominant). Strengths outweigh weaknesses, threats dominate opportunities.
 
 ---
 
@@ -1584,10 +1751,10 @@ This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis id
 
 | Quadrant | Count | Share | Action |
 | :--- | :--- | :--- | :--- |
-| Grow/Invest | 14 | 48% | Execute aggressively — highest priority |
-| Acquire Skills | 7 | 24% | Build capabilities before competing |
-| Harvest | 4 | 14% | Extract value from declining positions |
-| Avoid/Exit | 4 | 14% | Do not invest — exit if possible |
+| Grow/Invest | 15 | 50% | Execute aggressively — highest priority |
+| Acquire Skills | 7 | 23% | Build capabilities before competing |
+| Harvest | 4 | 13% | Extract value from declining positions |
+| Avoid/Exit | 4 | 13% | Do not invest — exit if possible |
 
 ### SPAN Position Details
 
@@ -1598,6 +1765,7 @@ This SWOT analysis reinforces the **"The Squeezed Middle"** central diagnosis id
 | SO-3 | 6.8 | 5.8 | Grow Invest | Invest aggressively to grow market share and reven |
 | SO-4 | 6.8 | 5.8 | Grow Invest | Invest aggressively to grow market share and reven |
 | Tigo Colombia revenue growth 7.1% YoY | 5.7 | 5.3 | Grow Invest | Invest aggressively to grow market share and reven |
+| Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia) | 5.5 | 5.3 | Grow Invest | Invest aggressively to grow market share and reven |
 | Tigo-UNE launches 5G in Bogota and Medellin | 6.7 | 5.3 | Grow Invest | Invest aggressively to grow market share and reven |
 | WOM reaches 4.6M subscribers in Colombia | 5.7 | 5.3 | Grow Invest | Invest aggressively to grow market share and reven |
 | 5G SA enabling network slicing and enterprise services | 6.5 | 4.9 | Acquire Skills | Build missing capabilities before committing major |
@@ -1661,9 +1829,9 @@ Leverage 'Distribution: score 75 (market avg 70)' to capture the opportunity of 
 
 *Derived from: swot_so_strategy*
 
-### 4. Leverage Enterprise Solutions → Tigo-UNE launches 5G in Bogota and Medel...
+### 4. Leverage Enterprise Solutions → Tigo (Millicom) completes acquisition of...
 
-Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Tigo-UNE launches 5G in Bogota and Medellin'.
+Leverage 'Enterprise Solutions: score 70 (market avg 58)' to capture the opportunity of 'Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1683,7 +1851,18 @@ Tigo Colombia revenue growth 7.1% YoY
 
 *Derived from: market_opportunity, pricing*
 
-### 6. Tigo-UNE launches 5G in Bogota and Medellin
+### 6. Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)
+
+Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)
+
+| Aspect | Detail |
+| :--- | :--- |
+| Priority | **P0** |
+| Rationale | Quadrant: grow_invest |
+
+*Derived from: market_opportunity, technology*
+
+### 7. Tigo-UNE launches 5G in Bogota and Medellin
 
 Tigo-UNE launches 5G in Bogota and Medellin
 
@@ -1694,7 +1873,7 @@ Tigo-UNE launches 5G in Bogota and Medellin
 
 *Derived from: market_opportunity, technology*
 
-### 7. WOM reaches 4.6M subscribers in Colombia
+### 8. WOM reaches 4.6M subscribers in Colombia
 
 WOM reaches 4.6M subscribers in Colombia
 
@@ -1705,7 +1884,7 @@ WOM reaches 4.6M subscribers in Colombia
 
 *Derived from: market_opportunity, merger*
 
-### 8. Regulatory Environment: Compliance requirements and spectrum polici...
+### 9. Regulatory Environment: Compliance requirements and spectrum polici...
 
 Policy opportunity: Regulatory Environment: Compliance requirements and spectrum policies directly affect Tigo Colombia
 
@@ -1716,7 +1895,7 @@ Policy opportunity: Regulatory Environment: Compliance requirements and spectrum
 
 *Derived from: trend_policy_opportunity*
 
-### 9. National Digital Strategy: Fiber/5G coverage mandates may require t...
+### 10. National Digital Strategy: Fiber/5G coverage mandates may require t...
 
 Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may require Tigo Colombia investment but also enable subsidy access
 
@@ -1727,7 +1906,7 @@ Policy opportunity: National Digital Strategy: Fiber/5G coverage mandates may re
 
 *Derived from: trend_policy_opportunity*
 
-### 10. Exploit Movistar Co weakness: Digital Experience: score 62 (market ...
+### 11. Exploit Movistar Co weakness: Digital Experience: score 62 (market ...
 
 Competitor Movistar Co is weak in: Digital Experience: score 62 (market avg 68)
 
@@ -1738,7 +1917,7 @@ Competitor Movistar Co is weak in: Digital Experience: score 62 (market avg 68)
 
 *Derived from: competitor_weakness, Movistar Co*
 
-### 11. Exploit Movistar Co weakness: Innovation: score 58 (market avg 67)
+### 12. Exploit Movistar Co weakness: Innovation: score 58 (market avg 67)
 
 Competitor Movistar Co is weak in: Innovation: score 58 (market avg 67)
 
@@ -1749,7 +1928,7 @@ Competitor Movistar Co is weak in: Innovation: score 58 (market avg 67)
 
 *Derived from: competitor_weakness, Movistar Co*
 
-### 12. Exploit Claro Co weakness: Price Competitiveness: score 65 (market ...
+### 13. Exploit Claro Co weakness: Price Competitiveness: score 65 (market ...
 
 Competitor Claro Co is weak in: Price Competitiveness: score 65 (market avg 73)
 
@@ -1760,7 +1939,7 @@ Competitor Claro Co is weak in: Price Competitiveness: score 65 (market avg 73)
 
 *Derived from: competitor_weakness, Claro Co*
 
-### 13. Exploit Wom Co weakness: Brand Strength: score 50 (market avg 70)
+### 14. Exploit Wom Co weakness: Brand Strength: score 50 (market avg 70)
 
 Competitor Wom Co is weak in: Brand Strength: score 50 (market avg 70)
 
@@ -1771,7 +1950,7 @@ Competitor Wom Co is weak in: Brand Strength: score 50 (market avg 70)
 
 *Derived from: competitor_weakness, Wom Co*
 
-### 14. Exploit Wom Co weakness: Customer Service: score 55 (market avg 64)
+### 15. Exploit Wom Co weakness: Customer Service: score 55 (market avg 64)
 
 Competitor Wom Co is weak in: Customer Service: score 55 (market avg 64)
 
@@ -1831,9 +2010,9 @@ Address weakness 'Price Competitiveness: score 70 (market avg 73)' to unlock the
 
 *Derived from: swot_wo_strategy*
 
-### 5. Address 5G coverage gap at only 5.0% → National Digital Strategy
+### 5. Address 5G coverage gap at only 12.0% → National Digital Strategy
 
-Address weakness '5G coverage gap at only 5.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Tigo Colombia investment but also enable subsidy access'.
+Address weakness '5G coverage gap at only 12.0%' to unlock the opportunity of 'National Digital Strategy: Fiber/5G coverage mandates may require Tigo Colombia investment but also enable subsidy access'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1853,9 +2032,9 @@ Address weakness 'ARPU pressure as WOM grows from 2.5M to 4.6M subscribers' to u
 
 *Derived from: swot_wo_strategy*
 
-### 7. Address Slower decision-making and capex allocation vs fully-owned subsidiaries → Tigo-UNE launches 5G in Bogota and Medel...
+### 7. Address Slower decision-making and capex allocation vs fully-owned subsidiaries → Tigo (Millicom) completes acquisition of...
 
-Address weakness 'Slower decision-making and capex allocation vs fully-owned subsidiaries' to unlock the opportunity of 'Tigo-UNE launches 5G in Bogota and Medellin'.
+Address weakness 'Slower decision-making and capex allocation vs fully-owned subsidiaries' to unlock the opportunity of 'Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)'.
 
 | Aspect | Detail |
 | :--- | :--- |
@@ -1880,7 +2059,7 @@ Address weakness 'Slower decision-making and capex allocation vs fully-owned sub
 *No viable path — exit or do not enter*
 
 - Mitigate Price Competitiveness → Regulatory Environment
-- Mitigate 5G coverage gap at only 5.0% → WOM Colombia revenue increase 8.7% QoQ (...
+- Mitigate 5G coverage gap at only 12.0% → WOM Colombia revenue increase 8.7% QoQ (...
 - Mitigate ARPU pressure as WOM grows from 2.5M to 4.6M subscribers → WOM Colombia revenue growth 35.1% YoY
 - Mitigate Slower decision-making and capex allocation vs fully-owned subsidiaries → WOM Colombia EBITDA margin improvement
 
@@ -1896,7 +2075,7 @@ Address weakness 'Slower decision-making and capex allocation vs fully-owned sub
 | Leverage Customer Service → Regulatory Environment | N/A |  |  |
 | Leverage Digital Experience → National Digital Strategy | N/A |  |  |
 | Leverage Distribution → Tigo Colombia revenue growth 7.1% YoY | N/A |  |  |
-| Leverage Enterprise Solutions → Tigo-UNE launches 5G in Bogota and Medel... | N/A |  |  |
+| Leverage Enterprise Solutions → Tigo (Millicom) completes acquisition of... | N/A |  |  |
 | Tigo Colombia revenue growth 7.1% YoY | N/A |  |  |
 
 ### P1 — Should Do (Strategic)
@@ -1904,6 +2083,7 @@ Address weakness 'Slower decision-making and capex allocation vs fully-owned sub
 
 | Opportunity | Addressable Market | Time Window | Capability |
 | :--- | :--- | :--- | :--- |
+| Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia) | N/A |  |  |
 | Tigo-UNE launches 5G in Bogota and Medellin | N/A |  |  |
 | WOM reaches 4.6M subscribers in Colombia | N/A |  |  |
 | 5G SA enabling network slicing and enterprise services | N/A |  |  |
@@ -1917,9 +2097,9 @@ Address weakness 'Slower decision-making and capex allocation vs fully-owned sub
 | Exploit Wom Co weakness: Brand Strength: score 50 (market avg 70) | N/A |  |  |
 | Exploit Wom Co weakness: Customer Service: score 55 (market avg 64) | N/A |  |  |
 | Address Price Competitiveness → Regulatory Environment | N/A |  |  |
-| Address 5G coverage gap at only 5.0% → National Digital Strategy | N/A |  |  |
+| Address 5G coverage gap at only 12.0% → National Digital Strategy | N/A |  |  |
 | Address ARPU pressure as WOM grows from 2.5M to 4.6M subscribers → Tigo Colombia revenue growth 7.1% YoY | N/A |  |  |
-| Address Slower decision-making and capex allocation vs fully-owned subsidiaries → Tigo-UNE launches 5G in Bogota and Medel... | N/A |  |  |
+| Address Slower decision-making and capex allocation vs fully-owned subsidiaries → Tigo (Millicom) completes acquisition of... | N/A |  |  |
 
 ### P2 — Could Do (Opportunistic)
 *Worthwhile if resources allow*
@@ -1931,7 +2111,7 @@ Address weakness 'Slower decision-making and capex allocation vs fully-owned sub
 | Defend Distribution → WOM Colombia revenue growth 35.1% YoY | N/A |  |  |
 | Defend Enterprise Solutions → WOM Colombia EBITDA margin improvement | N/A |  |  |
 | Mitigate Price Competitiveness → Regulatory Environment | N/A |  |  |
-| Mitigate 5G coverage gap at only 5.0% → WOM Colombia revenue increase 8.7% QoQ (... | N/A |  |  |
+| Mitigate 5G coverage gap at only 12.0% → WOM Colombia revenue increase 8.7% QoQ (... | N/A |  |  |
 | Mitigate ARPU pressure as WOM grows from 2.5M to 4.6M subscribers → WOM Colombia revenue growth 35.1% YoY | N/A |  |  |
 | Mitigate Slower decision-making and capex allocation vs fully-owned subsidiaries → WOM Colombia EBITDA margin improvement | N/A |  |  |
 
@@ -1944,13 +2124,13 @@ Address weakness 'Slower decision-making and capex allocation vs fully-owned sub
 | Leverage Customer Service → Regulatory Environment | P0 | N/A |
 | Leverage Digital Experience → National Digital Strategy | P0 | N/A |
 | Leverage Distribution → Tigo Colombia revenue growth 7.1% YoY | P0 | N/A |
-| Leverage Enterprise Solutions → Tigo-UNE launches 5G in Bogota and Medel... | P0 | N/A |
+| Leverage Enterprise Solutions → Tigo (Millicom) completes acquisition of... | P0 | N/A |
 | Tigo Colombia revenue growth 7.1% YoY | P0 | N/A |
+| Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia) | P1 | N/A |
 | Tigo-UNE launches 5G in Bogota and Medellin | P1 | N/A |
 | WOM reaches 4.6M subscribers in Colombia | P1 | N/A |
 | 5G SA enabling network slicing and enterprise services | P1 | N/A |
 | AI/ML for network optimization and customer experience | P1 | N/A |
-| Open RAN for vendor diversification and cost reduction | P1 | N/A |
 
 **Bull case (full execution)**: +10-16% over 5 years
 **Bear case (no execution)**: -6-12% over 5 years
@@ -1959,20 +2139,20 @@ Address weakness 'Slower decision-making and capex allocation vs fully-owned sub
 
 ## 7. Strategic Recommendations
 
-**Key message**: SPAN matrix positions 29 opportunities: 14 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 14 grow/invest items for maximum strategic impact.
+**Key message**: SPAN matrix positions 30 opportunities: 15 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 15 grow/invest items for maximum strategic impact.
 
 ### Immediate Actions (Next Quarter)
 
 - **Accelerate Fixed Broadband Growth**: Fixed Broadband showing strong momentum at $880M — invest to accelerate
 - **Tigo Colombia revenue growth 7.1% YoY**: Tigo Colombia revenue growth 7.1% YoY
-- **Tigo-UNE launches 5G in Bogota and Medellin**: Tigo-UNE launches 5G in Bogota and Medellin
+- **Integrate Strategic Acquisitions**: Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)
 
 ### Medium-Term Initiatives (1-3 Years)
 
 - **Close Price Competitiveness Gap**: Price Competitiveness: score 70 (market avg 73)
-- **Close 5G Coverage Gap**: 5G coverage gap at only 5.0%
+- **Close 5G Coverage Gap**: 5G coverage gap at only 12.0%
 
-**Net assessment**: 29 opportunities mapped: 14 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 14 grow/invest items.
+**Net assessment**: 30 opportunities mapped: 15 grow/invest, 7 acquire skills, 4 harvest, 4 avoid/exit. Focus resources on the 15 grow/invest items.
 
 ---
 
@@ -2006,7 +2186,7 @@ Resource allocation: 3 P0 (immediate), 3 P1 (1-2 years), 1 P2 (3-5 years)
 | P0 | Business | Accelerate Mobile Growth | Mobile at €1,240M showing strong momentum — invest to scale | Mobile revenue +10% YoY; Market share gain |
 | P0 | Business | Accelerate Fixed Broadband Growth | Fixed Broadband at €880M showing strong momentum — invest to | Fixed Broadband revenue +10% YoY; Market share gain |
 | P1 | Network | 5G Coverage Expansion | Expand 5G population coverage to strengthen mobile competiti | 5G pop coverage target; 5G attach rate |
-| P1 | Business | Opportunity Portfolio Execution | 14 grow/invest opportunities identified — establish executio | Launch 3+ priority initiatives; Pipeline contribution tracking |
+| P1 | Business | Opportunity Portfolio Execution | 15 grow/invest opportunities identified — establish executio | Launch 3+ priority initiatives; Pipeline contribution tracking |
 | P1 | Customer | Customer Experience Enhancement | Improve digital touchpoints and service resolution to boost  | NPS +5 points; First-call resolution rate 80%+ |
 | P2 | Efficiency | Operational Efficiency & Automation | EBITDA margin 35.1% — maintain through smart automation and  | Process automation 30%+; Cost-to-serve reduction |
 
@@ -2070,5 +2250,5 @@ As The Squeezed Middle, the strategic posture is Defensive. As The Squeezed Midd
 
 ---
 
-*Generated: 2026-02-14 | Tigo Colombia BLM Strategic Assessment (CQ4_2025)*
+*Generated: 2026-02-26 | Tigo Colombia BLM Strategic Assessment (CQ4_2025)*
 *Framework: Business Leadership Model — Five Looks + SWOT + SPAN*

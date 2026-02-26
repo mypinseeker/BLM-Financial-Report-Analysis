@@ -1,0 +1,52 @@
+{
+  "group_id": "millicom",
+  "group_name": "Millicom International Cellular S.A.",
+  "market_count": 1,
+  "markets": [
+    "colombia"
+  ],
+  "revenue_comparison": {
+    "colombia": {
+      "total_revenue": 2420.0,
+      "revenue_growth_pct": 7.08,
+      "ebitda_margin_pct": 35.1,
+      "ebitda": 850.0
+    }
+  },
+  "subscriber_comparison": {
+    "colombia": {
+      "mobile_subs_k": 15900.0,
+      "broadband_subs_k": 1880.0,
+      "mobile_arpu": 7850.0
+    }
+  },
+  "competitive_position": {
+    "colombia": {
+      "ranking": null,
+      "intensity": "high"
+    }
+  },
+  "common_opportunities": [
+    "tigo colombia revenue growth 7.1% yoy",
+    "tigo (millicom) completes acquisition of coltel (movistar co",
+    "tigo-une launches 5g in bogota and medellin",
+    "wom reaches 4.6m subscribers in colombia",
+    "regulatory environment: compliance requirements and spectrum",
+    "national digital strategy: fiber/5g coverage mandates may re"
+  ],
+  "common_threats": [],
+  "capex_investment": {
+    "colombia": {
+      "capex_to_revenue_pct": 20.2,
+      "capex": 490.0
+    }
+  },
+  "health_ratings": {
+    "colombia": "stable"
+  },
+  "key_findings": [
+    "Strongest revenue growth: colombia (+7.1%)",
+    "High competitive intensity in: colombia",
+    "Total opportunities identified across all markets: 30"
+  ]
+}
