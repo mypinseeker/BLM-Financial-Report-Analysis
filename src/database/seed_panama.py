@@ -32,43 +32,42 @@ OPERATORS = ["tigo_panama", "masmovil_pa", "claro_pa", "digicel_pa"]
 def get_seed_data():
     return {
         "financials": {
-            # Tigo Panama — Millicom subsidiary, #2 operator (~30% share)
-            # Squeezed middle position vs dominant +Móvil
+            # ── Tigo Panama Q4 2025 ──
+            # VERIFIED: Millicom Q4 2025 Earnings Release (2026-02-26)
+            #   - Total revenue: $181M/Q4 (+4.9% YoY)
+            #   - Adjusted EBITDA: $94M/Q4 (+4.5% YoY)
+            #   - Mobile service revenue: $84M/Q4 (+4.5% YoY)
+            # Also: TeleSemana 2026-02-26 citing Millicom earnings
+            # NOTE: Millicom does not publicly disclose quarterly time series at
+            #       country level. Only Q4 2025 snapshot is verified.
             "tigo_panama": {
-                "total_revenue": [140, 143, 146, 149, 152, 155, 158, 161],
-                "service_revenue": [132, 135, 138, 141, 144, 147, 150, 153],
-                "service_revenue_growth_pct": [5.0, 5.3, 5.5, 5.8, 8.6, 8.9, 8.7, 8.5],
-                "mobile_service_revenue": [88, 90, 92, 94, 96, 98, 100, 102],
-                "mobile_service_growth_pct": [4.0, 4.3, 4.5, 4.8, 9.1, 8.9, 8.7, 8.5],
-                "fixed_service_revenue": [36, 37, 38, 39, 40, 41, 42, 43],
-                "fixed_service_growth_pct": [8.0, 8.3, 8.5, 8.8, 11.1, 10.8, 10.5, 10.3],
-                "b2b_revenue": [8, 8, 8, 8, 8, 8, 8, 8],
-                "ebitda": [60, 61, 63, 64, 66, 67, 68, 70],
-                "ebitda_margin_pct": [42.9, 42.7, 43.2, 43.0, 43.4, 43.2, 43.0, 43.5],
-                "ebitda_growth_pct": [4.5, 4.8, 6.8, 4.8, 10.0, 9.8, 7.9, 9.4],
-                "capex": [22, 23, 23, 24, 24, 25, 25, 26],
-                "capex_to_revenue_pct": [15.7, 16.1, 15.8, 16.1, 15.8, 16.1, 15.8, 16.1],
-                "employees": [1100, 1100, 1120, 1120, 1140, 1140, 1160, 1160],
-                "_source": "Millicom Q4 2025 Earnings Report — Panama segment",
+                # Only Q4 2025 (last element) is verified from Millicom earnings.
+                # Earlier quarters are directional based on stated YoY growth rates.
+                "total_revenue": [None, None, None, None, None, None, None, 181],
+                "mobile_service_revenue": [None, None, None, None, None, None, None, 84],
+                "ebitda": [None, None, None, None, None, None, None, 94],
+                # Verified growth rates (Q4 2025 YoY)
+                "total_revenue_growth_pct_q4": 4.9,
+                "mobile_service_growth_pct_q4": 4.5,
+                "ebitda_growth_pct_q4": 4.5,
+                "_source": "Millicom Q4 2025 Earnings Release (2026-02-26) via GlobeNewsWire + TeleSemana",
+                "_source_url": "https://www.globenewswire.com/news-release/2026/02/26/3245346/0/en/Millicom-Tigo-Q4-2025-Earnings-Release.html",
             },
-            # +Móvil (CWP + ex-Claro) — Liberty Latin America, #1 operator (~70% share)
-            # Combined entity post-2022 acquisition
+            # ── +Móvil (C&W Panama) Q4 2025 ──
+            # VERIFIED: Liberty Latin America Q4 2025 Results (2026-02-19)
+            #   - Revenue: $230M/Q4 (+10% YoY rebased)
+            #   - Adjusted OIBDA: $94M/Q4 (+18% YoY rebased)
+            #   - OIBDA margin improvement: +300bps YoY
+            # Also: LLA earnings call transcript, Yahoo Finance summary
             "masmovil_pa": {
-                "total_revenue": [340, 348, 356, 364, 372, 380, 388, 396],
-                "service_revenue": [320, 328, 336, 344, 352, 360, 368, 376],
-                "service_revenue_growth_pct": [4.0, 4.2, 4.5, 4.8, 5.5, 5.8, 5.6, 5.3],
-                "mobile_service_revenue": [220, 225, 230, 235, 240, 245, 250, 255],
-                "mobile_service_growth_pct": [3.5, 3.8, 4.0, 4.2, 5.0, 5.2, 5.0, 4.8],
-                "fixed_service_revenue": [80, 82, 84, 86, 88, 90, 92, 94],
-                "fixed_service_growth_pct": [5.0, 5.3, 5.5, 5.8, 6.5, 6.8, 6.5, 6.2],
-                "b2b_revenue": [20, 21, 22, 23, 24, 25, 26, 27],
-                "ebitda": [136, 139, 142, 146, 149, 152, 155, 158],
-                "ebitda_margin_pct": [40.0, 39.9, 39.9, 40.1, 40.1, 40.0, 39.9, 39.9],
-                "ebitda_growth_pct": [3.5, 4.4, 4.3, 5.6, 4.1, 4.0, 3.9, 3.9],
-                "capex": [58, 60, 62, 64, 66, 68, 70, 72],
-                "capex_to_revenue_pct": [17.1, 17.2, 17.4, 17.6, 17.7, 17.9, 18.0, 18.2],
-                "employees": [3200, 3200, 3250, 3250, 3300, 3300, 3350, 3350],
-                "_source": "Liberty Latin America Q4 2025 IR — Panama segment (CWP + ex-Claro combined)",
+                "total_revenue": [None, None, None, None, None, None, None, 230],
+                "ebitda": [None, None, None, None, None, None, None, 94],
+                # Verified growth rates (Q4 2025 YoY rebased)
+                "total_revenue_growth_pct_q4": 10.0,
+                "ebitda_growth_pct_q4": 18.0,
+                "ebitda_margin_improvement_bps": 300,
+                "_source": "Liberty Latin America Q4 & FY 2025 Results (2026-02-19)",
+                "_source_url": "https://investors.lla.com/files/doc_financials/2025/q4/Liberty-Latin-America-Reports-Q4-FY-2025-Results.pdf",
             },
             # Claro PA — ACQUIRED by CWP (+Móvil) in mid-2022
             "claro_pa": {
@@ -99,69 +98,47 @@ def get_seed_data():
             },
         },
         "subscribers": {
+            # ── Tigo Panama subscribers ──
+            # VERIFIED: Millicom Q4 2025 Earnings
+            #   - Postpaid: 503K (+14.6% YoY)
+            # NOT publicly disclosed by Millicom at country level:
+            #   total mobile, prepaid, ARPU, broadband per-country
             "tigo_panama": {
-                "mobile_total_k": [2100, 2130, 2160, 2190, 2220, 2250, 2280, 2310],
-                "mobile_postpaid_k": [525, 535, 540, 550, 555, 565, 570, 580],
-                "mobile_prepaid_k": [1575, 1595, 1620, 1640, 1665, 1685, 1710, 1730],
-                "mobile_net_adds_k": [22, 30, 30, 30, 30, 30, 30, 30],
-                "mobile_churn_pct": [2.5, 2.4, 2.4, 2.3, 2.3, 2.2, 2.2, 2.1],
-                "mobile_arpu": [4.2, 4.2, 4.3, 4.3, 4.3, 4.4, 4.4, 4.4],
-                "broadband_total_k": [180, 186, 192, 198, 204, 210, 216, 222],
-                "broadband_cable_k": [140, 143, 146, 149, 152, 155, 158, 161],
-                "broadband_fiber_k": [25, 28, 31, 34, 37, 40, 43, 46],
-                "broadband_net_adds_k": [5, 6, 6, 6, 6, 6, 6, 6],
-                "tv_total_k": [140, 143, 146, 149, 152, 155, 158, 161],
-                "b2b_customers_k": [10, 10, 11, 11, 11, 12, 12, 12],
-                "_source": "Millicom Q4 2025 Earnings Report",
+                "mobile_postpaid_k": 503,  # Millicom Q4 2025 (+14.6% YoY)
+                "mobile_postpaid_growth_pct": 14.6,
+                # mobile_total, prepaid, ARPU: not disclosed at country level
+                "_source": "Millicom Q4 2025 Earnings Release (2026-02-26)",
+                "_source_url": "https://www.globenewswire.com/news-release/2026/02/26/3245346/0/en/Millicom-Tigo-Q4-2025-Earnings-Release.html",
             },
+            # ── +Móvil subscribers ──
+            # LLA does not publicly break out Panama mobile subscribers
             "masmovil_pa": {
-                "mobile_total_k": [4800, 4840, 4880, 4920, 4960, 5000, 5040, 5080],
-                "mobile_postpaid_k": [1440, 1460, 1480, 1500, 1520, 1540, 1560, 1580],
-                "mobile_prepaid_k": [3360, 3380, 3400, 3420, 3440, 3460, 3480, 3500],
-                "mobile_net_adds_k": [30, 40, 40, 40, 40, 40, 40, 40],
-                "mobile_churn_pct": [1.8, 1.8, 1.7, 1.7, 1.7, 1.6, 1.6, 1.6],
-                "mobile_arpu": [4.6, 4.6, 4.7, 4.8, 4.8, 4.9, 5.0, 5.0],
-                "broadband_total_k": [520, 530, 540, 550, 560, 570, 580, 590],
-                "broadband_fiber_k": [140, 150, 160, 170, 180, 190, 200, 210],
-                "broadband_cable_k": [280, 280, 280, 280, 280, 280, 280, 280],
-                "broadband_net_adds_k": [8, 10, 10, 10, 10, 10, 10, 10],
-                "tv_total_k": [300, 305, 310, 315, 320, 325, 330, 335],
-                "b2b_customers_k": [25, 26, 27, 28, 29, 30, 31, 32],
-                "_source": "Liberty Latin America Q4 2025 IR (CWP + ex-Claro combined)",
+                # Not disclosed at country level by Liberty Latin America
+                "_source": "Liberty Latin America Q4 2025 — subscriber breakdown not disclosed for Panama",
             },
-            "claro_pa": {
-                "mobile_total_k": [2500, 2520, 2540, 2560, 0, 0, 0, 0],
-                "mobile_postpaid_k": [750, 760, 765, 770, 0, 0, 0, 0],
-                "mobile_prepaid_k": [1750, 1760, 1775, 1790, 0, 0, 0, 0],
-                "mobile_net_adds_k": [15, 20, 20, 20, 0, 0, 0, 0],
-                "mobile_churn_pct": [2.2, 2.2, 2.1, 2.1, 0, 0, 0, 0],
-                "mobile_arpu": [5.6, 5.6, 5.7, 5.7, 0, 0, 0, 0],
-                "broadband_total_k": [220, 224, 228, 232, 0, 0, 0, 0],
-                "broadband_fiber_k": [60, 64, 68, 72, 0, 0, 0, 0],
-                "tv_total_k": [120, 122, 124, 126, 0, 0, 0, 0],
-                "_source": "America Movil Q4 2021 (pre-acquisition, historical only)",
-            },
-            "digicel_pa": {
-                "mobile_total_k": [900, 892, 884, 876, 0, 0, 0, 0],
-                "mobile_postpaid_k": [90, 89, 88, 88, 0, 0, 0, 0],
-                "mobile_prepaid_k": [810, 803, 796, 788, 0, 0, 0, 0],
-                "mobile_net_adds_k": [-6, -8, -8, -8, 0, 0, 0, 0],
-                "mobile_churn_pct": [4.0, 4.1, 4.2, 4.2, 0, 0, 0, 0],
-                "mobile_arpu": [5.8, 5.7, 5.7, 5.6, 0, 0, 0, 0],
-                "_source": "Digicel Group FY2022 (pre-exit, historical only)",
+            # ── Market-level ASEP data (2024 year-end) ──
+            # VERIFIED: ASEP via DPL News (published 2025-07-03)
+            "_market_totals": {
+                "total_mobile_lines_k": 6120,  # 6.12M (end 2024)
+                "mobile_growth_pct_2024": 4.6,
+                "mobile_net_adds_k_2024": 275,
+                "mobile_penetration_pct": 135.9,
+                "postpaid_share_pct": 18.2,  # → ~1,114K postpaid
+                "prepaid_share_pct": 81.8,   # → ~5,006K prepaid
+                "mobile_broadband_k": 4620,  # 75.5% of mobile subs
+                "_source": "ASEP Panama via DPL News (2025-07-03, data as of 2024-12-31)",
+                "_source_url": "https://dplnews.com/6-millones-abonados-moviles-panama-135-penetracion/",
+                "_note": "ASEP does not publicly break out per-operator subscriber counts. Total includes all SIM types; IoT/M2M inclusion status not specified.",
             },
         },
         "macro": {
-            "gdp_growth_pct": 5.0,
-            "inflation_pct": 2.0,
-            "unemployment_pct": 7.5,
-            "telecom_market_size_eur_b": 1.1,
-            "telecom_growth_pct": 5.0,
-            "five_g_adoption_pct": 0.0,
-            "fiber_penetration_pct": 12.0,
+            # Market-level quarterly revenue (Q4 2025, derived from verified operator reports)
+            # Tigo $181M + +Móvil $230M = $411M/quarter
+            "market_quarterly_revenue_usd_m": 411,
+            "five_g_adoption_pct": 0.0,  # No 5G deployed in Panama yet
             "regulatory_environment": "ASEP regulatory framework; dollarized economy (USD); Canal Zone drives enterprise demand; post-consolidation duopoly concerns",
             "digital_strategy": "Panama Hub Digital 2030; connectivity for logistics corridor; data center growth; ASEP spectrum auction for ex-Digicel bands",
-            "source_url": "ASEP Panama / MEF / ITU 2025",
+            "_source": "Derived from Millicom Q4 2025 + LLA Q4 2025 verified revenue figures",
         },
         # ── Network infrastructure with detailed spectrum_bands ──
         "network": {
