@@ -164,30 +164,88 @@
     </tbody>
 </table>
 
-{# ── Spectrum Band Comparison (only if any operator has spectrum_bands) ── #}
+{# ── Spectrum Band Comparison (list format with FDD/TDD detail) ── #}
 {% set has_bands = [] %}
 {% for n in network %}
     {% set tm = n.technology_mix or {} %}
-    {% if tm.spectrum_bands is defined and tm.spectrum_bands %}
+    {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else [] %}
+    {% if bands is iterable and bands is not string and bands | list | length > 0 %}
         {% if has_bands.append(1) %}{% endif %}
     {% endif %}
 {% endfor %}
 
 {% if has_bands %}
-{# Collect all unique bands across operators #}
-{% set all_bands = [] %}
+<h2 class="section-title">Mobile Spectrum Holdings (Detailed)</h2>
+<p class="meta" style="margin-bottom: 10px;">FDD = paired (2×N MHz: uplink + downlink). TDD = unpaired (single block). Source: ANE Colombia.</p>
+
 {% for n in network %}
     {% set tm = n.technology_mix or {} %}
-    {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else {} %}
-    {% for band_name in bands %}
-        {% if band_name not in all_bands %}
-            {% if all_bands.append(band_name) %}{% endif %}
-        {% endif %}
+    {% set status = tm.get('status', '') if tm.get is defined else '' %}
+    {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else [] %}
+    {% if status != 'acquired' and bands is iterable and bands is not string and bands | list | length > 0 %}
+<h3 style="margin-top:18px;">{{ n.display_name | default(n.operator_id) }} — {{ tm.spectrum_mhz | default('?') }} MHz total</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Band</th>
+            <th>ID</th>
+            <th>Duplex</th>
+            <th>Allocation</th>
+            <th>Frequency Range</th>
+            <th>Total MHz</th>
+            <th>Use</th>
+            <th>Origin</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for b in bands %}
+        <tr>
+            <td><strong>{{ b.band | default('-') }}</strong></td>
+            <td>{{ b.band_id | default('-') }}</td>
+            <td>
+                {% if b.duplex == 'FDD' %}
+                    <span class="badge badge-primary">FDD</span>
+                {% elif b.duplex == 'TDD' %}
+                    <span class="badge badge-warning">TDD</span>
+                {% else %}
+                    {{ b.duplex | default('-') }}
+                {% endif %}
+            </td>
+            <td>
+                {% if b.duplex == 'FDD' and b.paired_mhz is defined %}
+                    <strong>2×{{ b.paired_mhz }} MHz</strong>
+                {% elif b.duplex == 'TDD' %}
+                    <strong>{{ b.total_mhz | default('-') }} MHz</strong>
+                {% else %}
+                    {{ b.total_mhz | default('-') }} MHz
+                {% endif %}
+            </td>
+            <td style="font-size:11px; white-space:nowrap;">
+                {% if b.duplex == 'FDD' %}
+                    UL {{ b.ul | default('') }}<br>DL {{ b.dl | default('') }}
+                {% elif b.duplex == 'TDD' %}
+                    {{ b.range | default('') }}
+                {% endif %}
+            </td>
+            <td><strong>{{ b.total_mhz | default('-') }}</strong></td>
+            <td style="font-size:11px;">{{ b.use | default('') }}</td>
+            <td style="font-size:11px;">{{ b.origin | default('') }}</td>
+        </tr>
     {% endfor %}
+    <tr style="font-weight:700; border-top: 2px solid var(--border);">
+        <td colspan="5">TOTAL</td>
+        <td>{{ tm.spectrum_mhz | default(0) }} MHz</td>
+        <td colspan="2"></td>
+    </tr>
+    </tbody>
+</table>
+    {% endif %}
 {% endfor %}
 
-<h2 class="section-title">Mobile Spectrum Comparison (by Band)</h2>
-<p class="meta" style="margin-bottom: 10px;">MHz held per operator per frequency band. Higher = more capacity.</p>
+{# ── Cross-operator spectrum summary by band ── #}
+<h3 style="margin-top:24px;">Cross-Operator Spectrum Summary</h3>
+<p class="meta" style="margin-bottom:8px;">Aggregated MHz per band per operator (FDD shown as 2×N total).</p>
+{% set band_order = ["700 MHz", "850 MHz", "1900 MHz", "AWS", "2500 MHz", "3500 MHz"] %}
 <table>
     <thead>
         <tr>
@@ -199,46 +257,51 @@
                 <th>{{ n.display_name | default(n.operator_id) }}</th>
                 {% endif %}
             {% endfor %}
-            <th>Use</th>
         </tr>
     </thead>
     <tbody>
-    {% for band_name in all_bands | sort %}
+    {# Collect unique band names in order #}
+    {% set seen_bands = [] %}
+    {% for n in network %}
+        {% set tm = n.technology_mix or {} %}
+        {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else [] %}
+        {% if bands is iterable and bands is not string %}
+            {% for b in bands %}
+                {% if b.band is defined and b.band not in seen_bands %}
+                    {% if seen_bands.append(b.band) %}{% endif %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+    {% for band_name in seen_bands | sort %}
         <tr>
             <td><strong>{{ band_name }}</strong></td>
             {% for n in network %}
                 {% set tm = n.technology_mix or {} %}
                 {% set status = tm.get('status', '') if tm.get is defined else '' %}
                 {% if status != 'acquired' %}
-                    {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else {} %}
-                    {% set bdata = bands.get(band_name, {}) if bands.get is defined else {} %}
-                    {% if bdata and bdata.mhz is defined %}
-                        <td>
-                            <strong>{{ bdata.mhz }}</strong>
-                            {% if bdata.notes is defined and bdata.notes %}
-                                <br><span style="font-size:10px;color:var(--light-text);">{{ bdata.notes }}</span>
+                    {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else [] %}
+                    {% set ns = namespace(total=0, duplex='') %}
+                    {% if bands is iterable and bands is not string %}
+                        {% for b in bands %}
+                            {% if b.band is defined and b.band == band_name %}
+                                {% set ns.total = ns.total + (b.total_mhz | default(0)) %}
+                                {% set ns.duplex = b.duplex | default('') %}
                             {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    {% if ns.total > 0 %}
+                        <td>
+                            <strong>{{ ns.total }}</strong>
+                            <span style="font-size:10px;color:var(--light-text);"> {{ ns.duplex }}</span>
                         </td>
                     {% else %}
                         <td style="color:var(--light-text);">—</td>
                     {% endif %}
                 {% endif %}
             {% endfor %}
-            {# Use column: grab from first operator that has this band #}
-            <td style="font-size:11px;">
-            {% for n in network %}
-                {% set tm = n.technology_mix or {} %}
-                {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else {} %}
-                {% set bdata = bands.get(band_name, {}) if bands.get is defined else {} %}
-                {% if bdata and bdata.use is defined %}
-                    {{ bdata.use }}
-                    {% break %}
-                {% endif %}
-            {% endfor %}
-            </td>
         </tr>
     {% endfor %}
-    {# Totals row #}
     <tr style="font-weight:700; border-top: 2px solid var(--border);">
         <td>TOTAL</td>
         {% for n in network %}
@@ -248,7 +311,6 @@
                 <td>{{ tm.spectrum_mhz | default(0) }} MHz</td>
             {% endif %}
         {% endfor %}
-        <td></td>
     </tr>
     </tbody>
 </table>

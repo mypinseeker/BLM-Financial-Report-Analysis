@@ -159,24 +159,64 @@ def get_seed_data():
             "source_url": "CRC Colombia / DANE / MinTIC 2025",
         },
         "network": {
+            # ──────────────────────────────────────────────────────────────
+            # Spectrum data source: ANE Colombia (Agencia Nacional del Espectro)
+            # FDD bands: shown as 2×N MHz (paired uplink + downlink)
+            #   total_mhz = paired_mhz × 2  (e.g. 2×10 = 20 MHz total)
+            # TDD bands: shown as N MHz (unpaired, single range)
+            #   total_mhz = the block width
+            # ──────────────────────────────────────────────────────────────
+
             # Post-acquisition: Tigo now holds combined Tigo + Coltel spectrum
             "tigo_colombia": {
                 "five_g_coverage_pct": 12,
                 "four_g_coverage_pct": 92,
-                "fiber_homepass_k": 8000,   # Combined Tigo + Coltel FTTH
+                "fiber_homepass_k": 8000,
                 "cable_homepass_k": 5200,
                 "technology_mix": {
                     "mobile_vendor": "Nokia/Ericsson/Huawei",
-                    "spectrum_mhz": 265,    # 145 (Tigo) + 120 (Coltel)
+                    "spectrum_mhz": 265,
                     "core_vendor": "Nokia",
-                    "notes": "Includes former Coltel (Movistar) spectrum post-acquisition Q3 2025",
-                    "spectrum_bands": {
-                        "700 MHz":  {"mhz": 40, "use": "4G/5G FDD coverage", "notes": "20 own + 20 ex-Coltel"},
-                        "850 MHz":  {"mhz": 10, "use": "4G FDD rural", "notes": "ex-Coltel"},
-                        "1900 MHz": {"mhz": 75, "use": "3G/4G FDD", "notes": "25 own + 50 ex-Coltel"},
-                        "AWS (1700/2100)": {"mhz": 80, "use": "4G FDD capacity", "notes": "40 own + 40 ex-Coltel"},
-                        "2500 MHz": {"mhz": 60, "use": "4G TDD capacity"},
-                    },
+                    "notes": "Combined Tigo + Coltel spectrum post-acquisition Q3 2025",
+                    "spectrum_bands": [
+                        # 700 MHz — Band 28 FDD (APT)
+                        {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
+                         "paired_mhz": 10, "total_mhz": 20,
+                         "ul": "703–713 MHz", "dl": "758–768 MHz",
+                         "use": "4G/5G coverage", "origin": "Tigo original"},
+                        {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
+                         "paired_mhz": 10, "total_mhz": 20,
+                         "ul": "723–733 MHz", "dl": "778–788 MHz",
+                         "use": "4G/5G coverage", "origin": "ex-Coltel"},
+                        # 850 MHz — Band 5 FDD
+                        {"band": "850 MHz", "band_id": "B5", "duplex": "FDD",
+                         "paired_mhz": 5, "total_mhz": 10,
+                         "ul": "829–834 MHz", "dl": "874–879 MHz",
+                         "use": "4G rural coverage", "origin": "ex-Coltel"},
+                        # 1900 MHz — Band 2 PCS FDD
+                        {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
+                         "paired_mhz": 12.5, "total_mhz": 25,
+                         "ul": "1862.5–1875 MHz", "dl": "1942.5–1955 MHz",
+                         "use": "3G/4G capacity", "origin": "Tigo original"},
+                        {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
+                         "paired_mhz": 25, "total_mhz": 50,
+                         "ul": "1850–1875 MHz", "dl": "1930–1955 MHz",
+                         "use": "3G/4G capacity", "origin": "ex-Coltel"},
+                        # AWS — Band 4 FDD
+                        {"band": "AWS", "band_id": "B4", "duplex": "FDD",
+                         "paired_mhz": 20, "total_mhz": 40,
+                         "ul": "1710–1730 MHz", "dl": "2110–2130 MHz",
+                         "use": "4G capacity", "origin": "Tigo original"},
+                        {"band": "AWS", "band_id": "B4", "duplex": "FDD",
+                         "paired_mhz": 20, "total_mhz": 40,
+                         "ul": "1730–1750 MHz", "dl": "2130–2150 MHz",
+                         "use": "4G capacity", "origin": "ex-Coltel"},
+                        # 2500 MHz — Band 41 TDD
+                        {"band": "2500 MHz", "band_id": "B41", "duplex": "TDD",
+                         "total_mhz": 60,
+                         "range": "2530–2590 MHz",
+                         "use": "4G high-capacity", "origin": "Tigo original"},
+                    ],
                 },
             },
             "claro_co": {
@@ -188,13 +228,33 @@ def get_seed_data():
                     "mobile_vendor": "Ericsson",
                     "spectrum_mhz": 200,
                     "core_vendor": "Ericsson",
-                    "spectrum_bands": {
-                        "700 MHz":  {"mhz": 20, "use": "4G/5G FDD coverage"},
-                        "850 MHz":  {"mhz": 30, "use": "3G/4G FDD rural"},
-                        "1900 MHz": {"mhz": 50, "use": "3G/4G FDD"},
-                        "AWS (1700/2100)": {"mhz": 40, "use": "4G FDD capacity"},
-                        "2500 MHz": {"mhz": 60, "use": "4G TDD capacity"},
-                    },
+                    "spectrum_bands": [
+                        # 700 MHz — Band 28 FDD
+                        {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
+                         "paired_mhz": 10, "total_mhz": 20,
+                         "ul": "713–723 MHz", "dl": "768–778 MHz",
+                         "use": "4G/5G coverage"},
+                        # 850 MHz — Band 5 FDD
+                        {"band": "850 MHz", "band_id": "B5", "duplex": "FDD",
+                         "paired_mhz": 15, "total_mhz": 30,
+                         "ul": "824–839 MHz", "dl": "869–884 MHz",
+                         "use": "3G/4G rural coverage"},
+                        # 1900 MHz — Band 2 PCS FDD
+                        {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
+                         "paired_mhz": 25, "total_mhz": 50,
+                         "ul": "1875–1900 MHz", "dl": "1955–1980 MHz",
+                         "use": "3G/4G capacity"},
+                        # AWS — Band 4 FDD
+                        {"band": "AWS", "band_id": "B4", "duplex": "FDD",
+                         "paired_mhz": 20, "total_mhz": 40,
+                         "ul": "1750–1770 MHz", "dl": "2150–2170 MHz",
+                         "use": "4G capacity"},
+                        # 2500 MHz — Band 7 FDD
+                        {"band": "2500 MHz", "band_id": "B7", "duplex": "FDD",
+                         "paired_mhz": 30, "total_mhz": 60,
+                         "ul": "2500–2530 MHz", "dl": "2620–2650 MHz",
+                         "use": "4G high-capacity"},
+                    ],
                 },
             },
             # Movistar/Coltel — ACQUIRED by Tigo Q3 2025, kept for historical data
@@ -209,7 +269,7 @@ def get_seed_data():
                     "status": "acquired",
                     "acquired_by": "tigo_colombia",
                     "acquisition_date": "2025-09-01",
-                    "spectrum_bands": {},
+                    "spectrum_bands": [],
                 },
             },
             "wom_co": {
@@ -218,11 +278,23 @@ def get_seed_data():
                 "technology_mix": {
                     "mobile_vendor": "Samsung/Nokia",
                     "spectrum_mhz": 60,
-                    "spectrum_bands": {
-                        "700 MHz":  {"mhz": 10, "use": "4G FDD coverage"},
-                        "AWS (1700/2100)": {"mhz": 30, "use": "4G FDD capacity"},
-                        "1900 MHz": {"mhz": 20, "use": "3G/4G FDD"},
-                    },
+                    "spectrum_bands": [
+                        # 700 MHz — Band 28 FDD
+                        {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
+                         "paired_mhz": 5, "total_mhz": 10,
+                         "ul": "733–738 MHz", "dl": "788–793 MHz",
+                         "use": "4G coverage"},
+                        # AWS — Band 4 FDD
+                        {"band": "AWS", "band_id": "B4", "duplex": "FDD",
+                         "paired_mhz": 15, "total_mhz": 30,
+                         "ul": "1770–1785 MHz", "dl": "2170–2185 MHz",
+                         "use": "4G capacity"},
+                        # 1900 MHz — Band 2 PCS FDD
+                        {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
+                         "paired_mhz": 10, "total_mhz": 20,
+                         "ul": "1900–1910 MHz", "dl": "1980–1990 MHz",
+                         "use": "3G/4G capacity"},
+                    ],
                 },
             },
         },
