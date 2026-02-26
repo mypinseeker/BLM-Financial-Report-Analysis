@@ -51,6 +51,8 @@ def market_page(request: Request, market_id: str):
     operators = svc.get_operators_in_market(market_id)
     tariffs = svc.get_tariffs_for_market(market_id)
     macro = svc.get_macro_data(market_info.get("country", market_id.capitalize()))
+    market_outputs = svc.get_analysis_outputs(market_id=market_id)
+    network = svc.get_network_data(market_id)
 
     return templates.TemplateResponse("market.html", {
         "request": request,
@@ -59,6 +61,8 @@ def market_page(request: Request, market_id: str):
         "operators": operators,
         "tariffs": tariffs,
         "macro": macro,
+        "market_outputs": market_outputs,
+        "network": network,
     })
 
 
@@ -84,10 +88,28 @@ def operator_page(request: Request, operator_id: str):
 def outputs_page(request: Request):
     svc = get_data_service()
     outputs = svc.get_analysis_outputs()
+    recent = svc.get_recent_outputs(10)
+    markets = svc.get_available_markets()
+
+    # Build market display-name lookup
+    market_names = {m["market_id"]: m.get("display_name", m["market_id"]) for m in markets}
+
+    # Group outputs by market_id
+    by_market: dict[str, list[dict]] = {}
+    for o in outputs:
+        mid = o.get("market_id") or "unknown"
+        by_market.setdefault(mid, []).append(o)
+
+    # Alphabetically sorted market IDs (only those with outputs)
+    sorted_markets = sorted(by_market.keys(), key=lambda m: market_names.get(m, m).lower())
 
     return templates.TemplateResponse("outputs.html", {
         "request": request,
         "outputs": outputs,
+        "recent": recent,
+        "by_market": by_market,
+        "sorted_markets": sorted_markets,
+        "market_names": market_names,
     })
 
 

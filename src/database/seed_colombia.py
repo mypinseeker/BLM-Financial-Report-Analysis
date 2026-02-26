@@ -4,8 +4,13 @@ Colombia is Millicom's largest market by revenue (Tigo-UNE, 50% JV with EPM).
 4-player market: Claro (leader), Tigo-UNE, Movistar, WOM (new entrant).
 Currency: COP (Colombian Peso). All revenue figures in COP billions.
 
+NOTE: Tigo (Millicom) acquired Colombia Telecomunicaciones (Coltel, formerly
+Telefonica Colombia / Movistar Colombia) in Q3 2025. Post-acquisition, Tigo
+inherits Coltel's subscriber base, spectrum assets, and fixed infrastructure.
+The combined entity operates under the Tigo brand.
+
 Data sources: Millicom Q4 2025 earnings, CRC Colombia regulator data,
-America Movil IR, Telefonica LATAM reports, WOM public filings.
+America Movil IR, WOM public filings, ANE spectrum allocation registry.
 """
 
 import sys
@@ -16,13 +21,16 @@ if str(_project_root) not in sys.path:
     sys.path.insert(0, str(_project_root))
 
 MARKET_ID = "colombia"
+# NOTE: Movistar Colombia (Coltel) was acquired by Tigo in Q3 2025.
+# Post-acquisition the market is effectively 3-player: Tigo-UNE (incl. Coltel),
+# Claro, and WOM. We keep movistar_co for historical data but mark it inactive.
 OPERATORS = ["tigo_colombia", "claro_co", "movistar_co", "wom_co"]
 
 
 def get_seed_data():
     return {
         "financials": {
-            # Tigo-UNE Colombia — #2 operator, 50% JV with EPM
+            # Tigo-UNE Colombia — now #1 by spectrum post-Coltel acquisition, 50% JV with EPM
             "tigo_colombia": {
                 "total_revenue": [2150, 2180, 2220, 2260, 2300, 2340, 2380, 2420],
                 "service_revenue": [2020, 2050, 2090, 2130, 2170, 2210, 2250, 2290],
@@ -55,7 +63,7 @@ def get_seed_data():
                 "employees": [12000, 12000, 12100, 12100, 12200, 12200, 12300, 12300],
                 "_source": "America Movil Q4 2025 Earnings — Colombia segment",
             },
-            # Movistar Colombia — #3 player, stable
+            # Movistar Colombia (Coltel) — ACQUIRED by Tigo Q3 2025; historical data below
             "movistar_co": {
                 "total_revenue": [1800, 1810, 1820, 1830, 1840, 1850, 1860, 1870],
                 "service_revenue": [1680, 1690, 1700, 1710, 1720, 1730, 1740, 1750],
@@ -151,15 +159,24 @@ def get_seed_data():
             "source_url": "CRC Colombia / DANE / MinTIC 2025",
         },
         "network": {
+            # Post-acquisition: Tigo now holds combined Tigo + Coltel spectrum
             "tigo_colombia": {
-                "five_g_coverage_pct": 5,
-                "four_g_coverage_pct": 82,
-                "fiber_homepass_k": 4500,
+                "five_g_coverage_pct": 12,
+                "four_g_coverage_pct": 92,
+                "fiber_homepass_k": 8000,   # Combined Tigo + Coltel FTTH
                 "cable_homepass_k": 5200,
                 "technology_mix": {
-                    "mobile_vendor": "Nokia/Ericsson",
-                    "spectrum_mhz": 145,
+                    "mobile_vendor": "Nokia/Ericsson/Huawei",
+                    "spectrum_mhz": 265,    # 145 (Tigo) + 120 (Coltel)
                     "core_vendor": "Nokia",
+                    "notes": "Includes former Coltel (Movistar) spectrum post-acquisition Q3 2025",
+                    "spectrum_bands": {
+                        "700 MHz":  {"mhz": 40, "use": "4G/5G FDD coverage", "notes": "20 own + 20 ex-Coltel"},
+                        "850 MHz":  {"mhz": 10, "use": "4G FDD rural", "notes": "ex-Coltel"},
+                        "1900 MHz": {"mhz": 75, "use": "3G/4G FDD", "notes": "25 own + 50 ex-Coltel"},
+                        "AWS (1700/2100)": {"mhz": 80, "use": "4G FDD capacity", "notes": "40 own + 40 ex-Coltel"},
+                        "2500 MHz": {"mhz": 60, "use": "4G TDD capacity"},
+                    },
                 },
             },
             "claro_co": {
@@ -171,23 +188,41 @@ def get_seed_data():
                     "mobile_vendor": "Ericsson",
                     "spectrum_mhz": 200,
                     "core_vendor": "Ericsson",
+                    "spectrum_bands": {
+                        "700 MHz":  {"mhz": 20, "use": "4G/5G FDD coverage"},
+                        "850 MHz":  {"mhz": 30, "use": "3G/4G FDD rural"},
+                        "1900 MHz": {"mhz": 50, "use": "3G/4G FDD"},
+                        "AWS (1700/2100)": {"mhz": 40, "use": "4G FDD capacity"},
+                        "2500 MHz": {"mhz": 60, "use": "4G TDD capacity"},
+                    },
                 },
             },
+            # Movistar/Coltel — ACQUIRED by Tigo Q3 2025, kept for historical data
             "movistar_co": {
-                "five_g_coverage_pct": 3,
-                "four_g_coverage_pct": 75,
-                "fiber_homepass_k": 3500,
+                "five_g_coverage_pct": 0,
+                "four_g_coverage_pct": 0,
+                "fiber_homepass_k": 0,
+                "notes": "Acquired by Tigo (Millicom) Q3 2025. Spectrum transferred to tigo_colombia.",
                 "technology_mix": {
-                    "mobile_vendor": "Huawei/Nokia",
-                    "spectrum_mhz": 120,
+                    "mobile_vendor": "N/A — acquired by Tigo",
+                    "spectrum_mhz": 0,
+                    "status": "acquired",
+                    "acquired_by": "tigo_colombia",
+                    "acquisition_date": "2025-09-01",
+                    "spectrum_bands": {},
                 },
             },
             "wom_co": {
                 "five_g_coverage_pct": 0,
-                "four_g_coverage_pct": 45,
+                "four_g_coverage_pct": 50,
                 "technology_mix": {
                     "mobile_vendor": "Samsung/Nokia",
                     "spectrum_mhz": 60,
+                    "spectrum_bands": {
+                        "700 MHz":  {"mhz": 10, "use": "4G FDD coverage"},
+                        "AWS (1700/2100)": {"mhz": 30, "use": "4G FDD capacity"},
+                        "1900 MHz": {"mhz": 20, "use": "3G/4G FDD"},
+                    },
                 },
             },
         },
@@ -229,6 +264,22 @@ def get_seed_data():
             },
         },
         "intelligence_events": [
+            {
+                "operator_id": "tigo_colombia",
+                "event_date": "2025-09-01",
+                "category": "m_and_a",
+                "title": "Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)",
+                "description": (
+                    "Millicom acquires Colombia Telecomunicaciones (Coltel) from Telefonica. "
+                    "The deal consolidates the market from 4 to 3 players. Tigo inherits "
+                    "Coltel's 15.3M mobile subscribers, 120 MHz of spectrum, 3.5M fiber "
+                    "homepasses, and the Movistar Colombia brand. The combined entity becomes "
+                    "Colombia's largest operator by spectrum holdings (265 MHz total) and "
+                    "second by subscribers, significantly narrowing the gap with Claro."
+                ),
+                "impact_type": "positive",
+                "severity": "critical",
+            },
             {
                 "operator_id": "tigo_colombia",
                 "event_date": "2025-08-15",

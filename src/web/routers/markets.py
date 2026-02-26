@@ -42,6 +42,14 @@ def market_competitive_scores(market: str,
     return svc.get_competitive_scores(market, quarter=quarter)
 
 
+@router.get("/{market}/network")
+def market_network(market: str,
+                   quarter: Optional[str] = Query(None)):
+    """Return network infrastructure & spectrum data for a market."""
+    svc = get_data_service()
+    return svc.get_network_data(market, quarter=quarter)
+
+
 @router.get("/{market}/macro")
 def market_macro(market: str):
     """Return macro-economic data for a market (uses market_id as country)."""

@@ -1,6 +1,43 @@
 {% extends "base.html" %}
 {% block title %}{{ market_info.display_name | default(market_id | title) }} - BLM{% endblock %}
 
+{% block extra_head %}
+<style>
+.dl-link {
+    color: var(--primary-light);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 13px;
+}
+.dl-link:hover { text-decoration: underline; }
+.report-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+}
+.report-card .rc-title {
+    font-size: 13px;
+    font-weight: 600;
+    word-break: break-all;
+    margin-bottom: 6px;
+}
+.report-card .rc-meta {
+    font-size: 12px;
+    color: var(--light-text);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+.report-card .rc-actions {
+    display: flex;
+    gap: 10px;
+}
+</style>
+{% endblock %}
+
 {% block content %}
 <div class="breadcrumb">
     <a href="/">Dashboard</a> &raquo; {{ market_info.display_name | default(market_id | title) }}
@@ -32,6 +69,39 @@
 {% endfor %}
 </div>
 
+{% if market_outputs %}
+<h2 class="section-title">Latest Reports</h2>
+<div class="card-grid">
+{% for o in market_outputs[-5:]|reverse %}
+    <div class="report-card">
+        <div class="rc-title">{{ o.file_name | default(o.storage_path | default('-')) }}</div>
+        <div class="rc-meta">
+            {% set ftype = o.file_type | default(o.output_type | default('')) %}
+            <span class="badge {% if ftype == 'pptx' %}badge-primary{% elif ftype == 'pdf' %}badge-negative{% elif ftype == 'md' %}badge-positive{% elif ftype == 'html' %}badge-warning{% else %}badge-primary{% endif %}">
+                {{ ftype | upper | default('FILE') }}
+            </span>
+            {% if o.operator_id %}<span>{{ o.operator_id }}</span>{% endif %}
+            <span>{{ (o.created_at | default('-'))[:10] }}</span>
+        </div>
+        <div class="rc-actions">
+            {% if o.id %}
+                <a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>
+                {% set fname = (o.file_name | default(o.storage_path | default(''))) | lower %}
+                {% if fname.endswith('.json') %}
+                    <a class="dl-link" href="/report/{{ o.id }}" style="color:var(--positive);">View</a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+{% endfor %}
+</div>
+<p style="margin-top: 12px;">
+    <a href="/outputs#market-{{ market_id }}" class="dl-link">
+        View all {{ market_outputs | length }} report{{ 's' if market_outputs | length != 1 else '' }} &rarr;
+    </a>
+</p>
+{% endif %}
+
 {% if tariffs %}
 <h2 class="section-title">Latest Tariffs</h2>
 <table>
@@ -60,6 +130,129 @@
     {% endfor %}
     </tbody>
 </table>
+{% endif %}
+
+{% if network %}
+{# ── Network Infrastructure Overview ── #}
+<h2 class="section-title">Network Infrastructure</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Operator</th>
+            <th>5G Cov %</th>
+            <th>4G Cov %</th>
+            <th>Total Spectrum (MHz)</th>
+            <th>RAN Vendor</th>
+            <th>Fiber HP (k)</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for n in network %}
+        {% set tm = n.technology_mix or {} %}
+        {% set status = tm.get('status', '') if tm.get is defined else '' %}
+        <tr{% if status == 'acquired' %} style="opacity:0.5; text-decoration:line-through;"{% endif %}>
+            <td>{{ n.display_name | default(n.operator_id) }}</td>
+            <td>{{ n.five_g_coverage_pct | default('-') }}</td>
+            <td>{{ n.four_g_coverage_pct | default('-') }}</td>
+            <td><strong>{{ tm.spectrum_mhz | default('-') }}</strong></td>
+            <td>{{ tm.mobile_vendor | default('-') }}</td>
+            <td>{{ n.fiber_homepass_k | default('-') }}</td>
+            <td style="font-size:11px;">{{ tm.notes | default(n.notes | default('')) }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{# ── Spectrum Band Comparison (only if any operator has spectrum_bands) ── #}
+{% set has_bands = [] %}
+{% for n in network %}
+    {% set tm = n.technology_mix or {} %}
+    {% if tm.spectrum_bands is defined and tm.spectrum_bands %}
+        {% if has_bands.append(1) %}{% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if has_bands %}
+{# Collect all unique bands across operators #}
+{% set all_bands = [] %}
+{% for n in network %}
+    {% set tm = n.technology_mix or {} %}
+    {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else {} %}
+    {% for band_name in bands %}
+        {% if band_name not in all_bands %}
+            {% if all_bands.append(band_name) %}{% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+<h2 class="section-title">Mobile Spectrum Comparison (by Band)</h2>
+<p class="meta" style="margin-bottom: 10px;">MHz held per operator per frequency band. Higher = more capacity.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Band</th>
+            {% for n in network %}
+                {% set tm = n.technology_mix or {} %}
+                {% set status = tm.get('status', '') if tm.get is defined else '' %}
+                {% if status != 'acquired' %}
+                <th>{{ n.display_name | default(n.operator_id) }}</th>
+                {% endif %}
+            {% endfor %}
+            <th>Use</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for band_name in all_bands | sort %}
+        <tr>
+            <td><strong>{{ band_name }}</strong></td>
+            {% for n in network %}
+                {% set tm = n.technology_mix or {} %}
+                {% set status = tm.get('status', '') if tm.get is defined else '' %}
+                {% if status != 'acquired' %}
+                    {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else {} %}
+                    {% set bdata = bands.get(band_name, {}) if bands.get is defined else {} %}
+                    {% if bdata and bdata.mhz is defined %}
+                        <td>
+                            <strong>{{ bdata.mhz }}</strong>
+                            {% if bdata.notes is defined and bdata.notes %}
+                                <br><span style="font-size:10px;color:var(--light-text);">{{ bdata.notes }}</span>
+                            {% endif %}
+                        </td>
+                    {% else %}
+                        <td style="color:var(--light-text);">—</td>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {# Use column: grab from first operator that has this band #}
+            <td style="font-size:11px;">
+            {% for n in network %}
+                {% set tm = n.technology_mix or {} %}
+                {% set bands = tm.spectrum_bands if tm.spectrum_bands is defined else {} %}
+                {% set bdata = bands.get(band_name, {}) if bands.get is defined else {} %}
+                {% if bdata and bdata.use is defined %}
+                    {{ bdata.use }}
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+            </td>
+        </tr>
+    {% endfor %}
+    {# Totals row #}
+    <tr style="font-weight:700; border-top: 2px solid var(--border);">
+        <td>TOTAL</td>
+        {% for n in network %}
+            {% set tm = n.technology_mix or {} %}
+            {% set status = tm.get('status', '') if tm.get is defined else '' %}
+            {% if status != 'acquired' %}
+                <td>{{ tm.spectrum_mhz | default(0) }} MHz</td>
+            {% endif %}
+        {% endfor %}
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+{% endif %}
 {% endif %}
 
 {% if macro %}

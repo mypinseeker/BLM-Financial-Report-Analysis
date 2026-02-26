@@ -3,40 +3,96 @@
 
 {% block extra_head %}
 <style>
-.output-section {
-    margin-bottom: 32px;
+/* Highlight cards grid */
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+    margin: 16px 0 32px;
 }
-.output-section-header {
+.highlight-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    transition: box-shadow .15s, transform .15s;
+}
+.highlight-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    transform: translateY(-2px);
+}
+.highlight-card .card-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    word-break: break-all;
+    margin-bottom: 8px;
+}
+.highlight-card .card-meta {
+    font-size: 12px;
+    color: var(--light-text);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.highlight-card .card-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 12px;
+}
+/* Market accordion */
+.market-accordion {
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--card-bg);
+}
+.market-accordion summary {
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--primary);
+    cursor: pointer;
+    background: #f8f8f8;
+    list-style: none;
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--primary);
 }
-.output-section-header .section-icon {
-    font-size: 22px;
+.market-accordion summary::-webkit-details-marker { display: none; }
+.market-accordion summary::before {
+    content: "\25B6";
+    font-size: 11px;
+    transition: transform .15s;
+    color: var(--light-text);
 }
-.output-section-header h2 {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--primary);
-    margin: 0;
+.market-accordion[open] summary::before {
+    transform: rotate(90deg);
 }
-.output-section-header .count {
+.market-accordion summary .count {
     font-size: 12px;
     color: var(--light-text);
-    background: #f0f0f0;
+    background: #e8e8e8;
     padding: 2px 8px;
     border-radius: 10px;
+    font-weight: 400;
 }
-.empty-section {
-    color: var(--light-text);
+.market-accordion .accordion-body {
+    padding: 12px 18px 18px;
+}
+.category-label {
     font-size: 13px;
-    padding: 12px 0;
-    font-style: italic;
+    font-weight: 600;
+    color: var(--primary-light);
+    margin: 16px 0 6px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
 }
-/* Output cards — compact table inside each section */
+.category-label:first-child { margin-top: 0; }
+/* Compact output table (no Market column inside accordion) */
 .output-table {
     width: 100%;
     border-collapse: collapse;
@@ -44,6 +100,7 @@
     border-radius: 8px;
     overflow: hidden;
     border: 1px solid var(--border);
+    margin-bottom: 4px;
 }
 .output-table th {
     background: #f8f8f8;
@@ -51,16 +108,17 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: .4px;
-    padding: 10px 14px;
+    padding: 8px 12px;
     text-align: left;
     color: var(--light-text);
 }
 .output-table td {
-    padding: 10px 14px;
+    padding: 8px 12px;
     border-top: 1px solid #f0f0f0;
-    font-size: 14px;
+    font-size: 13px;
 }
 .output-table tr:hover td { background: #fafafa; }
+/* Links */
 .dl-link {
     color: var(--primary-light);
     font-weight: 600;
@@ -78,293 +136,181 @@
 .output-summary .metric {
     min-width: 140px;
 }
+.empty-section {
+    color: var(--light-text);
+    font-size: 13px;
+    padding: 12px 0;
+    font-style: italic;
+}
 </style>
 {% endblock %}
 
+{# ============================================================ #}
+{# Macros                                                        #}
+{# ============================================================ #}
+
+{# Type badge macro #}
+{% macro type_badge(o) %}
+    {% set ftype = o.file_type | default(o.output_type | default('')) %}
+    <span class="badge {% if ftype == 'pptx' %}badge-primary{% elif ftype == 'pdf' %}badge-negative{% elif ftype == 'md' %}badge-positive{% elif ftype == 'html' %}badge-warning{% else %}badge-primary{% endif %}">
+        {{ ftype | upper | default('FILE') }}
+    </span>
+{% endmacro %}
+
+{# Render a compact output table (used inside each market accordion) #}
+{% macro render_output_table(items) %}
+<table class="output-table">
+    <thead><tr>
+        <th>File</th><th>Type</th><th>Operator</th><th>Created</th><th>Actions</th>
+    </tr></thead>
+    <tbody>
+    {% for o in items %}
+    <tr>
+        <td>{{ o.file_name | default(o.storage_path | default('-')) }}</td>
+        <td>{{ type_badge(o) }}</td>
+        <td>{{ o.operator_id | default('-') }}</td>
+        <td>{{ (o.created_at | default('-'))[:10] }}</td>
+        <td>
+            {% if o.id %}
+                <a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>
+                {% set fname = (o.file_name | default(o.storage_path | default(''))) | lower %}
+                {% if fname.endswith('.json') %}
+                    &nbsp;|&nbsp; <a class="dl-link" href="/report/{{ o.id }}" style="color:var(--positive);">View</a>
+                {% endif %}
+            {% else %}-{% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endmacro %}
+
+{# Categorize a list of outputs into 5 buckets, return namespace #}
+{% macro _cat_test(o) %}
+    {# Returns category string for an output — used in the for loop below #}
+{% endmacro %}
+
 {% block content %}
 <h1 class="section-title">Analysis Outputs</h1>
-<p class="meta" style="margin-bottom: 8px;">{{ outputs | length }} files available for download</p>
-
-{# ----- Categorize outputs ----- #}
-{#
-   Categories:
-   1. five_looks  — Five Looks analysis reports (trend, market, competition, self, opportunity, swot, five_looks)
-   2. executive_summary — Executive summaries, one-pagers
-   3. ppt — PowerPoint presentations
-   4. sending — Delivery / sending reports, email drafts, shareable outputs
-   5. other — Everything else
-#}
-
-{% set ns = namespace(
-    five_looks=[],
-    executive_summary=[],
-    ppt=[],
-    sending=[],
-    other=[]
-) %}
-
-{% for o in outputs %}
-    {# Determine category from output_category field, file_name, or file_type #}
-    {% set cat = o.output_category | default('') | lower %}
-    {% set fname = (o.file_name | default(o.storage_path | default(''))) | lower %}
-    {% set ftype = (o.file_type | default(o.output_type | default(''))) | lower %}
-
-    {% if cat == 'five_looks' or 'five_look' in fname or 'five-look' in fname
-          or 'look_at_' in fname or 'look-at-' in fname
-          or 'swot' in fname
-          or 'trend' in fname or 'market_customer' in fname
-          or 'competition' in fname or 'self_analysis' in fname
-          or 'opportunity' in fname %}
-        {% set _ = ns.five_looks.append(o) %}
-
-    {% elif cat == 'executive_summary' or 'executive' in fname or 'exec_summary' in fname
-            or 'summary' in fname or 'one_pager' in fname or 'one-pager' in fname
-            or 'overview' in fname %}
-        {% set _ = ns.executive_summary.append(o) %}
-
-    {% elif cat == 'ppt' or ftype == 'pptx' or '.pptx' in fname %}
-        {% set _ = ns.ppt.append(o) %}
-
-    {% elif cat == 'sending' or 'sending' in fname or 'delivery' in fname
-            or 'email' in fname or 'share' in fname or 'distribution' in fname %}
-        {% set _ = ns.sending.append(o) %}
-
-    {% else %}
-        {% set _ = ns.other.append(o) %}
-    {% endif %}
-{% endfor %}
+<p class="meta" style="margin-bottom: 8px;">
+    {{ outputs | length }} files across {{ sorted_markets | length }} markets
+</p>
 
 {% if outputs %}
 
 <!-- Summary metrics -->
 <div class="output-summary">
     <div class="metric">
-        <div class="label">Five Looks</div>
-        <div class="value">{{ ns.five_looks | length }}</div>
+        <div class="label">Total Files</div>
+        <div class="value">{{ outputs | length }}</div>
     </div>
     <div class="metric">
-        <div class="label">Exec Summary</div>
-        <div class="value">{{ ns.executive_summary | length }}</div>
+        <div class="label">Markets</div>
+        <div class="value">{{ sorted_markets | length }}</div>
     </div>
     <div class="metric">
-        <div class="label">PPT</div>
-        <div class="value">{{ ns.ppt | length }}</div>
-    </div>
-    <div class="metric">
-        <div class="label">Sending</div>
-        <div class="value">{{ ns.sending | length }}</div>
-    </div>
-    <div class="metric">
-        <div class="label">Other</div>
-        <div class="value">{{ ns.other | length }}</div>
+        <div class="label">Latest</div>
+        <div class="value">{{ (recent[0].created_at | default('-'))[:10] if recent else '-' }}</div>
     </div>
 </div>
 
 <!-- ============================================================ -->
-<!-- Section 1: Five Looks Reports                                 -->
+<!-- Section 1: Latest Published (Highlight)                       -->
 <!-- ============================================================ -->
-<div class="output-section">
-    <div class="output-section-header">
-        <span class="section-icon">&#x1f50d;</span>
-        <h2>Five Looks Analysis</h2>
-        <span class="count">{{ ns.five_looks | length }} files</span>
+{% if recent %}
+<h2 class="section-title" style="font-size:18px; margin-top:16px;">Latest Published</h2>
+<div class="highlight-grid">
+{% for o in recent %}
+    <div class="highlight-card">
+        <div class="card-title">{{ o.file_name | default(o.storage_path | default('-')) }}</div>
+        <div class="card-meta">
+            {{ type_badge(o) }}
+            <span>{{ market_names.get(o.market_id, o.market_id | default('-')) }}</span>
+            {% if o.operator_id %}<span>{{ o.operator_id }}</span>{% endif %}
+            <span>{{ (o.created_at | default('-'))[:10] }}</span>
+        </div>
+        <div class="card-actions">
+            {% if o.id %}
+                <a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>
+                {% set fname = (o.file_name | default(o.storage_path | default(''))) | lower %}
+                {% if fname.endswith('.json') %}
+                    <a class="dl-link" href="/report/{{ o.id }}" style="color:var(--positive);">View Report</a>
+                {% endif %}
+            {% endif %}
+        </div>
     </div>
-    <p class="meta" style="margin-bottom: 12px;">
-        BLM Five Looks: Trends (PEST), Market/Customer ($APPEALS), Competition (Porter), Self (BMC), Opportunities (SPAN), SWOT Synthesis
-    </p>
-
-    {% if ns.five_looks %}
-    <table class="output-table">
-        <thead><tr>
-            <th>File</th><th>Type</th><th>Market</th><th>Operator</th><th>Created</th><th>Actions</th>
-        </tr></thead>
-        <tbody>
-        {% for o in ns.five_looks %}
-        <tr>
-            <td>{{ o.file_name | default(o.storage_path | default('-')) }}</td>
-            <td>
-                {% set ftype = o.file_type | default(o.output_type | default('')) %}
-                <span class="badge {% if ftype == 'pptx' %}badge-primary{% elif ftype == 'pdf' %}badge-negative{% elif ftype == 'md' %}badge-positive{% elif ftype == 'html' %}badge-warning{% else %}badge-primary{% endif %}">
-                    {{ ftype | upper | default('FILE') }}
-                </span>
-            </td>
-            <td>{{ o.market_id | default('-') }}</td>
-            <td>{{ o.operator_id | default('-') }}</td>
-            <td>{{ o.created_at | default('-') }}</td>
-            <td>
-                {% if o.id %}
-                    <a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>
-                    {% set fname = (o.file_name | default(o.storage_path | default(''))) | lower %}
-                    {% if fname.endswith('.json') %}
-                        &nbsp;|&nbsp; <a class="dl-link" href="/report/{{ o.id }}" style="color:var(--positive);">View</a>
-                    {% endif %}
-                {% else %}-{% endif %}
-            </td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <p class="empty-section">No Five Looks reports yet. Run an analysis from the <a href="/analyze">Analyze</a> page.</p>
-    {% endif %}
-</div>
-
-<!-- ============================================================ -->
-<!-- Section 2: Executive Summaries                                -->
-<!-- ============================================================ -->
-<div class="output-section">
-    <div class="output-section-header">
-        <span class="section-icon">&#x1f4cb;</span>
-        <h2>Executive Summaries</h2>
-        <span class="count">{{ ns.executive_summary | length }} files</span>
-    </div>
-    <p class="meta" style="margin-bottom: 12px;">
-        One-page summaries, strategic overviews, and management briefings
-    </p>
-
-    {% if ns.executive_summary %}
-    <table class="output-table">
-        <thead><tr>
-            <th>File</th><th>Type</th><th>Market</th><th>Operator</th><th>Created</th><th>Download</th>
-        </tr></thead>
-        <tbody>
-        {% for o in ns.executive_summary %}
-        <tr>
-            <td>{{ o.file_name | default(o.storage_path | default('-')) }}</td>
-            <td>
-                {% set ftype = o.file_type | default(o.output_type | default('')) %}
-                <span class="badge {% if ftype == 'pptx' %}badge-primary{% elif ftype == 'pdf' %}badge-negative{% elif ftype == 'md' %}badge-positive{% elif ftype == 'html' %}badge-warning{% else %}badge-primary{% endif %}">
-                    {{ ftype | upper | default('FILE') }}
-                </span>
-            </td>
-            <td>{{ o.market_id | default('-') }}</td>
-            <td>{{ o.operator_id | default('-') }}</td>
-            <td>{{ o.created_at | default('-') }}</td>
-            <td>{% if o.id %}<a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>{% else %}-{% endif %}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <p class="empty-section">No executive summaries generated yet.</p>
-    {% endif %}
-</div>
-
-<!-- ============================================================ -->
-<!-- Section 3: PowerPoint Presentations                           -->
-<!-- ============================================================ -->
-<div class="output-section">
-    <div class="output-section-header">
-        <span class="section-icon">&#x1f4ca;</span>
-        <h2>PowerPoint Presentations</h2>
-        <span class="count">{{ ns.ppt | length }} files</span>
-    </div>
-    <p class="meta" style="margin-bottom: 12px;">
-        Full analysis decks, comprehensive PPT reports with charts and KPIs
-    </p>
-
-    {% if ns.ppt %}
-    <table class="output-table">
-        <thead><tr>
-            <th>File</th><th>Type</th><th>Market</th><th>Operator</th><th>Created</th><th>Download</th>
-        </tr></thead>
-        <tbody>
-        {% for o in ns.ppt %}
-        <tr>
-            <td>{{ o.file_name | default(o.storage_path | default('-')) }}</td>
-            <td><span class="badge badge-primary">PPTX</span></td>
-            <td>{{ o.market_id | default('-') }}</td>
-            <td>{{ o.operator_id | default('-') }}</td>
-            <td>{{ o.created_at | default('-') }}</td>
-            <td>{% if o.id %}<a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>{% else %}-{% endif %}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <p class="empty-section">No PowerPoint presentations generated yet.</p>
-    {% endif %}
-</div>
-
-<!-- ============================================================ -->
-<!-- Section 4: Sending / Delivery                                 -->
-<!-- ============================================================ -->
-<div class="output-section">
-    <div class="output-section-header">
-        <span class="section-icon">&#x1f4e8;</span>
-        <h2>Sending / Delivery</h2>
-        <span class="count">{{ ns.sending | length }} files</span>
-    </div>
-    <p class="meta" style="margin-bottom: 12px;">
-        Email-ready reports, shareable documents, and distribution-format outputs
-    </p>
-
-    {% if ns.sending %}
-    <table class="output-table">
-        <thead><tr>
-            <th>File</th><th>Type</th><th>Market</th><th>Operator</th><th>Created</th><th>Download</th>
-        </tr></thead>
-        <tbody>
-        {% for o in ns.sending %}
-        <tr>
-            <td>{{ o.file_name | default(o.storage_path | default('-')) }}</td>
-            <td>
-                {% set ftype = o.file_type | default(o.output_type | default('')) %}
-                <span class="badge {% if ftype == 'pptx' %}badge-primary{% elif ftype == 'pdf' %}badge-negative{% elif ftype == 'md' %}badge-positive{% elif ftype == 'html' %}badge-warning{% else %}badge-primary{% endif %}">
-                    {{ ftype | upper | default('FILE') }}
-                </span>
-            </td>
-            <td>{{ o.market_id | default('-') }}</td>
-            <td>{{ o.operator_id | default('-') }}</td>
-            <td>{{ o.created_at | default('-') }}</td>
-            <td>{% if o.id %}<a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>{% else %}-{% endif %}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <p class="empty-section">No sending/delivery outputs yet.</p>
-    {% endif %}
-</div>
-
-<!-- ============================================================ -->
-<!-- Section 5: Other Outputs                                      -->
-<!-- ============================================================ -->
-{% if ns.other %}
-<div class="output-section">
-    <div class="output-section-header">
-        <span class="section-icon">&#x1f4c1;</span>
-        <h2>Other Outputs</h2>
-        <span class="count">{{ ns.other | length }} files</span>
-    </div>
-    <p class="meta" style="margin-bottom: 12px;">
-        Miscellaneous analysis outputs, data exports, and intermediate files
-    </p>
-
-    <table class="output-table">
-        <thead><tr>
-            <th>File</th><th>Type</th><th>Market</th><th>Operator</th><th>Created</th><th>Download</th>
-        </tr></thead>
-        <tbody>
-        {% for o in ns.other %}
-        <tr>
-            <td>{{ o.file_name | default(o.storage_path | default('-')) }}</td>
-            <td>
-                {% set ftype = o.file_type | default(o.output_type | default('')) %}
-                <span class="badge {% if ftype == 'pptx' %}badge-primary{% elif ftype == 'pdf' %}badge-negative{% elif ftype == 'md' %}badge-positive{% elif ftype == 'html' %}badge-warning{% else %}badge-primary{% endif %}">
-                    {{ ftype | upper | default('FILE') }}
-                </span>
-            </td>
-            <td>{{ o.market_id | default('-') }}</td>
-            <td>{{ o.operator_id | default('-') }}</td>
-            <td>{{ o.created_at | default('-') }}</td>
-            <td>{% if o.id %}<a class="dl-link" href="/api/outputs/{{ o.id }}/download">Download</a>{% else %}-{% endif %}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+{% endfor %}
 </div>
 {% endif %}
+
+<!-- ============================================================ -->
+<!-- Section 2: Reports by Market (Accordion Archive)              -->
+<!-- ============================================================ -->
+<h2 class="section-title" style="font-size:18px;">Reports by Market</h2>
+
+{% for mid in sorted_markets %}
+{% set market_items = by_market[mid] %}
+<details class="market-accordion" id="market-{{ mid }}">
+    <summary>
+        {{ market_names.get(mid, mid | title) }}
+        <span class="count">{{ market_items | length }} report{{ 's' if market_items | length != 1 else '' }}</span>
+    </summary>
+    <div class="accordion-body">
+        {# Sub-categorize within this market #}
+        {% set ns = namespace(five_looks=[], executive_summary=[], ppt=[], sending=[], other=[]) %}
+        {% for o in market_items %}
+            {% set cat = o.output_category | default('') | lower %}
+            {% set fname = (o.file_name | default(o.storage_path | default(''))) | lower %}
+            {% set ftype = (o.file_type | default(o.output_type | default(''))) | lower %}
+
+            {% if cat == 'five_looks' or 'five_look' in fname or 'five-look' in fname
+                  or 'look_at_' in fname or 'look-at-' in fname
+                  or 'swot' in fname
+                  or 'trend' in fname or 'market_customer' in fname
+                  or 'competition' in fname or 'self_analysis' in fname
+                  or 'opportunity' in fname %}
+                {% set _ = ns.five_looks.append(o) %}
+            {% elif cat == 'executive_summary' or 'executive' in fname or 'exec_summary' in fname
+                    or 'summary' in fname or 'one_pager' in fname or 'one-pager' in fname
+                    or 'overview' in fname %}
+                {% set _ = ns.executive_summary.append(o) %}
+            {% elif cat == 'ppt' or ftype == 'pptx' or '.pptx' in fname %}
+                {% set _ = ns.ppt.append(o) %}
+            {% elif cat == 'sending' or 'sending' in fname or 'delivery' in fname
+                    or 'email' in fname or 'share' in fname or 'distribution' in fname %}
+                {% set _ = ns.sending.append(o) %}
+            {% else %}
+                {% set _ = ns.other.append(o) %}
+            {% endif %}
+        {% endfor %}
+
+        {% if ns.five_looks %}
+        <div class="category-label">Five Looks Analysis ({{ ns.five_looks | length }})</div>
+        {{ render_output_table(ns.five_looks) }}
+        {% endif %}
+
+        {% if ns.executive_summary %}
+        <div class="category-label">Executive Summaries ({{ ns.executive_summary | length }})</div>
+        {{ render_output_table(ns.executive_summary) }}
+        {% endif %}
+
+        {% if ns.ppt %}
+        <div class="category-label">PowerPoint Presentations ({{ ns.ppt | length }})</div>
+        {{ render_output_table(ns.ppt) }}
+        {% endif %}
+
+        {% if ns.sending %}
+        <div class="category-label">Sending / Delivery ({{ ns.sending | length }})</div>
+        {{ render_output_table(ns.sending) }}
+        {% endif %}
+
+        {% if ns.other %}
+        <div class="category-label">Other ({{ ns.other | length }})</div>
+        {{ render_output_table(ns.other) }}
+        {% endif %}
+    </div>
+</details>
+{% endfor %}
 
 {% else %}
 <div style="text-align: center; padding: 48px 0;">
@@ -376,4 +322,17 @@
     </p>
 </div>
 {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Auto-open accordion if URL has #market-{id} hash
+(function() {
+    var hash = location.hash;
+    if (hash && hash.startsWith('#market-')) {
+        var el = document.querySelector(hash);
+        if (el && el.tagName === 'DETAILS') el.open = true;
+    }
+})();
+</script>
 {% endblock %}

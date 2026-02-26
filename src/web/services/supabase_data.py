@@ -172,6 +172,49 @@ class SupabaseDataService:
         )
 
     # ------------------------------------------------------------------
+    # Network infrastructure
+    # ------------------------------------------------------------------
+
+    def get_network_data(self, market: str,
+                         quarter: Optional[str] = None) -> list[dict]:
+        """Network infrastructure data for all operators in a market.
+
+        Returns rows with technology_mix JSON parsed, enriched with
+        operator display_name.
+        """
+        import json as _json
+
+        operators = self.get_operators_in_market(market)
+        if not operators:
+            return []
+
+        op_ids = [o["operator_id"] for o in operators]
+        op_name_map = {o["operator_id"]: o["display_name"] for o in operators}
+
+        q = (self._client.table("network_infrastructure")
+             .select("*")
+             .in_("operator_id", op_ids))
+        if quarter:
+            q = q.eq("calendar_quarter", quarter)
+        q = q.order("operator_id")
+        resp = q.execute()
+        rows = resp.data or []
+
+        for r in rows:
+            r["display_name"] = op_name_map.get(r.get("operator_id"), "")
+            # Parse technology_mix JSON string → dict
+            tm = r.get("technology_mix")
+            if isinstance(tm, str):
+                try:
+                    r["technology_mix"] = _json.loads(tm)
+                except _json.JSONDecodeError:
+                    r["technology_mix"] = {}
+            elif tm is None:
+                r["technology_mix"] = {}
+
+        return rows
+
+    # ------------------------------------------------------------------
     # Analysis outputs
     # ------------------------------------------------------------------
 
@@ -180,6 +223,13 @@ class SupabaseDataService:
         if market_id:
             filters["market_id"] = market_id
         return self._select("analysis_outputs", filters=filters, order="created_at")
+
+    def get_recent_outputs(self, limit: int = 10) -> list[dict]:
+        """Return the N most recently created analysis outputs (descending)."""
+        q = (self._client.table("analysis_outputs")
+             .select("*").order("created_at", desc=True).limit(limit))
+        resp = q.execute()
+        return resp.data or []
 
     def get_output(self, output_id: int) -> dict | None:
         rows = self._select("analysis_outputs", filters={"id": output_id}, limit=1)
