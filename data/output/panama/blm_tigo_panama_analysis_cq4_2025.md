@@ -1874,5 +1874,88 @@ As The Squeezed Middle, the strategic posture is Offensive. As The Squeezed Midd
 
 ---
 
-*Generated: 2026-02-14 | Tigo Panama BLM Strategic Assessment (CQ4_2025)*
+---
+
+<!-- ============================================================ -->
+<!-- APPENDIX: Spectrum Competition Analysis (Added 2026-02-26) -->
+<!-- ============================================================ -->
+
+# Appendix: Spectrum Competition Analysis
+
+> **Market restructuring note (2022):** Cable & Wireless Panama (CWP/+Móvil, Liberty Latin America)
+> acquired Claro Panama (América Móvil) in mid-2022. Digicel exited April 2022.
+> Panama is now a **2-operator market**: +Móvil (#1, ~70% share) vs Tigo (#2, ~30%).
+
+> **Sources:** ASEP Panama spectrum registry, spectrum-tracker.com, 5G Americas Sub-1 GHz Latin America 2024
+> FDD = Frequency Division Duplex (paired UL+DL, notation: 2×N MHz)
+> No TDD bands currently allocated in Panama.
+
+## Tigo Panama — 94 MHz (5 allocations, all FDD)
+
+| Band | ID | Duplex | Allocation | Uplink Range | Downlink Range | Total MHz | Use | Origin |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 700 MHz | B28 | FDD | 2×10 | 718–728 MHz | 773–783 MHz | 20 | 4G LTE coverage | ASEP auction |
+| 850 MHz | B5 | FDD | 2×11 | 824–835 MHz | 869–880 MHz | 22 | 3G/4G rural + indoor | Legacy concession |
+| 850 MHz | B5 | FDD | 2×1 | 845–846 MHz | 890–891 MHz | 2 | 3G guard band | Legacy concession |
+| 1900 MHz | B2 | FDD | 2×5 | 1865–1870 MHz | 1945–1950 MHz | 10 | 3G/4G capacity | PCS concession |
+| AWS | B4 | FDD | 2×20 | 1710–1730 MHz | 2110–2130 MHz | 40 | **4G LTE primary capacity** | ASEP AWS auction |
+| | | | | | **Total** | **94** | | |
+
+> ⚠ **Key advantage**: Tigo is the **only operator in Panama with AWS (B4) spectrum** — 40 MHz exclusive capacity layer.
+
+## +Móvil Panama (CWP + ex-Claro) — 136 MHz (6 allocations, all FDD)
+
+| Band | ID | Duplex | Allocation | Uplink Range | Downlink Range | Total MHz | Use | Origin |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 700 MHz | B28 | FDD | 2×10 | 708–718 MHz | 763–773 MHz | 20 | 4G LTE coverage | +Móvil original |
+| 700 MHz | B28 | FDD | 2×10 | 728–738 MHz | 783–793 MHz | 20 | 4G LTE coverage | ex-Claro |
+| 850 MHz | B5 | FDD | 2×10 | 835–845 MHz | 880–890 MHz | 20 | 3G/4G rural + indoor | +Móvil original |
+| 850 MHz | B5 | FDD | 2×3 | 846–849 MHz | 891–894 MHz | 6 | 3G supplement | +Móvil original |
+| 1900 MHz | B2 | FDD | 2×20 | 1870–1890 MHz | 1950–1970 MHz | 40 | 3G/4G primary capacity | +Móvil original |
+| 1900 MHz | B2 | FDD | 2×15 | 1890–1905 MHz | 1970–1985 MHz | 30 | 3G/4G capacity | ex-Claro |
+| | | | | | **Total** | **136** | | |
+
+> ⚠ +Móvil does **NOT** hold AWS (B4) spectrum. LTE runs on B28 and B2 only.
+
+## ASEP Held (Pending Re-tender) — 50 MHz
+
+| Band | ID | Duplex | Allocation | Uplink Range | Downlink Range | Total MHz | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 700 MHz | B28 | FDD | 2×10 | 738–748 MHz | 793–803 MHz | 20 | ex-Digicel → tendering |
+| 1900 MHz | B2 | FDD | 2×15 | 1850–1865 MHz | 1930–1945 MHz | 30 | ex-Digicel → tendering |
+| | | | | | **Total** | **50** | Concession No.106 |
+
+## Cross-Operator Summary
+
+| Band | ID | Duplex | Tigo (MHz) | +Móvil (MHz) | ASEP Pending | Market Total |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 700 MHz | B28 | FDD | 20 | **40** | 20 | 80 |
+| 850 MHz | B5 | FDD | 24 | **26** | — | 50 |
+| 1900 MHz | B2 | FDD | 10 | **70** | 30 | 110 |
+| AWS | B4 | FDD | **40** ★ | 0 | — | 40 |
+| **Total** | | | **94** | **136** | **50** | **280** |
+
+## Spectrum Advantage Analysis
+
+| Dimension | Tigo | +Móvil | Tigo Position | Analysis |
+| :--- | :--- | :--- | :--- | :--- |
+| Total spectrum | 94 MHz | 136 MHz | **-30.9%** | Overall disadvantage |
+| Sub-1 GHz (coverage) | 44 MHz | 66 MHz | -33.3% | Coverage gap |
+| Mid-band (1–3 GHz) | 50 MHz | 70 MHz | -28.6% | Smaller gap |
+| AWS exclusive | **40 MHz** ★ | 0 MHz | **Exclusive** | **Core differentiator** |
+| Spectrum per user | 40.7 Hz/user | 26.8 Hz/user | **+51.9%** | **Superior user experience** |
+| LTE band count | 4 (B28/B5/B2/B4) | 2 (B28/B2) | **+2 bands** | Carrier aggregation advantage |
+
+**Key insights:**
+
+1. **AWS exclusivity is Tigo's strategic weapon**: +Móvil has zero AWS spectrum, running LTE on only B28 and B2. Tigo's B4 (40 MHz) is Panama's single largest LTE capacity block.
+2. **Per-user spectrum advantage**: Despite 30.9% less total spectrum, Tigo's user base is 54.5% smaller — yielding 40.7 Hz/user vs +Móvil's 26.8 Hz/user (+51.9%).
+3. **Carrier aggregation**: Tigo can deploy 4CC (B28+B5+B2+B4) while +Móvil is limited to 2CC (B28+B2), giving Tigo a peak throughput advantage.
+4. **ASEP tender wildcard**: 50 MHz of ex-Digicel spectrum is being tendered. If Tigo acquires it, total reaches 144 MHz — surpassing +Móvil.
+5. **5G readiness**: Neither operator has 5G spectrum. Tigo's AWS B4 supports DSS (Dynamic Spectrum Sharing) for early 5G deployment.
+
+---
+
+*Updated: 2026-02-26 | Tigo Panama BLM Strategic Assessment (CQ4_2025)*
 *Framework: Business Leadership Model — Five Looks + SWOT + SPAN*
+*Spectrum appendix added: Market restructuring (CWP+Claro merger, Digicel exit) + FDD band-level analysis*
