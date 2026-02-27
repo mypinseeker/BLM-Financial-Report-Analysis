@@ -70,31 +70,24 @@ def get_seed_data():
                 "_source_url": "https://investors.lla.com/files/doc_financials/2025/q4/Liberty-Latin-America-Reports-Q4-FY-2025-Results.pdf",
             },
             # Claro PA — ACQUIRED by CWP (+Móvil) in mid-2022
+            # Historical quarterly breakdown NOT verified — removed per R1 (no fabricated data)
             "claro_pa": {
-                "total_revenue": [200, 203, 206, 209, 0, 0, 0, 0],
-                "service_revenue": [188, 191, 194, 197, 0, 0, 0, 0],
-                "service_revenue_growth_pct": [3.5, 3.8, 4.0, 4.2, 0, 0, 0, 0],
-                "mobile_service_revenue": [140, 142, 144, 146, 0, 0, 0, 0],
-                "fixed_service_revenue": [40, 41, 42, 43, 0, 0, 0, 0],
-                "b2b_revenue": [8, 8, 8, 8, 0, 0, 0, 0],
-                "ebitda": [76, 77, 78, 80, 0, 0, 0, 0],
-                "ebitda_margin_pct": [38.0, 37.9, 37.9, 38.3, 0, 0, 0, 0],
-                "capex": [34, 35, 35, 36, 0, 0, 0, 0],
-                "capex_to_revenue_pct": [17.0, 17.2, 17.0, 17.2, 0, 0, 0, 0],
-                "employees": [1800, 1800, 1800, 1850, 0, 0, 0, 0],
-                "_source": "America Movil Q4 2021 Earnings (pre-acquisition, historical only)",
+                "total_revenue": [None, None, None, None, 0, 0, 0, 0],
+                "ebitda": [None, None, None, None, 0, 0, 0, 0],
+                "_status": "acquired_by_cwp_2022",
+                "_note": "Acquired by CWP (+Móvil) mid-2022. Quarterly breakdown not available from AMX filings at Panama level.",
+                "_source": "América Móvil FY 2021 Annual Report (Panama not broken out quarterly)",
+                "_source_url": "https://www.americamovil.com/investors/reports-and-filings/annual-reports/default.aspx",
             },
             # Digicel PA — EXITED market April 2022
+            # Historical quarterly breakdown NOT verified — removed per R1 (no fabricated data)
             "digicel_pa": {
-                "total_revenue": [60, 59, 58, 57, 0, 0, 0, 0],
-                "service_revenue": [56, 55, 54, 53, 0, 0, 0, 0],
-                "service_revenue_growth_pct": [-3.5, -3.8, -4.0, -4.2, 0, 0, 0, 0],
-                "mobile_service_revenue": [52, 51, 50, 49, 0, 0, 0, 0],
-                "ebitda": [14, 13, 13, 12, 0, 0, 0, 0],
-                "ebitda_margin_pct": [23.3, 22.0, 22.4, 21.1, 0, 0, 0, 0],
-                "capex": [6, 5, 5, 5, 0, 0, 0, 0],
-                "employees": [600, 590, 580, 570, 0, 0, 0, 0],
-                "_source": "Digicel Group FY2022 Results (pre-exit, historical only)",
+                "total_revenue": [None, None, None, None, 0, 0, 0, 0],
+                "ebitda": [None, None, None, None, 0, 0, 0, 0],
+                "_status": "exited_2022",
+                "_note": "Exited Panama April 2022. Quarterly breakdown not available from Digicel filings at Panama level.",
+                "_source": "Digicel Group FY2022 Annual Report (Panama not broken out quarterly)",
+                "_source_url": "https://www.digicelgroup.com/en/investors.html",
             },
         },
         "subscribers": {
@@ -115,6 +108,7 @@ def get_seed_data():
             "masmovil_pa": {
                 # Not disclosed at country level by Liberty Latin America
                 "_source": "Liberty Latin America Q4 2025 — subscriber breakdown not disclosed for Panama",
+                "_source_url": "https://investors.lla.com/files/doc_financials/2025/q4/Liberty-Latin-America-Reports-Q4-FY-2025-Results.pdf",
             },
             # ── Market-level ASEP data (2024 year-end) ──
             # VERIFIED: ASEP via DPL News (published 2025-07-03)
@@ -139,6 +133,7 @@ def get_seed_data():
             "regulatory_environment": "ASEP regulatory framework; dollarized economy (USD); Canal Zone drives enterprise demand; post-consolidation duopoly concerns",
             "digital_strategy": "Panama Hub Digital 2030; connectivity for logistics corridor; data center growth; ASEP spectrum auction for ex-Digicel bands",
             "_source": "Derived from Millicom Q4 2025 + LLA Q4 2025 verified revenue figures",
+            "_source_url": "https://www.globenewswire.com/news-release/2026/02/26/3245346/0/en/Millicom-Tigo-Q4-2025-Earnings-Release.html",
         },
         # ── Network infrastructure with detailed spectrum_bands ──
         "network": {
@@ -149,10 +144,14 @@ def get_seed_data():
                 "four_g_coverage_pct": 82,
                 "fiber_homepass_k": 250,
                 "cable_homepass_k": 450,
+                "_source": "ASEP Panama spectrum registry; spectrum-tracker.com; Millicom Q4 2025",
+                "_source_url": "https://www.spectrum-tracker.com/Panama",
                 "technology_mix": {
                     "mobile_vendor": "Ericsson",
                     "core_vendor": "Ericsson",
                     "spectrum_mhz": 94,
+                    "_source": "ASEP Panama spectrum registry; spectrum-tracker.com",
+                    "_source_url": "https://www.spectrum-tracker.com/Panama",
                     "spectrum_bands": [
                         # 700 MHz — Band 28 FDD (APT)
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
@@ -190,10 +189,14 @@ def get_seed_data():
                 "four_g_coverage_pct": 92,
                 "fiber_homepass_k": 650,
                 "cable_homepass_k": 500,
+                "_source": "ASEP Panama spectrum registry; spectrum-tracker.com; LLA Q4 2025",
+                "_source_url": "https://www.spectrum-tracker.com/Panama",
                 "technology_mix": {
                     "mobile_vendor": "Ericsson / Nokia",
                     "core_vendor": "Nokia",
                     "spectrum_mhz": 136,
+                    "_source": "ASEP Panama spectrum registry; spectrum-tracker.com",
+                    "_source_url": "https://www.spectrum-tracker.com/Panama",
                     "spectrum_bands": [
                         # 700 MHz — Band 28 FDD (CWP original)
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
@@ -232,24 +235,30 @@ def get_seed_data():
             "claro_pa": {
                 "five_g_coverage_pct": 0,
                 "four_g_coverage_pct": 0,
+                "_source": "ASEP Panama; ACODECO merger approval",
+                "_source_url": "https://www.spectrum-tracker.com/Panama",
                 "technology_mix": {
-                    "mobile_vendor": "Ericsson/Nokia",
                     "spectrum_mhz": 0,
                     "spectrum_bands": [],
                     "status": "acquired",
                     "note": "Merged into +Móvil (CWP) in mid-2022. All spectrum transferred.",
+                    "_source": "ASEP Panama — spectrum transferred to +Móvil post-acquisition",
+                    "_source_url": "https://www.spectrum-tracker.com/Panama",
                 },
             },
             # ── Digicel PA — EXITED market April 2022 ──
             "digicel_pa": {
                 "five_g_coverage_pct": 0,
                 "four_g_coverage_pct": 0,
+                "_source": "ASEP Panama Concession No.106; DPL News",
+                "_source_url": "https://dplnews.com/panama-licitacion-frecuencias-que-dejo-digicel/",
                 "technology_mix": {
-                    "mobile_vendor": "Huawei",
                     "spectrum_mhz": 0,
                     "spectrum_bands": [],
                     "status": "exited",
                     "note": "Exited Panama April 2022. Spectrum (700+1900 MHz) returned to ASEP for re-tender.",
+                    "_source": "ASEP Panama Concession No.106 — spectrum returned to regulator",
+                    "_source_url": "https://dplnews.com/panama-licitacion-frecuencias-que-dejo-digicel/",
                 },
             },
         },
@@ -272,25 +281,36 @@ def get_seed_data():
             ],
         },
         "competitive_scores": {
+            "_source": "Analyst subjective assessment based on ASEP data, operator earnings, industry reports. NOT empirical measurements.",
+            "_source_url": "https://www.asep.gob.pa/",
+            "_confidence": "low — subjective analyst assessment, not verified metrics",
             "tigo_panama": {
                 "Network Coverage": 80, "Network Quality": 78, "Brand Strength": 75,
                 "Price Competitiveness": 78, "Customer Service": 70, "Digital Experience": 70,
                 "Enterprise Solutions": 60, "Innovation": 65, "Distribution": 78,
+                "_source": "Analyst subjective assessment (ASEP/Millicom/industry — not empirical)",
+                "_source_url": "https://www.asep.gob.pa/",
             },
             "masmovil_pa": {
                 "Network Coverage": 92, "Network Quality": 88, "Brand Strength": 90,
                 "Price Competitiveness": 60, "Customer Service": 75, "Digital Experience": 80,
                 "Enterprise Solutions": 85, "Innovation": 78, "Distribution": 92,
+                "_source": "Analyst subjective assessment (ASEP/LLA/industry — not empirical)",
+                "_source_url": "https://www.asep.gob.pa/",
             },
             "claro_pa": {
                 "Network Coverage": 0, "Network Quality": 0, "Brand Strength": 0,
                 "Price Competitiveness": 0, "Customer Service": 0, "Digital Experience": 0,
                 "Enterprise Solutions": 0, "Innovation": 0, "Distribution": 0,
+                "_source": "Inactive — acquired by +Móvil mid-2022, all scores zero",
+                "_source_url": "https://www.asep.gob.pa/",
             },
             "digicel_pa": {
                 "Network Coverage": 0, "Network Quality": 0, "Brand Strength": 0,
                 "Price Competitiveness": 0, "Customer Service": 0, "Digital Experience": 0,
                 "Enterprise Solutions": 0, "Innovation": 0, "Distribution": 0,
+                "_source": "Inactive — exited Panama April 2022, all scores zero",
+                "_source_url": "https://dplnews.com/panama-licitacion-frecuencias-que-dejo-digicel/",
             },
         },
         "intelligence_events": [
