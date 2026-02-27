@@ -1,0 +1,36 @@
+================================================================================
+  BLM Group Analysis Summary: MILLICOM (Tigo)
+  Period: CQ4_2025
+  Markets: 1
+================================================================================
+
+[Revenue Comparison]
+  Market                     Revenue    Growth   EBITDA Margin
+  --------------------  ------------  --------  --------------
+  colombia                     2,420     +7.1%           35.1%
+
+[Subscriber Comparison]
+  Market                  Mobile (K)      BB (K)      ARPU
+  --------------------  ------------  ----------  --------
+  colombia                    15,900       1,880    7850.0
+
+[Competitive Position]
+  colombia              Rank: None  Intensity: high
+
+[Common Opportunities (2+ markets)]
+  -> tigo colombia revenue growth 7.1% yoy
+  -> tigo (millicom) completes acquisition of coltel (movistar co
+  -> tigo-une launches 5g in bogota and medellin
+  -> wom reaches 4.6m subscribers in colombia
+  -> regulatory environment: compliance requirements and spectrum
+  -> national digital strategy: fiber/5g coverage mandates may re
+
+[Key Findings]
+  * Strongest revenue growth: colombia (+7.1%)
+  * High competitive intensity in: colombia
+  * Total opportunities identified across all markets: 30
+
+[Market Health Ratings]
+  colombia              stable
+
+================================================================================

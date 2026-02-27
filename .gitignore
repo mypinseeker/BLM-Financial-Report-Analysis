@@ -39,6 +39,7 @@ data/output/*
 !data/output/chile/
 !data/output/guatemala/
 !data/output/colombia/
+!data/output/colombia_new/
 !data/output/honduras/
 !data/output/paraguay/
 !data/output/bolivia/

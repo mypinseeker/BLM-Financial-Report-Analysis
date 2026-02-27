@@ -1,16 +1,24 @@
 """Seed the database with Colombia telecom market data.
 
-Colombia is Millicom's largest market by revenue (Tigo-UNE, 50% JV with EPM).
-4-player market: Claro (leader), Tigo-UNE, Movistar, WOM (new entrant).
-Currency: COP (Colombian Peso). All revenue figures in COP billions.
+Colombia is Millicom's largest market by revenue (Tigo-UNE).
+As of Q4 2025: 4-player market — Claro (leader), Movistar/Coltel, Tigo-UNE, WOM.
+Currency: COP (Colombian Peso). Millicom reports in USD.
 
-NOTE: Tigo (Millicom) acquired Colombia Telecomunicaciones (Coltel, formerly
-Telefonica Colombia / Movistar Colombia) in Q3 2025. Post-acquisition, Tigo
-inherits Coltel's subscriber base, spectrum assets, and fixed infrastructure.
-The combined entity operates under the Tigo brand.
+CRITICAL TIMELINE CORRECTIONS (verified Feb 2026):
+  - Q4 2025 (Oct-Dec 2025): Market was STILL 4 players. Both Millicom acquisitions
+    had NOT yet closed. Tigo-UNE was still a 50% JV with EPM.
+  - Jan 27, 2026: Millicom wins EPM's 50% share of Tigo-UNE at auction (~$571M / COP 2.1T).
+  - Feb 5-6, 2026: Millicom closes tender offer for Telefónica's 67.5% stake in
+    Coltel (Movistar Colombia) for $214.4M. Market becomes 3-player.
+  - ~Apr 2026 (expected): Phase 2 — Colombian government's 32.5% Coltel stake (~$200M).
 
-Data sources: Millicom Q4 2025 earnings, CRC Colombia regulator data,
-America Movil IR, WOM public filings, ANE spectrum allocation registry.
+WOM STATUS: Rescued from bankruptcy by SUR Holdings (US/UK investors) in 2025.
+  First positive EBITDA in Q1 2025 (COP 60B). ~7M subscribers.
+
+Exchange rate: Q4 2025 average ~3,780-3,800 COP/USD.
+
+Data sources: Millicom Q4 2025 earnings (2026-02-26), América Móvil Q4 2025 earnings,
+CRC Colombia Q2 2025 Data Flash, ANE spectrum registry, WOM/SUR Holdings filings.
 """
 
 import sys
@@ -21,204 +29,255 @@ if str(_project_root) not in sys.path:
     sys.path.insert(0, str(_project_root))
 
 MARKET_ID = "colombia"
-# NOTE: Movistar Colombia (Coltel) was acquired by Tigo in Q3 2025.
-# Post-acquisition the market is effectively 3-player: Tigo-UNE (incl. Coltel),
-# Claro, and WOM. We keep movistar_co for historical data but mark it inactive.
+# During Q4 2025: 4 operators still active. Coltel acquisition closes Feb 2026.
 OPERATORS = ["tigo_colombia", "claro_co", "movistar_co", "wom_co"]
 
 
 def get_seed_data():
     return {
         "financials": {
-            # Tigo-UNE Colombia — now #1 by spectrum post-Coltel acquisition, 50% JV with EPM
+            # ── Tigo-UNE Colombia (Millicom 50% JV with EPM during Q4 2025) ──
+            # VERIFIED: Millicom Q4 2025 Earnings Release (2026-02-26)
+            # Millicom reports FULL-YEAR 2025 only for Colombia segment:
+            #   - FY 2025 Service Revenue: $389M (+6.9% YoY)
+            #   - FY 2025 Adjusted EBITDA: $174M (+24.6% YoY)
+            #   - FY 2025 EBITDA Margin: 44.1% (record high)
+            # NOTE: Millicom does NOT disclose quarterly Colombia segment revenue.
+            # NOTE: Q4 2025 is PRE-Coltel, PRE-EPM buyout (Tigo UNE only).
             "tigo_colombia": {
-                "total_revenue": [2150, 2180, 2220, 2260, 2300, 2340, 2380, 2420],
-                "service_revenue": [2020, 2050, 2090, 2130, 2170, 2210, 2250, 2290],
-                "service_revenue_growth_pct": [4.0, 4.3, 4.5, 4.8, 7.0, 7.3, 7.2, 7.1],
-                "mobile_service_revenue": [1100, 1120, 1140, 1160, 1180, 1200, 1220, 1240],
-                "mobile_service_growth_pct": [3.5, 3.8, 4.0, 4.2, 7.3, 7.1, 7.0, 6.9],
-                "fixed_service_revenue": [750, 760, 780, 800, 820, 840, 860, 880],
-                "fixed_service_growth_pct": [5.0, 5.2, 5.5, 5.8, 8.0, 7.9, 7.7, 7.5],
-                "b2b_revenue": [170, 170, 170, 170, 170, 170, 170, 170],
-                "ebitda": [750, 760, 780, 790, 810, 820, 835, 850],
-                "ebitda_margin_pct": [34.9, 34.9, 35.1, 35.0, 35.2, 35.0, 35.1, 35.1],
-                "ebitda_growth_pct": [3.5, 3.8, 4.2, 4.5, 8.0, 7.9, 7.1, 7.6],
-                "capex": [420, 430, 440, 450, 460, 470, 480, 490],
-                "capex_to_revenue_pct": [19.5, 19.7, 19.8, 19.9, 20.0, 20.1, 20.2, 20.2],
-                "employees": [6500, 6500, 6600, 6600, 6700, 6700, 6800, 6800],
-                "_source": "Millicom Q4 2025 Earnings Report — Colombia segment",
+                # FY 2025 figures — quarterly breakdown NOT disclosed
+                "fy_2025_service_revenue_usd_m": 389,
+                "fy_2025_service_revenue_growth_pct": 6.9,
+                "fy_2025_ebitda_usd_m": 174,
+                "fy_2025_ebitda_growth_pct": 24.6,
+                "fy_2025_ebitda_margin_pct": 44.1,
+                # Quarterly time series: NOT disclosed at country level
+                "total_revenue": [None, None, None, None, None, None, None, None],
+                "ebitda": [None, None, None, None, None, None, None, None],
+                # mobile_service_revenue: not disclosed separately
+                # fixed_service_revenue: not disclosed separately
+                # capex: not disclosed at country level
+                # employees: not disclosed at country level
+                "_source": "Millicom Q4 2025 Earnings Release (2026-02-26) — Colombia segment",
+                "_source_url": "https://www.globenewswire.com/news-release/2026/02/26/3245346/0/en/Millicom-Tigo-Q4-2025-Earnings-Release.html",
+                "_alt_source": "TeleSemana 2026-02-26",
+                "_alt_source_url": "https://www.telesemana.com/blog/2026/02/26/millicom-cerro-2025-con-ingresos-estables/",
             },
-            # Claro Colombia — market leader by revenue and subscribers
+            # ── Claro Colombia (América Móvil) Q4 2025 ──
+            # VERIFIED: América Móvil Q4 2025 Earnings Call (Feb 2026)
+            #   - Q4 Revenue: COP 4.3T (~$1.13B at ~3,800 COP/USD)
+            #   - Service revenue growth: +5.4% YoY
+            #   - Mobile service revenue growth: +7.6% YoY
+            #   - Postpaid revenue growth: +7.8% YoY
+            #   - Fixed-line service revenue growth: +2.2% YoY
+            #   - Broadband revenue growth: +16.1% YoY
+            #   - EBITDA growth: +4.1% reported / +6.3% organic
+            #   - EBITDA margin: 41.0% (+2.2pp LTM)
+            # NOTE: AMX reports in COP. Q4 2025 revenue COP 4.3T = COP 4,300B.
             "claro_co": {
-                "total_revenue": [4200, 4250, 4300, 4350, 4400, 4450, 4500, 4550],
-                "service_revenue": [3950, 4000, 4050, 4100, 4150, 4200, 4250, 4300],
-                "service_revenue_growth_pct": [2.8, 3.0, 3.2, 3.5, 3.8, 3.9, 4.0, 4.2],
-                "mobile_service_revenue": [2500, 2530, 2560, 2590, 2620, 2650, 2680, 2710],
-                "fixed_service_revenue": [1100, 1120, 1140, 1160, 1180, 1200, 1220, 1240],
-                "b2b_revenue": [350, 350, 350, 350, 350, 350, 350, 350],
-                "ebitda": [1680, 1700, 1720, 1740, 1760, 1780, 1800, 1820],
-                "ebitda_margin_pct": [40.0, 40.0, 40.0, 40.0, 40.0, 40.0, 40.0, 40.0],
-                "capex": [730, 740, 750, 760, 770, 780, 790, 800],
-                "capex_to_revenue_pct": [17.4, 17.4, 17.4, 17.5, 17.5, 17.5, 17.6, 17.6],
-                "employees": [12000, 12000, 12100, 12100, 12200, 12200, 12300, 12300],
-                "_source": "America Movil Q4 2025 Earnings — Colombia segment",
+                "q4_2025_revenue_cop_b": 4300,
+                "q4_2025_revenue_usd_m_approx": 1132,  # derived at ~3,800 COP/USD
+                "service_revenue_growth_pct_q4": 5.4,
+                "mobile_service_revenue_growth_pct_q4": 7.6,
+                "postpaid_revenue_growth_pct_q4": 7.8,
+                "fixed_service_revenue_growth_pct_q4": 2.2,
+                "broadband_revenue_growth_pct_q4": 16.1,
+                "ebitda_growth_pct_q4_reported": 4.1,
+                "ebitda_growth_pct_q4_organic": 6.3,
+                "ebitda_margin_pct": 41.0,
+                "ebitda_margin_improvement_pp_ltm": 2.2,
+                # Quarterly time series: NOT disclosed for Colombia specifically
+                "total_revenue": [None, None, None, None, None, None, None, 4300],
+                "ebitda": [None, None, None, None, None, None, None, None],
+                # capex: not disclosed at country level
+                # employees: not disclosed at country level
+                "_source": "América Móvil Q4 2025 Earnings Call (Feb 2026)",
+                "_source_url": "https://www.americamovil.com/investors/reports-and-filings/quarterly-results/default.aspx",
+                "_alt_source": "AMX Q4 2025 Earnings Call Transcript — Insider Monkey",
+                "_alt_source_url": "https://www.insidermonkey.com/blog/america-movil-s-a-b-de-c-v-nyseamx-q4-2025-earnings-call-transcript-1694480/",
             },
-            # Movistar Colombia (Coltel) — ACQUIRED by Tigo Q3 2025; historical data below
+            # ── Movistar Colombia / Coltel (Telefónica → Millicom) ──
+            # STATUS: Telefónica sold 67.5% stake to Millicom, closed Feb 6, 2026.
+            # Q4 2025 financials NOT published by Telefónica (sale in progress).
             "movistar_co": {
-                "total_revenue": [1800, 1810, 1820, 1830, 1840, 1850, 1860, 1870],
-                "service_revenue": [1680, 1690, 1700, 1710, 1720, 1730, 1740, 1750],
-                "service_revenue_growth_pct": [1.0, 1.2, 1.3, 1.5, 2.2, 2.4, 2.4, 2.3],
-                "mobile_service_revenue": [1200, 1210, 1220, 1230, 1240, 1250, 1260, 1270],
-                "fixed_service_revenue": [380, 380, 380, 380, 380, 380, 380, 380],
-                "b2b_revenue": [100, 100, 100, 100, 100, 100, 100, 100],
-                "ebitda": [520, 525, 530, 535, 540, 545, 550, 555],
-                "ebitda_margin_pct": [28.9, 29.0, 29.1, 29.2, 29.3, 29.5, 29.6, 29.7],
-                "capex": [310, 315, 318, 320, 325, 328, 330, 335],
-                "capex_to_revenue_pct": [17.2, 17.4, 17.5, 17.5, 17.7, 17.7, 17.7, 17.9],
-                "employees": [5000, 5000, 5000, 5000, 5000, 5000, 5000, 5000],
-                "_source": "Telefonica LATAM Q4 2025 Report",
+                "total_revenue": [None, None, None, None, None, None, None, None],
+                "ebitda": [None, None, None, None, None, None, None, None],
+                "_status": "acquired_by_millicom",
+                "_acquisition_price_usd_m": 214.4,
+                "_acquisition_stake_pct": 67.5,
+                "_acquisition_closing_date": "2026-02-06",
+                "_source": "Millicom Coltel Tender Offer PR (2026-02-05)",
+                "_source_url": "https://www.globenewswire.com/news-release/2026/02/05/3233403/0/en/Millicom-Tigo-Concludes-Tender-Offer-Coltel.html",
+                "_note": "Telefónica did not publish Colombia-specific Q4 2025 financials",
             },
-            # WOM Colombia — new entrant, rapid growth but unprofitable
+            # ── WOM Colombia ──
+            # STATUS: Rescued from bankruptcy by SUR Holdings (US/UK) in 2025.
+            # Only verified data: Q1 2025 EBITDA = COP 60B (first positive ever).
+            # Q4 2025 financials NOT publicly available.
             "wom_co": {
-                "total_revenue": [280, 310, 340, 370, 400, 430, 460, 500],
-                "service_revenue": [250, 280, 310, 340, 370, 400, 430, 460],
-                "service_revenue_growth_pct": [45.0, 48.0, 50.0, 52.0, 42.9, 38.7, 35.3, 35.3],
-                "mobile_service_revenue": [250, 280, 310, 340, 370, 400, 430, 460],
-                "ebitda": [-80, -70, -60, -50, -40, -30, -20, -10],
-                "ebitda_margin_pct": [-28.6, -22.6, -17.6, -13.5, -10.0, -7.0, -4.3, -2.0],
-                "capex": [120, 130, 140, 150, 155, 160, 165, 170],
-                "capex_to_revenue_pct": [42.9, 41.9, 41.2, 40.5, 38.8, 37.2, 35.9, 34.0],
-                "employees": [2000, 2100, 2200, 2300, 2400, 2500, 2600, 2700],
-                "_source": "WOM Colombia public filings",
+                "total_revenue": [None, None, None, None, None, None, None, None],
+                "ebitda": [None, None, None, None, None, None, None, None],
+                "q1_2025_ebitda_cop_b": 60,  # First positive EBITDA ever
+                "q1_2024_ebitda_cop_b": -82,  # Prior year comparison
+                "_status": "acquired_by_sur_holdings",
+                "_sur_planned_investment_usd_m": 100,
+                "_sur_invested_so_far_usd_m": 40,
+                "_source": "SUR Holdings acquisition filings, América Economía, Developing Telecoms",
+                "_source_url": "https://www.americaeconomia.com/en/node/290161",
+                "_note": "WOM does not publish quarterly earnings publicly",
             },
         },
         "subscribers": {
+            # ── Tigo-UNE Colombia (Q4 2025, PRE-Coltel) ──
+            # VERIFIED: Millicom Q4 2025 Earnings Release
             "tigo_colombia": {
-                "mobile_total_k": [14500, 14700, 14900, 15100, 15300, 15500, 15700, 15900],
-                "mobile_postpaid_k": [4350, 4410, 4470, 4530, 4590, 4650, 4710, 4770],
-                "mobile_prepaid_k": [10150, 10290, 10430, 10570, 10710, 10850, 10990, 11130],
-                "mobile_net_adds_k": [150, 200, 200, 200, 200, 200, 200, 200],
-                "mobile_churn_pct": [2.5, 2.4, 2.4, 2.3, 2.3, 2.2, 2.2, 2.1],
-                "mobile_arpu": [7600, 7650, 7700, 7700, 7750, 7800, 7800, 7850],
-                "broadband_total_k": [1600, 1640, 1680, 1720, 1760, 1800, 1840, 1880],
-                "broadband_cable_k": [1100, 1110, 1120, 1130, 1140, 1150, 1160, 1170],
-                "broadband_fiber_k": [350, 370, 400, 430, 460, 490, 520, 550],
-                "broadband_net_adds_k": [30, 40, 40, 40, 40, 40, 40, 40],
-                "tv_total_k": [1200, 1210, 1220, 1230, 1240, 1250, 1260, 1270],
-                "fmc_total_k": [400, 420, 440, 460, 480, 500, 520, 540],
-                "fmc_penetration_pct": [25.0, 25.6, 26.2, 26.7, 27.3, 27.8, 28.3, 28.7],
-                "b2b_customers_k": [85, 87, 89, 91, 93, 95, 97, 99],
-                "_source": "Millicom Q4 2025 Earnings Report",
+                "mobile_postpaid_k": 4400,  # 4.4M (+9.6% YoY)
+                "mobile_postpaid_growth_pct": 9.6,
+                "home_subscribers_k": 1676,  # 1,676K (+10.2% YoY)
+                "home_subscribers_growth_pct": 10.2,
+                "cell_sites": 10500,
+                "mobile_market_share_pct": 20,  # ~20% pre-Coltel
+                # mobile_total, prepaid, ARPU: NOT disclosed by Millicom at country level
+                # broadband breakdown (cable/fiber): NOT disclosed
+                "_source": "Millicom Q4 2025 Earnings Release (2026-02-26)",
+                "_source_url": "https://www.globenewswire.com/news-release/2026/02/26/3245346/0/en/Millicom-Tigo-Q4-2025-Earnings-Release.html",
             },
+            # ── Claro Colombia (Q4 2025) ──
+            # VERIFIED: América Móvil Q4 2025 Earnings Call
             "claro_co": {
-                "mobile_total_k": [31000, 31200, 31400, 31600, 31800, 32000, 32200, 32400],
-                "mobile_postpaid_k": [9300, 9360, 9420, 9480, 9540, 9600, 9660, 9720],
-                "mobile_prepaid_k": [21700, 21840, 21980, 22120, 22260, 22400, 22540, 22680],
-                "mobile_net_adds_k": [150, 200, 200, 200, 200, 200, 200, 200],
-                "mobile_churn_pct": [2.2, 2.2, 2.1, 2.1, 2.0, 2.0, 2.0, 1.9],
-                "mobile_arpu": [8100, 8150, 8200, 8200, 8250, 8300, 8350, 8400],
-                "broadband_total_k": [2800, 2830, 2860, 2890, 2920, 2950, 2980, 3010],
-                "broadband_fiber_k": [800, 840, 880, 920, 960, 1000, 1040, 1080],
-                "tv_total_k": [2100, 2110, 2120, 2130, 2140, 2150, 2160, 2170],
-                "b2b_customers_k": [150, 152, 154, 156, 158, 160, 162, 164],
-                "_source": "America Movil Q4 2025 Earnings",
+                "wireless_clients_k": 42700,  # 42.7M (+4.2% YoY) — includes IoT/M2M
+                "wireless_growth_pct": 4.2,
+                "q4_postpaid_net_adds_k": 276,
+                "q4_prepaid_net_adds_k": 224,
+                "q4_broadband_net_adds_k": 49,
+                "q4_fixed_disconnections_k": -42,  # landline + PayTV
+                # postpaid/prepaid stock breakdown: NOT disclosed at Colombia level
+                # ARPU: NOT disclosed at Colombia level
+                "_note": "42.7M 'wireless clients' includes IoT/M2M SIMs per AMX convention",
+                "_source": "América Móvil Q4 2025 Earnings Call",
+                "_source_url": "https://www.insidermonkey.com/blog/america-movil-s-a-b-de-c-v-nyseamx-q4-2025-earnings-call-transcript-1694480/",
             },
+            # ── Movistar/Coltel (pre-acquisition, CRC data) ──
             "movistar_co": {
-                "mobile_total_k": [15000, 15050, 15100, 15150, 15200, 15250, 15300, 15350],
-                "mobile_postpaid_k": [5250, 5270, 5290, 5310, 5330, 5350, 5370, 5390],
-                "mobile_prepaid_k": [9750, 9780, 9810, 9840, 9870, 9900, 9930, 9960],
-                "mobile_net_adds_k": [30, 50, 50, 50, 50, 50, 50, 50],
-                "mobile_churn_pct": [2.8, 2.7, 2.7, 2.6, 2.6, 2.5, 2.5, 2.5],
-                "mobile_arpu": [8000, 8030, 8060, 8080, 8100, 8130, 8160, 8200],
-                "broadband_total_k": [1100, 1110, 1120, 1130, 1140, 1150, 1160, 1170],
-                "broadband_fiber_k": [350, 370, 390, 410, 430, 450, 470, 490],
-                "tv_total_k": [700, 705, 710, 715, 720, 725, 730, 735],
-                "b2b_customers_k": [60, 61, 62, 63, 64, 65, 66, 67],
-                "_source": "Telefonica LATAM Q4 2025 Report",
+                "mobile_lines_k": 21000,  # ~21M as of Sep 2025 (CRC)
+                "mobile_market_share_pct": 25,
+                "broadband_market_share_pct": 17,
+                "paytv_market_share_pct": 9,
+                "_source": "CRC Colombia via El Colombiano / multiple sources (Sep 2025)",
+                "_source_url": "https://www.elcolombiano.com/negocios/mercado-movil-colombia-millicom-compra-movistar-segundo-operador-claro-JB33239743",
+                "_note": "Pre-acquisition figures. Exact subscriber stock not published in Telefónica Q4 2025.",
             },
+            # ── WOM Colombia ──
             "wom_co": {
-                "mobile_total_k": [2500, 2800, 3100, 3400, 3700, 4000, 4300, 4600],
-                "mobile_postpaid_k": [500, 560, 620, 680, 740, 800, 860, 920],
-                "mobile_prepaid_k": [2000, 2240, 2480, 2720, 2960, 3200, 3440, 3680],
-                "mobile_net_adds_k": [250, 300, 300, 300, 300, 300, 300, 300],
-                "mobile_churn_pct": [4.0, 3.8, 3.6, 3.5, 3.3, 3.2, 3.1, 3.0],
-                "mobile_arpu": [10000, 10000, 10000, 10000, 10000, 10000, 10000, 10870],
-                "_source": "WOM Colombia public filings",
+                "mobile_subscribers_k_approx": 7000,  # ~7M
+                "mobile_market_share_pct": 7,
+                # postpaid/prepaid breakdown: NOT disclosed
+                # ARPU: NOT disclosed
+                "_source": "Multiple sources — América Economía, Developing Telecoms, DCD",
+                "_source_url": "https://developingtelecoms.com/telecom-business/operator-news/18805-wom-colombia-looks-forward.html",
+            },
+            # ── Market-level CRC data (Q2 2025 — latest available) ──
+            "_market_totals": {
+                "data_as_of": "Q2 2025",
+                "total_mobile_lines_k": 102500,  # 102.5M (+2.8% YoY)
+                "mobile_growth_pct": 2.8,
+                "mobile_internet_revenue_cop_t": 2.9,  # COP 2.9T (+10.9% YoY)
+                "mobile_internet_revenue_growth_pct": 10.9,
+                "five_g_connections_k": 6030,  # 6.03M (12.4% of mobile internet)
+                "five_g_pct_of_mobile_internet": 12.4,
+                "five_g_growth_pct": 185.5,
+                "mno_subscriber_growth_pct": 3.2,
+                "mvno_subscriber_growth_pct": -14.1,
+                "bundled_plans_k": 38000,  # 38M lines (84.8% of revenue lines)
+                "bundled_plans_pct_of_revenue_lines": 84.8,
+                "_market_shares_crc_sep_2025": {
+                    "claro": {"mobile_lines_k": 42100, "share_pct": 44.0},
+                    "movistar": {"mobile_lines_k": 21000, "share_pct": 25.0},
+                    "tigo": {"mobile_lines_k": 15100, "share_pct": 18.0},
+                    "wom": {"mobile_lines_k": 6400, "share_pct": 6.7},
+                    "mvnos_other": {"share_pct": 6.3},
+                },
+                "_source": "CRC Data Flash 2025-012 (Q2 2025, published Sep 2025) + CRC press release",
+                "_source_url": "https://www.postdata.gov.co/dataflash/data-flash-2025-012-servicios-moviles",
+                "_alt_source_url": "https://www.crcom.gov.co/es/noticias/comunicado-prensa/conectividad-movil-en-colombia-5g-sigue-creciendo",
+                "_note": "CRC Q3/Q4 2025 data NOT yet published as of Feb 2026",
             },
         },
         "macro": {
             "gdp_growth_pct": 1.8,
             "inflation_pct": 5.5,
             "unemployment_pct": 10.2,
-            "telecom_market_size_eur_b": 8.5,
-            "telecom_growth_pct": 4.0,
-            "five_g_adoption_pct": 2.0,
-            "fiber_penetration_pct": 18.0,
+            "population_m": 52,
+            "currency": "COP",
+            "exchange_rate_q4_2025": 3790,  # ~3,780-3,800 COP/USD
+            "five_g_connections_k": 6030,  # CRC Q2 2025
             "regulatory_environment": "CRC pro-competition; spectrum caps; MVNOs encouraged; asymmetric regulation on Claro",
             "digital_strategy": "Colombia Digital 2030; broadband universalization; 5G roadmap announced",
-            "source_url": "CRC Colombia / DANE / MinTIC 2025",
+            "_source": "DANE / MinTIC / CRC Colombia / IMF",
         },
+        # ── Network infrastructure with detailed spectrum_bands ──
+        # Q4 2025: Tigo-UNE has 145 MHz (Coltel NOT yet acquired)
+        # Post-Feb 2026: Tigo will have 265 MHz (after Coltel closes)
         "network": {
-            # ──────────────────────────────────────────────────────────────
-            # Spectrum data source: ANE Colombia (Agencia Nacional del Espectro)
-            # FDD bands: shown as 2×N MHz (paired uplink + downlink)
-            #   total_mhz = paired_mhz × 2  (e.g. 2×10 = 20 MHz total)
-            # TDD bands: shown as N MHz (unpaired, single range)
-            #   total_mhz = the block width
-            # ──────────────────────────────────────────────────────────────
-
-            # Post-acquisition: Tigo now holds combined Tigo + Coltel spectrum
+            # ── Tigo-UNE Colombia: 145 MHz (Q4 2025, pre-Coltel) ──
+            # Bands: 700 (B28), 1900 (B2), AWS (B4), 2500 (B41 TDD)
             "tigo_colombia": {
                 "five_g_coverage_pct": 12,
                 "four_g_coverage_pct": 92,
-                "fiber_homepass_k": 8000,
+                "fiber_homepass_k": 4500,  # Tigo-UNE alone (pre-Coltel)
                 "cable_homepass_k": 5200,
+                "cell_sites": 10500,
                 "technology_mix": {
-                    "mobile_vendor": "Nokia/Ericsson/Huawei",
-                    "spectrum_mhz": 265,
+                    "mobile_vendor": "Nokia",
                     "core_vendor": "Nokia",
-                    "notes": "Combined Tigo + Coltel spectrum post-acquisition Q3 2025",
+                    "spectrum_mhz": 145,  # Q4 2025 PRE-Coltel
+                    "notes": "Q4 2025 pre-Coltel. Post-Feb 2026 combined = 265 MHz.",
                     "spectrum_bands": [
                         # 700 MHz — Band 28 FDD (APT)
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
                          "paired_mhz": 10, "total_mhz": 20,
                          "ul": "703–713 MHz", "dl": "758–768 MHz",
-                         "use": "4G/5G coverage", "origin": "Tigo original"},
-                        {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
-                         "paired_mhz": 10, "total_mhz": 20,
-                         "ul": "723–733 MHz", "dl": "778–788 MHz",
-                         "use": "4G/5G coverage", "origin": "ex-Coltel"},
-                        # 850 MHz — Band 5 FDD
-                        {"band": "850 MHz", "band_id": "B5", "duplex": "FDD",
-                         "paired_mhz": 5, "total_mhz": 10,
-                         "ul": "829–834 MHz", "dl": "874–879 MHz",
-                         "use": "4G rural coverage", "origin": "ex-Coltel"},
+                         "use": "4G/5G coverage", "origin": "Tigo-UNE"},
                         # 1900 MHz — Band 2 PCS FDD
                         {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
                          "paired_mhz": 12.5, "total_mhz": 25,
                          "ul": "1862.5–1875 MHz", "dl": "1942.5–1955 MHz",
-                         "use": "3G/4G capacity", "origin": "Tigo original"},
-                        {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
-                         "paired_mhz": 25, "total_mhz": 50,
-                         "ul": "1850–1875 MHz", "dl": "1930–1955 MHz",
-                         "use": "3G/4G capacity", "origin": "ex-Coltel"},
+                         "use": "3G/4G capacity", "origin": "Tigo-UNE"},
                         # AWS — Band 4 FDD
                         {"band": "AWS", "band_id": "B4", "duplex": "FDD",
                          "paired_mhz": 20, "total_mhz": 40,
                          "ul": "1710–1730 MHz", "dl": "2110–2130 MHz",
-                         "use": "4G capacity", "origin": "Tigo original"},
-                        {"band": "AWS", "band_id": "B4", "duplex": "FDD",
-                         "paired_mhz": 20, "total_mhz": 40,
-                         "ul": "1730–1750 MHz", "dl": "2130–2150 MHz",
-                         "use": "4G capacity", "origin": "ex-Coltel"},
+                         "use": "4G capacity", "origin": "Tigo-UNE"},
                         # 2500 MHz — Band 41 TDD
                         {"band": "2500 MHz", "band_id": "B41", "duplex": "TDD",
                          "total_mhz": 60,
                          "range": "2530–2590 MHz",
-                         "use": "4G high-capacity", "origin": "Tigo original"},
+                         "use": "4G high-capacity", "origin": "Tigo-UNE"},
                     ],
+                    # Post-acquisition spectrum (after Feb 2026 Coltel closing):
+                    "_post_coltel_spectrum_bands": [
+                        {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
+                         "paired_mhz": 10, "total_mhz": 20,
+                         "ul": "723–733 MHz", "dl": "778–788 MHz",
+                         "use": "4G/5G coverage", "origin": "ex-Coltel"},
+                        {"band": "850 MHz", "band_id": "B5", "duplex": "FDD",
+                         "paired_mhz": 5, "total_mhz": 10,
+                         "ul": "829–834 MHz", "dl": "874–879 MHz",
+                         "use": "4G rural coverage", "origin": "ex-Coltel"},
+                        {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
+                         "paired_mhz": 25, "total_mhz": 50,
+                         "ul": "1850–1875 MHz", "dl": "1930–1955 MHz",
+                         "use": "3G/4G capacity", "origin": "ex-Coltel"},
+                        {"band": "AWS", "band_id": "B4", "duplex": "FDD",
+                         "paired_mhz": 20, "total_mhz": 40,
+                         "ul": "1730–1750 MHz", "dl": "2130–2150 MHz",
+                         "use": "4G capacity", "origin": "ex-Coltel"},
+                    ],
+                    "_post_coltel_total_mhz": 265,
                 },
+                "_source": "ANE Colombia spectrum registry, Millicom Q4 2025 Earnings",
             },
+            # ── Claro Colombia: 200 MHz ──
             "claro_co": {
                 "five_g_coverage_pct": 10,
                 "four_g_coverage_pct": 90,
@@ -226,52 +285,67 @@ def get_seed_data():
                 "cable_homepass_k": 3000,
                 "technology_mix": {
                     "mobile_vendor": "Ericsson",
-                    "spectrum_mhz": 200,
                     "core_vendor": "Ericsson",
+                    "spectrum_mhz": 200,
                     "spectrum_bands": [
-                        # 700 MHz — Band 28 FDD
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
                          "paired_mhz": 10, "total_mhz": 20,
                          "ul": "713–723 MHz", "dl": "768–778 MHz",
                          "use": "4G/5G coverage"},
-                        # 850 MHz — Band 5 FDD
                         {"band": "850 MHz", "band_id": "B5", "duplex": "FDD",
                          "paired_mhz": 15, "total_mhz": 30,
                          "ul": "824–839 MHz", "dl": "869–884 MHz",
                          "use": "3G/4G rural coverage"},
-                        # 1900 MHz — Band 2 PCS FDD
                         {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
                          "paired_mhz": 25, "total_mhz": 50,
                          "ul": "1875–1900 MHz", "dl": "1955–1980 MHz",
                          "use": "3G/4G capacity"},
-                        # AWS — Band 4 FDD
                         {"band": "AWS", "band_id": "B4", "duplex": "FDD",
                          "paired_mhz": 20, "total_mhz": 40,
                          "ul": "1750–1770 MHz", "dl": "2150–2170 MHz",
                          "use": "4G capacity"},
-                        # 2500 MHz — Band 7 FDD
                         {"band": "2500 MHz", "band_id": "B7", "duplex": "FDD",
                          "paired_mhz": 30, "total_mhz": 60,
                          "ul": "2500–2530 MHz", "dl": "2620–2650 MHz",
                          "use": "4G high-capacity"},
                     ],
                 },
+                "_source": "ANE Colombia spectrum registry",
             },
-            # Movistar/Coltel — ACQUIRED by Tigo Q3 2025, kept for historical data
+            # ── Movistar/Coltel: 120 MHz (Q4 2025, pre-transfer to Tigo) ──
             "movistar_co": {
                 "five_g_coverage_pct": 0,
-                "four_g_coverage_pct": 0,
-                "fiber_homepass_k": 0,
-                "notes": "Acquired by Tigo (Millicom) Q3 2025. Spectrum transferred to tigo_colombia.",
+                "four_g_coverage_pct": 85,
+                "fiber_homepass_k": 3500,
                 "technology_mix": {
-                    "mobile_vendor": "N/A — acquired by Tigo",
-                    "spectrum_mhz": 0,
-                    "status": "acquired",
-                    "acquired_by": "tigo_colombia",
-                    "acquisition_date": "2025-09-01",
-                    "spectrum_bands": [],
+                    "mobile_vendor": "Ericsson/Huawei",
+                    "spectrum_mhz": 120,  # Still held during Q4 2025
+                    "status": "pending_transfer",
+                    "transfer_to": "tigo_colombia",
+                    "transfer_date": "2026-02-06",
+                    "spectrum_bands": [
+                        {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
+                         "paired_mhz": 10, "total_mhz": 20,
+                         "ul": "723–733 MHz", "dl": "778–788 MHz",
+                         "use": "4G coverage"},
+                        {"band": "850 MHz", "band_id": "B5", "duplex": "FDD",
+                         "paired_mhz": 5, "total_mhz": 10,
+                         "ul": "829–834 MHz", "dl": "874–879 MHz",
+                         "use": "4G rural"},
+                        {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
+                         "paired_mhz": 25, "total_mhz": 50,
+                         "ul": "1850–1875 MHz", "dl": "1930–1955 MHz",
+                         "use": "3G/4G capacity"},
+                        {"band": "AWS", "band_id": "B4", "duplex": "FDD",
+                         "paired_mhz": 20, "total_mhz": 40,
+                         "ul": "1730–1750 MHz", "dl": "2130–2150 MHz",
+                         "use": "4G capacity"},
+                    ],
                 },
+                "_source": "ANE Colombia spectrum registry",
+                "_note": "Spectrum will transfer to Tigo upon Coltel acquisition completion (Feb 2026)",
             },
+            # ── WOM Colombia: 60 MHz ──
             "wom_co": {
                 "five_g_coverage_pct": 0,
                 "four_g_coverage_pct": 50,
@@ -279,38 +353,39 @@ def get_seed_data():
                     "mobile_vendor": "Samsung/Nokia",
                     "spectrum_mhz": 60,
                     "spectrum_bands": [
-                        # 700 MHz — Band 28 FDD
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
                          "paired_mhz": 5, "total_mhz": 10,
                          "ul": "733–738 MHz", "dl": "788–793 MHz",
                          "use": "4G coverage"},
-                        # AWS — Band 4 FDD
                         {"band": "AWS", "band_id": "B4", "duplex": "FDD",
                          "paired_mhz": 15, "total_mhz": 30,
                          "ul": "1770–1785 MHz", "dl": "2170–2185 MHz",
                          "use": "4G capacity"},
-                        # 1900 MHz — Band 2 PCS FDD
                         {"band": "1900 MHz", "band_id": "B2", "duplex": "FDD",
                          "paired_mhz": 10, "total_mhz": 20,
                          "ul": "1900–1910 MHz", "dl": "1980–1990 MHz",
                          "use": "3G/4G capacity"},
                     ],
                 },
+                "_source": "ANE Colombia spectrum registry",
             },
         },
         "executives": {
             "tigo_colombia": [
-                {"name": "Marcelo Cataldo", "title": "CEO", "start_date": "2021-01-01", "background": "Former Millicom EVP, ex-Telefonica executive"},
-                {"name": "Diego Pardo", "title": "CFO", "start_date": "2022-06-01", "background": "Finance professional, ex-PwC Colombia"},
+                {"name": "Marcelo Cataldo", "title": "CEO", "start_date": "2021-01-01",
+                 "background": "Former Millicom EVP, ex-Telefonica executive"},
             ],
             "claro_co": [
-                {"name": "Carlos Zenteno", "title": "CEO", "start_date": "2019-01-01", "background": "America Movil regional leadership"},
+                {"name": "Carlos Zenteno", "title": "CEO", "start_date": "2019-01-01",
+                 "background": "América Móvil regional leadership"},
             ],
             "movistar_co": [
-                {"name": "Fabián Hernández", "title": "CEO", "start_date": "2020-01-01", "background": "Telefonica Group veteran"},
+                {"name": "Fabián Hernández", "title": "CEO", "start_date": "2020-01-01",
+                 "background": "Telefonica Group veteran (pre-acquisition)"},
             ],
             "wom_co": [
-                {"name": "Chris Bannister", "title": "CEO", "start_date": "2022-01-01", "background": "International telco executive, ex-Digicel"},
+                {"name": "Chris Bannister", "title": "CEO", "start_date": "2022-01-01",
+                 "background": "International telco executive, ex-Digicel; SUR Holdings era"},
             ],
         },
         "competitive_scores": {
@@ -338,53 +413,80 @@ def get_seed_data():
         "intelligence_events": [
             {
                 "operator_id": "tigo_colombia",
-                "event_date": "2025-09-01",
+                "event_date": "2026-01-27",
                 "category": "m_and_a",
-                "title": "Tigo (Millicom) completes acquisition of Coltel (Movistar Colombia)",
+                "title": "Millicom wins EPM's 50% share of Tigo-UNE at auction (~$571M)",
                 "description": (
-                    "Millicom acquires Colombia Telecomunicaciones (Coltel) from Telefonica. "
-                    "The deal consolidates the market from 4 to 3 players. Tigo inherits "
-                    "Coltel's 15.3M mobile subscribers, 120 MHz of spectrum, 3.5M fiber "
-                    "homepasses, and the Movistar Colombia brand. The combined entity becomes "
-                    "Colombia's largest operator by spectrum holdings (265 MHz total) and "
-                    "second by subscribers, significantly narrowing the gap with Claro."
+                    "Millicom wins the auction for EPM's remaining 50% stake in "
+                    "Tigo-UNE for approximately COP 2.1 trillion (~$571M). This gives "
+                    "Millicom 100% ownership of Tigo Colombia operations."
                 ),
                 "impact_type": "positive",
                 "severity": "critical",
+                "_source": "Millicom Q4 2025 Earnings Release",
+                "_source_url": "https://www.globenewswire.com/news-release/2026/02/26/3245346/0/en/Millicom-Tigo-Q4-2025-Earnings-Release.html",
             },
             {
                 "operator_id": "tigo_colombia",
-                "event_date": "2025-08-15",
-                "category": "technology",
-                "title": "Tigo-UNE launches 5G in Bogota and Medellin",
-                "description": "Initial 5G deployment covering central business districts",
+                "event_date": "2026-02-06",
+                "category": "m_and_a",
+                "title": "Millicom closes acquisition of Telefónica's 67.5% stake in Coltel for $214.4M",
+                "description": (
+                    "Millicom completes tender offer for Telefónica's controlling stake "
+                    "in Colombia Telecomunicaciones (Coltel / Movistar Colombia). "
+                    "Combined entity will hold 265 MHz spectrum, ~36-41M mobile lines, "
+                    "~43% mobile market share. Phase 2 (government's 32.5%) expected ~Apr 2026."
+                ),
                 "impact_type": "positive",
-                "severity": "high",
+                "severity": "critical",
+                "_source": "Millicom Coltel Tender Offer PR (2026-02-05)",
+                "_source_url": "https://www.globenewswire.com/news-release/2026/02/05/3233403/0/en/Millicom-Tigo-Concludes-Tender-Offer-Coltel.html",
             },
             {
                 "operator_id": "wom_co",
-                "event_date": "2025-07-01",
-                "category": "competitive",
-                "title": "WOM reaches 4.6M subscribers in Colombia",
-                "description": "Rapid subscriber growth continues with aggressive pricing strategy",
-                "impact_type": "negative",
-                "severity": "medium",
+                "event_date": "2025-06-01",
+                "category": "m_and_a",
+                "title": "SUR Holdings (US/UK) acquires WOM Colombia from bankruptcy",
+                "description": (
+                    "SUR Holdings consortium rescues WOM Colombia, planning $100M "
+                    "investment. WOM achieves first positive EBITDA (COP 60B) in Q1 2025. "
+                    "Government grants 3-year grace period on spectrum payments."
+                ),
+                "impact_type": "neutral",
+                "severity": "high",
+                "_source": "América Economía, Developing Telecoms",
+                "_source_url": "https://www.americaeconomia.com/en/node/290161",
             },
             {
                 "operator_id": None,
-                "event_date": "2025-11-01",
+                "event_date": "2025-09-01",
                 "category": "regulatory",
-                "title": "CRC announces 5G spectrum auction timeline",
-                "description": "3.5 GHz and 26 GHz bands to be auctioned in 2026",
+                "title": "CRC publishes Q2 2025 mobile data: 102.5M lines, 6.03M 5G connections",
+                "description": (
+                    "CRC Data Flash 2025-012 shows 102.5M total mobile lines (+2.8% YoY), "
+                    "6.03M 5G connections (12.4% of mobile internet, +185.5% YoY). "
+                    "Mobile internet revenue COP 2.9T (+10.9%)."
+                ),
                 "impact_type": "neutral",
-                "severity": "high",
+                "severity": "medium",
+                "_source": "CRC Data Flash 2025-012",
+                "_source_url": "https://www.postdata.gov.co/dataflash/data-flash-2025-012-servicios-moviles",
             },
         ],
         "earnings_highlights": {
             "tigo_colombia": [
-                {"segment": "Mobile", "highlight_type": "guidance", "content": "Mobile service revenue growth accelerating with data monetization and postpaid migration", "speaker": "CEO"},
-                {"segment": "Home", "highlight_type": "outlook", "content": "Fixed broadband growth driven by fiber expansion, targeting 550K fiber subs by end of 2025", "speaker": "CEO"},
-                {"segment": "B2B", "highlight_type": "explanation", "content": "Colombia B2B segment benefiting from enterprise cloud connectivity solutions", "speaker": "CFO"},
+                {"segment": "Overall", "highlight_type": "guidance",
+                 "content": "Colombia FY 2025: record EBITDA margin of 44.1%, service revenue +6.9%. "
+                            "Coltel acquisition (closed Feb 2026) to create combined #2 operator.",
+                 "speaker": "Millicom Q4 2025 Earnings",
+                 "_source_url": "https://www.globenewswire.com/news-release/2026/02/26/3245346/0/en/Millicom-Tigo-Q4-2025-Earnings-Release.html"},
+            ],
+            "claro_co": [
+                {"segment": "Colombia", "highlight_type": "guidance",
+                 "content": "Colombia Q4 2025: service revenue +5.4%, mobile +7.6%, broadband +16.1%. "
+                            "EBITDA margin 41.0% (+2.2pp LTM). Wireless clients 42.7M (+4.2%).",
+                 "speaker": "AMX Q4 2025 Earnings Call",
+                 "_source_url": "https://www.insidermonkey.com/blog/america-movil-s-a-b-de-c-v-nyseamx-q4-2025-earnings-call-transcript-1694480/"},
             ],
         },
     }
