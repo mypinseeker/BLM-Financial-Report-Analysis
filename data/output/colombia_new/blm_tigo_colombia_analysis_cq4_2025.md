@@ -27,7 +27,7 @@
 
 ## One-Line Verdict
 
-**Tigo-UNE achieved a record 44.1% EBITDA margin in FY 2025 — exceeding Claro's 41.0% — even before the Coltel acquisition. Post-closing (Feb 2026), combined spectrum reaches 265 MHz (#1), mobile subs ~36-41M (~43%), approaching Claro's 42.7M. The 12-18 month integration window is critical.**
+**Tigo-UNE achieved a record 44.1% EBITDA margin in FY 2025 — exceeding Claro's 41.0% — even before the Coltel acquisition. Post-closing (Feb 2026), combined spectrum reaches 345 MHz (#1, including 80 MHz at 3.5 GHz from joint auction bid), far ahead of Claro's 280 MHz. Mobile subs ~36-41M (~43%), approaching Claro's 42.7M. The 12-18 month integration window is critical.**
 
 ---
 
@@ -35,8 +35,8 @@
 
 | Metric | Value | Source |
 | :--- | :--- | :--- |
-| Total Mobile Lines | **102.5M** (Q2 2025) | CRC Data Flash 2025-012 |
-| Mobile Growth | +2.8% YoY | CRC |
+| Revenue-Generating Mobile Lines | **~46.7M** (only 45.6% of registered SIMs) | CRC / DPL News |
+| Mobile Internet Accesses | **49.4M** | CRC |
 | 5G Connections | **6.03M** (12.4% of mobile internet) | CRC |
 | 5G Growth | +185.5% YoY | CRC |
 | Mobile Internet Revenue | COP 2.9T/Q (+10.9%) | CRC |
@@ -44,23 +44,34 @@
 | GDP Growth | 1.8% | IMF / DANE |
 | Exchange Rate | ~3,790 COP/USD | Market |
 
-## Market Structure (Q4 2025 — 4 Operators)
+> ⚠ **SIM Line Counting — Why "102.5M" Is Misleading**: CRC's official 102.5M figure counts ALL registered SIM cards including **dormant prepaid SIMs that generate zero revenue (54.4% of total)**. This inflates Colombia's apparent mobile penetration to ~197%. The economically meaningful market size is **~46.7M revenue-generating lines** or **~49.4M mobile internet accesses**. GSMA counts 78.3M using its own methodology. **CRC does not separately track IoT/M2M**. For this report, we use revenue and spectrum as competitive metrics — not SIM line counts, which are distorted by dormant registrations.
 
-| Operator | Mobile Lines | Share | Spectrum | Source |
+## Market Structure (Q4 2025 — 4 Operators, Revenue-Based)
+
+> ⚠ SIM-line market shares (CRC) are unreliable for competitive analysis because 54.4% of counted SIMs are dormant. **Revenue and EBITDA are the only meaningful competitive comparisons.** CRC does not publish operator-level revenue market shares.
+
+| Operator | Verified Revenue | EBITDA Margin | Spectrum (incl. 3.5 GHz) | Source |
 | :--- | :--- | :--- | :--- | :--- |
-| **Claro** (AMX) | 42.1M→42.7M | ~44% | 200 MHz | AMX Q4 / CRC |
-| **Movistar/Coltel** (→Tigo) | ~21M | ~25% | 120 MHz | CRC Sep 2025 |
-| **Tigo-UNE** (Millicom) | ~15.1M | ~18% | 145 MHz | Millicom / CRC |
-| **WOM** (SUR Holdings) | ~6.4-7M | ~7% | 60 MHz | Multiple |
-| MVNOs + Other | — | ~6.3% | — | CRC |
+| **Claro** (AMX) | COP 4.3T (Q4) ~$1.13B | **41.0%** | **280 MHz** (200+80) | AMX Q4 2025 |
+| **Tigo-UNE** (Millicom) | $389M (FY 2025) | **44.1%** ★ | 225 MHz (145+80†) | Millicom Q4 2025 |
+| **Movistar/Coltel** (→Tigo) | Not disclosed (in acquisition) | N/A | 120 MHz (+80†) | — |
+| **WOM** (SUR Holdings) | Not disclosed | First profit Q1 2025 | **140 MHz** (60+80) | SUR / media |
+
+> † 3.5 GHz Block 1 (80 MHz) was won by **Tigo-Movistar joint bid** ("Unión Temporal") at the Dec 2023 auction. Post-acquisition, Tigo consolidates the full block.
+
+> **Note on subscriber counts**: AMX reports 42.7M "wireless clients" for Claro (incl. IoT SIMs); Millicom discloses 4.4M postpaid only; WOM has ~7M from multiple sources. These figures use different counting methodologies and are **not directly comparable** to each other or to CRC's 102.5M total.
 
 ## Post-Acquisition Outlook (After Feb 2026)
 
 | Dimension | Tigo+Coltel | Claro | WOM |
 | :--- | :--- | :--- | :--- |
 | Mobile Subs | **~36-41M** (~43%) | 42.7M (~44%) | ~7M (~7%) |
-| Spectrum | **265 MHz** ★ | 200 MHz | 60 MHz |
+| Spectrum (sub-3 GHz) | **265 MHz** ★ | 200 MHz | 60 MHz |
+| Spectrum (3.5 GHz) | **80 MHz** (joint bid consolidated) | 80 MHz | 80 MHz |
+| **Total Spectrum** | **345 MHz** ★ | **280 MHz** | **140 MHz** |
 | Market Structure | 3 effective operators | — | — |
+
+> Telecall (Brazilian newcomer) also won 80 MHz at 3.5 GHz but **defaulted on payment** — MinTIC is revoking this block (Jan 2025). This spectrum will likely return to state for reassignment.
 
 ---
 
@@ -79,7 +90,8 @@
 | Home Subscribers | **1,676K** | **+10.2%** | Millicom Q4 2025 |
 | Cell Sites | **10,500** | — | Millicom Q4 2025 |
 | Mobile Market Share | ~20% (pre-Coltel) | — | Millicom / CRC |
-| Spectrum (Q4 2025) | **145 MHz** | — | ANE |
+| Spectrum sub-3 GHz (Q4 2025) | **145 MHz** | — | ANE |
+| Spectrum 3.5 GHz (n78) | **80 MHz** (joint bid with Movistar, Dec 2023 auction) | — | MinTIC |
 | Q4 Quarterly Revenue | Not disclosed | — | — |
 | Total Mobile / Prepaid | Not disclosed | — | — |
 | ARPU | Not disclosed | — | — |
@@ -101,7 +113,7 @@
 | Q4 Prepaid Net Adds | **+224K** | — | AMX Q4 2025 |
 | Q4 Broadband Net Adds | **+49K** | — | AMX Q4 2025 |
 
-> ⚠ 42.7M "wireless clients" includes IoT/M2M SIMs per AMX convention. AMX does not disclose postpaid/prepaid stock breakdown or ARPU at Colombia country level.
+> ⚠ **42.7M "wireless clients" is NOT a pure human subscriber count.** It includes IoT/M2M SIMs per AMX's convention. AMX Q4 call: "Colombia contributed 104K postpaid including IoT devices." AMX 20-F 2024: Colombia wireless 40.9M (Dec 2024, +4.4% YoY). Country-level IoT/M2M breakdown, postpaid/prepaid stock split, and ARPU are all undisclosed.
 
 ### WOM Colombia (SUR Holdings)
 
@@ -115,22 +127,39 @@
 
 ---
 
-## Competitive Dashboard (Verified Data Only)
+## Competitive Dashboard (Revenue & Spectrum — Verified Data Only)
+
+> ⚠ Subscriber counts excluded from competitive comparison due to dormant SIM distortion and incompatible counting methodologies across operators.
 
 | Dimension | Claro | Tigo-UNE | Movistar | WOM | Source |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Revenue | COP 4.3T (Q4) | $389M (FY) | N/A | N/A | Earnings |
-| EBITDA Margin | **41.0%** | **44.1%** ★ (FY) | N/A | First profit Q1 | Earnings |
-| Wireless Clients | **42.7M** | ~15.1M | ~21M | ~7M | Earnings/CRC |
-| Spectrum (Q4) | **200 MHz** | 145 MHz | 120 MHz | 60 MHz | ANE |
-| Spectrum (post-acq) | 200 MHz | **265 MHz** ★ | →Tigo | 60 MHz | ANE |
+| **Revenue** | **COP 4.3T (Q4)** ~$1.13B | $389M (FY) | N/A | N/A | Earnings |
+| **EBITDA Margin** | 41.0% | **44.1%** ★ (FY) | N/A | First profit Q1 | Earnings |
+| **Total Spectrum (Q4)** | **280 MHz** | 225 MHz† | 120 MHz (+80†) | **140 MHz** | ANE/MinTIC |
+| **Total Spectrum (post-acq)** | 280 MHz | **345 MHz** ★ | →Tigo | 140 MHz | ANE/MinTIC |
 | 4G Coverage | 90% | 92% | 85% | 50% | Operators |
+| Rev Growth (mobile svc) | +7.6% | +6.9% (svc, FY) | N/A | N/A | Earnings |
+
+> † 3.5 GHz (80 MHz each): Claro, WOM won individual blocks; Tigo-Movistar won jointly. Post-acquisition, Tigo consolidates the joint block.
 
 ---
 
 ## Spectrum Comparison
 
-### Q4 2025 Holdings (Pre-Acquisition)
+### 3.5 GHz (5G) Auction — December 20, 2023
+
+> The 3.5 GHz auction was held by MinTIC on December 20, 2023. 4 blocks of 80 MHz each were awarded. Commercial 5G launched in February 2024.
+
+| Block | Winner | Price (COP) | Status |
+| :--- | :--- | :--- | :--- |
+| Block 1 | **Tigo-Movistar** (joint "Unión Temporal") | COP 318.3B (~$79.5M) | ✅ Active |
+| Block 2 | **WOM** | COP 318.3B (~$79.5M) | ✅ Active (3yr payment grace) |
+| Block 3 | **Telecall** (Brazilian) | COP 318.3B (~$79.5M) | ❌ **Defaulted — being revoked** |
+| Block 4 | **Claro** | COP 411.4B (~$102M) | ✅ Active |
+
+> Source: MinTIC Proceso IMT 2023; TeleSemana; RCR Wireless. 26 GHz (mmWave) was NOT auctioned.
+
+### Q4 2025 Complete Spectrum Holdings (Pre-Acquisition)
 
 | Band | ID | Duplex | Tigo-UNE | Claro | Movistar | WOM | Total |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -139,7 +168,10 @@
 | 1900 MHz | B2 | FDD | 25 | 50 | 50 | 20 | 145 |
 | AWS | B4 | FDD | 40 | 40 | 40 | 30 | 150 |
 | 2500 MHz | B7/B41 | FDD/TDD | 60 | 60 | — | — | 120 |
-| **Total** | | | **145** | **200** | **120** | **60** | **525** |
+| **3500 MHz** | **n78** | **TDD** | **80†** | **80** | **80†** | **80** | **320** |
+| **Total** | | | **225†** | **280** | **200†** | **140** | **845** |
+
+> † Tigo-Movistar 3.5 GHz block (80 MHz) was won as a joint bid. Listed under both operators but is a single shared block.
 
 ### Post-Acquisition (After Feb 2026)
 
@@ -150,15 +182,17 @@
 | 1900 MHz | **75** (25+50) | 50 | 20 |
 | AWS | **80** (40+40) | 40 | 30 |
 | 2500 MHz | **60** | 60 | — |
-| **Total** | **265 MHz** ★ | **200 MHz** | **60 MHz** |
+| 3500 MHz | **80** (joint bid consolidated) | 80 | 80 |
+| **Total** | **345 MHz** ★ | **280 MHz** | **140 MHz** |
 
 ### Spectrum Advantage (Post-Acquisition)
 
 | Dimension | Tigo | Claro | Tigo vs Claro |
 | :--- | :--- | :--- | :--- |
-| Total | 265 MHz | 200 MHz | **+32.5%** |
+| Total | **345 MHz** | 280 MHz | **+23.2%** |
 | Sub-1 GHz | 50 MHz | 50 MHz | Even |
 | Mid-band (1-3 GHz) | 215 MHz | 150 MHz | **+43.3%** |
+| 5G band (3.5 GHz) | 80 MHz | 80 MHz | Even |
 
 ---
 
@@ -173,8 +207,8 @@
 | | S4: Strong postpaid growth +9.6% | W4: Coltel integration execution risk |
 | | S5: Home subscribers +10.2% | W5: Low country-level data transparency |
 | **External** | **Opportunities** | **Threats** |
-| | O1: Coltel → 265 MHz spectrum, ~36-41M subs | T1: CR2 ~87% may trigger antitrust review |
-| | O2: 5G spectrum auction (3.5/26 GHz) | T2: Claro leads all dimensions (brand/scale) |
+| | O1: Coltel → 345 MHz total spectrum, ~36-41M subs | T1: CR2 ~87% may trigger antitrust review |
+| | O2: Telecall 3.5 GHz block (80 MHz) returning to state — potential acquisition | T2: Claro leads all dimensions (brand/scale) |
 | | O3: Broadband growth +16.1% (verified) | T3: 5.5% inflation pressuring OPEX |
 | | O4: 5G connections +185.5% growth | T4: Integration failure → subscriber churn |
 

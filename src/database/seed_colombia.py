@@ -153,7 +153,12 @@ def get_seed_data():
                 "q4_fixed_disconnections_k": -42,  # landline + PayTV
                 # postpaid/prepaid stock breakdown: NOT disclosed at Colombia level
                 # ARPU: NOT disclosed at Colombia level
-                "_note": "42.7M 'wireless clients' includes IoT/M2M SIMs per AMX convention",
+                "_note": (
+                    "42.7M 'wireless clients' includes IoT/M2M SIMs per AMX convention. "
+                    "AMX does not disclose Colombia-specific IoT/M2M breakdown. "
+                    "One quarterly mention: 'Colombia contributed 104K postpaid including IoT devices'. "
+                    "AMX 20-F 2024: Colombia wireless 40.9M (Dec 2024, +4.4% YoY)."
+                ),
                 "_source": "América Móvil Q4 2025 Earnings Call",
                 "_source_url": "https://www.insidermonkey.com/blog/america-movil-s-a-b-de-c-v-nyseamx-q4-2025-earnings-call-transcript-1694480/",
             },
@@ -177,9 +182,20 @@ def get_seed_data():
                 "_source_url": "https://developingtelecoms.com/telecom-business/operator-news/18805-wom-colombia-looks-forward.html",
             },
             # ── Market-level CRC data (Q2 2025 — latest available) ──
+            # ⚠ CRITICAL: CRC's 102.5M counts ALL registered SIM lines,
+            #   including dormant prepaid SIMs. ONLY 45.6% (~46.7M) generate
+            #   revenue. CRC does NOT separately track IoT/M2M.
+            #   GSMA Intelligence (Jan 2025) counts 78.3M SIM connections
+            #   (excludes some dormant). Unique human subscribers est. ~36-40M.
             "_market_totals": {
                 "data_as_of": "Q2 2025",
-                "total_mobile_lines_k": 102500,  # 102.5M (+2.8% YoY)
+                "total_mobile_lines_k": 102500,  # 102.5M registered SIM lines (+2.8% YoY)
+                "revenue_generating_lines_pct": 45.6,  # Only 45.6% generate revenue (~46.7M)
+                "revenue_generating_lines_k": 46700,  # ~46.7M — economically meaningful
+                "mobile_internet_accesses_k": 49400,  # 49.4M — active data users
+                "gsma_sim_connections_k": 78300,  # GSMA Intelligence Jan 2025 (different methodology)
+                "gsma_penetration_pct": 147,  # GSMA SIM-based penetration
+                "unique_human_subscribers_k_est": "36000-40000",  # GSMA LatAm 70% penetration applied
                 "mobile_growth_pct": 2.8,
                 "mobile_internet_revenue_cop_t": 2.9,  # COP 2.9T (+10.9% YoY)
                 "mobile_internet_revenue_growth_pct": 10.9,
@@ -190,17 +206,35 @@ def get_seed_data():
                 "mvno_subscriber_growth_pct": -14.1,
                 "bundled_plans_k": 38000,  # 38M lines (84.8% of revenue lines)
                 "bundled_plans_pct_of_revenue_lines": 84.8,
-                "_market_shares_crc_sep_2025": {
-                    "claro": {"mobile_lines_k": 42100, "share_pct": 44.0},
-                    "movistar": {"mobile_lines_k": 21000, "share_pct": 25.0},
-                    "tigo": {"mobile_lines_k": 15100, "share_pct": 18.0},
-                    "wom": {"mobile_lines_k": 6400, "share_pct": 6.7},
-                    "mvnos_other": {"share_pct": 6.3},
+                "iot_m2m_breakdown": "NOT_AVAILABLE",  # CRC does not separately track IoT/M2M
+                "_analytical_note": (
+                    "SIM-line market shares are UNRELIABLE for competitive analysis: "
+                    "54.4% of CRC's 102.5M are dormant prepaid SIMs generating zero revenue. "
+                    "Revenue and EBITDA are the only meaningful competitive dimensions. "
+                    "CRC does not publish operator-level revenue market shares."
+                ),
+                "_market_shares_crc_dec_2024_CAVEAT_DORMANT_SIMS": {
+                    "_warning": "These shares are based on TOTAL registered SIMs incl. 54.4% dormant. NOT suitable for competitive comparison.",
+                    "claro": {"total_line_share_pct": 51.3},
+                    "tigo": {"total_line_share_pct": 20.7},
+                    "movistar": {"total_line_share_pct": 16.6},
+                    "wom": {"total_line_share_pct": 9.1},
+                    "mvnos_other": {"total_line_share_pct": 2.3},
                 },
-                "_source": "CRC Data Flash 2025-012 (Q2 2025, published Sep 2025) + CRC press release",
+                "_source": "CRC Data Flash 2025-012 (Q2 2025) + CRC press release + DPL News + Xataka Colombia",
                 "_source_url": "https://www.postdata.gov.co/dataflash/data-flash-2025-012-servicios-moviles",
-                "_alt_source_url": "https://www.crcom.gov.co/es/noticias/comunicado-prensa/conectividad-movil-en-colombia-5g-sigue-creciendo",
-                "_note": "CRC Q3/Q4 2025 data NOT yet published as of Feb 2026",
+                "_alt_sources": [
+                    "https://dplnews.com/menos-de-la-mitad-de-las-lineas-moviles-activas-en-colombia-representa-un-ingreso-para-los-operadores/",
+                    "https://www.xataka.com.co/servicios/colombia-supera-100-millones-lineas-moviles",
+                    "https://datareportal.com/reports/digital-2025-colombia",
+                ],
+                "_note": (
+                    "CRC's 102.5M = all registered SIMs including ~55M dormant prepaid. "
+                    "CRC does NOT separately track IoT/M2M. AMX's wireless clients also "
+                    "include IoT SIMs but country-level breakdown not disclosed. "
+                    "For meaningful comparison use revenue-generating lines (~46.7M) or "
+                    "mobile internet accesses (~49.4M)."
+                ),
             },
         },
         "macro": {
@@ -214,6 +248,7 @@ def get_seed_data():
             "regulatory_environment": "CRC pro-competition; spectrum caps; MVNOs encouraged; asymmetric regulation on Claro",
             "digital_strategy": "Colombia Digital 2030; broadband universalization; 5G roadmap announced",
             "_source": "DANE / MinTIC / CRC Colombia / IMF",
+            "_source_url": "https://www.dane.gov.co/",
         },
         # ── Network infrastructure with detailed spectrum_bands ──
         # Q4 2025: Tigo-UNE has 145 MHz (Coltel NOT yet acquired)
@@ -230,8 +265,12 @@ def get_seed_data():
                 "technology_mix": {
                     "mobile_vendor": "Nokia",
                     "core_vendor": "Nokia",
-                    "spectrum_mhz": 145,  # Q4 2025 PRE-Coltel
-                    "notes": "Q4 2025 pre-Coltel. Post-Feb 2026 combined = 265 MHz.",
+                    "spectrum_mhz": 145,  # Q4 2025 PRE-Coltel (sub-3 GHz only)
+                    "spectrum_mhz_incl_3500": 225,  # 145 + 80 (3.5 GHz joint bid)
+                    "notes": "Q4 2025 pre-Coltel. Post-Feb 2026 combined = 345 MHz (265 sub-3G + 80 3.5G).",
+                    "_source": "ANE Colombia spectrum registry; MinTIC Proceso IMT 2023",
+                    "_source_url": "https://www.spectrum-tracker.com/Colombia",
+                    "_spectrum_verification_status": "NEEDS_ANE_VERIFICATION — sub-3 GHz frequencies not yet cross-checked against ANE registry",
                     "spectrum_bands": [
                         # 700 MHz — Band 28 FDD (APT)
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
@@ -273,9 +312,24 @@ def get_seed_data():
                          "ul": "1730–1750 MHz", "dl": "2130–2150 MHz",
                          "use": "4G capacity", "origin": "ex-Coltel"},
                     ],
-                    "_post_coltel_total_mhz": 265,
+                    "_post_coltel_total_mhz": 265,  # sub-3 GHz only
+                    "_post_coltel_total_mhz_incl_3500": 345,  # 265 + 80 (3.5 GHz consolidated)
+                    # 3.5 GHz — won at MinTIC auction Dec 20, 2023
+                    "spectrum_3500_mhz": {
+                        "band": "3500 MHz", "band_id": "n78", "duplex": "TDD",
+                        "total_mhz": 80,
+                        "auction_date": "2023-12-20",
+                        "bid_entity": "Unión Temporal Colombia Móvil–Telefónica (Tigo-Movistar joint bid)",
+                        "price_cop_b": 318.306,
+                        "price_usd_m_approx": 79.5,
+                        "status": "active",
+                        "_note": "Joint bid with Movistar. Post-Coltel acquisition (Feb 2026), Tigo consolidates full 80 MHz.",
+                        "_source": "MinTIC Proceso IMT 2023; TeleSemana; RCR Wireless",
+                        "_source_url": "https://micrositios.mintic.gov.co/asignacion_espectro/",
+                    },
                 },
                 "_source": "ANE Colombia spectrum registry, Millicom Q4 2025 Earnings",
+                "_source_url": "https://www.spectrum-tracker.com/Colombia",
             },
             # ── Claro Colombia: 200 MHz ──
             "claro_co": {
@@ -286,7 +340,11 @@ def get_seed_data():
                 "technology_mix": {
                     "mobile_vendor": "Ericsson",
                     "core_vendor": "Ericsson",
-                    "spectrum_mhz": 200,
+                    "spectrum_mhz": 200,  # sub-3 GHz only
+                    "spectrum_mhz_incl_3500": 280,  # 200 + 80 (3.5 GHz)
+                    "_source": "ANE Colombia spectrum registry; MinTIC Proceso IMT 2023",
+                    "_source_url": "https://www.spectrum-tracker.com/Colombia",
+                    "_spectrum_verification_status": "NEEDS_ANE_VERIFICATION",
                     "spectrum_bands": [
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
                          "paired_mhz": 10, "total_mhz": 20,
@@ -309,8 +367,28 @@ def get_seed_data():
                          "ul": "2500–2530 MHz", "dl": "2620–2650 MHz",
                          "use": "4G high-capacity"},
                     ],
+                    "spectrum_3500_mhz": {
+                        "band": "3500 MHz", "band_id": "n78", "duplex": "TDD",
+                        "total_mhz": 80,
+                        "auction_date": "2023-12-20",
+                        "bid_entity": "Comunicación Celular Comcel (Claro)",
+                        "price_cop_b": 411.384,
+                        "price_usd_m_approx": 102,
+                        "status": "active",
+                        "_source": "MinTIC Proceso IMT 2023",
+                        "_source_url": "https://micrositios.mintic.gov.co/asignacion_espectro/",
+                    },
+                    # Claro also won additional 2.5 GHz block (10 MHz) at same auction
+                    "spectrum_2500_auction_addition": {
+                        "band": "2500 MHz", "total_mhz": 10,
+                        "price_cop_b": 157.052,
+                        "auction_date": "2023-12-20",
+                        "_source": "MinTIC Proceso IMT 2023; Portafolio",
+                        "_source_url": "https://micrositios.mintic.gov.co/asignacion_espectro/",
+                    },
                 },
                 "_source": "ANE Colombia spectrum registry",
+                "_source_url": "https://www.spectrum-tracker.com/Colombia",
             },
             # ── Movistar/Coltel: 120 MHz (Q4 2025, pre-transfer to Tigo) ──
             "movistar_co": {
@@ -319,8 +397,12 @@ def get_seed_data():
                 "fiber_homepass_k": 3500,
                 "technology_mix": {
                     "mobile_vendor": "Ericsson/Huawei",
-                    "spectrum_mhz": 120,  # Still held during Q4 2025
+                    "spectrum_mhz": 120,  # sub-3 GHz, still held during Q4 2025
+                    "spectrum_mhz_incl_3500": 200,  # 120 + 80 (joint 3.5 GHz bid with Tigo)
                     "status": "pending_transfer",
+                    "_source": "ANE Colombia spectrum registry; MinTIC Proceso IMT 2023",
+                    "_source_url": "https://www.spectrum-tracker.com/Colombia",
+                    "_spectrum_verification_status": "NEEDS_ANE_VERIFICATION",
                     "transfer_to": "tigo_colombia",
                     "transfer_date": "2026-02-06",
                     "spectrum_bands": [
@@ -343,6 +425,7 @@ def get_seed_data():
                     ],
                 },
                 "_source": "ANE Colombia spectrum registry",
+                "_source_url": "https://www.spectrum-tracker.com/Colombia",
                 "_note": "Spectrum will transfer to Tigo upon Coltel acquisition completion (Feb 2026)",
             },
             # ── WOM Colombia: 60 MHz ──
@@ -351,7 +434,11 @@ def get_seed_data():
                 "four_g_coverage_pct": 50,
                 "technology_mix": {
                     "mobile_vendor": "Samsung/Nokia",
-                    "spectrum_mhz": 60,
+                    "spectrum_mhz": 60,  # sub-3 GHz only
+                    "spectrum_mhz_incl_3500": 140,  # 60 + 80 (3.5 GHz)
+                    "_source": "ANE Colombia spectrum registry; MinTIC Proceso IMT 2023",
+                    "_source_url": "https://www.spectrum-tracker.com/Colombia",
+                    "_spectrum_verification_status": "NEEDS_ANE_VERIFICATION",
                     "spectrum_bands": [
                         {"band": "700 MHz", "band_id": "B28", "duplex": "FDD",
                          "paired_mhz": 5, "total_mhz": 10,
@@ -368,6 +455,7 @@ def get_seed_data():
                     ],
                 },
                 "_source": "ANE Colombia spectrum registry",
+                "_source_url": "https://www.spectrum-tracker.com/Colombia",
             },
         },
         "executives": {
@@ -389,25 +477,41 @@ def get_seed_data():
             ],
         },
         "competitive_scores": {
+            "_source": (
+                "Analyst subjective assessment based on: Opensignal Colombia Mobile Network "
+                "Experience Report (Jan 2025), CRC Q2 2025 Data Flash, operator earnings "
+                "disclosures, and industry coverage. Scores are NOT empirical measurements — "
+                "they are directional estimates for radar-chart visualization only."
+            ),
+            "_source_url": "https://www.opensignal.com/reports/2025/01/colombia/mobile-network-experience",
+            "_confidence": "low — subjective analyst assessment, not verified metrics",
             "tigo_colombia": {
                 "Network Coverage": 78, "Network Quality": 75, "Brand Strength": 72,
                 "Price Competitiveness": 70, "Customer Service": 68, "Digital Experience": 72,
                 "Enterprise Solutions": 70, "Innovation": 68, "Distribution": 75,
+                "_source": "Analyst subjective assessment (Opensignal/CRC/earnings — not empirical)",
+                "_source_url": "https://www.opensignal.com/reports/2025/01/colombia/mobile-network-experience",
             },
             "claro_co": {
                 "Network Coverage": 90, "Network Quality": 85, "Brand Strength": 88,
                 "Price Competitiveness": 65, "Customer Service": 70, "Digital Experience": 75,
                 "Enterprise Solutions": 82, "Innovation": 72, "Distribution": 90,
+                "_source": "Analyst subjective assessment (Opensignal/CRC/earnings — not empirical)",
+                "_source_url": "https://www.opensignal.com/reports/2025/01/colombia/mobile-network-experience",
             },
             "movistar_co": {
                 "Network Coverage": 72, "Network Quality": 70, "Brand Strength": 68,
                 "Price Competitiveness": 68, "Customer Service": 65, "Digital Experience": 62,
                 "Enterprise Solutions": 60, "Innovation": 58, "Distribution": 70,
+                "_source": "Analyst subjective assessment (Opensignal/CRC/earnings — not empirical)",
+                "_source_url": "https://www.opensignal.com/reports/2025/01/colombia/mobile-network-experience",
             },
             "wom_co": {
                 "Network Coverage": 42, "Network Quality": 45, "Brand Strength": 50,
                 "Price Competitiveness": 90, "Customer Service": 55, "Digital Experience": 65,
                 "Enterprise Solutions": 20, "Innovation": 70, "Distribution": 45,
+                "_source": "Analyst subjective assessment (Opensignal/CRC/earnings — not empirical)",
+                "_source_url": "https://www.opensignal.com/reports/2025/01/colombia/mobile-network-experience",
             },
         },
         "intelligence_events": [
